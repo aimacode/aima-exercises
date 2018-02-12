@@ -1,0 +1,518 @@
+%%%% 13.2: Basic Probability Notation (7 exercises, 3 labelled)
+%%%% ==========================================================
+
+\begin{exercise}
+Show from first principles that \(P(a\given b\land a) = 1\).
+\end{exercise} 
+% id=13.1 section=13.2
+
+\begin{exercise}[sum-to-1-exercise]%
+Using the axioms of probability, prove that any probability
+distribution on a discrete random variable must sum to 1.
+\end{exercise} 
+% id=13.2 section=13.2
+
+\begin{exercise}
+For each of the following statements, either prove it is true or give a counterexample.
+\begin{enumerate}
+\item If \(P(a \given b, c) = P(b \given a, c)\), then \(P(a \given c) = P(b \given c)\)
+\item If \(P(a \given b, c) = P(a)\), then \(P(b \given c) = P(b)\)
+\item If \(P(a \given b) = P(a)\), then \(P(a \given b, c) = P(a \given c)\)
+\end{enumerate}
+\end{exercise} 
+% id=13.3 section=13.2
+
+\begin{exercise}
+Would it be rational for an agent to hold the three beliefs \(P(A) \eq {0.4}\),
+\(P(B) \eq {0.3}\), and \(P(A \lor B) \eq {0.5}\)?  If so, what range of probabilities
+would be rational for the agent to hold for \(A \land B\)?  Make up a table like
+the one in \figref{de-finetti-table}, and show how it supports your argument
+about rationality.  Then draw another version of the table where \(P(A \lor B)
+\eq {0.7}\).  Explain why it is rational to have this probability, even though
+the table shows one case that is a loss and three that just break even.  ({\em
+Hint:} what is Agent 1 committed to about the probability of each of the four
+cases, especially the case that is a loss?)
+\end{exercise} 
+% id=13.8 section=13.2
+
+\begin{exercise}[exclusive-exhaustive-exercise]%
+This question deals with the properties of possible worlds, defined on \pgref{possible-worlds-page} as assignments to all random variables.
+We will work with propositions that correspond to exactly one possible world because they pin down the assignments of all the variables.
+In probability theory, such propositions are called \newterm[atomic event]{atomic events}\ntindex{event!atomic}.
+For example, with Boolean variables \(X_1\), \(X_2\), \(X_3\), the proposition \(x_1\land \lnot x_2 \land \lnot x_3\) fixes the assignment of the variables; in the language of propositional logic, we would say it has exactly one model.
+\begin{enumerate}
+\item Prove, for the case of \(n\) Boolean variables, that any two distinct atomic events are mutually exclusive; that is, their conjunction is equivalent to \(\J{false}\).
+\item Prove that the disjunction of all possible atomic events is
+logically equivalent to \(\J{true}\). 
+\item Prove that any proposition is logically equivalent to the
+disjunction of the atomic events that entail its truth.
+\end{enumerate}
+\end{exercise} 
+% id=13.9 section=13.2
+
+\begin{exercise}[inclusion-exclusion-exercise]%
+Prove \eqref{kolmogorov-disjunction-equation} from \eqrefs{basic-probability-axiom-equation}{proposition-probability-equation}.
+\end{exercise} 
+% id=13.10 section=13.2
+
+\begin{exercise}
+Consider the set of all possible five-card poker\index{poker hands}\index{game!poker} hands dealt fairly
+from a standard deck of fifty-two cards.
+\begin{enumerate}
+\item How many atomic events are there in the joint probability distribution
+(i.e., how many five-card hands are there)?
+\item What is the probability of each atomic event?
+\item What is the probability of being dealt a royal straight
+flush? Four of a kind?
+\end{enumerate}
+\end{exercise} 
+% id=13.11 section=13.2
+
+
+%%%% 13.3: Inference Using Full Joint Distributions (1 exercises, 0 labelled)
+%%%% ========================================================================
+
+\begin{uexercise}
+Given the full joint distribution shown in \tabref{dentist-joint-table},
+calculate the following:
+\begin{enumerate}
+\item \(\pv(\J{toothache})\)\,.
+\item \(\pv(\J{Cavity})\)\,.
+\item \(\pv(\J{Toothache}\given\J{cavity})\)\,.
+\item \(\pv(\J{Cavity}\given\J{toothache}\lor \J{catch})\)\,.
+\end{enumerate}
+\end{uexercise} 
+% id=13.12 section=13.3
+
+\begin{iexercise}
+Given the full joint distribution shown in \tabref{dentist-joint-table},
+calculate the following:
+\begin{enumerate}
+\item \(\pv(\J{toothache})\)\,.
+\item \(\pv(\J{Catch})\)\,.
+\item \(\pv(\J{Cavity}\given\J{catch})\)\,.
+\item \(\pv(\J{Cavity}\given\J{toothache}\lor \J{catch})\)\,.
+\end{enumerate}
+\end{iexercise} 
+% id=13.12 section=13.3
+
+
+%%%% 13.4: Independence (4 exercises, 2 labelled)
+%%%% ============================================
+
+\begin{exercise}[unfinished-game-exercise]
+In his letter of August 24, 1654, Pascal was trying to show how a
+pot of money should be allocated when a gambling game must end
+prematurely. Imagine a game where each turn consists of the roll of a
+die, player {\em E} gets a point when the die is even, and player {\em
+  O} gets a point when the die is odd.  The first player to get 7
+points wins the pot.  Suppose the game is interrupted with {\em E}
+leading 4--2.  How should the money be fairly split in this case?
+What is the general formula? (Fermat and Pascal made several errors before solving
+the problem, but you should be able to get it right the first time.)
+\end{exercise} 
+% id=13.0 section=13.4
+
+\begin{uexercise}
+Deciding to put probability theory to good use, we encounter
+a slot machine with three independent wheels, each
+producing one of the four symbols {\sc bar}, {\sc bell}, {\sc lemon}, or {\sc cherry} with
+equal probability.  The slot machine has the following payout scheme
+for a bet of 1 coin (where ``?'' denotes that we don't care what
+comes up for that wheel):
+%
+\begin{verse}
+      {\sc bar}/{\sc bar}/{\sc bar}  pays 20 coins \\
+      {\sc bell}/{\sc bell}/{\sc bell}  pays 15 coins\\
+      {\sc lemon}/{\sc lemon}/{\sc lemon} pays 5 coins\\
+      {\sc cherry}/{\sc cherry}/{\sc cherry} pays 3 coins\\
+      {\sc cherry}/{\sc cherry}/? pays 2 coins\\
+      {\sc cherry}/?/? pays 1 coin
+\end{verse}
+%
+\begin{enumerate}
+\item Compute the expected ``payback'' percentage of the machine.  In
+other words, for each coin played, what is the expected coin return?
+\item Compute the probability that playing the slot machine once
+will result in a win.
+\item Estimate the mean and median number of plays you can expect to
+make until you go broke, if you start with 10 coins.  You can run a
+simulation to estimate this, rather than trying to compute an exact
+answer.
+\end{enumerate}
+\end{uexercise} 
+% id=13.5 section=13.4
+
+\begin{iexercise}
+Deciding to put our knowledge of probability to good use, we encounter
+a slot machine with three independently turning reels, each
+producing one of the four symbols {\sc bar}, {\sc bell}, {\sc lemon}, or {\sc cherry} with
+equal probability.  The slot machine has the following payout scheme
+for a bet of 1 coin (where ``?'' denotes that we don't care what
+comes up for that wheel):
+%
+\begin{verse}
+      {\sc bar}/{\sc bar}/{\sc bar}  pays 21 coins \\
+      {\sc bell}/{\sc bell}/{\sc bell}  pays 16 coins\\
+      {\sc lemon}/{\sc lemon}/{\sc lemon} pays 5 coins\\
+      {\sc cherry}/{\sc cherry}/{\sc cherry} pays 3 coins\\
+      {\sc cherry}/{\sc cherry}/? pays 2 coins\\
+      {\sc cherry}/?/? pays 1 coin
+\end{verse}
+%
+\begin{enumerate}
+\item Compute the expected ``payback'' percentage of the machine.  In
+other words, for each coin played, what is the expected coin return?
+\item Compute the probability that playing the slot machine once
+will result in a win.
+\item Estimate the mean and median number of plays you can expect to
+make until you go broke, if you start with 8 coins.  You can run a
+simulation to estimate this, rather than trying to compute an exact
+answer.
+\end{enumerate}
+\end{iexercise} 
+% id=13.5 section=13.4
+
+\begin{uexercise}
+We wish to transmit an \(n\)-bit message to a receiving agent.  The bits in the
+message are independently corrupted (flipped) during transmission with
+\(\epsilon\) probability each.  With an extra parity bit sent along with
+the original information, a message can be corrected by the receiver if at most one bit in
+the entire message (including the parity bit) has
+been corrupted.  Suppose we want to ensure that the correct message is
+received with probability at least \(1-\delta\).
+What is the maximum feasible value of \(n\)?
+Calculate this value for the case \(\epsilon\eq 0.001\), \(\delta\eq 0.01\).
+\end{uexercise} 
+% id=13.6 section=13.4
+
+\begin{iexercise}
+We wish to transmit an \(n\)-bit message to a receiving agent.  The bits in the
+message are independently corrupted (flipped) during transmission with
+\(\epsilon\) probability each.  With an extra parity bit sent along with
+the original information, a message can be corrected by the receiver if at most one bit in
+the entire message (including the parity bit) has
+been corrupted.  Suppose we want to ensure that the correct message is
+received with probability at least \(1-\delta\).
+What is the maximum feasible value of \(n\)?
+Calculate this value for the case \(\epsilon\eq 0.002\), \(\delta\eq 0.01\).
+\end{iexercise} 
+% id=13.6 section=13.4
+
+\begin{exercise}[independence-exercise]%
+Show that the three forms of independence in \eqref{independence-equation}
+are equivalent.
+\end{exercise} 
+% id=13.13 section=13.4
+
+
+%%%% 13.5: Bayes' Rule and Its Use (13 exercises, 4 labelled)
+%%%% ========================================================
+
+\begin{exercise}
+Consider two medical tests, A and B, for a virus.  Test A is 95\% effective at
+recognizing the virus when it is present, but has a 10\% false positive
+rate (indicating that the virus is present, when it is not).  Test B
+is 90\% effective at recognizing the virus, but has a 5\% false positive
+rate.  The two tests use independent methods of
+identifying the virus.  The virus is carried by 1\% of all people.  Say
+that a person is tested for the virus using only one of the tests, and
+that test comes back positive for carrying the virus.  Which test
+returning positive is more indicative of someone really carrying the
+virus?  Justify your answer mathematically.
+\end{exercise} 
+% id=13.4 section=13.5
+
+\begin{exercise}
+Suppose you are given a coin that lands \(\J{heads}\) with probability \(x\) and \(\J{tails}\) with probability \(1 - x\).
+Are the outcomes of successive flips of the coin independent of each other given that you know the value of \(x\)?
+Are the outcomes of successive flips of the coin independent of each other if you do {\em not} know the value of \(x\)? 
+Justify your answer.
+\end{exercise} 
+% id=13.7 section=13.5
+
+\begin{uexercise}
+After your yearly checkup, the doctor has bad news and good news.  The
+bad news is that you tested positive for a serious disease and that
+the test is 99\% accurate (i.e., the probability of testing positive
+when you do have the disease is 0.99, as is the probability of testing
+negative when you don't have the disease).  The good news is
+that this is a rare disease, striking only 1 in 10,000 people of
+your age.  Why is it good news that the disease is rare?  What are the
+chances that you actually have the disease?
+\end{uexercise} 
+% id=13.14 section=13.5
+
+\begin{iexercise}
+After your yearly checkup, the doctor has bad news and good news.  The
+bad news is that you tested positive for a serious disease and that
+the test is 99\% accurate (i.e., the probability of testing positive
+when you do have the disease is 0.99, as is the probability of testing
+negative when you don't have the disease).  The good news is
+that this is a rare disease, striking only 1 in 100,000 people of
+your age.  Why is it good news that the disease is rare?  What are the
+chances that you actually have the disease?
+\end{iexercise} 
+% id=13.14 section=13.5
+
+\begin{exercise}[conditional-bayes-exercise]%
+It is quite often useful to consider the effect of some specific propositions
+in the context of some general background evidence that remains fixed, rather
+than in the complete absence of information.  The following questions ask you
+to prove more general versions of the product rule and Bayes'\index{Bayes' rule} rule, with
+respect to some background evidence \(\e\):
+\begin{enumerate}
+\item Prove the conditionalized version of the general product rule:
+\[\pv(X,Y \given \e) = \pv(X\given Y,\e) \pv(Y\given\e)\ .\]
+\item Prove the conditionalized version of Bayes' rule in \eqref{conditional-bayes-equation}.
+\end{enumerate}
+\end{exercise} 
+% id=13.15 section=13.5
+
+\begin{exercise}[pv-xyz-exercise]
+Show that the statement of conditional independence
+\[\pv(X,Y \given Z) = \pv(X\given Z) \pv(Y\given Z)\]
+is equivalent to each of the statements
+\[ \pv(X\given Y,Z) = \pv(X\given Z) \quad\mbox{and}\quad \pv(Y\given X,Z) = \pv(Y\given Z)\ . \]
+\end{exercise} 
+% id=13.16 section=13.5
+
+\begin{uexercise}
+Suppose you are given a bag containing \(n\) unbiased coins.
+You are told that \(n-1\) of these coins are normal, with heads on
+one side and tails on the other, whereas one coin is a fake, with 
+heads on both sides.
+\begin{enumerate}
+\item Suppose you reach into the bag, pick out a coin at random,
+flip it, and get a head.  What is the (conditional)
+probability that the coin you chose is the fake coin?
+
+\item Suppose you continue flipping the coin for a total of \(k\) times after picking it
+and see \(k\) heads. Now what is the conditional probability
+that you picked the fake coin?
+
+\item Suppose you wanted to decide whether the chosen coin was fake
+by flipping it \(k\) times. The decision procedure returns \(\J{fake}\)
+if all \(k\) flips come up heads; otherwise it returns \(\J{normal}\).
+What is the (unconditional) probability that this procedure
+makes an error?
+\end{enumerate}
+\end{uexercise} 
+% id=13.17 section=13.5
+
+\begin{exercise}[normalization-exercise]%
+In this exercise, you will complete the normalization calculation for
+the meningitis\index{meningitis} example. First, make up a suitable value for 
+\(P(s\given\lnot m)\), and use it to calculate unnormalized values for
+\(P(m\given s)\) and \(P(\lnot m \given s)\) (i.e., ignoring the \(P(s)\) term 
+in the Bayes' rule expression, \eqref{meningitis-bayes-equation}). Now normalize these values
+so that they add to 1.
+\end{exercise} 
+% id=13.18 section=13.5
+
+\begin{iexercise}
+This exercise investigates the way in which conditional\index{conditional independence} independence
+relationships affect the amount of information needed for
+probabilistic calculations.
+\begin{enumerate}
+\item Suppose we wish to calculate \(P(h\given e_1,e_2)\) and we have
+no conditional independence information. Which of the following sets
+of numbers are sufficient for the calculation? 
+\begin{enumerate}
+\item \(\pv(E_1,E_2)\), \(\pv(H)\), \(\pv(E_1\given H)\), \(\pv(E_2\given H)\)
+\item \(\pv(E_1,E_2)\), \(\pv(H)\), \(\pv(E_1,E_2\given H)\)
+\item \(\pv(H)\), \(\pv(E_1\given H)\), \(\pv(E_2\given H)\)
+\end{enumerate}
+\item Suppose we know that \(\pv(E_1\given H,E_2)=\pv(E_1\given H)\) for all values of
+\(H\), \(E_1\), \(E_2\). Now which of the  three sets are sufficient?
+\end{enumerate}
+\end{iexercise} 
+% id=13.19 section=13.5
+
+\begin{exercise}
+Let \(X\), \(Y\), \(Z\) be Boolean random variables. Label the eight entries
+in the joint distribution \(\pv(X,Y,Z)\) as \(a\) through \(h\).
+Express the statement that \(X\) and \(Y\) are conditionally independent
+given \(Z\), as a set of equations relating \(a\) through \(h\).
+How many {\em nonredundant} equations are there?
+\end{exercise} 
+% id=13.20 section=13.5
+
+\begin{uexercise}
+(Adapted from Pearl~\citeyear{Pearl:1988}.)  Suppose you are a witness
+to a nighttime hit-and-run accident involving a taxi in Athens. All
+taxis\index{taxi!Athens@in Athens} in Athens are blue or green. You
+swear, under oath, that the taxi was blue. Extensive testing shows
+that, under the dim lighting conditions, discrimination between blue
+and green is 75\% reliable.
+\begin{enumerate}
+\item  Is it possible to calculate the most
+likely color for the taxi? ({\em Hint:} distinguish carefully between
+the proposition that the taxi {\em is} blue and the proposition that
+it {\em appears} blue.) 
+\item What if you know that 9 out of 10 Athenian taxis are green?
+\end{enumerate}
+\end{uexercise} 
+% id=13.21 section=13.5
+
+%% \begin{iexercise}
+%% (Adapted from Pearl~\citeyear{Pearl:1988}.)  Suppose you are a witness
+%% to a nighttime hit-and-run accident involving a taxi in Athens. All
+%% taxis\index{taxi!Athens@in Athens} in Athens are blue or green. You
+%% swear, under oath, that the taxi was blue. Extensive testing shows
+%% that, under the dim lighting conditions, discrimination between blue
+%% and green is 66\% reliable. 
+%% \begin{enumerate}
+%% \item  Is it possible to calculate the most
+%% likely color for the taxi? ({\em Hint:} distinguish carefully between
+%% the proposition that the taxi {\em is} blue and the proposition that
+%% it {\em appears} blue.)
+%% \item What if you know that 8 out of 10 Athenian taxis are green?
+%% \end{enumerate}
+%% \end{iexercise} 
+%% % id=13.21 section=13.5
+
+%% \begin{exercise}
+%% (Adapted from Pearl~\citeyear{Pearl:1988}.)  Three
+%% prisoners\index{prisoners, three}, {\em A}, {\em B}, and {\em C}, are
+%% locked in their cells. It is common knowledge that one of them will be
+%% executed the next day and the others pardoned.  Only the governor
+%% knows which one will be executed.  Prisoner {\em A} asks the guard a
+%% favor: ``Please ask the governor who will be executed, and then take a
+%% message to one of my friends {\em B} or {\em C} to let him know that
+%% he will be pardoned in the morning.''  The guard agrees, and comes
+%% back later and tells {\em A} that he gave the pardon message to {\em
+%% B}. 
+%% What are {\em A}'s chances of being executed, given this information?
+%% Avoid energetic waving of hands in your answer.
+%% \end{exercise} 
+%% % id=13.22 section=13.5
+
+\begin{iexercise}
+Write out a general algorithm for answering queries of the form
+\(\pv(\J{Cause}\given \e)\), using a naive Bayes distribution. 
+Assume that the evidence \(\e\)
+may assign values to {\em any subset} of the effect variables.
+\end{iexercise} 
+% id=13.23 section=13.5
+
+\begin{exercise}[naive-bayes-retrieval-exercise]
+Text categorization is the task of assigning a given document to one
+of a fixed set of categories on the basis of the text it contains.
+Naive Bayes models are often used for this task. In these models, the
+query variable is the document category, and the ``effect'' variables
+are the presence or absence of each word in the language; the
+assumption is that words occur independently in documents, with
+frequencies determined by the document category.
+\begin{enumerate}
+\item Explain precisely how such a
+model can be constructed, given as ``training data'' a set of
+documents that have been assigned to categories. 
+\item Explain precisely how to categorize a new document.
+\item Is the conditional independence assumption reasonable? Discuss.
+\end{enumerate}
+\end{exercise} 
+% id=13.24 section=13.5
+
+
+%%%% 13.6: The Wumpus World Revisited (3 exercises, 0 labelled)
+%%%% ==========================================================
+
+\begin{exercise}
+In our analysis of the \indextext{wumpus world}, we used the fact that
+each square contains a pit with probability 0.2, independently of the
+contents of the other squares. Suppose instead that exactly \(N/5\) pits
+are scattered  at random among the \(N\) squares other than
+[1,1].  Are the variables \(P_{i,j}\) and \(P_{k,l}\) still independent?
+What is the joint distribution \(\pv(P_{1,1},\ldots,P_{4,4})\) now?
+Redo the calculation for the probabilities of pits in [1,3] and [2,2].
+\end{exercise} 
+% id=13.25 section=13.6
+
+\begin{exercise}
+Redo the probability calculation for pits in [1,3] and [2,2], assuming that each
+square contains a pit with probability 0.01, independent of the
+other squares.  What can you say about the relative performance of a
+logical versus a probabilistic agent in this case?
+\end{exercise} 
+% id=13.26 section=13.6
+
+\begin{exercise}
+\prgex Implement a hybrid probabilistic agent for the wumpus world, based on the
+hybrid agent in \figref{hybrid-wumpus-agent-algorithm} and the probabilistic
+inference procedure outlined in this chapter.
+\end{exercise} 
+% id=13.27 section=13.6
+
+
+%% \begin{exercise}
+%% A game show host allows you to select one of three numbered envelopes,
+%% of which one contains \$1000 and two are empty.  After selecting one of
+%% the envelopes, the host opens one of the remaining two envelopes to
+%% show you that it is empty and gives you the option of exchanging the
+%% envelope you originally chose for the remaining unopened envelope.
+%% Should you make the switch?  Mathematically justify your answer and
+%% note any assumptions you made.  Whether you said yes or no, there are
+%% other people who vigorously disagree with you.  Provide an alternative
+%% interpretation of the problem (with a different assumption) for which
+%% the other answer makes (at least a little bit of) sense.
+%% \end{exercise}
+
+% \begin{exercise}\label{de-finetti-exercise}%
+% Prove that the three axioms of probability are necessary for rational
+% behavior in betting situations, as shown by de Finetti.\nindex{de~Finetti, B.}
+% \end{exercise}
+
+
+%% \begin{exercise}
+%% Each person in a group of five people picks, uniformly and
+%% independently at random, a number between~1 and~100.  For each pair
+%% of distinct people {\mathdelim}i,j{\mathdelim}, let {\mathdelim}X_{ij}{\mathdelim} be the
+%% event ``{\mathdelim}i,j{\mathdelim} both choose the same number'', and for each triple of distinct
+%% people~{\mathdelim}i,j,k{\mathdelim}, let {\mathdelim}X_{ijk}{\mathdelim} be the event
+%% ``{\mathdelim}i,j,k{\mathdelim} all choose the same number.''  Which of the following
+%% pairs of events that are independent (assuming that the indices
+%% {\mathdelim}i,j,k,\ell,m{\mathdelim} are all distinct)?
+%% \begin{center}\begin{tabbing}
+%%      \={\mathdelim}X_{ij}{\mathdelim} and {\mathdelim}X_{k\ell}{\mathdelim}\qquad\qquad
+%%      \= {\mathdelim}X_{ij}{\mathdelim} and {\mathdelim}X_{ik}{\mathdelim} \qquad\qquad
+%%      \= {\mathdelim}X_{ijk}{\mathdelim} and {\mathdelim}X_{ij}{\mathdelim}\\[12pt]
+%%      \>{\mathdelim}X_{ijk}{\mathdelim} and {\mathdelim}X_{i\ell}{\mathdelim}
+%%      \> {\mathdelim}X_{ijk}{\mathdelim} and {\mathdelim}X_{ij\ell}{\mathdelim}
+%%      \> {\mathdelim}X_{ijk}{\mathdelim} and {\mathdelim}X_{i\ell m}{\mathdelim}
+%% \end{tabbing}\end{center}
+%% \end{exercise}
+
+
+%\begin{exercise}\label{bayesian-updating-exercise}%
+%Show that the degree of belief after applying the
+%Bayesian\index{Bayesian updating} updating process is independent of
+%the order in which the pieces of evidence arrive.  That is, show that
+%{\mathdelim}P(A\given B,C) = P(A\given C,B){\mathdelim} using the Bayesian updating rule.
+%\end{exercise}
+
+
+%\begin{exercise}
+%This exercise concerns Bayesian\index{Bayesian updating} updating in the meningitis\index{meningitis} example.  Starting
+%with a patient about whom we know nothing, show how the probability of having
+%meningitis, {\mathdelim}P(M){\mathdelim}, is updated after we find the patient has a stiff neck.
+%Next, show how {\mathdelim}P(M){\mathdelim} is updated again when we find the patient has a fever.
+%(Say what probabilities you need to compute this, and make up values for them.)
+%\end{exercise}
+
+%% \begin{exercise}
+%% In previous chapters, we found the technique of \term{reification}\tindex{reification}
+%% useful in creating representations in first-order logic. For example,
+%% we handled change by reifying situations, and belief by reifying sentences.
+%% Suppose we try to do this for uncertain reasoning by reifying
+%% probabilities, thus embedding probability entirely {\em within}
+%% first-order logic. Which of the following are true?
+%% \begin{enumerate}
+%% \item This would not work.
+%% \item This would work fine; in fact, it is just another way of describing
+%% probability theory.
+%% \item This would work fine; it would be an alternative to probability theory.
+%% \end{enumerate}
+%% \end{exercise}
+%% 
+

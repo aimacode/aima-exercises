@@ -1,0 +1,637 @@
+%%%% 3.1: Problem-Solving Agents (10 exercises, 5 labelled)
+%%%% ======================================================
+
+\begin{exercise}
+Explain why problem formulation must follow goal formulation.
+\end{exercise} 
+% id=3.1 section=3.1.2
+
+\begin{iexercise}%%Nick Hay Question 1
+Give a complete problem formulation for each of the following
+problems.  Choose a formulation that is precise enough to be
+implemented.
+\begin{enumerate}
+\item There are six glass boxes in a row, each with a lock.  Each of
+  the first five boxes holds a key unlocking the next box in line; the
+  last box holds a banana.  You have the key to the first box, and you
+  want the banana. 
+\item  You start with the sequence ABABAECCEC, or in general any
+  sequence made from A, B, C, and E.  You can transform this sequence
+  using the following equalities:  AC = E, AB = BC, BB = E, and E\(x\) = \(x\)
+  for any \(x\).  For example, ABBC can be transformed into AEC, and then
+  AC, and then E.  Your goal is to produce the sequence E. 
+\item  There is an \(n \stimes n\) grid of squares, each square initially being
+  either unpainted floor or a bottomless pit.  You start standing on
+  an unpainted floor square, and can either paint the square under
+  you or move onto an adjacent unpainted floor square.  You want the
+  whole floor painted. 
+\item A container ship is in port, loaded high with containers.  There
+  13 rows of containers, each 13 containers wide and 5 containers
+  tall.  You control a crane that can move to any location above the
+  ship, pick up the container under it, and move it onto the dock.
+  You want the ship unloaded. 
+\end{enumerate}
+\end{iexercise} 
+% id=3.3 section=3.1.2
+
+\begin{uexercise}%%Nick Hay Question 2
+Your goal is to navigate a robot out of a maze.  The robot starts in
+the center of the maze facing north.  You can turn the robot to face
+north, east, south, or west.  You can direct the robot to move forward
+a certain distance, although it will stop before hitting a wall. 
+\begin{enumerate}
+\item Formulate this problem.  How large is the state space?
+
+\item In navigating a maze, the only place we need to turn is at the
+  intersection of two or more corridors.  Reformulate this problem
+  using this observation.  How large is the state space now? 
+
+\item From each point in the maze, we can move in any of the four
+  directions until we reach a turning point, and this is the only
+  action we need to do.  Reformulate the problem using these actions.
+  Do we need to keep track of the robot's orientation now? 
+
+\item In our initial description of the problem we already abstracted
+  from the real world, restricting actions and removing
+  details.  List three such simplifications we made. 
+\end{enumerate}
+\end{uexercise} 
+% id=3.4 section=3.1.2
+
+\begin{iexercise}%%Nick Hay Question 4
+You have a \(9 \stimes 9\) grid of squares, each of which can be
+colored red or blue.  The grid is initially colored all blue, but you
+can change the color of any square any number of times.  Imagining the
+grid divided into nine \(3 \stimes 3\) sub-squares, you want each
+sub-square to be all one color but neighboring sub-squares to be
+different colors. 
+\begin{enumerate}
+\item Formulate this problem in the straightforward way.  Compute the
+  size of the state space. 
+
+\item You need color a square only once.  Reformulate, and compute the
+  size of the state space.  Would breadth-first graph search perform
+  faster on this problem than on the one in (a)?  How about
+  iterative deepening tree search? 
+
+\item Given the goal, we need consider only colorings where each
+  sub-square is uniformly colored.  Reformulate the problem and
+  compute the size of the state space. 
+
+\item How many solutions does this problem have?
+
+\item Parts (b) and (c) successively abstracted the original problem
+  (a).  Can you give a translation from solutions in problem (c) into
+  solutions in problem (b), and from solutions in problem (b) into
+  solutions for problem (a)? 
+\end{enumerate}
+\end{iexercise} 
+% id=3.6 section=3.1.2
+
+\begin{exercise}[two-friends-exercise]%%Russell Spring 2005 midterm
+Suppose two friends live in different cities on a map, such as the Romania map shown in \figref{romania-distances-figure}.
+On every turn, we can simultaneously move each friend to a neighboring city on the map.
+The amount of time needed to move from city \(i\) to neighbor \(j\) is equal
+to the road distance \(d(i,j)\) between the cities, but on each turn the friend that arrives
+first must wait until the other one arrives (and calls the first on his/her cell phone) before the next turn can begin.
+We want the two friends to meet as quickly as possible. 
+\begin{enumerate}
+\item Write a detailed formulation for this search problem. (You will find it helpful to define some formal notation here.)
+\item Let \(D(i,j)\) be the straight-line distance between cities \(i\) and \(j\). 
+Which of the following heuristic functions are admissible? (i) \(D(i,j)\); (ii) \(2\cdot D(i,j)\); (iii) \(D(i,j)/2\).
+\item Are there completely connected maps for which no solution exists?
+\item Are there maps in which all solutions require one friend to visit the same city twice?
+\end{enumerate}
+\end{exercise} 
+% id=3.16 section=3.1
+
+\begin{exercise}[8puzzle-parity-exercise]
+Show that the 8-puzzle\index{eight-puzzle@8-puzzle} states are divided
+into two disjoint sets, such that any state is reachable from any other state in the same set, while no state is reachable from
+any state in the other set. ({\em Hint:} See \citeA{Berlekamp+al:1982}.)  Devise a
+procedure to decide which set a given state is in,
+and explain why this is useful
+for generating random states.
+\end{exercise} 
+% id=3.17 section=3.1
+
+\begin{exercise}[nqueens-size-exercise]
+Consider the \(n\)-queens problem using the ``efficient'' incremental
+formulation given on \pgref{nqueens-page}.  Explain why the state
+space has at least \(\sqrt[3]{n!}\) states and estimate the largest
+\(n\) for which exhaustive exploration is feasible. ({\em Hint}:
+Derive a lower bound on the branching factor by considering the
+maximum number of squares that a queen can attack in any 
+column.) 
+\end{exercise} 
+% id=3.18 section=3.1.2
+
+\begin{uexercise}
+Give a complete problem formulation for each of the following. 
+Choose a formulation that is precise enough to be implemented.
+\begin{enumerate}
+\item Using only four
+colors, you have to color a planar map in such a way that no two adjacent regions have the same color.
+
+\item A 3-foot-tall monkey is in a room where some bananas are suspended
+from the 8-foot ceiling. He would like to get the bananas.  The room contains 
+two stackable, movable, climbable 3-foot-high crates.\index{monkey and bananas}\index{problem!monkey and bananas}
+
+\item You have a program that outputs the message ``illegal input
+record'' when fed a certain file of input records.  You know that
+processing of each record is independent of the other records. You
+want to discover what record is illegal.
+
+\item You have three jugs, measuring 12 gallons, 8 gallons, and 3
+gallons, and a water faucet.  You can fill the jugs up or empty them
+out from one to another or onto the ground. You need to measure out
+exactly one gallon.
+\end{enumerate}
+\end{uexercise} 
+% id=3.21 section=3.1.2
+
+\begin{exercise}[path-planning-exercise]%
+\prgex
+Consider the problem of finding the shortest path
+between two points on a plane that has convex polygonal obstacles as
+shown in \figref{geometric-scene-figure}.
+This is an idealization of the problem that a robot has to solve to
+navigate in a crowded environment.
+\begin{enumerate}
+\item Suppose the state space consists of all positions \((x,y)\) in the plane. How
+many states are there? How many paths are there to the goal?
+
+\item Explain briefly why the shortest\index{shortest path} path from one polygon vertex to
+any other in the scene must consist of
+straight-line segments joining some of the vertices of the polygons.
+Define a good state space now. How large is this state space?
+
+\item Define the necessary functions to implement the search problem,
+including an \noprog{Actions} function that takes a vertex as input and returns
+a set of vectors, each of which maps the current vertex to one of the vertices that can be reached in a straight line.
+(Do not forget the neighbors on the same polygon.) Use
+the straight-line distance for the heuristic function.
+
+\item Apply one or more of the algorithms in this chapter to
+solve a range of problems in the domain, and comment on their performance.
+\end{enumerate}
+\end{exercise} 
+% id=3.27 section=3.1.2
+
+\begin{figure}[tb]
+%\epsfxsize=3.7in
+\figboxnew{figures/geometric-scene.eps}
+\caption{A scene with polygonal obstacles. \(S\) and \(G\) are the start and goal states.}
+\label{geometric-scene-figure}
+\end{figure} 
+% id=3.28 section=3.1.2
+
+\begin{exercise}[negative-g-exercise]%
+On \pgref{non-negative-g}, we said that we would not consider problems with
+negative path costs. In this exercise, we explore this decision in more depth.
+\begin{enumerate}
+\item Suppose that actions can have arbitrarily large negative costs;
+explain why this possibility would force any optimal algorithm
+to explore the entire state space.
+\item Does it help if we insist that step costs must be greater than or equal to
+some negative constant \(c\)? Consider both trees and graphs.
+\item Suppose that a set of actions forms a loop in the state space such
+that executing the set in some order results in no net change to the
+state. If all of these actions have negative cost, what does this
+imply about the optimal behavior for an agent in such an environment?
+\item One can easily imagine actions with high negative cost, even
+in domains such as route finding. For example, some stretches of road
+might have such beautiful scenery as to far outweigh the normal costs
+in terms of time and fuel. Explain, in precise terms, within the context
+of state-space search, why humans do
+not drive around scenic loops indefinitely, and explain how to define
+the state space and actions for route finding so that artificial
+agents can also avoid looping. 
+\item Can you think of a real domain in which step costs are such as
+to cause looping?
+\end{enumerate}
+\end{exercise} 
+% id=3.30 section=3.1.1
+
+
+%%%% 3.2: Example Problems (1 exercises, 1 labelled)
+%%%% ===============================================
+
+\begin{exercise}[mc-problem]
+\prgex
+The \term{missionaries and cannibals} problem\ntindex{missionaries and 
+cannibals}\index{problem!missionaries and cannibals} is usually stated 
+as follows.  Three missionaries and three cannibals are on one side of 
+a river, along with a boat that can hold one or two people.  Find a 
+way to get everyone to the other side without ever leaving a group of 
+missionaries in one place outnumbered by the cannibals in that place.
+This problem is famous in AI because it was the subject of the first
+paper that approached problem formulation from an
+analytical viewpoint~\cite{Amarel:1968}. 
+\begin{enumerate}
+\item Formulate the problem precisely, making only those distinctions
+necessary to ensure a valid solution. Draw a diagram of the complete
+state space.
+\item Implement and solve the problem optimally using an appropriate 
+search algorithm.  Is it a good idea to check 
+for repeated states? 
+\item Why do you think people have a hard time solving this puzzle, given that the 
+state space is so simple?
+\end{enumerate}
+\end{exercise} 
+% id=3.22 section=3.2
+
+
+%%%% 3.3: Searching for Solutions (5 exercises, 1 labelled)
+%%%% ======================================================
+
+\begin{exercise}
+Define in your own words the following terms: state, state space, search tree, 
+search node, goal, action, transition model, and branching factor.
+\end{exercise} 
+% id=3.0 section=3.3
+
+\begin{exercise}%%Nick Hay Question 3
+What's the difference between a world state, a state description, and
+a search node?  Why is this distinction useful? 
+\end{exercise} 
+% id=3.5 section=3.3.1
+
+\begin{exercise}%%Nick Hay Question 5
+An action such as \act{Go(Sibiu)} really consists of a long sequence
+of finer-grained actions: turn on the car, release the brake,
+accelerate forward, etc.  Having composite actions of this kind
+reduces the number of steps in a solution sequence, thereby reducing
+the search time.  Suppose we take this to the logical extreme, by
+making super-composite actions out of every possible sequence of
+\act{Go} actions. Then every problem instance is solved by a single
+super-composite action, such as \act{Go(Sibiu)Go(Rimnicu
+Vilcea)Go(Pitesti)Go(Bucharest)}. Explain how search would work in
+this formulation. Is this a practical approach for speeding up problem
+solving?
+\end{exercise} 
+% id=3.7 section=3.3.2
+
+\begin{iexercise}
+Does a finite state space always lead to a finite search tree?  How about a 
+finite state space that is a tree?  Can you be more precise about what types 
+of state spaces always lead to finite search trees? (Adapted from \abbrciteauthor{Bender:1996}, 1996.)
+\end{iexercise} 
+% id=3.19 section=3.3
+
+\begin{exercise}[graph-separation-property-exercise]
+Prove that \noprog{Graph-Search} satisfies the graph separation property illustrated in \figref{graph-separation-property-figure}.
+({\em Hint}: Begin by showing that the property holds at the start, then show that if it holds before an iteration of the algorithm, it holds afterwards.) 
+Describe a search algorithm that violates the property.
+\end{exercise} 
+% id=3.20 section=3.3.1
+
+
+%%%% 3.4: Uninformed Search Strategies (9 exercises, 4 labelled)
+%%%% ===========================================================
+
+\begin{exercise}
+Which of the following are true and which are false? Explain your answers.
+\begin{enumerate}
+\item Depth-first search always expands at least as many nodes
+as A{\star} search with an admissible heuristic.
+\item \(h(n)=0\) is an admissible heuristic for the 8-puzzle.
+\item A{\star} is of no use in robotics because percepts, states, and actions are continuous.
+\item Breadth-first search is complete even if zero step costs are allowed.
+\item Assume that a rook can move on a chessboard any number of squares in a straight line,
+vertically or horizontally, but cannot jump over other pieces. Manhattan distance
+is an admissible heuristic for the problem of moving the rook from square A to square B
+in the smallest number of moves.
+\end{enumerate}
+\end{exercise} 
+% id=3.2 section=3.4
+
+\begin{uexercise}%%Nick Hay Question 6
+Consider a state space where the start state is number 1 and each
+state \(k\) has two successors: numbers \(2k\) and \(2k+1\). 
+\begin{enumerate}
+\item Draw the portion of the state space for states 1 to 15.
+\item Suppose the goal state is 11. List the order in which nodes will
+  be visited for breadth-first search, depth-limited search with limit
+  3, and iterative deepening search. 
+\item How well would bidirectional search work on this problem? What
+  is the branching factor in each direction of the bidirectional
+  search? 
+\item Does the answer to (c) suggest a reformulation of the problem
+  that would allow you to solve the problem of getting from state 1 to
+  a given goal state with almost no search? 
+\item Call the action going from \(k\) to \(2k\) Left, and the action
+  going to \(2k+1\) Right.  Can you find an algorithm that outputs the
+  solution to this problem without any search at all? 
+\end{enumerate}
+\end{uexercise} 
+% id=3.8 section=3.4
+
+\begin{figure}[tbp]
+%%\epsfxsize=0.7\textwidth
+\figboxnew{figures/brio.eps}
+\caption{The track pieces in a wooden railway set; each is labeled
+with the number of copies in the set. Note that curved pieces and
+``fork'' pieces (``switches'' or ``points'') can be flipped over so
+they can curve in either direction. Each curve subtends 45 degrees.}
+\label{brio-figure}
+\end{figure} 
+% id=3.13 section=3.4
+
+\begin{exercise}[brio-exercise]%%Russell Spring 2002 midterm
+A basic wooden railway set contains the pieces shown in \figref{brio-figure}.
+The task is to connect these pieces into a railway that has no
+overlapping tracks and no loose ends where a train
+could run off onto the floor.
+\begin{enumerate}
+\item Suppose that the pieces fit together {\em exactly} with no slack.
+Give a precise formulation of the task as a search problem.
+\item Identify a suitable uninformed search algorithm for this task and
+explain your choice. 
+\item Explain why removing any one of the ``fork'' pieces makes the problem unsolvable.
+\item Give an upper bound on the total size of the state space defined by your formulation.
+({\em Hint}: think about the maximum branching factor for the construction process and the maximum depth, ignoring the
+problem of overlapping pieces and loose ends. Begin by pretending that every piece is unique.)
+\end{enumerate}
+\end{exercise} 
+% id=3.14 section=3.4
+
+\begin{iexercise}%
+\prgex
+Implement two versions of the \result{\(s\)}{\(a\)}  function for the 8-puzzle:\index{eight-puzzle@8-puzzle}
+one that copies and edits the data structure for the parent node \(s\) and one that
+modifies the parent state
+directly (undoing the modifications as needed). Write versions of
+iterative deepening depth-first search that use these functions and compare
+their performance.
+\end{iexercise} 
+% id=3.23 section=3.4
+
+\begin{exercise}[iterative-lengthening-exercise]%
+\prgex
+On \pgref{iterative-lengthening-page}, we mentioned \termi{iterative
+lengthening search}, an iterative analog of uniform cost search. The  idea is
+to use increasing limits on path cost. If a node is generated whose
+path cost exceeds the current limit, it is immediately discarded.
+For each new iteration, the limit is set to the lowest path cost
+of any node discarded in the previous iteration.
+\begin{enumerate}
+\item Show that this algorithm is optimal for general path costs.
+\item Consider a uniform tree with branching factor \(b\),
+solution depth \(d\), and unit step costs. How many iterations
+will iterative lengthening require?
+\item Now consider step costs drawn from the continuous range \([\epsilon,1]\),
+where \(0 < \epsilon < 1\). How many iterations are required in
+the worst case?
+\item Implement the algorithm and apply it to instances of
+the 8-puzzle and traveling salesperson problems. Compare the
+algorithm's performance to that of uniform-cost search, and comment
+on your results.
+\end{enumerate}
+\end{exercise} 
+% id=3.24 section=3.4.2
+
+\begin{exercise}
+Describe a state space in which iterative deepening search performs
+much worse than depth-first search (for example, \(O(n^{2})\) vs. \(O(n)\)).
+\end{exercise} 
+% id=3.25 section=3.4
+
+\begin{exercise}%
+\prgex Write a program that will take as input two Web page URLs and
+find a path of links from one to the other.  What is an appropriate
+search strategy?  Is bidirectional search a good idea?  Could a search
+engine be used to implement a predecessor function?
+\end{exercise} 
+% id=3.26 section=3.4
+
+\begin{exercise}[vacuum-search-exercise]%
+\prgex
+Consider the vacuum-world problem defined in \figref{vacuum-world-figure}.
+\begin{enumerate}
+\item Which of the algorithms defined in this chapter would be
+appropriate for this problem? Should the algorithm use tree search or graph search?
+\item Apply your chosen algorithm to compute an optimal sequence of actions for
+a \(3\stimes 3\) world whose initial state has dirt in the three top squares
+and the agent in the center.
+\item Construct a search agent for the vacuum world, and evaluate its
+performance in a set of \(3\stimes 3\) worlds with probability 0.2 of
+dirt in each square. Include the search cost as well as path cost in
+the performance measure, using a reasonable exchange rate.
+\item Compare your best search agent with a simple randomized reflex agent that sucks if there is dirt and otherwise moves randomly.
+\item Consider what would happen if the world were enlarged to
+\(n \times n\). How does the performance of the search agent and of the reflex agent vary with
+\(n\)?
+\end{enumerate}
+\end{exercise} 
+% id=3.31 section=3.4
+
+\begin{exercise}[search-special-case-exercise]
+Prove each of the following statements, or give a counterexample:
+\begin{enumerate}
+\item Breadth-first search is a special case of uniform-cost search.
+\item Depth-first search is a special case of best-first tree search.
+\item Uniform-cost search is a special case of A{\star} search.
+\end{enumerate}
+\end{exercise} 
+% id=3.34 section=3.4
+
+
+%%%% 3.5: Informed (Heuristic) Search Strategies (4 exercises, 1 labelled)
+%%%% =====================================================================
+
+\begin{exercise}
+\prgex Compare the performance of A{\star} and RBFS on a set of
+randomly generated problems in the 8-puzzle (with Manhattan distance) and
+TSP (with MST---see \exref{tsp-mst-exercise}) domains. Discuss 
+your results. What happens to the performance of RBFS when a small
+random number is added to the heuristic values in the 8-puzzle domain?
+\end{exercise} 
+% id=3.29 section=3.5
+
+\begin{exercise}
+Trace the operation of A{\star} search applied to the problem of getting
+to Bucharest from Lugoj using the straight-line distance heuristic.
+That is, show the sequence of nodes that the algorithm will consider and
+the \(f\), \(g\), and \(h\) score for each node.
+\end{exercise} 
+% id=3.32 section=3.5.2
+
+\begin{iexercise}
+Sometimes there is no good evaluation function for a problem but there
+is a good comparison method: a way to tell whether one node is better than
+another without assigning numerical values to either.  Show that this
+is enough to do a best-first search.  Is there an analog of A{\star} for this setting?
+\end{iexercise} 
+% id=3.33 section=3.5
+
+\begin{exercise}[a*-failure-exercise]%
+\prgex
+Devise a state space in which A{\star} using \noprog{Graph-Search}
+returns a suboptimal solution with an \(h(n)\) function that is admissible
+but inconsistent.
+\end{exercise} 
+% id=3.35 section=3.5
+
+
+%%%% 3.6: Heuristic Functions (11 exercises, 3 labelled)
+%%%% ===================================================
+
+\begin{iexercise}%%Nick Hay Question 2
+ Accurate heuristics don't necessarily reduce search time in the
+ worst case.  Given any depth \(d\), define a search problem with a goal
+ node at depth \(d\), and write a heuristic function such that \(|h(n) -
+ h^*(n)| \le O(\log h^*(n))\) but A\(^*\) expands all nodes of depth less
+ than \(d\).
+\end{iexercise} 
+% id=3.9 section=3.6.1
+
+\begin{exercise}%%Nick Hay Question 3
+The \newtermi{heuristic path algorithm}~\cite{Pohl:1977} is a
+best-first search in which the evaluation function is \(f(n) =
+(2-w)g(n) + wh(n)\).  For what values of \(w\) is this complete?  For
+what values is it optimal, assuming that \(h\) is admissible?  What
+kind of search does this perform for \(w=0\), \(w=1\), and \(w=2\)?
+\end{exercise} 
+% id=3.10 section=3.6
+
+\begin{exercise}%% Russell Fall 2002 final
+Consider the unbounded version of the regular 2D grid shown in
+\figref{graph-separation-property-figure}. The start state is at the
+origin, (0,0), and the goal state is at \((x,y)\).
+\begin{enumerate}
+\item What is the branching factor \(b\) in this state space?
+\item How many distinct states are there at depth \(k\) (for \(k>0\))?
+\item What is the maximum number of nodes expanded by breadth-first tree search?
+\item What is the maximum number of nodes expanded by breadth-first graph search?
+\item Is \(h = |u-x| + |v-y|\) an admissible heuristic for a state at \((u,v)\)? Explain.
+\item How many nodes are expanded by A{\star} graph search using \(h\)?
+\item Does \(h\) remain admissible if some links are removed?
+\item Does \(h\) remain admissible if some links are added between nonadjacent states?
+\end{enumerate}
+\end{exercise} 
+% id=3.11 section=3.6
+
+\begin{uexercise}%% Russell Fall 2005 final
+\(n\) vehicles occupy squares \((1,1)\) through \((n,1)\) (i.e., the
+bottom row) of an \(n\stimes n\) grid.  The vehicles must be moved to
+the top row but in reverse order; so the vehicle \(i\) that starts in
+\((i,1)\) must end up in \((n-i+1,n)\). On each time step, every one
+of the \(n\) vehicles can move one square up, down, left, or right, or
+stay put; but if a vehicle stays put, one other adjacent vehicle (but
+not more than one) can hop over it. Two vehicles cannot occupy the
+same square.
+\begin{enumerate}
+\item Calculate the size of the state space as a function of \(n\).
+\item Calculate the branching factor as a function of \(n\).
+\item Suppose that vehicle \(i\) is at \((x_i,y_i)\); write a nontrivial admissible heuristic \(h_i\) for the
+number of moves it will require to get to its goal location \((n-i+1,n)\), assuming no other
+vehicles are on the grid.
+\item Which of the following heuristics are admissible for the problem
+of moving all \(n\) vehicles to their destinations? Explain.
+\begin{enumerate}
+\item \(\sum_{i\eq 1}^{n} h_i\).
+\item \(\max\{h_1,\ldots,h_n\}\).
+\item \(\min\{h_1,\ldots,h_n\}\).
+\end{enumerate}
+\end{enumerate}
+\end{uexercise} 
+% id=3.12 section=3.6
+
+\begin{iexercise}%%Russell Spring 2004 midterm
+Consider the problem of moving \(k\) knights from \(k\) starting squares
+\(s_1,\ldots,s_k\) to \(k\) goal squares \(g_1,\ldots,g_k\), on an 
+unbounded chessboard, subject
+to the rule that no two knights can land on the same square at the same time. 
+Each action consists of moving {\em up to} \(k\) knights simultaneously.
+We would like to complete the maneuver in the smallest number of actions.
+\begin{enumerate}
+\item What is the maximum branching factor in this state space, expressed as a function of~\(k\)?
+\item Suppose \(h_i\) is an admissible heuristic for the problem of moving
+knight \(i\) to goal \(g_i\) by itself. Which of the following heuristics
+are admissible for the \(k\)-knight problem? Of those, which is the best?
+\begin{enumerate}
+\item \(\min\{h_1,\ldots,h_k\}\).
+\item \(\max\{h_1,\ldots,h_k\}\).
+\item \(\sum_{i\eq 1}^{k} h_i\).
+\end{enumerate}
+\item Repeat (b) for the case where you are allowed to move only one knight at a time.
+\end{enumerate}
+\end{iexercise} 
+% id=3.15 section=3.6
+
+\begin{iexercise}
+We saw on \pgref{I-to-F} that the straight-line distance
+heuristic leads greedy best-first search astray on the problem of going from Iasi to Fagaras.
+However, the heuristic is perfect on the opposite problem:  going
+from Fagaras to Iasi.  Are there problems for which the heuristic is
+misleading in both directions?
+\end{iexercise} 
+% id=3.36 section=3.6
+
+\begin{uexercise}
+Invent a heuristic function for the 8-puzzle that sometimes overestimates,
+and show how it can lead to a suboptimal solution on a particular
+problem. (You can use a computer to help if you want.) Prove that if
+\(h\) never overestimates by more than \(c\), A{\star} using \(h\) returns a
+solution whose cost exceeds that of the optimal solution by no more
+than \(c\).
+\end{uexercise} 
+% id=3.37 section=3.6
+
+\begin{exercise}[consistent-heuristic-exercise]%
+Prove that if a heuristic is consistent, it must be admissible.
+Construct an admissible heuristic that is not consistent.
+\end{exercise} 
+% id=3.38 section=3.6
+
+\begin{exercise}[tsp-mst-exercise]%
+\prgex
+The traveling\index{traveling salesperson problem} salesperson problem (TSP) 
+can be solved with the
+minimum\index{minimum spanning tree}-spanning-tree (MST) heuristic, which estimates the
+cost of completing a tour, given that a partial tour has already been
+constructed. The MST cost of a set of cities is the smallest sum of the
+link costs of any tree that connects all the cities.
+\begin{enumerate}
+\item Show how this
+heuristic can be derived from a relaxed version of the TSP.
+\item Show that the MST heuristic dominates straight-line distance.
+\item Write a problem generator for instances of the TSP where cities are
+represented by random points in the unit square. 
+\item Find an
+efficient algorithm in the literature for constructing the MST, and
+use it with A{\star} graph search to solve instances of the TSP.
+\end{enumerate}
+\end{exercise} 
+% id=3.39 section=3.6
+
+\begin{exercise}[Gaschnig-h-exercise]%
+On \pgref{Gaschnig-h-page}, we defined the relaxation of the 8-puzzle
+in which a tile can move from square A to square B if B is blank. The
+exact solution of this problem defines \termi{Gaschnig's
+heuristic}~\cite{Gaschnig:1979}. Explain why Gaschnig's heuristic is
+at least as accurate as \(h_1\) (misplaced tiles), and show cases where
+it is more accurate than both \(h_1\) and \(h_2\) (Manhattan
+distance). Explain how to calculate Gaschnig's heuristic
+efficiently.
+\end{exercise} 
+% id=3.40 section=3.6
+
+\begin{exercise}
+\prgex
+We gave two simple heuristics for the 8-puzzle: Manhattan distance and
+misplaced tiles.  Several heuristics in the literature purport to improve on
+this---see, for example, \citeA{Nilsson:1971},
+\citeA{Mostow+Prieditis:1989}, and \citeA{Hansson+al:1992}.
+Test these claims by implementing the heuristics and comparing the
+performance of the resulting algorithms.
+\end{exercise} 
+% id=3.41 section=3.6
+
+
+
+
+
+
+\resetmedskipamount
