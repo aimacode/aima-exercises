@@ -4,7 +4,7 @@
 **15.1** \[state-augmentation-exercise\] Show that any second-order Markov
 process can be rewritten as a first-order Markov process with an
 augmented set of state variables. Can this always be done
-<span>*parsimoniously*</span>, i.e., without increasing the number of
+*parsimoniously*, i.e., without increasing the number of
 parameters needed to specify the transition model?
 
 **15.2** \[markov-convergence-exercise\] In this exercise, we examine what
@@ -16,7 +16,7 @@ time sequences.
     rain on the current day increases monotonically toward a
     fixed point. Calculate this fixed point.
 
-2.  Now consider <span>*forecasting*</span> further and further into the
+2.  Now consider *forecasting* further and further into the
     future, given just the first two umbrella observations. First,
     compute the probability $P(r_{2+k}|u_1,u_2)$ for
     $k{{\,{=}\,}}1\ldots {20}$ and plot the results. You should see that
@@ -25,7 +25,7 @@ time sequences.
 
 **15.3** \[island-exercise\] This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
-<span>Figure [forward-backward-algorithm](#/)</span> (<span>page [forward-backward-algorithm](#/)</span>).
+Figure [forward-backward-algorithm](#/) (page [forward-backward-algorithm](#/)).
 We wish to compute ${\textbf{P}}(\textbf{X}_k|\textbf{e}_{1:t})$ for
 $k{{\,{=}\,}}1,\ldots ,t$. This will be done with a divide-and-conquer
 approach.
@@ -49,7 +49,7 @@ approach.
     of $t$, the length of the sequence. How does this change if we
     divide the input into more than two pieces?
 
-**15.4** \[flawed-viterbi-exercise\] On <span>page [flawed-viterbi-page](#/)</span>, we outlined a flawed
+**15.4** \[flawed-viterbi-exercise\] On page [flawed-viterbi-page](#/), we outlined a flawed
 procedure for finding the most likely state sequence, given an
 observation sequence. The procedure involves finding the most likely
 state at each time step, using smoothing, and returning the sequence
@@ -59,14 +59,14 @@ state sequence (i.e., the posterior probability of the sequence is
 zero).
 
 **15.5** \[hmm-likelihood-exercise\]
-<span>Equation ([matrix-filtering-equation](#/))</span> describes the
+Equation ([matrix-filtering-equation](#/)) describes the
 filtering process for the matrix formulation of HMMs. Give a similar
 equation for the calculation of likelihoods, which was described
-generically in <span>Equation ([forward-likelihood-equation](#/))</span>.
+generically in Equation ([forward-likelihood-equation](#/)).
 
 **15.6** Consider the vacuum worlds of
-<span>Figure [vacuum-maze-ch4-figure](#/)</span> (perfect sensing) and
-<span>Figure [vacuum-maze-hmm2-figure](#/)</span> (noisy sensing). Suppose
+Figure [vacuum-maze-ch4-figure](#/) (perfect sensing) and
+Figure [vacuum-maze-hmm2-figure](#/) (noisy sensing). Suppose
 that the robot receives an observation sequence such that, with perfect
 sensing, there is exactly one possible location it could be in. Is this
 location necessarily the most probable location under noisy sensing for
@@ -74,7 +74,7 @@ sufficiently small noise probability $\epsilon$? Prove your claim or
 find a counterexample.
 
 **15.7** \[hmm-robust-exercise\] In
-<span>Section [hmm-localization-section](#/)</span>, the prior
+Section [hmm-localization-section](#/), the prior
 distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually
@@ -85,10 +85,10 @@ accuracy as the southeasterly tendency increases, for different values
 of $\epsilon$.
 
 **15.8** \[roomba-viterbi-exercise\] Consider a version of the vacuum robot
-(<span>page [vacuum-maze-hmm2-figure](#/)</span>) that has the policy of going straight for as long
+(page [vacuum-maze-hmm2-figure](#/)) that has the policy of going straight for as long
 as it can; only when it encounters an obstacle does it change to a new
 (randomly selected) heading. To model this robot, each state in the
-model consists of a <span>*(location, heading)*</span> pair. Implement
+model consists of a *(location, heading)* pair. Implement
 this model and see how well the Viterbi algorithm can track a robot with
 this model. The robot’s policy is more constrained than the random-walk
 robot; does that mean that predictions of the most likely path are more
@@ -96,8 +96,8 @@ accurate?
 
 **15.9** We have described three policies for the vacuum robot: (1) a uniform
 random walk, (2) a bias for wandering southeast, as described in
-<span>Exercise [hmm-robust-exercise](#/)</span>, and (3) the policy
-described in <span>Exercise [roomba-viterbi-exercise](#/)</span>. Suppose
+Exercise [hmm-robust-exercise](#/), and (3) the policy
+described in Exercise [roomba-viterbi-exercise](#/). Suppose
 an observer is given the observation sequence from a vacuum robot, but
 is not sure which of the three policies the robot is following. What
 approach should the observer use to find the most likely path, given the
@@ -136,7 +136,7 @@ if it encounters a wall). Implement this as an HMM and do filtering to
 track the robot. How accurately can we track the robot’s path?
 
 <center>
-<b id="switching-kf-figure">Figure [switching-kf-figure](#switching-kf-figure)</b> A Bayesian network representation of a switching Kalman filter. The switching variable \(S_t\) is a discrete state variable whose value determines
+<b id="switching-kf-figure">Figure [switching-kf-figure]</b> A Bayesian network representation of a switching Kalman filter. The switching variable \(S_t\) is a discrete state variable whose value determines
 the transition model for the continuous state variables $\textbf{X}_t$.
 For any discrete state *i*, the transition model
 $\textbf{P}(\textbf{X}_{t+1}|\textbf{X}_t,S_t= i)$ is a linear Gaussian model, just as in a
@@ -150,16 +150,16 @@ Markov model.
 system whose behavior switches unpredictably among a set of $k$ distinct
 “modes.” For example, an aircraft trying to evade a missile can execute
 a series of distinct maneuvers that the missile may attempt to track. A
-Bayesian network representation of such a <span><span>**switching Kalman
-filter**</span></span> model is shown in
-<span>Figure [switching-kf-figure](#switching-kf-figure)</span>.
+Bayesian network representation of such a **switching Kalman
+filter** model is shown in
+Figure [switching-kf-figure](#switching-kf-figure).
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
     ${\textbf{P}}(\textbf{X}_0)$ is a multivariate
     Gaussian distribution. Show that the prediction
-    ${\textbf{P}}(\textbf{X}_1)$ is a <span><span>**mixture of
-    Gaussians**</span></span>—that is, a weighted sum of Gaussians such
+    ${\textbf{P}}(\textbf{X}_1)$ is a **mixture of
+    Gaussians**—that is, a weighted sum of Gaussians such
     that the weights sum to 1.
 
 2.  Show that if the current continuous state estimate
@@ -176,13 +176,13 @@ grows without limit even for switching Kalman filters, which are among
 the simplest hybrid dynamic models.
 
 **15.13** \[kalman-update-exercise\] Complete the missing step in the derivation
-of <span>Equation ([kalman-one-step-equation](#/))</span> on
-<span>page [kalman-one-step-equation](#/)</span>, the first update step for the one-dimensional Kalman
+of Equation ([kalman-one-step-equation](#/)) on
+page [kalman-one-step-equation](#/), the first update step for the one-dimensional Kalman
 filter.
 
 **15.14** \[kalman-variance-exercise\] Let us examine the behavior of the variance
-update in <span>Equation ([kalman-univariate-equation](#/))</span>
-(<span>page [kalman-univariate-equation](#/)</span>).
+update in Equation ([kalman-univariate-equation](#/))
+(page [kalman-univariate-equation](#/)).
 
 1.  Plot the value of $\sigma_t^2$ as a function of $t$, given various
     values for $\sigma_x^2$ and $\sigma_z^2$.
@@ -242,7 +242,7 @@ observations. Then reformulate it as a hidden Markov model that has only
 a single observation variable. Give the complete probability tables for
 the model.
 
-**15.17** For the DBN specified in <span>Exercise [sleep1-exercise](#/)</span> and
+**15.17** For the DBN specified in Exercise [sleep1-exercise](#/) and
 for the evidence values
 
 $$
@@ -267,7 +267,7 @@ perform the following computations:
 
 **15.18** Suppose that a particular student shows up with red eyes and sleeps in
 class every day. Given the model described in
-<span>Exercise [sleep1-exercise](#/)</span>, explain why the probability
+Exercise [sleep1-exercise](#/), explain why the probability
 that the student had enough sleep the previous night converges to a
 fixed point rather than continuing to go down as we gather more days of
 evidence. What is the fixed point? Answer this both numerically (by
@@ -275,17 +275,17 @@ computation) and analytically.
 
 **15.19** \[battery-sequence-exercise\] This exercise analyzes in more detail the
 persistent-failure model for the battery sensor in
-<span>Figure [battery-persistence-figure](#/)</span>(a)
-(<span>page [battery-persistence-figure](#/)</span>).
+Figure [battery-persistence-figure](#/)(a)
+(page [battery-persistence-figure](#/)).
 
-1.  <span>Figure [battery-persistence-figure](#/)</span>(b) stops at
+1.  Figure [battery-persistence-figure](#/)(b) stops at
     $t{{\,{=}\,}}{32}$. Describe qualitatively what should happen as
     $t\to\infty$ if the sensor continues to read 0.
 
 2.  Suppose that the external temperature affects the battery sensor in
     such a way that transient failures become more likely as
     temperature increases. Show how to augment the DBN structure in
-    <span>Figure [battery-persistence-figure](#/)</span>(a), and explain
+    Figure [battery-persistence-figure](#/)(a), and explain
     any required changes to the CPTs.
 
 3.  Given the new network structure, can battery readings be used by the

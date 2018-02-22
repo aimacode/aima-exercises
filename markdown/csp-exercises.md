@@ -2,7 +2,7 @@
 # 6. Constraint Satisfaction Problems
 
 **6.1** How many solutions are there for the map-coloring problem in
-<span>Figure [australia-figure](#/)</span>? How many solutions if four
+Figure [australia-figure](#/)? How many solutions if four
 colors are allowed? Two colors?
 
 **6.2** Consider the problem of placing $k$ knights on an $n\times n$
@@ -16,8 +16,8 @@ is given and $k\leq n^2$.
 
 3.  What sets of variables are constrained, and how?
 
-4.  Now consider the problem of putting <span>*as many knights as
-    possible*</span> on the board without any attacks. Explain how to
+4.  Now consider the problem of putting *as many knights as
+    possible* on the board without any attacks. Explain how to
     solve this with local search by defining appropriate ACTIONS and RESULT functions
     and a sensible objective function.
 
@@ -53,13 +53,13 @@ following as constraint satisfaction problems:
     repeating any.
 
 **6.5** Solve the cryptarithmetic problem in
-<span>Figure [cryptarithmetic-figure](#/)</span> by hand, using the
+Figure [cryptarithmetic-figure](#/) by hand, using the
 strategy of backtracking with forward checking and the MRV and
 least-constraining-value heuristics.
 
 **6.6** \[nary-csp-exercise\] Show how a single ternary constraint such as
 “$A + B = C$” can be turned into three binary constraints by using an
-auxiliary variable. You may assume finite domains. (<span>*Hint:*</span>
+auxiliary variable. You may assume finite domains. (*Hint:*
 Consider a new variable that takes on values that are pairs of other
 values, and consider constraints such as “$X$ is the first element of
 the pair $Y$.”) Next, show how constraints with more than three
@@ -116,8 +116,8 @@ order $A_1$, $H$, $A_4$, $F_1$, $A_2$, $F_2$, $A_3$, $T$, and the value
 order $R$, $G$, $B$.
 
 **6.9** Explain why it is a good heuristic to choose the variable that is
-<span>*most*</span> constrained but the value that is
-<span>*least*</span> constraining in a CSP search.
+*most* constrained but the value that is
+*least* constraining in a CSP search.
 
 **6.10** Generate random instances of map-coloring problems as follows: scatter
 $n$ points on the unit square; select a point $X$ at random, connect $X$
@@ -134,18 +134,18 @@ you can manage. Comment on your results.
 **6.11** Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
 $\{{WA}{{\,{=}\,}}{green},V{{\,{=}\,}}{red}\}$ for the problem
-shown in <span>Figure [australia-figure](#/)</span>.
+shown in Figure [australia-figure](#/).
 
 **6.12** Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
 $\{{WA}{{\,{=}\,}}{red},V{{\,{=}\,}}{blue}\}$ for the problem
-shown in <span>Figure [australia-figure](#/)</span>.
+shown in Figure [australia-figure](#/).
 
 **6.13** What is the worst-case complexity of running AC-3 on a tree-structured
 CSP?
 
-**6.14** \[ac4-exercise\] AC-3 puts back on the queue <span>*every*</span> arc
-($X_{k}, X_{i}$) whenever <span>*any*</span> value is deleted from the
+**6.14** \[ac4-exercise\] AC-3 puts back on the queue *every* arc
+($X_{k}, X_{i}$) whenever *any* value is deleted from the
 domain of $X_{i}$, even if each value of $X_{k}$ is consistent with
 several remaining values of $X_{i}$. Suppose that, for every arc
 ($X_{k}, X_{i}$), we keep track of the number of remaining values of
@@ -153,7 +153,7 @@ $X_{i}$ that are consistent with each value of $X_{k}$. Explain how to
 update these numbers efficiently and hence show that arc consistency can
 be enforced in total time $O(n^2d^2)$.
 
-**6.15** The Tree-CSP-Solver (<span>Figure [tree-csp-figure](#/)</span>) makes arcs consistent
+**6.15** The Tree-CSP-Solver (Figure [tree-csp-figure](#/)) makes arcs consistent
 starting at the leaves and working backwards towards the root. Why does
 it do that? What would happen if it went in the opposite direction?
 
@@ -189,16 +189,16 @@ squares missing, a $10\times 1$ row of squares, etc.).
 
 2.  Formulate this problem precisely as a CSP where the squares are the
     variables, keeping the state space as small as possible.
-    (<span>*Hint:*</span> does it matter which particular domino goes on
+    (*Hint:* does it matter which particular domino goes on
     a given pair of squares?)
 
 3.  Construct a surface consisting of 6 squares such that your CSP
-    formulation from part (b) has a <span>*tree-structured*</span>
+    formulation from part (b) has a *tree-structured*
     constraint graph.
 
 4.  Describe exactly the set of solvable instances that have a
     tree-structured constraint graph.
 
-<span id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles. 
-@Littman+al:1999 tackle the harder problem of solving them.</span>
+<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles. 
+@Littman+al:1999 tackle the harder problem of solving them.</div>
 

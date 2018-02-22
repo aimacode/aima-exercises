@@ -21,8 +21,8 @@ brightness in the projected image. Are the contours of equal brightness
 uniformly spaced?
 
 **24.4** Edges in an image can correspond to a variety of events in a scene.
-Consider <span>Figure [illuminationfigure](#/)</span>
-(<span>page [illuminationfigure](#/)</span>), and assume that it is a picture of a real
+Consider Figure [illuminationfigure](#/)
+(page [illuminationfigure](#/)), and assume that it is a picture of a real
 three-dimensional scene. Identify ten different brightness edges in the
 image, and for each, state whether it corresponds to a discontinuity in
 (a) depth, (b) surface orientation, (c) reflectance, or (d)
@@ -76,12 +76,12 @@ is 1 meter.
     in the scene.
 
 <center>
-<b id="bottle-figure">Figure [bottle-figure](#bottle-figure)</b> Top view of
+<b id="bottle-figure">Figure [bottle-figure]</b> Top view of
 a two-camera vision system observing a bottle with a wall behind it.
 </center>
 ![bottle-figure](figures/bottle-stereo.svg)
 
-**24.8** (Courtesy of Pietro Perona.) <span>Figure [bottle-figure](#bottle-figure)</span> shows
+**24.8** (Courtesy of Pietro Perona.) Figure [bottle-figure](#bottle-figure) shows
 two cameras at X and Y observing a scene. Draw the image seen at each
 camera, assuming that all named points are in the same horizontal plane.
 What can be concluded from these two images about the relative distances

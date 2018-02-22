@@ -2,7 +2,7 @@
 # 25. Robotics
 
 **25.1** \[mcl-biasdness-exercise\]Monte Carlo localization is
-<span>*biased*</span> for any finite sample size—i.e., the expected
+*biased* for any finite sample size—i.e., the expected
 value of the location computed by the algorithm differs from the true
 expected value—because of the way particle filtering works. In this
 question, you are asked to quantify this bias.
@@ -47,7 +47,7 @@ available from the code repository at
 successful global localization of the robot.
 
 <center>
-<b id="figRobot2">Figure [figRobot2](#figRobot2)</b> A Robot manipulator in two of its possible configurations.
+<b id="figRobot2">Figure [figRobot2]</b> A Robot manipulator in two of its possible configurations.
 </center>
 
 ![figRobot2](figures/figRobot2.svg)
@@ -58,7 +58,7 @@ successful global localization of the robot.
 shown in figure [figRobot2](#figRobot2). Manipulator A is a square block of side 2
 which can slide back and on a rod that runs along the x-axis from
 x=$-$10 to x=10. Manipulator B is a square block of side 2 which can
-slide back and on a rod that runs along the y-axis from y=$-$10 to y=10.
+slide back and on a rod that runs along the y-axis from y=-10 to y=10.
 The rods lie outside the plane of manipulation, so the rods do not
 interfere with the movement of the blocks. A configuration is then a
 pair ${\langle}x,y{\rangle}$ where $x$ is the x-coordinate of the center
@@ -67,7 +67,7 @@ manipulator B. Draw the configuration space for this robot, indicating
 the permitted and excluded zones.
 
 **25.4** Suppose that you are working with the robot in
-<span>Exercise [AB-manipulator-ex](#/)</span> and you are given the
+Exercise [AB-manipulator-ex](#/) and you are given the
 problem of finding a path from the starting configuration of
 figure [figRobot2](#figRobot2) to the ending configuration. Consider a potential
 function $$D(A, {Goal})^2 + D(B, {Goal})^2 + \frac{1}{D(A, B)^2}$$
@@ -84,17 +84,17 @@ where $D(A,B)$ is the distance between the closest points of A and B.
     distance from A to B in the above sense.)
 
 **25.5** \[inverse-kinematics-exercise\]Consider the robot arm shown in
-<span>Figure [FigArm1](#/)</span>. Assume that the robot’s base element is
+Figure [FigArm1](#/). Assume that the robot’s base element is
 60cm long and that its upper arm and forearm are each 40cm long. As
-argued on <span>page [inverse-kinematics-not-unique](#/)</span>, the inverse kinematics of a robot is often
+argued on page [inverse-kinematics-not-unique](#/), the inverse kinematics of a robot is often
 not unique. State an explicit closed-form solution of the inverse
 kinematics for this arm. Under what exact conditions is the solution
 unique?
 
 **25.6** \[inverse-kinematics-exercise\]Consider the robot arm shown in
-<span>Figure [FigArm1](#/)</span>. Assume that the robot’s base element is
+Figure [FigArm1](#/). Assume that the robot’s base element is
 70cm long and that its upper arm and forearm are each 50cm long. As
-argued on <span>page [inverse-kinematics-not-unique](#/)</span>, the inverse kinematics of a robot is often
+argued on page [inverse-kinematics-not-unique](#/), the inverse kinematics of a robot is often
 not unique. State an explicit closed-form solution of the inverse
 kinematics for this arm. Under what exact conditions is the solution
 unique?
@@ -106,35 +106,35 @@ for 10 interesting maps. What is the complexity of your algorithm?
 
 **25.8** \[confspace-exercise\]This exercise explores the relationship between
 workspace and configuration space using the examples shown in
-<span>Figure [FigEx2](#FigEx2)</span>.
+Figure [FigEx2](#FigEx2).
 
 1.  Consider the robot configurations shown in
-    <span>Figure [FigEx2](#FigEx2)</span>(a) through (c), ignoring the obstacle
+    Figure [FigEx2](#FigEx2)(a) through (c), ignoring the obstacle
     shown in each of the diagrams. Draw the corresponding arm
-    configurations in configuration space. (<span>*Hint:*</span> Each
+    configurations in configuration space. (*Hint:* Each
     arm configuration maps to a single point in configuration space, as
-    illustrated in <span>Figure [FigArm1](#FigEx2)</span>(b).)
+    illustrated in Figure [FigArm1](#FigEx2)(b).)
 
 2.  Draw the configuration space for each of the workspace diagrams in
-    <span>Figure [FigEx2](#FigEx2)</span>(a)–(c). (<span>*Hint:*</span> The
+    Figure [FigEx2](#FigEx2)(a)–(c). (*Hint:* The
     configuration spaces share with the one shown in
-    <span>Figure [FigEx2](#FigEx2)</span>(a) the region that corresponds to
+    Figure [FigEx2](#FigEx2)(a) the region that corresponds to
     self-collision, but differences arise from the lack of enclosing
     obstacles and the different locations of the obstacles in these
     individual figures.)
 
-3.  For each of the black dots in <span>Figure [FigEx2](#/)</span>(e)–(f),
+3.  For each of the black dots in Figure [FigEx2](#/)(e)–(f),
     draw the corresponding configurations of the robot arm in workspace.
     Please ignore the shaded regions in this exercise.
 
 4.  The configuration spaces shown in
-    <span>Figure [FigEx2](#FigEx2)</span>(e)–(f) have all been generated by a
+    Figure [FigEx2](#FigEx2)(e)–(f) have all been generated by a
     single workspace obstacle (dark shading), plus the constraints
     arising from the self-collision constraint (light shading). Draw,
     for each diagram, the workspace obstacle that corresponds to the
     darkly shaded area.
 
-5.  <span>Figure [FigEx2](#FigEx2)</span>(d) illustrates that a single planar
+5.  Figure [FigEx2](#FigEx2)(d) illustrates that a single planar
     obstacle can decompose the workspace into two disconnected regions.
     What is the maximum number of disconnected regions that can be
     created by inserting a planar obstacle into an obstacle-free,
@@ -144,7 +144,7 @@ workspace and configuration space using the examples shown in
     
 
 <center>
-<b id="FigEx2">Figure [FigEx2](#FigEx2)</b> Diagrams for Exercise [confspace-exercise](#/).
+<b id="FigEx2">Figure [FigEx2]</b> Diagrams for Exercise [confspace-exercise](#/).
 </center>
     
 $\quad\quad\quad\quad\quad\quad$ |  $\quad\quad\quad\quad\quad\quad$ | $\quad\quad\quad\quad\quad\quad$
@@ -204,16 +204,16 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     and non-monotonic.
 
 <center>
-<b id="FigEx3">Figure [FigEx3](#FigEx3)</b> Simplified robot in a maze. See Exercise [robot-exploration-exercise](#/)</center>
+<b id="FigEx3">Figure [FigEx3]</b> Simplified robot in a maze. See Exercise [robot-exploration-exercise](#/)</center>
 ![FigEx3](figures/robotics-pic7.svg)
 
 **25.10** \[robot-exploration-exercise\]Consider the simplified robot shown in
-<span>Figure [FigEx3](#FigEx3)</span>. Suppose the robot’s Cartesian
+Figure [FigEx3](#FigEx3). Suppose the robot’s Cartesian
 coordinates are known at all times, as are those of its goal location.
 However, the locations of the obstacles are unknown. The robot can sense
 obstacles in its immediate proximity, as illustrated in this figure. For
 simplicity, let us assume the robot’s motion is noise-free, and the
-state space is discrete. <span>Figure [FigEx3](#FigEx3)</span> is only one
+state space is discrete. Figure [FigEx3](#FigEx3) is only one
 example; in this exercise you are required to address all possible grid
 worlds with a valid path from the start to the goal location.
 
@@ -223,7 +223,7 @@ worlds with a valid path from the start to the goal location.
     being acquired as the robot moves. Between individual moves, it may
     spend arbitrary time deliberating.
 
-2.  Now design a <span>*reactive*</span> controller for the same task.
+2.  Now design a *reactive* controller for the same task.
     This controller may not memorize past sensor measurements. (It may
     not build a map!) Instead, it has to make all decisions based on the
     current measurement, which includes knowledge of its own location
@@ -240,8 +240,8 @@ worlds with a valid path from the start to the goal location.
     each controller, give an example of a situation where the robot
     fails (or explain why it cannot fail).
 
-**25.11** \[subsumption-exercise\]In <span>Figure [Fig5](#/)</span>(b) on
-<span>page [Fig5](#/)</span>, we encountered an augmented finite state machine for
+**25.11** \[subsumption-exercise\]In Figure [Fig5](#/)(b) on
+page [Fig5](#/), we encountered an augmented finite state machine for
 the control of a single leg of a hexapod robot. In this exercise, the
 aim is to design an AFSM that, when combined with six copies of the
 individual leg controllers, results in efficient, stable locomotion. For
@@ -250,7 +250,7 @@ messages to your new AFSM and to wait until other messages arrive. Argue
 why your controller is efficient, in that it does not unnecessarily
 waste energy (e.g., by sliding legs), and in that it propels the robot
 at reasonably high speeds. Prove that your controller satisfies the
-dynamic stability condition given on <span>page [polygon-stability-condition-page](#/)</span>.
+dynamic stability condition given on page [polygon-stability-condition-page](#/).
 
 **25.12** \[human-robot-exercise\](This exercise was first devised by Michael
 Genesereth and Nils Nilsson. It works for first graders through graduate
@@ -260,25 +260,25 @@ the complexity and recapitulate the last 30 years of developments in
 robotics. Consider the task of building an arch out of three blocks.
 Simulate a robot with four humans as follows:
 
-<span>**Brain.**</span> The Brain direct the hands in the execution of a
+**Brain.** The Brain direct the hands in the execution of a
 plan to achieve the goal. The Brain receives input from the Eyes, but
-<span>*cannot see the scene directly*</span>. The brain is the only one
+*cannot see the scene directly*. The brain is the only one
 who knows what the goal is.
 
-<span>**Eyes.**</span> The Eyes report a brief description of the scene
+**Eyes.** The Eyes report a brief description of the scene
 to the Brain: “There is a red box standing on top of a green box, which
 is on its side” Eyes can also answer questions from the Brain such as,
 “Is there a gap between the Left Hand and the red box?” If you have a
 video camera, point it at the scene and allow the eyes to look at the
 viewfinder of the video camera, but not directly at the scene.
 
-<span>**Left hand**</span> and <span>**right hand.**</span> One person
+**Left hand** and **right hand.** One person
 plays each Hand. The two Hands stand next to each other, each wearing an
 oven mitt on one hand, Hands execute only simple commands from the
 Brain—for example, “Left Hand, move two inches forward.” They cannot
 execute commands other than motions; for example, they cannot be
 commanded to “Pick up the box.” The Hands must be
-<span>*blindfolded*</span>. The only sensory capability they have is the
+*blindfolded*. The only sensory capability they have is the
 ability to tell when their path is blocked by an immovable obstacle such
 as a table or the other Hand. In such cases, they can beep to inform the
 Brain of the difficulty.

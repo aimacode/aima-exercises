@@ -26,9 +26,9 @@ into account knowledge about student preferences, the workload, good and
 bad instructors, and so on. For each kind of knowledge, explain how it
 could be expressed logically. Could your system easily incorporate this
 information to find all feasible programs of study for a student? Could
-it find the <span>*best*</span> program?
+it find the *best* program?
 
-**12.3** <span>Figure [ontology-figure](#/)</span> shows the top levels of a
+**12.3** Figure [ontology-figure](#/) shows the top levels of a
 hierarchy for everything. Extend it to include as many real categories
 as possible. A good way to do this is to cover all the things in your
 everyday life. This includes objects and events. Start with waking up,
@@ -61,9 +61,9 @@ representation should be able to describe:
     effects of actions on fluents. You may use either event or
     situation calculus.
 
-Assume an ontology containing <span>*situations,*</span>
-<span>*actions,*</span> <span>*integers*</span> (for $x$ and $y$
-coordinates) and <span>*windows*</span>. Define a language over this
+Assume an ontology containing *situations,*
+*actions,* *integers* (for $x$ and $y$
+coordinates) and *windows*. Define a language over this
 ontology; that is, a list of constants, function symbols, and predicates
 with an English description of each. If you need to add more categories
 to the ontology (e.g., pixels), you may do so, but be sure to specify
@@ -74,8 +74,8 @@ text, but be sure to list these explicitly.
 exercise:
 
 1.  In situation $S_0$, window $W_1$ is behind $W_2$ but sticks out on
-    the left and right. Do <span>*not*</span> state exact coordinates
-    for these; describe the <span>*general*</span> situation.
+    the left and right. Do *not* state exact coordinates
+    for these; describe the *general* situation.
 
 2.  If a window is displayed, then its top edge is higher than its
     bottom edge.
@@ -88,8 +88,8 @@ exercise:
 exercise:
 
 1.  In situation $S_0$, window $W_1$ is behind $W_2$ but sticks out on
-    the top and bottom. Do <span>*not*</span> state exact coordinates
-    for these; describe the <span>*general*</span> situation.
+    the top and bottom. Do *not* state exact coordinates
+    for these; describe the *general* situation.
 
 2.  If a window is displayed, then its top edge is higher than its
     bottom edge.
@@ -136,7 +136,7 @@ possible, use a logical reasoning system to demonstrate the sufficiency
 of your knowledge base. Many of the things you write might be only
 approximately correct in reality, but don’t worry too much; the idea is
 to extract the common sense that lets you answer these questions at all.
-A truly complete answer to this question is <span>*extremely*</span>
+A truly complete answer to this question is *extremely*
 difficult, probably beyond the state of the art of current knowledge
 representation. But you should be able to put together a consistent set
 of axioms for the limited questions posed here.
@@ -257,7 +257,7 @@ ${Go}(x,y)$, which takes it from city $x$ to city $y$ if there is a
 route between those cities. ${Road}(x, y)$ is true if and only if
 there is a road connecting cities $x$ and $y$; if there is, then
 ${Distance}(x, y)$ gives the length of the road. See the map on
-<span>page [romania-distances-figure](#/)</span> for an example. The robot begins in Arad and must
+page [romania-distances-figure](#/) for an example. The robot begins in Arad and must
 reach Bucharest.
 
 1.  Write a suitable logical description of the initial situation of
@@ -278,7 +278,7 @@ reach Bucharest.
     ${Fillup}$ action.
 
 **12.17** Investigate ways to extend the event calculus to handle
-<span>*simultaneous*</span> events. Is it possible to avoid a
+*simultaneous* events. Is it possible to avoid a
 combinatorial explosion of axioms?
 
 **12.18** \[exchange-rates-exercise\]Construct a representation for exchange rates
@@ -293,7 +293,7 @@ buying as a kind of trading in which one of the objects traded is a sum
 of money.
 
 **12.21** The two preceding exercises assume a fairly primitive notion of
-ownership. For example, the buyer starts by <span>*owning*</span> the
+ownership. For example, the buyer starts by *owning* the
 dollar bills. This picture begins to break down when, for example, one’s
 money is in the bank, because there is no longer any specific collection
 of dollar bills that one owns. The picture is complicated still further
@@ -312,7 +312,7 @@ perfect at reasoning about beliefs.
 
 1.  Game 1. Alice and Bob have both said “I don’t know.” Carlos sees
     that Alice has two aces (A-A) and Bob has two kings (K-K). What
-    should Carlos say? (<span>*Hint*</span>: consider all three possible
+    should Carlos say? (*Hint*: consider all three possible
     cases for Carlos: A-A, K-K, A-K.)
 
 2.  Describe each step of Game 1 using the notation of modal logic.
@@ -327,9 +327,9 @@ perfect at reasoning about beliefs.
 
 5.  Prove that there will always be a winner to this game.
 
-**12.23** The assumption of <span>*logical omniscience,*</span> discussed on
-<span>page [logical-omniscience](#/)</span>, is of course not true of any actual reasoners.
-Rather, it is an <span>*idealization*</span> of the reasoning process
+**12.23** The assumption of *logical omniscience,* discussed on
+page [logical-omniscience](#/), is of course not true of any actual reasoners.
+Rather, it is an *idealization* of the reasoning process
 that may be more or less acceptable depending on the applications.
 Discuss the reasonableness of the assumption for each of the following
 applications of reasoning about knowledge:
@@ -351,9 +351,9 @@ applications of reasoning about knowledge:
 4.  Reasoning about public key cryptography, which rests on the
     intractability of certain computational problems.
 
-**12.24** The assumption of <span>*logical omniscience,*</span> discussed on
-<span>page [logical-omniscience](#/)</span>, is of course not true of any actual reasoners.
-Rather, it is an <span>*idealization*</span> of the reasoning process
+**12.24** The assumption of *logical omniscience,* discussed on
+page [logical-omniscience](#/), is of course not true of any actual reasoners.
+Rather, it is an *idealization* of the reasoning process
 that may be more or less acceptable depending on the applications.
 Discuss the reasonableness of the assumption for each of the following
 applications of reasoning about knowledge:
@@ -375,7 +375,7 @@ applications of reasoning about knowledge:
     intractability of certain computational problems.
 
 **12.25** Translate the following description logic expression (from
-<span>page [description-logic-ex](#/)</span>) into first-order logic, and comment on the result:
+page [description-logic-ex](#/)) into first-order logic, and comment on the result:
 
 $$ 
 And(Man, AtLeast(3,Son), AtMost(2,Daughter), All(Son,And(Unemployed,Married, All(Spouse,Doctor ))), All(Daughter,And(Professor, Fills(Department ,Physics,Math))))
@@ -391,7 +391,7 @@ the efficiency of using such sentences for inheritance.
     encoded as logical sentences, as suggested in the chapter. Write
     down three such sentences, including that for 1973 Dodge vans. How
     would you use the sentences to find the value of a
-    <span>*particular*</span> car, given a backward-chaining theorem
+    *particular* car, given a backward-chaining theorem
     prover such as Prolog?
 
 2.  Compare the time efficiency of the backward-chaining method for
@@ -407,7 +407,7 @@ the efficiency of using such sentences for inheritance.
     be handled efficiently.
 
 5.  Can you suggest a solution enabling this type of query to be solved
-    efficiently in all cases in logic systems? (<span>*Hint:*</span>
+    efficiently in all cases in logic systems? (*Hint:*
     Remember that two cars of the same year and model have the
     same price.)
 
@@ -457,7 +457,7 @@ and price $<$ 500.” Implement a shopping agent that accepts descriptions
 in this language.
 
 **12.30** \[buying-exercise\]Our description of Internet shopping omitted the
-all-important step of actually <span>*buying*</span> the product.
+all-important step of actually *buying* the product.
 Provide a formal logical description of buying, using event calculus.
 That is, define the sequence of events that occurs when a buyer submits
 a credit-card purchase and then eventually gets billed and receives the

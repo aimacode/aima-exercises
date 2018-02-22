@@ -25,7 +25,7 @@ $$
 planning.
 
 **10.3** \[strips-airport-exercise\]Given the action schemas and initial state
-from <span>Figure [airport-pddl-algorithm](#/)</span>, what are all the
+from Figure [airport-pddl-algorithm](#/), what are all the
 applicable concrete instances of ${Fly}(p,{from},{to})$ in the
 state described by
 
@@ -62,7 +62,7 @@ height.
     heavy objects.
 
 **10.5** The original {Strips} planner was designed to control Shakey the robot.
-<span>Figure [shakey-figure](#shakey-figure)</span> shows a version of Shakey’s world
+Figure [shakey-figure](#shakey-figure) shows a version of Shakey’s world
 consisting of four rooms lined up along a corridor, where each room has
 a door and a light switch. The actions in Shakey’s world include moving from place to place,
 pushing movable objects (such as boxes), climbing onto and down from
@@ -88,11 +88,11 @@ the robot’s abilities. Shakey’s six actions are the following:
     of a box at the light switch’s location.
 
 Write PDDL sentences for Shakey’s six actions and the initial state from
-<span>Figure [shakey-figure](#shakey-figure)</span>. Construct a plan for Shakey to
+Figure [shakey-figure](#shakey-figure). Construct a plan for Shakey to
 get ${Box}{}_2$ into ${Room}{}_2$.
 
 <center>
-<b id="shakey-figure">Figure [shakey-figure](#shakey-figure)</b> Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.
+<b id="shakey-figure">Figure [shakey-figure]</b> Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.
 </center>
 ![shakey-figure](figures/shakey2.svg)
 
@@ -116,8 +116,8 @@ problem, which is PSPACE-hard.
 every action schema results in a relaxed problem, provided that
 preconditions and goals contain only positive literals.
 
-**10.8** \[sussman-anomaly-exercise\]<span>Figure [sussman-anomaly-figure](#/)</span>
-(<span>page [sussman-anomaly-figure](#/)</span>) shows a blocks-world problem that is known as the {Sussman anomaly}.
+**10.8** \[sussman-anomaly-exercise\]Figure [sussman-anomaly-figure](#/)
+(page [sussman-anomaly-figure](#/)) shows a blocks-world problem that is known as the {Sussman anomaly}.
 The problem was considered anomalous because the noninterleaved planners
 of the early 1970s could not solve it. Write a definition of the problem
 and solve it, either by hand or with a planning program. A
@@ -129,7 +129,7 @@ solve this problem? How, or why not?
 **10.9** Prove that backward search with PDDL problems is complete.
 
 **10.10** Construct levels 0, 1, and 2 of the planning graph for the problem in
-<span>Figure [airport-pddl-algorithm](#/)</span>.
+Figure [airport-pddl-algorithm](#/).
 
 **10.11** \[graphplan-proof-exercise\] Prove the following assertions about
 planning graphs:
@@ -147,12 +147,12 @@ goal, such as ${At}(P_{1}, x)
 existential quantifier that ranges over a finite domain of locations?
 How could you encode such a problem to work with planning graphs?
 
-**10.13** The set-level heuristic (see <span>page [set-level-page](#/)</span>) uses a planning graph
+**10.13** The set-level heuristic (see page [set-level-page](#/)) uses a planning graph
 to estimate the cost of achieving a conjunctive goal from the current
 state. What relaxed problem is the set-level heuristic the solution to?
 
-**10.14** Examine the definition of <span><span>**bidirectional
-search**</span></span> in <span>Chapter [search-chapter](#/)</span>.
+**10.14** Examine the definition of **bidirectional
+search** in Chapter [search-chapter](#/).
 
 1.  Would bidirectional state-space search be a good idea for planning?
 
@@ -217,7 +217,7 @@ schemas into the successor-state axioms of situation calculus.
     of successor-state axioms.
 
 **10.18** \[disjunctive-satplan-exercise\] In the {SATPlan} algorithm in
-<span>Figure [satplan-agent-algorithm](#/)</span> (<span>page [satplan-agent-algorithm](#/)</span>),
+Figure [satplan-agent-algorithm](#/) (page [satplan-agent-algorithm](#/)),
 each call to the satisfiability algorithm asserts a goal $g^T$, where
 $T$ ranges from 0 to $T_{{\rm max}}$. Suppose instead that the
 satisfiability algorithm is called only once, with the goal

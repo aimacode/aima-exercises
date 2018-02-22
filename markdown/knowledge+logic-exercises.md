@@ -2,12 +2,12 @@
 # 7. Logical Agents
 
 **7.1** Suppose the agent has progressed to the point shown in
-<span>Figure [wumpus-seq35-figure](#/)</span>(a), <span>page [wumpus-seq35-figure](#/)</span>,
+Figure [wumpus-seq35-figure](#/)(a), page [wumpus-seq35-figure](#/),
 having perceived nothing in \[1,1\], a breeze in \[2,1\], and a stench
 in \[1,2\], and is now concerned with the contents of \[1,3\], \[2,2\],
 and \[3,1\]. Each of these can contain a pit, and at most one can
 contain a wumpus. Following the example of
-<span>Figure [wumpus-entailment-figure](#/)</span>, construct the set of
+Figure [wumpus-entailment-figure](#/), construct the set of
 possible worlds. (You should find 32 of them.) Mark the worlds in which
 the KB is true and those in which each of the following sentences is
 true:
@@ -30,14 +30,14 @@ mythical? How about magical? Horned?
 **7.3** \[truth-value-exercise\] Consider the problem of deciding whether a
 propositional logic sentence is true in a given model.
 
-1.  Write a recursive algorithm PL-True?$ (s, m )$ that returns <span>${true}$</span> if and
+1.  Write a recursive algorithm PL-True?$ (s, m )$ that returns ${true}$ if and
     only if the sentence $s$ is true in the model $m$ (where $m$ assigns
     a truth value for every symbol in $s$). The algorithm should run in
     time linear in the size of the sentence. (Alternatively, use a
     version of this function from the online code repository.)
 
 2.  Give three examples of sentences that can be determined to be true
-    or false in a <span>*partial*</span> model that does not specify a
+    or false in a *partial* model that does not specify a
     truth value for some of the symbols.
 
 3.  Show that the truth value (if any) of a sentence in a partial model
@@ -46,7 +46,7 @@ propositional logic sentence is true in a given model.
 4.  Modify your algorithm so that it can sometimes judge truth from
     partial models, while retaining its recursive structure and linear
     run time. Give three examples of sentences whose truth in a partial
-    model is <span>*not*</span> detected by your algorithm.
+    model is *not* detected by your algorithm.
 
 5.  Investigate whether the modified algorithm makes $TT-Entails?$ more efficient.
 
@@ -164,12 +164,12 @@ $D$. How many models are there for the following sentences?
 
 **7.11** \[logical-equivalence-exercise\]Using a method of your choice, verify
 each of the equivalences in
-<span>Table \[logical-equivalence-table\]</span> (<span>page [logical-equivalence-table](#/)</span>).
+Table \[logical-equivalence-table\] (page [logical-equivalence-table](#/)).
 
 **7.12** \[propositional-validity-exercise\]Decide whether each of the following
 sentences is valid, unsatisfiable, or neither. Verify your decisions
 using truth tables or the equivalence rules of
-<span>Table \[logical-equivalence-table\]</span> (<span>page [logical-equivalence-table](#/)</span>).
+Table \[logical-equivalence-table\] (page [logical-equivalence-table](#/)).
 
 1.  ${Smoke} {\:\;{\Rightarrow}\:\;}{Smoke}$
 
@@ -189,7 +189,7 @@ using truth tables or the equivalence rules of
 **7.13** \[propositional-validity-exercise\]Decide whether each of the following
 sentences is valid, unsatisfiable, or neither. Verify your decisions
 using truth tables or the equivalence rules of
-<span>Table \[logical-equivalence-table\]</span> (<span>page [logical-equivalence-table](#/)</span>).
+Table \[logical-equivalence-table\] (page [logical-equivalence-table](#/)).
 
 1.  ${Smoke} {\:\;{\Rightarrow}\:\;}{Smoke}$
 
@@ -212,7 +212,7 @@ be false is not the case. From this observation, prove that any sentence
 can be written in CNF.
 
 **7.15** Use resolution to prove the sentence $\lnot A \land \lnot B$ from the
-clauses in <span>Exercise [convert-clausal-exercise](#/)</span>.
+clauses in Exercise [convert-clausal-exercise](#/).
 
 **7.16** \[inf-exercise\] This exercise looks into the relationship between
 clauses and implication sentences.
@@ -225,8 +225,8 @@ clauses and implication sentences.
     positive literals) can be written in the form
     $(P_1 \land \cdots \land P_m) {\;{\Rightarrow}\;}(Q_1 \lor \cdots \lor Q_n)$,
     where the $P$s and $Q$s are proposition symbols. A knowledge base
-    consisting of such sentences is in <span>implicative normal form</span> or <span><span>**Kowalski
-    form**</span></span> @Kowalski:1979.
+    consisting of such sentences is in implicative normal form or **Kowalski
+    form** @Kowalski:1979.
 
 3.  Write down the full resolution rule for sentences in implicative
     normal form.
@@ -256,9 +256,9 @@ CSPs.
 2.  How many solutions are there for this general SAT problem as a
     function of $n$?
 
-3.  Suppose we apply {Backtracking-Search} (<span>page [backtracking-search-algorithm](#/)</span>) to find <span>*all*</span>
+3.  Suppose we apply {Backtracking-Search} (page [backtracking-search-algorithm](#/)) to find *all*
     solutions to a SAT CSP of the type given in (a). (To find
-    <span>*all*</span> solutions to a CSP, we simply modify the basic
+    *all* solutions to a CSP, we simply modify the basic
     algorithm so it continues searching after each solution is found.)
     Assume that variables are ordered $X_1,\ldots,X_n$ and ${false}$
     is ordered before ${true}$. How much time will the algorithm take
@@ -268,7 +268,7 @@ CSPs.
     by forward chaining (unit propagation). We also know that every
     tree-structured binary CSP with discrete, finite domains can be
     solved in time linear in the number of variables
-    (<span>Section [csp-structure-section](#/)</span>). Are these two
+    (Section [csp-structure-section](#/)). Are these two
     facts connected? Discuss.
 
 **7.19** This question considers representing satisfiability (SAT) problems as
@@ -281,9 +281,9 @@ CSPs.
 2.  How many solutions are there for this general SAT problem as a
     function of $n$?
 
-3.  Suppose we apply {Backtracking-Search} (<span>page [backtracking-search-algorithm](#/)</span>) to find <span>*all*</span>
+3.  Suppose we apply {Backtracking-Search} (page [backtracking-search-algorithm](#/)) to find *all*
     solutions to a SAT CSP of the type given in (a). (To find
-    <span>*all*</span> solutions to a CSP, we simply modify the basic
+    *all* solutions to a CSP, we simply modify the basic
     algorithm so it continues searching after each solution is found.)
     Assume that variables are ordered $X_1,\ldots,X_n$ and ${false}$
     is ordered before ${true}$. How much time will the algorithm take
@@ -293,7 +293,7 @@ CSPs.
     by forward chaining (unit propagation). We also know that every
     tree-structured binary CSP with discrete, finite domains can be
     solved in time linear in the number of variables
-    (<span>Section [csp-structure-section](#/)</span>). Are these two
+    (Section [csp-structure-section](#/)). Are these two
     facts connected? Discuss.
 
 **7.20** Explain why every nonempty propositional clause, by itself, is
@@ -302,14 +302,14 @@ satisfiable, provided that each clause mentions exactly three distinct
 variables. What is the smallest set of such clauses that is
 unsatisfiable? Construct such a set.
 
-**7.21** A propositional <span>*2-CNF*</span> expression is a conjunction of
-clauses, each containing <span>*exactly 2*</span> literals, e.g.,
+**7.21** A propositional *2-CNF* expression is a conjunction of
+clauses, each containing *exactly 2* literals, e.g.,
 $$(A\lor B) \land (\lnot A \lor C) \land (\lnot B \lor D) \land (\lnot
   C \lor G) \land (\lnot D \lor G)\ .$$
 
 1.  Prove using resolution that the above sentence entails $G$.
 
-2.  Two clauses are <span>*semantically distinct*</span> if they are not
+2.  Two clauses are *semantically distinct* if they are not
     logically equivalent. How many semantically distinct 2-CNF clauses
     can be constructed from $n$ proposition symbols?
 
@@ -342,7 +342,7 @@ $$[ ({Food} {\:\;{\Rightarrow}\:\;}{Party}) \lor ({Drinks} {\:\;{\Rightarrow}\:\
 
 3.  Prove your answer to (a) using resolution.
 
-**7.24** \[dnf-exercise\] A sentence is in <span>disjunctive normal form</span>(DNF) if it is the disjunction of
+**7.24** \[dnf-exercise\] A sentence is in disjunctive normal form(DNF) if it is the disjunction of
 conjunctions of literals. For example, the sentence
 $(A \land B \land \lnot C) \lor (\lnot A \land C) \lor (B \land \lnot C)$
 is in DNF.
@@ -353,9 +353,9 @@ is in DNF.
     written in DNF.
 
 2.  Construct an algorithm that converts any sentence in propositional
-    logic into DNF. (<span>*Hint*</span>: The algorithm is similar to
+    logic into DNF. (*Hint*: The algorithm is similar to
     the algorithm for conversion to CNF iven in
-    <span>Sectio [pl-resolution-section](#/)</span>.)
+    Sectio [pl-resolution-section](#/).)
 
 3.  Construct a simple algorithm that takes as input a sentence in DNF
     and returns a satisfying assignment if one exists, or reports that
@@ -416,11 +416,11 @@ more or less likely to be solvable than a randomly generated 3-CNF
 sentence with $n$ symbols and $m$ clauses? Explain.
 
 **7.28** \[minesweeper-exercise\] Minesweeper, the well-known computer game, is
-closely related to the wumpus world. A <span>minesweeper</span> world is
+closely related to the wumpus world. A minesweeper world is
 a rectangular grid of $N$ squares with $M$ invisible mines scattered
 among them. Any square may be probed by the agent; instant death follows
 if a mine is probed. Minesweeper indicates the presence of mines by
-revealing, in each probed square, the <span>*number*</span> of mines
+revealing, in each probed square, the *number* of mines
 that are directly or diagonally adjacent. The goal is to probe every
 unmined square.
 
@@ -445,24 +445,24 @@ unmined square.
     when the global constraint is taken into account?
 
 6.  Give examples of configurations of probe values that induce
-    <span>*long-range dependencies*</span> such that the contents of a
+    *long-range dependencies* such that the contents of a
     given unprobed square would give information about the contents of a
-    far-distant square. (<span>*Hint*</span>: consider an
+    far-distant square. (*Hint*: consider an
     $N\times 1$ board.)
 
 **7.29** \[known-literal-exercise\] How long does it take to prove
-${KB}{\models}\alpha$ using {DPLL} when $\alpha$ is a literal <span>*already
-contained in*</span> ${KB}$? Explain.
+${KB}{\models}\alpha$ using {DPLL} when $\alpha$ is a literal *already
+contained in* ${KB}$? Explain.
 
 **7.30** \[dpll-fc-exercise\] Trace the behavior of {DPLL} on the knowledge base in
-<span>Figure [pl-horn-example-figure](#/)</span> when trying to prove $Q$,
+Figure [pl-horn-example-figure](#/) when trying to prove $Q$,
 and compare this behavior with that of the forward-chaining algorithm.
 
 **7.31** Write a successor-state axiom for the ${Locked}$ predicate, which
 applies to doors, assuming the only actions available are ${Lock}$ and
 ${Unlock}$.
 
-**7.32** Discuss what is meant by <span>*optimal*</span> behavior in the wumpus
+**7.32** Discuss what is meant by *optimal* behavior in the wumpus
 world. Show that the {Hybrid-Wumpus-Agent} is not optimal, and suggest ways to improve it.
 
 **7.33** Suppose an agent inhabits a world with two states, $S$ and $\lnot S$,
@@ -480,12 +480,12 @@ $a^t$ be the proposition that the agent does action $a$ at time $t$
     at time $t$ and does $a$, it will still be in $\lnot S$ at time
     $t+1$.
 
-**7.34** \[ss-axiom-exercise\] <span>Section [successor-state-section](#/)</span>
+**7.34** \[ss-axiom-exercise\] Section [successor-state-section](#/)
 provides some of the successor-state axioms required for the wumpus
 world. Write down axioms for all remaining fluent symbols.
 
 **7.35** \[hybrid-wumpus-exercise\]Modify the {Hybrid-Wumpus-Agent} to use the 1-CNF logical state
-estimation method described on <span>page [1cnf-belief-state-page](#/)</span>. We noted on that page
+estimation method described on page [1cnf-belief-state-page](#/). We noted on that page
 that such an agent will not be able to acquire, maintain, and use more
 complex beliefs such as the disjunction $P_{3,1}\lor P_{2,2}$. Suggest a
 method for overcoming this problem by defining additional proposition

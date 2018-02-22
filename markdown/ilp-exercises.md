@@ -2,7 +2,7 @@
 # 19. Knowledge in Learning
 
 **19.1** \[dbsig-exercise\]Show, by translating into conjunctive normal form and
-applying resolution, that the conclusion drawn on <span>page [dbsig-page](#/)</span>
+applying resolution, that the conclusion drawn on page [dbsig-page](#/)
 concerning Brazilians is sound.
 
 **19.2** For each of the following determinations, write down the logical
@@ -68,7 +68,7 @@ to a clause using a binary predicate $P$ and that previous literals
 
 1.  How many functionally different literals can be generated? Two
     literals are functionally identical if they differ only in the names
-    of the <span>*new*</span> variables that they contain.
+    of the *new* variables that they contain.
 
 2.  Can you find a general formula for the number of different literals
     with a predicate of arity $r$ when there are $n$ variables
@@ -78,6 +78,6 @@ to a clause using a binary predicate $P$ and that previous literals
     variables?
 
 **19.8** Using the data from the family tree in
-<span>Figure [family2-figure](#/)</span>, or a subset thereof, apply the
+Figure [family2-figure](#/), or a subset thereof, apply the
 algorithm to learn a definition for the ${Ancestor}$ predicate.
 

@@ -9,8 +9,8 @@ policy and for several random policies. For which do the utility
 estimates converge faster? What happens when the size of the environment
 is increased? (Try environments with and without obstacles.)
 
-**21.2** <span>Chapter [complex-decisions-chapter](#/)</span> defined a
-<span><span>**proper policy**</span></span> for an MDP as one that is
+**21.2** Chapter [complex-decisions-chapter](#/) defined a
+**proper policy** for an MDP as one that is
 guaranteed to reach a terminal state. Show that it is possible for a
 passive ADP agent to learn a transition model for which its policy $\pi$
 is improper even if $\pi$ is proper for the true MDP; with such models,
@@ -31,14 +31,14 @@ Do this in two steps:
     examining their effect on learning rates and computation time.
 
 **21.4** The direct utility estimation method in
-<span>Section [passive-rl-section](#/)</span> uses distinguished terminal
+Section [passive-rl-section](#/) uses distinguished terminal
 states to indicate the end of a trial. How could it be modified for
 environments with discounted rewards and no terminal states?
 
 **21.5** Write out the parameter update equations for TD learning with
 $$\hat{U}(x,y) = \theta_0 + \theta_1 x + \theta_2 y + \theta_3\,\sqrt{(x-x_g)^2 + (y-y_g)^2}\ .$$
 
-**21.6** Adapt the vacuum world (<span>Chapter [agents-chapter](#/)</span>) for
+**21.6** Adapt the vacuum world (Chapter [agents-chapter](#/)) for
 reinforcement learning by including rewards for squares being clean.
 Make the world observable by providing suitable percepts. Now experiment
 with different reinforcement learning agents. Is function approximation
@@ -48,7 +48,7 @@ application?
 **21.7** \[approx-LMS-exercise\]Implement an exploring reinforcement learning
 agent that uses direct utility estimation. Make two versions—one with a
 tabular representation and one using the function approximator in
-<span>Equation ([4x3-linear-approx-equation](#/))</span>. Compare their
+Equation ([4x3-linear-approx-equation](#/)). Compare their
 performance in three environments:
 
 1.  The $4\times 3$ world described in the chapter.
@@ -64,17 +64,17 @@ worlds (generalizations of the $4\times 3$ world) that contain multiple
 obstacles and multiple terminal states with rewards of $+1$ or $-1$.
 
 **21.9** Extend the standard game-playing environment
-(<span>Chapter [game-playing-chapter](#/)</span>) to incorporate a reward
+(Chapter [game-playing-chapter](#/)) to incorporate a reward
 signal. Put two reinforcement learning agents into the environment (they
 may, of course, share the agent program) and have them play against each
 other. Apply the generalized TD update rule
-(<span>Equation ([generalized-td-equation](#/))</span>) to update the
+(Equation ([generalized-td-equation](#/))) to update the
 evaluation function. You might wish to start with a simple linear
 weighted evaluation function and a simple game, such as tic-tac-toe.
 
 **21.10** \[10x10-exercise\] Compute the true utility function and the best linear
 approximation in $x$ and $y$ (as in
-<span>Equation ([4x3-linear-approx-equation](#/))</span>) for the
+Equation ([4x3-linear-approx-equation](#/))) for the
 following environments:
 
 1.  A ${10}\times {10}$ world with a single $+1$ terminal state

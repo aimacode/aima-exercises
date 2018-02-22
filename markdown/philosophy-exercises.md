@@ -63,7 +63,7 @@ other computer science technologies, and to bio-, nano-, and nuclear
 technologies?
 
 **26.12** Some critics object that AI is impossible, while others object that it
-is <span>*too*</span> possible and that ultraintelligent machines pose a
+is *too* possible and that ultraintelligent machines pose a
 threat. Which of these objections do you think is more likely? Would it
 be a contradiction for someone to hold both positions?
 

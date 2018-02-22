@@ -2,7 +2,7 @@
 # 16. Making Simple Decisions
 
 **16.1** \[almanac-game\](Adapted from David Heckerman.) This exercise concerns
-the <span><span>**Almanac Game**</span></span>, which is used by
+the **Almanac Game**, which is used by
 decision analysts to calibrate numeric estimation. For each of the
 questions that follow, give your best guess of the answer, that is, a
 number that you think is as likely to be too high as it is to be too
@@ -30,7 +30,7 @@ question.)
 
 8.  Number of Buddhists in the world in 1992.
 
-9.  Number of deaths due to AIDS in the <span>United States</span>
+9.  Number of deaths due to AIDS in the United States
     in 1981.
 
 10. Number of U.S. patents granted in 1901.
@@ -99,7 +99,7 @@ you win $2^n$ dollars.
     the game, assuming that one’s initial wealth is $\$k$?
 
 **16.5** Write a computer program to automate the process in
-<span>Exercise [assessment-exercise](#/)</span>. Try your program out on
+Exercise [assessment-exercise](#/). Try your program out on
 several people of different net worth and political outlook. Comment on
 the consistency of your results, both for an individual and across
 individuals.
@@ -116,7 +116,7 @@ individually in sealed, identical, black boxes.
 
 Now you, the customer, have just bought a Surprise candy at the store
 but have not yet opened the box. Consider the three Bayes nets in
-<span>Figure [3candy-figure](#3candy-figure)</span>.
+Figure [3candy-figure](#3candy-figure).
 
 1.  Which network(s) can correctly represent
     ${\textbf{P}}(Flavor,Wrapper,Shape)$?
@@ -140,7 +140,7 @@ but have not yet opened the box. Consider the three Bayes nets in
     candy box now worth more than less than, or the same as before?
 
 <center>
-<b id="3candy-figure">Figure [3candy-figure](#3candy-figure)</b> Three proposed Bayes nets for the Surprise Candy 
+<b id="3candy-figure">Figure [3candy-figure]</b> Three proposed Bayes nets for the Surprise Candy 
 problem
 </center>
 ![3candy-figure](figures/3candy.svg)
@@ -157,7 +157,7 @@ individually in sealed, identical, black boxes.
 
 Now you, the customer, have just bought a Surprise candy at the store
 but have not yet opened the box. Consider the three Bayes nets in
-<span>Figure [3candy-figure](#3candy-figure)</span>.
+Figure [3candy-figure](#3candy-figure).
 
 1.  Which network(s) can correctly represent
     ${\textbf{P}}(Flavor,Wrapper,Shape)$?
@@ -181,15 +181,15 @@ but have not yet opened the box. Consider the three Bayes nets in
     candy box now worth more than less than, or the same as before?
 
 **16.8** Prove that the judgments $B \succ A$ and $C \succ D$ in the Allais
-paradox (<span>page [allais-page](#/)</span>) violate the axiom of substitutability.
+paradox (page [allais-page](#/)) violate the axiom of substitutability.
 
-**16.9** Consider the Allais paradox described on <span>page [allais-page](#/)</span>: an agent
+**16.9** Consider the Allais paradox described on page [allais-page](#/): an agent
 who prefers $B$ over $A$ (taking the sure thing), and $C$ over $D$
 (taking the higher EMV) is not acting rationally, according to utility
 theory. Do you think this indicates a problem for the agent, a problem
 for the theory, or no problem at all? Explain.
 
-**16.10** Tickets to a <span>lottery</span> cost 1. There are two possible prizes:
+**16.10** Tickets to a lottery cost 1. There are two possible prizes:
 a 10 payoff with probability 1/50, and a 1,000,000 payoff with
 probability 1/2,000,000. What is the expected monetary value of a
 lottery ticket? When (if ever) is it rational to buy a ticket? Be
@@ -281,8 +281,8 @@ and $X_2$ and $X_3$ are preferentially independent of $X_1$, then $X_3$
 and $X_1$ are preferentially independent of $X_2$.
 
 **16.16** \[airport-au-id-exercise\]Repeat
-<span>Exercise [airport-id-exercise](#/)</span>, using the action-utility
-representation shown in <span>Figure [airport-au-id-figure](#/)</span>.
+Exercise [airport-id-exercise](#/), using the action-utility
+representation shown in Figure [airport-au-id-figure](#/).
 
 **16.17** For either of the airport-siting diagrams from Exercises
 [airport-id-exercise] and [airport-au-id-exercise], to which
@@ -318,7 +318,7 @@ $M$, But this course has an open-book final—so having the book helps.
 3.  What should Sam do?
 
 **16.20** \[airport-id-exercise\]This exercise completes the analysis of the
-airport-siting problem in <span>Figure [airport-id-figure](#/)</span>.
+airport-siting problem in Figure [airport-id-figure](#/).
 
 1.  Provide reasonable variable domains, probabilities, and utilities
     for the network, assuming that there are three possible sites.
@@ -367,8 +367,8 @@ estimate is that $c_1$ has a 70% chance of being in good shape.
 5.  Calculate the value of information of the test, and derive an
     optimal conditional plan for the buyer.
 
-**16.22** \[nonnegative-VPI-exercise\]Recall the definition of <span>*value of
-information*</span> in <span>Section [VPI-section](#/)</span>.
+**16.22** \[nonnegative-VPI-exercise\]Recall the definition of *value of
+information* in Section [VPI-section](#/).
 
 1.  Prove that the value of information is nonnegative and
     order independent.
@@ -381,13 +381,13 @@ information*</span> in <span>Section [VPI-section](#/)</span>.
     and $B$ such that $A\subseteq B$, adding $x$ to $A$ gives a greater
     increase in $f$ than adding $x$ to $B$:
     $$A\subseteq B {\:\;{\Rightarrow}\:\;}(f(A{{\,{\cup}\,}}\{x\}) - f(A)) \geq (f(B{{\,{\cup}\,}}\{x\}) - f(B))\ .$$
-    Submodularity captures the intuitive notion of <span>*diminishing
-    returns*</span>. Is the value of information, viewed as a function
+    Submodularity captures the intuitive notion of *diminishing
+    returns*. Is the value of information, viewed as a function
     $f$ on sets of possible observations, submodular? Prove this or find
     a counterexample.
 
 
-The answers to <span>Exercise [almanac-game](#/)</span> (where M stands
+The answers to Exercise [almanac-game](#/) (where M stands
 for million): First set: 3M, 1.6M, 1541, 41M, 4768, 221, 649M, 295M,
 132, 25,546. Second set: 1917, 155M, 4,500M, 11M, 120,000, 1.1M, 1636,
 19,340, 1,595, 41,710.

@@ -18,7 +18,7 @@ material into different groups again. Then they can be put into their
 appropriate places. Eventually they will be used once more and the whole
 cycle will have to be repeated. However, this is part of life.
 
-**23.2** An <span>*HMM grammar*</span> is essentially a standard HMM whose state
+**23.2** An *HMM grammar* is essentially a standard HMM whose state
 variable is $N$ (nonterminal, with values such as $Det$, $Adjective$,
 $Noun$ and so on) and whose evidence variable is $W$ (word, with values
 such as $is$, $duck$, and so on). The HMM model includes a prior
@@ -169,16 +169,16 @@ Write a grammar for the time language.
 
 **23.9** Some linguists have argued as follows:
 
-> Children learning a language hear only <span>*positive
-> examples*</span> of the language and no <span>*negative
-> examples*</span>. Therefore, the hypothesis that “every possible
+> Children learning a language hear only *positive
+> examples* of the language and no *negative
+> examples*. Therefore, the hypothesis that “every possible
 > sentence is in the language” is consistent with all the observed
 > examples. Moreover, this is the simplest consistent hypothesis.
 > Furthermore, all grammars for languages that are supersets of the true
 > language are also consistent with the observed data. Yet children do
 > induce (more or less) the right grammar. It follows that they begin
 > with very strong innate grammatical constraints that rule out all of
-> these more general hypotheses <span>*a priori*</span>.
+> these more general hypotheses *a priori*.
 
 Comment on the weak point(s) in this argument from a statistical
 learning viewpoint.
@@ -187,52 +187,52 @@ learning viewpoint.
 Chomsky Normal Form (CNF). There are five steps: (a) Add a new start
 symbol, (b) Eliminate $\epsilon$ rules, (c) Eliminate multiple words on
 right-hand sides, (d) Eliminate rules of the form
-(<span>${\it X}$</span>
-<span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>),
+(${\it X}$
+${{\;}}\rightarrow{{\;}}$${\it Y}$),
 (e) Convert long right-hand sides into binary rules.
 
 1.  The start symbol, $S$, can occur only on the left-hand side in CNF.
-    Replace <span>${\it S}$</span> everywhere by a new symbol
-    <span>${\it S'}$</span> and add a rule of the form
-    <span>${\it S}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it S'}$</span>.
+    Replace ${\it S}$ everywhere by a new symbol
+    ${\it S'}$ and add a rule of the form
+    ${\it S}$
+    ${{\;}}\rightarrow{{\;}}$${\it S'}$.
 
 2.  The empty string, $\epsilon$ cannot appear on the right-hand side
     in CNF. $\large \varepsilon_0$ does not have any rules with $\epsilon$, so this is not
     an issue.
 
 3.  A word can appear on the right-hand side in a rule only of the form
-    (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>*word*</span>).
-    Replace each rule of the form (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span>…<span>*word*</span> …)
-    with (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span>…<span>${\it W'}$</span> …)
-    and (<span>${\it W'}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>*word*</span>),
-    using a new symbol <span>${\it W'}$</span>.
+    (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$*word*).
+    Replace each rule of the form (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$…*word* …)
+    with (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$…${\it W'}$ …)
+    and (${\it W'}$
+    ${{\;}}\rightarrow{{\;}}$*word*),
+    using a new symbol ${\it W'}$.
 
-4.  A rule (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>)
-    is not allowed in CNF; it must be (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>
-    <span>${\it Z}$</span>) or (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>*word*</span>).
-    Replace each rule of the form (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>)
-    with a set of rules of the form (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span>…), one
-    for each rule (<span>${\it Y}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span>…),
+4.  A rule (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$${\it Y}$)
+    is not allowed in CNF; it must be (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$${\it Y}$
+    ${\it Z}$) or (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$*word*).
+    Replace each rule of the form (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$${\it Y}$)
+    with a set of rules of the form (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$…), one
+    for each rule (${\it Y}$
+    ${{\;}}\rightarrow{{\;}}$…),
     where (…) indicates one or more symbols.
 
-5.  Replace each rule of the form (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>
-    <span>${\it Z}$</span> …) with two rules, (<span>${\it X}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Y}$</span>
-    <span>${\it Z'}$</span>) and (<span>${\it Z'}$</span>
-    <span>${{\;}}\rightarrow{{\;}}$</span><span>${\it Z}$</span>
-    …), where <span>${\it Z'}$</span> is a new symbol.
+5.  Replace each rule of the form (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$${\it Y}$
+    ${\it Z}$ …) with two rules, (${\it X}$
+    ${{\;}}\rightarrow{{\;}}$${\it Y}$
+    ${\it Z'}$) and (${\it Z'}$
+    ${{\;}}\rightarrow{{\;}}$${\it Z}$
+    …), where ${\it Z'}$ is a new symbol.
 
 Show each step of the process and the final set of rules.
 
@@ -297,14 +297,14 @@ the language $a^nb^nc^n$. The allowable values for augmentation
 variables are 1 and $SUCCESSOR(n)$, where $n$ is a value. The rule for a sentence
 in this language is
 $$S(n) {{{{\;}}\rightarrow{{\;}}}}A(n) {{\;}}B(n) {{\;}}C(n) \ .$$
-Show the rule(s) for each of <span>${\it A}$</span>,
-<span>${\it B}$</span>, and <span>${\it C}$</span>.
+Show the rule(s) for each of ${\it A}$,
+${\it B}$, and ${\it C}$.
 
 **23.15** Augment the $\large \varepsilon_1$ grammar so that it handles article–noun agreement. That is,
-make sure that “agents” and “an agent” are <span>${\it NP}$</span>s, but
+make sure that “agents” and “an agent” are ${\it NP}$s, but
 “agent” and “an agents” are not.
 
-**23.16** Consider the following sentence (from <span>*The New York Times,*</span>
+**23.16** Consider the following sentence (from *The New York Times,*
 July 28, 2008):
 
 > Banks struggling to recover from multibillion-dollar loans on real
@@ -321,7 +321,7 @@ July 28, 2008):
 4.  Can you find semantic ambiguity?
 
 **23.17** \[washing-clothes2-exercise\] Without looking back at
-<span>Exercise [washing-clothes-exercise](#/)</span>, answer the following
+Exercise [washing-clothes-exercise](#/), answer the following
 questions:
 
 1.  What are the four steps that are mentioned?
@@ -345,7 +345,7 @@ language. Count and describe the errors made, and conjecture why these
 errors were made.
 
 **23.19** The $D_i$ values for the sentence in
-<span>Figure [mt-alignment-figure](#/)</span> sum to 0. Will that be true
+Figure [mt-alignment-figure](#/) sum to 0. Will that be true
 of every translation pair? Prove it or give a counterexample.
 
 **23.20** (Adapted from [@Knight:1999].) Our translation model assumes that, after the phrase
@@ -371,13 +371,13 @@ highest-probability permutation of some sentences from a test corpus.
 Report on the accuracy of this model.
 
 **23.21** Calculate the most probable path through the HMM in
-<span>Figure [sr-hmm-figure](#/)</span> for the output sequence
+Figure [sr-hmm-figure](#/) for the output sequence
 $[C_1,C_2,C_3,C_4,C_4,C_6,C_7]$. Also give its probability.
 
 **23.22** We forgot to mention that the text in
-<span>Exercise [washing-clothes-exercise](#/)</span> is entitled “Washing
+Exercise [washing-clothes-exercise](#/) is entitled “Washing
 Clothes.” Reread the text and answer the questions in
-<span>Exercise [washing-clothes2-exercise](#/)</span>. Did you do better
+Exercise [washing-clothes2-exercise](#/). Did you do better
 this time? Bransford and Johnson [@Bransford+Johnson:1973] used this
 text in a controlled experiment and found that the title helped
 significantly. What does this tell you about how language and memory

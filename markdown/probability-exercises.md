@@ -21,17 +21,17 @@ counterexample.
 $P(A) {{\,{=}\,}}{0.4}$, $P(B) {{\,{=}\,}}{0.3}$, and
 $P(A \lor B) {{\,{=}\,}}{0.5}$? If so, what range of probabilities would
 be rational for the agent to hold for $A \land B$? Make up a table like
-the one in <span>Figure [de-finetti-table](#/)</span>, and show how it
+the one in Figure [de-finetti-table](#/), and show how it
 supports your argument about rationality. Then draw another version of
 the table where $P(A \lor B)
 {{\,{=}\,}}{0.7}$. Explain why it is rational to have this probability,
 even though the table shows one case that is a loss and three that just
-break even. (<span>*Hint:*</span> what is Agent 1 committed to about the
+break even. (*Hint:* what is Agent 1 committed to about the
 probability of each of the four cases, especially the case that is a
 loss?)
 
 **13.5** \[exclusive-exhaustive-exercise\]This question deals with the properties
-of possible worlds, defined on <span>page [possible-worlds-page](#/)</span> as assignments to all
+of possible worlds, defined on page [possible-worlds-page](#/) as assignments to all
 random variables. We will work with propositions that correspond to
 exactly one possible world because they pin down the assignments of all
 the variables. In probability theory, such propositions are called **atomic event**. For
@@ -52,9 +52,9 @@ exactly one model.
     disjunction of the atomic events that entail its truth.
 
 **13.6** \[inclusion-exclusion-exercise\]Prove
-<span>Equation ([kolmogorov-disjunction-equation](#/))</span> from
-<span>Equations ([basic-probability-axiom-equation](#/))
-and ([proposition-probability-equation](#/))</span>.
+Equation ([kolmogorov-disjunction-equation](#/)) from
+Equations ([basic-probability-axiom-equation](#/))
+and ([proposition-probability-equation](#/)).
 
 **13.7** Consider the set of all possible five-card poker hands dealt fairly from
 a standard deck of fifty-two cards.
@@ -68,7 +68,7 @@ a standard deck of fifty-two cards.
     of a kind?
 
 **13.8** Given the full joint distribution shown in
-<span>Figure [dentist-joint-table](#/)</span>, calculate the following:
+Figure [dentist-joint-table](#/), calculate the following:
 
 1.  $\textbf{P}({toothache})$.
 
@@ -79,7 +79,7 @@ a standard deck of fifty-two cards.
 4.  $\textbf{P}({Cavity}{{\,|\,}}{toothache}\lor {catch})$.
 
 **13.9** Given the full joint distribution shown in
-<span>Figure [dentist-joint-table](#/)</span>, calculate the following:
+Figure [dentist-joint-table](#/), calculate the following:
 
 1.  $\textbf{P}({toothache})$.
 
@@ -92,32 +92,32 @@ a standard deck of fifty-two cards.
 **13.10** \[unfinished-game-exercise\] In his letter of August 24, 1654, Pascal
 was trying to show how a pot of money should be allocated when a
 gambling game must end prematurely. Imagine a game where each turn
-consists of the roll of a die, player <span>*E*</span> gets a point when
-the die is even, and player <span> *O*</span> gets a point when the die
+consists of the roll of a die, player *E* gets a point when
+the die is even, and player  *O* gets a point when the die
 is odd. The first player to get 7 points wins the pot. Suppose the game
-is interrupted with <span>*E*</span> leading 4–2. How should the money
+is interrupted with *E* leading 4–2. How should the money
 be fairly split in this case? What is the general formula? (Fermat and
 Pascal made several errors before solving the problem, but you should be
 able to get it right the first time.)
 
 **13.11** Deciding to put probability theory to good use, we encounter a slot
 machine with three independent wheels, each producing one of the four
-symbols <span>bar</span>, <span>bell</span>, <span>lemon</span>, or
-<span>cherry</span> with equal probability. The slot machine has the
+symbols bar, bell, lemon, or
+cherry with equal probability. The slot machine has the
 following payout scheme for a bet of 1 coin (where “?” denotes that we
 don’t care what comes up for that wheel):
 
-> <span>bar</span>/<span>bar</span>/<span>bar</span> pays 20 coins
+> bar/bar/bar pays 20 coins
 
-> <span>bell</span>/<span>bell</span>/<span>bell</span> pays 15 coins
+> bell/bell/bell pays 15 coins
 
-> <span>lemon</span>/<span>lemon</span>/<span>lemon</span> pays 5 coins
+> lemon/lemon/lemon pays 5 coins
 
-> <span>cherry</span>/<span>cherry</span>/<span>cherry</span> pays 3 coins
+> cherry/cherry/cherry pays 3 coins
 
-> <span>cherry</span>/<span>cherry</span>/? pays 2 coins
+> cherry/cherry/? pays 2 coins
 
-> <span>cherry</span>/?/? pays 1 coin
+> cherry/?/? pays 1 coin
 
 1.  Compute the expected “payback” percentage of the machine. In other
     words, for each coin played, what is the expected coin return?
@@ -132,22 +132,22 @@ don’t care what comes up for that wheel):
 
 **13.12** Deciding to put our knowledge of probability to good use, we encounter a
 slot machine with three independently turning reels, each producing one
-of the four symbols <span>bar</span>, <span>bell</span>,
-<span>lemon</span>, or <span>cherry</span> with equal probability. The
+of the four symbols bar, bell,
+lemon, or cherry with equal probability. The
 slot machine has the following payout scheme for a bet of 1 coin (where
 “?” denotes that we don’t care what comes up for that wheel):
 
-> <span>bar</span>/<span>bar</span>/<span>bar</span> pays 21 coins
+> bar/bar/bar pays 21 coins
 
-> <span>bell</span>/<span>bell</span>/<span>bell</span> pays 16 coins
+> bell/bell/bell pays 16 coins
 
-> <span>lemon</span>/<span>lemon</span>/<span>lemon</span> pays 5 coins
+> lemon/lemon/lemon pays 5 coins
 
-> <span>cherry</span>/<span>cherry</span>/<span>cherry</span> pays 3 coins
+> cherry/cherry/cherry pays 3 coins
 
-> <span>cherry</span>/<span>cherry</span>/? pays 2 coins
+> cherry/cherry/? pays 2 coins
 
-> <span>cherry</span>/?/? pays 1 coin
+> cherry/?/? pays 1 coin
 
 1.  Compute the expected “payback” percentage of the machine. In other
     words, for each coin played, what is the expected coin return?
@@ -181,7 +181,7 @@ maximum feasible value of $n$? Calculate this value for the case
 $\epsilon{{\,{=}\,}}0.002$, $\delta{{\,{=}\,}}0.01$.
 
 **13.15** \[independence-exercise\]Show that the three forms of independence in
-<span>Equation ([independence-equation](#/))</span> are equivalent.
+Equation ([independence-equation](#/)) are equivalent.
 
 **13.16** Consider two medical tests, A and B, for a virus. Test A is 95%
 effective at recognizing the virus when it is present, but has a 10%
@@ -198,7 +198,7 @@ virus? Justify your answer mathematically.
 and ${tails}$ with probability $1 - x$. Are the outcomes of successive
 flips of the coin independent of each other given that you know the
 value of $x$? Are the outcomes of successive flips of the coin
-independent of each other if you do <span>*not*</span> know the value of
+independent of each other if you do *not* know the value of
 $x$? Justify your answer.
 
 **13.18** After your yearly checkup, the doctor has bad news and good news. The
@@ -230,7 +230,7 @@ some background evidence $\textbf{e}$:
     $${\textbf{P}}(X,Y {{\,|\,}}\textbf{e}) = {\textbf{P}}(X{{\,|\,}}Y,\textbf{e}) {\textbf{P}}(Y{{\,|\,}}\textbf{e})\ .$$
 
 2.  Prove the conditionalized version of Bayes’ rule in
-    <span>Equation ([conditional-bayes-equation](#/))</span>.
+    Equation ([conditional-bayes-equation](#/)).
 
 **13.21** \[pv-xyz-exercise\] Show that the statement of conditional independence
 $${\textbf{P}}(X,Y {{\,|\,}}Z) = {\textbf{P}}(X{{\,|\,}}Z) {\textbf{P}}(Y{{\,|\,}}Z)$$
@@ -260,7 +260,7 @@ normalization calculation for the meningitis example. First, make up a
 suitable value for $P(s{{\,|\,}}\lnot m)$, and use it to calculate
 unnormalized values for $P(m{{\,|\,}}s)$ and $P(\lnot m {{\,|\,}}s)$
 (i.e., ignoring the $P(s)$ term in the Bayes’ rule expression,
-<span>Equation ([meningitis-bayes-equation](#/))</span>). Now normalize
+Equation ([meningitis-bayes-equation](#/))). Now normalize
 these values so that they add to 1.
 
 **13.24** This exercise investigates the way in which conditional independence
@@ -291,7 +291,7 @@ calculations.
 in the joint distribution ${\textbf{P}}(X,Y,Z)$ as $a$ through
 $h$. Express the statement that $X$ and $Y$ are conditionally
 independent given $Z$, as a set of equations relating $a$ through $h$.
-How many <span>*nonredundant*</span> equations are there?
+How many *nonredundant* equations are there?
 
 **13.26** (Adapted from Pearl [-@Pearl:1988].) Suppose you are a witness to a
 nighttime hit-and-run accident involving a taxi in Athens. All taxis in
@@ -300,16 +300,16 @@ Extensive testing shows that, under the dim lighting conditions,
 discrimination between blue and green is 75% reliable.
 
 1.  Is it possible to calculate the most likely color for the taxi?
-    (<span>*Hint:*</span> distinguish carefully between the proposition
-    that the taxi <span>*is*</span> blue and the proposition that it
-    <span>*appears*</span> blue.)
+    (*Hint:* distinguish carefully between the proposition
+    that the taxi *is* blue and the proposition that it
+    *appears* blue.)
 
 2.  What if you know that 9 out of 10 Athenian taxis are green?
 
 **13.27** Write out a general algorithm for answering queries of the form
 ${\textbf{P}}({Cause}{{\,|\,}}\textbf{e})$, using a naive Bayes
 distribution. Assume that the evidence $\textbf{e}$ may assign values to
-<span>*any subset*</span> of the effect variables.
+*any subset* of the effect variables.
 
 **13.28** \[naive-bayes-retrieval-exercise\] Text categorization is the task of
 assigning a given document to one of a fixed set of categories on the
@@ -327,7 +327,7 @@ documents, with frequencies determined by the document category.
 
 3.  Is the conditional independence assumption reasonable? Discuss.
 
-**13.29** In our analysis of the <span>wumpus world</span>, we used the fact that
+**13.29** In our analysis of the wumpus world, we used the fact that
 each square contains a pit with probability 0.2, independently of the
 contents of the other squares. Suppose instead that exactly $N/5$ pits
 are scattered at random among the $N$ squares other than \[1,1\]. Are
@@ -343,6 +343,6 @@ performance of a logical versus a probabilistic agent in this case?
 
 **13.31** Implement a hybrid probabilistic agent for the wumpus world, based on
 the hybrid agent in
-<span>Figure [hybrid-wumpus-agent-algorithm](#/)</span> and the
+Figure [hybrid-wumpus-agent-algorithm](#/) and the
 probabilistic inference procedure outlined in this chapter.
 

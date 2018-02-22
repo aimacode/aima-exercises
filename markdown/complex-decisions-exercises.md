@@ -2,32 +2,32 @@
 # 17. Making Complex Decisions
 
 **17.1** \[mdp-model-exercise\]For the $4\times 3$ world shown in
-<span>Figure [sequential-decision-world-figure](#/)</span>, calculate
+Figure [sequential-decision-world-figure](#/), calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Up},{Up},{Right},{Right},{Right}]$ and with what
 probabilities. Explain how this computation is related to the prediction
-task (see <span>Section [general-filtering-section](#/)</span>) for a
+task (see Section [general-filtering-section](#/)) for a
 hidden Markov model.
 
 **17.2** \[mdp-model-exercise\]For the $4\times 3$ world shown in
-<span>Figure [sequential-decision-world-figure](#/)</span>, calculate
+Figure [sequential-decision-world-figure](#/), calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Right},{Right},{Right},{Up},{Up}]$ and with what
 probabilities. Explain how this computation is related to the prediction
-task (see <span>Section [general-filtering-section](#/)</span>) for a
+task (see Section [general-filtering-section](#/)) for a
 hidden Markov model.
 
 **17.3** Select a specific member of the set of policies that are optimal for
 $R(s)>0$ as shown in
-<span>Figure [sequential-decision-policies-figure](#/)</span>(b), and
+Figure [sequential-decision-policies-figure](#/)(b), and
 calculate the fraction of time the agent spends in each state, in the
-limit, if the policy is executed forever. (<span>*Hint*</span>:
+limit, if the policy is executed forever. (*Hint*:
 Construct the state-to-state transition probability matrix corresponding
 to the policy and see
-<span>Exercise [markov-convergence-exercise](#/)</span>.)
+Exercise [markov-convergence-exercise](#/).)
 
 **17.4** \[nonseparable-exercise\]Suppose that we define the utility of a state
-sequence to be the <span>*maximum*</span> reward obtained in any state
+sequence to be the *maximum* reward obtained in any state
 in the sequence. Show that this utility function does not result in
 stationary preferences between state sequences. Is it still possible to
 define a utility function on states such that MEU decision making gives
@@ -35,9 +35,9 @@ optimal behavior?
 
 **17.5** Can any finite search problem be translated exactly into a Markov
 decision problem such that an optimal solution of the latter is also an
-optimal solution of the former? If so, explain <span>*precisely*</span>
+optimal solution of the former? If so, explain *precisely*
 how to translate the problem and how to translate the solution back; if
-not, explain <span>*precisely*</span> why not (i.e., give a
+not, explain *precisely* why not (i.e., give a
 counterexample).
 
 **17.6** \[reward-equivalence-exercise\] Sometimes MDPs are formulated with a
@@ -54,15 +54,15 @@ reward function $R(s,a,s')$ that also depends on the outcome state.
 3.  Now do the same to convert MDPs with $R(s,a)$ into MDPs with $R(s)$.
 
 **17.7** \[threshold-cost-exercise\]For the environment shown in
-<span>Figure [sequential-decision-world-figure](#/)</span>, find all the
+Figure [sequential-decision-world-figure](#/), find all the
 threshold values for $R(s)$ such that the optimal policy changes when
 the threshold is crossed. You will need a way to calculate the optimal
-policy and its value for fixed $R(s)$. (<span>*Hint*</span>: Prove that
+policy and its value for fixed $R(s)$. (*Hint*: Prove that
 the value of any fixed policy varies linearly with $R(s)$.)
 
 **17.8** \[vi-contraction-exercise\]
-<span>Equation ([vi-contraction-equation](#/))</span> on
-<span>page [vi-contraction-equation](#/)</span> states that the Bellman operator is a contraction.
+Equation ([vi-contraction-equation](#/)) on
+page [vi-contraction-equation](#/) states that the Bellman operator is a contraction.
 
 1.  Show that, for any functions $f$ and $g$,
     $$|\max_a f(a) - \max_a g(a)| \leq \max_a |f(a) - g(a)|\ .$$
@@ -73,7 +73,7 @@ the value of any fixed policy varies linearly with $R(s)$.)
 
 **17.9** This exercise considers two-player MDPs that correspond to zero-sum,
 turn-taking games like those in
-<span>Chapter [game-playing-chapter](#/)</span>. Let the players be $A$
+Chapter [game-playing-chapter](#/). Let the players be $A$
 and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
 reward for $B$ is always equal and opposite.)
 
@@ -87,7 +87,7 @@ reward for $B$ is always equal and opposite.)
     and define a suitable termination criterion.
 
 3.  Consider the game described in
-    <span>Figure [line-game4-figure](#/)</span> on <span>page [line-game4-figure](#/)</span>.
+    Figure [line-game4-figure](#/) on page [line-game4-figure](#/).
     Draw the state space (rather than the game tree), showing the moves
     by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
     state with $R(s)$. You will find it helpful to arrange the states
@@ -98,15 +98,15 @@ reward for $B$ is always equal and opposite.)
     the optimal policy.
 
 <center>
-<b id="grid-mdp-figure">Figure [grid-mdp-figure](#grid-mdp-figure)</b> (a) $3 \times 3$ world for Exercise [3x3-mdp-exercise](#/). The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise [101x3-mdp-exercise](#/) (omitting 93 identical columns in the middle). 
+<b id="grid-mdp-figure">Figure [grid-mdp-figure]</b> (a) $3 \times 3$ world for Exercise [3x3-mdp-exercise](#/). The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise [101x3-mdp-exercise](#/) (omitting 93 identical columns in the middle). 
 The start state has reward 0.
 </center>
 ![grid-mdp-figure](figures/grid-mdp-figure.svg)
 
 **17.10** \[3x3-mdp-exercise\] Consider the $3 \times 3$ world shown in
-<span>Figure [grid-mdp-figure](#grid-mdp-figure)</span>(a). The transition model is the
+Figure [grid-mdp-figure](#grid-mdp-figure)(a). The transition model is the
 same as in the $4\times 3$
-<span>Figure [sequential-decision-world-figure](#/)</span>: 80% of the
+Figure [sequential-decision-world-figure](#/): 80% of the
 time the agent goes in the direction it selects; the rest of the time it
 moves at right angles to the intended direction.
 
@@ -124,12 +124,12 @@ each policy.
 4.  $r = +3$
 
 **17.11** \[101x3-mdp-exercise\] Consider the $101 \times 3$ world shown in
-<span>Figure [grid-mdp-figure](#grid-mdp-figure)</span>(b). In the start state the agent
-has a choice of two deterministic actions, <span>*Up*</span> or
-<span>*Down*</span>, but in the other states the agent has one
-deterministic action, <span>*Right*</span>. Assuming a discounted reward
+Figure [grid-mdp-figure](#grid-mdp-figure)(b). In the start state the agent
+has a choice of two deterministic actions, *Up* or
+*Down*, but in the other states the agent has one
+deterministic action, *Right*. Assuming a discounted reward
 function, for what values of the discount $\gamma$ should the agent
-choose <span>*Up*</span> and for which <span>*Down*</span>? Compute the
+choose *Up* and for which *Down*? Compute the
 utility of each action as a function of $\gamma$. (Note that this simple
 example actually reflects many real-world situations in which one must
 weigh the value of an immediate action versus the potential continual
@@ -153,7 +153,7 @@ transition model is as follows:
 
 Answer the following questions:
 
-1.  What can be determined <span>*qualitatively*</span> about the
+1.  What can be determined *qualitatively* about the
     optimal policy in states 1 and 2?
 
 2.  Apply policy iteration, showing each step in full, to determine the
@@ -165,7 +165,7 @@ Answer the following questions:
     depend on the discount factor?
 
 **17.13** Consider the $4\times 3$ world shown in
-<span>Figure [sequential-decision-world-figure](#/)</span>.
+Figure [sequential-decision-world-figure](#/).
 
 1.  Implement an environment simulator for this environment, such that
     the specific geography of the environment is easily altered. Some
@@ -182,11 +182,11 @@ Answer the following questions:
 
 **17.14** \[policy-loss-exercise\]How can the value determination algorithm be
 used to calculate the expected loss experienced by an agent using a
-given set of utility estimates <span>${U}$</span> and an estimated
-model <span>${P}$</span>, compared with an agent using correct values?
+given set of utility estimates ${U}$ and an estimated
+model ${P}$, compared with an agent using correct values?
 
 **17.15** \[4x3-pomdp-exercise\] Let the initial belief state $b_0$ for the
-$4\times 3$ POMDP on <span>page [4x3-pomdp-page](#/)</span> be the uniform distribution
+$4\times 3$ POMDP on page [4x3-pomdp-page](#/) be the uniform distribution
 over the nonterminal states, i.e.,
 $< \frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},0,0 >$.
 Calculate the exact belief state $b_1$ after the agent moves and its
@@ -197,7 +197,7 @@ same thing happens again.
 sensorless environment?
 
 **17.17** \[2state-pomdp-exercise\] Consider a version of the two-state POMDP on
-<span>page [2state-pomdp-page](#/)</span> in which the sensor is 90% reliable in state 0 but
+page [2state-pomdp-page](#/) in which the sensor is 90% reliable in state 0 but
 provides no information in state 1 (that is, it reports 0 or 1 with
 equal probability). Analyze, either qualitatively or quantitatively, the
 utility function and the optimal policy for this problem.
@@ -212,9 +212,9 @@ rock–paper–scissors–fire–water, fire beats rock, paper, and scissors;
 rock, paper, and scissors beat water; and water beats fire. Write out
 the payoff matrix and find a mixed-strategy solution to this game.
 
-**17.20** Solve the game of <span>*three*</span>-finger Morra.
+**17.20** Solve the game of *three*-finger Morra.
 
-**17.21** In the <span>*Prisoner’s Dilemma*</span>, consider the case where after
+**17.21** In the *Prisoner’s Dilemma*, consider the case where after
 each round, Alice and Bob have probability $X$ meeting again. Suppose
 both players choose the perpetual punishment strategy (where each will
 choose ${refuse}$ unless the other player has ever played

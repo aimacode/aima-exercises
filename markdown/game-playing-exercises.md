@@ -9,7 +9,7 @@ finding the optimal move.
 **5.2** Consider the problem of solving two 8-puzzles.
 
 1.  Give a complete problem formulation in the style of
-    <span>Chapter [search-chapter](#/)</span>.
+    Chapter [search-chapter](#/).
 
 2.  How large is the reachable state space? Give an exact
     numerical expression.
@@ -23,19 +23,19 @@ finding the optimal move.
 4.  Does the game eventually end, given optimal play? Explain.
 
 <center>
-<b id="pursuit-evasion-game-figure">Figure [pursuit-evasion-game-figure](#pursuit-evasion-game-figure)</b> (a) A map where the cost of every edge is 1. Initially the pursuer $P$ is at
+<b id="pursuit-evasion-game-figure">Figure [pursuit-evasion-game-figure]</b> (a) A map where the cost of every edge is 1. Initially the pursuer $P$ is at
 node **b** and the evader $E$ is at node **d**. (b) A partial game tree for this map.
 Each node is labeled with the $P,E$ positions. $P$ moves first. Branches marked "?" have yet to be explored.
 </center>
 ![pursuit-evasion-game-figure](figures/pursuit-evasion-game.svg)
 
-**5.3** Imagine that, in <span>Exercise \[two-friends-exercise\]</span>, one of
+**5.3** Imagine that, in Exercise \[two-friends-exercise\], one of
 the friends wants to avoid the other. The problem then becomes a
 two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal
 payoff to the pursuer is minus the total time taken. (The evader “wins”
 by never losing.) An example is shown in
-<span>Figure [pursuit-evasion-game-figure](#pursuit-evasion-game-figure)</span>.
+Figure [pursuit-evasion-game-figure](#pursuit-evasion-game-figure).
 
 1.  Copy the game tree and mark the values of the terminal nodes.
 
@@ -53,7 +53,7 @@ by never losing.) An example is shown in
 
 5.  Now suppose that the tree as given, with the leaf bounds from (d),
     is evaluated from left to right. Circle those “?” nodes that would
-    <span>*not*</span> need to be expanded further, given the bounds
+    *not* need to be expanded further, given the bounds
     from part (d), and cross out those that need not be considered
     at all.
 
@@ -66,8 +66,8 @@ evaluation functions for one or more of the following stochastic games:
 Monopoly, Scrabble, bridge play with a given contract, or Texas hold’em
 poker.
 
-**5.5** Describe and implement a <span>*real-time*</span>,
-<span>*multiplayer*</span> game-playing environment, where time is part
+**5.5** Describe and implement a *real-time*,
+*multiplayer* game-playing environment, where time is part
 of the environment state and players are given fixed time allocations.
 
 **5.6** Discuss how well the standard approach to game playing would apply to
@@ -75,15 +75,15 @@ games such as tennis, pool, and croquet, which take place in a
 continuous physical state space.
 
 **5.7** \[minimax-optimality-exercise\] Prove the following assertion: For every
-game tree, the utility obtained by <span>max</span> using minimax
-decisions against a suboptimal <span>min</span> will never be lower than
-the utility obtained playing against an optimal <span>min</span>. Can
-you come up with a game tree in which <span>max</span> can do still
-better using a <span>*suboptimal*</span> strategy against a suboptimal
-<span>min</span>?
+game tree, the utility obtained by max using minimax
+decisions against a suboptimal min will never be lower than
+the utility obtained playing against an optimal min. Can
+you come up with a game tree in which max can do still
+better using a *suboptimal* strategy against a suboptimal
+min?
 
 <center>
-<b id="line-game4-figure">Figure [line-game4-figure](#line-game4-figure)</b> The starting position of a simple game.
+<b id="line-game4-figure">Figure [line-game4-figure]</b> The starting position of a simple game.
 </center>
 ![line-game4-figure](figures/line-game4.svg)
 
@@ -98,7 +98,7 @@ is $+1$; if player $B$ reaches space 1 first, then the value of the
 game to $A$ is $-1$.
 
 **5.8** Consider the two-player game described in
-<span>Figure [line-game4-figure](#line-game4-figure)</span>.
+Figure [line-game4-figure](#line-game4-figure).
 
 1.  Draw the complete game tree, using the following conventions:
 
@@ -108,7 +108,7 @@ game to $A$ is $-1$.
     -   Put each terminal state in a square box and write its game value
         in a circle.
 
-    -   Put <span>*loop states*</span> (states that already appear on
+    -   Put *loop states* (states that already appear on
         the path to the root) in double square boxes. Since their value
         is unclear, annotate each with a “?” in a circle.
 
@@ -124,7 +124,7 @@ game to $A$ is $-1$.
     $n > 2$. Prove that $A$ wins if $n$ is even and loses if $n$ is odd.
 
 **5.9** This problem exercises the basic concepts of game playing, using
-<span>tic-tac-toe</span> (noughts and crosses) as an example. We define
+tic-tac-toe (noughts and crosses) as an example. We define
 $X_n$ as the number of rows, columns, or diagonals with exactly $n$
 $X$’s and no $O$’s. Similarly, $O_n$ is the number of rows, columns, or
 diagonals with just $n$ $O$’s. The utility function assigns $+1$ to any
@@ -145,14 +145,14 @@ linear evaluation function defined as ${Eval}(s) = 3X_2(s) + X_1(s) -
     for the positions at depths 1 and 0, and use those values to choose
     the best starting move.
 
-5.  Circle the nodes at depth 2 that would <span>*not*</span> be
+5.  Circle the nodes at depth 2 that would *not* be
     evaluated if alpha–beta pruning were applied, assuming the nodes are
     generated in the optimal order for alpha–beta pruning.
 
 **5.10** Consider the family of generalized tic-tac-toe games, defined as
 follows. Each particular game is specified by a set $\mathcal S$ of
-<span>*squares*</span> and a collection $\mathcal W$ of <span>*winning
-positions.*</span> Each winning position is a subset of $\mathcal S$.
+*squares* and a collection $\mathcal W$ of *winning
+positions.* Each winning position is a subset of $\mathcal S$.
 For example, in standard tic-tac-toe, $\mathcal S$ is a set of 9 squares
 and $\mathcal W$ is a collection of 8 subsets of $\cal W$: the three
 rows, the three columns, and the two diagonals. In other respects, the
@@ -213,7 +213,7 @@ and $k$, making the game almost zero-sum?
 
 **5.14** Develop a formal proof of correctness for alpha–beta pruning. To do
 this, consider the situation shown in
-<span>Figure [alpha-beta-proof-figure](#alpha-beta-proof-figure)</span>. The question is whether
+Figure [alpha-beta-proof-figure](#alpha-beta-proof-figure). The question is whether
 to prune node $n_j$, which is a max-node and a descendant of node $n_1$.
 The basic idea is to prune it if and only if the minimax value of $n_1$
 can be shown to be independent of the value of $n_j$.
@@ -224,7 +224,7 @@ can be shown to be independent of the value of $n_j$.
     $n_j$.
 
 2.  Let $l_i$ be the minimum (or maximum) value of the nodes to the
-    <span>*left*</span> of node $n_i$ at depth $i$, whose minimax value
+    *left* of node $n_i$ at depth $i$, whose minimax value
     is already known. Similarly, let $r_i$ be the minimum (or maximum)
     value of the unexplored nodes to the right of $n_i$ at depth $i$.
     Rewrite your expression for $n_1$ in terms of the $l_i$ and
@@ -237,7 +237,7 @@ can be shown to be independent of the value of $n_j$.
 4.  Repeat the process for the case where $n_j$ is a min-node.
 
 <center>
-<b id="alpha-beta-proof-figure">Figure [alpha-beta-proof-figure](#alpha-beta-proof-figure)</b> Situation when considering whether to prune node $n_j$.
+<b id="alpha-beta-proof-figure">Figure [alpha-beta-proof-figure]</b> Situation when considering whether to prune node $n_j$.
 </center>
 ![alpha-beta-proof-figure](figures/alpha-beta-proof.svg)
 
@@ -264,13 +264,13 @@ table is stored on disk. About how many evaluations could you do in the
 time it takes to do one disk seek with standard disk hardware?
 
 <center>
-<b id="trivial-chance-game-figure">Figure [trivial-chance-game-figure](#trivial-chance-game-figure)</b> The complete game tree for a trivial game with chance nodes.
+<b id="trivial-chance-game-figure">Figure [trivial-chance-game-figure]</b> The complete game tree for a trivial game with chance nodes.
 <center>
 ![trivial-chance-game-figure](figures/pruning.svg)
 
     
 **5.18** This question considers pruning in games with chance nodes.
-<span>Figure [trivial-chance-game-figure](#trivial-chance-game-figure)</span> shows the complete
+Figure [trivial-chance-game-figure](#trivial-chance-game-figure) shows the complete
 game tree for a trivial game. Assume that the leaf nodes are to be
 evaluated in left-to-right order, and that before a leaf node is
 evaluated, we know nothing about its value—the range of possible values
@@ -319,8 +319,8 @@ Will this procedure work well? Why (or why not)?
 **5.22** In the following, a “max” tree consists only of max nodes, whereas an
 “expectimax” tree consists of a max node at the root with alternating
 layers of chance and max nodes. At chance nodes, all outcome
-probabilities are nonzero. The goal is to <span>*find the value of the
-root*</span> with a bounded-depth search. For each of (a)–(f), either
+probabilities are nonzero. The goal is to *find the value of the
+root* with a bounded-depth search. For each of (a)–(f), either
 give an example or explain why this is impossible.
 
 1.  Assuming that leaf values are finite but unbounded, is pruning (as
@@ -354,8 +354,8 @@ give an example or explain why this is impossible.
 **5.23** In the following, a “max” tree consists only of max nodes, whereas an
 “expectimax” tree consists of a max node at the root with alternating
 layers of chance and max nodes. At chance nodes, all outcome
-probabilities are nonzero. The goal is to <span>*find the value of the
-root*</span> with a bounded-depth search.
+probabilities are nonzero. The goal is to *find the value of the
+root* with a bounded-depth search.
 
 1.  Assuming that leaf values are finite but unbounded, is pruning (as
     in alpha–beta) ever possible in a max tree? Give an example, or
@@ -401,14 +401,14 @@ explanations.
 
 **5.25** Consider carefully the interplay of chance events and partial
 information in each of the games in
-<span>Exercise \[game-playing-chance-exercise\]</span>.
+Exercise \[game-playing-chance-exercise\].
 
 1.  For which is the standard expectiminimax model appropriate?
     Implement the algorithm and run it in your game-playing agent, with
     appropriate modifications to the game-playing environment.
 
 2.  For which would the scheme described in
-    <span>Exercise \[game-playing-monte-carlo-exercise\]</span> be
+    Exercise \[game-playing-monte-carlo-exercise\] be
     appropriate?
 
 3.  Discuss how you might deal with the fact that in some of the games,

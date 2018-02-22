@@ -6,7 +6,7 @@ world satisfy the goal at just one time step. Not all goals can be
 expressed this way: you do not achieve the goal of suspending a
 chandelier above the ground by throwing it in the air. More seriously,
 you wouldn’t want your spacecraft life-support system to supply oxygen
-one day but not the next. A <span>*maintenance goal*</span> is achieved
+one day but not the next. A *maintenance goal* is achieved
 when the agent’s plan causes a condition to hold continuously from a
 given state onward. Describe how to extend the formalism of this chapter
 to support maintenance goals.
@@ -34,7 +34,7 @@ HLAs (each defined by preconditions and angelic specifications of
 optimistic and pessimistic reachable sets) and computes optimistic and
 pessimistic descriptions of the reachable set of the sequence.
 
-**11.6** In <span>Figure [jobshop-cpm-figure](#/)</span> we showed how to describe
+**11.6** In Figure [jobshop-cpm-figure](#/) we showed how to describe
 actions in a scheduling problem by using separate fields for , , and .
 Now suppose we wanted to combine scheduling with nondeterministic
 planning, which requires nondeterministic and conditional effects.
@@ -60,7 +60,7 @@ specification.
     temporary variable.
 
 **11.8** Consider the following argument: In a framework that allows uncertain
-initial states, <span><span>**nondeterministic effects**</span></span>
+initial states, **nondeterministic effects**
 are just a notational convenience, not a source of additional
 representational power. For any action schema $a$ with nondeterministic
 effect $P \lor Q$, we could always replace it with the conditional
@@ -87,7 +87,7 @@ represent both of these cases with a single action.
 ${Suck}$ action in the vacuum world—which square becomes clean depends
 on which square the robot is in. Can you think of a new set of
 propositional variables to define states of the vacuum world, such that
-${Suck}$ has an <span>*unconditional*</span> description? Write out
+${Suck}$ has an *unconditional* description? Write out
 the descriptions of ${Suck}$, ${Left}$, and ${Right}$, using your
 propositions, and demonstrate that they suffice to describe all possible
 states of the world.

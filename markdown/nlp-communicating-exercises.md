@@ -11,7 +11,7 @@ turn, generate a 100-word text by making random choices according to the
 frequency counts. Compare the three generated texts with actual
 language. Finally, calculate the perplexity of each model.
 
-**22.2** Write a program to do <span><span>**segmentation**</span></span> of
+**22.2** Write a program to do **segmentation** of
 words without spaces. Given a string, such as the URL
 “thelongestlistofthelongeststuffatthelongestdomainnameatlonglast.com,”
 return a list of component words: \[“the,” “longest,” “list,”
@@ -21,7 +21,7 @@ that do not have spaces between words. It can be solved with a unigram
 or bigram word model and a dynamic programming algorithm similar to the
 Viterbi algorithm.
 
-**22.3** <span>*Zipf’s law*</span> of word distribution states the following:
+**22.3** *Zipf’s law* of word distribution states the following:
 Take a large corpus of text, count the frequency of every word in the
 corpus, and then rank these frequencies in decreasing order. Let $f_{I}$
 be the $I$th largest frequency in this list; that is, $f_{1}$ is the
@@ -50,11 +50,11 @@ probability of the text under each language model and chose the most
 probable model. Assess the accuracy of this technique. How does accuracy
 change as you alter the set of features? This subfield of linguistics is
 called **stylometry**; its successes include the identification of the author of the
-disputed <span>*Federalist Papers*</span> @Mosteller+Wallace:1964 and
+disputed *Federalist Papers* @Mosteller+Wallace:1964 and
 some disputed works of Shakespeare @Hope:1994. @Khmelev+Tweedie:2001 produce good results with
 a simple letter bigram model.
 
-**22.6** This exercise concerns the classification of <span>spam email</span>.
+**22.6** This exercise concerns the classification of spam email.
 Create a corpus of spam email and one of non-spam mail. Examine each
 corpus and decide what features appear to be useful for classification:
 unigram words? bigrams? message length, sender, time of arrival? Then
@@ -92,7 +92,7 @@ each of the following models, propose a corresponding numeric measure.
     the answers retrieved. She wants to be sure that she has seen
     everything in the document collection that is relevant to her query.
     (E.g., a lawyer wants to be sure that she has found
-    <span>*all*</span> relevant precedents, and is willing to spend
+    *all* relevant precedents, and is willing to spend
     considerable resources on that.)
 
 4.  The searcher needs just one document relevant to the query, and can

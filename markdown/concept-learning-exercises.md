@@ -8,7 +8,7 @@ of the infant, and the types of learning the infant must do. Describe
 the subfunctions the infant is trying to learn in terms of inputs and
 outputs, and available example data.
 
-**18.2** Repeat <span>Exercise [infant-language-exercise](#/)</span> for the case
+**18.2** Repeat Exercise [infant-language-exercise](#/) for the case
 of learning to play tennis (or some other sport with which you are
 familiar). Is this supervised learning or reinforcement learning?
 
@@ -53,8 +53,8 @@ attributes ($A_1, A_2$, and $A_3$) and one binary output:
 | $\textbf{x}_5$  | 1 | 1  | 0  | 1 |
 
 
-Use the algorithm in <span>Figure [DTL-algorithm](#/)</span>
-(<span>page [DTL-algorithm](#/)</span>) to learn a decision tree for these data. Show the
+Use the algorithm in Figure [DTL-algorithm](#/)
+(page [DTL-algorithm](#/)) to learn a decision tree for these data. Show the
 computations made to determine the attribute to split at each node.
 
 **18.9** Construct a data set (set of examples with attributes and
@@ -62,21 +62,21 @@ classifications) that would cause the decision-tree learning algorithm
 to find a non-minimal-sized tree. Show the tree constructed by the
 algorithm and the minimal-sized tree that you can generate by hand.
 
-**18.10** A decision <span>*graph*</span> is a generalization of a decision tree
+**18.10** A decision *graph* is a generalization of a decision tree
 that allows nodes (i.e., attributes used for splits) to have multiple
 parents, rather than just a single parent. The resulting graph must
-still be acyclic. Now, consider the XOR function of <span>*three*</span>
+still be acyclic. Now, consider the XOR function of *three*
 binary input attributes, which produces the value 1 if and only if an
 odd number of the three input attributes has value 1.
 
-1.  Draw a minimal-sized decision <span>*tree*</span> for the
+1.  Draw a minimal-sized decision *tree* for the
     three-input XOR function.
 
-2.  Draw a minimal-sized decision <span>*graph*</span> for the
+2.  Draw a minimal-sized decision *graph* for the
     three-input XOR function.
 
 **18.11** \[pruning-DTL-exercise\]This exercise considers $\chi^2$ pruning of
-decision trees (<span>Section [chi-squared-section](#/)</span>).
+decision trees (Section [chi-squared-section](#/)).
 
 1.  Create a data set with two input attributes, such that the
     information gain at the root of the tree for both attributes is
@@ -96,7 +96,7 @@ attribute values.
     can be missing. Suppose that an example $\textbf{x}$ has a missing value for
     attribute $A$ and that the decision tree tests for $A$ at a node
     that $\textbf{x}$ reaches. One way to handle this case is to pretend that
-    the example has <span>*all*</span> possible values for the
+    the example has *all* possible values for the
     attribute, but to weight each value according to its frequency among
     all of the examples that reach that node in the decision tree. The
     classification algorithm should follow all branches at any node for
@@ -111,12 +111,12 @@ attribute values.
     frequencies of those values in the set $C$.
 
 **18.13** \[gain-ratio-DTL-exercise\]In
-<span>Section [broadening-decision-tree-section](#/)</span>, we noted that
+Section [broadening-decision-tree-section](#/), we noted that
 attributes with many different possible values can cause problems with
 the gain measure. Such attributes tend to split the examples into
 numerous small classes or even singleton classes, thereby appearing to
 be highly relevant according to the gain measure. The
-<span><span>**gain-ratio**</span></span> criterion selects attributes
+**gain-ratio** criterion selects attributes
 according to the ratio between their gain and their intrinsic
 information content—that is, the amount of information contained in the
 answer to the question, “What is the value of this attribute?” The
@@ -142,7 +142,7 @@ the set of $2^n$ possible examples. Calculate the number of examples
 required before the probability of finding a contradiction in the data
 reaches 0.5.
 
-**18.16** Construct a <span>*decision list*</span> to classify the data below.
+**18.16** Construct a *decision list* to classify the data below.
 Select tests to be as small as possible (in terms of attributes),
 breaking ties among tests with the same number of attributes by
 selecting the one that classifies the greatest number of examples
@@ -171,7 +171,7 @@ number of leaves in a minimal-sized decision tree for that same
 function.
 
 **18.18** \[DL-expressivity-exercise\]This exercise concerns the expressiveness of
-decision lists (<span>Section [learning-theory-section](#/)</span>).
+decision lists (Section [learning-theory-section](#/)).
 
 1.  Show that decision lists can represent any Boolean function, if the
     size of the tests is not limited.
@@ -194,7 +194,7 @@ loss function on this data? There is a common name in statistics for
 this value as a function of the $y$ values; what is it? Answer the same
 two questions for the $L_2$ loss function.
 
-**18.21** \[svm-ellipse-exercise\] <span>Figure [kernel-machine-figure](#/)</span>
+**18.21** \[svm-ellipse-exercise\] Figure [kernel-machine-figure](#/)
 showed how a circle at the origin can be linearly separated by mapping
 from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
 But what if the circle is not located at the origin? What if it is an
@@ -212,7 +212,7 @@ $c(x_1-a)^2 + d(x_2-b)^2 - 1 {{\,{=}\,}}0$.
     $(x_1, x_2, x_1^2, x_2^2, x_1 x_2)$.
 
 **18.22** \[svm-exercise\] Construct a support vector machine that computes the
-<span>xor</span> function. Use values of +1 and –1 (instead of 1 and 0)
+xor function. Use values of +1 and –1 (instead of 1 and 0)
 for both inputs and outputs, so that an example looks like $([-1, 1],
 1)$ or $([-1, -1], -1)$. Map the input $[x_1,x_2]$ into a space
 consisting of $x_1$ and $x_1\,x_2$. Draw the four input points in this
@@ -227,19 +227,19 @@ formula for the error of the ensemble algorithm in terms of $K$
 and $\epsilon$, and evaluate it for the cases where
 $K{{\,{=}\,}}5$, 10, and 20 and $\epsilon{{\,{=}\,}}{0.1}$, 0.2,
 and 0.4. If the independence assumption is removed, is it possible for
-the ensemble error to be <span>*worse*</span> than $\epsilon$?
+the ensemble error to be *worse* than $\epsilon$?
 
-**18.24** Construct by hand a neural network that computes the <span>xor</span>
+**18.24** Construct by hand a neural network that computes the xor
 function of two inputs. Make sure to specify what sort of units you are
 using.
 
-**18.25** A simple perceptron cannot represent <span>xor</span> (or, generally,
+**18.25** A simple perceptron cannot represent xor (or, generally,
 the parity function of its inputs). Describe what happens to the weights
 of a four-input, hard-threshold perceptron, beginning with all weights
 set to 0.1, as examples of the parity function arrive.
 
 **18.26** \[linear-separability-exercise\] Recall from
-<span>Chapter [concept-learning-chapter](#/)</span> that there are
+Chapter [concept-learning-chapter](#/) that there are
 $2^{2^{{n}}}$ distinct Boolean functions of ${{n}}$ inputs. How many of
 these are representable by a threshold perceptron?
 
@@ -266,9 +266,9 @@ target output:
 3.  Comment on your results.
 
 **18.28** \[perceptron-ML-gradient-exercise\]
-<span>Section [logistic-regression-section](#/)</span>
-(<span>page [logistic-regression-section](#/)</span>) noted that the output of the logistic function
-could be interpreted as a <span>*probability*</span> $p$ assigned by the
+Section [logistic-regression-section](#/)
+(page [logistic-regression-section](#/)) noted that the output of the logistic function
+could be interpreted as a *probability* $p$ assigned by the
 model to the proposition that $f(\textbf{x}){{\,{=}\,}}1$; the probability that
 $f(\textbf{x}){{\,{=}\,}}0$ is therefore $1-p$. Write down the probability $p$
 as a function of $\textbf{x}$ and calculate the derivative of $\log p$ with
@@ -307,11 +307,11 @@ appropriate output values.
 times. In 80 of the 100 cases, the single output value is 1; in the
 other 20, it is 0. What will a back-propagation network predict for this
 example, assuming that it has been trained and reaches a global optimum?
-(<span>*Hint:*</span> to find the global optimum, differentiate the
+(*Hint:* to find the global optimum, differentiate the
 error function and set it to zero.)
 
 **18.32** The neural network whose learning performance is measured in
-<span>Figure [restaurant-back-prop-figure](#/)</span> has four hidden
+Figure [restaurant-back-prop-figure](#/) has four hidden
 nodes. This number was chosen somewhat arbitrarily. Use a
 cross-validation method to find the best number of hidden nodes.
 

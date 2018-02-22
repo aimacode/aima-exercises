@@ -26,8 +26,8 @@ outcomes $X_1$, $X_2$, and $X_3$.
     if the observed flips come out heads twice and tails once.
 
 **14.3** \[cpt-equivalence-exercise\]
-<span>Equation ([parameter-joint-repn-equation](#/))</span> on
-<span>page [parameter-joint-repn-equation](#/)</span> defines the joint distribution represented by a
+Equation ([parameter-joint-repn-equation](#/)) on
+page [parameter-joint-repn-equation](#/) defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{{\,|\,}}{Parents}(X_i))$. This exercise asks you to derive
 the equivalence between the parameters and the conditional probabilities
@@ -35,12 +35,12 @@ ${\textbf{ P}}(X_i{{\,|\,}}{Parents}(X_i))$ from this definition.
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
-    <span>Equations ([conditional-probability-equation](#/)) and ([marginalization-equation](#/))</span>
-    (<span>pages [conditional-probability-equation](#/) and [marginalization-equation](#/)</span>) 
+    Equations ([conditional-probability-equation](#/)) and ([marginalization-equation](#/))
+    (pages [conditional-probability-equation](#/) and [marginalization-equation](#/)) 
     to express the conditional probability $P(z{{\,|\,}}y)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.
 
-2.  Now use <span>Equation ([parameter-joint-repn-equation](#/))</span> to
+2.  Now use Equation ([parameter-joint-repn-equation](#/)) to
     write this expression in terms of the network parameters
     $\theta(X)$, $\theta(Y{{\,|\,}}X)$, and $\theta(Z{{\,|\,}}Y)$.
 
@@ -65,7 +65,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.
     respectively, and that all variables have $k$ values. By calculating
     the change in size for the CPTs of $X$ and $Y$, show that the total
     number of parameters in the network cannot decrease during
-    arc reversal. (<span>*Hint*</span>: the parents of $X$ and $Y$ need
+    arc reversal. (*Hint*: the parents of $X$ and $Y$ need
     not be disjoint.)
 
 2.  Under what circumstances can the total number remain constant?
@@ -79,7 +79,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.
     over all variables as the original network.
 
 **14.5** Consider the Bayesian network in
-<span>Figure [burglary-figure](#/)</span>.
+Figure [burglary-figure](#/).
 
 1.  If no evidence is observed, are ${Burglary}$ and ${Earthquake}$
     independent? Prove this from the numerical semantics and from the
@@ -102,7 +102,7 @@ observed.
     rejection sampling and (ii) likelihood weighting.
 
 <center>
-<b id="handedness-figure">Figure [handedness-figure](#handedness-figure)</b> Three possible structures for a Bayesian network describing genetic inheritance of handedness.
+<b id="handedness-figure">Figure [handedness-figure]</b> Three possible structures for a Bayesian network describing genetic inheritance of handedness.
 </center>
 ![handedness-figure](figures/handedness1.svg)
     
@@ -117,7 +117,7 @@ from either of an individual’s parents, with a small nonzero probability
 $m$ of a random mutation flipping the handedness.
 
 1.  Which of the three networks in
-    <span>Figure [handedness-figure](#handedness-figure)</span> claim that
+    Figure [handedness-figure](#handedness-figure) claim that
     $ {\textbf{P}}(G_{{father}},G_{{mother}},G_{{child}}) = {\textbf{P}}(G_{{father}}){\textbf{P}}(G_{{mother}}){\textbf{P}}(G_{{child}})$?
 
 2.  Which of the three networks make independence claims that are
@@ -140,20 +140,20 @@ $m$ of a random mutation flipping the handedness.
     humans, explain why the hypothesis described at the beginning of
     this question must be wrong.
 
-**14.8** \[markov-blanket-exercise\] The <span><span>**Markov
-blanket**</span></span> of a variable is defined on <span>page [markov-blanket-page](#/)</span>.
+**14.8** \[markov-blanket-exercise\] The **Markov
+blanket** of a variable is defined on page [markov-blanket-page](#/).
 Prove that a variable is independent of all other variables in the
 network, given its Markov blanket and derive
-<span>Equation ([markov-blanket-equation](#/))</span>
-(<span>page [markov-blanket-equation](#/)</span>).
+Equation ([markov-blanket-equation](#/))
+(page [markov-blanket-equation](#/)).
 
 <center>
-<b id="car-starts-figure">Figure [car-starts-figure](#car-starts-figure)</b> A Bayesian network describing some features of a car's electrical system and engine. Each variable is Boolean, and the *true* value indicates that the corresponding aspect of the vehicle is in working order.
+<b id="car-starts-figure">Figure [car-starts-figure]</b> A Bayesian network describing some features of a car's electrical system and engine. Each variable is Boolean, and the *true* value indicates that the corresponding aspect of the vehicle is in working order.
 </center>
 ![car-starts-figure](figures/car-starts.svg)
 
 **14.9** Consider the network for car diagnosis shown in
-<span>Figure [car-starts-figure](#car-starts-figure)</span>.
+Figure [car-starts-figure](#car-starts-figure).
 
 1.  Extend the network with the Boolean variables ${IcyWeather}$ and
     ${StarterMotor}$.
@@ -168,20 +168,20 @@ network, given its Markov blanket and derive
     contain?
 
 5.  The conditional distribution for ${Starts}$ could be described as
-    a <span><span>**noisy-AND**</span></span> distribution. Define this
+    a **noisy-AND** distribution. Define this
     family in general and relate it to the noisy-OR distribution.
 
 **14.10** Consider a simple Bayesian network with root variables ${Cold}$,
 ${Flu}$, and ${Malaria}$ and child variable ${Fever}$, with a
 noisy-OR conditional distribution for ${Fever}$ as described in
-<span>Section [canonical-distribution-section](#/)</span>. By adding
+Section [canonical-distribution-section](#/). By adding
 appropriate auxiliary variables for inhibition events and fever-inducing
 events, construct an equivalent Bayesian network whose CPTs (except for
 root variables) are deterministic. Define the CPTs and prove
 equivalence.
 
 **14.11** \[LG-exercise\] Consider the family of linear Gaussian networks, as
-defined on <span>page [LG-network-page](#/)</span>.
+defined on page [LG-network-page](#/).
 
 1.  In a two-variable network, let $X_1$ be the parent of $X_2$, let
     $X_1$ have a Gaussian prior, and let
@@ -194,18 +194,18 @@ defined on <span>page [LG-network-page](#/)</span>.
     multivariate Gaussian.
 
 **14.12** \[multivalued-probit-exercise\] The probit distribution defined on
-<span>page [probit-page](#/)</span> describes the probability distribution for a Boolean
+page [probit-page](#/) describes the probability distribution for a Boolean
 child, given a single continuous parent.
 
 1.  How might the definition be extended to cover multiple continuous
     parents?
 
-2.  How might it be extended to handle a <span>*multivalued*</span>
+2.  How might it be extended to handle a *multivalued*
     child variable? Consider both cases where the child’s values are
     ordered (as in selecting a gear while driving, depending on speed,
     slope, desired acceleration, etc.) and cases where they are
     unordered (as in selecting bus, train, or car to get to work).
-    (<span>*Hint*</span>: Consider ways to divide the possible values
+    (*Hint*: Consider ways to divide the possible values
     into two sets, to mimic a Boolean variable.)
 
 **14.13** In your local nuclear power station, there is an alarm that senses when
@@ -242,7 +242,7 @@ telescope can also (with a much smaller probability $f$) be badly out of
 focus (events $F_1$ and $F_2$), in which case the scientist will
 undercount by three or more stars (or if $N$ is less than 3, fail to
 detect any stars at all). Consider the three networks shown in
-<span>Figure [telescope-nets-figure](#telescope-nets-figure)</span>.
+Figure [telescope-nets-figure](#telescope-nets-figure).
 
 1.  Which of these Bayesian networks are correct (but not
     necessarily efficient) representations of the preceding information?
@@ -256,38 +256,38 @@ detect any stars at all). Consider the three networks shown in
     function of the parameters $e$ and/or $f$.
 
 4.  Suppose $M_1{{\,{=}\,}}1$ and $M_2{{\,{=}\,}}3$. What are the
-    <span>*possible*</span> numbers of stars if you assume no prior
+    *possible* numbers of stars if you assume no prior
     constraint on the values of $N$?
 
-5.  What is the <span>*most likely*</span> number of stars, given these
+5.  What is the *most likely* number of stars, given these
     observations? Explain how to compute this, or if it is not possible
     to compute, explain what additional information is needed and how it
     would affect the result.
 
 **14.15** Consider the network shown in
-<span>Figure [telescope-nets-figure](#telescope-nets-figure)</span>(ii), and assume that the
+Figure [telescope-nets-figure](#telescope-nets-figure)(ii), and assume that the
 two telescopes work identically. $N{{\,{\in}\,}}\{1,2,3\}$ and
 $M_1,M_2{{\,{\in}\,}}\{0,1,2,3,4\}$, with the symbolic CPTs as described
-in <span>Exercise [telescope-exercise](#/)</span>. Using the enumeration
-algorithm (<span>Figure [enumeration-algorithm](#/)</span> on
-<span>page [enumeration-algorithm](#/)</span>), calculate the probability distribution
+in Exercise [telescope-exercise](#/). Using the enumeration
+algorithm (Figure [enumeration-algorithm](#/) on
+page [enumeration-algorithm](#/)), calculate the probability distribution
 ${\textbf{P}}(N{{\,|\,}}M_1{{\,{=}\,}}2,M_2{{\,{=}\,}}2)$.
 
 <center>
-<b id="telescope-nets-figure">Figure [telescope-nets-figure](#telescope-nets-figure)</b> Three possible networks for the telescope problem.
+<b id="telescope-nets-figure">Figure [telescope-nets-figure]</b> Three possible networks for the telescope problem.
 </center>
 ![telescope-nets-figure](figures/telescope-nets.svg)
 
 <center>
-<b id="politics-figure">Figure [politics-figure](#politics-figure)</b> A simple Bayes net with
+<b id="politics-figure">Figure [politics-figure]</b> A simple Bayes net with
 Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotivatedProsecutor}, G= {FoundGuilty}, J = {Jailed}.
 </center>
 ![politics-figure](figures/politics.svg)
 
-**14.16** Consider the Bayes net shown in <span>Figure [politics-figure](#politics-figure)</span>.
+**14.16** Consider the Bayes net shown in Figure [politics-figure](#politics-figure).
 
 1.  Which of the following are asserted by the network
-    <span>*structure*</span>?
+    *structure*?
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.
 
@@ -301,21 +301,21 @@ Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotiva
     broke the law, have been indicted, and face a politically
     motivated prosecutor.
 
-4.  A <span><span>**context-specific independence**</span></span> (see
-    <span>page [CSI-page](#/)</span>) allows a variable to be independent of some of
+4.  A **context-specific independence** (see
+    page [CSI-page](#/)) allows a variable to be independent of some of
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    <span>Figure [politics-figure](#politics-figure)</span>?
+    Figure [politics-figure](#politics-figure)?
 
 5.  Suppose we want to add the variable
     $P{{\,{=}\,}}{PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.
 
-**14.17** Consider the Bayes net shown in <span>Figure [politics-figure](#politics-figure)</span>.
+**14.17** Consider the Bayes net shown in Figure [politics-figure](#politics-figure).
 
 1.  Which, if any, of the following are asserted by the network
-    <span>*structure*</span> (ignoring the CPTs for now)?
+    *structure* (ignoring the CPTs for now)?
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.
 
@@ -329,21 +329,21 @@ Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotiva
     broke the law, have been indicted, and face a politically
     motivated prosecutor.
 
-4.  A <span><span>**context-specific independence**</span></span> (see
-    <span>page [CSI-page](#/)</span>) allows a variable to be independent of some of
+4.  A **context-specific independence** (see
+    page [CSI-page](#/)) allows a variable to be independent of some of
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    <span>Figure [politics-figure](#politics-figure)</span>?
+    Figure [politics-figure](#politics-figure)?
 
 5.  Suppose we want to add the variable
     $P{{\,{=}\,}}{PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.
 
 **14.18** \[VE-exercise\] Consider the variable elimination algorithm in
-<span>Figure [elimination-ask-algorithm](#/)</span> (<span>page [elimination-ask-algorithm](#/)</span>).
+Figure [elimination-ask-algorithm](#/) (page [elimination-ask-algorithm](#/)).
 
-1.  <span>Section [exact-inference-section](#/)</span> applies variable
+1.  Section [exact-inference-section](#/) applies variable
     elimination to the query
     $${\textbf{P}}({Burglary}{{\,|\,}}{JohnCalls}{{\,{=}\,}}{true},{MaryCalls}{{\,{=}\,}}{true})\ .$$
     Perform the calculations indicated and check that the answer
@@ -352,7 +352,7 @@ Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotiva
 2.  Count the number of arithmetic operations performed, and compare it
     with the number performed by the enumeration algorithm.
 
-3.  Suppose a network has the form of a <span>*chain*</span>: a sequence
+3.  Suppose a network has the form of a *chain*: a sequence
     of Boolean variables $X_1,\ldots, X_n$ where
     ${Parents}(X_i){{\,{=}\,}}\{X_{i-1}\}$ for $i{{\,{=}\,}}2,\ldots,n$.
     What is the complexity of computing
@@ -368,7 +368,7 @@ in general Bayesian networks:
 
 1.  Prove that any 3-SAT problem can be reduced to exact inference in a
     Bayesian network constructed to represent the particular problem and
-    hence that exact inference is NP-hard. (<span>*Hint*</span>:
+    hence that exact inference is NP-hard. (*Hint*:
     Consider a network with one variable for each proposition symbol,
     one for each clause, and one for the conjunction of clauses.)
 
@@ -385,14 +385,14 @@ uniformly distributed between 0 and 1.
     $P(X{{\,{=}\,}}x_i){{\,{=}\,}}p_i$ for
     $i{{\,{\in}\,}}\{1,\ldots,k\}$. The **cumulative distribution** of $X$ gives the probability
     that $X{{\,{\in}\,}}\{x_1,\ldots,x_j\}$ for each possible $j$. (See
-    also <span>Appendix [math-appendix]</span>.) Explain how to
+    also Appendix [math-appendix].) Explain how to
     calculate the cumulative distribution in $O(k)$ time and how to
     generate a single sample of $X$ from it. Can the latter be done in
     less than $O(k)$ time?
 
 2.  Now suppose we want to generate $N$ samples of $X$, where $N\gg k$.
     Explain how to do this with an expected run time per sample that is
-    <span>*constant*</span> (i.e., independent of $k$).
+    *constant* (i.e., independent of $k$).
 
 3.  Now consider a continuous-valued variable with a parameterized
     distribution (e.g., Gaussian). How can samples be generated from
@@ -404,12 +404,12 @@ uniformly distributed between 0 and 1.
 
 **14.21** Consider the query
 ${\textbf{P}}({Rain}{{\,|\,}}{Sprinkler}{{\,{=}\,}}{true},{WetGrass}{{\,{=}\,}}{true})$
-in <span>Figure [rain-clustering-figure](#/)</span>(a)
-(<span>page [rain-clustering-figure](#/)</span>) and how Gibbs sampling can answer it.
+in Figure [rain-clustering-figure](#/)(a)
+(page [rain-clustering-figure](#/)) and how Gibbs sampling can answer it.
 
 1.  How many states does the Markov chain have?
 
-2.  Calculate the <span><span>**transition matrix**</span></span>
+2.  Calculate the **transition matrix**
     ${\textbf{Q}}$ containing
     $q({\textbf{y}} \rightarrow {{\textbf{y}}'})$
     for all ${\textbf{y}}$, ${\textbf{y}}'$.
@@ -432,7 +432,7 @@ distribution for Gibbs sampling methods.
     respectively, and then applies whichever is chosen. Prove that if
     $q_1$ and $q_2$ are in detailed balance with $\pi$, then their
     convex composition is also in detailed balance with $\pi$.
-    (<span>*Note*</span>: this result justifies a variant of GIBBS-ASK in which
+    (*Note*: this result justifies a variant of GIBBS-ASK in which
     variables are chosen at random rather than sampled in a
     fixed sequence.)
 
