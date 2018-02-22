@@ -41,7 +41,7 @@ Q. <i>[cond-loop-exercise]</i>:
 ## 4.4: Searching with Partial Observations (5 exercises, 4 labelled)
 
 
-Q. In Section 4.4.1 we introduced belief states to solve sensorless search problems. A sequence of actions solves a sensorless problem if it maps every physical state in the initial belief state <i>b</i> to a goal state. Suppose the agent knows $$(h^*(s))$$, the true optimal cost of solving the physical state <i>s</i> in the fully observable problem, for every state <i>s</i> in <i>b</i>. Find an admissible heuristic <i>h(b)</i> for the sensorless problem in terms of these costs, and prove its admissibilty. Comment on the accuracy of this heuristic on the sensorless vacuum problem of : ![down](https://image.ibb.co/gvmzFn/Screen_Shot_2018_02_18_at_4_29_31_PM.png)How well does : $$A^∗$$ perform?
+Q. In Section 4.4.1 we introduced belief states to solve sensorless search problems. A sequence of actions solves a sensorless problem if it maps every physical state in the initial belief state <i>b</i> to a goal state. Suppose the agent knows h*(s), the true optimal cost of solving the physical state <i>s</i> in the fully observable problem, for every state <i>s</i> in <i>b</i>. Find an admissible heuristic <i>h(b)</i> for the sensorless problem in terms of these costs, and prove its admissibilty. Comment on the accuracy of this heuristic on the sensorless vacuum problem of : ![down](https://image.ibb.co/gvmzFn/Screen_Shot_2018_02_18_at_4_29_31_PM.png)How well does : $$A^∗$$ perform?
  (id=4.4 section=4.4.1)
 
 Q. <i>[belief-state-superset-exercise]</i> :
@@ -102,13 +102,13 @@ Q. <i>[path-planning-hc-exercise]</i> :
     b. Construct a nonconvex polygonal environment in which the agent gets stuck.
     c. Modify the hill-climbing algorithm so that, instead of doing a depth-1 search to decide where to go next, it does a depth-<i>k</i> search. It should find the best <i>k</i>-step path and do one step along it, and then repeat the process.
     d. Is there some k for which the new algorithm is guaranteed to escape from local minima?
-    e. Explain how $$LRTA^∗$$ enables the agent to escape from local minima in this case.
+    e. Explain how LRTA∗ enables the agent to escape from local minima in this case.
     (id=4.12 section=4.5)
 
 Q. Like DFS, online DFS is incomplete for reversible state spaces with infinite paths. For  example, suppose that states are points on the infinite two-dimensional grid and actions  are unit vectors (1, 0), (0, 1), (−1, 0), (0, −1), tried in that order. Show that online DFS  starting at (0, 0) will not reach (1, −1). Suppose the agent can observe, in addition to its  current state, all successor states and the actions that would lead to them. Write an  algorithm that is complete even for bidirected state spaces with infinite paths. What states  does it visit in reaching (1, −1)?
 (id=4.13 section=4.5)
 
-Q. Relate the time complexity of $$LRTA^*$$ to its space complexity.
+Q. Relate the time complexity of LRTA* to its space complexity.
 (id=4.14 section=4.5)
 
 
