@@ -27,7 +27,7 @@ finding the optimal move.
 node **b** and the evader $E$ is at node **d**. (b) A partial game tree for this map.
 Each node is labeled with the $P,E$ positions. $P$ moves first. Branches marked "?" have yet to be explored.
 </center>
-![pursuit-evasion-game-figure](figures/pursuit-evasion-game.svg)
+![pursuit-evasion-game-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/pursuit-evasion-game.svg)
 
 **5.3** Imagine that, in Exercise \[two-friends-exercise\], one of
 the friends wants to avoid the other. The problem then becomes a
@@ -85,7 +85,7 @@ min?
 <center>
 <b id="line-game4-figure">Figure [line-game4-figure]</b> The starting position of a simple game.
 </center>
-![line-game4-figure](figures/line-game4.svg)
+![line-game4-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/line-game4.svg)
 
 Player $A$ moves first. The two players take turns moving, and each
 player must move his token to an open adjacent space in either
@@ -239,7 +239,7 @@ can be shown to be independent of the value of $n_j$.
 <center>
 <b id="alpha-beta-proof-figure">Figure [alpha-beta-proof-figure]</b> Situation when considering whether to prune node $n_j$.
 </center>
-![alpha-beta-proof-figure](figures/alpha-beta-proof.svg)
+![alpha-beta-proof-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/alpha-beta-proof.svg)
 
 
 **5.15** Prove that the alpha–beta algorithm takes time $O(b^{m/2})$ with optimal
@@ -266,7 +266,7 @@ time it takes to do one disk seek with standard disk hardware?
 <center>
 <b id="trivial-chance-game-figure">Figure [trivial-chance-game-figure]</b> The complete game tree for a trivial game with chance nodes.
 <center>
-![trivial-chance-game-figure](figures/pruning.svg)
+![trivial-chance-game-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/pruning.svg)
 
     
 **5.18** This question considers pruning in games with chance nodes.

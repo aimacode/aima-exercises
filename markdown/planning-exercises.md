@@ -94,7 +94,7 @@ get ${Box}{}_2$ into ${Room}{}_2$.
 <center>
 <b id="shakey-figure">Figure [shakey-figure]</b> Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.
 </center>
-![shakey-figure](figures/shakey2.svg)
+![shakey-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/shakey2.svg)
 
 **10.6** A finite Turing machine has a finite one-dimensional tape of cells, each
 cell containing one of a finite number of symbols. One cell has a read

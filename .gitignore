@@ -4,4 +4,4 @@ latex/*.html
 latex/*.aux
 latex/*.log
 latex/main.tex
-notebooks/*.ipynb_checkpoints
+Jupyter\ notebook/*.ipynb_checkpoints
