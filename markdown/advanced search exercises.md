@@ -17,7 +17,7 @@ Q. Exercise 3.16( will insert a link later ) considers the problem of building r
 
 
 Q. In this exercise, we explore the use of local search methods to solve TSPs of the type defined in Exercise 3.30 ( will insert link later ).
-    a. Implement and test a hill-climbing method to solve TSPs. Compare the results with op- timal solutions obtained from the $$A^∗$$ algorithm with the MST heuristic (Exercise 3.30).
+    a. Implement and test a hill-climbing method to solve TSPs. Compare the results with op- timal solutions obtained from the A* algorithm with the MST heuristic (Exercise 3.30).
     b. Repeat part (a) using a genetic algorithm instead of hill climbing. You may want to
  consult Larran ̃aga et al. (1999) for some suggestions for representations.
  (id=4.10 section=4.1)
