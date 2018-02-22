@@ -79,7 +79,8 @@ is 1 meter.
 <b id="bottle-figure">Figure [bottle-figure]</b> Top view of
 a two-camera vision system observing a bottle with a wall behind it.
 </center>
-![bottle-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/bottle-stereo.svg)
+
+![bottle-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/bottle-stereo.svg)
 
 **24.8** (Courtesy of Pietro Perona.) Figure [bottle-figure](#bottle-figure) shows
 two cameras at X and Y observing a scene. Draw the image seen at each

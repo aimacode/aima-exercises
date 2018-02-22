@@ -144,7 +144,8 @@ regular Kalman filter. The transition model for the discrete state,
 $\textbf{P}(S_{t+1}|S_t)$, can be thought of as a matrix, as in a hidden
 Markov model.
 </center>
-![switching-kf-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/switching-kf.svg)
+
+![switching-kf-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/switching-kf.svg)
 
 **15.12** \[switching-kf-exercise\] Often, we wish to monitor a continuous-state
 system whose behavior switches unpredictably among a set of $k$ distinct

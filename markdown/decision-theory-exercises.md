@@ -143,7 +143,8 @@ Figure [3candy-figure](#3candy-figure).
 <b id="3candy-figure">Figure [3candy-figure]</b> Three proposed Bayes nets for the Surprise Candy 
 problem
 </center>
-![3candy-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/3candy.svg)
+
+![3candy-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/3candy.svg)
 
 **16.7** \[surprise-candy-exercise\] The Surprise Candy Company makes candy in
 two flavors: 70% are strawberry flavor and 30% are anchovy flavor. Each

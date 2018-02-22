@@ -101,7 +101,8 @@ reward for $B$ is always equal and opposite.)
 <b id="grid-mdp-figure">Figure [grid-mdp-figure]</b> (a) $3 \times 3$ world for Exercise [3x3-mdp-exercise](#/). The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise [101x3-mdp-exercise](#/) (omitting 93 identical columns in the middle). 
 The start state has reward 0.
 </center>
-![grid-mdp-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/grid-mdp-figure.svg)
+
+![grid-mdp-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/grid-mdp-figure.svg)
 
 **17.10** \[3x3-mdp-exercise\] Consider the $3 \times 3$ world shown in
 Figure [grid-mdp-figure](#grid-mdp-figure)(a). The transition model is the

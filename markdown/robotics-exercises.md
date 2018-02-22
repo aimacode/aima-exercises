@@ -50,7 +50,7 @@ successful global localization of the robot.
 <b id="figRobot2">Figure [figRobot2]</b> A Robot manipulator in two of its possible configurations.
 </center>
 
-![figRobot2](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/figRobot2.svg)
+![figRobot2](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/figRobot2.svg)
 
 
 
@@ -149,9 +149,9 @@ Figure [FigEx2](#FigEx2).
     
 $\quad\quad\quad\quad\quad\quad$ |  $\quad\quad\quad\quad\quad\quad$ | $\quad\quad\quad\quad\quad\quad$
 :-------------------------:|:-------------------------:|:-------------------------:
-![exerciseRobot1](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseRobot1.svg)  |  ![exerciseRobot3](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseRobot3.svg) |  ![exerciseRobot6](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseRobot6.svg)
+![exerciseRobot1](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseRobot1.svg)  |  ![exerciseRobot3](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseRobot3.svg) |  ![exerciseRobot6](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseRobot6.svg)
 (a) | (b) | (c)
-![exerciseConf2](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseConf2.svg)  |  ![exerciseConf4](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseConf4.svg) |  ![exerciseConf5](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/exerciseConf5.svg)
+![exerciseConf2](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseConf2.svg)  |  ![exerciseConf4](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseConf4.svg) |  ![exerciseConf5](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/exerciseConf5.svg)
 (d) | (e) | (f)
 
 **25.9** Consider a mobile robot moving on a horizontal surface. Suppose that the
@@ -205,7 +205,7 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
 
 <center>
 <b id="FigEx3">Figure [FigEx3]</b> Simplified robot in a maze. See Exercise [robot-exploration-exercise](#/)</center>
-![FigEx3](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/notebooks/figures/robotics-pic7.svg)
+![FigEx3](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/robotics-pic7.svg)
 
 **25.10** \[robot-exploration-exercise\]Consider the simplified robot shown in
 Figure [FigEx3](#FigEx3). Suppose the robot’s Cartesian
