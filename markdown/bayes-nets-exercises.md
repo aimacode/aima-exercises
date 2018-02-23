@@ -36,7 +36,7 @@ ${\textbf{ P}}(X_i{{\,|\,}}{Parents}(X_i))$ from this definition.
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
     Equations ([conditional-probability-equation](#/)) and ([marginalization-equation](#/))
-    (pages [conditional-probability-equation](#/) and [marginalization-equation](#/)) 
+    (pages [conditional-probability-equation](#/) and [marginalization-equation](#/))
     to express the conditional probability $P(z{{\,|\,}}y)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.
 
@@ -48,7 +48,7 @@ ${\textbf{ P}}(X_i{{\,|\,}}{Parents}(X_i))$ from this definition.
     writing out explicitly the terms for the true and false values of
     each summed variable. Assuming that all network parameters satisfy
     the constraint
-    $\sum_{x_i} \theta(x_i{{\,|\,}}{parents}(X_i)){{\,{=}\,}}1$, show
+    $\sum_{x_i} \theta(x_i{{\,|\,}}{parents}(X_i)){{\,=\,}}1$, show
     that the resulting expression reduces to $\theta(z{{\,|\,}}y)$.
 
 4.  Generalize this derivation to show that
@@ -85,7 +85,7 @@ Figure [burglary-figure](#/).
     independent? Prove this from the numerical semantics and from the
     topological semantics.
 
-2.  If we observe ${Alarm}{{\,{=}\,}}{true}$, are ${Burglary}$ and
+2.  If we observe ${Alarm}{{\,=\,}}{true}$, are ${Burglary}$ and
     ${Earthquake}$ independent? Justify your answer by calculating
     whether the probabilities involved satisfy the definition of
     conditional independence.
@@ -106,7 +106,7 @@ observed.
 </center>
 
 ![handedness-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/handedness1.svg)
-    
+
 **14.7** \[handedness-exercise\] Let $H_x$ be a random variable denoting the
 handedness of an individual $x$, with possible values $l$ or $r$. A
 common hypothesis is that left- or right-handedness is inherited by a
@@ -131,8 +131,8 @@ $m$ of a random mutation flipping the handedness.
     terms of $s$ and $m$.
 
 5.  Suppose that
-    $P(G_{{father}}{{\,{=}\,}}l)=P(G_{{mother}}{{\,{=}\,}}l)=q$. In
-    network (a), derive an expression for $P(G_{{child}}{{\,{=}\,}}l)$
+    $P(G_{{father}}{{\,=\,}}l)=P(G_{{mother}}{{\,=\,}}l)=q$. In
+    network (a), derive an expression for $P(G_{{child}}{{\,=\,}}l)$
     in terms of $m$ and $q$ only, by conditioning on its parent nodes.
 
 6.  Under conditions of genetic equilibrium, we expect the distribution
@@ -253,11 +253,11 @@ Figure [telescope-nets-figure](#telescope-nets-figure).
 
 3.  Write out a conditional distribution for
     ${\textbf{P}}(M_1{{\,|\,}}N)$, for the case where
-    $N{{\,{\in}\,}}\{1,2,3\}$ and $M_1{{\,{\in}\,}}\{0,1,2,3,4\}$. Each
+    $N{{\,\in\\,}}\{1,2,3\}$ and $M_1{{\,\in\\,}}\{0,1,2,3,4\}$. Each
     entry in the conditional distribution should be expressed as a
     function of the parameters $e$ and/or $f$.
 
-4.  Suppose $M_1{{\,{=}\,}}1$ and $M_2{{\,{=}\,}}3$. What are the
+4.  Suppose $M_1{{\,=\,}}1$ and $M_2{{\,=\,}}3$. What are the
     *possible* numbers of stars if you assume no prior
     constraint on the values of $N$?
 
@@ -268,12 +268,12 @@ Figure [telescope-nets-figure](#telescope-nets-figure).
 
 **14.15** Consider the network shown in
 Figure [telescope-nets-figure](#telescope-nets-figure)(ii), and assume that the
-two telescopes work identically. $N{{\,{\in}\,}}\{1,2,3\}$ and
-$M_1,M_2{{\,{\in}\,}}\{0,1,2,3,4\}$, with the symbolic CPTs as described
+two telescopes work identically. $N{{\,\in\\,}}\{1,2,3\}$ and
+$M_1,M_2{{\,\in\\,}}\{0,1,2,3,4\}$, with the symbolic CPTs as described
 in Exercise [telescope-exercise](#/). Using the enumeration
 algorithm (Figure [enumeration-algorithm](#/) on
 page [enumeration-algorithm](#/)), calculate the probability distribution
-${\textbf{P}}(N{{\,|\,}}M_1{{\,{=}\,}}2,M_2{{\,{=}\,}}2)$.
+${\textbf{P}}(N{{\,|\,}}M_1{{\,=\,}}2,M_2{{\,=\,}}2)$.
 
 <center>
 <b id="telescope-nets-figure">Figure [telescope-nets-figure]</b> Three possible networks for the telescope problem.
@@ -313,7 +313,7 @@ Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotiva
     Figure [politics-figure](#politics-figure)?
 
 5.  Suppose we want to add the variable
-    $P{{\,{=}\,}}{PresidentialPardon}$ to the network; draw the new
+    $P{{\,=\,}}{PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.
 
 **14.17** Consider the Bayes net shown in Figure [politics-figure](#politics-figure).
@@ -341,7 +341,7 @@ Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotiva
     Figure [politics-figure](#politics-figure)?
 
 5.  Suppose we want to add the variable
-    $P{{\,{=}\,}}{PresidentialPardon}$ to the network; draw the new
+    $P{{\,=\,}}{PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.
 
 **14.18** \[VE-exercise\] Consider the variable elimination algorithm in
@@ -349,7 +349,7 @@ Figure [elimination-ask-algorithm](#/) (page [elimination-ask-algorithm](#/)).
 
 1.  Section [exact-inference-section](#/) applies variable
     elimination to the query
-    $${\textbf{P}}({Burglary}{{\,|\,}}{JohnCalls}{{\,{=}\,}}{true},{MaryCalls}{{\,{=}\,}}{true})\ .$$
+    $${\textbf{P}}({Burglary}{{\,|\,}}{JohnCalls}{{\,=\,}}{true},{MaryCalls}{{\,=\,}}{true})\ .$$
     Perform the calculations indicated and check that the answer
     is correct.
 
@@ -358,9 +358,9 @@ Figure [elimination-ask-algorithm](#/) (page [elimination-ask-algorithm](#/)).
 
 3.  Suppose a network has the form of a *chain*: a sequence
     of Boolean variables $X_1,\ldots, X_n$ where
-    ${Parents}(X_i){{\,{=}\,}}\{X_{i-1}\}$ for $i{{\,{=}\,}}2,\ldots,n$.
+    ${Parents}(X_i){{\,=\,}}\{X_{i-1}\}$ for $i{{\,=\,}}2,\ldots,n$.
     What is the complexity of computing
-    ${\textbf{P}}(X_1{{\,|\,}}X_n{{\,{=}\,}}{true})$ using
+    ${\textbf{P}}(X_1{{\,|\,}}X_n{{\,=\,}}{true})$ using
     enumeration? Using variable elimination?
 
 4.  Prove that the complexity of running variable elimination on a
@@ -386,9 +386,9 @@ you have a random number generator that returns a random number
 uniformly distributed between 0 and 1.
 
 1.  Let $X$ be a discrete variable with
-    $P(X{{\,{=}\,}}x_i){{\,{=}\,}}p_i$ for
-    $i{{\,{\in}\,}}\{1,\ldots,k\}$. The **cumulative distribution** of $X$ gives the probability
-    that $X{{\,{\in}\,}}\{x_1,\ldots,x_j\}$ for each possible $j$. (See
+    $P(X{{\,=\,}}x_i){{\,=\,}}p_i$ for
+    $i{{\,\in\\,}}\{1,\ldots,k\}$. The **cumulative distribution** of $X$ gives the probability
+    that $X{{\,\in\\,}}\{x_1,\ldots,x_j\}$ for each possible $j$. (See
     also Appendix [math-appendix].) Explain how to
     calculate the cumulative distribution in $O(k)$ time and how to
     generate a single sample of $X$ from it. Can the latter be done in
@@ -407,7 +407,7 @@ uniformly distributed between 0 and 1.
     you have to modify the query-answering process?
 
 **14.21** Consider the query
-${\textbf{P}}({Rain}{{\,|\,}}{Sprinkler}{{\,{=}\,}}{true},{WetGrass}{{\,{=}\,}}{true})$
+${\textbf{P}}({Rain}{{\,|\,}}{Sprinkler}{{\,=\,}}{true},{WetGrass}{{\,=\,}}{true})$
 in Figure [rain-clustering-figure](#/)(a)
 (page [rain-clustering-figure](#/)) and how Gibbs sampling can answer it.
 
@@ -442,13 +442,13 @@ distribution for Gibbs sampling methods.
 
 2.  Prove that if each of $q_1$ and $q_2$ has $\pi$ as its stationary
     distribution, then the sequential composition
-    $q {{\,{=}\,}}q_1 \circ q_2$ also has $\pi$ as its
+    $q {{\,=\,}}q_1 \circ q_2$ also has $\pi$ as its
     stationary distribution.
 
 **14.23** \[MH-exercise\] The **Metropolis--Hastings** algorithm is a member of the MCMC family; as such,
 it is designed to generate samples $\textbf{x}$ (eventually) according to target
 probabilities $\pi(\textbf{x})$. (Typically we are interested in sampling from
-$\pi(\textbf{x}){{\,{=}\,}}P(\textbf{x}{{\,|\,}}\textbf{e})$.) Like simulated annealing,
+$\pi(\textbf{x}){{\,=\,}}P(\textbf{x}{{\,|\,}}\textbf{e})$.) Like simulated annealing,
 Metropolis–Hastings operates in two stages. First, it samples a new
 state $\textbf{x'}$ from a **proposal distribution** $q(\textbf{x'}{{\,|\,}}\textbf{x})$, given the current state $\textbf{x}$.
 Then, it probabilistically accepts or rejects $\textbf{x'}$ according to the **acceptance probability**
@@ -485,4 +485,3 @@ on the difference in quality between the two teams.
 
 5.  Investigate the application of MCMC to this problem. How quickly
     does it converge in practice and how well does it scale?
-
