@@ -179,7 +179,7 @@ Table \[logical-equivalence-table\] (page [logical-equivalence-table](#/)).
 
 4.  ${Smoke} \lor {Fire} \lor \lnot {Fire}$
 
-5.  $(({Smoke} \land {Heat}) {\:\;{\Rightarrow}\:\;}{Fire}) 
+5.  $(({Smoke} \land {Heat}) {\:\;{\Rightarrow}\:\;}{Fire})
             {\;\;{\Leftrightarrow}\;\;}(({Smoke} {\:\;{\Rightarrow}\:\;}{Fire}) \lor ({Heat} {\:\;{\Rightarrow}\:\;}{Fire}))$
 
 6.  $({Smoke} {\:\;{\Rightarrow}\:\;}{Fire}) {\:\;{\Rightarrow}\:\;}(({Smoke} \land {Heat}) {\:\;{\Rightarrow}\:\;}{Fire}) $
@@ -199,7 +199,7 @@ Table \[logical-equivalence-table\] (page [logical-equivalence-table](#/)).
 
 4.  ${Smoke} \lor {Fire} \lor \lnot {Fire}$
 
-5.  $(({Smoke} \land {Heat}) {\:\;{\Rightarrow}\:\;}{Fire}) 
+5.  $(({Smoke} \land {Heat}) {\:\;{\Rightarrow}\:\;}{Fire})
             {\;\;{\Leftrightarrow}\;\;}(({Smoke} {\:\;{\Rightarrow}\:\;}{Fire}) \lor ({Heat} {\:\;{\Rightarrow}\:\;}{Fire}))$
 
 6.  ${Big} \lor {Dumb} \lor ({Big} {\:\;{\Rightarrow}\:\;}{Dumb})$
@@ -251,7 +251,7 @@ CSPs.
 
 1.  Draw the constraint graph corresponding to the SAT problem
     $$(\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)$$
-    for the particular case $n{{\,{=}\,}}5$.
+    for the particular case $n{{\,=\,}}5$.
 
 2.  How many solutions are there for this general SAT problem as a
     function of $n$?
@@ -276,7 +276,7 @@ CSPs.
 
 1.  Draw the constraint graph corresponding to the SAT problem
     $$(\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)$$
-    for the particular case $n{{\,{=}\,}}4$.
+    for the particular case $n{{\,=\,}}4$.
 
 2.  How many solutions are there for this general SAT problem as a
     function of $n$?
@@ -491,4 +491,3 @@ complex beliefs such as the disjunction $P_{3,1}\lor P_{2,2}$. Suggest a
 method for overcoming this problem by defining additional proposition
 symbols, and try it out in the wumpus world. Does it improve the
 performance of the agent?
-
