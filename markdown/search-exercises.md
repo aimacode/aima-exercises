@@ -293,8 +293,8 @@ modifies the parent state directly (undoing the modifications as
 needed). Write versions of iterative deepening depth-first search that
 use these functions and compare their performance.
 
-**3.21** \[iterative-lengthening-exercise\]On page [iterative-lengthening-page](#/), 
-we mentioned **iterative lengthening search**, 
+**3.21** \[iterative-lengthening-exercise\]On page [iterative-lengthening-page](#/),
+we mentioned **iterative lengthening search**,
 an iterative analog of uniform cost search. The idea is to use increasing limits on
 path cost. If a node is generated whose path cost exceeds the current
 limit, it is immediately discarded. For each new iteration, the limit is
@@ -508,4 +508,3 @@ on this—see, for example, @Nilsson:1971,
 @Mostow+Prieditis:1989, and @Hansson+al:1992. Test these claims by implementing
 the heuristics and comparing the performance of the resulting
 algorithms.
-
