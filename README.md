@@ -10,7 +10,7 @@ Here is a table of the latex and markdown version of the exercise files for *Art
 
 | **Chapter** | **LaTex File** | **Status** | **Jupyter Notebook**| **Markdown** |
 |:------------|:---------------|:-----------|:-----------------|:-----------------|
-| 1-Introduction| [`intro-exercises.tex`](https://github.com/aimacode/aima-exercises/blob/master/latex/intro-exercises.tex) | Implemented | [`intro-exercises.ipynb`](Jupyter%20notebook/intro-exercises.ipynb)|
+| 1-Introduction| [`intro-exercises.tex`](https://github.com/aimacode/aima-exercises/blob/master/latex/intro-exercises.tex) | Implemented | [`intro-exercises.ipynb`](Jupyter%20notebook/intro-exercises.ipynb)| [`intro-exercises.md`](markdown/intro-exercises.md)|
 | 2-Intelligent-Agents| [`agents-exercises.tex`](https://github.com/aimacode/aima-exercises/blob/master/latex/agents-exercises.tex) | Implemented | [`agents-exercises.ipynb`](Jupyter%20notebook/agents-exercises.ipynb)| [`agents-exercises.md`](markdown/agents-exercises.md)|
 | 3-Solving-Problems-By-Searching| [`search-exercises.tex`](https://github.com/aimacode/aima-exercises/blob/master/latex/search-exercises.tex) | Implemented | [`search-exercises.ipynb`](Jupyter%20notebook/search-exercises.ipynb)| [`search-exercises.md`](markdown/search-exercises.md)|
 | 4-Beyond-Classical-Search| [`advanced-search-exercises.tex`](https://github.com/aimacode/aima-exercises/blob/master/latex/advanced-search-exercises.tex) | Implemented | [`advanced-search-exercises.ipynb`](Jupyter%20notebook/advanced-search-exercises.ipynb)|[`advanced-search-exercises.md`](markdown/advanced-search-exercises.md)|
