@@ -14,7 +14,7 @@ is increased? (Try environments with and without obstacles.)
 guaranteed to reach a terminal state. Show that it is possible for a
 passive ADP agent to learn a transition model for which its policy $\pi$
 is improper even if $\pi$ is proper for the true MDP; with such models,
-the POLICY-EVALUATION step may fail if $\gamma{{\,{=}\,}}1$. Show that this problem cannot
+the POLICY-EVALUATION step may fail if $\gamma{{\,=\,}}1$. Show that this problem cannot
 arise if POLICY-EVALUATION is applied to the learned model only at the end of a trial.
 
 **21.3** \[prioritized-sweeping-exercise\]Starting with the passive ADP agent,
@@ -102,4 +102,3 @@ modeling of human and animal behavior.
 **21.13** Is reinforcement learning an appropriate abstract model for evolution?
 What connection exists, if any, between hardwired reward signals and
 evolutionary fitness?
-
