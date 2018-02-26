@@ -1,4 +1,6 @@
 
+# 23. Natural Language for Communication
+
 **23.1** \[washing-clothes-exercise\]Read the following text once for
 understanding, and remember as much of it as you can. There will be a
 test later.

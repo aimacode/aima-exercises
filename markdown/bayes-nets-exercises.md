@@ -105,7 +105,7 @@ observed.
 <b id="handedness-figure">Figure [handedness-figure]</b> Three possible structures for a Bayesian network describing genetic inheritance of handedness.
 </center>
 
-![handedness-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/handedness1.svg)
+![handedness-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/handedness1.svg)
 
 **14.7** \[handedness-exercise\] Let $H_x$ be a random variable denoting the
 handedness of an individual $x$, with possible values $l$ or $r$. A
@@ -152,7 +152,7 @@ Equation ([markov-blanket-equation](#/))
 <b id="car-starts-figure">Figure [car-starts-figure]</b> A Bayesian network describing some features of a car's electrical system and engine. Each variable is Boolean, and the *true* value indicates that the corresponding aspect of the vehicle is in working order.
 </center>
 
-![car-starts-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/car-starts.svg)
+![car-starts-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/car-starts.svg)
 
 **14.9** Consider the network for car diagnosis shown in
 Figure [car-starts-figure](#car-starts-figure).
@@ -279,14 +279,14 @@ ${\textbf{P}}(N{{\,|\,}}M_1{{\,=\,}}2,M_2{{\,=\,}}2)$.
 <b id="telescope-nets-figure">Figure [telescope-nets-figure]</b> Three possible networks for the telescope problem.
 </center>
 
-![telescope-nets-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/telescope-nets.svg)
+![telescope-nets-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/telescope-nets.svg)
 
 <center>
 <b id="politics-figure">Figure [politics-figure]</b> A simple Bayes net with
 Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotivatedProsecutor}, G= {FoundGuilty}, J = {Jailed}.
 </center>
 
-![politics-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/politics.svg)
+![politics-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/politics.svg)
 
 **14.16** Consider the Bayes net shown in Figure [politics-figure](#politics-figure).
 

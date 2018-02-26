@@ -80,7 +80,7 @@ is 1 meter.
 a two-camera vision system observing a bottle with a wall behind it.
 </center>
 
-![bottle-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/bottle-stereo.svg)
+![bottle-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/bottle-stereo.svg)
 
 **24.8** (Courtesy of Pietro Perona.) Figure [bottle-figure](#bottle-figure) shows
 two cameras at X and Y observing a scene. Draw the image seen at each
