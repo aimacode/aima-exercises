@@ -19,7 +19,7 @@ time sequences.
 2.  Now consider *forecasting* further and further into the
     future, given just the first two umbrella observations. First,
     compute the probability $P(r_{2+k}|u_1,u_2)$ for
-    $k{{\,{=}\,}}1\ldots {20}$ and plot the results. You should see that
+    $k{{\,=\,}}1\ldots {20}$ and plot the results. You should see that
     the probability converges towards a fixed point. Prove that the
     exact value of this fixed point is 0.5.
 
@@ -27,13 +27,13 @@ time sequences.
 the forward–backward algorithm described in
 Figure [forward-backward-algorithm](#/) (page [forward-backward-algorithm](#/)).
 We wish to compute ${\textbf{P}}(\textbf{X}_k|\textbf{e}_{1:t})$ for
-$k{{\,{=}\,}}1,\ldots ,t$. This will be done with a divide-and-conquer
+$k{{\,=\,}}1,\ldots ,t$. This will be done with a divide-and-conquer
 approach.
 
 1.  Suppose, for simplicity, that $t$ is odd, and let the halfway point
-    be $h{{\,{=}\,}}(t+1)/2$. Show that
+    be $h{{\,=\,}}(t+1)/2$. Show that
     ${\textbf{P}}(\textbf{X}_k|\textbf{e}_{1:t})$ can be computed for
-    $k{{\,{=}\,}}1,\ldots ,h$ given just the initial forward message
+    $k{{\,=\,}}1,\ldots ,h$ given just the initial forward message
     $\textbf{f}_{1:0}$, the backward message $\textbf{b}_{h+1:t}$, and the evidence
     $\textbf{e}_{1:h}$.
 
@@ -280,7 +280,7 @@ Figure [battery-persistence-figure](#/)(a)
 (page [battery-persistence-figure](#/)).
 
 1.  Figure [battery-persistence-figure](#/)(b) stops at
-    $t{{\,{=}\,}}{32}$. Describe qualitatively what should happen as
+    $t{{\,=\,}}{32}$. Describe qualitatively what should happen as
     $t\to\infty$ if the sensor continues to read 0.
 
 2.  Suppose that the external temperature affects the battery sensor in
@@ -298,4 +298,3 @@ is ${\textbf{P}}(R_3|u_1,u_2,u_3)$. Show that the space
 complexity of the algorithm—the size of the largest factor—is the same,
 regardless of whether the rain variables are eliminated in forward or
 backward order.
-

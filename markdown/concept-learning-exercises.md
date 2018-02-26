@@ -200,8 +200,8 @@ from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
 But what if the circle is not located at the origin? What if it is an
 ellipse, not a circle? The general equation for a circle (and hence the
 decision boundary) is $(x_1-a)^2 +
-(x_2-b)^2 - r^2{{\,{=}\,}}0$, and the general equation for an ellipse is
-$c(x_1-a)^2 + d(x_2-b)^2 - 1 {{\,{=}\,}}0$.
+(x_2-b)^2 - r^2{{\,=\,}}0$, and the general equation for an ellipse is
+$c(x_1-a)^2 + d(x_2-b)^2 - 1 {{\,=\,}}0$.
 
 1.  Expand out the equation for the circle and show what the weights
     $w_i$ would be for the decision boundary in the four-dimensional
@@ -225,7 +225,7 @@ Suppose that each hypothesis has error $\epsilon$ and that the errors
 made by each hypothesis are independent of the others’. Calculate a
 formula for the error of the ensemble algorithm in terms of $K$
 and $\epsilon$, and evaluate it for the cases where
-$K{{\,{=}\,}}5$, 10, and 20 and $\epsilon{{\,{=}\,}}{0.1}$, 0.2,
+$K{{\,=\,}}5$, 10, and 20 and $\epsilon{{\,=\,}}{0.1}$, 0.2,
 and 0.4. If the independence assumption is removed, is it possible for
 the ensemble error to be *worse* than $\epsilon$?
 
@@ -269,8 +269,8 @@ target output:
 Section [logistic-regression-section](#/)
 (page [logistic-regression-section](#/)) noted that the output of the logistic function
 could be interpreted as a *probability* $p$ assigned by the
-model to the proposition that $f(\textbf{x}){{\,{=}\,}}1$; the probability that
-$f(\textbf{x}){{\,{=}\,}}0$ is therefore $1-p$. Write down the probability $p$
+model to the proposition that $f(\textbf{x}){{\,=\,}}1$; the probability that
+$f(\textbf{x}){{\,=\,}}0$ is therefore $1-p$. Write down the probability $p$
 as a function of $\textbf{x}$ and calculate the derivative of $\log p$ with
 respect to each weight $w_i$. Repeat the process for $\log (1-p)$. These
 calculations give a learning rule for minimizing the
@@ -317,24 +317,23 @@ cross-validation method to find the best number of hidden nodes.
 
 **18.33** \[embedding-separability-exercise\] Consider the problem of separating
 $N$ data points into positive and negative examples using a linear
-separator. Clearly, this can always be done for $N{{\,{=}\,}}2$ points
-on a line of dimension $d{{\,{=}\,}}1$, regardless of how the points are
+separator. Clearly, this can always be done for $N{{\,=\,}}2$ points
+on a line of dimension $d{{\,=\,}}1$, regardless of how the points are
 labeled or where they are located (unless the points are in the same
 place).
 
-1.  Show that it can always be done for $N{{\,{=}\,}}3$ points on a
-    plane of dimension $d{{\,{=}\,}}2$, unless they are collinear.
+1.  Show that it can always be done for $N{{\,=\,}}3$ points on a
+    plane of dimension $d{{\,=\,}}2$, unless they are collinear.
 
-2.  Show that it cannot always be done for $N{{\,{=}\,}}4$ points on a
-    plane of dimension $d{{\,{=}\,}}2$.
+2.  Show that it cannot always be done for $N{{\,=\,}}4$ points on a
+    plane of dimension $d{{\,=\,}}2$.
 
-3.  Show that it can always be done for $N{{\,{=}\,}}4$ points in a
-    space of dimension $d{{\,{=}\,}}3$, unless they are coplanar.
+3.  Show that it can always be done for $N{{\,=\,}}4$ points in a
+    space of dimension $d{{\,=\,}}3$, unless they are coplanar.
 
-4.  Show that it cannot always be done for $N{{\,{=}\,}}5$ points in a
-    space of dimension $d{{\,{=}\,}}3$.
+4.  Show that it cannot always be done for $N{{\,=\,}}5$ points in a
+    space of dimension $d{{\,=\,}}3$.
 
 5.  The ambitious student may wish to prove that $N$ points in general
     position (but not $N+1$) are linearly separable in a space of
     dimension $N-1$.
-

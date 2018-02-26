@@ -32,7 +32,7 @@ surface of the area.
 $P(b)$. Does this knowledge base entail $\forall\,x\ P(x)$? Explain your
 answer in terms of models.
 
-**8.3** Is the sentence ${\exists\,x,y\;\;} x{{\,{=}\,}}y$ valid? Explain.
+**8.3** Is the sentence ${\exists\,x,y\;\;} x{{\,=\,}}y$ valid? Explain.
 
 **8.4** Write down a logical sentence such that every world in which it is true
 contains exactly one object.
@@ -53,11 +53,11 @@ redundant combinations.
 
 **8.7** Which of the following are valid (necessarily true) sentences?
 
-1.  $(\exists x\ x{{\,{=}\,}}x) {\:\;{\Rightarrow}\:\;}({\forall\,y\;\;} \exists z\ y{{\,{=}\,}}z)$.
+1.  $(\exists x\ x{{\,=\,}}x) {\:\;{\Rightarrow}\:\;}({\forall\,y\;\;} \exists z\ y{{\,=\,}}z)$.
 
 2.  ${\forall\,x\;\;} P(x) \lor \lnot P(x)$.
 
-3.  ${\forall\,x\;\;} {Smart}(x) \lor (x{{\,{=}\,}}x)$.
+3.  ${\forall\,x\;\;} {Smart}(x) \lor (x{{\,=\,}}x)$.
 
 **8.8** \[empty-universe-exercise\] Consider a version of the semantics for
 first-order logic in which models with empty domains are allowed. Give
@@ -120,7 +120,7 @@ sentence.
 
     2.  ${\forall\,c,d\;\;}  [{In}(c,{SouthAmerica}) \land {In}(d,{Europe})] {\:\;{\Rightarrow}\:\;}\lnot {Borders}(c,d)]$.
 
-    3.  $\lnot {\forall\,c\;\;}  {In}(c,{SouthAmerica}) {\:\;{\Rightarrow}\:\;}{\exists\,d\;\;} {In}(d,{Europe}) \land 
+    3.  $\lnot {\forall\,c\;\;}  {In}(c,{SouthAmerica}) {\:\;{\Rightarrow}\:\;}{\exists\,d\;\;} {In}(d,{Europe}) \land
         \lnot {Borders}(c,d)$.
 
     4.  ${\forall\,c\;\;} {In}(c,{SouthAmerica}) {\:\;{\Rightarrow}\:\;}{\forall\,d\;\;} {In}(d,{Europe}) {\:\;{\Rightarrow}\:\;}\lnot {Borders}(c,d)$.
@@ -201,27 +201,27 @@ valid but does not express the meaning of the English sentence.
 
 4.  Everyone’s zip code within a state has the same first digit.
 
-    1.  ${\forall\,x,s,z_1\;\;} [{State}(s) \land {LivesIn}(x,s) \land {Zip}(x){{\,{=}\,}}z_1] {\:\;{\Rightarrow}\:\;}{}$\
-        $[{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y){{\,{=}\,}}z_2 {\:\;{\Rightarrow}\:\;}{Digit}(1,z_1) {{\,{=}\,}}{Digit}(1,z_2) ]$.
+    1.  ${\forall\,x,s,z_1\;\;} [{State}(s) \land {LivesIn}(x,s) \land {Zip}(x){{\,=\,}}z_1] {\:\;{\Rightarrow}\:\;}{}$\
+        $[{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y){{\,=\,}}z_2 {\:\;{\Rightarrow}\:\;}{Digit}(1,z_1) {{\,=\,}}{Digit}(1,z_2) ]$.
 
-    2.  ${\forall\,x,s\;\;} [{State}(s) \land {LivesIn}(x,s) \land {\exists\,z_1\;\;} {Zip}(x){{\,{=}\,}}z_1] {\:\;{\Rightarrow}\:\;}{}$\
-        $ [{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y){{\,{=}\,}}z_2 \land {Digit}(1,z_1) {{\,{=}\,}}{Digit}(1,z_2) ]$.
+    2.  ${\forall\,x,s\;\;} [{State}(s) \land {LivesIn}(x,s) \land {\exists\,z_1\;\;} {Zip}(x){{\,=\,}}z_1] {\:\;{\Rightarrow}\:\;}{}$\
+        $ [{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y){{\,=\,}}z_2 \land {Digit}(1,z_1) {{\,=\,}}{Digit}(1,z_2) ]$.
 
-    3.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{Digit}(1,{Zip}(x){{\,{=}\,}}{Zip}(y))$.
+    3.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{Digit}(1,{Zip}(x){{\,=\,}}{Zip}(y))$.
 
     4.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{}$\
-        ${Digit}(1,{Zip}(x)) {{\,{=}\,}}{Digit}(1,{Zip}(y))$.
+        ${Digit}(1,{Zip}(x)) {{\,=\,}}{Digit}(1,{Zip}(y))$.
 
 **8.13** \[language-determination-exercise\] Complete the following exercises
 about logical sentences:
 
 1.  Translate into *good, natural* English (no $x$s or $y$s!):
-    
+
 $$
 {\forall\,x,y,l\;\;} SpeaksLanguage(x, l) \land SpeaksLanguage(y, l)
     \implies Understands(x, y) \land Understands(y,x).
 $$
-    
+
 2.  Explain why this sentence is entailed by the sentence
 
 $$
@@ -239,13 +239,13 @@ $$
 
 **8.14** True or false? Explain.
 
-1.  ${\exists\,x\;\;} x{{\,{=}\,}}{Rumpelstiltskin}$ is a valid
+1.  ${\exists\,x\;\;} x{{\,=\,}}{Rumpelstiltskin}$ is a valid
     (necessarily true) sentence of first-order logic.
 
 2.  Every existentially quantified sentence in first-order logic is true
     in any model that contains exactly one object.
 
-3.  ${\forall\,x,y\;\;} x{{\,{=}\,}}y$is satisfiable.
+3.  ${\forall\,x,y\;\;} x{{\,=\,}}y$is satisfiable.
 
 **8.15** \[Peano-completion-exercise\] Rewrite the first two Peano axioms in
 Section [Peano-section](#/) as a single axiom that defines
@@ -294,7 +294,7 @@ your sentence follow from the Peano axioms? If so, explain why; if not,
 give a model in which the axioms are true and your sentence is false.
 
 **8.19** Explain what is wrong with the following proposed definition of the set
-membership predicate ${{\,{\in}\,}}$
+membership predicate ${{\,\in\,}}$
 
 $$
 {\forall\,x,s\;\;} x \in \{x|s\}
@@ -348,11 +348,11 @@ biconditionals.
 
 **8.25** In Chapter [csp-chapter](#/), we used equality to indicate
 the relation between a variable and its value. For instance, we wrote
-${WA}{{\,{=}\,}}{red}$ to mean that Western Australia is colored
+${WA}{{\,=\,}}{red}$ to mean that Western Australia is colored
 red. Representing this in first-order logic, we must write more
-verbosely ${ColorOf}({WA}){{\,{=}\,}}{red}$. What incorrect
+verbosely ${ColorOf}({WA}){{\,=\,}}{red}$. What incorrect
 inference could be drawn if we wrote sentences such as
-${WA}{{\,{=}\,}}{red}$ directly as logical assertions?
+${WA}{{\,=\,}}{red}$ directly as logical assertions?
 
 **8.26** Write in first-order logic the assertion that every key and at least one
 of every pair of socks will eventually be lost forever, using only the
@@ -392,7 +392,7 @@ explain why not and correct it.
     in Paris.
 
 $$
-\forall {x} [{Apt}(x) \land {In}(x,{London})] 
+\forall {x} [{Apt}(x) \land {In}(x,{London})]
 \implies \exists {y} ([{Apt}(y) \land {In}(y,{Paris})] \implies ({Rent}(x) < {Rent}(y)))
 $$
 
@@ -406,7 +406,7 @@ $$
     must be in Moscow.
 
 $$
-\forall{x} {Apt}(x) \land [\forall{y} {Apt}(y) \land {In}(y,{London}) \land ({Rent}(x) > {Rent}(y))] \implies 
+\forall{x} {Apt}(x) \land [\forall{y} {Apt}(y) \land {In}(y,{London}) \land ({Rent}(x) > {Rent}(y))] \implies
 {In}(x,{Moscow}).
 $$
 
@@ -565,4 +565,3 @@ Express the following statements in first-order logic:
 
 12. Joe owns a copy of every album on which all the songs are sung by
     Billie Holiday.
-

@@ -188,7 +188,7 @@ riddle is difficult?
 U.S. census data listing the age, city of residence, date of birth, and
 mother of every person, using social security numbers as identifying
 constants for each person. Thus, George’s age is given by
-${Age}(\mbox{{443}-{65}-{1282}}, {56})$. Which of the following
+${Age}(\mbox{{443}}-{65}-{1282}}, {56})$. Which of the following
 indexing schemes S1–S5 enable an efficient solution for which of the
 queries Q1–Q4 (assuming normal backward chaining)?
 
@@ -311,7 +311,7 @@ search control?
 **9.23** Suppose a knowledge base contains just the following first-order Horn
 clauses:
 
-$$ 
+$$
 Ancestor(Mother(x),x)
 $$
 $$
@@ -339,7 +339,7 @@ sentences already in the KB after iteration $j-1$.
     $\lnot Ancestor(John,John)$ from the original knowledge base?
     Explain how, or why not.
 
-3.  Suppose we add the assertion that $\lnot(Mother(x){{\,{=}\,}}x)$ and
+3.  Suppose we add the assertion that $\lnot(Mother(x){{\,=\,}}x)$ and
     augment the resolution algorithm with inference rules for equality.
     Now what is the answer to (b)?
 
@@ -426,4 +426,3 @@ containing only definite clauses.
 
 **9.31** We said in this chapter that resolution cannot be used to generate all
 logical consequences of a set of sentences. Can any algorithm do this?
-

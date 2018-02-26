@@ -125,20 +125,20 @@ by a straight line to the nearest point $Y$ such that $X$ is not already
 connected to $Y$ and the line crosses no other line; repeat the previous
 step until no more connections are possible. The points represent
 regions on the map and the lines connect neighbors. Now try to find
-$k$-colorings of each map, for both $k{{\,{=}\,}}3$ and
-$k {{\,{=}\,}}4$, using min-conflicts, backtracking, backtracking with
+$k$-colorings of each map, for both $k{{\,=\,}}3$ and
+$k {{\,=\,}}4$, using min-conflicts, backtracking, backtracking with
 forward checking, and backtracking with MAC. Construct a table of
 average run times for each algorithm for values of $n$ up to the largest
 you can manage. Comment on your results.
 
 **6.11** Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
-$\{{WA}{{\,{=}\,}}{green},V{{\,{=}\,}}{red}\}$ for the problem
+$\{{WA}}{{\,=\,}}{green},V{{\,=\,}}{red}\}$ for the problem
 shown in Figure [australia-figure](#/).
 
 **6.12** Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
-$\{{WA}{{\,{=}\,}}{red},V{{\,{=}\,}}{blue}\}$ for the problem
+$\{{WA}}{{\,=\,}}{red},V{{\,=\,}}{blue}\}$ for the problem
 shown in Figure [australia-figure](#/).
 
 **6.13** What is the worst-case complexity of running AC-3 on a tree-structured
@@ -199,6 +199,5 @@ squares missing, a $10\times 1$ row of squares, etc.).
 4.  Describe exactly the set of solvable instances that have a
     tree-structured constraint graph.
 
-<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles. 
+<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
 @Littman+al:1999 tackle the harder problem of solving them.</div>
-

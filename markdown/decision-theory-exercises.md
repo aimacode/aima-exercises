@@ -124,7 +124,7 @@ Figure [3candy-figure](#3candy-figure).
 2.  Which network is the best representation for this problem?
 
 3.  Does network (i) assert that
-    ${\textbf{P}}(Wrapper|Shape){{\,{=}\,}}{\textbf{P}}(Wrapper)$?
+    ${\textbf{P}}(Wrapper|Shape){{\,=\,}}{\textbf{P}}(Wrapper)$?
 
 4.  What is the probability that your candy has a red wrapper?
 
@@ -140,7 +140,7 @@ Figure [3candy-figure](#3candy-figure).
     candy box now worth more than less than, or the same as before?
 
 <center>
-<b id="3candy-figure">Figure [3candy-figure]</b> Three proposed Bayes nets for the Surprise Candy 
+<b id="3candy-figure">Figure [3candy-figure]</b> Three proposed Bayes nets for the Surprise Candy
 problem
 </center>
 
@@ -166,7 +166,7 @@ Figure [3candy-figure](#3candy-figure).
 2.  Which network is the best representation for this problem?
 
 3.  Does network (i) assert that
-    ${\textbf{P}}(Wrapper|Shape){{\,{=}\,}}{\textbf{P}}(Wrapper)$?
+    ${\textbf{P}}(Wrapper|Shape){{\,=\,}}{\textbf{P}}(Wrapper)$?
 
 4.  What is the probability that your candy has a red wrapper?
 
@@ -355,7 +355,7 @@ estimate is that $c_1$ has a 70% chance of being in good shape.
 3.  Tests can be described by the probability that the car will pass or
     fail the test given that the car is in good or bad shape. We have
     the following information:
-    
+
     $P({pass}(c_1,t_1) | q^+(c_1)) = {0.8}$
 
     $P({pass}(c_1,t_1) | q^-(c_1)) = {0.35}$
@@ -381,7 +381,7 @@ information* in Section [VPI-section](#/).
 3.  A function $f$ on sets is **submodular** if, for any element $x$ and any sets $A$
     and $B$ such that $A\subseteq B$, adding $x$ to $A$ gives a greater
     increase in $f$ than adding $x$ to $B$:
-    $$A\subseteq B {\:\;{\Rightarrow}\:\;}(f(A{{\,{\cup}\,}}\{x\}) - f(A)) \geq (f(B{{\,{\cup}\,}}\{x\}) - f(B))\ .$$
+    $$A\subseteq B {\:\;{\Rightarrow}\:\;}(f(A{{\,{\cup}}\,}}\{x\}) - f(A)) \geq (f(B{{\,{\cup}}\,}}\{x\}) - f(B))\ .$$
     Submodularity captures the intuitive notion of *diminishing
     returns*. Is the value of information, viewed as a function
     $f$ on sets of possible observations, submodular? Prove this or find
@@ -392,4 +392,3 @@ The answers to Exercise [almanac-game](#/) (where M stands
 for million): First set: 3M, 1.6M, 1541, 41M, 4768, 221, 649M, 295M,
 132, 25,546. Second set: 1917, 155M, 4,500M, 11M, 120,000, 1.1M, 1636,
 19,340, 1,595, 41,710.
-

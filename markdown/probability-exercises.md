@@ -18,13 +18,13 @@ counterexample.
     $P(a {{\,|\,}}b, c) = P(a {{\,|\,}}c)$
 
 **13.4** Would it be rational for an agent to hold the three beliefs
-$P(A) {{\,{=}\,}}{0.4}$, $P(B) {{\,{=}\,}}{0.3}$, and
-$P(A \lor B) {{\,{=}\,}}{0.5}$? If so, what range of probabilities would
+$P(A) {{\,=\,}}{0.4}$, $P(B) {{\,=\,}}{0.3}$, and
+$P(A \lor B) {{\,=\,}}{0.5}$? If so, what range of probabilities would
 be rational for the agent to hold for $A \land B$? Make up a table like
 the one in Figure [de-finetti-table](#/), and show how it
 supports your argument about rationality. Then draw another version of
 the table where $P(A \lor B)
-{{\,{=}\,}}{0.7}$. Explain why it is rational to have this probability,
+{{\,=\,}}{0.7}$. Explain why it is rational to have this probability,
 even though the table shows one case that is a loss and three that just
 break even. (*Hint:* what is Agent 1 committed to about the
 probability of each of the four cases, especially the case that is a
@@ -168,7 +168,7 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon{{\,{=}\,}}0.001$, $\delta{{\,{=}\,}}0.01$.
+$\epsilon{{\,=\,}}0.001$, $\delta{{\,=\,}}0.01$.
 
 **13.14** We wish to transmit an $n$-bit message to a receiving agent. The bits in
 the message are independently corrupted (flipped) during transmission
@@ -178,7 +178,7 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon{{\,{=}\,}}0.002$, $\delta{{\,{=}\,}}0.01$.
+$\epsilon{{\,=\,}}0.002$, $\delta{{\,=\,}}0.01$.
 
 **13.15** \[independence-exercise\]Show that the three forms of independence in
 Equation ([independence-equation](#/)) are equivalent.
@@ -345,4 +345,3 @@ performance of a logical versus a probabilistic agent in this case?
 the hybrid agent in
 Figure [hybrid-wumpus-agent-algorithm](#/) and the
 probabilistic inference procedure outlined in this chapter.
-
