@@ -287,7 +287,7 @@ brothers-in-law, Zara’s great-grandparents, and Eugenie’s ancestors.
 <b id="family1-figure">Figure [family1-figure]</b> A typical family tree. The symbol $\bowtie$ connects spouses and arrows point to children.
 </center>
 
-![family1-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/family1.svg)
+![family1-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/family1.svg)
 
 **8.18** Write down a sentence asserting that + is a commutative function. Does
 your sentence follow from the Peano axioms? If so, explain why; if not,
@@ -492,7 +492,7 @@ to verify that it is in fact correct.
 <b id="adder-figure">Figure [adder-figure]</b> A four-bit adder. Each ${Ad}_i$ is a one-bit adder, as in figure [adder-figure](#adder-figure) on page [adder-figure](#/)
 </center>
 
-![adder-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/4bit-adder.svg)
+![adder-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/4bit-adder.svg)
 
 **8.34** The circuit representation in the chapter is more detailed than
 necessary if we care only about circuit functionality. A simpler

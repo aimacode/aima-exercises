@@ -102,7 +102,7 @@ reward for $B$ is always equal and opposite.)
 The start state has reward 0.
 </center>
 
-![grid-mdp-figure](https://cdn.rawgit.com/Nalinc/aima-exercises/notebooks/Jupyter%20notebook/figures/grid-mdp-figure.svg)
+![grid-mdp-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/grid-mdp-figure.svg)
 
 **17.10** \[3x3-mdp-exercise\] Consider the $3 \times 3$ world shown in
 Figure [grid-mdp-figure](#grid-mdp-figure)(a). The transition model is the
