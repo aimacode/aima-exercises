@@ -1,0 +1,204 @@
+\noindent These exercises are intended to stimulate discussion, and 
+some might be set as term projects.  Alternatively, preliminary 
+attempts can be made now, and these attempts can be reviewed after 
+the completion of the book.
+
+%%%% 1.1: What Is AI? (4 exercises, 0 labelled)
+%%%% ==========================================
+
+\begin{exercise}
+    Define in your own words: (a) intelligence, (b) artificial 
+    intelligence, (c) agent, (d) rationality, (e) logical reasoning.
+\end{exercise} 
+% id=1.0 section=1.1
+
+\begin{uexercise}\libex
+Read Turing's original paper on AI \cite{Turing:1950}. In the paper,
+he discusses several objections to his proposed enterprise
+and his test\index{Turing Test} for intelligence. Which objections
+still carry weight? Are his refutations valid? Can you think of
+new objections arising from developments since he wrote the paper? In
+the paper, he predicts that, by the year 2000, a computer will have a
+30\% chance of passing a five-minute Turing Test with an unskilled
+interrogator. What chance do you think a computer would have today?
+In another 50 years?
+\end{uexercise} 
+% id=1.1 section=1.1.1
+
+\begin{iexercise}\libex
+    Every year the Loebner Prize\index{Loebner Prize} is awarded to the 
+    program that comes 
+    closest to passing a version of the Turing Test. Research and 
+    report on the latest winner of the Loebner prize.  What techniques 
+    does it use? How does it advance the state of the art in AI?
+\end{iexercise} 
+% id=1.2 section=1.1.1
+
+\begin{exercise}
+    Are reflex actions (such as flinching from a hot stove) rational? Are they intelligent?%
+\end{exercise}%
+% id=1.12 section=1.1.4
+
+
+%%%% 1.2: The Foundations of Artificial Intelligence (12 exercises, 0 labelled)
+%%%% ==========================================================================
+
+\begin{iexercise}
+There are well-known classes of problems that are
+intractably\index{intractability} difficult for computers, and other
+classes that are provably undecidable\index{undecidability}.
+Does this mean that AI is impossible?
+\end{iexercise} 
+% id=1.3 section=1.2.2
+
+\begin{uexercise}
+Suppose we extend Evans's\nindex{Evans, T.~G.} \system{Analogy}
+program so that it can score 200 on a standard 
+IQ test\index{IQ test}. Would we then have a program more
+intelligent than a human?
+Explain.
+\end{uexercise} 
+% id=1.4 section=1.2.5
+
+\begin{exercise}
+The neural structure of the sea slug {\em Aplysia\/} has been widely studied 
+(first by Nobel Laureate Eric Kandel) because it has only about 20,000
+neurons, most of them large and easily manipulated.  
+Assuming that the cycle
+time for an {\em Aplysia\/} neuron is roughly the same as for a human neuron, how
+does the computational power, in terms of memory updates per second, 
+compare with the high-end computer described in \figref{computer-brain-table}?
+\end{exercise} 
+% id=1.5 section=1.2.4
+
+\begin{exercise}
+    How could introspection---reporting on one's inner thoughts---be 
+    inaccurate?   Could I be wrong about what I'm thinking?  Discuss.
+\end{exercise} 
+% id=1.6 section=1.2.5
+
+\begin{uexercise}
+To what extent are the following computer systems instances of artificial
+intelligence:
+\begin{itemize}
+\item Supermarket bar code scanners.
+\item Web search engines.
+\item Voice-activated telephone menus.
+\item Internet routing algorithms that respond dynamically to the state
+of the network.
+\end{itemize}
+\end{uexercise} 
+% id=1.7 section=1.2.6
+
+\begin{iexercise}
+To what extent are the following computer systems instances of artificial
+intelligence:
+\begin{itemize}
+\item Supermarket bar code scanners.
+\item Voice-activated telephone menus.
+\item Spelling and grammar correction features in Microsoft Word.
+\item Internet routing algorithms that respond dynamically to the state
+of the network.
+\end{itemize}
+\end{iexercise} 
+% id=1.7 section=1.2.6
+
+\begin{exercise}
+Many of the computational models of cognitive activities that have been 
+proposed involve quite complex mathematical operations, such as convolving
+an image with a Gaussian or finding a minimum of the entropy function.  
+Most humans (and certainly all animals) never learn this kind of mathematics
+at all, almost no one learns it before college, and almost no one can compute
+the convolution of a function with a Gaussian in their head.  What sense does 
+it make to say that the ``vision system'' is doing this kind of mathematics,
+whereas the actual person has no idea how to do it?
+\end{exercise} 
+% id=1.9 section=1.2.2
+
+\begin{iexercise}
+Some authors have claimed that perception\index{perception} and motor
+skills are the most important part of intelligence, and that
+``higher level'' capacities are necessarily parasitic---simple add-ons
+to these underlying facilities.  Certainly, most of
+evolution\index{evolution} and a large part of the brain have been
+devoted to perception and motor skills, whereas AI has found tasks
+such as game playing and logical inference to be easier, in many ways,
+than perceiving and acting in the real world. Do you think that AI's
+traditional focus on higher-level cognitive abilities is misplaced?
+\end{iexercise} 
+% id=1.10 section=1.2.1
+
+\begin{uexercise}
+    Why would evolution tend to result in systems that act rationally?
+    What goals are such systems designed to achieve?
+\end{uexercise} 
+% id=1.11 section=1.2
+
+\begin{exercise}
+Is AI a science, or is it engineering? Or neither or both? Explain.
+\end{exercise} 
+% id=1.13 section=1.2
+
+\begin{exercise}
+``Surely computers cannot be intelligent---they can do only what their
+programmers tell them.'' Is the latter statement true, and does it imply the
+former?
+\end{exercise} 
+% id=1.14 section=1.2.1
+
+\begin{exercise}
+``Surely animals cannot be intelligent---they can do only what their
+genes tell them.''  Is the latter statement true, and does it imply the
+former?
+\end{exercise} 
+% id=1.15 section=1.2.1
+
+\begin{exercise}
+``Surely animals, humans, and computers cannot be intelligent---they 
+can do only what their constituent atoms are told to do by the laws 
+of physics.''  Is the latter statement 
+true, and does it imply the former?
+\end{exercise} 
+% id=1.16 section=1.2.1
+
+
+%%%% 1.4: The State of the Art (2 exercises, 0 labelled)
+%%%% ===================================================
+
+\begin{exercise}\libex
+Examine the AI literature to discover whether  the following
+tasks can currently be solved by computers:
+\begin{enumerate}
+\item Playing a decent game of table tennis (Ping-Pong)\index{table tennis}\index{ping-pong}.
+\item Driving in the center of Cairo, Egypt.
+\item Driving in Victorville, California.
+\item Buying a week's worth of groceries at the market.
+\item Buying a week's worth of groceries on the Web.
+\item Playing a decent game of bridge\index{bridge (card game)} at a competitive level.
+\item Discovering and proving new mathematical theorems\index{theorem proving!mathematical}.
+\item Writing an intentionally funny story.
+\item Giving competent legal\index{legal reasoning} advice in a specialized area of law.
+\item Translating\index{machine translation} spoken English\index{English} into spoken Swedish\index{Swedish} in real time.
+\item Performing a complex surgical operation.
+\end{enumerate}
+For the currently infeasible tasks, try to find out what the
+difficulties are and predict  when, if ever, they will be overcome.
+\end{exercise} 
+% id=1.8 section=1.4
+
+\begin{exercise}
+Various subfields of AI have held contests by defining a standard task
+and inviting researchers to do their best.  Examples include the DARPA
+Grand Challenge for robotic cars, the International Planning
+Competition, the Robocup robotic soccer league, the TREC information
+retrieval event, and contests in machine translation and speech
+recognition. Investigate five of these contests and describe the
+progress made over the years. To what degree have the contests
+advanced the state of the art in AI?  To what degree do they hurt the field
+by drawing energy away from new ideas?
+\end{exercise} 
+% id=1.17 section=1.4
+
+
+
+

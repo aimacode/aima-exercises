@@ -1,0 +1,414 @@
+\setlength{\medskipamount}{1.6\medskipamount}%%%%% Mona's suggestion
+
+%%%% 10.1: Definition of Classical Planning (6 exercises, 1 labelled)
+%%%% ================================================================
+
+\begin{iexercise} % mt-s02
+Consider a robot whose operation is described by the following PDDL operators:
+\begin{formula}
+Op(\Act{Go(x,y)},\Pre{At(Robot,x)},\Eff{\lnot At(Robot,x) \land At(Robot,y)})\\
+Op(\Act{Pick(o)},\Pre{At(Robot,x)\land At(o,x)},\Eff{\lnot At(o,x) \land Holding(o)})\\
+Op(\Act{Drop(o)},\Pre{At(Robot,x)\land Holding(o)},\Eff{At(o,x) \land \lnot Holding(o)})
+\end{formula}
+\begin{enumerate}
+\item The operators allow the robot to hold more than one object.
+Show how to modify them with an $EmptyHand$ predicate for a robot that can hold only one object.
+\item Assuming that these are the only actions in the world, write a successor-state axiom for $EmptyHand$.
+%\item Suppose the initial state has 
+%\[ At(Apple,Room_1) \land At(Orange,Room_1) \land At(Robot,Room_1) \]
+%and the goal is 
+%\[ At(Apple,Room_2) \land At(Orange,Room_2) \]
+%Consider the operation of the POP algorithm on this problem, for the STRIPS operators
+%as modified in part (a). Diagram the partial plan that has been constructed at the point where the first
+%threat to a causal link appears. Explain what the threat is and how it
+%can be resolved (if at all).
+\end{enumerate}
+\end{iexercise} 
+% id=extras-28-oct.12 section=10.1
+
+\begin{exercise}
+Describe the differences and similarities between problem solving and planning.
+\end{exercise} 
+% id=10.0 section=10.1
+
+\begin{exercise}[strips-airport-exercise]%
+Given the action schemas and initial state from \figref{airport-pddl-algorithm}, 
+what are all the applicable concrete instances of \(\J{Fly}(p,\J{from},\J{to})\)
+in the state described by
+\begin{formula}\zt 
+ \J{At}(P_{1}, \JFK) \land \J{At}(P_{2}, \SFO) \land \J{Plane}(P_1) \land \J{Plane}(P_2) \\\zt 
+ \qquad {} \land \J{Airport}(\JFK) \land \J{Airport}(\SFO)\ ?
+\end{formula}
+\end{exercise} 
+% id=10.1 section=10.1.1
+
+\begin{exercise}
+The monkey-and-bananas problem\index{problem!monkey and bananas}
+\index{monkey and bananas} is faced by a monkey in a
+laboratory with some bananas hanging out of reach from the ceiling. A
+box is available that will enable the monkey to reach the bananas if
+he climbs on it. Initially, the monkey is at \(A\), the bananas at \(B\),
+and the box at \(C\). The monkey and box have height \(\J{Low}\), but if the
+monkey climbs onto the box he will have height \(\J{High}\), the same as the
+bananas.  The actions available to the monkey include \(\J{Go}\) from one
+place to another, \(\J{Push}\) an object from one place to another,
+\(\J{ClimbUp}\) onto or \(\J{ClimbDown}\) from an object, and \(\J{Grasp}\) or \(\J{Ungrasp}\)
+an object. The  result of a \(\J{Grasp}\) is that the monkey holds the object if the
+monkey and object are in the same place at the same height.
+\begin{enumerate}
+\item Write down the initial state description.
+
+\item Write the six action schemas.
+
+\item Suppose the monkey wants to fool the scientists, who are off to tea,
+by grabbing the bananas, but leaving the box in its original
+place. Write this as a general goal (i.e., not assuming that the box is
+necessarily at C) in the language of situation calculus. Can this goal be
+solved by a classical planning system?
+
+\item Your schema for pushing is probably incorrect, because if the object
+is too heavy, its position will remain the same when the \(\J{Push}\) 
+schema is applied.  Fix your action schema to account for 
+heavy objects.
+\end{enumerate}
+\end{exercise} 
+% id=10.2 section=10.1
+
+\begin{exercise}
+The original \system{Strips} planner was designed to control 
+Shakey\index{Shakey} the robot.  \figref{shakey-figure} shows a 
+version of Shakey's world consisting of four rooms lined up along a corridor, 
+where each room has a door and a light switch.
+%
+\begin{figure}[tbp]
+\figboxnew{figures/shakey2.eps}
+\caption{Shakey's world. Shakey can move between landmarks within a room, can
+pass through the door between rooms, can climb climbable objects and push 
+pushable objects, and can flip light switches.}
+\label{shakey-figure}
+\end{figure}
+%
+The actions in Shakey's world include moving from place to place,
+pushing movable objects (such as boxes), climbing onto and down from rigid
+objects (such as boxes), and turning light switches on and
+off. The robot itself could not climb on a box or toggle a switch, but the
+planner was capable of finding and printing out
+plans that were beyond the robot's abilities.  Shakey's six actions 
+are the following:
+\begin{itemize}
+\item \(\J{Go}(x,y,r)\), which requires that Shakey be \(\J{At}\) \(x\) and that \(x\) and
+\(y\) are locations \(\J{In}\) the same room \(r\).  By convention a door between two
+rooms is in both of them.
+
+\item Push a box \(b\) from location \(x\) to location \(y\) within the same room: \(\J{Push}(b,x,y,r)\).
+You will need the predicate \(\J{Box}\) and constants for the boxes.
+
+\item Climb onto a box from position \(x\): \(\J{ClimbUp}(x, b)\); climb down from a box
+to position \(x\): \(\J{ClimbDown}(b, x)\).
+We will need the predicate \(\J{On}\) and the constant \(\J{Floor}\).
+
+\item Turn a light switch on or off: \(\J{TurnOn}(s,b)\);  \(\J{TurnOff}(s,b)\). 
+To turn a light on or off, Shakey must be on top of a box 
+at the light switch's location.
+\end{itemize}
+%
+Write PDDL sentences for Shakey's six actions and the initial state from 
+\figref{shakey-figure}. Construct a plan for
+Shakey to get \(\J{Box}{}_2\) into \(\J{Room}{}_2\).
+\end{exercise} 
+% id=10.9 section=10.1
+
+\begin{uexercise}
+A finite Turing machine has a
+finite one-dimensional tape of cells, each cell containing one of a
+finite number of symbols.  One cell has a read and write head above
+it. There is a finite set of states the machine can be in, one of
+which is the accept state.  At each time step, depending on the symbol
+on the cell under the head and the machine's current state, there are
+a set of actions we can choose from. Each action involves writing a
+symbol to the cell under the head, transitioning the machine to a
+state, and optionally moving the head left or right. The mapping that
+determines which actions are allowed is the Turing machine's program.
+Your goal is to control the machine into the accept state.
+
+Represent the Turing machine acceptance problem as a planning problem.
+If you can do this, it demonstrates that determining whether a
+planning problem has a solution is at least as hard as the Turing
+acceptance problem, which is PSPACE-hard.
+\end{uexercise} 
+% id=10.16 section=10.1.4
+
+
+%%%% 10.2: Algorithms for Planning as State-Space Search (3 exercises, 2 labelled)
+%%%% =============================================================================
+
+\begin{exercise}[negative-effects-exercise]%
+Explain why dropping negative effects\index{effect!negative} from
+every action schema results in a relaxed
+problem, provided that preconditions and goals contain only positive literals.
+\end{exercise} 
+% id=10.3 section=10.2.3
+
+\begin{exercise}[sussman-anomaly-exercise]%
+\figref{sussman-anomaly-figure} (\pgref{sussman-anomaly-figure}) shows a blocks-world  problem
+that is known as the \newterm{Sussman anomaly}\ntindex{Sussman anomaly}. 
+The problem was considered
+anomalous because the noninterleaved planners
+of the early 1970s could not solve it.  Write a definition of the
+problem and solve it, either by hand or with a
+planning program.  A noninterleaved planner is a planner that, when
+given two subgoals \(G_{1}\) and \(G_{2}\), produces either a plan for \(G_{1}\) 
+concatenated with a plan for \(G_{2}\), or vice versa.  Can a 
+noninterleaved planner\ntindex{planning!non-interleaved} solve this 
+problem? How, or why not?
+\end{exercise} 
+% id=10.8 section=10.2
+
+\begin{exercise}
+Prove that backward search with PDDL problems is complete.
+\end{exercise} 
+% id=10.14 section=10.2.2
+
+
+%%%% 10.3: Planning Graphs (4 exercises, 1 labelled)
+%%%% ===============================================
+
+\begin{exercise}
+Construct levels 0, 1, and 2 of the planning graph for the
+problem in \figref{airport-pddl-algorithm}.
+\end{exercise} 
+% id=10.5 section=10.3
+
+\begin{exercise}[graphplan-proof-exercise]
+Prove the following assertions about planning graphs:
+\begin{enumerate}
+\item A literal that does not appear in the final level of the graph cannot
+be achieved.
+\item The level cost of a literal in a serial graph is no greater than
+the actual cost of an optimal plan for achieving it.
+\end{enumerate}
+\end{exercise} 
+% id=10.6 section=10.3
+
+\begin{iexercise}
+    We saw that planning graphs can handle only propositional 
+    actions.  What if we want to use planning graphs for a problem 
+    with variables in the goal, such as \(\J{At}(P_{1}, x) 
+    \land \J{At}(P_{2}, x)\), where \(x\) is assumed to be bound by an existential quantifier
+    that ranges over a finite domain of 
+    locations?  How could you encode such a problem to work with 
+    planning graphs?  
+\end{iexercise} 
+% id=10.10 section=10.3
+
+\begin{exercise}
+The set-level heuristic (see \pgref{set-level-page}) uses a planning
+graph to estimate the cost of achieving a conjunctive goal from the
+current state.  What relaxed problem is the set-level heuristic the solution to?
+\end{exercise} 
+% id=10.15 section=10.3.1
+
+
+%%%% 10.4: Other Classical Planning Approaches (5 exercises, 3 labelled)
+%%%% ===================================================================
+
+\begin{uexercise}
+Examine the definition of \term{bidirectional search} in \chapref{search-chapter}.
+\begin{enumerate}
+\item Would bidirectional state-space search be a good idea for planning? 
+\item What about bidirectional search in the space of partial-order plans?
+\item Devise a version of partial-order planning in which
+an action can be added to a plan if its preconditions
+can be achieved by the effects of actions already in the plan.
+Explain how to deal with conflicts and ordering constraints.
+Is the algorithm essentially identical to forward state-space search?
+\end{enumerate}
+\end{uexercise} 
+% id=10.4 section=10.4
+
+\begin{exercise}
+We contrasted forward and backward state-space searchers with
+partial-order planners, saying that the latter is a plan-space searcher.  
+Explain how forward and backward state-space search can also be considered  
+plan-space searchers, and say what the plan refinement operators are.
+\end{exercise} 
+% id=10.7 section=10.4
+
+\begin{exercise}[satplan-preconditions-exercise]
+Up to now we have assumed that the plans we create always make sure that an action's preconditions are satisfied.
+Let us now investigate what propositional successor-state
+axioms such as \(\J{HaveArrow}^{t+1} \lequiv {}\) \((\J{HaveArrow}^t
+\land \lnot \J{Shoot}^t)\) have to say about actions whose
+preconditions are not satisfied.
+\begin{enumerate}
+\item Show that the axioms predict that nothing will happen when an
+action is executed in a state where its preconditions are not satisfied.
+\item Consider a plan \(p\) that contains the actions required to achieve a goal but also 
+includes illegal actions. Is it the case that
+\[
+\mbox{{\em initial state}}\land \mbox{{\em successor-state axioms}} \land
+p \entails \mbox{{\em goal}\ ?}
+\]
+\item With first-order successor-state axioms in situation calculus, is it possible to 
+prove that a plan containing illegal actions will achieve the goal?
+\end{enumerate}
+\end{exercise} 
+% id=10.11 section=10.4.1
+
+\begin{exercise}[strips-translation-exercise]%
+Consider how to translate a set of action
+schemas into the successor-state axioms of situation calculus.
+\begin{enumerate}
+\item Consider the schema for \(\J{Fly}(p,\J{from},\J{to})\). Write a logical definition
+for the predicate \(\J{Poss}(\J{Fly}(p,\J{from},\J{to}),s)\), which is true if
+the preconditions for \(\J{Fly}(p,\J{from},\J{to})\) are satisfied in situation \(s\).
+\item Next, assuming that  \(\J{Fly}(p,\J{from},\J{to})\) is the only action schema
+available to the agent, write down a successor-state axiom 
+for \(\J{At}(p,x,s)\) that captures the same information as the action schema.
+\item Now suppose there is an additional method of travel:
+\(\J{Teleport}(p,\J{from},\J{to})\).
+It has the additional precondition \(\lnot \J{Warped}(p)\) and the additional effect \(\J{Warped}(p)\).
+Explain how the situation calculus knowledge base must be modified.
+\item Finally, develop 
+a general and precisely specified procedure for carrying out the
+translation from a set of action  schemas to a set of
+successor-state axioms.
+\end{enumerate}
+\end{exercise} 
+% id=10.12 section=10.4.2
+
+\begin{exercise}[disjunctive-satplan-exercise]
+In the \prog{SATPlan} algorithm in \figref{satplan-agent-algorithm}
+(\pgref{satplan-agent-algorithm}), each call to the satisfiability
+algorithm asserts a goal \(g^T\), where \(T\) ranges from 0 to
+\(T_{{\rm max}}\). Suppose instead that the satisfiability algorithm
+is called only once, with the goal
+\(g^0 \lor g^1 \lor \cdots \lor g^{T_{{\rm max}}}\). 
+\begin{enumerate}
+\item Will this always return a plan if one exists with length less than or equal to \(T_{{\rm max}}\)?
+\item Does this approach introduce any new spurious ``solutions''?
+\item Discuss how one might modify a satisfiability algorithm such as \prog{WalkSAT} so that
+it  finds short solutions (if they exist) when
+given a disjunctive goal of this form.
+\end{enumerate}
+\end{exercise} 
+% id=10.13 section=10.4.1
+
+
+
+
+
+%% \begin{exercise}
+%% Explain why the process for generating predecessors in backward search
+%% does not need to add the literals that are negative
+%% effects\index{effect!negative} of the action.
+%% \end{exercise}
+
+
+
+% \begin{exercise}\label{progression-planning-exercise}%
+% \prgex The \prog{POP} algorithm shown in the text is a regression planner, 
+% because it adds steps whose effects satisfy unsatisfied conditions in the 
+% plan.  Progression planners add steps whose preconditions are satisfied by 
+% conditions known to be true in the plan.  Modify \prog{POP} so that it works 
+% as a progression\index{planning!progression}\index{progression 
+% planner|see{planning}} planner, and compare its performance to the original on 
+% several problems of your choosing.
+% \end{exercise}
+
+
+%% \begin{exercise}\label{hat-coat-exercise}%
+%% Consider the problem of putting on one's shoes and socks, as defined in \secref{pop-section}.
+%% Apply \system{Graphplan} to this problem and show the solution obtained.
+%% Now add actions for putting on a coat and a hat.  Show the partial
+%% order plan that is a solution, and show that there are 180
+%% different linearizations of the partial-order plan.  What is the
+%% minimum number of different planning graph solutions needed to
+%% represent all 180 linearizations?
+%% \end{exercise}
+
+% \begin{exercise}
+% In the airplane-transport domain with 5 planes and 10 airports, for a 
+% SAT-based planning system, how many exclusion axioms would be needed using 
+% each of the three main action encodings (regular, simple split, and overloaded 
+% split)?
+% \end{exercise}
+
+
+% \begin{exercise}\label{amex-exercise}%
+% Let us consider a version of the milk/banana/drill shopping problem
+% in which money is included, at least in a simple way.
+% \begin{enumerate}
+% \item Let {\mathdelim}CC{\mathdelim} denote a credit card that the agent can use to buy
+% any object. Modify the description of {\mathdelim}Buy{\mathdelim} so that the agent has to
+% have its credit card in order to buy anything.
+% \item Write a {\mathdelim}PickUp{\mathdelim} operator that enables the agent to {\mathdelim}Have{\mathdelim} an object
+% if it is portable and at the same location as the agent.
+% \item Assume that the credit card is at home, but {\mathdelim}Have(CC){\mathdelim} is initially 
+% false. Construct a partially ordered plan that achieves the
+% goal, showing both ordering constraints and causal links.
+% \item Explain in detail what happens during the planning process when
+% the agent explores a partial plan in which it leaves home without the card.
+% \end{enumerate}
+% \end{exercise}
+
+% \begin{exercise}
+% There are many ways to characterize planners.  For each of the following
+% dichotomies, explain what they mean, and how the choice between them affects
+% the efficiency and completeness of a planner.
+% \begin{enumerate}
+% \item Situation space vs.\ plan space.
+% \item Progressive vs.\ regressive.
+% \item Refinement vs.\ debugging.
+% \item Least commitment vs.\ more commitment.
+% \item Bound variables vs.\ unbound variables.
+% \item Total order vs.\ partial order.
+% \item Interleaved vs.\ noninterleaved.
+% \item Unambiguous preconditions vs.\ ambiguous preconditions.
+% \item Systematic vs.\ unsystematic.
+% \end{enumerate}
+% \end{exercise}
+
+% \begin{exercise}
+% Suppose that you are the proud owner of a brand new time\index{time machine} 
+% machine.  That means
+% that you can perform actions that affect situations in the past.  What changes
+% would you have to make to the planners in this chapter to accommodate such
+% actions?
+% \end{exercise}
+
+
+%\begin{exercise}
+%\libex
+%Note that the add list for Shakey's {\mathdelim}Push(x,y){\mathdelim} action is
+%\[
+%[\J{Near}(x,y),\J{Near}(y,x),\J{Near}(\J{Shakey},y)]
+%\]
+%\begin{enumerate}
+%\item Is it really necessary to include both of the first two conditions?
+%\item If so, is it a bug to leave out
+%{\mathdelim}Near(y,Shakey){\mathdelim}?  
+%\item In general, what needs to go in the add and delete lists?
+%\end{enumerate}
+%You may find it helpful to consult \cccite{Lifschitz:1990}.
+%\end{exercise}
+
+% \begin{exercise}
+% Explain how one can determine a serializable order of subgoals 
+% for a domain by creating a graph where the nodes correspond to propositions,
+% checking if it is acyclic, and doing a topological sort if it is.  Explain
+% what the links in the graph correspond to.  What is the asymptotic complexity 
+% of this algorithm?
+% \end{exercise}
+
+
+%% \begin{exercise}\label{split-encoding-exercise}
+%% Giving examples from the airport domain, explain how symbol-splitting
+%% reduces the size of the precondition axioms and the action exclusion
+%% axioms. Derive a general formula for the size of each axiom set in
+%% terms of the number of time steps, the number of action schemata,
+%% their arities, and the number of objects.
+%% \end{exercise}
+
+
+\resetmedskipamount

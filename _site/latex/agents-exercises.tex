@@ -1,0 +1,238 @@
+%%%% 2.2: Good Behavior: The Concept of Rationality (4 exercises, 2 labelled)
+%%%% ========================================================================
+
+\begin{uexercise}
+Suppose that the performance measure is concerned with just the first \(T\) time steps of the environment and ignores everything thereafter.
+Show that a rational agent's action may depend not just on the state of the environment but also on the time step it has reached.
+\end{uexercise} 
+% id=2.1 section=2.2
+
+\begin{exercise}[vacuum-rationality-exercise]%
+Let us examine the rationality of various vacuum-cleaner agent functions.
+\begin{enumerate}
+\item Show that the simple vacuum-cleaner agent function described in
+\tabref{vacuum-agent-function-table} is indeed rational
+under the assumptions listed on \pgref{vacuum-rationality-page}.
+\item Describe a rational agent function for the case in which
+each movement costs one point. Does the corresponding agent program require internal state?
+\item Discuss possible agent designs for
+the cases in which clean squares can become dirty and the geography
+of the environment is unknown. Does it make sense for the agent to
+learn from its experience in these cases? If so, what should it learn?
+If not, why not?
+\end{enumerate}
+\end{exercise} 
+% id=2.5 section=2.2
+
+\begin{iexercise}\libex
+Write an essay on the relationship between evolution and one or more of autonomy, intelligence, and learning.
+\end{iexercise} 
+% id=2.8 section=2.2
+
+
+
+
+%%%% 2.3: The Nature of Environments (2 exercises, 1 labelled)
+%%%% =========================================================
+
+\begin{exercise}
+For each of the following assertions, say whether it is true or false and support your answer with examples or counterexamples where appropriate.
+\begin{enumerate}
+\item An agent that senses only partial information about the state cannot be perfectly rational.
+\item There exist task environments in which no pure reflex agent can behave rationally.
+\item There exists a task environment in which every agent is rational.
+\item The input to an agent program is the same as the input to the agent function.
+\item Every agent function is implementable by some program/machine combination.
+\item Suppose an agent selects its action uniformly at random from the set of possible actions. There exists a deterministic task environment in which this agent is rational.
+\item It is possible for a given agent to be perfectly rational in two distinct task environments.
+\item Every agent is rational in an unobservable environment.
+\item A perfectly rational poker-playing agent never loses.
+\end{enumerate}
+\end{exercise} 
+% id=2.2 section=2.3
+
+\begin{uexercise}[PEAS-exercise]
+For each of the following activities, give a PEAS description of the task environment and characterize it in terms of the properties 
+listed in \secref{env-properties-subsection}. 
+\begin{itemize}
+\item Playing soccer.
+\item Exploring the subsurface oceans of Titan.
+\item Shopping for used AI books on the Internet.
+\item Playing a tennis match.
+\item Practicing tennis against a wall.
+\item Performing a high jump.
+\item Knitting a sweater.
+\item Bidding on an item at an auction.
+\end{itemize}
+\end{uexercise} 
+% id=2.6 section=2.3
+
+\begin{iexercise}[PEAS-exercise]
+For each of the following activities, give a PEAS description of the task environment and characterize it in terms of the properties 
+listed in \secref{env-properties-subsection}. 
+\begin{itemize}
+\item Performing a gymnastics floor routine. 
+\item Exploring the subsurface oceans of Titan.
+\item Playing soccer.
+\item Shopping for used AI books on the Internet.
+\item Practicing tennis against a wall.
+\item Performing a high jump.
+\item Bidding on an item at an auction.
+\end{itemize}
+\end{iexercise} 
+% id=2.6 section=2.3
+
+
+%%%% 2.4: The Structure of Agents (9 exercises, 5 labelled)
+%%%% ======================================================
+
+\begin{exercise}
+Define in your own words the following terms: agent, agent function,
+agent program, rationality, autonomy, reflex agent, model-based agent,
+goal-based agent, utility-based agent, learning agent.
+\end{exercise} 
+% id=2.0 section=2.4
+
+\begin{exercise}[agent-fn-prog-exercise]%
+This exercise explores the differences between agent functions
+and agent programs.
+\begin{enumerate}
+\item Can there be more than one
+agent program that implements a given agent function?
+Give an example, or show why one is not possible.
+\item Are there agent functions that cannot be implemented by any agent
+program?
+\item Given a fixed machine architecture, does each agent program
+implement exactly one agent function?
+\item Given an architecture with \(n\) bits of storage, how many
+different possible agent programs are there?  
+\item Suppose we keep the agent program fixed but speed up the machine by a factor of two. Does that change the agent function?
+\end{enumerate}
+\end{exercise} 
+% id=2.3 section=2.4
+
+\begin{exercise}
+Write pseudocode agent programs for the goal-based and utility-based agents.
+\end{exercise} 
+% id=2.4 section=2.4
+
+\begin{iexercise}
+Consider a simple thermostat that turns on a furnace when the temperature
+is at least 3 degrees below the setting, and turns off a furnace when
+the temperature is at least 3 degrees above the setting.
+Is a thermostat an instance of a simple reflex agent, a model-based reflex 
+agent, or a goal-based agent?
+\end{iexercise} 
+% id=2.7 section=2.4
+
+
+\medskip
+
+\noindent 
+\prgex The following exercises all concern the implementation of environments and agents for the vacuum\index{agent!vacuum|(}\index{vacuum world}-cleaner world.
+
+
+\begin{exercise}[vacuum-start-exercise]%%
+Implement a performance-measuring environment simulator for the
+vacuum-cleaner world depicted in \figref{vacuum-world-figure} and
+specified on \pgref{vacuum-rationality-page}.  Your implementation
+should be modular so that the sensors, actuators, and environment
+characteristics (size, shape, dirt placement, etc.) can be changed
+easily. ({\em Note:} for some choices of programming language and operating
+system there are already implementations in the online code
+repository.)
+\end{exercise} 
+% id=2.9 section=2.4
+
+
+\begin{uexercise}
+Implement a simple reflex agent for the vacuum environment in
+\exref{vacuum-start-exercise}.  Run the environment with this
+agent for all possible initial dirt configurations and agent locations.
+Record the performance score for each configuration and the overall average
+score.
+\end{uexercise} 
+% id=2.10 section=2.4
+
+\begin{exercise}[vacuum-motion-penalty-exercise]%
+Consider a modified version of the vacuum environment in
+\exref{vacuum-start-exercise}, in which the agent is penalized
+one point for each movement.
+\begin{enumerate}
+\item Can a simple reflex agent be perfectly rational
+for this environment? Explain.
+\item What about a reflex agent with state? Design such an agent.
+\item How do your answers to {\bf a} and {\bf b} change if the agent's
+percepts give it the clean/dirty status of every square in the environment?
+\end{enumerate}
+\end{exercise} 
+% id=2.11 section=2.4
+
+\begin{exercise}[vacuum-unknown-geog-exercise]%
+Consider a modified version of the vacuum environment in
+\exref{vacuum-start-exercise}, in which the geography of the
+environment---its extent, boundaries, and obstacles---is unknown, as
+is the initial dirt configuration. (The agent can go \(\J{Up}\) and
+\(\J{Down}\) as well as \(\J{Left}\) and \(\J{Right}\).)
+\begin{enumerate}
+\item Can a simple reflex agent be perfectly rational
+for this environment? Explain.
+\item Can a simple reflex agent with a {\em randomized} agent function
+outperform a simple reflex agent? Design such an agent
+and measure its performance on several environments.
+\item Can you design an environment in which your randomized agent will perform
+poorly? Show your results.
+\item Can a reflex agent with state outperform a simple
+reflex agent? Design such an agent
+and measure its performance on several environments.
+Can you design a rational agent of this type?
+\end{enumerate}
+\end{exercise} 
+% id=2.12 section=2.4
+
+\begin{exercise}[vacuum-bump-exercise]
+Repeat \exref{vacuum-unknown-geog-exercise} for the case
+in which the location sensor is replaced with a ``bump'' sensor
+that detects the agent's attempts to move into an obstacle or to cross
+the boundaries of the environment. Suppose the bump sensor stops
+working; how should the agent behave?
+\end{exercise} 
+% id=2.13 section=2.4
+
+\begin{exercise}[vacuum-finish-exercise]%
+The vacuum environments in the preceding exercises have all been
+deterministic. Discuss possible agent programs for each of the
+following stochastic versions:
+\begin{enumerate}
+\item Murphy's law: twenty-five percent of the time, the \(\J{Suck}\) action 
+fails to clean the floor if it is dirty and deposits
+dirt onto the floor if the floor is clean. How is your agent program
+affected if the dirt sensor gives the wrong answer 10\% of the time?
+\item Small children: At each time step,
+each clean square has a 10\% chance of becoming dirty.
+Can you come up with a rational agent design for this case?
+\end{enumerate}
+\end{exercise} 
+% id=2.14 section=2.4
+
+
+\index{agent!vacuum|)}
+
+
+%%\setlength{\medskipamount}{1.5\medskipamount}%%%%% Mona's suggestion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%\setlength{\medskipamount}{0.666667\medskipamount}%%%%% Mona's suggestion

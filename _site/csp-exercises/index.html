@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main –  – </title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    
+    <meta name="author" content="" />
+
+    
+    <meta property="og:title" content="Main" />
+    <meta property="twitter:title" content="Main" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+<label for="toggletoc" class="toc-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="6-constraint-satisfaction-problems">6. Constraint Satisfaction Problems</h1>
+
+<p><strong>6.1</strong> How many solutions are there for the map-coloring problem in
+Figure <a href="#/">australia-figure</a>? How many solutions if four
+colors are allowed? Two colors?</p>
+
+<p><strong>6.2</strong> Consider the problem of placing $k$ knights on an $n\times n$
+chessboard such that no two knights are attacking each other, where $k$
+is given and $k\leq n^2$.</p>
+
+<ol>
+  <li>
+    <p>Choose a CSP formulation. In your formulation, what are the
+variables?</p>
+  </li>
+  <li>
+    <p>What are the possible values of each variable?</p>
+  </li>
+  <li>
+    <p>What sets of variables are constrained, and how?</p>
+  </li>
+  <li>
+    <p>Now consider the problem of putting <em>as many knights as
+possible</em> on the board without any attacks. Explain how to
+solve this with local search by defining appropriate ACTIONS and RESULT functions
+and a sensible objective function.</p>
+  </li>
+</ol>
+
+<p><strong>6.3</strong> [crossword-exercise]Consider the problem of <a href="#footnote1">constructing</a> (not solving)
+crossword puzzles fitting words into a rectangular grid. The grid,
+which is given as part of the problem, specifies which squares are blank
+and which are shaded. Assume that a list of words (i.e., a dictionary)
+is provided and that the task is to fill in the blank squares by using
+any subset of the list. Formulate this problem precisely in two ways:</p>
+
+<ol>
+  <li>
+    <p>As a general search problem. Choose an appropriate search algorithm
+and specify a heuristic function. Is it better to fill in blanks one
+letter at a time or one word at a time?</p>
+  </li>
+  <li>
+    <p>As a constraint satisfaction problem. Should the variables be words
+or letters?</p>
+  </li>
+</ol>
+
+<p>Which formulation do you think will be better? Why?</p>
+
+<p><strong>6.4</strong> [csp-definition-exercise]Give precise formulations for each of the
+following as constraint satisfaction problems:</p>
+
+<ol>
+  <li>
+    <p>Rectilinear floor-planning: find non-overlapping places in a large
+rectangle for a number of smaller rectangles.</p>
+  </li>
+  <li>
+    <p>Class scheduling: There is a fixed number of professors and
+classrooms, a list of classes to be offered, and a list of possible
+time slots for classes. Each professor has a set of classes that he
+or she can teach.</p>
+  </li>
+  <li>
+    <p>Hamiltonian tour: given a network of cities connected by roads,
+choose an order to visit all cities in a country without
+repeating any.</p>
+  </li>
+</ol>
+
+<p><strong>6.5</strong> Solve the cryptarithmetic problem in
+Figure <a href="#/">cryptarithmetic-figure</a> by hand, using the
+strategy of backtracking with forward checking and the MRV and
+least-constraining-value heuristics.</p>
+
+<p><strong>6.6</strong> [nary-csp-exercise] Show how a single ternary constraint such as
+“$A + B = C$” can be turned into three binary constraints by using an
+auxiliary variable. You may assume finite domains. (<em>Hint:</em>
+Consider a new variable that takes on values that are pairs of other
+values, and consider constraints such as “$X$ is the first element of
+the pair $Y$.”) Next, show how constraints with more than three
+variables can be treated similarly. Finally, show how unary constraints
+can be eliminated by altering the domains of variables. This completes
+the demonstration that any CSP can be transformed into a CSP with only
+binary constraints.</p>
+
+<p><strong>6.7</strong> [zebra-exercise] Consider the following logic puzzle: In five houses,
+each with a different color, live five persons of different
+nationalities, each of whom prefers a different brand of candy, a
+different drink, and a different pet. Given the following facts, the
+questions to answer are “Where does the zebra live, and in which house
+do they drink water?”</p>
+
+<p>The Englishman lives in the red house.</p>
+
+<p>The Spaniard owns the dog.</p>
+
+<p>The Norwegian lives in the first house on the left.</p>
+
+<p>The green house is immediately to the right of the ivory house.</p>
+
+<p>The man who eats Hershey bars lives in the house next to the man with
+the fox.</p>
+
+<p>Kit Kats are eaten in the yellow house.</p>
+
+<p>The Norwegian lives next to the blue house.</p>
+
+<p>The Smarties eater owns snails.</p>
+
+<p>The Snickers eater drinks orange juice.</p>
+
+<p>The Ukrainian drinks tea.</p>
+
+<p>The Japanese eats Milky Ways.</p>
+
+<p>Kit Kats are eaten in a house next to the house where the horse is kept.</p>
+
+<p>Coffee is drunk in the green house.</p>
+
+<p>Milk is drunk in the middle house.</p>
+
+<p>Discuss different representations of this problem as a CSP. Why would
+one prefer one representation over another?</p>
+
+<p><strong>6.8</strong> Consider the graph with 8 nodes $A_1$, $A_2$, $A_3$, $A_4$, $H$, $T$,
+$F_1$, $F_2$. $A_i$ is connected to $A_{i+1}$ for all $i$, each $A_i$ is
+connected to $H$, $H$ is connected to $T$, and $T$ is connected to each
+$F_i$. Find a 3-coloring of this graph by hand using the following
+strategy: backtracking with conflict-directed backjumping, the variable
+order $A_1$, $H$, $A_4$, $F_1$, $A_2$, $F_2$, $A_3$, $T$, and the value
+order $R$, $G$, $B$.</p>
+
+<p><strong>6.9</strong> Explain why it is a good heuristic to choose the variable that is
+<em>most</em> constrained but the value that is
+<em>least</em> constraining in a CSP search.</p>
+
+<p><strong>6.10</strong> Generate random instances of map-coloring problems as follows: scatter
+$n$ points on the unit square; select a point $X$ at random, connect $X$
+by a straight line to the nearest point $Y$ such that $X$ is not already
+connected to $Y$ and the line crosses no other line; repeat the previous
+step until no more connections are possible. The points represent
+regions on the map and the lines connect neighbors. Now try to find
+$k$-colorings of each map, for both $k3$ and
+$k4$, using min-conflicts, backtracking, backtracking with
+forward checking, and backtracking with MAC. Construct a table of
+average run times for each algorithm for values of $n$ up to the largest
+you can manage. Comment on your results.</p>
+
+<p><strong>6.11</strong> Use the AC-3 algorithm to show that arc consistency can detect the
+inconsistency of the partial assignment
+${green},V{red}$ for the problem
+shown in Figure <a href="#/">australia-figure</a>.</p>
+
+<p><strong>6.12</strong> Use the AC-3 algorithm to show that arc consistency can detect the
+inconsistency of the partial assignment
+${red},V{blue}$ for the problem
+shown in Figure <a href="#/">australia-figure</a>.</p>
+
+<p><strong>6.13</strong> What is the worst-case complexity of running AC-3 on a tree-structured
+CSP?</p>
+
+<p><strong>6.14</strong> [ac4-exercise] AC-3 puts back on the queue <em>every</em> arc
+($X_{k}, X_{i}$) whenever <em>any</em> value is deleted from the
+domain of $X_{i}$, even if each value of $X_{k}$ is consistent with
+several remaining values of $X_{i}$. Suppose that, for every arc
+($X_{k}, X_{i}$), we keep track of the number of remaining values of
+$X_{i}$ that are consistent with each value of $X_{k}$. Explain how to
+update these numbers efficiently and hence show that arc consistency can
+be enforced in total time $O(n^2d^2)$.</p>
+
+<p><strong>6.15</strong> The Tree-CSP-Solver (Figure <a href="#/">tree-csp-figure</a>) makes arcs consistent
+starting at the leaves and working backwards towards the root. Why does
+it do that? What would happen if it went in the opposite direction?</p>
+
+<p><strong>6.16</strong> We introduced Sudoku as a CSP to be solved by search over partial
+assignments because that is the way people generally undertake solving
+Sudoku problems. It is also possible, of course, to attack these
+problems with local search over complete assignments. How well would a
+local solver using the min-conflicts heuristic do on Sudoku problems?</p>
+
+<p><strong>6.17</strong> Define in your own words the terms constraint, backtracking search, arc
+consistency, backjumping, min-conflicts, and cycle cutset.</p>
+
+<p><strong>6.18</strong> Define in your own words the terms constraint, commutativity, arc
+consistency, backjumping, min-conflicts, and cycle cutset.</p>
+
+<p><strong>6.19</strong> Suppose that a graph is known to have a cycle cutset of no more than $k$
+nodes. Describe a simple algorithm for finding a minimal cycle cutset
+whose run time is not much more than $O(n^k)$ for a CSP with $n$
+variables. Search the literature for methods for finding approximately
+minimal cycle cutsets in time that is polynomial in the size of the
+cutset. Does the existence of such algorithms make the cycle cutset
+method practical?</p>
+
+<p><strong>6.20</strong> Consider the problem of tiling a surface (completely and exactly
+covering it) with $n$ dominoes ($2\times
+1$ rectangles). The surface is an arbitrary edge-connected (i.e.,
+adjacent along an edge, not just a corner) collection of $2n$
+$1\times 1$ squares (e.g., a checkerboard, a checkerboard with some
+squares missing, a $10\times 1$ row of squares, etc.).</p>
+
+<ol>
+  <li>
+    <p>Formulate this problem precisely as a CSP where the dominoes are
+the variables.</p>
+  </li>
+  <li>
+    <p>Formulate this problem precisely as a CSP where the squares are the
+variables, keeping the state space as small as possible.
+(<em>Hint:</em> does it matter which particular domino goes on
+a given pair of squares?)</p>
+  </li>
+  <li>
+    <p>Construct a surface consisting of 6 squares such that your CSP
+formulation from part (b) has a <em>tree-structured</em>
+constraint graph.</p>
+  </li>
+  <li>
+    <p>Describe exactly the set of solvable instances that have a
+tree-structured constraint graph.</p>
+  </li>
+</ol>
+
+<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
+@Littman+al:1999 tackle the harder problem of solving them.</div>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

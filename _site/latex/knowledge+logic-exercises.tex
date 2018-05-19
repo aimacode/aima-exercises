@@ -1,0 +1,562 @@
+\setlength{\medskipamount}{1.25\medskipamount}%%%%% Mona's suggestion
+
+%%%% 7.2: The Wumpus World (1 exercises, 0 labelled)
+%%%% ===============================================
+
+\begin{exercise}
+Suppose the agent has progressed to the point shown in
+\figref{wumpus-seq35-figure}(a), \pgref{wumpus-seq35-figure}, having perceived nothing in [1,1], a
+breeze in [2,1], and a stench in [1,2], and is now concerned with the
+contents of [1,3], [2,2], and [3,1]. Each of these can contain a pit,
+and at most one can contain a wumpus. Following the example of
+\figref{wumpus-entailment-figure}, construct the set of possible
+worlds. (You should find 32 of them.)  Mark the worlds in which the KB
+is true and those in which each of the following sentences is true:
+\begin{formula}\zt 
+\alpha_2 = \mbox{``There is no pit in [2,2].''}\\\zt 
+\alpha_3 = \mbox{``There is a wumpus in [1,3].''}
+\end{formula}
+Hence show that \(\J{KB} \entails \alpha_2\) and \(\J{KB} \entails \alpha_3\).
+\end{exercise} 
+% id=7.0 section=7.2
+
+
+%%%% 7.3: Logic (1 exercises, 0 labelled)
+%%%% ====================================
+
+\begin{exercise}
+(Adapted from \citeA{Barwise+Etchemendy:1993}.)  Given the following,
+can you prove that the unicorn\index{unicorn} is mythical?  How about
+magical?  Horned?
+\begin{quote}
+If the unicorn is mythical, then it is immortal, but if it is not mythical,
+then it is a mortal mammal.  If the unicorn is either immortal or a mammal,
+then it is horned.  The unicorn is magical if it is horned.
+\end{quote}
+\end{exercise} 
+% id=7.10 section=7.3
+
+
+%%%% 7.4: Propositional Logic: A Very Simple Logic (10 exercises, 5 labelled)
+%%%% ========================================================================
+
+\begin{exercise}[truth-value-exercise]
+Consider the problem of deciding whether a propositional logic sentence is 
+true in a given model.
+\begin{enumerate}
+ \item Write a recursive algorithm
+ \prog{PL-True?}(\var{s}{\ac}\var{m}) that returns \var{true} if and
+ only if the sentence \(s\) is true in the model \(m\) (where \(m\) assigns
+ a truth value for every symbol in \(s\)). The algorithm should run in
+ time linear in the size of the sentence. (Alternatively, use a version
+ of this function from the online code repository.)
+\item Give three examples of sentences that can be determined to be true or false in a {\em partial} model
+that does not specify a truth value for some of the symbols.
+\item Show that the truth value (if any) of a sentence in a partial model
+cannot be determined efficiently in general.
+\item Modify your \prog{PL-True?} algorithm so that it can sometimes judge truth
+from partial models, while retaining its recursive structure and linear run time.
+Give three examples of sentences whose truth in a partial model is {\em not} detected by your algorithm.
+\item Investigate whether the modified algorithm makes \prog{TT-Entails?} more efficient.
+\end{enumerate}
+\end{exercise} 
+% id=7.1 section=7.4.4
+
+\begin{uexercise}%% Russell Fall 2002 final
+Which of the following are correct?
+\begin{enumerate}
+\item \(\J{False} \models \J{True}\). 
+\item \(\J{True} \models \J{False}\). 
+\item \((A\land B)  \models (A\lequiv B)\). 
+\item \(A\lequiv B \models A \lor B\).
+\item \(A\lequiv B \models \lnot A \lor B\).
+\item \((A\land B)\implies C \models (A\implies C)\lor(B\implies C)\).
+\item \((C\lor (\lnot A \land \lnot B)) \equiv ((A\implies C) \land (B \implies C))\).
+\item \((A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B)\).
+\item \((A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)\).
+\item \((A\lor B) \land \lnot(A \implies B)\) is satisfiable.
+\item \((A\lequiv B) \land (\lnot A \lor B)\) is satisfiable.
+\item \((A\lequiv B) \lequiv C\) has the same number of models as \((A\lequiv B)\) for any fixed
+set of proposition symbols that includes \(A\), \(B\), \(C\).
+\end{enumerate}
+\end{uexercise} 
+% id=7.2 section=7.4.2
+
+\begin{iexercise}%% Russell Fall 2002 final
+Which of the following are correct?
+\begin{enumerate}
+\item \(\J{False} \models \J{True}\). 
+\item \(\J{True} \models \J{False}\). 
+\item \((A\land B)  \models (A\lequiv B)\). 
+\item \(A\lequiv B \models A \lor B\).
+\item \(A\lequiv B \models \lnot A \lor B\).
+\item \((A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B\lor C) \land (B\land C\land D\implies E)\).
+\item \((A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)\).
+\item \((A\lor B) \land \lnot(A \implies B)\) is satisfiable.
+\item \((A\land B)\implies C \models (A\implies C)\lor(B\implies C)\).
+\item \((C\lor (\lnot A \land \lnot B)) \equiv ((A\implies C) \land (B \implies C))\).
+\item \((A\lequiv B) \land (\lnot A \lor B)\) is satisfiable.
+\item \((A\lequiv B) \lequiv C\) has the same number of models as \((A\lequiv B)\) for any fixed
+set of proposition symbols that includes \(A\), \(B\), \(C\).
+\end{enumerate}
+\end{iexercise} 
+% id=7.2 section=7.4.2
+
+\begin{exercise}[deduction-theorem-exercise]
+Prove each of the following assertions:
+\begin{enumerate}
+\item \(\alpha\) is valid if and only if \(\J{True}\entails \alpha\).
+\item For any \(\alpha\), \(\J{False}\entails\alpha\).
+\item \(\alpha\entails \beta\) if and only if the sentence \((\alpha \implies \beta)\) is valid.
+\item \(\alpha \equiv \beta\) if and only if the sentence \((\alpha\lequiv\beta)\) is valid.
+\item \(\alpha\entails \beta\) if and only if the sentence \((\alpha \land \lnot \beta)\) is unsatisfiable.
+\end{enumerate}
+\end{exercise} 
+% id=7.3 section=7.4.2
+
+\begin{iexercise}%% Russell Fall 2005 final, Spring 2002 final, Spring 2004 final
+Prove, or find a counterexample to, each of the following assertions:
+\begin{enumerate}
+\item  If \(\alpha\models\gamma\) or \(\beta\models\gamma\) (or both) then \((\alpha\land \beta)\models\gamma\)
+\item  If \((\alpha\land \beta)\models\gamma\) then \(\alpha\models\gamma\) or \(\beta\models\gamma\) (or both).
+\item  If \(\alpha\models (\beta \lor \gamma)\) then \(\alpha \models \beta\) or \(\alpha \models \gamma\) (or both).
+\end{enumerate}
+\end{iexercise} 
+% id=7.4 section=7.4.2
+
+\begin{uexercise}%% Russell Fall 2005 final, Spring 2002 final, Spring 2004 final
+Prove, or find a counterexample to, each of the following assertions:
+\begin{enumerate}
+\item  If \(\alpha\models\gamma\) or \(\beta\models\gamma\) (or both) then \((\alpha\land \beta)\models\gamma\)
+\item  If \(\alpha\models (\beta \land \gamma)\) then \(\alpha \models \beta\) and \(\alpha \models \gamma\).
+\item  If \(\alpha\models (\beta \lor \gamma)\) then \(\alpha \models \beta\) or \(\alpha \models \gamma\) (or both).
+\end{enumerate}
+\end{uexercise} 
+% id=7.4 section=7.4.2
+
+\begin{exercise}
+Consider a vocabulary with only four propositions, \(A\), \(B\), \(C\), and
+\(D\).  How many models are there for the following sentences?
+\begin{enumerate}
+\item \(B\lor C\).
+\item \(\lnot A\lor \lnot B \lor \lnot C \lor \lnot D\).
+\item \((A\implies B) \land A \land \lnot B \land C \land D\).
+\end{enumerate}
+\end{exercise} 
+% id=7.6 section=7.4.2
+
+\begin{exercise}
+We have defined four  binary logical connectives.  
+\begin{enumerate}
+\item Are there any others that might be useful?  
+\item How many binary connectives can there be?  
+\item Why are some of them not very useful?
+\end{enumerate}
+\end{exercise} 
+% id=7.7 section=7.4
+
+\begin{exercise}[logical-equivalence-exercise]%
+Using a method of your choice, verify each of the equivalences
+in \tabref{logical-equivalence-table} (\pgref{logical-equivalence-table}).
+\end{exercise} 
+% id=7.8 section=7.4
+
+\begin{uexercise}[propositional-validity-exercise]%
+Decide whether each of the following sentences is valid,
+unsatisfiable, or neither.  Verify your decisions using truth tables
+or the equivalence rules of \tabref{logical-equivalence-table} (\pgref{logical-equivalence-table}).
+%%<<consider some new ones]]
+\begin{enumerate}
+\item \(\J{Smoke} \implies \J{Smoke}\)
+\item \(\J{Smoke} \implies \J{Fire}\)
+\item \((\J{Smoke} \implies \J{Fire}) \implies (\lnot \J{Smoke} \implies \lnot \J{Fire})\)
+\item \(\J{Smoke} \lor \J{Fire} \lor \lnot \J{Fire}\)
+\item \(((\J{Smoke} \land \J{Heat}) \implies \J{Fire}) 
+        \lequiv ((\J{Smoke} \implies \J{Fire}) \lor (\J{Heat} \implies \J{Fire}))\)
+\item \((\J{Smoke} \implies \J{Fire}) \implies 
+        ((\J{Smoke} \land \J{Heat}) \implies \J{Fire}) \)
+\item \(\J{Big} \lor \J{Dumb} \lor (\J{Big} \implies \J{Dumb})\)
+\end{enumerate}
+\end{uexercise} 
+% id=7.9 section=7.4
+
+\begin{iexercise}[propositional-validity-exercise]%
+Decide whether each of the following sentences is valid,
+unsatisfiable, or neither.  Verify your decisions using truth tables
+or the equivalence rules of \tabref{logical-equivalence-table} (\pgref{logical-equivalence-table}).
+%%<<consider some new ones]]
+\begin{enumerate}
+\item \(\J{Smoke} \implies \J{Smoke}\)
+\item \(\J{Smoke} \implies \J{Fire}\)
+\item \((\J{Smoke} \implies \J{Fire}) \implies (\lnot \J{Smoke} \implies \lnot \J{Fire})\)
+\item \(\J{Smoke} \lor \J{Fire} \lor \lnot \J{Fire}\)
+\item \(((\J{Smoke} \land \J{Heat}) \implies \J{Fire}) 
+        \lequiv ((\J{Smoke} \implies \J{Fire}) \lor (\J{Heat} \implies \J{Fire}))\)
+\item \(\J{Big} \lor \J{Dumb} \lor (\J{Big} \implies \J{Dumb})\)
+\item \((\J{Big} \land \J{Dumb}) \lor \lnot \J{Dumb}\)
+\end{enumerate}
+\end{iexercise} 
+% id=7.9 section=7.4
+
+%% \begin{iexercise}
+%% Describe how the map-coloring problem, described in \secref{map-coloring-section}, can be expressed in
+%% propositional logic. ({\em Hint}: As your proposition symbols, use assignments
+%% of one color to one region;for example, \(Q\_R\) means that Queensland
+%% is colored red.)
+%% \end{iexercise} 
+% id=7.18 section=7.4
+
+\begin{exercise}[cnf-proof-exercise]
+Any propositional logic sentence is logically equivalent to the 
+assertion that each possible world in which it would be false 
+is not the case. From this observation, prove that any sentence can be written in CNF.
+%% The negation of each row is the negation of a conjunction of literals,
+%% which (by de Morgan's law) is equivalent to a disjunction
+%% of the negations of literals, which is equivalent to a disjunction of
+%% literals.
+\end{exercise} 
+% id=7.23 section=7.4
+
+
+%%%% 7.5: Propositional Theorem Proving (9 exercises, 1 labelled)
+%%%% ============================================================
+
+\begin{exercise}
+Use resolution to prove the sentence \(\lnot A \land \lnot B\) from the clauses in
+\exref{convert-clausal-exercise}.
+\end{exercise} 
+% id=7.12 section=7.5.2
+
+\begin{exercise}[inf-exercise]
+This exercise looks into the relationship between clauses and implication sentences.
+\begin{enumerate}
+\item Show that the clause \((\lnot P_1 \lor \cdots \lor \lnot P_m \lor Q)\)
+is logically equivalent to the implication sentence \((P_1 \land \cdots \land P_m) \textimplies Q\).
+\item Show that every clause (regardless of the number of positive literals) can be written
+in the form \((P_1 \land \cdots \land P_m) \textimplies (Q_1 \lor \cdots \lor Q_n)\),
+where the \(P\)s and \(Q\)s are proposition symbols.
+A knowledge base consisting of such sentences is 
+in \newterm{implicative normal form}\ntindex{implicative normal form}
+or \termi{Kowalski form}  \cite{Kowalski:1979}.
+\item Write down the full resolution rule for sentences in implicative normal form.
+\end{enumerate}
+\end{exercise} 
+% id=7.15 section=7.5.3
+
+\begin{exercise}%% Russell Spring 2004 midterm
+According to some political pundits, a person who is radical (\(R\)) is electable (\(E\))
+if he/she is conservative (\(C\)), but otherwise is not electable.
+\begin{enumerate}
+\item  Which of the following are correct representations of this assertion?
+\begin{enumerate}
+\item \((R\land E)\iff C\) 
+\item \(R\implies (E\iff C)\) 
+\item \(R\implies ((C\implies E) \lor \lnot E)\) 
+\end{enumerate}
+\item  Which of the sentences in (a) can be expressed in Horn form?
+\end{enumerate}
+\end{exercise} 
+% id=7.16 section=7.5.3
+
+\begin{uexercise}%% Russell Spring 2005 final
+This question considers representing satisfiability
+(SAT) problems as CSPs.
+\begin{enumerate}
+\item  Draw the constraint graph corresponding to the SAT problem
+\[
+  (\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)
+\]
+for the particular case \(n\eq 5\).
+\item  How many solutions are there for this general SAT problem as a function of \(n\)?
+\item  Suppose we apply \prog{Backtracking-Search} (\pgref{backtracking-search-algorithm}) to find {\em all} solutions
+to a SAT CSP of the type given in (a). (To find {\em all} solutions to a CSP, we simply modify
+the basic algorithm so it continues searching after each solution is found.)
+Assume that variables are ordered \(X_1,\ldots,X_n\) and \(\J{false}\) is ordered before \(\J{true}\).
+How much time will the algorithm take to terminate? (Write an \(O(\cdot)\) expression as a function of \(n\).)
+\item  We know that SAT problems in Horn form can be solved in linear time by forward chaining (unit propagation).
+We also know that every tree-structured binary CSP with discrete, finite domains can be solved in time linear in the number of variables (\secref{csp-structure-section}).
+Are these two facts connected? Discuss.
+\end{enumerate}
+\end{uexercise} 
+% id=7.17 section=7.5
+
+\begin{iexercise}%% Russell Spring 2005 final
+This question considers representing satisfiability
+(SAT) problems as CSPs.
+\begin{enumerate}
+\item  Draw the constraint graph corresponding to the SAT problem
+\[
+  (\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)
+\]
+for the particular case \(n\eq 4\).
+\item  How many solutions are there for this general SAT problem as a function of \(n\)?
+\item  Suppose we apply \prog{Backtracking-Search} (\pgref{backtracking-search-algorithm}) to find {\em all} solutions
+to a SAT CSP of the type given in (a). (To find {\em all} solutions to a CSP, we simply modify
+the basic algorithm so it continues searching after each solution is found.)
+Assume that variables are ordered \(X_1,\ldots,X_n\) and \(\J{false}\) is ordered before \(\J{true}\).
+How much time will the algorithm take to terminate? (Write an \(O(\cdot)\) expression as a function of \(n\).)
+\item  We know that SAT problems in Horn form can be solved in linear time by forward chaining (unit propagation).
+We also know that every tree-structured binary CSP with discrete, finite domains can be solved in time linear in the number of variables (\secref{csp-structure-section}).
+Are these two facts connected? Discuss.
+\end{enumerate}
+\end{iexercise} 
+% id=7.17 section=7.5
+
+\begin{uexercise}%% Russell Spring 2005 midterm
+Explain why every nonempty propositional clause, by itself, is
+satisfiable.  Prove rigorously that every set of five 3-SAT clauses is
+satisfiable, provided that each clause mentions exactly three distinct
+variables. What is the smallest set of such clauses that is unsatisfiable?
+Construct such a set.
+\end{uexercise} 
+% id=7.19 section=7.5
+
+\begin{uexercise}%% Russell Fall 2002 midterm
+A propositional {\em 2-CNF} expression is a conjunction of clauses,
+each containing {\em exactly 2} literals, e.g., 
+\[
+  (A\lor B) \land (\lnot A \lor C) \land (\lnot B \lor D) \land (\lnot
+  C \lor G) \land (\lnot D \lor G)\ .
+\]
+\begin{enumerate}
+\item  Prove using resolution that the above sentence entails \(G\).
+\item  Two clauses are {\em semantically distinct} if they are not logically equivalent.
+How many semantically distinct 2-CNF clauses can be constructed from \(n\) proposition symbols?
+\item  Using your answer to (b), prove that propositional resolution always
+terminates in time polynomial in \(n\) given a 2-CNF sentence containing no more than \(n\) distinct symbols.
+\item  Explain why your argument in (c) does not apply to 3-CNF.
+\end{enumerate}
+\end{uexercise} 
+% id=7.20 section=7.5.2
+
+\begin{iexercise}%% Russell Fall 2005 midterm
+Prove each of the following assertions:
+\begin{enumerate}
+\item Every pair of propositional clauses either has no resolvents,
+or all their resolvents are logically equivalent.
+\item  There is no clause that, when resolved with itself, yields
+(after factoring) the clause \((\lnot P \lor \lnot Q)\).
+\item  If a propositional clause \(C\) can be resolved with a copy
+of itself, it must be logically equivalent to \(\J{True}\).
+\end{enumerate}
+\end{iexercise} 
+% id=7.21 section=7.5.2
+
+\begin{exercise}%% Russell Spring 2002
+Consider the following sentence:
+\[
+  [ (\J{Food} \implies \J{Party}) \lor (\J{Drinks} \implies \J{Party}) ] \implies [ ( \J{Food} \land \J{Drinks} )  \implies \J{Party}]\ .
+\]
+\begin{enumerate}
+\item  Determine, using enumeration,  whether this sentence is valid, satisfiable (but not valid), or unsatisfiable.
+
+\item  Convert the left-hand and right-hand sides of the main implication into CNF, showing each step,
+and explain how the results confirm your answer to (a).
+\item  Prove your answer to (a) using resolution.
+\end{enumerate}
+\end{exercise} 
+% id=7.22 section=7.5.2
+
+\begin{exercise}\label{dnf-exercise}
+A sentence is in \newtermi{disjunctive normal form} (DNF)\index{DNF (disjunctive normal form)} if it is the disjunction
+of conjunctions of literals.  For example, the sentence \((A \land B \land \lnot C) \lor (\lnot A \land C) \lor (B \land \lnot C)\) is in DNF.
+\begin{enumerate}
+\item Any propositional logic sentence is logically equivalent to the 
+assertion that some possible world in which it would be true is
+in fact the case. From this observation, prove that any sentence can be written in DNF.
+\item Construct an algorithm that converts any sentence in 
+propositional logic into DNF. ({\em Hint}: The algorithm is 
+similar to the 
+algorithm for conversion to CNF given in \secref{pl-resolution-section}.)
+\item
+Construct a simple algorithm that takes as input a sentence in DNF and returns
+a satisfying assignment if one exists, or reports that no satisfying assignment
+exists.
+\item
+Apply the algorithms in (b) and (c) to the following set of sentences:
+\begin{formula}
+A \implies B \\
+B \implies C \\
+C \implies \lnot A\ .
+\end{formula}
+\item Since the algorithm in (b) is very similar to the 
+algorithm for conversion to CNF, and since the algorithm in (c) is much simpler 
+than any algorithm for solving a set of sentences in CNF, why is this technique
+not used in automated reasoning?
+\end{enumerate}
+\end{exercise} 
+% id=7.24 section=7.5
+
+
+%%%% 7.6: Effective Propositional Model Checking (6 exercises, 4 labelled)
+%%%% =====================================================================
+
+%% \begin{iexercise}%% Russell Spring 2004 final
+%% Two sentences \(\alpha\) and \(\beta\) are said to be logically \newterm[consistency]{consistent}\ntindex{consistency!logical} if neither entails the falsehood of the other.
+%% \begin{enumerate}
+%% \item  Explain how to determine the consistency of any two propositional sentences by using a SAT solver.
+%% \item  Give examples of propositional CNF sentences \(\alpha\) and \(\beta\), each containing the same \(n\)
+%% proposition symbols, such that neither \(\alpha \models \beta\) nor \(\alpha\models\lnot \beta\).
+%% Prove that this cannot be done if \(\alpha\) consists only of unit clauses. 
+%% \item  Is every sentence consistent with itself?
+%% \end{enumerate}
+%% \end{iexercise} 
+%% % id=7.5 section=7.6
+
+\begin{uexercise}[convert-clausal-exercise]
+Convert the following set of sentences to clausal form.
+\begin{quote}
+S1: \(A \lequiv (B \lor E)\). \\
+S2: \(E \implies D\). \\
+S3: \(C \land F \implies \lnot B\). \\
+S4: \(E \implies B\). \\
+S5: \(B \implies F\). \\
+S6: \(B \implies C\)
+\end{quote}
+Give a trace of the execution of DPLL on the conjunction of
+these clauses.  
+\end{uexercise} 
+% id=7.11 section=7.6.1
+
+\begin{iexercise}[convert-clausal-exercise]
+Convert the following set of sentences to clausal form.
+\begin{quote}
+S1: \(A \lequiv (C \lor E)\). \\
+S2: \(E \implies D\). \\
+S3: \(B \land F \implies \lnot C\). \\
+S4: \(E \implies C\). \\
+S5: \(C \implies F\). \\
+S6: \(C \implies B\)
+\end{quote}
+Give a trace of the execution of DPLL on the conjunction of
+these clauses.  
+\end{iexercise} 
+% id=7.11 section=7.6.1
+
+\begin{exercise}
+Is a randomly generated 4-CNF sentence with \(n\) symbols and \(m\) clauses more or
+less likely to be solvable than 
+a randomly generated 3-CNF sentence with \(n\) symbols and \(m\) clauses? Explain.
+\end{exercise} 
+% id=7.13 section=7.6.3
+
+\begin{exercise}[minesweeper-exercise]
+Minesweeper, the well-known computer game, is closely related to the
+wumpus world. A \indextext{minesweeper} world is a rectangular grid
+of \(N\) squares with \(M\) invisible mines scattered among them.
+Any square may be probed by the agent; instant death follows if a mine
+is probed. Minesweeper indicates the
+presence of mines by revealing, in each probed square, the {\em
+number} of mines that are directly or diagonally adjacent.
+The goal is to  probe every unmined square.
+\begin{enumerate}
+\item Let \(X_{i,j}\) be true iff square \([i,j]\) contains a mine.
+Write down the assertion that exactly two mines are adjacent to
+[1,1] as a sentence involving some logical combination of \(X_{i,j}\) propositions.
+\item Generalize your assertion from (a)
+ by explaining how to construct a CNF sentence
+asserting that \(k\) of \(n\) neighbors contain mines.
+\item Explain precisely how an agent can use \prog{DPLL} to prove
+that a given square does (or does not) contain a mine, ignoring the
+global constraint that there are exactly \(M\) mines in all.
+\item Suppose that the global constraint is constructed
+from your method from part (b). How does the number of clauses
+depend on \(M\) and \(N\)? Suggest a way to modify \prog{DPLL} so that
+the global constraint does not need to be represented explicitly.
+\item Are any conclusions derived by the method in part (c)
+invalidated when the global constraint is taken into account?
+\item Give examples of configurations of probe values that induce {\em
+long-range dependencies} such that the contents of a
+given unprobed square would give information about the contents of a
+far-distant square. ({\em Hint}: consider an \(N\stimes 1\) board.)
+\end{enumerate}
+\end{exercise} 
+% id=7.14 section=7.6
+
+\begin{exercise}[known-literal-exercise]
+How long does it take to prove \(\J{KB}\entails\alpha\) using \prog{DPLL} when \(\alpha\) is a literal
+{\em already contained in} \(\J{KB}\)? Explain.
+\end{exercise} 
+% id=7.25 section=7.6.1
+
+\begin{exercise}[dpll-fc-exercise]
+Trace the behavior of \prog{DPLL} on the knowledge base
+in \figref{pl-horn-example-figure} when trying to prove \(Q\), and
+compare this behavior with that of the forward-chaining algorithm.
+\end{exercise} 
+% id=7.26 section=7.6.1
+
+
+%%%% 7.7: Agents Based on Propositional Logic (5 exercises, 2 labelled)
+%%%% ==================================================================
+
+\begin{uexercise} % fe-s04
+Write a successor-state axiom for the \(\J{Locked}\) predicate, 
+which applies to doors, assuming the only actions available are \(\J{Lock}\)
+and \(\J{Unlock}\).
+\end{uexercise} 
+% id=extras-28-oct.8 section=7.7.1
+
+\begin{iexercise}
+Discuss what is meant by {\em optimal} behavior in the wumpus world.
+Show that the \prog{Hybrid-Wumpus-Agent} is not optimal,
+and suggest ways to improve it.
+\end{iexercise} 
+% id=7.27 section=7.7.2
+
+\begin{iexercise}%% Russell Fall 2005 final
+Suppose an agent inhabits a world with two states, \(S\) and \(\lnot S\), and
+can do exactly one of two actions, \(a\) and \(b\). Action \(a\) does nothing and action \(b\) flips from
+one state to the other. Let \(S^t\) be the proposition that the agent is in state \(S\) at time \(t\),
+and let \(a^t\) be the proposition that the agent does action \(a\) at time \(t\) (similarly for \(b^t\)).
+\begin{enumerate}
+\item  Write a successor-state axiom for \(S^{t+1}\).
+\item  Convert the sentence in (a) into CNF.
+\item  Show a resolution refutation proof that if the agent is in \(\lnot S\) at time \(t\) and does \(a\), 
+it will still be in \(\lnot S\) at time \(t+1\).
+\end{enumerate}
+\end{iexercise} 
+% id=7.28 section=7.7
+
+\begin{exercise}[ss-axiom-exercise]
+\secref{successor-state-section} provides some of the successor-state
+axioms required for the wumpus world. Write down axioms for all
+remaining fluent symbols.
+\end{exercise} 
+% id=7.29 section=7.7
+
+\begin{exercise}[hybrid-wumpus-exercise]\prgex%
+Modify the \prog{Hybrid-Wumpus-Agent} to use the 1-CNF logical state estimation method described on 
+\pgref{1cnf-belief-state-page}. We noted on that page that such an
+agent will not be able to acquire, maintain, and use more complex
+beliefs such as the disjunction \(P_{3,1}\lor P_{2,2}\). Suggest a
+method for overcoming this problem by defining additional proposition
+symbols, and try it out in the wumpus world. Does it improve the
+performance of the agent?
+\end{exercise} 
+% id=7.30 section=7.7
+
+
+
+%% \begin{exercise}\label{wumpus-dimensions-exercise}
+%% Describe the wumpus world according to the properties of task environments
+%% listed in \chapref{agents-chapter}. 
+%% \end{exercise}
+
+%% \begin{exercise}\label{wumpus-circuit-exercise}
+%% In this exercise, you will design more of the circuit-based wumpus agent.
+%% \begin{enumerate}
+%% \item Write an equation, similar to \eqref{alive-equation}, for the
+%% \(\J{Arrow}\) proposition, which should be true when the agent still has an arrow.
+%% Draw the corresponding circuit.
+%% \item Repeat part (a) for \(\J{FacingRight}\), using
+%% \eqref{location-equation} as a model.
+%% \item Create versions of Equations~\ref{knotpit-equation} and~\ref{kpit-equation} for finding the wumpus,
+%% and draw the circuit.
+%% \end{enumerate}
+%% \end{exercise}
+
+
+
+
+\resetmedskipamount

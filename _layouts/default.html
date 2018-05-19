@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      {% include aima-toc.html %}
+    </div>
+    <div id="main" role="main" class="container">
+      {% include breadcrumb.html %}
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- {% include svg-icons.html %} -->
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

@@ -1,0 +1,314 @@
+%%%% 6.1: Defining Constraint Satisfaction Problems (7 exercises, 4 labelled)
+%%%% ========================================================================
+
+\begin{exercise}
+How many solutions are there for the map-coloring problem in \figref{australia-figure}?
+How many solutions if four colors are allowed?  Two colors?
+\end{exercise} 
+% id=6.1 section=6.1.1
+
+\begin{uexercise}%%Russell Spring 2004 midterm
+Consider the problem of placing \(k\) knights on an \(n\stimes n\) chessboard 
+such that no two knights are attacking each other, where \(k\) is given
+and \(k\leq n^2\).
+\begin{enumerate}
+\item Choose a CSP formulation. In your formulation, what are the variables?
+\item What are the possible values of each variable?
+\item What sets of variables are constrained, and how?
+\item Now consider the problem of putting {\em as many knights as possible}
+on the board without any attacks. Explain how to solve this with local search by defining appropriate \noprog{Actions} and \noprog{Result} functions
+and a sensible objective function.
+\end{enumerate}
+\end{uexercise} 
+% id=6.4 section=6.1
+
+\begin{exercise}[crossword-exercise]%
+Consider the problem of constructing (not solving) crossword\index{crossword 
+puzzle} puzzles:\footnote{\citeA{Ginsberg+al:1990} discuss several methods
+for constructing crossword puzzles.  \citeA{Littman+al:1999} tackle the harder 
+problem of solving them.} fitting words into a rectangular grid.  
+The grid, which is given as part of the problem, specifies which squares are 
+blank and which are shaded.  Assume that a list of words (i.e., a 
+dictionary) is provided and that the task is to fill in the blank squares 
+by using any subset of the list.  Formulate this problem precisely in two ways:
+\begin{enumerate}
+\item As a general search problem. Choose an appropriate search algorithm
+and specify a heuristic function.  Is it better to fill in blanks one letter at a time or one word
+at a time?
+\item As a constraint satisfaction problem. Should the variables be words or 
+letters?
+\end{enumerate}
+Which formulation do you think will be better?  Why?
+\end{exercise} 
+% id=6.5 section=6.1
+
+\begin{exercise}[csp-definition-exercise]%
+Give precise formulations for each of the following as constraint satisfaction problems:
+\begin{enumerate}
+% \item \newterm{Channel routing}\ntindex{channel routing} in VLSI layout: given a layout of
+% rectangular cells with fixed terminals and a set of connections that
+% must be made between terminals, determine an optimal routing of wires
+% through the channels between cells such that no channel contains more
+%than one wire.
+
+
+%% . Routing means taking
+%% two sets of terminals and connecting them with wires.  There is one
+%% set of input terminals labeled {\mathdelim}I_1{\mathdelim} to {\mathdelim}I_n{\mathdelim}, and a corresponding set
+%% of output terminals labeled {\mathdelim}O_1{\mathdelim} to {\mathdelim}O_n{\mathdelim}; the goal is to connect
+%% each {\mathdelim}I_i{\mathdelim} to {\mathdelim}O_i{\mathdelim} with a wire {\mathdelim}W_i{\mathdelim}.  In channel routing the {\mathdelim}I_i{\mathdelim}
+%% are all in one horizontal line, and the {\mathdelim}O_i{\mathdelim} are in a parallel
+%% horizontal line, but the order of each set of terminals can be permuted.
+%% 
+%% 
+%%   a layout of non-intersecting
+%% paths that will connect two sets of terminals.  In channel routing
+%% 
+%% connecti
+%% 
+%% That is, each cell has an {\mathdelim}x, y{\mathdelim} position
+%% and a list of other {\mathdelim}x, y{\mathdelim} positions it needs to connect to.  These
+%% are all within a grid of size {\mathdelim}X, Y{\mathdelim}. Channels are horizontal or
+%% vertical lines that run all the way across the grid.  Each channel has
+%% a capacity {\mathdelim}k{\mathdelim} indicating the number of lines it can hold.  You need
+%% to allocate each {\mathdelim}x_1, y_1{\mathdelim} to {\mathdelim}x_2, y_2{\mathdelim} c
+
+\item Rectilinear floor-planning:
+find non-overlapping places in a large rectangle for a number of
+smaller rectangles.
+\item Class scheduling:  There is a fixed number of professors 
+and classrooms, a list of classes to be offered, and a list of possible time slots
+for classes.  Each professor has a set of classes that he or she can teach.
+
+\item Hamiltonian tour: given a network of cities connected by roads, choose an order to visit all cities in a 
+country without repeating any.   
+\end{enumerate}
+\end{exercise} 
+% id=6.6 section=6.1
+
+\begin{exercise}
+Solve the cryptarithmetic problem in \figref{cryptarithmetic-figure} by hand,
+using the strategy of backtracking with forward checking and the MRV
+and least-constraining-value heuristics.
+\end{exercise} 
+% id=6.7 section=6.1.3
+
+\begin{exercise}[nary-csp-exercise]
+Show how a single ternary constraint such as 
+``\(A + B = C\)'' can be turned into three binary constraints by using
+an auxiliary variable.  You may assume finite domains.  ({\it Hint:} Consider a new 
+variable that takes on values that are pairs of other values, and consider 
+constraints such as ``\(X\) is the first element of the pair \(Y\).'') 
+Next, show how constraints with more than three variables can be treated similarly.
+Finally, show how unary constraints can be eliminated by altering the domains of 
+variables. This completes the demonstration that any CSP can be transformed 
+into a CSP with only binary constraints. 
+\end{exercise} 
+% id=6.13 section=6.1.3
+
+\begin{exercise}[zebra-exercise]\index{zebra puzzle}
+Consider the following logic puzzle: In five houses, each with a
+different color, live five persons of different nationalities, each of
+whom prefers a different brand of candy, a different drink, and a
+different pet.  Given the following facts, the questions to answer are
+``Where does the zebra live, and in which house do they drink water?''
+
+            The Englishman lives in the red house.
+
+            The Spaniard owns the dog.
+
+            The Norwegian lives in the first house on the left.
+
+            The green house is immediately to the right of the ivory house.
+
+            The man who eats Hershey bars lives in the house next to the man with the fox.
+
+            Kit Kats are eaten in the yellow house.
+
+            The Norwegian lives next to the blue house.
+
+            The Smarties eater owns snails.
+
+            The Snickers eater drinks orange juice.
+
+            The Ukrainian drinks tea.
+
+            The Japanese eats Milky Ways.
+
+            Kit Kats are eaten in a house next to the house where the horse is kept.
+
+            Coffee is drunk in the green house.
+
+            Milk is drunk in the middle house.
+
+\noindent Discuss different representations of this problem as a CSP. Why would one prefer one
+representation over another?  
+\end{exercise} 
+% id=6.15 section=6.1
+
+
+%%%% 6.3: Backtracking Search for CSPs (6 exercises, 1 labelled)
+%%%% ===========================================================
+
+\begin{exercise}%%Nick Hay Question 3
+Consider the graph with 8 nodes \(A_1\), \(A_2\), \(A_3\), \(A_4\), \(H\), \(T\),
+\(F_1\), \(F_2\).  \(A_i\) is connected to \(A_{i+1}\) for all \(i\), each \(A_i\)
+is connected to \(H\), \(H\) is connected to \(T\), and \(T\) is connected to
+each \(F_i\).  Find a 3-coloring of this graph by hand using the following strategy:
+backtracking with conflict-directed backjumping, the variable order \(A_1\),
+\(H\), \(A_4\), \(F_1\), \(A_2\), \(F_2\), \(A_3\), \(T\), and the value order \(R\),
+\(G\), \(B\).
+\end{exercise} 
+% id=6.2 section=6.3.3
+
+\begin{exercise}
+Explain why it is a good heuristic to choose the variable that is {\em
+most} constrained but the value that is {\em least} constraining in a CSP search.
+\end{exercise} 
+% id=6.3 section=6.3.1
+
+\begin{exercise}
+\prgex Generate random instances of map-coloring problems as follows:
+scatter \(n\) points on the unit square; select a point \(X\) at
+random, connect \(X\) by a straight line to the nearest point \(Y\)
+such that \(X\) is not already connected to \(Y\) and the line crosses
+no other line; repeat the previous step until no more connections are
+possible.  The points represent regions on the map and the lines
+connect neighbors. Now try to find \(k\)-colorings of each map, for
+both \(k\eq 3\) and \(k \eq 4\), using min-conflicts, backtracking,
+backtracking with forward checking, and backtracking with MAC.
+Construct a table of average run times for each algorithm for values of
+\(n\) up to the largest you can manage.  Comment on your results.
+\end{exercise} 
+% id=6.8 section=6.3
+
+\begin{uexercise}
+Use the AC-3 algorithm to show that arc consistency can detect the inconsistency of the
+partial assignment \(\{\J{WA}\eq \J{green},V\eq \J{red}\}\) for the problem shown in
+\figref{australia-figure}. 
+\end{uexercise} 
+% id=6.9 section=6.3
+
+\begin{iexercise}
+Use the AC-3 algorithm to show that arc consistency can detect the inconsistency of the
+partial assignment \(\{\J{WA}\eq \J{red},V\eq \J{blue}\}\) for the problem shown in
+\figref{australia-figure}. 
+\end{iexercise} 
+% id=6.9 section=6.3
+
+\begin{exercise}
+What is the worst-case complexity of running AC-3 on a tree-structured CSP?
+\end{exercise} 
+% id=6.10 section=6.3
+
+\begin{exercise}[ac4-exercise]
+AC-3 puts back on the queue {\em every} arc (\(X_{k}, X_{i}\))
+whenever {\em any} value is deleted from the domain of \(X_{i}\), even if each value of
+\(X_{k}\) is consistent with several remaining values of \(X_{i}\). Suppose that, for every arc
+(\(X_{k}, X_{i}\)), we keep track of the number of remaining values of
+\(X_{i}\) that are consistent with each value of \(X_{k}\).  Explain how
+to update these numbers efficiently and hence show that arc
+consistency can be enforced in total time \(O(n^2d^2)\).
+\end{exercise} 
+% id=6.12 section=6.3
+
+
+%%%% 6.4: Local Search for CSPs (2 exercises, 0 labelled)
+%%%% ====================================================
+
+\begin{exercise}
+The \noprog{Tree-CSP-Solver} (\figref{tree-csp-figure}) makes arcs consistent starting at the leaves and working backwards 
+towards the root.  Why does it do that?  What would happen if it went in the opposite direction?
+\end{exercise} 
+% id=6.11 section=6.4
+
+\begin{exercise}
+We introduced Sudoku as a CSP to be solved by search over partial assignments because
+that is the way people generally undertake solving Sudoku problems.  It is also possible,
+of course, to attack these problems with local search over complete assignments. How well
+would a local solver using the min-conflicts heuristic do on Sudoku problems?
+\end{exercise} 
+% id=6.16 section=6.4
+
+
+%%%% 6.5: The Structure of Problems (3 exercises, 0 labelled)
+%%%% ========================================================
+
+\begin{uexercise}%%Nick Hay Question 4
+Define in your own words the terms constraint, backtracking search, arc consistency,
+backjumping, min-conflicts, and cycle cutset.
+\end{uexercise} 
+% id=6.0 section=6.5
+
+\begin{iexercise}%%Nick Hay Question 4
+Define in your own words the terms constraint, commutativity, arc consistency,
+backjumping, min-conflicts, and cycle cutset.
+\end{iexercise} 
+% id=6.0 section=6.5
+
+\begin{exercise}
+\libex Suppose that a graph is known to have a cycle cutset of no more
+than \(k\) nodes. Describe a simple algorithm for finding a minimal
+cycle cutset whose run time is not much more than \(O(n^k)\) for a CSP with
+\(n\) variables. Search the literature for methods for finding
+approximately minimal cycle cutsets in time that is polynomial in the size
+of the cutset. Does the existence of such algorithms make the cycle
+cutset method practical?
+\end{exercise} 
+% id=6.14 section=6.5
+
+\begin{iexercise}
+Consider the problem of tiling a
+surface (completely and exactly covering it) with \(n\) dominoes (\(2\times
+1\) rectangles). The surface is an arbitrary edge-connected (i.e.,
+adjacent along an edge, not just a corner) collection of
+\(2n\) \(1\times 1\) squares (e.g., a checkerboard, a checkerboard with some
+squares missing, a \(10\times 1\) row of squares, etc.).
+\begin{enumerate}
+\item Formulate this problem precisely as a CSP where
+the dominoes are the variables.
+\item Formulate this problem precisely as a CSP where
+the squares are the variables, keeping the state space as small as possible.
+({\em Hint:} does it matter which particular domino goes on a given pair of squares?)
+\item Construct a surface consisting of 6 squares such that
+your CSP formulation from part (b) has a {\em tree-structured}
+constraint graph.
+\item Describe exactly the set of solvable instances
+that have a tree-structured constraint graph.
+\end{enumerate}
+\end{iexercise} 
+% id=6.17 section=6.5
+
+
+
+
+
+
+
+
+% \begin{exercise}
+% In discussing the cryptarithmetic\index{cryptarithmetic 
+% problem}\index{problem!cryptarithmetic} problem, we proposed that an operator 
+% should assign a value to whichever letter has the least remaining possible 
+% values.  Is this rule guaranteed to produce the smallest possible search 
+% space?  Why (not)?
+% \end{exercise}
+
+%% \begin{exercise}
+%% <<maybe have an exercise on induced width and adaptive consistency?]]
+%% What is the {\it width} of a complete graph (a graph where all nodes are connected 
+%% to each other)?  Of a polygon (a graph where each node is connected to the 
+%% previous and next node, and the last is connected back to the first)?  Of a graph with {\mathdelim}n{\mathdelim} 
+%% nodes where each node has {\mathdelim}k{\mathdelim} connections?
+%% \end{exercise}
+
+
+% \begin{exercise}
+% \prgex Consider the following successor function for an incremental formulation of the 8-queens 
+% problem:\index{problem!eight-queens@8-queens}\index{eight-queens@8-queens 
+% problem} place a queen in the column with the fewest unattacked squares, in 
+% such a way that it does not attack any other queens.  How many nodes does this 
+% expand before it finds a solution?  (You may wish to have a program calculate 
+% this for you.) What CSP heuristic(s) does this implement?
+% \end{exercise}
+

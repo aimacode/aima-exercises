@@ -1,0 +1,587 @@
+%%%% 18.1: Forms of Learning (2 exercises, 1 labelled)
+%%%% =================================================
+
+\begin{exercise}[infant-language-exercise]%
+Consider the problem faced by an infant learning to speak and
+understand a language. Explain how this process fits into the general
+learning model. Describe the percepts and actions of the infant,
+and the types of learning the infant must do. Describe the subfunctions
+the infant is trying to learn in terms of inputs and outputs, and
+available example data.
+\end{exercise} 
+% id=18.0 section=18.1
+
+\begin{exercise}
+Repeat \exref{infant-language-exercise} for the case of learning to
+play tennis (or some other  sport with which you are
+familiar). Is this supervised learning or reinforcement
+learning?
+\end{exercise} 
+% id=18.1 section=18.1
+
+
+%%%% 18.3: Learning Decision Trees (12 exercises, 5 labelled)
+%%%% ========================================================
+
+\begin{iexercise}
+Draw a decision tree for the problem of deciding whether  to
+move forward at a road intersection, given that the light has just
+turned green.
+\end{iexercise} 
+% id=18.2 section=18.3
+
+\begin{iexercise}
+We never test the same attribute twice along one path in a
+decision tree.  Why not?
+\end{iexercise} 
+% id=18.3 section=18.3
+
+\begin{exercise}
+Suppose we generate a training set from a decision tree and then apply
+decision-tree learning to that training set. Is it the case that the
+learning algorithm will eventually return the correct tree as the
+training-set size goes to infinity? Why or why not?
+\end{exercise} 
+% id=18.4 section=18.3
+
+%% \begin{iexercise}
+%% A good ``straw man'' learning algorithm is as follows: create a lookup table
+%% out of all the training examples.  Identify which output occurs most
+%% often among the training examples; call it \(m\).  Then when given an
+%% input that is not in the table, just return \(m\).  For inputs that {\em
+%% are} in the table, return the output associated with them (or the most
+%% frequent output, if there is more than one).  Implement this algorithm and
+%% see how well it does on the restaurant domain.  This should give you an idea
+%% of the baseline for the domain---the minimal performance that any
+%% algorithm should be able to obtain.
+%% \end{iexercise} 
+%% % id=18.5 section=18.3
+
+\begin{exercise}[leaf-classification-exercise]%
+In the recursive construction of decision trees, it sometimes happens that a
+mixed set of positive and negative examples remains at a leaf node, even after
+all the attributes have been used. Suppose that we have \(p\) positive examples
+and \(n\) negative examples.
+\begin{enumerate}
+\item
+Show that the solution used by \prog{Decision-Tree-Learning}, which picks the
+majority classification, minimizes the absolute error over the set of examples
+at the leaf.
+\item Show that the \newterm{class probability}\ntindex{class probability} \(p/(p+n)\)
+minimizes the sum of squared errors.
+\end{enumerate}
+\end{exercise} 
+% id=18.7 section=18.3
+
+\begin{exercise}[nonnegative-gain-exercise]%
+Suppose that an attribute splits the set of examples \(E\) into subsets
+\(E_{\dtvalue}\) and that each subset has \(p_{\dtvalue}\) positive examples and \(n_{\dtvalue}\)
+negative examples. Show that the attribute has strictly positive information
+gain unless the ratio \(p_{\dtvalue}/(p_{\dtvalue}+n_{\dtvalue})\) is the same for all \({\dtvalue}\).
+\end{exercise} 
+% id=18.9 section=18.3
+
+\begin{exercise}
+Consider the following data set comprised of three binary input
+attributes (\(A_1, A_2\), and \(A_3\)) and one binary output:
+
+\medskip
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+{\bf Example} & \(A_1\) & \(A_2\) & \(A_3\) & Output \(y\) \\
+\hline
+\(\x_1\) & 1 & 0 & 0 & 0 \\
+\(\x_2\) & 1 & 0 & 1 & 0 \\
+\(\x_3\) & 0 & 1 & 0 & 0 \\
+\(\x_4\) & 1 & 1 & 1 & 1 \\
+\(\x_5\) & 1 & 1 & 0 & 1 \\
+\hline
+\end{tabular}
+
+\medskip\noindent Use the algorithm in \figref{DTL-algorithm}
+(\pgref{DTL-algorithm}) to learn a decision tree for these data.  Show
+the computations made to determine the attribute to split at each
+node.
+\end{exercise} 
+% id=18.10 section=18.3
+
+\begin{iexercise}
+Construct a data set (set of examples with attributes and
+classifications) that would cause the decision-tree learning algorithm 
+to find a non-minimal-sized tree.  Show the tree
+constructed by the algorithm and the minimal-sized tree that you can
+generate by hand.
+\end{iexercise} 
+% id=18.11 section=18.3
+
+\begin{uexercise}
+A decision {\em graph} is a generalization of a decision tree that
+allows nodes (i.e., attributes used for splits) to have multiple
+parents, rather than just a single parent.  The resulting graph must
+still be acyclic.  Now, consider the XOR function of {\em three} binary
+input attributes, which produces the value 1 if and
+only if an odd number of the three input attributes has value 1.
+\begin{enumerate}
+  \item Draw a minimal-sized decision {\em tree} for the three-input XOR function.
+    \item Draw a minimal-sized decision {\em graph} for the three-input XOR function.
+\end{enumerate}
+\end{uexercise} 
+% id=18.12 section=18.3
+
+\begin{exercise}[pruning-DTL-exercise]%
+This exercise considers \(\chi^2\) pruning of decision trees (\secref{chi-squared-section}).
+\begin{enumerate}
+\item Create a data set with two input attributes, such that the
+information gain at the root of the tree for both attributes is zero,
+but there is a decision tree of depth 2 that is consistent with all the data.
+What would \(\chi^2\) pruning do on this data set if applied bottom up?  If applied top down?
+\item Modify \prog{Decision-Tree-Learning} to include \(\chi^2\)-pruning.  You
+might wish to consult Quinlan~\citeyear{Quinlan:1986} or \citeA{Kearns+Mansour:1998} for details.
+\end{enumerate}
+\end{exercise} 
+% id=18.13 section=18.3
+
+\begin{exercise}[missing-value-DTL-exercise]%
+\prgex
+The standard \prog{Decision-Tree-Learning} algorithm described in the
+chapter does not handle cases in which some examples have missing
+attribute values.
+\begin{enumerate}
+\item First, we need to find a way to classify such examples, given a
+decision tree that includes tests on the attributes for which values
+can be missing. Suppose that an example \(\x\) has a missing value for
+attribute \(A\) and that the decision tree tests for \(A\) at a node that
+\(\x\) reaches. One way to handle this case is to pretend that the
+example has {\it all} possible values for the attribute, but to weight
+each value according to its frequency among all of the examples that
+reach that node in the decision tree. The classification algorithm
+should follow all branches at any node for which a value is missing
+and should multiply the weights along each path.
+Write a modified classification algorithm for decision trees that has
+this behavior.
+\item Now modify the information-gain calculation so that in any given
+collection of examples \(C\) at a given node in the tree during the
+construction process, the examples with missing values for any of the
+remaining attributes are given ``as-if'' values according to the
+frequencies of those values in the set \(C\).
+\end{enumerate}
+\end{exercise} 
+% id=18.14 section=18.3
+
+\begin{exercise}[gain-ratio-DTL-exercise]%
+In \secref{broadening-decision-tree-section}, we noted that attributes with many different possible
+values can cause problems with the gain measure. Such attributes tend
+to split the examples into numerous small classes or even singleton classes,
+thereby appearing to be highly relevant according to the gain measure.
+The \term{gain-ratio}\tindex{gain ratio} criterion selects attributes according to the
+ratio between their gain and their intrinsic information content---that is, the amount of information contained in the answer to the
+question, ``What is the value of this attribute?'' The gain-ratio
+criterion therefore tries to measure how efficiently an attribute
+provides information on the correct classification of an example.
+Write a mathematical expression for the information content of an
+attribute, and implement the gain ratio criterion
+in \prog{Decision-Tree-Learning}.
+\end{exercise} 
+% id=18.15 section=18.3
+
+
+%%%% 18.4: Evaluating and choosing the best hypothesis (1 exercises, 0 labelled)
+%%%% ===========================================================================
+
+\begin{exercise}
+Suppose you are running a learning experiment on a new algorithm for
+Boolean classification. You have a data set consisting of 100 positive
+and 100 negative examples. You plan to use leave-one-out
+cross-validation and compare your algorithm to a baseline function, a
+simple majority classifier. (A majority classifier is given a set of
+training data and then always outputs the class that is in the
+majority in the training set, regardless of the input.)  You expect
+the majority classifier to score about 50\% on leave-one-out
+cross-validation, but to your surprise, it scores zero every time.  Can you
+explain why?
+\end{exercise} 
+% id=18.6 section=18.4
+
+
+%%%% 18.5: The Theory of Learning (4 exercises, 1 labelled)
+%%%% ======================================================
+
+\begin{iexercise}
+Suppose that a learning algorithm is trying to find a consistent hypothesis
+when the classifications of examples are actually random.
+There are \(n\) Boolean attributes, and examples are drawn uniformly from the
+set of \(2^n\) possible examples. Calculate the number of examples required
+before the probability of finding a contradiction in the data reaches 0.5.
+\end{iexercise} 
+% id=18.8 section=18.5
+
+\begin{uexercise}
+Construct a {\em decision list} to classify the data below.  Select
+tests to be as small as possible (in terms of attributes), breaking
+ties among tests with the same number of attributes by selecting the
+one that classifies the greatest number of examples correctly.  If
+multiple tests have the same number of attributes and classify the
+same number of examples, then break the tie using attributes with
+lower index numbers (e.g., select \(A_1\) over \(A_2\)).
+
+\medskip
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\quad{\bf Example}\quad & \quad\(A_1\)\quad & \quad\(A_2\)\quad & \quad\(A_3\)\quad & \quad\(A_4\)\quad & \quad\(y\)\quad  \\
+\hline
+\(\x_1\) & 1 & 0 & 0 & 0 & 1 \\
+\(\x_2\) & 1 & 0 & 1 & 1 & 1\\
+\(\x_3\) & 0 & 1 & 0 & 0 & 1\\
+\(\x_4\) & 0 & 1 & 1 & 0 & 0\\
+\(\x_5\) & 1 & 1 & 0 & 1 & 1 \\
+\(\x_6\) & 0 & 1 & 0 & 1 & 0 \\
+\(\x_7\) & 0 & 0 & 1 & 1 & 1 \\
+\(\x_8\) & 0 & 0 & 1 & 0 & 0 \\
+\hline
+\end{tabular}
+\smallskip
+\end{uexercise} 
+% id=18.18 section=18.5
+
+\begin{exercise}
+Prove that a decision list can represent the same function as a
+decision tree while using at most as many rules as there are leaves in the
+decision tree for that function.  Give an example of a function
+represented by a decision list using strictly fewer rules than the
+number of leaves in a minimal-sized decision tree for that same
+function.
+\end{exercise} 
+% id=18.19 section=18.5
+
+\begin{exercise}[DL-expressivity-exercise]%
+This exercise concerns the expressiveness of decision
+lists (\secref{learning-theory-section}).
+\begin{enumerate}
+\item Show that decision lists
+can represent any Boolean function, if the size of the tests is not limited.
+\item Show that if the tests can contain at most \(k\) literals each,
+then decision lists can represent any function that can be represented
+by a decision tree of depth \(k\).
+\end{enumerate}
+\end{exercise} 
+% id=18.20 section=18.5
+
+
+%%%% 18.7: Nonparametric Models (1 exercises, 1 labelled)
+%%%% ====================================================
+
+\begin{uexercise}[knn-mean-mode]
+Suppose a \(7\)-nearest-neighbors regression 
+search returns  \( \{7, 6, 8, 4, 7, 11, 100\} \)
+as the 7 nearest \(y\) values for a given \(x\) value.
+What is the value of \(\hat{y}\) that minimizes the \(L_1\) loss
+function on this data?  There is a common name in statistics for this
+value as a function of the \(y\) values; what is it?  Answer the same
+two questions for the \(L_2\) loss function.
+\end{uexercise} 
+% id=18.16 section=18.7
+
+\begin{iexercise}[knn-mean-mode]
+Suppose a \(7\)-nearest-neighbors regression 
+search returns  \( \{4, 2, 8, 4, 9, 11, 100\} \)
+as the 7 nearest \(y\) values for a given \(x\) value.
+What is the value of \(\hat{y}\) that minimizes the \(L_1\) loss
+function on this data?  There is a common name in statistics for this
+value as a function of the \(y\) values; what is it?  Answer the same
+two questions for the \(L_2\) loss function.
+\end{iexercise} 
+% id=18.16 section=18.7
+
+
+%%%% 18.8: Support Vector Machines (2 exercises, 1 labelled)
+%%%% =======================================================
+
+\begin{exercise}[svm-ellipse-exercise]
+  \figref{kernel-machine-figure} showed how a circle at the origin can
+be linearly separated by mapping from the features \((x_1, x_2)\) to the
+two dimensions \((x_1^2, x_2^2)\).  But what if the circle is not located
+at the origin? What if it is an ellipse, not a circle?  The general
+equation for a circle (and hence the decision boundary) is \((x_1-a)^2 +
+(x_2-b)^2 - r^2\eq 0\), and the general equation for an ellipse is \(c(x_1-a)^2 + d(x_2-b)^2 - 1 \eq 0\).
+\begin{enumerate}
+  \item Expand out the equation for the circle and show what the weights \(w_i\)
+  would be for the decision boundary in the four-dimensional feature 
+  space \((x_1, x_2, x_1^2, x_2^2)\).
+  Explain why this means that any circle is linearly separable in this space.
+  \item Do the same for ellipses in the five-dimensional 
+   feature space \((x_1, x_2, x_1^2, x_2^2, x_1 x_2)\).
+\end{enumerate}
+\end{exercise} 
+% id=18.21 section=18.8
+
+\begin{exercise}[svm-exercise]
+Construct a support vector machine that computes the {\sc xor} function.  
+Use values of +1 and --1 (instead of 1 and 0) for both inputs and
+outputs, so that an example looks like \(([-1, 1],
+1)\) or \(([-1, -1], -1)\).  Map the input \([x_1,x_2]\) into a
+space consisting of
+\(x_1\) and \(x_1\,x_2\).  Draw the four input points in this space, and
+the maximal margin separator.  What is the margin?  Now draw the separating
+line back in the original Euclidean input space.
+\end{exercise} 
+% id=18.22 section=18.8
+
+
+%%%% 18.9: Ensemble Learning (1 exercises, 1 labelled)
+%%%% =================================================
+
+\begin{exercise}[ensemble-error-exercise]
+Consider an ensemble learning algorithm that uses simple majority
+voting among \({\Ecount}\) learned hypotheses.  Suppose that each hypothesis has
+error \(\epsilon\) and that the errors made by each hypothesis are
+independent of the others'. Calculate a formula for the error of the
+ensemble algorithm in terms of \({\Ecount}\) and \(\epsilon\), and evaluate it for
+the cases where \({\Ecount}\eq 5\), 10, and 20 and \(\epsilon\eq {0.1}\), 0.2, and
+0.4. If the independence assumption is removed, is it possible for the
+ensemble error to be {\em worse} than \(\epsilon\)?
+\end{exercise} 
+% id=18.17 section=18.9
+
+
+%%%% 18.10: Artificial Neural Networks (10 exercises, 4 labelled)
+%%%% ============================================================
+
+\begin{exercise}
+Construct by hand a neural network that computes the {\sc xor}\index{exclusive or} function of
+two inputs. Make sure to specify what sort of units you are using.
+\end{exercise} 
+% id=18.23 section=18.10
+
+\begin{iexercise}
+A simple perceptron\index{perceptron!representational power} cannot represent {\sc xor} (or,
+generally, the parity function of its inputs). Describe what happens
+to the weights of a four-input, hard-threshold perceptron, beginning
+with all weights set to 0.1, as examples of the parity function arrive.
+\end{iexercise} 
+% id=18.24 section=18.10
+
+\begin{exercise}[linear-separability-exercise]
+Recall from \chapref{concept-learning-chapter} that there are
+\(2^{2^{\Acount}}\) distinct Boolean functions of \({\Acount}\) inputs. How many of these
+are representable by a threshold perceptron?
+\end{exercise} 
+% id=18.25 section=18.10
+
+\begin{iexercise}
+%%<<<FIX THIS TABLE - ROTATE IT!!]]
+\prgex Consider the following set of examples, each with six inputs and
+one target output:
+
+\begin{center}
+\begin{tabular}{|l|cccccccccccccc|}
+\hline
+\tabtop \(I_1\)&1&1&1&1&1&1&1&0&0&0&0&0&0&0 \\
+\(I_2\)&0&0&0&1&1&0&0&1&1&0&1&0&1&1 \\
+\(I_3\)&1&1&1&0&1&0&0&1&1&0&0&0&1&1 \\
+\(I_4\)&0&1&0&0&1&0&0&1&0&1&1&1&0&1 \\
+\(I_5\)&0&0&1&1&0&1&1&0&1&1&0&0&1&0 \\
+\tabbot \(I_6\)&0&0&0&1&0&1&0&1&1&0&1&1&1&0 \\
+\hline
+\tabhead \(T\)  &1&1&1&1&1&1&0&1&0&0&0&0&0&0 \\
+\hline
+\end{tabular}
+\end{center}
+
+\smallskip
+
+\begin{enumerate}
+\item Run the perceptron learning rule on these data and show the
+final weights. 
+\item Run the decision tree learning rule, and
+show the resulting decision tree. 
+\item Comment on your results.
+\end{enumerate}
+\end{iexercise} 
+% id=18.26 section=18.10
+
+\begin{exercise}[perceptron-ML-gradient-exercise]
+\secref{logistic-regression-section}
+(\pgref{logistic-regression-section}) noted that the output of the
+logistic function could be interpreted as a {\em probability} \(p\)
+assigned by the model to the proposition that \(f(\x)\eq 1\); the
+probability that \(f(\x)\eq 0\) is therefore \(1-p\).  Write down the
+probability \(p\) as a function of \(\x\) and calculate the derivative
+of \(\log p\) with respect to each weight \(w_i\).  Repeat the process
+for \(\log (1-p)\). These calculations give a learning rule for
+minimizing the negative-log-likelihood loss function for a
+probabilistic hypothesis. Comment on any resemblance to other learning
+rules in the chapter.
+\end{exercise} 
+% id=18.27 section=18.10
+
+\begin{exercise}[linear-nn-exercise]%
+Suppose you had a neural network with linear activation functions.  That is,
+for each unit the output is some constant \(c\) times the weighted sum of the
+inputs.
+\begin{enumerate}
+\item 
+Assume that the network has one hidden layer.  For a given assignment to
+the weights \(\bw\), write down equations for the value of the units in the
+output layer as a function of \(\bw\) and the input layer \(\x\), without
+any explicit mention of the output of the hidden layer.  Show that there is
+a network with no hidden units that computes the same function.
+
+\item  Repeat the calculation in part (a), but this time do it for a network with any
+number of hidden layers.  
+
+\item Suppose a network with one hidden layer and linear activation functions has \(n\) input and output nodes and \(h\) hidden nodes.
+What effect does the transformation in part (a) to a network with no
+hidden layers have on the total number of weights? Discuss in
+particular the case \(h \ll n\).
+\end{enumerate}
+\end{exercise} 
+% id=18.28 section=18.10
+
+\begin{iexercise} \prgex
+Implement a data structure for layered, feed-forward neural networks,
+remembering to provide the information needed for both forward
+evaluation and backward propagation.
+Using this data structure, 
+write a function \noprog{Neural-Network-Output} that takes an example
+and a network and computes the appropriate output values.
+\end{iexercise} 
+% id=18.29 section=18.10
+
+\begin{uexercise}
+Suppose that a training set contains only a single example, repeated 100
+times. In 80 of the 100 cases, the single output value is 1; in the other 20,
+it is 0. What will a back-propagation network predict for this
+example, assuming that it has been trained and reaches a global optimum? ({\em
+Hint:} to find the global optimum, differentiate the error function and set it to
+zero.)
+\end{uexercise} 
+% id=18.30 section=18.10
+
+\begin{exercise}
+The neural network whose learning performance is measured in \figref{restaurant-back-prop-figure} has four hidden
+nodes. This number was chosen somewhat arbitrarily. Use a
+cross\index{cross-validation}-validation method to find the best
+number of hidden nodes.
+\end{exercise} 
+% id=18.31 section=18.10
+
+\begin{exercise}[embedding-separability-exercise]
+Consider the problem of separating \(N\) data points into positive and negative
+examples using a linear separator. Clearly, this can always be done
+for \(N\eq2\) points on a line of dimension \(d\eq1\),
+regardless of how the points are labeled or where they are located
+(unless the points are in the same place).
+\begin{enumerate}
+\item Show that it can always be done for \(N\eq3\) points
+on a plane of dimension \(d\eq2\), unless they are collinear.
+\item Show that it cannot always be done for \(N\eq4\) points
+on a plane of dimension \(d\eq2\).
+\item Show that it can always be done for \(N\eq4\) points
+in a space of dimension \(d\eq3\), unless they are coplanar.
+\item Show that it cannot always be done for \(N\eq5\) points
+in a space of dimension \(d\eq3\).
+\item The ambitious student may wish to prove that
+\(N\) points in general position (but not \(N+1\)) are linearly separable in a 
+space of dimension \(N-1\). 
+%% From this it follows that 
+%% the \termi{VC dimension} (see \chapref{concept-learning-chapter}) 
+%% of linear halfspaces in dimension \(N-1\) is \(N\).
+\end{enumerate}
+
+
+\end{exercise} 
+% id=18.32 section=18.10
+
+%% <<need to check on 281 assignments, 188 exams, IBL assignments, 
+%% Mitchell exercises]]
+
+
+%% \begin{exercise}
+%% Consider the problem of \newterm{sequence prediction}\ntindex{sequence prediction}, commonly used
+%% in intelligence tests.  A typical instance gives a sequence of numbers
+%% such as [1,4,9,16] and asks for the next number in the sequence.  What
+%% techniques from this chapter are applicable to this problem?  
+%% \end{exercise}
+
+
+%% \begin{exercise}
+%% We have shown how a learning element can improve the
+%% performance\index{performance element} element.
+%% What if we wanted to improve the learning element (or the critic\index{critic (in learning)} or the
+%% problem\index{problem generator} generator)?  Give some examples of this kind of improvement in the
+%% taxi domain.  Is it possible to represent this kind of learning with our
+%% general model of learning agents?  How?
+%% \end{exercise}
+
+
+%% \begin{exercise}
+%% Construct a support vector machine that computes the XOR function.  It
+%% will be convenient to use values of 1 and --1 instead of 1 and 0 for
+%% the inputs and for the outputs.  So an example looks like \(([-1, 1],
+%% 1)\) or \(([-1, -1], -1)\). It is typical to map an input \(\x\) into a
+%% space consisting of five dimensions, the two original dimensions \(x_1\)
+%% and \(x_2\), and the three combination \(x_1^2\), \(x_2^2\) and
+%% \(x_1\,x_2\). But for this exercise we will consider only the two dimensions
+%% \(x_1\) and \(x_1\,x_2\).  Draw the four input points in this space, and
+%% the maximal margin separator.  What is the margin?  Now draw the separating
+%% line back in the original Euclidean input space.
+%% \label{svm-exercise}
+%% \end{exercise}
+
+
+%\begin{figure}[htbp]
+%\epsfxsize=4.5in
+%\figboxnew{figures/linear-sep2.eps}
+%\caption{Linear separation in the X space.} \label{linear-sep2-figure}
+%\end{figure}
+%
+%\begin{exercise}
+%
+%Another way to look at linearly separable functions is to consider a transformation of the input space.  For any example input/target pair we can define the vector \(\mbf{X}\) by
+%\[ X_i = \left\{ \begin{array}{ll} I_i & \mbox{if} T = 1 \\
+%				 -I_i & \mbox{otherwise}\end{array} \right. \]
+%Assuming we have used {\mathdelim}W_0{\mathdelim} for the threshold, then in the {\mathdelim}\mbf{X}{\mathdelim}
+%space the goal is to find a hyperplane through the origin that places
+%all the points on one side of the plane.   \figref{linear-sep2-figure}(b)
+%shows an example of finding linearly separating lines in the {\mathdelim}\mbf{X}{\mathdelim}
+%space.  Notice that the same answers are found as in the {\mathdelim}\mbf{I}{\mathdelim}
+%space.  The advantage of the {\mathdelim}\mbf{X}{\mathdelim} space is that it suggests
+%algorithms for addressing the problem.  For example, to decide if a
+%function is linearly separable or not, all we have to do is form the
+%convex hull\footnote{The convex hull of a set of points is the smallest
+%convex figure that contains all the points.} of the points in {\mathdelim}\mbf{X}{\mathdelim}
+%space and test if the origin is inside the hull.
+%
+%\figref{linear-sep2-figure}(b) suggests an algorithm for learning a linearly separable
+%function from a set of training examples:
+%
+%\begin{enumerate}
+%\item Represent the training examples in the {\mathdelim}\mbf{X}{\mathdelim} space, with {\mathdelim}W_0{\mathdelim} being
+%the threshold.
+%
+%\item Measure the angle from the origin to each example point in {\mathdelim}\mbf{X}{\mathdelim} space.  Keep track of the minimum and maximum angles.
+%
+%\item If the difference {\mathdelim}\delta{\mathdelim} between the maximum and minimum angles
+%is more than {\mathdelim}180^\circ{\mathdelim}, then the function is not linearly separable.
+%
+%\item If  {\mathdelim}\delta < 180^\circ{\mathdelim}, there is a solution.  Choose as a
+%solution the line that is half way between the maximum and {\mathdelim}180^\circ{\mathdelim}
+%plus the minimum.
+%
+%For example, in \figref{linear-sep2-figure}(b), the minimum
+%angle is about {\mathdelim}-25^\circ{\mathdelim}, and the maximum is about {\mathdelim}145^\circ{\mathdelim} (where
+%{\mathdelim}0^\circ{\mathdelim} is along the positive {\mathdelim}X_2{\mathdelim} axis).  So {\mathdelim}\delta = 170^\circ{\mathdelim},
+%and the answer is {\mathdelim}\frac{145^\circ + (180^\circ + -25^\circ)}{2} = 150^\circ{\mathdelim}.
+%
+%\end{enumerate}
+%
+%(a) Determine the running time of this algorithm, and compare it to the
+%perceptron learning rule.  (b) Make sure the algorithm generalizes to more 
+%than two dimensions.
+%<<I haven't seen this approach mentioned anywhere,
+%%but it seems to me to be obviously correct, and in 2D it has time {\mathdelim}O(n){\mathdelim}
+%%where {\mathdelim}n{\mathdelim} is the number of examples.  I've asked the Berkeley computational
+%%geometry crowd about it.}>>
+%
+%\end{exercise}
+%

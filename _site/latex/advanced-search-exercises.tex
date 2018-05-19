@@ -1,0 +1,305 @@
+%%%% 4.1: Local Search Algorithms and Optimization Problems (4 exercises, 1 labelled)
+%%%% ================================================================================
+
+\begin{exercise}
+Give the name of the algorithm that results from each of the following
+special cases:
+\begin{enumerate}
+\item Local beam search with \(k = 1\).
+\item Local beam search with one initial state and no limit on the
+number of states retained.
+\item Simulated annealing with \(T = 0\) at all times (and omitting the
+termination test).
+\item Simulated annealing with \(T=\infty\) at all times.
+\item Genetic algorithm with population size \(N = 1\).
+\end{enumerate}
+\end{exercise} 
+% id=4.0 section=4.1
+
+\begin{exercise}
+\exref{brio-exercise} considers the problem of building railway tracks under the assumption that pieces fit exactly with no slack.
+Now consider the real problem, in which pieces don't fit exactly
+but allow for up to 10 degrees of rotation to either side of the ``proper'' alignment.
+Explain how to formulate the problem so it could be solved by simulated annealing.
+\end{exercise} 
+% id=4.1 section=4.1.2
+
+\begin{uexercise}%
+\prgex In this exercise, we explore the use of local search methods
+to solve TSPs of the type defined in \exref{tsp-mst-exercise}.
+\begin{enumerate}
+\item Implement and test a hill-climbing method to solve TSPs.
+Compare the results with optimal solutions obtained from the
+A{\star} algorithm with the MST heuristic (\exref{tsp-mst-exercise}).
+\item Repeat part (a) using a genetic algorithm instead of hill
+climbing.  You may want to consult \citeA{Larranaga+al:1999} for some
+suggestions for representations.
+\end{enumerate}
+\end{uexercise} 
+% id=4.10 section=4.1
+
+\begin{exercise}[hill-climbing-exercise]%
+\prgex Generate a large number of 8-puzzle and 8-queens instances and
+solve them (where possible) by hill\index{hill climbing} climbing
+(steepest-ascent and first-choice variants), hill climbing with
+random\index{random restart} restart, and simulated\index{simulated
+annealing} annealing.  Measure the search cost and percentage of
+solved problems and graph these against the optimal solution
+cost. Comment on your results.
+\end{exercise} 
+% id=4.11 section=4.1
+
+
+%%%% 4.3: Searching with Nondeterministic Actions (2 exercises, 2 labelled)
+%%%% ======================================================================
+
+\begin{exercise}[cond-plan-repeated-exercise]
+The \prog{And-Or-Graph-Search} algorithm in
+\figref{and-or-graph-search-algorithm} checks for repeated states only
+on the path from the root to the current state.
+Suppose that, in addition, the algorithm were to store {\em every}
+visited state and check against that list. (See \prog{Breadth-First-Search} in
+\figref{breadth-first-search-algorithm} for an example.) Determine the
+information that should be stored and how the algorithm should use
+that information when a repeated state is found. ({\em Hint}: You will
+need to distinguish at least between states for which a successful
+subplan was constructed previously and states for which no subplan
+could be found.) Explain how to use labels\index{label (in
+plans)}, as defined in \secref{cyclic-plan-section}, to avoid having multiple copies of subplans.
+\end{exercise} 
+% id=4.2 section=4.3.2
+
+\begin{exercise}[cond-loop-exercise]\prgex
+Explain precisely how to modify the \prog{And-Or-Graph-Search} algorithm
+to generate a cyclic plan if no acyclic plan exists. You will need to deal
+with three issues: labeling the plan steps so that a cyclic
+plan can point back to an earlier part of the plan, modifying
+\prog{Or-Search} so that it continues to look for acyclic plans after
+finding a cyclic plan, and augmenting the plan representation to
+indicate whether  a plan is cyclic. Show how your algorithm
+works on (a) the slippery vacuum world, and (b) 
+the slippery, erratic vacuum world. You might wish to use a
+computer implementation to check your results.
+\end{exercise} 
+% id=4.3 section=4.3.3
+
+
+%%%% 4.4: Searching with Partial Observations (5 exercises, 4 labelled)
+%%%% ==================================================================
+
+\begin{exercise}%%Nick Hay Question 4
+In \secref{conformant-section} we introduced belief states to solve sensorless search
+problems.  A sequence of actions solves a sensorless problem if it maps
+every physical state in the initial belief state \(b\) to a goal state.  Suppose the agent knows \(h^*(s)\), the true optimal cost of solving the physical state \(s\) in the fully observable problem, for every state \(s\) in \(b\).
+Find an admissible heuristic \(h(b)\) for the sensorless problem in terms of these costs, and prove its admissibilty.
+Comment on the accuracy of this heuristic on the
+sensorless vacuum problem of \figref{vacuum2-sets-figure}.  How well does A{\star}
+perform?
+\end{exercise} 
+% id=4.4 section=4.4.1
+
+\begin{exercise}[belief-state-superset-exercise]
+This exercise explores subset--superset relations between belief states in sensorless or partially observable environments.
+\begin{enumerate}
+\item Prove that if an action sequence is a solution for a belief state \(b\), it is also a solution for any subset of \(b\). Can anything be said about supersets of \(b\)?
+\item Explain in detail how to modify graph search for sensorless problems to take advantage of your answers in (a).
+\item Explain in detail how to modify {\sc and--or} search for partially observable problems, beyond the
+modifications you describe in (b).
+\end{enumerate}
+\end{exercise} 
+% id=4.5 section=4.4
+
+\begin{exercise}[multivalued-sensorless-exercise]
+On \pgref{multivalued-sensorless-page} it was assumed that a given
+action would have the same cost when executed in any physical state
+within a given belief state. (This leads to a belief-state search
+problem with well-defined step costs.) Now consider what happens when
+the assumption does not hold. Does the notion of optimality still make
+sense in this context, or does it require modification?  Consider also
+various possible definitions of the ``cost'' of executing an action in
+a belief state; for example, we could use the {\em minimum} of the
+physical costs; or the {\em maximum}; or a cost {\em interval} with
+the lower bound being the minimum cost and the upper bound being the
+maximum; or just keep the set of all possible costs for that
+action. For each of these, explore whether A{\star} (with modifications if
+necessary) can return optimal solutions.
+\end{exercise} 
+% id=4.6 section=4.4
+
+\begin{uexercise}[vacuum-solvable-exercise]%from Ch 3
+Consider the sensorless version of the erratic vacuum\index{vacuum world} world.
+Draw the belief-state space reachable from the initial belief state 
+\(\{\N{1,2,3,4,5,6,7,8}\}\), and explain why the problem is unsolvable.
+\end{uexercise} 
+% id=4.7 section=4.4
+
+\begin{iexercise}[vacuum-solvable-exercise]%from Ch 3
+Consider the sensorless version of the erratic vacuum\index{vacuum world} world.
+Draw the belief-state space reachable from the initial belief state 
+\(\{\N{1,3,5,7}\}\), and explain why the problem is unsolvable.
+\end{iexercise} 
+% id=4.7 section=4.4
+
+\begin{exercise}[path-planning-agent-exercise]%
+\prgex
+We can turn the navigation problem in \exref{path-planning-exercise}
+into an environment as follows:
+\begin{itemize} 
+\item The percept will be a list of
+the positions, {\em relative to the agent}, of the visible vertices.
+The percept does {\em not} include the position of the robot!
+The robot must learn its own position from the map; for now, you
+can assume that each location has a different ``view.''
+\item Each action will be a vector describing
+a straight-line path to follow. If the path is unobstructed,
+the action succeeds; otherwise, the robot stops at the point
+where its path first intersects an obstacle.
+If the agent returns a zero motion vector and is at the goal (which is
+fixed and known), then the
+environment teleports the agent to a {\it random location}
+(not inside an obstacle).
+\item The performance measure charges the agent 1 point for each unit
+of distance traversed and awards 1000 points each time the goal is reached. 
+\end{itemize}
+\begin{enumerate}
+\item Implement this environment and a problem-solving agent for it.
+After each
+teleportation, the agent will need to formulate a new problem, which will involve discovering its current location.
+\item Document your agent's performance (by having the agent generate
+suitable commentary as it moves around) and 
+report its performance over 100 episodes.
+\item Modify the environment so that 30\% of the time the agent ends up
+at an unintended destination
+(chosen randomly from the other visible vertices if any; otherwise, no
+move at all). This is a crude model of the motion errors of a real robot.
+Modify the agent so that when such an error is detected, 
+it finds out where it is and then constructs a plan to
+get back to where it was and resume the old plan. Remember that
+sometimes getting back to where it was might also fail! Show an example
+of the agent successfully overcoming two successive motion errors and
+still reaching the goal.
+\item Now try two different recovery schemes after an error: (1) head for
+the closest vertex on the original route; and (2) replan a route to the
+goal from the new location. Compare the performance of the three
+recovery schemes. Would the inclusion of search costs affect the
+comparison?
+\item Now suppose that there are locations from which the view is
+identical. (For example, suppose the world is a grid with square
+obstacles.) What kind of problem does the agent now face? What do
+solutions look like?
+\end{enumerate} 
+\end{exercise} 
+% id=4.9 section=4.4
+
+
+%%%% 4.5: Online Search Agents and Unknown Environments (4 exercises, 2 labelled)
+%%%% ============================================================================
+
+\begin{uexercise}[online-offline-exercise]%
+Suppose that an agent is in a \(3\stimes 3\) maze environment like the
+one shown in \figref{maze-3x3-figure}. The agent knows that its initial
+location is (1,1), that the goal is at (3,3), and that the
+actions \(\J{Up}\), \(\J{Down}\), \(\J{Left}\), \(\J{Right}\) have their usual effects unless
+blocked by a wall. The agent does {\em not} know where the internal walls are.
+In any given state, the agent perceives the set of legal actions;
+it can also tell whether the state is one it has visited before.
+\begin{enumerate}
+\item Explain how this online search problem can be viewed
+as an offline search in belief-state space,
+where the initial belief state includes all possible environment
+configurations. How large is the initial belief state? How large is
+the space of belief states?  
+\item How many distinct percepts are possible in the initial state?
+\item Describe the first few branches of a contingency plan for this problem.
+How large (roughly) is the complete plan?
+\end{enumerate}
+Notice that this contingency plan is a solution for {\em every
+possible environment} fitting the given description. Therefore,
+interleaving of search and execution is not strictly necessary even in
+unknown environments.
+\end{uexercise} 
+% id=4.8 section=4.5.1
+
+\begin{iexercise}[online-offline-exercise]%
+Suppose that an agent is in a \(3\stimes 3\) maze environment like the
+one shown in \figref{maze-3x3-figure}. The agent knows that its initial
+location is (3,3), that the goal is at (1,1), and that the four
+actions \(\J{Up}\), \(\J{Down}\), \(\J{Left}\), \(\J{Right}\) have their usual effects unless
+blocked by a wall. The agent does {\em not} know where the internal walls are.
+In any given state, the agent perceives the set of legal actions;
+it can also tell whether the state is one it has visited before or is a
+new state.
+\begin{enumerate}
+\item Explain how this online search problem can be viewed
+as an offline search in belief-state space,
+where the initial belief state includes all possible environment
+configurations. How large is the initial belief state? How large is
+the space of belief states?  
+\item How many distinct percepts are possible in the initial state?
+\item Describe the first few branches of a contingency plan for this problem.
+How large (roughly) is the complete plan?
+\end{enumerate}
+Notice that this contingency plan is a solution for {\em every
+possible environment} fitting the given description. Therefore,
+interleaving of search and execution is not strictly necessary even in
+unknown environments.
+\end{iexercise} 
+% id=4.8 section=4.5.1
+
+\begin{exercise}[path-planning-hc-exercise]%
+\prgex
+In this exercise, we examine hill climbing in the context of
+robot navigation, using the environment in
+\figref{geometric-scene-figure} as an example.
+\begin{enumerate}
+\item Repeat \exref{path-planning-agent-exercise} using hill climbing.
+Does your agent ever get stuck in a local
+minimum? Is it {\it possible} for it to get stuck with convex
+obstacles? 
+\item Construct a nonconvex polygonal environment in which the agent
+gets stuck.
+\item Modify the hill-climbing algorithm so that, instead of doing a
+depth-1 search to decide where to go next, it does a depth-\(k\)
+search. It should find the best \(k\)-step path and do one step along
+it, and then repeat the process. 
+\item Is there some \(k\) for which the new algorithm is
+guaranteed to escape from local minima?
+\item Explain how LRTA{\star} enables the agent to escape from local minima
+in this case.
+\end{enumerate}
+\end{exercise} 
+% id=4.12 section=4.5
+
+\begin{uexercise}%%Nick Hay Question 1
+Like DFS, online DFS is incomplete for reversible state spaces with
+infinite paths.  For example, suppose that states are points on the infinite
+two-dimensional grid and actions are unit vectors \((1,0)\), \((0,1)\), \((-1,0)\), \((0,-1)\), tried in that order. Show that
+online DFS starting at \((0,0)\) will not reach \((1,-1)\).  Suppose the
+agent can observe, in addition to its current state, all successor
+states and the actions that would lead to them.  Write an algorithm
+that is complete even for bidirected state spaces with infinite paths.
+What states does it visit in reaching \((1,-1)\)?
+\end{uexercise} 
+% id=4.13 section=4.5
+
+\begin{iexercise}
+Relate the time complexity of LRTA{\star} to its space complexity.
+\end{iexercise} 
+% id=4.14 section=4.5
+
+
+
+%%%\setlength{\medskipamount}{1.5\medskipamount}%%%%% Mona's suggestion
+%%<<<need some basic exercvises on poproblems, bstates, etc etc]]
+
+
+
+% \begin{exercise}\label{safe-ratio-exercise}
+% Extend the state spaces in \figref{dead-end-figure}(a) to make them
+% safely explorable, and prove that no bounded competitive ratio can be
+% guaranteed in safely explorable environments.
+%\end{exercise}
+
+
+
+%%%\setlength{\medskipamount}{0.6666667\medskipamount}%%%%% Mona's suggestion

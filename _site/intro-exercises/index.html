@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main –  – </title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    
+    <meta name="author" content="" />
+
+    
+    <meta property="og:title" content="Main" />
+    <meta property="twitter:title" content="Main" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+<label for="toggletoc" class="toc-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="1-introduction">1. Introduction</h1>
+
+<p>These exercises are intended to stimulate discussion, and some might be
+set as term projects. Alternatively, preliminary attempts can be made
+now, and these attempts can be reviewed after the completion of the
+book.</p>
+
+<h3 id="exercise-11">Exercise 1.1</h3>
+<p>Define in your own words: (a) intelligence, (b) artificial intelligence,
+(c) agent, (d) rationality, (e) logical reasoning.</p>
+
+<h3 id="exercise-12">Exercise 1.2</h3>
+<p>Read Turing’s original paper on AI @Turing:1950. In the paper, he
+discusses several objections to his proposed enterprise and his test for
+intelligence. Which objections still carry weight? Are his refutations
+valid? Can you think of new objections arising from developments since
+he wrote the paper? In the paper, he predicts that, by the year 2000, a
+computer will have a 30% chance of passing a five-minute Turing Test
+with an unskilled interrogator. What chance do you think a computer
+would have today? In another 50 years?</p>
+
+<h3 id="exercise-13">Exercise 1.3</h3>
+<p>Every year the Loebner Prize is awarded to the program that comes
+closest to passing a version of the Turing Test. Research and report on
+the latest winner of the Loebner prize. What techniques does it use? How
+does it advance the state of the art in AI?</p>
+
+<h3 id="exercise-14">Exercise 1.4</h3>
+<p>Are reflex actions (such as flinching from a hot stove) rational? Are
+they intelligent?</p>
+
+<h3 id="exercise-15">Exercise 1.5</h3>
+<p>There are well-known classes of problems that are intractably difficult
+for computers, and other classes that are provably undecidable. Does
+this mean that AI is impossible?</p>
+
+<h3 id="exercise-16">Exercise 1.6</h3>
+<p>Suppose we extend Evans’s <em>SYSTEM</em> program so that it can score 200 on a standard
+IQ test. Would we then have a program more intelligent than a human?
+Explain.</p>
+
+<h3 id="exercise-17">Exercise 1.7</h3>
+<p>The neural structure of the sea slug <em>Aplysia</em> has been
+widely studied (first by Nobel Laureate Eric Kandel) because it has only
+about 20,000 neurons, most of them large and easily manipulated.
+Assuming that the cycle time for an <em>Aplysia</em> neuron is
+roughly the same as for a human neuron, how does the computational
+power, in terms of memory updates per second, compare with the high-end
+computer described in (Figure <a href="#/">computer-brain-table</a>)?</p>
+
+<h3 id="exercise-18">Exercise 1.8</h3>
+<p>How could introspection—reporting on one’s inner thoughts—be inaccurate?
+Could I be wrong about what I’m thinking? Discuss.</p>
+
+<h3 id="exercise-19">Exercise 1.9</h3>
+<p>To what extent are the following computer systems instances of
+artificial intelligence:</p>
+
+<ul>
+  <li>
+    <p>Supermarket bar code scanners.</p>
+  </li>
+  <li>
+    <p>Web search engines.</p>
+  </li>
+  <li>
+    <p>Voice-activated telephone menus.</p>
+  </li>
+  <li>
+    <p>Internet routing algorithms that respond dynamically to the state of
+the network.</p>
+  </li>
+</ul>
+
+<h3 id="exercise-110">Exercise 1.10</h3>
+<p>To what extent are the following computer systems instances of
+artificial intelligence:</p>
+
+<ul>
+  <li>
+    <p>Supermarket bar code scanners.</p>
+  </li>
+  <li>
+    <p>Voice-activated telephone menus.</p>
+  </li>
+  <li>
+    <p>Spelling and grammar correction features in Microsoft Word.</p>
+  </li>
+  <li>
+    <p>Internet routing algorithms that respond dynamically to the state of the network.</p>
+  </li>
+</ul>
+
+<h3 id="exercise-111">Exercise 1.11</h3>
+<p>Many of the computational models of cognitive activities that have been
+proposed involve quite complex mathematical operations, such as
+convolving an image with a Gaussian or finding a minimum of the entropy
+function. Most humans (and certainly all animals) never learn this kind
+of mathematics at all, almost no one learns it before college, and
+almost no one can compute the convolution of a function with a Gaussian
+in their head. What sense does it make to say that the “vision system”
+is doing this kind of mathematics, whereas the actual person has no idea
+how to do it?</p>
+
+<h3 id="exercise-112">Exercise 1.12</h3>
+<p>Some authors have claimed that perception and motor skills are the most
+important part of intelligence, and that “higher level” capacities are
+necessarily parasitic—simple add-ons to these underlying facilities.
+Certainly, most of evolution and a large part of the brain have been
+devoted to perception and motor skills, whereas AI has found tasks such
+as game playing and logical inference to be easier, in many ways, than
+perceiving and acting in the real world. Do you think that AI’s
+traditional focus on higher-level cognitive abilities is misplaced?</p>
+
+<h3 id="exercise-113">Exercise 1.13</h3>
+<p>Why would evolution tend to result in systems that act rationally? What
+goals are such systems designed to achieve?</p>
+
+<h3 id="exercise-114">Exercise 1.14</h3>
+<p>Is AI a science, or is it engineering? Or neither or both? Explain.</p>
+
+<h3 id="exercise-115">Exercise 1.15</h3>
+<p>“Surely computers cannot be intelligent—they can do only what their
+programmers tell them.” Is the latter statement true, and does it imply
+the former?</p>
+
+<h3 id="exercise-116">Exercise 1.16</h3>
+<p>“Surely animals cannot be intelligent—they can do only what their genes
+tell them.” Is the latter statement true, and does it imply the former?</p>
+
+<h3 id="exercise-117">Exercise 1.17</h3>
+<p>“Surely animals, humans, and computers cannot be intelligent—they can do
+only what their constituent atoms are told to do by the laws of
+physics.” Is the latter statement true, and does it imply the former?</p>
+
+<h3 id="exercise-118">Exercise 1.18</h3>
+<p>Examine the AI literature to discover whether the following tasks can
+currently be solved by computers:</p>
+
+<ul>
+  <li>Playing a decent game of table tennis (Ping-Pong).</li>
+  <li>Driving in the center of Cairo, Egypt.</li>
+  <li>Driving in Victorville, California.</li>
+  <li>Buying a week’s worth of groceries at the market.</li>
+  <li>Buying a week’s worth of groceries on the Web.</li>
+  <li>Playing a decent game of bridge at a competitive level.</li>
+  <li>Discovering and proving new mathematical theorems.</li>
+  <li>Writing an intentionally funny story.</li>
+  <li>Giving competent legal advice in a specialized area of law.</li>
+  <li>Translating spoken English into spoken Swedish in real time.</li>
+  <li>Performing a complex surgical operation.</li>
+</ul>
+
+<h3 id="exercise-119">Exercise 1.19</h3>
+<p>For the currently infeasible tasks, try to find out what the
+difficulties are and predict when, if ever, they will be overcome.</p>
+
+<h3 id="exercise-120">Exercise 1.20</h3>
+<p>Various subfields of AI have held contests by defining a standard task
+and inviting researchers to do their best. Examples include the DARPA
+Grand Challenge for robotic cars, the International Planning
+Competition, the Robocup robotic soccer league, the TREC information
+retrieval event, and contests in machine translation and speech
+recognition. Investigate five of these contests and describe the
+progress made over the years. To what degree have the contests advanced
+the state of the art in AI? To what degree do they hurt the field by
+drawing energy away from new ideas?</p>
+
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
