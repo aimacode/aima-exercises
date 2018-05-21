@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main –  – </title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    
+    <meta name="author" content="" />
+
+    
+    <meta property="og:title" content="Main" />
+    <meta property="twitter:title" content="Main" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
+		<ol>
+			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
+			<li><a href="/fol-exercises">8. First Order Logic</a></li>
+			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
+			<li><a href="/planning-exercises">10. Classical Planning</a></li>
+			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
+			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2163; Uncertain knowledge and reasoning</span>
+		<ol>
+			<li><a href="/probability-exercises">13. Quantifying Uncertainity</a></li>
+			<li><a href="/bayes-nets-exercises">14. Probabilistic Reasoning</a></li>
+			<li><a href="/dbn-exercises">15. Probabilistic Reasoning Over Time</a></li>
+			<li><a href="/decision-theory-exercises">16. Making Simple Decisions</a></li>
+			<li><a href="/complex-decisions-exercises">17. Making Complex Decision</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2164; Learning</span>
+		<ol>
+			<li><a href="/concept-learning-exercises">18. Learning From Examples</a></li>
+			<li><a href="/ilp-exercises">19. Knowledge In Learning</a></li>
+			<li><a href="/bayesian-learning-exercises">20. Learning Probabilistic Models</a></li>
+			<li><a href="/reinforcement-learning-exercises">21. Reinforcement Learning</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+<label for="toggletoc" class="toc-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="making-complex-decisions">17. Making Complex Decisions</h1>
+
+<p><strong>17.1</strong> [mdp-model-exercise]For the $4\times 3$ world shown in
+Figure <a href="#/">sequential-decision-world-figure</a>, calculate
+which squares can be reached from (1,1) by the action sequence
+$[{Up},{Up},{Right},{Right},{Right}]$ and with what
+probabilities. Explain how this computation is related to the prediction
+task (see Section <a href="#/">general-filtering-section</a>) for a
+hidden Markov model.</p>
+
+<p><strong>17.2</strong> [mdp-model-exercise]For the $4\times 3$ world shown in
+Figure <a href="#/">sequential-decision-world-figure</a>, calculate
+which squares can be reached from (1,1) by the action sequence
+$[{Right},{Right},{Right},{Up},{Up}]$ and with what
+probabilities. Explain how this computation is related to the prediction
+task (see Section <a href="#/">general-filtering-section</a>) for a
+hidden Markov model.</p>
+
+<p><strong>17.3</strong> Select a specific member of the set of policies that are optimal for
+$R(s)&gt;0$ as shown in
+Figure <a href="#/">sequential-decision-policies-figure</a>(b), and
+calculate the fraction of time the agent spends in each state, in the
+limit, if the policy is executed forever. (<em>Hint</em>:
+Construct the state-to-state transition probability matrix corresponding
+to the policy and see
+Exercise <a href="#/">markov-convergence-exercise</a>.)</p>
+
+<p><strong>17.4</strong> [nonseparable-exercise]Suppose that we define the utility of a state
+sequence to be the <em>maximum</em> reward obtained in any state
+in the sequence. Show that this utility function does not result in
+stationary preferences between state sequences. Is it still possible to
+define a utility function on states such that MEU decision making gives
+optimal behavior?</p>
+
+<p><strong>17.5</strong> Can any finite search problem be translated exactly into a Markov
+decision problem such that an optimal solution of the latter is also an
+optimal solution of the former? If so, explain <em>precisely</em>
+how to translate the problem and how to translate the solution back; if
+not, explain <em>precisely</em> why not (i.e., give a
+counterexample).</p>
+
+<p><strong>17.6</strong> [reward-equivalence-exercise] Sometimes MDPs are formulated with a
+reward function $R(s,a)$ that depends on the action taken or with a
+reward function $R(s,a,s’)$ that also depends on the outcome state.</p>
+
+<ol>
+  <li>
+    <p>Write the Bellman equations for these formulations.</p>
+  </li>
+  <li>
+    <p>Show how an MDP with reward function $R(s,a,s’)$ can be transformed
+into a different MDP with reward function $R(s,a)$, such that
+optimal policies in the new MDP correspond exactly to optimal
+policies in the original MDP.</p>
+  </li>
+  <li>
+    <p>Now do the same to convert MDPs with $R(s,a)$ into MDPs with $R(s)$.</p>
+  </li>
+</ol>
+
+<p><strong>17.7</strong> [threshold-cost-exercise]For the environment shown in
+Figure <a href="#/">sequential-decision-world-figure</a>, find all the
+threshold values for $R(s)$ such that the optimal policy changes when
+the threshold is crossed. You will need a way to calculate the optimal
+policy and its value for fixed $R(s)$. (<em>Hint</em>: Prove that
+the value of any fixed policy varies linearly with $R(s)$.)</p>
+
+<p><strong>17.8</strong> [vi-contraction-exercise]
+Equation (<a href="#/">vi-contraction-equation</a>) on
+page <a href="#/">vi-contraction-equation</a> states that the Bellman operator is a contraction.</p>
+
+<ol>
+  <li>
+    <p>Show that, for any functions $f$ and $g$,
+<script type="math/tex">|\max_a f(a) - \max_a g(a)| \leq \max_a |f(a) - g(a)|\ .</script></p>
+  </li>
+  <li>
+    <p>Write out an expression for $|(B\,U_i - B\,U’_i)(s)|$ and then apply
+the result from (a) to complete the proof that the Bellman operator
+is a contraction.</p>
+  </li>
+</ol>
+
+<p><strong>17.9</strong> This exercise considers two-player MDPs that correspond to zero-sum,
+turn-taking games like those in
+Chapter <a href="#/">game-playing-chapter</a>. Let the players be $A$
+and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
+reward for $B$ is always equal and opposite.)</p>
+
+<ol>
+  <li>
+    <p>Let $U_A(s)$ be the utility of state $s$ when it is $A$’s turn to
+move in $s$, and let $U_B(s)$ be the utility of state $s$ when it is
+$B$’s turn to move in $s$. All rewards and utilities are calculated
+from $A$’s point of view (just as in a minimax game tree). Write
+down Bellman equations defining $U_A(s)$ and $U_B(s)$.</p>
+  </li>
+  <li>
+    <p>Explain how to do two-player value iteration with these equations,
+and define a suitable termination criterion.</p>
+  </li>
+  <li>
+    <p>Consider the game described in
+Figure <a href="#/">line-game4-figure</a> on page <a href="#/">line-game4-figure</a>.
+Draw the state space (rather than the game tree), showing the moves
+by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
+state with $R(s)$. You will find it helpful to arrange the states
+$(s_A,s_B)$ on a two-dimensional grid, using $s_A$ and $s_B$ as
+“coordinates.”</p>
+  </li>
+  <li>
+    <p>Now apply two-player value iteration to solve this game, and derive
+the optimal policy.</p>
+  </li>
+</ol>
+
+<center>
+<b id="grid-mdp-figure">Figure [grid-mdp-figure]</b> (a) $3 \times 3$ world for Exercise [3x3-mdp-exercise](#/). The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise [101x3-mdp-exercise](#/) (omitting 93 identical columns in the middle). 
+The start state has reward 0.
+</center>
+
+<p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" /></p>
+
+<p><strong>17.10</strong> [3x3-mdp-exercise] Consider the $3 \times 3$ world shown in
+Figure <a href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
+same as in the $4\times 3$
+Figure <a href="#/">sequential-decision-world-figure</a>: 80% of the
+time the agent goes in the direction it selects; the rest of the time it
+moves at right angles to the intended direction.</p>
+
+<p>Implement value iteration for this world for each value of $r$ below.
+Use discounted rewards with a discount factor of 0.99. Show the policy
+obtained in each case. Explain intuitively why the value of $r$ leads to
+each policy.</p>
+
+<ol>
+  <li>
+    <p>$r = -100$</p>
+  </li>
+  <li>
+    <p>$r = -3$</p>
+  </li>
+  <li>
+    <p>$r = 0$</p>
+  </li>
+  <li>
+    <p>$r = +3$</p>
+  </li>
+</ol>
+
+<p><strong>17.11</strong> [101x3-mdp-exercise] Consider the $101 \times 3$ world shown in
+Figure <a href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
+has a choice of two deterministic actions, <em>Up</em> or
+<em>Down</em>, but in the other states the agent has one
+deterministic action, <em>Right</em>. Assuming a discounted reward
+function, for what values of the discount $\gamma$ should the agent
+choose <em>Up</em> and for which <em>Down</em>? Compute the
+utility of each action as a function of $\gamma$. (Note that this simple
+example actually reflects many real-world situations in which one must
+weigh the value of an immediate action versus the potential continual
+long-term consequences, such as choosing to dump pollutants into a
+lake.)</p>
+
+<p><strong>17.12</strong> Consider an undiscounted MDP having three states, (1, 2, 3), with
+rewards $-1$, $-2$, $0$, respectively. State 3 is a terminal state. In
+states 1 and 2 there are two possible actions: $a$ and $b$. The
+transition model is as follows:</p>
+
+<ul>
+  <li>
+    <p>In state 1, action $a$ moves the agent to state 2 with probability
+0.8 and makes the agent stay put with probability 0.2.</p>
+  </li>
+  <li>
+    <p>In state 2, action $a$ moves the agent to state 1 with probability
+0.8 and makes the agent stay put with probability 0.2.</p>
+  </li>
+  <li>
+    <p>In either state 1 or state 2, action $b$ moves the agent to state 3
+with probability 0.1 and makes the agent stay put with
+probability 0.9.</p>
+  </li>
+</ul>
+
+<p>Answer the following questions:</p>
+
+<ol>
+  <li>
+    <p>What can be determined <em>qualitatively</em> about the
+optimal policy in states 1 and 2?</p>
+  </li>
+  <li>
+    <p>Apply policy iteration, showing each step in full, to determine the
+optimal policy and the values of states 1 and 2. Assume that the
+initial policy has action $b$ in both states.</p>
+  </li>
+  <li>
+    <p>What happens to policy iteration if the initial policy has action
+$a$ in both states? Does discounting help? Does the optimal policy
+depend on the discount factor?</p>
+  </li>
+</ol>
+
+<p><strong>17.13</strong> Consider the $4\times 3$ world shown in
+Figure <a href="#/">sequential-decision-world-figure</a>.</p>
+
+<ol>
+  <li>
+    <p>Implement an environment simulator for this environment, such that
+the specific geography of the environment is easily altered. Some
+code for doing this is already in the online code repository.</p>
+  </li>
+  <li>
+    <p>Create an agent that uses policy iteration, and measure its
+performance in the environment simulator from various
+starting states. Perform several experiments from each starting
+state, and compare the average total reward received per run with
+the utility of the state, as determined by your algorithm.</p>
+  </li>
+  <li>
+    <p>Experiment with increasing the size of the environment. How does the
+run time for policy iteration vary with the size of the environment?</p>
+  </li>
+</ol>
+
+<p><strong>17.14</strong> [policy-loss-exercise]How can the value determination algorithm be
+used to calculate the expected loss experienced by an agent using a
+given set of utility estimates ${U}$ and an estimated
+model ${P}$, compared with an agent using correct values?</p>
+
+<p><strong>17.15</strong> [4x3-pomdp-exercise] Let the initial belief state $b_0$ for the
+$4\times 3$ POMDP on page <a href="#/">4x3-pomdp-page</a> be the uniform distribution
+over the nonterminal states, i.e.,
+$&lt; \frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},0,0 &gt;$.
+Calculate the exact belief state $b_1$ after the agent moves and its
+sensor reports 1 adjacent wall. Also calculate $b_2$ assuming that the
+same thing happens again.</p>
+
+<p><strong>17.16</strong> What is the time complexity of $d$ steps of POMDP value iteration for a
+sensorless environment?</p>
+
+<p><strong>17.17</strong> [2state-pomdp-exercise] Consider a version of the two-state POMDP on
+page <a href="#/">2state-pomdp-page</a> in which the sensor is 90% reliable in state 0 but
+provides no information in state 1 (that is, it reports 0 or 1 with
+equal probability). Analyze, either qualitatively or quantitatively, the
+utility function and the optimal policy for this problem.</p>
+
+<p><strong>17.18</strong> [dominant-equilibrium-exercise]Show that a dominant strategy
+equilibrium is a Nash equilibrium, but not vice versa.</p>
+
+<p><strong>17.19</strong> In the children’s game of rock–paper–scissors each player reveals at the
+same time a choice of rock, paper, or scissors. Paper wraps rock, rock
+blunts scissors, and scissors cut paper. In the extended version
+rock–paper–scissors–fire–water, fire beats rock, paper, and scissors;
+rock, paper, and scissors beat water; and water beats fire. Write out
+the payoff matrix and find a mixed-strategy solution to this game.</p>
+
+<p><strong>17.20</strong> Solve the game of <em>three</em>-finger Morra.</p>
+
+<p><strong>17.21</strong> In the <em>Prisoner’s Dilemma</em>, consider the case where after
+each round, Alice and Bob have probability $X$ meeting again. Suppose
+both players choose the perpetual punishment strategy (where each will
+choose ${refuse}$ unless the other player has ever played
+${testify}$). Assume neither player has played ${testify}$ thus far.
+What is the expected future total payoff for choosing to ${testify}$
+versus ${refuse}$ when $X = .2$? How about when $X = .05$? For what
+value of $X$ is the expected future total payoff the same whether one
+chooses to ${testify}$ or ${refuse}$ in the current round?</p>
+
+<p><strong>17.22</strong> The following payoff matrix, from @Blinder:1983 by way of @Bernstein:1996, shows a game between
+politicians and the Federal Reserve.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Fed: contract</th>
+      <th>Fed: do nothing</th>
+      <th>Fed: expand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pol: contract</strong></td>
+      <td>$F=7, P=1$</td>
+      <td>$F=9,P=4$</td>
+      <td>$F=6,P=6$</td>
+    </tr>
+    <tr>
+      <td><strong>Pol: do nothing</strong></td>
+      <td>$F=8, P=2$</td>
+      <td>$F=5,P=5$</td>
+      <td>$F=4,P=9$</td>
+    </tr>
+    <tr>
+      <td><strong>Pol: expand</strong></td>
+      <td>$F=3, P=3$</td>
+      <td>$F=2,P=7$</td>
+      <td>$F=1,P=8$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Politicians can expand or contract fiscal policy, while the Fed can
+expand or contract monetary policy. (And of course either side can
+choose to do nothing.) Each side also has preferences for who should do
+what—neither side wants to look like the bad guys. The payoffs shown are
+simply the rank orderings: 9 for first choice through 1 for last choice.
+Find the Nash equilibrium of the game in pure strategies. Is this a
+Pareto-optimal solution? You might wish to analyze the policies of
+recent administrations in this light.</p>
+
+<p><strong>17.23</strong> A Dutch auction is similar in an English auction, but rather than
+starting the bidding at a low price and increasing, in a Dutch auction
+the seller starts at a high price and gradually lowers the price until
+some buyer is willing to accept that price. (If multiple bidders accept
+the price, one is arbitrarily chosen as the winner.) More formally, the
+seller begins with a price $p$ and gradually lowers $p$ by increments of
+$d$ until at least one buyer accepts the price. Assuming all bidders act
+rationally, is it true that for arbitrarily small $d$, a Dutch auction
+will always result in the bidder with the highest value for the item
+obtaining the item? If so, show mathematically why. If not, explain how
+it may be possible for the bidder with highest value for the item not to
+obtain it.</p>
+
+<p><strong>17.24</strong> Imagine an auction mechanism that is just like an ascending-bid auction,
+except that at the end, the winning bidder, the one who bid $b_{max}$,
+pays only $b_{max}/2$ rather than $b_{max}$. Assuming all agents are
+rational, what is the expected revenue to the auctioneer for this
+mechanism, compared with a standard ascending-bid auction?</p>
+
+<p><strong>17.25</strong> Teams in the National Hockey League historically received 2 points for
+winning a game and 0 for losing. If the game is tied, an overtime period
+is played; if nobody wins in overtime, the game is a tie and each team
+gets 1 point. But league officials felt that teams were playing too
+conservatively in overtime (to avoid a loss), and it would be more
+exciting if overtime produced a winner. So in 1999 the officials
+experimented in mechanism design: the rules were changed, giving a team
+that loses in overtime 1 point, not 0. It is still 2 points for a win
+and 1 for a tie.</p>
+
+<ol>
+  <li>
+    <p>Was hockey a zero-sum game before the rule change? After?</p>
+  </li>
+  <li>
+    <p>Suppose that at a certain time $t$ in a game, the home team has
+probability $p$ of winning in regulation time, probability $0.78-p$
+of losing, and probability 0.22 of going into overtime, where they
+have probability $q$ of winning, $.9-q$ of losing, and .1 of tying.
+Give equations for the expected value for the home and
+visiting teams.</p>
+  </li>
+  <li>
+    <p>Imagine that it were legal and ethical for the two teams to enter
+into a pact where they agree that they will skate to a tie in
+regulation time, and then both try in earnest to win in overtime.
+Under what conditions, in terms of $p$ and $q$, would it be rational
+for both teams to agree to this pact?</p>
+  </li>
+  <li>
+    <p>@Longley+Sankaran:2005 report that since the rule change, the percentage of games with a
+winner in overtime went up 18.2%, as desired, but the percentage of
+overtime games also went up 3.6%. What does that suggest about
+possible collusion or conservative play after the rule change?</p>
+  </li>
+</ol>
+
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
