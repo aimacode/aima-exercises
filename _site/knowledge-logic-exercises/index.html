@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main –  – </title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    
+    <meta name="author" content="" />
+
+    
+    <meta property="og:title" content="Main" />
+    <meta property="twitter:title" content="Main" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
+		<ol>
+			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
+			<li><a href="/fol-exercises">8. First Order Logic</a></li>
+			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
+			<li><a href="/planning-exercises">10. Classical Planning</a></li>
+			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
+			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+<label for="toggletoc" class="toc-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="logical-agents">7. Logical Agents</h1>
+
+<p><strong>7.1</strong> Suppose the agent has progressed to the point shown in
+Figure <a href="#/">wumpus-seq35-figure</a>(a), page <a href="#/">wumpus-seq35-figure</a>,
+having perceived nothing in [1,1], a breeze in [2,1], and a stench
+in [1,2], and is now concerned with the contents of [1,3], [2,2],
+and [3,1]. Each of these can contain a pit, and at most one can
+contain a wumpus. Following the example of
+Figure <a href="#/">wumpus-entailment-figure</a>, construct the set of
+possible worlds. (You should find 32 of them.) Mark the worlds in which
+the KB is true and those in which each of the following sentences is
+true:</p>
+
+<p>$\alpha_2$ = “There is no pit in [2,2].”</p>
+
+<p>$\alpha_3$ = “There is a wumpus in [1,3].”</p>
+
+<p>Hence show that ${KB} {\models}\alpha_2$ and
+${KB} {\models}\alpha_3$.</p>
+
+<p><strong>7.2</strong> (Adapted from @Barwise+Etchemendy:1993 .) Given the following, can you prove that the unicorn is
+mythical? How about magical? Horned?</p>
+
+<blockquote>
+  <p>If the unicorn is mythical, then it is immortal, but if it is not
+mythical, then it is a mortal mammal. If the unicorn is either
+immortal or a mammal, then it is horned. The unicorn is magical if it
+is horned.</p>
+</blockquote>
+
+<p><strong>7.3</strong> [truth-value-exercise] Consider the problem of deciding whether a
+propositional logic sentence is true in a given model.</p>
+
+<ol>
+  <li>
+    <p>Write a recursive algorithm PL-True?$ (s, m )$ that returns ${true}$ if and
+only if the sentence $s$ is true in the model $m$ (where $m$ assigns
+a truth value for every symbol in $s$). The algorithm should run in
+time linear in the size of the sentence. (Alternatively, use a
+version of this function from the online code repository.)</p>
+  </li>
+  <li>
+    <p>Give three examples of sentences that can be determined to be true
+or false in a <em>partial</em> model that does not specify a
+truth value for some of the symbols.</p>
+  </li>
+  <li>
+    <p>Show that the truth value (if any) of a sentence in a partial model
+cannot be determined efficiently in general.</p>
+  </li>
+  <li>
+    <p>Modify your algorithm so that it can sometimes judge truth from
+partial models, while retaining its recursive structure and linear
+run time. Give three examples of sentences whose truth in a partial
+model is <em>not</em> detected by your algorithm.</p>
+  </li>
+  <li>
+    <p>Investigate whether the modified algorithm makes $TT-Entails?$ more efficient.</p>
+  </li>
+</ol>
+
+<p><strong>7.4</strong> Which of the following are correct?</p>
+
+<ol>
+  <li>
+    <p>${False} \models {True}$.</p>
+  </li>
+  <li>
+    <p>${True} \models {False}$.</p>
+  </li>
+  <li>
+    <p>$(A\land B)  \models (A{\;\;{\Leftrightarrow}\;\;}B)$.</p>
+  </li>
+  <li>
+    <p>$A{\;\;{\Leftrightarrow}\;\;}B \models A \lor B$.</p>
+  </li>
+  <li>
+    <p>$A{\;\;{\Leftrightarrow}\;\;}B \models \lnot A \lor B$.</p>
+  </li>
+  <li>
+    <p>$(A\land B){:\;{\Rightarrow}:\;}C \models (A{:\;{\Rightarrow}:\;}C)\lor(B{:\;{\Rightarrow}:\;}C)$.</p>
+  </li>
+  <li>
+    <p>$(C\lor (\lnot A \land \lnot B)) \equiv ((A{:\;{\Rightarrow}:\;}C) \land (B {:\;{\Rightarrow}:\;}C))$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B)$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land \lnot(A {:\;{\Rightarrow}:\;}B)$ is satisfiable.</p>
+  </li>
+  <li>
+    <p>$(A{\;\;{\Leftrightarrow}\;\;}B) \land (\lnot A \lor B)$
+is satisfiable.</p>
+  </li>
+  <li>
+    <p>$(A{\;\;{\Leftrightarrow}\;\;}B) {\;\;{\Leftrightarrow}\;\;}C$ has
+the same number of models as $(A{\;\;{\Leftrightarrow}\;\;}B)$ for
+any fixed set of proposition symbols that includes $A$, $B$, $C$.</p>
+  </li>
+</ol>
+
+<p><strong>7.5</strong> Which of the following are correct?</p>
+
+<ol>
+  <li>
+    <p>${False} \models {True}$.</p>
+  </li>
+  <li>
+    <p>${True} \models {False}$.</p>
+  </li>
+  <li>
+    <p>$(A\land B)  \models (A{\;\;{\Leftrightarrow}\;\;}B)$.</p>
+  </li>
+  <li>
+    <p>$A{\;\;{\Leftrightarrow}\;\;}B \models A \lor B$.</p>
+  </li>
+  <li>
+    <p>$A{\;\;{\Leftrightarrow}\;\;}B \models \lnot A \lor B$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B\lor C) \land (B\land C\land D{:\;{\Rightarrow}:\;}E)$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)$.</p>
+  </li>
+  <li>
+    <p>$(A\lor B) \land \lnot(A {:\;{\Rightarrow}:\;}B)$ is satisfiable.</p>
+  </li>
+  <li>
+    <p>$(A\land B){:\;{\Rightarrow}:\;}C \models (A{:\;{\Rightarrow}:\;}C)\lor(B{:\;{\Rightarrow}:\;}C)$.</p>
+  </li>
+  <li>
+    <p>$(C\lor (\lnot A \land \lnot B)) \equiv ((A{:\;{\Rightarrow}:\;}C) \land (B {:\;{\Rightarrow}:\;}C))$.</p>
+  </li>
+  <li>
+    <p>$(A{\;\;{\Leftrightarrow}\;\;}B) \land (\lnot A \lor B)$
+is satisfiable.</p>
+  </li>
+  <li>
+    <p>$(A{\;\;{\Leftrightarrow}\;\;}B) {\;\;{\Leftrightarrow}\;\;}C$ has
+the same number of models as $(A{\;\;{\Leftrightarrow}\;\;}B)$ for
+any fixed set of proposition symbols that includes $A$, $B$, $C$.</p>
+  </li>
+</ol>
+
+<p><strong>7.6</strong> [deduction-theorem-exercise] Prove each of the following assertions:</p>
+
+<ol>
+  <li>
+    <p>$\alpha$ is valid if and only if ${True}{\models}\alpha$.</p>
+  </li>
+  <li>
+    <p>For any $\alpha$, ${False}{\models}\alpha$.</p>
+  </li>
+  <li>
+    <p>$\alpha{\models}\beta$ if and only if the sentence
+$(\alpha {:\;{\Rightarrow}:\;}\beta)$ is valid.</p>
+  </li>
+  <li>
+    <p>$\alpha \equiv \beta$ if and only if the sentence
+$(\alpha{\;\;{\Leftrightarrow}\;\;}\beta)$ is valid.</p>
+  </li>
+  <li>
+    <p>$\alpha{\models}\beta$ if and only if the sentence
+$(\alpha \land \lnot \beta)$ is unsatisfiable.</p>
+  </li>
+</ol>
+
+<p><strong>7.7</strong> Prove, or find a counterexample to, each of the following assertions:</p>
+
+<ol>
+  <li>
+    <p>If $\alpha\models\gamma$ or $\beta\models\gamma$ (or both) then
+$(\alpha\land \beta)\models\gamma$</p>
+  </li>
+  <li>
+    <p>If $(\alpha\land \beta)\models\gamma$ then $\alpha\models\gamma$ or
+$\beta\models\gamma$ (or both).</p>
+  </li>
+  <li>
+    <p>If $\alpha\models (\beta \lor \gamma)$ then $\alpha \models \beta$
+or $\alpha \models \gamma$ (or both).</p>
+  </li>
+</ol>
+
+<p><strong>7.8</strong> Prove, or find a counterexample to, each of the following assertions:</p>
+
+<ol>
+  <li>
+    <p>If $\alpha\models\gamma$ or $\beta\models\gamma$ (or both) then
+$(\alpha\land \beta)\models\gamma$</p>
+  </li>
+  <li>
+    <p>If $\alpha\models (\beta \land \gamma)$ then $\alpha \models \beta$
+and $\alpha \models \gamma$.</p>
+  </li>
+  <li>
+    <p>If $\alpha\models (\beta \lor \gamma)$ then $\alpha \models \beta$
+or $\alpha \models \gamma$ (or both).</p>
+  </li>
+</ol>
+
+<p><strong>7.9</strong> Consider a vocabulary with only four propositions, $A$, $B$, $C$, and
+$D$. How many models are there for the following sentences?</p>
+
+<ol>
+  <li>
+    <p>$B\lor C$.</p>
+  </li>
+  <li>
+    <p>$\lnot A\lor \lnot B \lor \lnot C \lor \lnot D$.</p>
+  </li>
+  <li>
+    <p>$(A{:\;{\Rightarrow}:\;}B) \land A \land \lnot B \land C \land D$.</p>
+  </li>
+</ol>
+
+<p><strong>7.10</strong> We have defined four binary logical connectives.</p>
+
+<ol>
+  <li>
+    <p>Are there any others that might be useful?</p>
+  </li>
+  <li>
+    <p>How many binary connectives can there be?</p>
+  </li>
+  <li>
+    <p>Why are some of them not very useful?</p>
+  </li>
+</ol>
+
+<p><strong>7.11</strong> [logical-equivalence-exercise]Using a method of your choice, verify
+each of the equivalences in
+Table [logical-equivalence-table] (page <a href="#/">logical-equivalence-table</a>).</p>
+
+<p><strong>7.12</strong> [propositional-validity-exercise]Decide whether each of the following
+sentences is valid, unsatisfiable, or neither. Verify your decisions
+using truth tables or the equivalence rules of
+Table [logical-equivalence-table] (page <a href="#/">logical-equivalence-table</a>).</p>
+
+<ol>
+  <li>
+    <p>${Smoke} {:\;{\Rightarrow}:\;}{Smoke}$</p>
+  </li>
+  <li>
+    <p>${Smoke} {:\;{\Rightarrow}:\;}{Fire}$</p>
+  </li>
+  <li>
+    <p>$({Smoke} {:\;{\Rightarrow}:\;}{Fire}) {:\;{\Rightarrow}:\;}(\lnot {Smoke} {:\;{\Rightarrow}:\;}\lnot {Fire})$</p>
+  </li>
+  <li>
+    <p>${Smoke} \lor {Fire} \lor \lnot {Fire}$</p>
+  </li>
+  <li>
+    <p>$(({Smoke} \land {Heat}) {:\;{\Rightarrow}:\;}{Fire})
+        {\;\;{\Leftrightarrow}\;\;}(({Smoke} {:\;{\Rightarrow}:\;}{Fire}) \lor ({Heat} {:\;{\Rightarrow}:\;}{Fire}))$</p>
+  </li>
+  <li>
+    <p>$({Smoke} {:\;{\Rightarrow}:\;}{Fire}) {:\;{\Rightarrow}:\;}(({Smoke} \land {Heat}) {:\;{\Rightarrow}:\;}{Fire}) $</p>
+  </li>
+  <li>
+    <p>${Big} \lor {Dumb} \lor ({Big} {:\;{\Rightarrow}:\;}{Dumb})$</p>
+  </li>
+</ol>
+
+<p><strong>7.13</strong> [propositional-validity-exercise]Decide whether each of the following
+sentences is valid, unsatisfiable, or neither. Verify your decisions
+using truth tables or the equivalence rules of
+Table [logical-equivalence-table] (page <a href="#/">logical-equivalence-table</a>).</p>
+
+<ol>
+  <li>
+    <p>${Smoke} {:\;{\Rightarrow}:\;}{Smoke}$</p>
+  </li>
+  <li>
+    <p>${Smoke} {:\;{\Rightarrow}:\;}{Fire}$</p>
+  </li>
+  <li>
+    <p>$({Smoke} {:\;{\Rightarrow}:\;}{Fire}) {:\;{\Rightarrow}:\;}(\lnot {Smoke} {:\;{\Rightarrow}:\;}\lnot {Fire})$</p>
+  </li>
+  <li>
+    <p>${Smoke} \lor {Fire} \lor \lnot {Fire}$</p>
+  </li>
+  <li>
+    <p>$(({Smoke} \land {Heat}) {:\;{\Rightarrow}:\;}{Fire})
+        {\;\;{\Leftrightarrow}\;\;}(({Smoke} {:\;{\Rightarrow}:\;}{Fire}) \lor ({Heat} {:\;{\Rightarrow}:\;}{Fire}))$</p>
+  </li>
+  <li>
+    <p>${Big} \lor {Dumb} \lor ({Big} {:\;{\Rightarrow}:\;}{Dumb})$</p>
+  </li>
+  <li>
+    <p>$({Big} \land {Dumb}) \lor \lnot {Dumb}$</p>
+  </li>
+</ol>
+
+<p><strong>7.14</strong> [cnf-proof-exercise] Any propositional logic sentence is logically
+equivalent to the assertion that each possible world in which it would
+be false is not the case. From this observation, prove that any sentence
+can be written in CNF.</p>
+
+<p><strong>7.15</strong> Use resolution to prove the sentence $\lnot A \land \lnot B$ from the
+clauses in Exercise <a href="#/">convert-clausal-exercise</a>.</p>
+
+<p><strong>7.16</strong> [inf-exercise] This exercise looks into the relationship between
+clauses and implication sentences.</p>
+
+<ol>
+  <li>
+    <p>Show that the clause $(\lnot P_1 \lor \cdots \lor \lnot P_m \lor Q)$
+is logically equivalent to the implication sentence
+$(P_1 \land \cdots \land P_m) {\;{\Rightarrow}\;}Q$.</p>
+  </li>
+  <li>
+    <p>Show that every clause (regardless of the number of
+positive literals) can be written in the form
+$(P_1 \land \cdots \land P_m) {\;{\Rightarrow}\;}(Q_1 \lor \cdots \lor Q_n)$,
+where the $P$s and $Q$s are proposition symbols. A knowledge base
+consisting of such sentences is in implicative normal form or <strong>Kowalski
+form</strong> @Kowalski:1979.</p>
+  </li>
+  <li>
+    <p>Write down the full resolution rule for sentences in implicative
+normal form.</p>
+  </li>
+</ol>
+
+<p><strong>7.17</strong> According to some political pundits, a person who is radical ($R$) is
+electable ($E$) if he/she is conservative ($C$), but otherwise is not
+electable.</p>
+
+<ol>
+  <li>
+    <p>Which of the following are correct representations of this
+assertion?</p>
+
+    <ol>
+      <li>
+        <p>$(R\land E)\iff C$</p>
+      </li>
+      <li>
+        <p>$R{:\;{\Rightarrow}:\;}(E\iff C)$</p>
+      </li>
+      <li>
+        <p>$R{:\;{\Rightarrow}:\;}((C{:\;{\Rightarrow}:\;}E) \lor \lnot E)$</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Which of the sentences in (a) can be expressed in Horn form?</p>
+  </li>
+</ol>
+
+<p><strong>7.18</strong> This question considers representing satisfiability (SAT) problems as
+CSPs.</p>
+
+<ol>
+  <li>
+    <p>Draw the constraint graph corresponding to the SAT problem
+<script type="math/tex">(\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)</script>
+for the particular case $n5$.</p>
+  </li>
+  <li>
+    <p>How many solutions are there for this general SAT problem as a
+function of $n$?</p>
+  </li>
+  <li>
+    <p>Suppose we apply {Backtracking-Search} (page <a href="#/">backtracking-search-algorithm</a>) to find <em>all</em>
+solutions to a SAT CSP of the type given in (a). (To find
+<em>all</em> solutions to a CSP, we simply modify the basic
+algorithm so it continues searching after each solution is found.)
+Assume that variables are ordered $X_1,\ldots,X_n$ and ${false}$
+is ordered before ${true}$. How much time will the algorithm take
+to terminate? (Write an $O(\cdot)$ expression as a function of $n$.)</p>
+  </li>
+  <li>
+    <p>We know that SAT problems in Horn form can be solved in linear time
+by forward chaining (unit propagation). We also know that every
+tree-structured binary CSP with discrete, finite domains can be
+solved in time linear in the number of variables
+(Section <a href="#/">csp-structure-section</a>). Are these two
+facts connected? Discuss.</p>
+  </li>
+</ol>
+
+<p><strong>7.19</strong> This question considers representing satisfiability (SAT) problems as
+CSPs.</p>
+
+<ol>
+  <li>
+    <p>Draw the constraint graph corresponding to the SAT problem
+<script type="math/tex">(\lnot X_1 \lor X_2) \land (\lnot X_2 \lor X_3) \land \ldots \land (\lnot X_{n-1} \lor X_n)</script>
+for the particular case $n4$.</p>
+  </li>
+  <li>
+    <p>How many solutions are there for this general SAT problem as a
+function of $n$?</p>
+  </li>
+  <li>
+    <p>Suppose we apply {Backtracking-Search} (page <a href="#/">backtracking-search-algorithm</a>) to find <em>all</em>
+solutions to a SAT CSP of the type given in (a). (To find
+<em>all</em> solutions to a CSP, we simply modify the basic
+algorithm so it continues searching after each solution is found.)
+Assume that variables are ordered $X_1,\ldots,X_n$ and ${false}$
+is ordered before ${true}$. How much time will the algorithm take
+to terminate? (Write an $O(\cdot)$ expression as a function of $n$.)</p>
+  </li>
+  <li>
+    <p>We know that SAT problems in Horn form can be solved in linear time
+by forward chaining (unit propagation). We also know that every
+tree-structured binary CSP with discrete, finite domains can be
+solved in time linear in the number of variables
+(Section <a href="#/">csp-structure-section</a>). Are these two
+facts connected? Discuss.</p>
+  </li>
+</ol>
+
+<p><strong>7.20</strong> Explain why every nonempty propositional clause, by itself, is
+satisfiable. Prove rigorously that every set of five 3-SAT clauses is
+satisfiable, provided that each clause mentions exactly three distinct
+variables. What is the smallest set of such clauses that is
+unsatisfiable? Construct such a set.</p>
+
+<p><strong>7.21</strong> A propositional <em>2-CNF</em> expression is a conjunction of
+clauses, each containing <em>exactly 2</em> literals, e.g.,
+<script type="math/tex">(A\lor B) \land (\lnot A \lor C) \land (\lnot B \lor D) \land (\lnot
+  C \lor G) \land (\lnot D \lor G)\ .</script></p>
+
+<ol>
+  <li>
+    <p>Prove using resolution that the above sentence entails $G$.</p>
+  </li>
+  <li>
+    <p>Two clauses are <em>semantically distinct</em> if they are not
+logically equivalent. How many semantically distinct 2-CNF clauses
+can be constructed from $n$ proposition symbols?</p>
+  </li>
+  <li>
+    <p>Using your answer to (b), prove that propositional resolution always
+terminates in time polynomial in $n$ given a 2-CNF sentence
+containing no more than $n$ distinct symbols.</p>
+  </li>
+  <li>
+    <p>Explain why your argument in (c) does not apply to 3-CNF.</p>
+  </li>
+</ol>
+
+<p><strong>7.22</strong> Prove each of the following assertions:</p>
+
+<ol>
+  <li>
+    <p>Every pair of propositional clauses either has no resolvents, or all
+their resolvents are logically equivalent.</p>
+  </li>
+  <li>
+    <p>There is no clause that, when resolved with itself, yields
+(after factoring) the clause $(\lnot P \lor \lnot Q)$.</p>
+  </li>
+  <li>
+    <p>If a propositional clause $C$ can be resolved with a copy of itself,
+it must be logically equivalent to $ True $.</p>
+  </li>
+</ol>
+
+<p><strong>7.23</strong> Consider the following sentence:
+<script type="math/tex">[ ({Food} {\:\;{\Rightarrow}\:\;}{Party}) \lor ({Drinks} {\:\;{\Rightarrow}\:\;}{Party}) ] {\:\;{\Rightarrow}\:\;}[ ( {Food} \land {Drinks} )  {\:\;{\Rightarrow}\:\;}{Party}]\ .</script></p>
+
+<ol>
+  <li>
+    <p>Determine, using enumeration, whether this sentence is valid,
+satisfiable (but not valid), or unsatisfiable.</p>
+  </li>
+  <li>
+    <p>Convert the left-hand and right-hand sides of the main implication
+into CNF, showing each step, and explain how the results confirm
+your answer to (a).</p>
+  </li>
+  <li>
+    <p>Prove your answer to (a) using resolution.</p>
+  </li>
+</ol>
+
+<p><strong>7.24</strong> [dnf-exercise] A sentence is in disjunctive normal form(DNF) if it is the disjunction of
+conjunctions of literals. For example, the sentence
+$(A \land B \land \lnot C) \lor (\lnot A \land C) \lor (B \land \lnot C)$
+is in DNF.</p>
+
+<ol>
+  <li>
+    <p>Any propositional logic sentence is logically equivalent to the
+assertion that some possible world in which it would be true is in
+fact the case. From this observation, prove that any sentence can be
+written in DNF.</p>
+  </li>
+  <li>
+    <p>Construct an algorithm that converts any sentence in propositional
+logic into DNF. (<em>Hint</em>: The algorithm is similar to
+the algorithm for conversion to CNF iven in
+Sectio <a href="#/">pl-resolution-section</a>.)</p>
+  </li>
+  <li>
+    <p>Construct a simple algorithm that takes as input a sentence in DNF
+and returns a satisfying assignment if one exists, or reports that
+no satisfying assignment exists.</p>
+  </li>
+  <li>
+    <p>Apply the algorithms in (b) and (c) to the following set of
+sentences:</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>$A {\Rightarrow} B$</p>
+</blockquote>
+
+<blockquote>
+  <p>$B {\Rightarrow} C$</p>
+</blockquote>
+
+<blockquote>
+  <p>$C {\Rightarrow} A$</p>
+</blockquote>
+
+<ol>
+  <li>Since the algorithm in (b) is very similar to the algorithm for
+conversion to CNF, and since the algorithm in (c) is much simpler
+than any algorithm for solving a set of sentences in CNF, why is
+this technique not used in automated reasoning?</li>
+</ol>
+
+<p><strong>7.25</strong> [convert-clausal-exercise] Convert the following set of sentences to
+clausal form.</p>
+
+<blockquote>
+  <p>S1: $A {\;\;{\Leftrightarrow}\;\;}(B \lor E)$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S2: $E {:\;{\Rightarrow}:\;}D$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S3: $C \land F {:\;{\Rightarrow}:\;}\lnot B$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S4: $E {:\;{\Rightarrow}:\;}B$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S5: $B {:\;{\Rightarrow}:\;}F$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S6: $B {:\;{\Rightarrow}:\;}C$</p>
+</blockquote>
+
+<p>Give a trace of the execution of DPLL on the conjunction of these
+clauses.</p>
+
+<p><strong>7.26</strong> [convert-clausal-exercise] Convert the following set of sentences to
+clausal form.</p>
+
+<blockquote>
+  <p>S1: $A {\;\;{\Leftrightarrow}\;\;}(C \lor E)$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S2: $E {:\;{\Rightarrow}:\;}D$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S3: $B \land F {:\;{\Rightarrow}:\;}\lnot C$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S4: $E {:\;{\Rightarrow}:\;}C$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S5: $C {:\;{\Rightarrow}:\;}F$.</p>
+</blockquote>
+
+<blockquote>
+  <p>S6: $C {:\;{\Rightarrow}:\;}B$</p>
+</blockquote>
+
+<p>Give a trace of the execution of DPLL on the conjunction of these
+clauses.</p>
+
+<p><strong>7.27</strong> Is a randomly generated 4-CNF sentence with $n$ symbols and $m$ clauses
+more or less likely to be solvable than a randomly generated 3-CNF
+sentence with $n$ symbols and $m$ clauses? Explain.</p>
+
+<p><strong>7.28</strong> [minesweeper-exercise] Minesweeper, the well-known computer game, is
+closely related to the wumpus world. A minesweeper world is
+a rectangular grid of $N$ squares with $M$ invisible mines scattered
+among them. Any square may be probed by the agent; instant death follows
+if a mine is probed. Minesweeper indicates the presence of mines by
+revealing, in each probed square, the <em>number</em> of mines
+that are directly or diagonally adjacent. The goal is to probe every
+unmined square.</p>
+
+<ol>
+  <li>
+    <p>Let $X_{i,j}$ be true iff square $[i,j]$ contains a mine. Write down
+the assertion that exactly two mines are adjacent to [1,1] as a
+sentence involving some logical combination of
+$X_{i,j}$ propositions.</p>
+  </li>
+  <li>
+    <p>Generalize your assertion from (a) by explaining how to construct a
+CNF sentence asserting that $k$ of $n$ neighbors contain mines.</p>
+  </li>
+  <li>
+    <p>Explain precisely how an agent can use {DPLL} to prove that a given square
+does (or does not) contain a mine, ignoring the global constraint
+that there are exactly $M$ mines in all.</p>
+  </li>
+  <li>
+    <p>Suppose that the global constraint is constructed from your method
+from part (b). How does the number of clauses depend on $M$ and $N$?
+Suggest a way to modify {DPLL} so that the global constraint does not need
+to be represented explicitly.</p>
+  </li>
+  <li>
+    <p>Are any conclusions derived by the method in part (c) invalidated
+when the global constraint is taken into account?</p>
+  </li>
+  <li>
+    <p>Give examples of configurations of probe values that induce
+<em>long-range dependencies</em> such that the contents of a
+given unprobed square would give information about the contents of a
+far-distant square. (<em>Hint</em>: consider an
+$N\times 1$ board.)</p>
+  </li>
+</ol>
+
+<p><strong>7.29</strong> [known-literal-exercise] How long does it take to prove
+${KB}{\models}\alpha$ using {DPLL} when $\alpha$ is a literal <em>already
+contained in</em> ${KB}$? Explain.</p>
+
+<p><strong>7.30</strong> [dpll-fc-exercise] Trace the behavior of {DPLL} on the knowledge base in
+Figure <a href="#/">pl-horn-example-figure</a> when trying to prove $Q$,
+and compare this behavior with that of the forward-chaining algorithm.</p>
+
+<p><strong>7.31</strong> Write a successor-state axiom for the ${Locked}$ predicate, which
+applies to doors, assuming the only actions available are ${Lock}$ and
+${Unlock}$.</p>
+
+<p><strong>7.32</strong> Discuss what is meant by <em>optimal</em> behavior in the wumpus
+world. Show that the {Hybrid-Wumpus-Agent} is not optimal, and suggest ways to improve it.</p>
+
+<p><strong>7.33</strong> Suppose an agent inhabits a world with two states, $S$ and $\lnot S$,
+and can do exactly one of two actions, $a$ and $b$. Action $a$ does
+nothing and action $b$ flips from one state to the other. Let $S^t$ be
+the proposition that the agent is in state $S$ at time $t$, and let
+$a^t$ be the proposition that the agent does action $a$ at time $t$
+(similarly for $b^t$).</p>
+
+<ol>
+  <li>
+    <p>Write a successor-state axiom for $S^{t+1}$.</p>
+  </li>
+  <li>
+    <p>Convert the sentence in (a) into CNF.</p>
+  </li>
+  <li>
+    <p>Show a resolution refutation proof that if the agent is in $\lnot S$
+at time $t$ and does $a$, it will still be in $\lnot S$ at time
+$t+1$.</p>
+  </li>
+</ol>
+
+<p><strong>7.34</strong> [ss-axiom-exercise] Section <a href="#/">successor-state-section</a>
+provides some of the successor-state axioms required for the wumpus
+world. Write down axioms for all remaining fluent symbols.</p>
+
+<p><strong>7.35</strong> [hybrid-wumpus-exercise]Modify the {Hybrid-Wumpus-Agent} to use the 1-CNF logical state
+estimation method described on page <a href="#/">1cnf-belief-state-page</a>. We noted on that page
+that such an agent will not be able to acquire, maintain, and use more
+complex beliefs such as the disjunction $P_{3,1}\lor P_{2,2}$. Suggest a
+method for overcoming this problem by defining additional proposition
+symbols, and try it out in the wumpus world. Does it improve the
+performance of the agent?</p>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

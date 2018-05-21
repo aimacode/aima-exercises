@@ -62,6 +62,17 @@
 			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
 		</ol>
 	</li>
+	<li>
+		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
+		<ol>
+			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
+			<li><a href="/fol-exercises">8. First Order Logic</a></li>
+			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
+			<li><a href="/planning-exercises">10. Classical Planning</a></li>
+			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
+			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
+		</ol>
+	</li>
 </ul>
     </div>
     <div id="main" role="main" class="container">
@@ -111,7 +122,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1 id="4-beyond-classical-search">4. Beyond Classical Search</h1>
+<h1 id="beyond-classical-search">4. Beyond Classical Search</h1>
 
 <h3 id="exercise-41">Exercise 4.1</h3>
 <p>Give the name of the algorithm that results from each of the following
@@ -161,7 +172,7 @@ You may want to consult @Larranaga+al:1999 for some suggestions for representati
   </li>
 </ol>
 
-<h3 id="exercise-44"><a href="#hill-climbing-exercise">Exercise 4.4</a></h3>
+<h3 id="exercise-44hill-climbing-exercise"><a href="#hill-climbing-exercise">Exercise 4.4</a></h3>
 <p>Generate a large number of 8-puzzle and
 8-queens instances and solve them (where possible) by hill climbing
 (steepest-ascent and first-choice variants), hill climbing with random
@@ -169,7 +180,7 @@ restart, and simulated annealing. Measure the search cost and percentage
 of solved problems and graph these against the optimal solution cost.
 Comment on your results.</p>
 
-<h3 id="exercise-45"><a href="#cond-plan-repeated-exercise">Exercise 4.5</a></h3>
+<h3 id="exercise-45cond-plan-repeated-exercise"><a href="#cond-plan-repeated-exercise">Exercise 4.5</a></h3>
 <p>The <strong>And-Or-Graph-Search</strong> algorithm in
 Figure <a href="#/">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
@@ -184,7 +195,7 @@ states for which no subplan could be found.) Explain how to use labels,
 as defined in Section <a href="#/">cyclic-plan-section</a>, to avoid
 having multiple copies of subplans.</p>
 
-<h3 id="exercise-46"><a href="#cond-loop-exercise">Exercise 4.6</a></h3>
+<h3 id="exercise-46cond-loop-exercise"><a href="#cond-loop-exercise">Exercise 4.6</a></h3>
 <p>Explain precisely how to modify the <strong>And-Or-Graph-Search</strong> algorithm to
 generate a cyclic plan if no acyclic plan exists. You will need to deal
 with three issues: labeling the plan steps so that a cyclic plan can
@@ -207,7 +218,7 @@ prove its admissibilty. Comment on the accuracy of this heuristic on the
 sensorless vacuum problem of
 Figure <a href="#/">vacuum2-sets-figure</a>. How well does A* perform?</p>
 
-<h3 id="exercise-48"><a href="#belief-state-superset-exercise">Exercise 4.8</a></h3>
+<h3 id="exercise-48belief-state-superset-exercise"><a href="#belief-state-superset-exercise">Exercise 4.8</a></h3>
 <p>This exercise explores
 subset–superset relations between belief states in sensorless or
 partially observable environments.</p>
@@ -229,7 +240,7 @@ in (b).</p>
   </li>
 </ol>
 
-<h3 id="exercise-49"><a href="#multivalued-sensorless-exercise">Exercise 4.9</a></h3>
+<h3 id="exercise-49multivalued-sensorless-exercise"><a href="#multivalued-sensorless-exercise">Exercise 4.9</a></h3>
 <p>On page <a href="#/">multivalued-sensorless-page</a> it was assumed
 that a given action would have the same cost when executed in any
 physical state within a given belief state. (This leads to a
@@ -245,19 +256,19 @@ just keep the set of all possible costs for that action. For each of
 these, explore whether A* (with modifications if necessary) can return
 optimal solutions.</p>
 
-<h3 id="exercise-410"><a href="#vacuum-solvable-exercise">Exercise 4.10</a></h3>
+<h3 id="exercise-410vacuum-solvable-exercise"><a href="#vacuum-solvable-exercise">Exercise 4.10</a></h3>
 <p>Consider the sensorless version of the
 erratic vacuum world. Draw the belief-state space reachable from the
 initial belief state $\}$, and explain why the
 problem is unsolvable.</p>
 
-<h3 id="exercise-411"><a href="#vacuum-solvable-exercise">Exercise 4.11</a></h3>
+<h3 id="exercise-411vacuum-solvable-exercise"><a href="#vacuum-solvable-exercise">Exercise 4.11</a></h3>
 <p>Consider the sensorless version of the
 erratic vacuum world. Draw the belief-state space reachable from the
 initial belief state $\}$, and explain why the problem
 is unsolvable.</p>
 
-<h3 id="exercise-412"><a href="#path-planning-agent-exercise">Exercise 4.12</a></h3>
+<h3 id="exercise-412path-planning-agent-exercise"><a href="#path-planning-agent-exercise">Exercise 4.12</a></h3>
 <p>We can turn the navigation problem in
 Exercise <a href="#/">path-planning-exercise</a> into an environment as
 follows:</p>
@@ -323,7 +334,7 @@ What do solutions look like?</p>
   </li>
 </ol>
 
-<h3 id="exercise-413"><a href="#online-offline-exercise">Exercise 4.13</a></h3>
+<h3 id="exercise-413online-offline-exercise"><a href="#online-offline-exercise">Exercise 4.13</a></h3>
 <p>Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a href="#/">maze-3x3-figure</a>. The agent knows that its
@@ -355,7 +366,7 @@ possible environment</em> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.</p>
 
-<h3 id="exercise-414"><a href="#online-offline-exercise">Exercise 4.14</a></h3>
+<h3 id="exercise-414online-offline-exercise"><a href="#online-offline-exercise">Exercise 4.14</a></h3>
 <p>Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a href="#/">maze-3x3-figure</a>. The agent knows that its
@@ -387,7 +398,7 @@ possible environment</em> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.</p>
 
-<h3 id="exercise-415"><a href="#path-planning-hc-exercise">Exercise 4.15</a></h3>
+<h3 id="exercise-415path-planning-hc-exercise"><a href="#path-planning-hc-exercise">Exercise 4.15</a></h3>
 <p>In this exercise, we examine hill climbing
 in the context of robot navigation, using the environment in
 Figure <a href="#/">geometric-scene-figure</a> as an example.</p>

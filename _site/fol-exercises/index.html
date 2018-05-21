@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main –  – </title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    
+    <meta name="author" content="" />
+
+    
+    <meta property="og:title" content="Main" />
+    <meta property="twitter:title" content="Main" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <center>
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
+      </div>
+    </div>
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
+		<ol>
+			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
+			<li><a href="/fol-exercises">8. First Order Logic</a></li>
+			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
+			<li><a href="/planning-exercises">10. Classical Planning</a></li>
+			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
+			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+<label for="toggletoc" class="toc-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="first-order-logic">8. First Order Logic</h1>
+
+<p><strong>8.1</strong> A logical knowledge base represents the world using a set of sentences
+with no explicit structure. An <strong>analogical</strong>
+representation, on the other hand, has physical structure that
+corresponds directly to the structure of the thing represented. Consider
+a road map of your country as an analogical representation of facts
+about the country—it represents facts with a map language. The
+two-dimensional structure of the map corresponds to the two-dimensional
+surface of the area.</p>
+
+<ol>
+  <li>
+    <p>Give five examples of <em>symbols</em> in the map language.</p>
+  </li>
+  <li>
+    <p>An <em>explicit</em> sentence is a sentence that the creator
+of the representation actually writes down. An
+<em>implicit</em> sentence is a sentence that results from
+explicit sentences because of properties of the analogical
+representation. Give three examples each of <em>implicit</em>
+and <em>explicit</em> sentences in the map language.</p>
+  </li>
+  <li>
+    <p>Give three examples of facts about the physical structure of your
+country that cannot be represented in the map language.</p>
+  </li>
+  <li>
+    <p>Give two examples of facts that are much easier to express in the
+map language than in first-order logic.</p>
+  </li>
+  <li>
+    <p>Give two other examples of useful analogical representations. What
+are the advantages and disadvantages of each of these languages?</p>
+  </li>
+</ol>
+
+<p><strong>8.2</strong> Consider a knowledge base containing just two sentences: $P(a)$ and
+$P(b)$. Does this knowledge base entail $\forall\,x\ P(x)$? Explain your
+answer in terms of models.</p>
+
+<p><strong>8.3</strong> Is the sentence ${\exists\,x,y\;\;} xy$ valid? Explain.</p>
+
+<p><strong>8.4</strong> Write down a logical sentence such that every world in which it is true
+contains exactly one object.</p>
+
+<p><strong>8.5</strong> Write down a logical sentence such that every world in which it is true
+contains exactly two objects.</p>
+
+<p><strong>8.6</strong> [fol-model-count-exercise] Consider a symbol vocabulary that contains
+$c$ constant symbols, $p_k$ predicate symbols of each arity $k$, and
+$f_k$ function symbols of each arity $k$, where $1\leq k\leq A$. Let the
+domain size be fixed at $D$. For any given model, each predicate or
+function symbol is mapped onto a relation or function, respectively, of
+the same arity. You may assume that the functions in the model allow
+some input tuples to have no value for the function (i.e., the value is
+the invisible object). Derive a formula for the number of possible
+models for a domain with $D$ elements. Don’t worry about eliminating
+redundant combinations.</p>
+
+<p><strong>8.7</strong> Which of the following are valid (necessarily true) sentences?</p>
+
+<ol>
+  <li>
+    <p>$(\exists x\ xx) {:\;{\Rightarrow}:\;}({\forall\,y\;\;} \exists z\ yz)$.</p>
+  </li>
+  <li>
+    <p>${\forall\,x\;\;} P(x) \lor \lnot P(x)$.</p>
+  </li>
+  <li>
+    <p>${\forall\,x\;\;} {Smart}(x) \lor (xx)$.</p>
+  </li>
+</ol>
+
+<p><strong>8.8</strong> [empty-universe-exercise] Consider a version of the semantics for
+first-order logic in which models with empty domains are allowed. Give
+at least two examples of sentences that are valid according to the
+standard semantics but not according to the new semantics. Discuss which
+outcome makes more intuitive sense for your examples.</p>
+
+<p><strong>8.9</strong> [hillary-exercise]Does the fact
+$\lnot {Spouse}({George},{Laura})$ follow from the facts
+${Jim}\neq {George}$ and ${Spouse}({Jim},{Laura})$? If so,
+give a proof; if not, supply additional axioms as needed. What happens
+if we use ${Spouse}$ as a unary function symbol instead of a binary
+predicate?</p>
+
+<p><strong>8.10</strong> This exercise uses the function ${MapColor}$ and predicates
+${In}(x,y)$, ${Borders}(x,y)$, and ${Country}(x)$, whose arguments
+are geographical regions, along with constant symbols for various
+regions. In each of the following we give an English sentence and a
+number of candidate logical expressions. For each of the logical
+expressions, state whether it (1) correctly expresses the English
+sentence; (2) is syntactically invalid and therefore meaningless; or (3)
+is syntactically valid but does not express the meaning of the English
+sentence.</p>
+
+<ol>
+  <li>
+    <p>Paris and Marseilles are both in France.</p>
+
+    <ol>
+      <li>
+        <p>${In}({Paris} \land {Marseilles}, {France})$.</p>
+      </li>
+      <li>
+        <p>${In}({Paris},{France}) \land {In}({Marseilles},{France})$.</p>
+      </li>
+      <li>
+        <p>${In}({Paris},{France}) \lor {In}({Marseilles},{France})$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>There is a country that borders both Iraq and Pakistan.</p>
+
+    <ol>
+      <li>
+        <p>${\exists\,c\;\;}$
+${Country}(c) \land {Border}(c,{Iraq}) \land {Border}(c,{Pakistan})$.</p>
+      </li>
+      <li>
+        <p>${\exists\,c\;\;}$
+${Country}(c) {:\;{\Rightarrow}:\;}[{Border}(c,{Iraq}) \land {Border}(c,{Pakistan})]$.</p>
+      </li>
+      <li>
+        <p>$[{\exists\,c\;\;}$
+${Country}(c)] {:\;{\Rightarrow}:\;}[{Border}(c,{Iraq}) \land {Border}(c,{Pakistan})]$.</p>
+      </li>
+      <li>
+        <p>${\exists\,c\;\;}$
+${Border}({Country}(c),{Iraq} \land {Pakistan})$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>All countries that border Ecuador are in South America.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,c\;\;}  Country(c) \land {Border}(c,{Ecuador}) {:\;{\Rightarrow}:\;}{In}(c,{SouthAmerica})$.</p>
+      </li>
+      <li>
+        <p>${\forall\,c\;\;}  {Country}(c) {:\;{\Rightarrow}:\;}[{Border}(c,{Ecuador}) {:\;{\Rightarrow}:\;}{In}(c,{SouthAmerica})]$.</p>
+      </li>
+      <li>
+        <p>${\forall\,c\;\;}  [{Country}(c) {:\;{\Rightarrow}:\;}{Border}(c,{Ecuador})] {:\;{\Rightarrow}:\;}{In}(c,{SouthAmerica})$.</p>
+      </li>
+      <li>
+        <p>${\forall\,c\;\;}  Country(c) \land {Border}(c,{Ecuador}) \land {In}(c,{SouthAmerica})$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>No region in South America borders any region in Europe.</p>
+
+    <ol>
+      <li>
+        <p>$\lnot [{\exists\,c,d\;\;}  {In}(c,{SouthAmerica}) \land {In}(d,{Europe}) \land {Borders}(c,d)]$.</p>
+      </li>
+      <li>
+        <p>${\forall\,c,d\;\;}  [{In}(c,{SouthAmerica}) \land {In}(d,{Europe})] {:\;{\Rightarrow}:\;}\lnot {Borders}(c,d)]$.</p>
+      </li>
+      <li>
+        <p>$\lnot {\forall\,c\;\;}  {In}(c,{SouthAmerica}) {:\;{\Rightarrow}:\;}{\exists\,d\;\;} {In}(d,{Europe}) \land
+\lnot {Borders}(c,d)$.</p>
+      </li>
+      <li>
+        <p>${\forall\,c\;\;} {In}(c,{SouthAmerica}) {:\;{\Rightarrow}:\;}{\forall\,d\;\;} {In}(d,{Europe}) {:\;{\Rightarrow}:\;}\lnot {Borders}(c,d)$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>No two adjacent countries have the same map color.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,x,y\;\;} \lnot {Country}(x) \lor \lnot {Country}(y) \lor \lnot {Borders}(x,y) \lor {}$\
+$\lnot ({MapColor}(x) = {MapColor}(y))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y\;\;} ({Country}(x) \land {Country}(y) \land {Borders}(x,y) \land \lnot(x=y)) {:\;{\Rightarrow}:\;}{}$\
+$\lnot ({MapColor}(x) = {MapColor}(y))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y\;\;} {Country}(x) \land {Country}(y) \land {Borders}(x,y) \land {}$\
+$\lnot ({MapColor}(x) = {MapColor}(y))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y\;\;} ({Country}(x) \land {Country}(y) \land {Borders}(x,y) ) {:\;{\Rightarrow}:\;}{MapColor}(x\neq y)$.</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>8.11</strong> Consider a vocabulary with the following symbols:</p>
+
+<blockquote>
+  <p>${Occupation}(p,o)$: Predicate. Person $p$ has occupation $o$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Customer}(p1,p2)$: Predicate. Person $p1$ is a customer of person $p2$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Boss}(p1,p2)$: Predicate. Person $p1$ is a boss of person $p2$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Doctor}$, $ {Surgeon}$, $ {Lawyer}$, $ {Actor}$: Constants denoting occupations.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Emily}$, $ {Joe}$: Constants denoting people.</p>
+</blockquote>
+
+<p>Use these symbols to write the following assertions in first-order
+logic:</p>
+
+<ol>
+  <li>
+    <p>Emily is either a surgeon or a lawyer.</p>
+  </li>
+  <li>
+    <p>Joe is an actor, but he also holds another job.</p>
+  </li>
+  <li>
+    <p>All surgeons are doctors.</p>
+  </li>
+  <li>
+    <p>Joe does not have a lawyer (i.e., is not a customer of any lawyer).</p>
+  </li>
+  <li>
+    <p>Emily has a boss who is a lawyer.</p>
+  </li>
+  <li>
+    <p>There exists a lawyer all of whose customers are doctors.</p>
+  </li>
+  <li>
+    <p>Every surgeon has a lawyer.</p>
+  </li>
+</ol>
+
+<p><strong>8.12</strong> In each of the following we give an English sentence and a number of
+candidate logical expressions. For each of the logical expressions,
+state whether it (1) correctly expresses the English sentence; (2) is
+syntactically invalid and therefore meaningless; or (3) is syntactically
+valid but does not express the meaning of the English sentence.</p>
+
+<ol>
+  <li>
+    <p>Every cat loves its mother or father.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,x\;\;} {Cat}(x) {:\;{\Rightarrow}:\;}{Loves}(x,{Mother}(x)\lor {Father}(x))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x\;\;} \lnot {Cat}(x) \lor {Loves}(x,{Mother}(x)) \lor {Loves}(x,{Father}(x))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x\;\;} {Cat}(x) \land ({Loves}(x,{Mother}(x))\lor {Loves}(x,{Father}(x)))$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Every dog who loves one of its brothers is happy.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,x\;\;} {Dog}(x) \land (\exists y\ {Brother}(y,x) \land {Loves}(x,y)) {:\;{\Rightarrow}:\;}{Happy}(x)$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y\;\;} {Dog}(x) \land {Brother}(y,x) \land {Loves}(x,y) {:\;{\Rightarrow}:\;}{Happy}(x)$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x\;\;} {Dog}(x) \land [{\forall\,y\;\;} {Brother}(y,x) {\;\;{\Leftrightarrow}\;\;}{Loves}(x,y)] {:\;{\Rightarrow}:\;}{Happy}(x)$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>No dog bites a child of its owner.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,x\;\;} {Dog}(x) {:\;{\Rightarrow}:\;}\lnot {Bites}(x,{Child}({Owner}(x)))$.</p>
+      </li>
+      <li>
+        <p>$\lnot {\exists\,x,y\;\;} {Dog}(x) \land {Child}(y,{Owner}(x)) \land {Bites}(x,y)$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x\;\;} {Dog}(x) {:\;{\Rightarrow}:\;}({\forall\,y\;\;} {Child}(y,{Owner}(x)) {:\;{\Rightarrow}:\;}\lnot {Bites}(x,y))$.</p>
+      </li>
+      <li>
+        <p>$\lnot {\exists\,x\;\;} {Dog}(x) {:\;{\Rightarrow}:\;}({\exists\,y\;\;} {Child}(y,{Owner}(x)) \land {Bites}(x,y))$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Everyone’s zip code within a state has the same first digit.</p>
+
+    <ol>
+      <li>
+        <p>${\forall\,x,s,z_1\;\;} [{State}(s) \land {LivesIn}(x,s) \land {Zip}(x)z_1] {:\;{\Rightarrow}:\;}{}$\
+$[{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 {:\;{\Rightarrow}:\;}{Digit}(1,z_1) {Digit}(1,z_2) ]$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,s\;\;} [{State}(s) \land {LivesIn}(x,s) \land {\exists\,z_1\;\;} {Zip}(x)z_1] {:\;{\Rightarrow}:\;}{}$\
+$ [{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 \land {Digit}(1,z_1) {Digit}(1,z_2) ]$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {:\;{\Rightarrow}:\;}{Digit}(1,{Zip}(x){Zip}(y))$.</p>
+      </li>
+      <li>
+        <p>${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {:\;{\Rightarrow}:\;}{}$\
+${Digit}(1,{Zip}(x)) {Digit}(1,{Zip}(y))$.</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>8.13</strong> [language-determination-exercise] Complete the following exercises
+about logical sentences:</p>
+
+<ol>
+  <li>Translate into <em>good, natural</em> English (no $x$s or $y$s!):</li>
+</ol>
+
+<script type="math/tex; mode=display">{\forall\,x,y,l\;\;} SpeaksLanguage(x, l) \land SpeaksLanguage(y, l)
+    \implies Understands(x, y) \land Understands(y,x).</script>
+
+<ol>
+  <li>Explain why this sentence is entailed by the sentence</li>
+</ol>
+
+<script type="math/tex; mode=display">{\forall\,x,y,l\;\;} SpeaksLanguage(x, l) \land SpeaksLanguage(y, l)
+    \implies Understands(x, y).</script>
+
+<ol>
+  <li>
+    <p>Translate into first-order logic the following sentences:</p>
+
+    <ol>
+      <li>
+        <p>Understanding leads to friendship.</p>
+      </li>
+      <li>
+        <p>Friendship is transitive.</p>
+      </li>
+    </ol>
+
+    <p>Remember to define all predicates, functions, and constants you use.</p>
+  </li>
+</ol>
+
+<p><strong>8.14</strong> True or false? Explain.</p>
+
+<ol>
+  <li>
+    <p>${\exists\,x\;\;} x{Rumpelstiltskin}$ is a valid
+(necessarily true) sentence of first-order logic.</p>
+  </li>
+  <li>
+    <p>Every existentially quantified sentence in first-order logic is true
+in any model that contains exactly one object.</p>
+  </li>
+  <li>
+    <p>${\forall\,x,y\;\;} xy$is satisfiable.</p>
+  </li>
+</ol>
+
+<p><strong>8.15</strong> [Peano-completion-exercise] Rewrite the first two Peano axioms in
+Section <a href="#/">Peano-section</a> as a single axiom that defines
+${NatNum}(x)$ so as to exclude the possibility of natural numbers
+except for those generated by the successor function.</p>
+
+<p><strong>8.16</strong> [wumpus-diagnostic-exercise]
+Equation (<a href="#/">pit-biconditional-equation</a>) on
+page <a href="#/">pit-biconditional-equation</a> defines the conditions under which a square is
+breezy. Here we consider two other ways to describe this aspect of the
+wumpus world.</p>
+
+<ol>
+  <li>
+    <p>We can write [diagnostic rule] leading from observed effects to hidden causes. For
+finding pits, the obvious diagnostic rules say that if a square is
+breezy, some adjacent square must contain a pit; and if a square is
+not breezy, then no adjacent square contains a pit. Write these two
+rules in first-order logic and show that their conjunction is
+logically equivalent to
+Equation (<a href="#/">pit-biconditional-equation</a>).</p>
+  </li>
+  <li>
+    <p>We can write [causal rule] leading from cause to effect. One obvious causal rule
+is that a pit causes all adjacent squares to be breezy. Write this
+rule in first-order logic, explain why it is incomplete compared to
+Equation (<a href="#/">pit-biconditional-equation</a>), and supply
+the missing axiom.</p>
+  </li>
+</ol>
+
+<p><strong>8.17</strong> [kinship-exercise]Write axioms describing the predicates
+${Grandchild}$, ${Greatgrandparent}$, ${Ancestor}$, ${Brother}$,
+${Sister}$, ${Daughter}$, ${Son}$, ${FirstCousin}$,
+${BrotherInLaw}$, ${SisterInLaw}$, ${Aunt}$, and ${Uncle}$. Find
+out the proper definition of $m$th cousin $n$ times removed, and write
+the definition in first-order logic. Now write down the basic facts
+depicted in the family tree in Figure <a href="#family1-figure">family1-figure</a>.
+Using a suitable logical reasoning system, it all the sentences you have
+written down, and it who are Elizabeth’s grandchildren, Diana’s
+brothers-in-law, Zara’s great-grandparents, and Eugenie’s ancestors.</p>
+
+<center>
+<b id="family1-figure">Figure [family1-figure]</b> A typical family tree. The symbol $\bowtie$ connects spouses and arrows point to children.
+</center>
+
+<p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/family1.svg" alt="family1-figure" /></p>
+
+<p><strong>8.18</strong> Write down a sentence asserting that + is a commutative function. Does
+your sentence follow from the Peano axioms? If so, explain why; if not,
+give a model in which the axioms are true and your sentence is false.</p>
+
+<p><strong>8.19</strong> Explain what is wrong with the following proposed definition of the set
+membership predicate $$</p>
+
+<p><script type="math/tex">{\forall\,x,s\;\;} x \in \{x|s\}</script>
+<script type="math/tex">{\forall\,x,s\;\;} x \in s \implies {\forall\,y\;\;} x \in \{y|s\}</script></p>
+
+<p><strong>8.20</strong> [list-representation-exercise]Using the set axioms as examples, write
+axioms for the list domain, including all the constants, functions, and
+predicates mentioned in the chapter.</p>
+
+<p><strong>8.21</strong> [adjacency-exercise]Explain what is wrong with the following proposed
+definition of adjacent squares in the wumpus world:
+<script type="math/tex">{\forall\,x,y\;\;} {Adjacent}([x,y], [x+1, y]) \land {Adjacent}([x,y], [x, y+1])\ .</script></p>
+
+<p><strong>8.22</strong> Write out the axioms required for reasoning about the wumpus’s location,
+using a constant symbol ${Wumpus}$ and a binary predicate
+${At}({Wumpus}, {Location})$. Remember that there is only one
+wumpus.</p>
+
+<p><strong>8.23</strong> Assuming predicates ${Parent}(p,q)$ and ${Female}(p)$ and constants
+${Joan}$ and ${Kevin}$, with the obvious meanings, express each of
+the following sentences in first-order logic. (You may use the
+abbreviation $\exists^{1}$ to mean “there exists exactly one.”)</p>
+
+<ol>
+  <li>
+    <p>Joan has a daughter (possibly more than one, and possibly sons
+as well).</p>
+  </li>
+  <li>
+    <p>Joan has exactly one daughter (but may have sons as well).</p>
+  </li>
+  <li>
+    <p>Joan has exactly one child, a daughter.</p>
+  </li>
+  <li>
+    <p>Joan and Kevin have exactly one child together.</p>
+  </li>
+  <li>
+    <p>Joan has at least one child with Kevin, and no children with
+anyone else.</p>
+  </li>
+</ol>
+
+<p><strong>8.24</strong> Arithmetic assertions can be written in first-order logic with the
+predicate symbol $&lt;$, the function symbols ${+}$ and ${\times}$, and the
+constant symbols 0 and 1. Additional predicates can also be defined with
+biconditionals.</p>
+
+<ol>
+  <li>
+    <p>Represent the property “$x$ is an even number.”</p>
+  </li>
+  <li>
+    <p>Represent the property “$x$ is prime.”</p>
+  </li>
+  <li>
+    <p>Goldbach’s conjecture is the conjecture (unproven as yet) that every
+even number is equal to the sum of two primes. Represent this
+conjecture as a logical sentence.</p>
+  </li>
+</ol>
+
+<p><strong>8.25</strong> In Chapter <a href="#/">csp-chapter</a>, we used equality to indicate
+the relation between a variable and its value. For instance, we wrote
+${WA}{red}$ to mean that Western Australia is colored
+red. Representing this in first-order logic, we must write more
+verbosely ${ColorOf}({WA}){red}$. What incorrect
+inference could be drawn if we wrote sentences such as
+${WA}{red}$ directly as logical assertions?</p>
+
+<p><strong>8.26</strong> Write in first-order logic the assertion that every key and at least one
+of every pair of socks will eventually be lost forever, using only the
+following vocabulary: ${Key}(x)$, $x$ is a key; ${Sock}(x)$, $x$ is
+a sock; ${Pair}(x,y)$, $x$ and $y$ are a pair; ${Now}$, the current
+time; ${Before}(t_1,t_2)$, time $t_1$ comes before time $t_2$;
+${Lost}(x,t)$, object $x$ is lost at time $t$.</p>
+
+<p><strong>8.27</strong> For each of the following sentences in English, decide if the
+accompanying first-order logic sentence is a good translation. If not,
+explain why not and correct it. (Some sentences may have more than one
+error!)</p>
+
+<ol>
+  <li>
+    <p>No two people have the same social security number.
+<script type="math/tex">\lnot {\exists\,x,y,n\;\;} {Person}(x) \land {Person}(y) {\:\;{\Rightarrow}\:\;}[{HasSS}\#(x,n) \land {HasSS}\#(y,n)].</script></p>
+  </li>
+  <li>
+    <p>John’s social security number is the same as Mary’s.
+<script type="math/tex">{\exists\,n\;\;} {HasSS}\#({John},n) \land {HasSS}\#({Mary},n).</script></p>
+  </li>
+  <li>
+    <p>Everyone’s social security number has nine digits.
+<script type="math/tex">{\forall\,x,n\;\;} {Person}(x) {\:\;{\Rightarrow}\:\;}[{HasSS}\#(x,n) \land {Digits}(n,9)].</script></p>
+  </li>
+  <li>
+    <p>Rewrite each of the above (uncorrected) sentences using a function
+symbol ${SS}#$ instead of the predicate ${HasSS}#$.</p>
+  </li>
+</ol>
+
+<p><strong>8.28</strong> Translate into first-order logic the sentence “Everyone’s DNA is unique
+and is derived from their parents’ DNA.” You must specify the precise
+intended meaning of your vocabulary terms. (<em>Hint</em>: Do not
+use the predicate ${Unique}(x)$, since uniqueness is not really a
+property of an object in itself!)</p>
+
+<p><strong>8.29</strong> For each of the following sentences in English, decide if the
+accompanying first-order logic sentence is a good translation. If not,
+explain why not and correct it.</p>
+
+<ol>
+  <li>Any apartment in London has lower rent than some apartments
+in Paris.</li>
+</ol>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\forall {x} [{Apt}(x) \land {In}(x,{London})]
+\implies \exists {y} ([{Apt}(y) \land {In}(y,{Paris})] \implies ({Rent}(x) < {Rent}(y))) %]]></script>
+
+<ol>
+  <li>There is exactly one apartment in Paris with rent below $1000.</li>
+</ol>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\exists {x} {Apt}(x) \land {In}(x,{Paris}) \land \forall{y} [{Apt}(y) \land {In}(y,{Paris}) \land ({Rent}(y) < {Dollars}(1000))] \implies (y = x) %]]></script>
+
+<ol>
+  <li>If an apartment is more expensive than all apartments in London, it
+must be in Moscow.</li>
+</ol>
+
+<script type="math/tex; mode=display">\forall{x} {Apt}(x) \land [\forall{y} {Apt}(y) \land {In}(y,{London}) \land ({Rent}(x) > {Rent}(y))] \implies
+{In}(x,{Moscow}).</script>
+
+<p><strong>8.30</strong> Represent the following sentences in first-order logic, using a
+consistent vocabulary (which you must define):</p>
+
+<ol>
+  <li>
+    <p>Some students took French in spring 2001.</p>
+  </li>
+  <li>
+    <p>Every student who takes French passes it.</p>
+  </li>
+  <li>
+    <p>Only one student took Greek in spring 2001.</p>
+  </li>
+  <li>
+    <p>The best score in Greek is always higher than the best score
+in French.</p>
+  </li>
+  <li>
+    <p>Every person who buys a policy is smart.</p>
+  </li>
+  <li>
+    <p>No person buys an expensive policy.</p>
+  </li>
+  <li>
+    <p>There is an agent who sells policies only to people who are
+not insured.</p>
+  </li>
+  <li>
+    <p>There is a barber who shaves all men in town who do not
+shave themselves.</p>
+  </li>
+  <li>
+    <p>A person born in the UK, each of whose parents is a UK citizen or a
+UK resident, is a UK citizen by birth.</p>
+  </li>
+  <li>
+    <p>A person born outside the UK, one of whose parents is a UK citizen
+by birth, is a UK citizen by descent.</p>
+  </li>
+  <li>
+    <p>Politicians can fool some of the people all of the time, and they
+can fool all of the people some of the time, but they can’t fool all
+of the people all of the time.</p>
+  </li>
+  <li>
+    <p>All Greeks speak the same language. (Use ${Speaks}(x,l)$ to mean
+that person $x$ speaks language $l$.)</p>
+  </li>
+</ol>
+
+<p><strong>8.31</strong> Represent the following sentences in first-order logic, using a
+consistent vocabulary (which you must define):</p>
+
+<ol>
+  <li>
+    <p>Some students took French in spring 2009.</p>
+  </li>
+  <li>
+    <p>Every student who takes French passes it.</p>
+  </li>
+  <li>
+    <p>Only one student took Greek in spring 2009.</p>
+  </li>
+  <li>
+    <p>The best score in Greek is always lower than the best score
+in French.</p>
+  </li>
+  <li>
+    <p>Every person who buys a policy is smart.</p>
+  </li>
+  <li>
+    <p>There is an agent who sells policies only to people who are
+not insured.</p>
+  </li>
+  <li>
+    <p>There is a barber who shaves all men in town who do not
+shave themselves.</p>
+  </li>
+  <li>
+    <p>A person born in the UK, each of whose parents is a UK citizen or a
+UK resident, is a UK citizen by birth.</p>
+  </li>
+  <li>
+    <p>A person born outside the UK, one of whose parents is a UK citizen
+by birth, is a UK citizen by descent.</p>
+  </li>
+  <li>
+    <p>Politicians can fool some of the people all of the time, and they
+can fool all of the people some of the time, but they can’t fool all
+of the people all of the time.</p>
+  </li>
+  <li>
+    <p>All Greeks speak the same language. (Use ${Speaks}(x,l)$ to mean
+that person $x$ speaks language $l$.)</p>
+  </li>
+</ol>
+
+<p><strong>8.32</strong> Write a general set of facts and axioms to represent the assertion
+“Wellington heard about Napoleon’s death” and to correctly answer the
+question “Did Napoleon hear about Wellington’s death?”</p>
+
+<p><strong>8.33</strong> [4bit-adder-exercise]Extend the vocabulary from
+Section <a href="#/">circuits-section</a> to define addition for $n$-bit
+binary numbers. Then encode the description of the four-bit adder in
+Figure <a href="#adder-figure">4bit-adder-figure</a>, and pose the queries needed
+to verify that it is in fact correct.</p>
+
+<center>
+<b id="adder-figure">Figure [adder-figure]</b> A four-bit adder. Each ${Ad}_i$ is a one-bit adder, as in figure [adder-figure](#adder-figure) on page [adder-figure](#/)
+</center>
+
+<p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/4bit-adder.svg" alt="adder-figure" /></p>
+
+<p><strong>8.34</strong> The circuit representation in the chapter is more detailed than
+necessary if we care only about circuit functionality. A simpler
+formulation describes any $m$-input, $n$-output gate or circuit using a
+predicate with $m+n$ arguments, such that the predicate is true exactly
+when the inputs and outputs are consistent. For example, NOT gates are
+described by the binary predicate ${NOT}(i,o)$, for which
+${NOT}(0,1)$ and ${NOT}(1,0)$ are known. Compositions of gates are
+defined by conjunctions of gate predicates in which shared variables
+indicate direct connections. For example, a NAND circuit can be composed
+from ${AND}$s and ${NOT}$s:
+<script type="math/tex">{\forall\,i_1,i_2,o_a,o\;\;} {AND}(i_1,i_2,o_a) \land {NOT}(o_a,o) {\:\;{\Rightarrow}\:\;}{NAND}(i_1,i_2,o)\ .</script>
+Using this representation, define the one-bit adder in
+Figure <a href="#adder-figure">adder-figure</a> and the four-bit adder in
+Figure <a href="#adder-figure">4bit-adder-figure</a>, and explain what queries you
+would use to verify the designs. What kinds of queries are
+<em>not</em> supported by this representation that
+<em>are</em> supported by the representation in
+Section <a href="#/">circuits-section</a>?</p>
+
+<p><strong>8.35</strong> Obtain a passport application for your country, identify the rules
+determining eligibility for a passport, and translate them into
+first-order logic, following the steps outlined in
+Section <a href="#/">circuits-section</a>.</p>
+
+<p><strong>8.36</strong> Consider a first-order logical knowledge base that describes worlds
+containing people, songs, albums (e.g., “Meet the Beatles”) and disks
+(i.e., particular physical instances of CDs). The vocabulary contains
+the following symbols:</p>
+
+<blockquote>
+  <p>${CopyOf}(d,a)$: Predicate. Disk $d$ is a copy of album $a$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Owns}(p,d)$: Predicate. Person $p$ owns disk $d$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Sings}(p,s,a)$: Album $a$ includes a recording of song $s$ sung by person $p$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${Wrote}(p,s)$: Person $p$ wrote song $s$.</p>
+</blockquote>
+
+<blockquote>
+  <p>${McCartney}$, ${Gershwin}$, ${BHoliday}$, ${Joe}$, ${EleanorRigby}$, ${TheManILove}$, ${Revolver}$: Constants with the obvious meanings.</p>
+</blockquote>
+
+<p>Express the following statements in first-order logic:</p>
+
+<ol>
+  <li>
+    <p>Gershwin wrote “The Man I Love.”</p>
+  </li>
+  <li>
+    <p>Gershwin did not write “Eleanor Rigby.”</p>
+  </li>
+  <li>
+    <p>Either Gershwin or McCartney wrote “The Man I Love.”</p>
+  </li>
+  <li>
+    <p>Joe has written at least one song.</p>
+  </li>
+  <li>
+    <p>Joe owns a copy of <em>Revolver</em>.</p>
+  </li>
+  <li>
+    <p>Every song that McCartney sings on <em>Revolver</em> was
+written by McCartney.</p>
+  </li>
+  <li>
+    <p>Gershwin did not write any of the songs on <em>Revolver</em>.</p>
+  </li>
+  <li>
+    <p>Every song that Gershwin wrote has been recorded on some album.
+(Possibly different songs are recorded on different albums.)</p>
+  </li>
+  <li>
+    <p>There is a single album that contains every song that Joe
+has written.</p>
+  </li>
+  <li>
+    <p>Joe owns a copy of an album that has Billie Holiday singing “The Man
+I Love.”</p>
+  </li>
+  <li>
+    <p>Joe owns a copy of every album that has a song sung by McCartney.
+(Of course, each different album is instantiated in a different
+physical CD.)</p>
+  </li>
+  <li>
+    <p>Joe owns a copy of every album on which all the songs are sung by
+Billie Holiday.</p>
+  </li>
+</ol>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
+           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
+           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
+          <!-- 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
