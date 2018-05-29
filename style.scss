@@ -15,6 +15,7 @@
 
 html {
   font-size: 100%;
+  height: 100%;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   color: $darkGray;
   text-align: justify;
   position: relative;
+  height: 100%;
 }
 
 .container {
@@ -74,6 +76,8 @@ a {
   color: $darkGray;
   text-decoration: none;
 	cursor: pointer;
+  color: $blueLink;
+  font-weight: bold;
   &:hover, &:active {
     color: $blue;
   }
@@ -244,23 +248,25 @@ nav {
 input[type=checkbox] {
   display: none;
 }
-input[type=checkbox]#toggletoc:checked ~ .toc { 
-  opacity: 0;
-  height: 0;
-  display: none;
+input[type=checkbox]#toggletoc:checked ~ .toc {
+  display: block;
+  margin-left: -10px;
+  opacity: 1;
+  height: 100%;
 }
 input[type=checkbox]#toggletoc ~ #main .breadcrumb .toc-icon { 
   @media screen and (max-width: 1300px){
-    position: absolute;
-    top: 25px;
-    left: 260px
+    position: fixed;
+    top: 22px;
+    left: 10px;
   }
 }
 input[type=checkbox]#toggletoc:checked ~ #main .breadcrumb .toc-icon { 
+  position: fixed;
+  top: 22px;
+  left: 260px;
   @media screen and (max-width: 1300px){
-    position: relative;
-    top: 0;
-    left: 0;
+
   }
 }
 input[type=checkbox]#toggleheader:checked ~ .toc {
@@ -272,17 +278,21 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
   display: none;
 }
 .toc {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   height: 100%;
   padding: 16px;
-  padding-right:0;
-  display: block;
+  padding-right: 0;
+  display: none;
   clear: both;
   width: 300px;
   float: left;
   top: 0px;
-  position: absolute;
+  left: 10px;
+  position: fixed;
   overflow: hidden;
+  z-index: 4;
+  opacity: 0;
+  height: 0;
   div{
     font-size: 30px;
     margin-bottom: 20px;
@@ -292,11 +302,13 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
   }
   ul{
     list-style-type: none;
-    padding: 0;
-    text-align:left;
-    height:95%;
-    overflow:auto;
+    padding: 16px 0;
+    text-align: left;
+    height: 95%;
+    overflow: auto;
     right: -20px;
+    margin-top: 34px;
+    top: -40px;
     position: relative;
     li{
       cursor: pointer;
@@ -332,6 +344,7 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
 }
 
 #main{
+  padding-bottom: 40px;
   .breadcrumb{
     list-style-type: none;
     margin-top: -40px;
@@ -343,7 +356,10 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
       margin-right: 20px;
       vertical-align: middle;
       cursor: pointer;
-      position: relative;
+      position: fixed;
+      top: 22px;
+      left: 10px;
+      z-index: 9;
       span{
         display: block;
         position: absolute;
@@ -422,10 +438,12 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
 }
 
 .wrapper-footer {
-  margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer {

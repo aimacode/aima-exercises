@@ -166,17 +166,17 @@ expected value—because of the way particle filtering works. In this
 question, you are asked to quantify this bias.</p>
 
 <p>To simplify, consider a world with four possible robot locations:
-$X={x_1,x_2,x_3,x_4}$. Initially, we
-draw $N\geq 1$ samples uniformly from among those locations. As
+$X={x_,x_,x_,x_}$. Initially, we
+draw $N\geq $ samples uniformly from among those locations. As
 usual, it is perfectly acceptable if more than one sample is generated
 for any of the locations $X$. Let $Z$ be a Boolean sensor variable
 characterized by the following conditional probabilities:
 <script type="math/tex">% <![CDATA[
 \begin{aligned}
-P(z\mid x_1) &=&  0.8 \qquad\qquad P(\lnot z\mid x_1)\;\;=\;\; 0.2 \\
-P(z\mid x_2) &=&  0.4 \qquad\qquad P(\lnot z\mid x_2)\;\;=\;\; 0.6 \\
-P(z\mid x_3) &=&  0.1 \qquad\qquad P(\lnot z\mid x_3)\;\;=\;\; 0.9 \\
-P(z\mid x_4) &=&  0.1 \qquad\qquad P(\lnot z\mid x_4)\;\;=\;\; 0.9\ .\end{aligned} %]]></script>
+P(z\mid x_) &=& } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
+P(z\mid x_) &=& } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
+P(z\mid x_) &=& } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
+P(z\mid x_) &=& } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;}\ .\end{aligned} %]]></script>
 MCL uses these probabilities to generate particle weights, which are
 subsequently normalized and used in the resampling process. For
 simplicity, let us assume we generate only one new sample in the
@@ -188,7 +188,7 @@ probability distribution over $X$.</p>
   <li>
     <p>What is the resulting probability distribution over $X$ for this new
 sample? Answer this question separately for
-$N=1,\ldots, 10$, and for $N=\infty$.</p>
+$N=,\ldots,}$, and for $N=\infty$.</p>
   </li>
   <li>
     <p>The difference between two probability distributions $P$ and $Q$ can
