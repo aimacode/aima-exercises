@@ -68,6 +68,35 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%; }
+  .container.home {
+    text-align: center;
+    padding-top: 40px; }
+    .container.home .goto_kaggle {
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #2f4f4f;
+      padding: 5px;
+      cursor: pointer; }
+    .container.home .login_github {
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      cursor: pointer;
+      background-color: #008200; }
+    .container.home .logout_github {
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      cursor: pointer;
+      background-color: #c63434; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -386,6 +415,9 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
 .post .read-more {
   text-transform: uppercase;
   font-size: 15px; }
+
+.inactive {
+  display: none; }
 
 .wrapper-footer {
   border-top: 1px solid #ddd;

@@ -32,6 +32,39 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+  &.home{
+    text-align: center;
+    padding-top: 40px;
+    .goto_kaggle{
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #2f4f4f;
+      padding: 5px;
+      cursor: pointer;
+    }
+    .login_github{
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      cursor: pointer;
+      background-color: #008200;
+    }
+    .logout_github{
+      width: 300px;
+      margin: 30px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      color: #fff;
+      padding: 5px;
+      cursor: pointer;
+      background-color: #c63434;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -435,6 +468,10 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     text-transform: uppercase;
     font-size: 15px;
   }
+}
+
+.inactive{
+  display:none;
 }
 
 .wrapper-footer {

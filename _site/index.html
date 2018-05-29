@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AIMA Sample Exercises –  – </title>
+    <title> – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -14,9 +14,6 @@
     
     <meta name="author" content="" />
 
-    
-    <meta property="og:title" content="AIMA Sample Exercises" />
-    <meta property="twitter:title" content="AIMA Sample Exercises" />
     
 
     <!--[if lt IE 9]>
@@ -128,20 +125,77 @@
 </ul>
 
       <article class="post">
-  <center><h1>AIMA Sample Exercises</h1></center>
+  <center><h1></h1></center>
 
   <div class="entry">
-    <p>This page is meant to serve as a proof of concept for hosting AIMA-Exercises.</p>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
 
-<ul>
-	<li>Click on the burger icon on top-left to toggle TOC.</li>
-	<li>Click on the icon on top-right to toggle header.</li>
-	<li>Choose a chapter from TOC to view its corresponding exercises.</li>
-	<li>Navigate back and forth between pages using the breadcrumb beside burger icon.</li>
-</ul>
+<!-- <div>
+	<button id="login" onclick="login()">Login</button>	
+	<button id="logout" onclick="logout()" class="inactive">Logout</button>	
+</div>
+ -->  
+<div class="home container">
+	<div>Integrate AIMA-Exercises in your curriculum.</div>
+	<div class="goto_kaggle">
+		<a href="//www.kaggle.com/aimaexercises/aima-exercises-table-of-contents" target="_blank">Use the Kaggle Version</a>
+	</div>
+	or
+	<div class="login_github">Login via Github</div> 
+	<div class="logout_github">Logout</div> 
+	<div class="user_info">
+		<div class="user_profile">
+			<img src=""  style="width: 100px;">
+		</div>
+		<div class="username"></div>
+		<div class="user_email"></div>
+	</div>
+	<!-- to explore the exercises rightaway. -->
+</div>
 
-<img src="/images/aima.jpg">
 
+<script>
+function login(){
+  var provider = new firebase.auth.GithubAuthProvider();
+  var promise = firebase.auth().signInWithPopup(provider)
+
+  promise.catch(e => console.log(e.message))
+
+  // .then(function(result){
+  //  var token = result.credential.accessToken;
+  //  var user = result.user;
+  //  console.log(user)
+  // })
+  // $("#login").on("click",login)
+}
+
+function logout(){
+	firebase.auth().signOut();
+}
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+	if(firebaseUser){
+		console.log(firebaseUser)
+		$(".logout_github").removeClass("inactive")
+		$(".login_github").addClass("inactive")
+		$(".user_info .user_profile img").attr("src",firebaseUser.photoURL)
+		$(".user_info .username").html(firebaseUser.displayName)
+		$(".user_info .user_email").html(firebaseUser.email)
+		$(".user_info").removeClass("inactive")
+	}else{
+		console.log("NOT LOGGED IN")
+		$(".login_github").removeClass("inactive")
+		$(".logout_github").addClass("inactive")
+		$(".user_info").addClass("inactive")
+	}
+})
+
+$(document).on("click",".login_github", login)
+$(document).on("click",".logout_github", logout)
+
+</script>
 
   </div>
 
