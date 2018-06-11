@@ -159,7 +159,9 @@
 
 <h1 id="10-classical-planning">10. Classical Planning</h1>
 
-<p><strong>10.1</strong> Consider a robot whose operation is described by the following PDDL
+<p><a href="10-1/">Exercise 10.1</a></p>
+
+<p>Consider a robot whose operation is described by the following PDDL
 operators:</p>
 
 <p><script type="math/tex">Op({Go(x,y)},{At(Robot,x)},{\lnot At(Robot,x) \land At(Robot,y)})</script>
@@ -178,17 +180,23 @@ successor-state axiom for $EmptyHand$.</p>
   </li>
 </ol>
 
-<p><strong>10.2</strong> Describe the differences and similarities between problem solving and
+<p><a href="10-2/">Exercise 10.2</a></p>
+
+<p>Describe the differences and similarities between problem solving and
 planning.</p>
 
-<p><strong>10.3</strong> [strips-airport-exercise]Given the action schemas and initial state
+<p><a href="10-3/">Exercise 10.3</a></p>
+
+<p>[strips-airport-exercise]Given the action schemas and initial state
 from Figure <a href="#/">airport-pddl-algorithm</a>, what are all the
 applicable concrete instances of ${Fly}(p,{from},{to})$ in the
 state described by</p>
 
 <script type="math/tex; mode=display">At(P_1,JFK) \land At(P_2,SFO) \land Plane(P_1) \land Plane(P_2) \land Airport(JFK) \land Airport(SFO)?</script>
 
-<p><strong>10.4</strong> The monkey-and-bananas problem is faced by a monkey in a laboratory with
+<p><a href="10-4/">Exercise 10.4</a></p>
+
+<p>The monkey-and-bananas problem is faced by a monkey in a laboratory with
 some bananas hanging out of reach from the ceiling. A box is available
 that will enable the monkey to reach the bananas if he climbs on it.
 Initially, the monkey is at $A$, the bananas at $B$, and the box at $C$.
@@ -223,7 +231,9 @@ heavy objects.</p>
   </li>
 </ol>
 
-<p><strong>10.5</strong> The original {Strips} planner was designed to control Shakey the robot.
+<p><a href="10-5/">Exercise 10.5</a></p>
+
+<p>The original {Strips} planner was designed to control Shakey the robot.
 Figure <a href="#shakey-figure">shakey-figure</a> shows a version of Shakey’s world
 consisting of four rooms lined up along a corridor, where each room has
 a door and a light switch. The actions in Shakey’s world include moving from place to place,
@@ -259,14 +269,14 @@ of a box at the light switch’s location.</p>
 <p>Write PDDL sentences for Shakey’s six actions and the initial state from
 Figure <a href="#shakey-figure">shakey-figure</a>. Construct a plan for Shakey to
 get ${Box}{}_2$ into ${Room}{}_2$.</p>
-
 <center>
 <b id="shakey-figure">Figure [shakey-figure]</b> Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.
 </center>
-
 <p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/shakey2.svg" alt="shakey-figure" /></p>
 
-<p><strong>10.6</strong> A finite Turing machine has a finite one-dimensional tape of cells, each
+<p><a href="10-6/">Exercise 10.6</a></p>
+
+<p>A finite Turing machine has a finite one-dimensional tape of cells, each
 cell containing one of a finite number of symbols. One cell has a read
 and write head above it. There is a finite set of states the machine can
 be in, one of which is the accept state. At each time step, depending on
@@ -282,11 +292,15 @@ If you can do this, it demonstrates that determining whether a planning
 problem has a solution is at least as hard as the Turing acceptance
 problem, which is PSPACE-hard.</p>
 
-<p><strong>10.7</strong> [negative-effects-exercise]Explain why dropping negative effects from
+<p><a href="10-7/">Exercise 10.7 [negative-effects-exercise]</a></p>
+
+<p>Explain why dropping negative effects from
 every action schema results in a relaxed problem, provided that
 preconditions and goals contain only positive literals.</p>
 
-<p><strong>10.8</strong> [sussman-anomaly-exercise]Figure <a href="#/">sussman-anomaly-figure</a>
+<p><a href="10-8/">Exercise 10.8 [sussman-anomaly-exercise]</a></p>
+
+<p>Figure <a href="#/">sussman-anomaly-figure</a>
 (page <a href="#/">sussman-anomaly-figure</a>) shows a blocks-world problem that is known as the {Sussman anomaly}.
 The problem was considered anomalous because the noninterleaved planners
 of the early 1970s could not solve it. Write a definition of the problem
@@ -296,12 +310,18 @@ $G_{1}$ and $G_{2}$, produces either a plan for $G_{1}$ concatenated
 with a plan for $G_{2}$, or vice versa. Can a noninterleaved planner
 solve this problem? How, or why not?</p>
 
-<p><strong>10.9</strong> Prove that backward search with PDDL problems is complete.</p>
+<p><a href="10-9/">Exercise 10.9</a></p>
 
-<p><strong>10.10</strong> Construct levels 0, 1, and 2 of the planning graph for the problem in
+<p>Prove that backward search with PDDL problems is complete.</p>
+
+<p><a href="10-10/">Exercise 10.10</a></p>
+
+<p>Construct levels 0, 1, and 2 of the planning graph for the problem in
 Figure <a href="#/">airport-pddl-algorithm</a>.</p>
 
-<p><strong>10.11</strong> [graphplan-proof-exercise] Prove the following assertions about
+<p><a href="10-11/">Exercise 10.11 [graphplan-proof-exercise]</a></p>
+
+<p>Prove the following assertions about
 planning graphs:</p>
 
 <ol>
@@ -315,18 +335,24 @@ actual cost of an optimal plan for achieving it.</p>
   </li>
 </ol>
 
-<p><strong>10.12</strong> We saw that planning graphs can handle only propositional actions. What
+<p><a href="10-12/">Exercise 10.12</a></p>
+
+<p>We saw that planning graphs can handle only propositional actions. What
 if we want to use planning graphs for a problem with variables in the
 goal, such as ${At}(P_{1}, x) 
     \land {At}(P_{2}, x)$, where $x$ is assumed to be bound by an
 existential quantifier that ranges over a finite domain of locations?
 How could you encode such a problem to work with planning graphs?</p>
 
-<p><strong>10.13</strong> The set-level heuristic (see page <a href="#/">set-level-page</a>) uses a planning graph
+<p><a href="10-13/">Exercise 10.13</a></p>
+
+<p>The set-level heuristic (see page <a href="#/">set-level-page</a>) uses a planning graph
 to estimate the cost of achieving a conjunctive goal from the current
 state. What relaxed problem is the set-level heuristic the solution to?</p>
 
-<p><strong>10.14</strong> Examine the definition of <strong>bidirectional
+<p><a href="10-14/">Exercise 10.14</a></p>
+
+<p>Examine the definition of <strong>bidirectional
 search</strong> in Chapter <a href="#/">search-chapter</a>.</p>
 
 <ol>
@@ -345,13 +371,17 @@ forward state-space search?</p>
   </li>
 </ol>
 
-<p><strong>10.15</strong> We contrasted forward and backward state-space searchers with
+<p><a href="10-15/">Exercise 10.15</a></p>
+
+<p>We contrasted forward and backward state-space searchers with
 partial-order planners, saying that the latter is a plan-space searcher.
 Explain how forward and backward state-space search can also be
 considered plan-space searchers, and say what the plan refinement
 operators are.</p>
 
-<p><strong>10.16</strong> [satplan-preconditions-exercise] Up to now we have assumed that the
+<p><a href="10-16/">Exercise 10.16 [satplan-preconditions-exercise]</a></p>
+
+<p>Up to now we have assumed that the
 plans we create always make sure that an action’s preconditions are
 satisfied. Let us now investigate what propositional successor-state
 axioms such as ${HaveArrow}^{t+1} {\;\;{\Leftrightarrow}\;\;}{}$
@@ -377,7 +407,9 @@ achieve the goal?</p>
   </li>
 </ol>
 
-<p><strong>10.17</strong> [strips-translation-exercise]Consider how to translate a set of action
+<p><a href="10-17/">Exercise 10.17 [strips-translation-exercise]</a></p>
+
+<p>Consider how to translate a set of action
 schemas into the successor-state axioms of situation calculus.</p>
 
 <ol>
@@ -408,23 +440,25 @@ of successor-state axioms.</p>
   </li>
 </ol>
 
-<p><strong>10.18</strong> [disjunctive-satplan-exercise] In the {SATPlan} algorithm in
+<p><a href="10-18/">Exercise 10.18 [disjunctive-satplan-exercise]</a></p>
+
+<p>In the $SATPlan$ algorithm in
 Figure <a href="#/">satplan-agent-algorithm</a> (page <a href="#/">satplan-agent-algorithm</a>),
 each call to the satisfiability algorithm asserts a goal $g^T$, where
-$T$ ranges from 0 to $T_$. Suppose instead that the
+$T$ ranges from 0 to $T_{max}$. Suppose instead that the
 satisfiability algorithm is called only once, with the goal
-$g^0 \lor g^1 \lor \cdots \lor g^{T_}$.</p>
+$g^0 \vee g^1 \vee \cdots \vee g^{T_{max}}$.</p>
 
 <ol>
   <li>
     <p>Will this always return a plan if one exists with length less than
-or equal to $T_$?</p>
+or equal to $T_{max}$?</p>
   </li>
   <li>
     <p>Does this approach introduce any new spurious “solutions”?</p>
   </li>
   <li>
-    <p>Discuss how one might modify a satisfiability algorithm such as {WalkSAT} so
+    <p>Discuss how one might modify a satisfiability algorithm such as $WalkSAT$ so
 that it finds short solutions (if they exist) when given a
 disjunctive goal of this form.</p>
   </li>
