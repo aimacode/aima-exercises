@@ -5,4 +5,5 @@ permalink: /intro-exercises/1-18/
 breadcrumb: Introduction
 ---
 
+{% include mathjax_support %}
 {% include_relative question.md %}

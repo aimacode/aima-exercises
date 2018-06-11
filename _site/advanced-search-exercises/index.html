@@ -159,7 +159,8 @@
 
 <h1 id="4-beyond-classical-search">4. Beyond Classical Search</h1>
 
-<h3 id="exercise-41">Exercise 4.1</h3>
+<p><a href="4-1/">Exercise 4.1</a></p>
+
 <p>Give the name of the algorithm that results from each of the following
 special cases:</p>
 
@@ -183,7 +184,8 @@ termination test).</p>
   </li>
 </ol>
 
-<h3 id="exercise-42">Exercise 4.2</h3>
+<p><a href="4-2/">Exercise 4.2</a></p>
+
 <p>Exercise <a href="#/">brio-exercise</a> considers the problem of
 building railway tracks under the assumption that pieces fit exactly
 with no slack. Now consider the real problem, in which pieces don’t fit
@@ -191,7 +193,8 @@ exactly but allow for up to 10 degrees of rotation to either side of the
 “proper” alignment. Explain how to formulate the problem so it could be
 solved by simulated annealing.</p>
 
-<h3 id="exercise-43">Exercise 4.3</h3>
+<p><a href="4-3/">Exercise 4.3</a></p>
+
 <p>In this exercise, we explore the use of local search methods to solve
 TSPs of the type defined in Exercise <a href="#/">tsp-mst-exercise</a>.</p>
 
@@ -207,7 +210,8 @@ You may want to consult @Larranaga+al:1999 for some suggestions for representati
   </li>
 </ol>
 
-<h3 id="exercise-44"><a href="#hill-climbing-exercise">Exercise 4.4</a></h3>
+<p><a href="4-4/">Exercise 4.4 [hill-climbing-exercise]</a></p>
+
 <p>Generate a large number of 8-puzzle and
 8-queens instances and solve them (where possible) by hill climbing
 (steepest-ascent and first-choice variants), hill climbing with random
@@ -215,7 +219,8 @@ restart, and simulated annealing. Measure the search cost and percentage
 of solved problems and graph these against the optimal solution cost.
 Comment on your results.</p>
 
-<h3 id="exercise-45"><a href="#cond-plan-repeated-exercise">Exercise 4.5</a></h3>
+<p><a href="4-5/">Exercise 4.5 [cond-plan-repeated-exercise]</a></p>
+
 <p>The <strong>And-Or-Graph-Search</strong> algorithm in
 Figure <a href="#/">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
@@ -230,7 +235,8 @@ states for which no subplan could be found.) Explain how to use labels,
 as defined in Section <a href="#/">cyclic-plan-section</a>, to avoid
 having multiple copies of subplans.</p>
 
-<h3 id="exercise-46"><a href="#cond-loop-exercise">Exercise 4.6</a></h3>
+<p><a href="4-6/">Exercise 4.6 [cond-loop-exercise]</a></p>
+
 <p>Explain precisely how to modify the <strong>And-Or-Graph-Search</strong> algorithm to
 generate a cyclic plan if no acyclic plan exists. You will need to deal
 with three issues: labeling the plan steps so that a cyclic plan can
@@ -241,7 +247,8 @@ Show how your algorithm works on (a) the slippery vacuum world, and (b)
 the slippery, erratic vacuum world. You might wish to use a computer
 implementation to check your results.</p>
 
-<h3 id="exercise-47">Exercise 4.7</h3>
+<p><a href="4-7/">Exercise 4.7</a></p>
+
 <p>In Section <a href="#/">conformant-section</a> we introduced belief
 states to solve sensorless search problems. A sequence of actions solves
 a sensorless problem if it maps every physical state in the initial
@@ -253,7 +260,8 @@ prove its admissibilty. Comment on the accuracy of this heuristic on the
 sensorless vacuum problem of
 Figure <a href="#/">vacuum2-sets-figure</a>. How well does A* perform?</p>
 
-<h3 id="exercise-48"><a href="#belief-state-superset-exercise">Exercise 4.8</a></h3>
+<p><a href="4-8/">Exercise 4.8 [belief-state-superset-exercise]</a></p>
+
 <p>This exercise explores
 subset–superset relations between belief states in sensorless or
 partially observable environments.</p>
@@ -275,7 +283,8 @@ in (b).</p>
   </li>
 </ol>
 
-<h3 id="exercise-49"><a href="#multivalued-sensorless-exercise">Exercise 4.9</a></h3>
+<p><a href="4-9/">Exercise 4.9 [multivalued-sensorless-exercise]</a></p>
+
 <p>On page <a href="#/">multivalued-sensorless-page</a> it was assumed
 that a given action would have the same cost when executed in any
 physical state within a given belief state. (This leads to a
@@ -291,19 +300,22 @@ just keep the set of all possible costs for that action. For each of
 these, explore whether A* (with modifications if necessary) can return
 optimal solutions.</p>
 
-<h3 id="exercise-410"><a href="#vacuum-solvable-exercise">Exercise 4.10</a></h3>
+<p><a href="4-10/">Exercise 4.10 [vacuum-solvable-exercise]</a></p>
+
 <p>Consider the sensorless version of the
 erratic vacuum world. Draw the belief-state space reachable from the
-initial belief state $\}$, and explain why the
+initial belief state ${1,2,3,4,5,6,7,8}$, and explain why the
 problem is unsolvable.</p>
 
-<h3 id="exercise-411"><a href="#vacuum-solvable-exercise">Exercise 4.11</a></h3>
+<p><a href="4-11/">Exercise 4.11 [vacuum-solvable-exercise]</a></p>
+
 <p>Consider the sensorless version of the
 erratic vacuum world. Draw the belief-state space reachable from the
-initial belief state $\}$, and explain why the problem
+initial belief state ${ 1,3,5,7 }$, and explain why the problem
 is unsolvable.</p>
 
-<h3 id="exercise-412"><a href="#path-planning-agent-exercise">Exercise 4.12</a></h3>
+<p><a href="4-12/">Exercise 4.12 [path-planning-agent-exercise]</a></p>
+
 <p>We can turn the navigation problem in
 Exercise <a href="#/">path-planning-exercise</a> into an environment as
 follows:</p>
@@ -369,7 +381,8 @@ What do solutions look like?</p>
   </li>
 </ol>
 
-<h3 id="exercise-413"><a href="#online-offline-exercise">Exercise 4.13</a></h3>
+<p><a href="4-13/">Exercise 4.13 [online-offline-exercise]</a></p>
+
 <p>Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a href="#/">maze-3x3-figure</a>. The agent knows that its
@@ -401,7 +414,8 @@ possible environment</em> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.</p>
 
-<h3 id="exercise-414"><a href="#online-offline-exercise">Exercise 4.14</a></h3>
+<p><a href="4-14/">Exercise 4.14 [online-offline-exercise]</a></p>
+
 <p>Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a href="#/">maze-3x3-figure</a>. The agent knows that its
@@ -433,7 +447,8 @@ possible environment</em> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.</p>
 
-<h3 id="exercise-415"><a href="#path-planning-hc-exercise">Exercise 4.15</a></h3>
+<p><a href="4-15/">Exercise 4.15 [path-planning-hc-exercise]</a></p>
+
 <p>In this exercise, we examine hill climbing
 in the context of robot navigation, using the environment in
 Figure <a href="#/">geometric-scene-figure</a> as an example.</p>
@@ -465,7 +480,8 @@ this case.</p>
   </li>
 </ol>
 
-<h3 id="exercise-416">Exercise 4.16</h3>
+<p><a href="4-16/">Exercise 4.16</a></p>
+
 <p>Like DFS, online DFS is incomplete for reversible state spaces with
 infinite paths. For example, suppose that states are points on the
 infinite two-dimensional grid and actions are unit vectors $(1,0)$,
@@ -476,7 +492,8 @@ actions that would lead to them. Write an algorithm that is complete
 even for bidirected state spaces with infinite paths. What states does
 it visit in reaching $(1,-1)$?</p>
 
-<h3 id="exercise-417">Exercise 4.17</h3>
+<p><a href="4-17/">Exercise 4.17</a></p>
+
 <p>Relate the time complexity of LRTA* to its space complexity.</p>
 
 

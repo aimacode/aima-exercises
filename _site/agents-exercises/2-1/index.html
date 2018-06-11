@@ -143,26 +143,35 @@
       <article class="post">
 
   <div class="entry">
-    <p><a href="2-15/">Exercise 2.15 [vacuum-finish-exercise]</a></p>
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
 
-<p>The vacuum environments in the preceding
-exercises have all been deterministic. Discuss possible agent programs
-for each of the following stochastic versions:</p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-<ol>
-  <li>
-    <p>Murphy’s law: twenty-five percent of the time, the <em>Suck</em> action
-fails to clean the floor if it is dirty and deposits dirt onto the
-floor if the floor is clean. How is your agent program affected if
-the dirt sensor gives the wrong answer 10% of the time?</p>
-  </li>
-  <li>
-    <p>Small children: At each time step, each clean square has a 10%
-chance of becoming dirty. Can you come up with a rational agent
-design for this case?</p>
-  </li>
-</ol>
+<p><a href="2-1/">Exercise 2.1</a></p>
 
+<p>Suppose that the performance measure is concerned with just the first
+$T$ time steps of the environment and ignores everything thereafter.
+Show that a rational agent’s action may depend not just on the state of
+the environment but also on the time step it has reached.</p>
 
   </div>
 

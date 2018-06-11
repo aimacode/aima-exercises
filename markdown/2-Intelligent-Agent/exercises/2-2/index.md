@@ -5,4 +5,5 @@ permalink: /agents-exercises/2-2/
 breadcrumb: Intelligent Agent
 ---
 
+{% include mathjax_support %}
 {% include_relative question.md %}

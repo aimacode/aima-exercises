@@ -159,11 +159,15 @@
 
 <h1 id="6-constraint-satisfaction-problems">6. Constraint Satisfaction Problems</h1>
 
-<p><strong>6.1</strong> How many solutions are there for the map-coloring problem in
+<p><a href="6-1/">Exercise 6.1</a></p>
+
+<p>How many solutions are there for the map-coloring problem in
 Figure <a href="#/">australia-figure</a>? How many solutions if four
 colors are allowed? Two colors?</p>
 
-<p><strong>6.2</strong> Consider the problem of placing $k$ knights on an $n\times n$
+<p><a href="6-2/">Exercise 6.2</a></p>
+
+<p>Consider the problem of placing $k$ knights on an $n\times n$
 chessboard such that no two knights are attacking each other, where $k$
 is given and $k\leq n^2$.</p>
 
@@ -186,7 +190,9 @@ and a sensible objective function.</p>
   </li>
 </ol>
 
-<p><strong>6.3</strong> [crossword-exercise]Consider the problem of <a href="#footnote1">constructing</a> (not solving)
+<p><a href="6-3/">Exercise 6.3 [crossword-exercise]</a></p>
+
+<p>Consider the problem of <a href="#footnote1">constructing</a> (not solving)
 crossword puzzles fitting words into a rectangular grid. The grid,
 which is given as part of the problem, specifies which squares are blank
 and which are shaded. Assume that a list of words (i.e., a dictionary)
@@ -207,7 +213,9 @@ or letters?</p>
 
 <p>Which formulation do you think will be better? Why?</p>
 
-<p><strong>6.4</strong> [csp-definition-exercise]Give precise formulations for each of the
+<p><a href="6-4/">Exercise 6.4 [csp-definition-exercise]</a></p>
+
+<p>Give precise formulations for each of the
 following as constraint satisfaction problems:</p>
 
 <ol>
@@ -228,12 +236,16 @@ repeating any.</p>
   </li>
 </ol>
 
-<p><strong>6.5</strong> Solve the cryptarithmetic problem in
+<p><a href="6-5/">Exercise 6.5</a></p>
+
+<p>Solve the cryptarithmetic problem in
 Figure <a href="#/">cryptarithmetic-figure</a> by hand, using the
 strategy of backtracking with forward checking and the MRV and
 least-constraining-value heuristics.</p>
 
-<p><strong>6.6</strong> [nary-csp-exercise] Show how a single ternary constraint such as
+<p><a href="6-6/">Exercise 6.6 [nary-csp-exercise]</a></p>
+
+<p>Show how a single ternary constraint such as
 “$A + B = C$” can be turned into three binary constraints by using an
 auxiliary variable. You may assume finite domains. (<em>Hint:</em>
 Consider a new variable that takes on values that are pairs of other
@@ -244,7 +256,9 @@ can be eliminated by altering the domains of variables. This completes
 the demonstration that any CSP can be transformed into a CSP with only
 binary constraints.</p>
 
-<p><strong>6.7</strong> [zebra-exercise] Consider the following logic puzzle: In five houses,
+<p><a href="6-7/">Exercise 6.7 [zebra-exercise]</a></p>
+
+<p>Consider the following logic puzzle: In five houses,
 each with a different color, live five persons of different
 nationalities, each of whom prefers a different brand of candy, a
 different drink, and a different pet. Given the following facts, the
@@ -283,7 +297,9 @@ the fox.</p>
 <p>Discuss different representations of this problem as a CSP. Why would
 one prefer one representation over another?</p>
 
-<p><strong>6.8</strong> Consider the graph with 8 nodes $A_1$, $A_2$, $A_3$, $A_4$, $H$, $T$,
+<p><a href="6-8/">Exercise 6.8</a></p>
+
+<p>Consider the graph with 8 nodes $A_1$, $A_2$, $A_3$, $A_4$, $H$, $T$,
 $F_1$, $F_2$. $A_i$ is connected to $A_{i+1}$ for all $i$, each $A_i$ is
 connected to $H$, $H$ is connected to $T$, and $T$ is connected to each
 $F_i$. Find a 3-coloring of this graph by hand using the following
@@ -291,11 +307,15 @@ strategy: backtracking with conflict-directed backjumping, the variable
 order $A_1$, $H$, $A_4$, $F_1$, $A_2$, $F_2$, $A_3$, $T$, and the value
 order $R$, $G$, $B$.</p>
 
-<p><strong>6.9</strong> Explain why it is a good heuristic to choose the variable that is
+<p><a href="6-9/">Exercise 6.9</a></p>
+
+<p>Explain why it is a good heuristic to choose the variable that is
 <em>most</em> constrained but the value that is
 <em>least</em> constraining in a CSP search.</p>
 
-<p><strong>6.10</strong> Generate random instances of map-coloring problems as follows: scatter
+<p><a href="6-10/">Exercise 6.10</a></p>
+
+<p>Generate random instances of map-coloring problems as follows: scatter
 $n$ points on the unit square; select a point $X$ at random, connect $X$
 by a straight line to the nearest point $Y$ such that $X$ is not already
 connected to $Y$ and the line crosses no other line; repeat the previous
@@ -307,20 +327,28 @@ forward checking, and backtracking with MAC. Construct a table of
 average run times for each algorithm for values of $n$ up to the largest
 you can manage. Comment on your results.</p>
 
-<p><strong>6.11</strong> Use the AC-3 algorithm to show that arc consistency can detect the
+<p><a href="6-11/">Exercise 6.11</a></p>
+
+<p>Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
 ${green},V{red}$ for the problem
 shown in Figure <a href="#/">australia-figure</a>.</p>
 
-<p><strong>6.12</strong> Use the AC-3 algorithm to show that arc consistency can detect the
+<p><a href="6-12/">Exercise 6.12</a></p>
+
+<p>Use the AC-3 algorithm to show that arc consistency can detect the
 inconsistency of the partial assignment
 ${red},V{blue}$ for the problem
 shown in Figure <a href="#/">australia-figure</a>.</p>
 
-<p><strong>6.13</strong> What is the worst-case complexity of running AC-3 on a tree-structured
+<p><a href="6-13/">Exercise 6.13</a></p>
+
+<p>What is the worst-case complexity of running AC-3 on a tree-structured
 CSP?</p>
 
-<p><strong>6.14</strong> [ac4-exercise] AC-3 puts back on the queue <em>every</em> arc
+<p><a href="6-14/">Exercise 6.14 [ac4-exercise]</a></p>
+
+<p>AC-3 puts back on the queue <em>every</em> arc
 ($X_{k}, X_{i}$) whenever <em>any</em> value is deleted from the
 domain of $X_{i}$, even if each value of $X_{k}$ is consistent with
 several remaining values of $X_{i}$. Suppose that, for every arc
@@ -329,23 +357,33 @@ $X_{i}$ that are consistent with each value of $X_{k}$. Explain how to
 update these numbers efficiently and hence show that arc consistency can
 be enforced in total time $O(n^2d^2)$.</p>
 
-<p><strong>6.15</strong> The Tree-CSP-Solver (Figure <a href="#/">tree-csp-figure</a>) makes arcs consistent
+<p><a href="6-15/">Exercise 6.15</a></p>
+
+<p>The Tree-CSP-Solver (Figure <a href="#/">tree-csp-figure</a>) makes arcs consistent
 starting at the leaves and working backwards towards the root. Why does
 it do that? What would happen if it went in the opposite direction?</p>
 
-<p><strong>6.16</strong> We introduced Sudoku as a CSP to be solved by search over partial
+<p><a href="6-16/">Exercise 6.16</a></p>
+
+<p>We introduced Sudoku as a CSP to be solved by search over partial
 assignments because that is the way people generally undertake solving
 Sudoku problems. It is also possible, of course, to attack these
 problems with local search over complete assignments. How well would a
 local solver using the min-conflicts heuristic do on Sudoku problems?</p>
 
-<p><strong>6.17</strong> Define in your own words the terms constraint, backtracking search, arc
+<p><a href="6-17/">Exercise 6.17</a></p>
+
+<p>Define in your own words the terms constraint, backtracking search, arc
 consistency, backjumping, min-conflicts, and cycle cutset.</p>
 
-<p><strong>6.18</strong> Define in your own words the terms constraint, commutativity, arc
+<p><a href="6-18/">Exercise 6.18</a></p>
+
+<p>Define in your own words the terms constraint, commutativity, arc
 consistency, backjumping, min-conflicts, and cycle cutset.</p>
 
-<p><strong>6.19</strong> Suppose that a graph is known to have a cycle cutset of no more than $k$
+<p><a href="6-19/">Exercise 6.19</a></p>
+
+<p>Suppose that a graph is known to have a cycle cutset of no more than $k$
 nodes. Describe a simple algorithm for finding a minimal cycle cutset
 whose run time is not much more than $O(n^k)$ for a CSP with $n$
 variables. Search the literature for methods for finding approximately
@@ -353,7 +391,9 @@ minimal cycle cutsets in time that is polynomial in the size of the
 cutset. Does the existence of such algorithms make the cycle cutset
 method practical?</p>
 
-<p><strong>6.20</strong> Consider the problem of tiling a surface (completely and exactly
+<p><a href="6-20/">Exercise 6.20</a></p>
+
+<p>Consider the problem of tiling a surface (completely and exactly
 covering it) with $n$ dominoes ($2\times
 1$ rectangles). The surface is an arbitrary edge-connected (i.e.,
 adjacent along an edge, not just a corner) collection of $2n$
@@ -384,6 +424,7 @@ tree-structured constraint graph.</p>
 
 <div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
 @Littman+al:1999 tackle the harder problem of solving them.</div>
+
 
   </div>
 

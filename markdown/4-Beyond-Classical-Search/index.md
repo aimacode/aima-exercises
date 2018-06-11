@@ -8,21 +8,36 @@ permalink: /advanced-search-exercises/
 
 # 4. Beyond Classical Search
 
-{% include_relative questions/question_4_1.md %}
-{% include_relative questions/question_4_2.md %}
-{% include_relative questions/question_4_3.md %}
-{% include_relative questions/question_4_4.md %}
-{% include_relative questions/question_4_5.md %}
-{% include_relative questions/question_4_6.md %}
-{% include_relative questions/question_4_7.md %}
-{% include_relative questions/question_4_8.md %}
-{% include_relative questions/question_4_9.md %}
-{% include_relative questions/question_4_10.md %}
-{% include_relative questions/question_4_11.md %}
-{% include_relative questions/question_4_12.md %}
-{% include_relative questions/question_4_13.md %}
-{% include_relative questions/question_4_14.md %}
-{% include_relative questions/question_4_15.md %}
-{% include_relative questions/question_4_16.md %}
-{% include_relative questions/question_4_17.md %}
+{% include_relative exercises/4-1/question.md %}
 
+{% include_relative exercises/4-2/question.md %}
+
+{% include_relative exercises/4-3/question.md %}
+
+{% include_relative exercises/4-4/question.md %}
+
+{% include_relative exercises/4-5/question.md %}
+
+{% include_relative exercises/4-6/question.md %}
+
+{% include_relative exercises/4-7/question.md %}
+
+{% include_relative exercises/4-8/question.md %}
+
+{% include_relative exercises/4-9/question.md %}
+
+{% include_relative exercises/4-10/question.md %}
+
+{% include_relative exercises/4-11/question.md %}
+
+{% include_relative exercises/4-12/question.md %}
+
+{% include_relative exercises/4-13/question.md %}
+
+{% include_relative exercises/4-14/question.md %}
+
+{% include_relative exercises/4-15/question.md %}
+
+{% include_relative exercises/4-16/question.md %}
+
+{% include_relative exercises/4-17/question.md %}
