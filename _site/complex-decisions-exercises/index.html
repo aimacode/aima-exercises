@@ -159,7 +159,9 @@
 
 <h1 id="17-making-complex-decisions">17. Making Complex Decisions</h1>
 
-<p><strong>17.1</strong> [mdp-model-exercise]For the $4\times 3$ world shown in
+<p><a href="17-1/">Exercise 17.1 [mdp-model-exercise]</a></p>
+
+<p>For the $4\times 3$ world shown in
 Figure <a href="#/">sequential-decision-world-figure</a>, calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Up},{Up},{Right},{Right},{Right}]$ and with what
@@ -167,7 +169,9 @@ probabilities. Explain how this computation is related to the prediction
 task (see Section <a href="#/">general-filtering-section</a>) for a
 hidden Markov model.</p>
 
-<p><strong>17.2</strong> [mdp-model-exercise]For the $4\times 3$ world shown in
+<p><a href="17-2/">Exercise 17.2 [mdp-model-exercise]</a></p>
+
+<p>For the $4\times 3$ world shown in
 Figure <a href="#/">sequential-decision-world-figure</a>, calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Right},{Right},{Right},{Up},{Up}]$ and with what
@@ -175,7 +179,9 @@ probabilities. Explain how this computation is related to the prediction
 task (see Section <a href="#/">general-filtering-section</a>) for a
 hidden Markov model.</p>
 
-<p><strong>17.3</strong> Select a specific member of the set of policies that are optimal for
+<p><a href="17-3/">Exercise 17.3</a></p>
+
+<p>Select a specific member of the set of policies that are optimal for
 $R(s)&gt;0$ as shown in
 Figure <a href="#/">sequential-decision-policies-figure</a>(b), and
 calculate the fraction of time the agent spends in each state, in the
@@ -184,21 +190,27 @@ Construct the state-to-state transition probability matrix corresponding
 to the policy and see
 Exercise <a href="#/">markov-convergence-exercise</a>.)</p>
 
-<p><strong>17.4</strong> [nonseparable-exercise]Suppose that we define the utility of a state
+<p><a href="17-4/">Exercise 17.4 [nonseparable-exercise]</a></p>
+
+<p>Suppose that we define the utility of a state
 sequence to be the <em>maximum</em> reward obtained in any state
 in the sequence. Show that this utility function does not result in
 stationary preferences between state sequences. Is it still possible to
 define a utility function on states such that MEU decision making gives
 optimal behavior?</p>
 
-<p><strong>17.5</strong> Can any finite search problem be translated exactly into a Markov
+<p><a href="17-5/">Exercise 17.5</a></p>
+
+<p>Can any finite search problem be translated exactly into a Markov
 decision problem such that an optimal solution of the latter is also an
 optimal solution of the former? If so, explain <em>precisely</em>
 how to translate the problem and how to translate the solution back; if
 not, explain <em>precisely</em> why not (i.e., give a
 counterexample).</p>
 
-<p><strong>17.6</strong> [reward-equivalence-exercise] Sometimes MDPs are formulated with a
+<p><a href="17-6/">Exercise 17.6 [reward-equivalence-exercise]</a></p>
+
+<p>Sometimes MDPs are formulated with a
 reward function $R(s,a)$ that depends on the action taken or with a
 reward function $R(s,a,s’)$ that also depends on the outcome state.</p>
 
@@ -217,15 +229,18 @@ policies in the original MDP.</p>
   </li>
 </ol>
 
-<p><strong>17.7</strong> [threshold-cost-exercise]For the environment shown in
+<p><a href="17-7/">Exercise 17.7 [threshold-cost-exercise]</a></p>
+
+<p>For the environment shown in
 Figure <a href="#/">sequential-decision-world-figure</a>, find all the
 threshold values for $R(s)$ such that the optimal policy changes when
 the threshold is crossed. You will need a way to calculate the optimal
 policy and its value for fixed $R(s)$. (<em>Hint</em>: Prove that
 the value of any fixed policy varies linearly with $R(s)$.)</p>
 
-<p><strong>17.8</strong> [vi-contraction-exercise]
-Equation (<a href="#/">vi-contraction-equation</a>) on
+<p><a href="17-8/">Exercise 17.8 [vi-contraction-exercise]</a></p>
+
+<p>Equation (<a href="#/">vi-contraction-equation</a>) on
 page <a href="#/">vi-contraction-equation</a> states that the Bellman operator is a contraction.</p>
 
 <ol>
@@ -234,13 +249,15 @@ page <a href="#/">vi-contraction-equation</a> states that the Bellman operator 
 <script type="math/tex">|\max_a f(a) - \max_a g(a)| \leq \max_a |f(a) - g(a)|\ .</script></p>
   </li>
   <li>
-    <p>Write out an expression for $|(B\,U_i - B\,U’_i)(s)|$ and then apply
-the result from (a) to complete the proof that the Bellman operator
+    <p>Write out an expression for <script type="math/tex">|(B\,U_i - B\,U'_i)(s)|</script> and then apply
+the result from (1) to complete the proof that the Bellman operator
 is a contraction.</p>
   </li>
 </ol>
 
-<p><strong>17.9</strong> This exercise considers two-player MDPs that correspond to zero-sum,
+<p><a href="17-9/">Exercise 17.9</a></p>
+
+<p>This exercise considers two-player MDPs that correspond to zero-sum,
 turn-taking games like those in
 Chapter <a href="#/">game-playing-chapter</a>. Let the players be $A$
 and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
@@ -280,7 +297,9 @@ The start state has reward 0.
 
 <p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" /></p>
 
-<p><strong>17.10</strong> [3x3-mdp-exercise] Consider the $3 \times 3$ world shown in
+<p><a href="17-10/">Exercise 17.10 [3x3-mdp-exercise]</a></p>
+
+<p>Consider the $3 \times 3$ world shown in
 Figure <a href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
 same as in the $4\times 3$
 Figure <a href="#/">sequential-decision-world-figure</a>: 80% of the
@@ -307,7 +326,9 @@ each policy.</p>
   </li>
 </ol>
 
-<p><strong>17.11</strong> [101x3-mdp-exercise] Consider the $101 \times 3$ world shown in
+<p><a href="17-11/">Exercise 17.11 [101x3-mdp-exercise]</a></p>
+
+<p>Consider the $101 \times 3$ world shown in
 Figure <a href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
 has a choice of two deterministic actions, <em>Up</em> or
 <em>Down</em>, but in the other states the agent has one
@@ -320,7 +341,9 @@ weigh the value of an immediate action versus the potential continual
 long-term consequences, such as choosing to dump pollutants into a
 lake.)</p>
 
-<p><strong>17.12</strong> Consider an undiscounted MDP having three states, (1, 2, 3), with
+<p><a href="17-12/">Exercise 17.12</a></p>
+
+<p>Consider an undiscounted MDP having three states, (1, 2, 3), with
 rewards $-1$, $-2$, $0$, respectively. State 3 is a terminal state. In
 states 1 and 2 there are two possible actions: $a$ and $b$. The
 transition model is as follows:</p>
@@ -360,7 +383,9 @@ depend on the discount factor?</p>
   </li>
 </ol>
 
-<p><strong>17.13</strong> Consider the $4\times 3$ world shown in
+<p><a href="17-13/">Exercise 17.13</a></p>
+
+<p>Consider the $4\times 3$ world shown in
 Figure <a href="#/">sequential-decision-world-figure</a>.</p>
 
 <ol>
@@ -382,12 +407,16 @@ run time for policy iteration vary with the size of the environment?</p>
   </li>
 </ol>
 
-<p><strong>17.14</strong> [policy-loss-exercise]How can the value determination algorithm be
+<p><a href="17-14/">Exercise 17.14 [policy-loss-exercise]</a></p>
+
+<p>How can the value determination algorithm be
 used to calculate the expected loss experienced by an agent using a
 given set of utility estimates ${U}$ and an estimated
 model ${P}$, compared with an agent using correct values?</p>
 
-<p><strong>17.15</strong> [4x3-pomdp-exercise] Let the initial belief state $b_0$ for the
+<p><a href="17-15/">Exercise 17.15 [4x3-pomdp-exercise]</a></p>
+
+<p>Let the initial belief state $b_0$ for the
 $4\times 3$ POMDP on page <a href="#/">4x3-pomdp-page</a> be the uniform distribution
 over the nonterminal states, i.e.,
 $&lt; \frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},0,0 &gt;$.
@@ -395,28 +424,40 @@ Calculate the exact belief state $b_1$ after the agent moves and its
 sensor reports 1 adjacent wall. Also calculate $b_2$ assuming that the
 same thing happens again.</p>
 
-<p><strong>17.16</strong> What is the time complexity of $d$ steps of POMDP value iteration for a
+<p><a href="17-16/">Exercise 17.16</a></p>
+
+<p>What is the time complexity of $d$ steps of POMDP value iteration for a
 sensorless environment?</p>
 
-<p><strong>17.17</strong> [2state-pomdp-exercise] Consider a version of the two-state POMDP on
+<p><a href="17-17/">Exercise 17.17 [2state-pomdp-exercise]</a></p>
+
+<p>Consider a version of the two-state POMDP on
 page <a href="#/">2state-pomdp-page</a> in which the sensor is 90% reliable in state 0 but
 provides no information in state 1 (that is, it reports 0 or 1 with
 equal probability). Analyze, either qualitatively or quantitatively, the
 utility function and the optimal policy for this problem.</p>
 
-<p><strong>17.18</strong> [dominant-equilibrium-exercise]Show that a dominant strategy
+<p><a href="17-18/">Exercise 17.18 [dominant-equilibrium-exercise]</a></p>
+
+<p>Show that a dominant strategy
 equilibrium is a Nash equilibrium, but not vice versa.</p>
 
-<p><strong>17.19</strong> In the children’s game of rock–paper–scissors each player reveals at the
+<p><a href="17-19/">Exercise 17.19</a></p>
+
+<p>In the children’s game of rock–paper–scissors each player reveals at the
 same time a choice of rock, paper, or scissors. Paper wraps rock, rock
 blunts scissors, and scissors cut paper. In the extended version
 rock–paper–scissors–fire–water, fire beats rock, paper, and scissors;
 rock, paper, and scissors beat water; and water beats fire. Write out
 the payoff matrix and find a mixed-strategy solution to this game.</p>
 
-<p><strong>17.20</strong> Solve the game of <em>three</em>-finger Morra.</p>
+<p><a href="17-20/">Exercise 17.20</a></p>
 
-<p><strong>17.21</strong> In the <em>Prisoner’s Dilemma</em>, consider the case where after
+<p>Solve the game of <em>three</em>-finger Morra.</p>
+
+<p><a href="17-21/">Exercise 17.21</a></p>
+
+<p>In the <em>Prisoner’s Dilemma</em>, consider the case where after
 each round, Alice and Bob have probability $X$ meeting again. Suppose
 both players choose the perpetual punishment strategy (where each will
 choose ${refuse}$ unless the other player has ever played
@@ -426,7 +467,9 @@ versus ${refuse}$ when $X = .2$? How about when $X = .05$? For what
 value of $X$ is the expected future total payoff the same whether one
 chooses to ${testify}$ or ${refuse}$ in the current round?</p>
 
-<p><strong>17.22</strong> The following payoff matrix, from @Blinder:1983 by way of @Bernstein:1996, shows a game between
+<p><a href="17-22/">Exercise 17.22</a></p>
+
+<p>The following payoff matrix, from @Blinder:1983 by way of @Bernstein:1996, shows a game between
 politicians and the Federal Reserve.</p>
 
 <table>
@@ -469,7 +512,9 @@ Find the Nash equilibrium of the game in pure strategies. Is this a
 Pareto-optimal solution? You might wish to analyze the policies of
 recent administrations in this light.</p>
 
-<p><strong>17.23</strong> A Dutch auction is similar in an English auction, but rather than
+<p><a href="17-23/">Exercise 17.23</a></p>
+
+<p>A Dutch auction is similar in an English auction, but rather than
 starting the bidding at a low price and increasing, in a Dutch auction
 the seller starts at a high price and gradually lowers the price until
 some buyer is willing to accept that price. (If multiple bidders accept
@@ -482,13 +527,17 @@ obtaining the item? If so, show mathematically why. If not, explain how
 it may be possible for the bidder with highest value for the item not to
 obtain it.</p>
 
-<p><strong>17.24</strong> Imagine an auction mechanism that is just like an ascending-bid auction,
+<p><a href="17-24/">Exercise 17.24</a></p>
+
+<p>Imagine an auction mechanism that is just like an ascending-bid auction,
 except that at the end, the winning bidder, the one who bid $b_{max}$,
 pays only $b_{max}/2$ rather than $b_{max}$. Assuming all agents are
 rational, what is the expected revenue to the auctioneer for this
 mechanism, compared with a standard ascending-bid auction?</p>
 
-<p><strong>17.25</strong> Teams in the National Hockey League historically received 2 points for
+<p><a href="17-25/">Exercise 17.25</a></p>
+
+<p>Teams in the National Hockey League historically received 2 points for
 winning a game and 0 for losing. If the game is tied, an overtime period
 is played; if nobody wins in overtime, the game is a tie and each team
 gets 1 point. But league officials felt that teams were playing too

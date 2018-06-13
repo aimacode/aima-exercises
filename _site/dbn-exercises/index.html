@@ -159,13 +159,17 @@
 
 <h1 id="15-probabilistic-reasoning-over-time">15. Probabilistic Reasoning over Time</h1>
 
-<p><strong>15.1</strong> [state-augmentation-exercise] Show that any second-order Markov
+<p><a href="15-1/">Exercise 15.1 [state-augmentation-exercise]</a></p>
+
+<p>Show that any second-order Markov
 process can be rewritten as a first-order Markov process with an
 augmented set of state variables. Can this always be done
 <em>parsimoniously</em>, i.e., without increasing the number of
 parameters needed to specify the transition model?</p>
 
-<p><strong>15.2</strong> [markov-convergence-exercise] In this exercise, we examine what
+<p><a href="15-2/">Exercise 15.2 [markov-convergence-exercise]</a></p>
+
+<p>In this exercise, we examine what
 happens to the probabilities in the umbrella world in the limit of long
 time sequences.</p>
 
@@ -180,27 +184,29 @@ fixed point. Calculate this fixed point.</p>
     <p>Now consider <em>forecasting</em> further and further into the
 future, given just the first two umbrella observations. First,
 compute the probability $P(r_{2+k}|u_1,u_2)$ for
-$k1\ldots {20}$ and plot the results. You should see that
+$k=1 \ldots 20$ and plot the results. You should see that
 the probability converges towards a fixed point. Prove that the
 exact value of this fixed point is 0.5.</p>
   </li>
 </ol>
 
-<p><strong>15.3</strong> [island-exercise] This exercise develops a space-efficient variant of
+<p><a href="15-3/">Exercise 15.3 [island-exercise]</a></p>
+
+<p>This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
 Figure <a href="#/">forward-backward-algorithm</a> (page <a href="#/">forward-backward-algorithm</a>).
-We wish to compute ${\textbf{P}}(\textbf{X}<em>k|\textbf{e}</em>{1:t})$ for
-$k1,\ldots ,t$. This will be done with a divide-and-conquer
+We wish to compute <script type="math/tex">\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})</script> for
+<script type="math/tex">k=1,\ldots ,t</script>. This will be done with a divide-and-conquer
 approach.</p>
 
 <ol>
   <li>
     <p>Suppose, for simplicity, that $t$ is odd, and let the halfway point
-be $h(t+1)/2$. Show that
-${\textbf{P}}(\textbf{X}<em>k|\textbf{e}</em>{1:t})$ can be computed for
-$k1,\ldots ,h$ given just the initial forward message
-$\textbf{f}<em>{1:0}$, the backward message $\textbf{b}</em>{h+1:t}$, and the evidence
-$\textbf{e}_{1:h}$.</p>
+be $h=(t+1)/2$. Show that <script type="math/tex">\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})</script>
+ can be computed for
+$k=1,\ldots ,h$ given just the initial forward message
+<script type="math/tex">\textbf{f}_{1:0}</script>, the backward message <script type="math/tex">\textbf{b}_{h+1:t}</script>, and the evidence
+<script type="math/tex">\textbf{e}_{1:h}</script>.</p>
   </li>
   <li>
     <p>Show a similar result for the second half of the sequence.</p>
@@ -219,7 +225,9 @@ divide the input into more than two pieces?</p>
   </li>
 </ol>
 
-<p><strong>15.4</strong> [flawed-viterbi-exercise] On page <a href="#/">flawed-viterbi-page</a>, we outlined a flawed
+<p><a href="15-4/">Exercise 15.4 [flawed-viterbi-exercise]</a></p>
+
+<p>On page <a href="#/">flawed-viterbi-page</a>, we outlined a flawed
 procedure for finding the most likely state sequence, given an
 observation sequence. The procedure involves finding the most likely
 state at each time step, using smoothing, and returning the sequence
@@ -228,13 +236,16 @@ models and observation sequences, this procedure returns an impossible
 state sequence (i.e., the posterior probability of the sequence is
 zero).</p>
 
-<p><strong>15.5</strong> [hmm-likelihood-exercise]
-Equation (<a href="#/">matrix-filtering-equation</a>) describes the
+<p><a href="15-5/">Exercise 15.5 [hmm-likelihood-exercise]</a></p>
+
+<p>Equation (<a href="#/">matrix-filtering-equation</a>) describes the
 filtering process for the matrix formulation of HMMs. Give a similar
 equation for the calculation of likelihoods, which was described
 generically in Equation (<a href="#/">forward-likelihood-equation</a>).</p>
 
-<p><strong>15.6</strong> Consider the vacuum worlds of
+<p><a href="15-6/">Exercise 15.6</a></p>
+
+<p>Consider the vacuum worlds of
 Figure <a href="#/">vacuum-maze-ch4-figure</a> (perfect sensing) and
 Figure <a href="#/">vacuum-maze-hmm2-figure</a> (noisy sensing). Suppose
 that the robot receives an observation sequence such that, with perfect
@@ -243,8 +254,9 @@ location necessarily the most probable location under noisy sensing for
 sufficiently small noise probability $\epsilon$? Prove your claim or
 find a counterexample.</p>
 
-<p><strong>15.7</strong> [hmm-robust-exercise] In
-Section <a href="#/">hmm-localization-section</a>, the prior
+<p><a href="15-7/">Exercise 15.7 [hmm-robust-exercise]</a></p>
+
+<p>In Section <a href="#/">hmm-localization-section</a>, the prior
 distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually
@@ -254,7 +266,9 @@ the HMM model fixed, explore the effect on localization and path
 accuracy as the southeasterly tendency increases, for different values
 of $\epsilon$.</p>
 
-<p><strong>15.8</strong> [roomba-viterbi-exercise] Consider a version of the vacuum robot
+<p><a href="15-8/">Exercise 15.8 [roomba-viterbi-exercise]</a></p>
+
+<p>Consider a version of the vacuum robot
 (page <a href="#/">vacuum-maze-hmm2-figure</a>) that has the policy of going straight for as long
 as it can; only when it encounters an obstacle does it change to a new
 (randomly selected) heading. To model this robot, each state in the
@@ -264,7 +278,9 @@ this model. The robot’s policy is more constrained than the random-walk
 robot; does that mean that predictions of the most likely path are more
 accurate?</p>
 
-<p><strong>15.9</strong> We have described three policies for the vacuum robot: (1) a uniform
+<p><a href="15-9/">Exercise 15.9</a></p>
+
+<p>We have described three policies for the vacuum robot: (1) a uniform
 random walk, (2) a bias for wandering southeast, as described in
 Exercise <a href="#/">hmm-robust-exercise</a>, and (3) the policy
 described in Exercise <a href="#/">roomba-viterbi-exercise</a>. Suppose
@@ -275,7 +291,9 @@ observations? Implement the approach and test it. How much does the
 localization accuracy suffer, compared to the case in which the observer
 knows which policy the robot is following?</p>
 
-<p><strong>15.10</strong> This exercise is concerned with filtering in an environment with no
+<p><a href="15-10/">Exercise 15.10</a></p>
+
+<p>This exercise is concerned with filtering in an environment with no
 landmarks. Consider a vacuum robot in an empty room, represented by an
 $n \times m$ rectangular grid. The robot’s location is hidden; the only
 evidence available to the observer is a noisy location sensor that gives
@@ -290,7 +308,9 @@ randomly selected new heading with probability .2 (or with probability 1
 if it encounters a wall). Implement this as an HMM and do filtering to
 track the robot. How accurately can we track the robot’s path?</p>
 
-<p><strong>15.11</strong> This exercise is concerned with filtering in an environment with no
+<p><a href="15-11/">Exercise 15.11</a></p>
+
+<p>This exercise is concerned with filtering in an environment with no
 landmarks. Consider a vacuum robot in an empty room, represented by an
 $n \times m$ rectangular grid. The robot’s location is hidden; the only
 evidence available to the observer is a noisy location sensor that gives
@@ -306,9 +326,9 @@ if it encounters a wall). Implement this as an HMM and do filtering to
 track the robot. How accurately can we track the robot’s path?</p>
 
 <center>
-<b id="switching-kf-figure">Figure [switching-kf-figure]</b> A Bayesian network representation of a switching Kalman filter. The switching variable \(S_t\) is a discrete state variable whose value determines
+<b id="switching-kf-figure">Figure [switching-kf-figure]</b> A Bayesian network representation of a switching Kalman filter. The switching variable $S_t$ is a discrete state variable whose value determines
 the transition model for the continuous state variables $\textbf{X}_t$.
-For any discrete state *i*, the transition model
+For any discrete state $\textit{i}$, the transition model
 $\textbf{P}(\textbf{X}_{t+1}|\textbf{X}_t,S_t= i)$ is a linear Gaussian model, just as in a
 regular Kalman filter. The transition model for the discrete state,
 $\textbf{P}(S_{t+1}|S_t)$, can be thought of as a matrix, as in a hidden
@@ -317,7 +337,9 @@ Markov model.
 
 <p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/switching-kf.svg" alt="switching-kf-figure" /></p>
 
-<p><strong>15.12</strong> [switching-kf-exercise] Often, we wish to monitor a continuous-state
+<p><a href="15-12/">Exercise 15.12 [switching-kf-exercise]</a></p>
+
+<p>Often, we wish to monitor a continuous-state
 system whose behavior switches unpredictably among a set of $k$ distinct
 “modes.” For example, an aircraft trying to evade a missile can execute
 a series of distinct maneuvers that the missile may attempt to track. A
@@ -329,17 +351,17 @@ Figure <a href="#switching-kf-figure">switching-kf-figure</a>.</p>
   <li>
     <p>Suppose that the discrete state $S_t$ has $k$ possible values and
 that the prior continuous state estimate
-${\textbf{P}}(\textbf{X}_0)$ is a multivariate
+<script type="math/tex">{\textbf{P}}(\textbf{X}_0)</script> is a multivariate
 Gaussian distribution. Show that the prediction
-${\textbf{P}}(\textbf{X}_1)$ is a <strong>mixture of
+<script type="math/tex">{\textbf{P}}(\textbf{X}_1)</script> is a <strong>mixture of
 Gaussians</strong>—that is, a weighted sum of Gaussians such
 that the weights sum to 1.</p>
   </li>
   <li>
     <p>Show that if the current continuous state estimate
-${\textbf{P}}(\textbf{X}<em>t|\textbf{e}</em>{1:t})$ is a mixture of $m$ Gaussians,
+<script type="math/tex">{\textbf{P}}(\textbf{X}_t|\textbf{e}_{1:t})</script> is a mixture of $m$ Gaussians,
 then in the general case the updated state estimate
-${\textbf{P}}(\textbf{X}<em>{t+1}|\textbf{e}</em>{1:t+1})$ will be a mixture of
+<script type="math/tex">{\textbf{P}}(\textbf{X}_{t+1}|\textbf{e}_{1:t+1})</script> will be a mixture of
 $km$ Gaussians.</p>
   </li>
   <li>
@@ -352,12 +374,16 @@ mixture represent?</p>
 grows without limit even for switching Kalman filters, which are among
 the simplest hybrid dynamic models.</p>
 
-<p><strong>15.13</strong> [kalman-update-exercise] Complete the missing step in the derivation
+<p><a href="15-13/">Exercise 15.13 [kalman-update-exercise]</a></p>
+
+<p>Complete the missing step in the derivation
 of Equation (<a href="#/">kalman-one-step-equation</a>) on
 page <a href="#/">kalman-one-step-equation</a>, the first update step for the one-dimensional Kalman
 filter.</p>
 
-<p><strong>15.14</strong> [kalman-variance-exercise] Let us examine the behavior of the variance
+<p><a href="15-14/">Exercise 15.14 [kalman-variance-exercise]</a></p>
+
+<p>Let us examine the behavior of the variance
 update in Equation (<a href="#/">kalman-univariate-equation</a>)
 (page <a href="#/">kalman-univariate-equation</a>).</p>
 
@@ -377,7 +403,9 @@ $\sigma_x^2\rightarrow 0$ and as $\sigma_z^2\rightarrow 0$.</p>
   </li>
 </ol>
 
-<p><strong>15.15</strong> [sleep1-exercise] A professor wants to know if students are getting
+<p><a href="15-15/">Exercise 15.15 [sleep1-exercise]</a></p>
+
+<p>A professor wants to know if students are getting
 enough sleep. Each day, the professor observes whether the students
 sleep in class, and whether they have red eyes. The professor has the
 following domain theory:</p>
@@ -408,7 +436,9 @@ observations. Then reformulate it as a hidden Markov model that has only
 a single observation variable. Give the complete probability tables for
 the model.</p>
 
-<p><strong>15.16</strong> [sleep1-exercise] A professor wants to know if students are getting
+<p><a href="15-16/">Exercise 15.16 [sleep1-exercise]</a></p>
+
+<p>A professor wants to know if students are getting
 enough sleep. Each day, the professor observes whether the students
 sleep in class, and whether they have red eyes. The professor has the
 following domain theory:</p>
@@ -439,7 +469,9 @@ observations. Then reformulate it as a hidden Markov model that has only
 a single observation variable. Give the complete probability tables for
 the model.</p>
 
-<p><strong>15.17</strong> For the DBN specified in Exercise <a href="#/">sleep1-exercise</a> and
+<p><a href="15-17/">Exercise 15.17</a></p>
+
+<p>For the DBN specified in Exercise <a href="#/">sleep1-exercise</a> and
 for the evidence values</p>
 
 <p><script type="math/tex">\textbf{e}_1 = not\space red\space eyes,\space not\space sleeping\space in\space class</script>
@@ -450,11 +482,11 @@ for the evidence values</p>
 
 <ol>
   <li>
-    <p>State estimation: Compute $P({EnoughSleep}<em>t | \textbf{e}</em>{1:t})$ for each
+    <p>State estimation: Compute <script type="math/tex">P({EnoughSleep}_t | \textbf{e}_{1:t})</script> for each
 of $t = 1,2,3$.</p>
   </li>
   <li>
-    <p>Smoothing: Compute $P({EnoughSleep}<em>t | \textbf{e}</em>{1:3})$ for each of
+    <p>Smoothing: Compute <script type="math/tex">P({EnoughSleep}_t | \textbf{e}_{1:3})</script> for each of
 $t = 1,2,3$.</p>
   </li>
   <li>
@@ -462,7 +494,9 @@ $t = 1,2,3$.</p>
   </li>
 </ol>
 
-<p><strong>15.18</strong> Suppose that a particular student shows up with red eyes and sleeps in
+<p><a href="15-18/">Exercise 15.18</a></p>
+
+<p>Suppose that a particular student shows up with red eyes and sleeps in
 class every day. Given the model described in
 Exercise <a href="#/">sleep1-exercise</a>, explain why the probability
 that the student had enough sleep the previous night converges to a
@@ -470,7 +504,9 @@ fixed point rather than continuing to go down as we gather more days of
 evidence. What is the fixed point? Answer this both numerically (by
 computation) and analytically.</p>
 
-<p><strong>15.19</strong> [battery-sequence-exercise] This exercise analyzes in more detail the
+<p><a href="15-19/">Exercise 15.19 [battery-sequence-exercise]</a></p>
+
+<p>This exercise analyzes in more detail the
 persistent-failure model for the battery sensor in
 Figure <a href="#/">battery-persistence-figure</a>(a)
 (page <a href="#/">battery-persistence-figure</a>).</p>
@@ -478,7 +514,7 @@ Figure <a href="#/">battery-persistence-figure</a>(a)
 <ol>
   <li>
     <p>Figure <a href="#/">battery-persistence-figure</a>(b) stops at
-$t{32}$. Describe qualitatively what should happen as
+$t=32$. Describe qualitatively what should happen as
 $t\to\infty$ if the sensor continues to read 0.</p>
   </li>
   <li>
@@ -494,12 +530,15 @@ robot to infer the current temperature?</p>
   </li>
 </ol>
 
-<p><strong>15.20</strong> [dbn-elimination-exercise] Consider applying the variable elimination
+<p><a href="15-20/">Exercise 15.20 [dbn-elimination-exercise]</a></p>
+
+<p>Consider applying the variable elimination
 algorithm to the umbrella DBN unrolled for three slices, where the query
 is ${\textbf{P}}(R_3|u_1,u_2,u_3)$. Show that the space
 complexity of the algorithm—the size of the largest factor—is the same,
 regardless of whether the rain variables are eliminated in forward or
 backward order.</p>
+
 
   </div>
 
