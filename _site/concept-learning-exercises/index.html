@@ -159,29 +159,41 @@
 
 <h1 id="18-learning-from-examples">18. Learning from Examples</h1>
 
-<p><strong>18.1</strong> [infant-language-exercise]Consider the problem faced by an infant
+<p><a href="18-1/">Exercise 18.1 [infant-language-exercise]</a></p>
+
+<p>Consider the problem faced by an infant
 learning to speak and understand a language. Explain how this process
 fits into the general learning model. Describe the percepts and actions
 of the infant, and the types of learning the infant must do. Describe
 the subfunctions the infant is trying to learn in terms of inputs and
 outputs, and available example data.</p>
 
-<p><strong>18.2</strong> Repeat Exercise <a href="#/">infant-language-exercise</a> for the case
+<p><a href="18-2/">Exercise 18.2</a></p>
+
+<p>Repeat Exercise <a href="#/">infant-language-exercise</a> for the case
 of learning to play tennis (or some other sport with which you are
 familiar). Is this supervised learning or reinforcement learning?</p>
 
-<p><strong>18.3</strong> Draw a decision tree for the problem of deciding whether to move forward
+<p><a href="18-3/">Exercise 18.3</a></p>
+
+<p>Draw a decision tree for the problem of deciding whether to move forward
 at a road intersection, given that the light has just turned green.</p>
 
-<p><strong>18.4</strong> We never test the same attribute twice along one path in a decision
+<p><a href="18-4/">Exercise 18.4</a></p>
+
+<p>We never test the same attribute twice along one path in a decision
 tree. Why not?</p>
 
-<p><strong>18.5</strong> Suppose we generate a training set from a decision tree and then apply
+<p><a href="18-5/">Exercise 18.5</a></p>
+
+<p>Suppose we generate a training set from a decision tree and then apply
 decision-tree learning to that training set. Is it the case that the
 learning algorithm will eventually return the correct tree as the
 training-set size goes to infinity? Why or why not?</p>
 
-<p><strong>18.6</strong> [leaf-classification-exercise]In the recursive construction of
+<p><a href="18-6/">Exercise 18.6 [leaf-classification-exercise]</a></p>
+
+<p>In the recursive construction of
 decision trees, it sometimes happens that a mixed set of positive and
 negative examples remains at a leaf node, even after all the attributes
 have been used. Suppose that we have $p$ positive examples and $n$
@@ -198,13 +210,17 @@ examples at the leaf.</p>
   </li>
 </ol>
 
-<p><strong>18.7</strong> [nonnegative-gain-exercise]Suppose that an attribute splits the set of
-examples $E$ into subsets $E_$ and that each subset has $p_$
-positive examples and $n_$ negative examples. Show that the
-attribute has strictly positive information gain unless the ratio
-$p_/(p_+n_)$ is the same for all $$.</p>
+<p><a href="18-7/">Exercise 18.7 [nonnegative-gain-exercise]</a></p>
 
-<p><strong>18.8</strong> Consider the following data set comprised of three binary input
+<p>[nonnegative-gain-exercise]Suppose that an attribute splits the set of
+examples $E$ into subsets $E_k$ and that each subset has $p_k$
+positive examples and $n_k$ negative examples. Show that the
+attribute has strictly positive information gain unless the ratio
+$p_k/(p_k+n_k)$ is the same for all $k$.</p>
+
+<p><a href="18-8/">Exercise 18.8</a></p>
+
+<p>Consider the following data set comprised of three binary input
 attributes ($A_1, A_2$, and $A_3$) and one binary output:</p>
 
 <table>
@@ -260,12 +276,16 @@ attributes ($A_1, A_2$, and $A_3$) and one binary output:</p>
 (page <a href="#/">DTL-algorithm</a>) to learn a decision tree for these data. Show the
 computations made to determine the attribute to split at each node.</p>
 
-<p><strong>18.9</strong> Construct a data set (set of examples with attributes and
+<p><a href="18-9/">Exercise 18.9</a></p>
+
+<p>Construct a data set (set of examples with attributes and
 classifications) that would cause the decision-tree learning algorithm
 to find a non-minimal-sized tree. Show the tree constructed by the
 algorithm and the minimal-sized tree that you can generate by hand.</p>
 
-<p><strong>18.10</strong> A decision <em>graph</em> is a generalization of a decision tree
+<p><a href="18-10/">Exercise 18.10</a></p>
+
+<p>A decision <em>graph</em> is a generalization of a decision tree
 that allows nodes (i.e., attributes used for splits) to have multiple
 parents, rather than just a single parent. The resulting graph must
 still be acyclic. Now, consider the XOR function of <em>three</em>
@@ -283,7 +303,9 @@ three-input XOR function.</p>
   </li>
 </ol>
 
-<p><strong>18.11</strong> [pruning-DTL-exercise]This exercise considers $\chi^2$ pruning of
+<p><a href="18-11/">Exercise 18.11 [pruning-DTL-exercise]</a></p>
+
+<p>This exercise considers $\chi^2$ pruning of
 decision trees (Section <a href="#/">chi-squared-section</a>).</p>
 
 <ol>
@@ -300,7 +322,9 @@ Quinlan [@Quinlan:1986] or [@Kearns+Mansour:1998] for details.</p>
   </li>
 </ol>
 
-<p><strong>18.12</strong> [missing-value-DTL-exercise]The standard DECISION-TREE-LEARNING algorithm described in the
+<p><a href="18-12/">Exercise 18.12 [missing-value-DTL-exercise]</a></p>
+
+<p>The standard DECISION-TREE-LEARNING algorithm described in the
 chapter does not handle cases in which some examples have missing
 attribute values.</p>
 
@@ -328,7 +352,9 @@ frequencies of those values in the set $C$.</p>
   </li>
 </ol>
 
-<p><strong>18.13</strong> [gain-ratio-DTL-exercise]In
+<p><a href="18-13/">Exercise 18.13 [gain-ratio-DTL-exercise]</a></p>
+
+<p>In
 Section <a href="#/">broadening-decision-tree-section</a>, we noted that
 attributes with many different possible values can cause problems with
 the gain measure. Such attributes tend to split the examples into
@@ -343,7 +369,9 @@ attribute provides information on the correct classification of an
 example. Write a mathematical expression for the information content of
 an attribute, and implement the gain ratio criterion in DECISION-TREE-LEARNING.</p>
 
-<p><strong>18.14</strong> Suppose you are running a learning experiment on a new algorithm for
+<p><a href="18-14/">Exercise 18.14</a></p>
+
+<p>Suppose you are running a learning experiment on a new algorithm for
 Boolean classification. You have a data set consisting of 100 positive
 and 100 negative examples. You plan to use leave-one-out
 cross-validation and compare your algorithm to a baseline function, a
@@ -353,14 +381,18 @@ in the training set, regardless of the input.) You expect the majority
 classifier to score about 50% on leave-one-out cross-validation, but to
 your surprise, it scores zero every time. Can you explain why?</p>
 
-<p><strong>18.15</strong> Suppose that a learning algorithm is trying to find a consistent
+<p><a href="18-15/">Exercise 18.15</a></p>
+
+<p>Suppose that a learning algorithm is trying to find a consistent
 hypothesis when the classifications of examples are actually random.
 There are $n$ Boolean attributes, and examples are drawn uniformly from
 the set of $2^n$ possible examples. Calculate the number of examples
 required before the probability of finding a contradiction in the data
 reaches 0.5.</p>
 
-<p><strong>18.16</strong> Construct a <em>decision list</em> to classify the data below.
+<p><a href="18-16/">Exercise 18.16</a></p>
+
+<p>Construct a <em>decision list</em> to classify the data below.
 Select tests to be as small as possible (in terms of attributes),
 breaking ties among tests with the same number of attributes by
 selecting the one that classifies the greatest number of examples
@@ -447,14 +479,18 @@ attributes with lower index numbers (e.g., select $A_1$ over $A_2$).</p>
   </tbody>
 </table>
 
-<p><strong>18.17</strong> Prove that a decision list can represent the same function as a decision
+<p><a href="18-17/">Exercise 18.17</a></p>
+
+<p>Prove that a decision list can represent the same function as a decision
 tree while using at most as many rules as there are leaves in the
 decision tree for that function. Give an example of a function
 represented by a decision list using strictly fewer rules than the
 number of leaves in a minimal-sized decision tree for that same
 function.</p>
 
-<p><strong>18.18</strong> [DL-expressivity-exercise]This exercise concerns the expressiveness of
+<p><a href="18-18/">Exercise 18.18 [DL-expressivity-exercise]</a></p>
+
+<p>This exercise concerns the expressiveness of
 decision lists (Section <a href="#/">learning-theory-section</a>).</p>
 
 <ol>
@@ -469,21 +505,27 @@ a decision tree of depth $k$.</p>
   </li>
 </ol>
 
-<p><strong>18.19</strong> [knn-mean-mode] Suppose a $7$-nearest-neighbors regression search
+<p><a href="18-19/">Exercise 18.19 [knn-mean-mode]</a></p>
+
+<p>Suppose a $7$-nearest-neighbors regression search
 returns $ {7, 6, 8, 4, 7, 11, 100} $ as the 7 nearest $y$ values for a
 given $x$ value. What is the value of $\hat{y}$ that minimizes the $L_1$
 loss function on this data? There is a common name in statistics for
 this value as a function of the $y$ values; what is it? Answer the same
 two questions for the $L_2$ loss function.</p>
 
-<p><strong>18.20</strong> [knn-mean-mode] Suppose a $7$-nearest-neighbors regression search
+<p><a href="18-20/">Exercise 18.20 [knn-mean-mode]</a></p>
+
+<p>Suppose a $7$-nearest-neighbors regression search
 returns $ {4, 2, 8, 4, 9, 11, 100} $ as the 7 nearest $y$ values for a
 given $x$ value. What is the value of $\hat{y}$ that minimizes the $L_1$
 loss function on this data? There is a common name in statistics for
 this value as a function of the $y$ values; what is it? Answer the same
 two questions for the $L_2$ loss function.</p>
 
-<p><strong>18.21</strong> [svm-ellipse-exercise] Figure <a href="#/">kernel-machine-figure</a>
+<p><a href="18-21/">Exercise 18.21 [svm-ellipse-exercise]</a></p>
+
+<p>Figure <a href="#/">kernel-machine-figure</a>
 showed how a circle at the origin can be linearly separated by mapping
 from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
 But what if the circle is not located at the origin? What if it is an
@@ -505,7 +547,9 @@ $(x_1, x_2, x_1^2, x_2^2, x_1 x_2)$.</p>
   </li>
 </ol>
 
-<p><strong>18.22</strong> [svm-exercise] Construct a support vector machine that computes the
+<p><a href="18-22/">Exercise 18.22 [svm-exercise]</a></p>
+
+<p>Construct a support vector machine that computes the
 xor function. Use values of +1 and –1 (instead of 1 and 0)
 for both inputs and outputs, so that an example looks like $([-1, 1],
 1)$ or $([-1, -1], -1)$. Map the input $[x_1,x_2]$ into a space
@@ -513,31 +557,41 @@ consisting of $x_1$ and $x_1\,x_2$. Draw the four input points in this
 space, and the maximal margin separator. What is the margin? Now draw
 the separating line back in the original Euclidean input space.</p>
 
-<p><strong>18.23</strong> [ensemble-error-exercise] Consider an ensemble learning algorithm that
+<p><a href="18-23/">Exercise 18.23 [ensemble-error-exercise]</a></p>
+
+<p>Consider an ensemble learning algorithm that
 uses simple majority voting among $K$ learned hypotheses.
 Suppose that each hypothesis has error $\epsilon$ and that the errors
 made by each hypothesis are independent of the others’. Calculate a
 formula for the error of the ensemble algorithm in terms of $K$
 and $\epsilon$, and evaluate it for the cases where
-$K5$, 10, and 20 and $\epsilon{0.1}$, 0.2,
+$K=5$, 10, and 20 and $\epsilon={0.1}$, 0.2,
 and 0.4. If the independence assumption is removed, is it possible for
 the ensemble error to be <em>worse</em> than $\epsilon$?</p>
 
-<p><strong>18.24</strong> Construct by hand a neural network that computes the xor
+<p><a href="18-24/">Exercise 18.24</a></p>
+
+<p>Construct by hand a neural network that computes the xor
 function of two inputs. Make sure to specify what sort of units you are
 using.</p>
 
-<p><strong>18.25</strong> A simple perceptron cannot represent xor (or, generally,
+<p><a href="18-25/">Exercise 18.25</a></p>
+
+<p>A simple perceptron cannot represent xor (or, generally,
 the parity function of its inputs). Describe what happens to the weights
 of a four-input, hard-threshold perceptron, beginning with all weights
 set to 0.1, as examples of the parity function arrive.</p>
 
-<p><strong>18.26</strong> [linear-separability-exercise] Recall from
+<p><a href="18-26/">Exercise 18.26 [linear-separability-exercise]</a></p>
+
+<p>Recall from
 Chapter <a href="#/">concept-learning-chapter</a> that there are
-$2^{2^}$ distinct Boolean functions of $$ inputs. How many of
+$2^{2^n}$ distinct Boolean functions of $n$ inputs. How many of
 these are representable by a threshold perceptron?</p>
 
-<p><strong>18.27</strong> Consider the following set of examples, each with six inputs and one
+<p><a href="18-27/">Exercise 18.27</a></p>
+
+<p>Consider the following set of examples, each with six inputs and one
 target output:</p>
 
 <table>
@@ -697,8 +751,9 @@ decision tree.</p>
   </li>
 </ol>
 
-<p><strong>18.28</strong> [perceptron-ML-gradient-exercise]
-Section <a href="#/">logistic-regression-section</a>
+<p><a href="18-28/">Exercise 18.28 [perceptron-ML-gradient-exercise]</a></p>
+
+<p>Section <a href="#/">logistic-regression-section</a>
 (page <a href="#/">logistic-regression-section</a>) noted that the output of the logistic function
 could be interpreted as a <em>probability</em> $p$ assigned by the
 model to the proposition that $f(\textbf{x})1$; the probability that
@@ -709,7 +764,9 @@ calculations give a learning rule for minimizing the
 negative-log-likelihood loss function for a probabilistic hypothesis.
 Comment on any resemblance to other learning rules in the chapter.</p>
 
-<p><strong>18.29</strong> [linear-nn-exercise]Suppose you had a neural network with linear
+<p><a href="18-29/">Exercise 18.29 [linear-nn-exercise]</a></p>
+
+<p>Suppose you had a neural network with linear
 activation functions. That is, for each unit the output is some constant
 $c$ times the weighted sum of the inputs.</p>
 
@@ -735,25 +792,33 @@ particular the case $h \ll n$.</p>
   </li>
 </ol>
 
-<p><strong>18.30</strong> Implement a data structure for layered, feed-forward neural networks,
+<p><a href="18-30/">Exercise 18.30</a></p>
+
+<p>Implement a data structure for layered, feed-forward neural networks,
 remembering to provide the information needed for both forward
 evaluation and backward propagation. Using this data structure, write a
 function NEURAL-NETWORK-OUTPUT that takes an example and a network and computes the
 appropriate output values.</p>
 
-<p><strong>18.31</strong> Suppose that a training set contains only a single example, repeated 100
+<p><a href="18-31/">Exercise 18.31</a></p>
+
+<p>Suppose that a training set contains only a single example, repeated 100
 times. In 80 of the 100 cases, the single output value is 1; in the
 other 20, it is 0. What will a back-propagation network predict for this
 example, assuming that it has been trained and reaches a global optimum?
 (<em>Hint:</em> to find the global optimum, differentiate the
 error function and set it to zero.)</p>
 
-<p><strong>18.32</strong> The neural network whose learning performance is measured in
+<p><a href="18-32/">Exercise 18.32</a></p>
+
+<p>The neural network whose learning performance is measured in
 Figure <a href="#/">restaurant-back-prop-figure</a> has four hidden
 nodes. This number was chosen somewhat arbitrarily. Use a
 cross-validation method to find the best number of hidden nodes.</p>
 
-<p><strong>18.33</strong> [embedding-separability-exercise] Consider the problem of separating
+<p><a href="18-33/">Exercise 18.33 [embedding-separability-exercise]</a></p>
+
+<p>Consider the problem of separating
 $N$ data points into positive and negative examples using a linear
 separator. Clearly, this can always be done for $N2$ points
 on a line of dimension $d1$, regardless of how the points are
@@ -783,6 +848,7 @@ position (but not $N+1$) are linearly separable in a space of
 dimension $N-1$.</p>
   </li>
 </ol>
+
 
   </div>
 

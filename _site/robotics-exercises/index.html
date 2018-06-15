@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Main –  – </title>
+    <title>Robotics –  – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -15,8 +15,8 @@
     <meta name="author" content="" />
 
     
-    <meta property="og:title" content="Main" />
-    <meta property="twitter:title" content="Main" />
+    <meta property="og:title" content="Robotics" />
+    <meta property="twitter:title" content="Robotics" />
     
 
     <!--[if lt IE 9]>
@@ -159,7 +159,9 @@
 
 <h1 id="25-robotics">25. Robotics</h1>
 
-<p><strong>25.1</strong> [mcl-biasdness-exercise]Monte Carlo localization is
+<p><a href="25-1/">Exercise 25.1 [mcl-biasdness-exercise]</a></p>
+
+<p>Monte Carlo localization is
 <em>biased</em> for any finite sample size—i.e., the expected
 value of the location computed by the algorithm differs from the true
 expected value—because of the way particle filtering works. In this
@@ -205,7 +207,9 @@ for finite values of $N$? Provide at least two such modifications
   </li>
 </ol>
 
-<p><strong>25.2</strong> [mcl-implement-exercise]Implement Monte Carlo localization for a
+<p><a href="25-2/">Exercise 25.2 [mcl-implement-exercise]</a></p>
+
+<p>Implement Monte Carlo localization for a
 simulated robot with range sensors. A grid map and range data are
 available from the code repository at
 <a href="http://aima.cs.berkeley.edu">aima.cs.berkeley.edu</a>. You should demonstrate
@@ -217,7 +221,9 @@ successful global localization of the robot.</p>
 
 <p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/figRobot2.svg" alt="figRobot2" /></p>
 
-<p><strong>25.3</strong> [AB-manipulator-ex] Consider a robot with two simple manipulators, as
+<p><a href="25-3/">Exercise 25.3 [AB-manipulator-ex]</a></p>
+
+<p>Consider a robot with two simple manipulators, as
 shown in figure <a href="#figRobot2">figRobot2</a>. Manipulator A is a square block of side 2
 which can slide back and on a rod that runs along the x-axis from
 x=$-$10 to x=10. Manipulator B is a square block of side 2 which can
@@ -229,7 +235,9 @@ of manipulator A and where $y$ is the y-coordinate of the center of
 manipulator B. Draw the configuration space for this robot, indicating
 the permitted and excluded zones.</p>
 
-<p><strong>25.4</strong> Suppose that you are working with the robot in
+<p><a href="25-4/">Exercise 25.4</a></p>
+
+<p>Suppose that you are working with the robot in
 Exercise <a href="#/">AB-manipulator-ex</a> and you are given the
 problem of finding a path from the starting configuration of
 figure <a href="#figRobot2">figRobot2</a> to the ending configuration. Consider a potential
@@ -251,7 +259,9 @@ distance from A to B in the above sense.)</p>
   </li>
 </ol>
 
-<p><strong>25.5</strong> [inverse-kinematics-exercise]Consider the robot arm shown in
+<p><a href="25-5/">Exercise 25.5 [inverse-kinematics-exercise]</a></p>
+
+<p>Consider the robot arm shown in
 Figure <a href="#/">FigArm1</a>. Assume that the robot’s base element is
 60cm long and that its upper arm and forearm are each 40cm long. As
 argued on page <a href="#/">inverse-kinematics-not-unique</a>, the inverse kinematics of a robot is often
@@ -259,7 +269,9 @@ not unique. State an explicit closed-form solution of the inverse
 kinematics for this arm. Under what exact conditions is the solution
 unique?</p>
 
-<p><strong>25.6</strong> [inverse-kinematics-exercise]Consider the robot arm shown in
+<p><a href="25-6/">Exercise 25.6 [inverse-kinematics-exercise]</a></p>
+
+<p>Consider the robot arm shown in
 Figure <a href="#/">FigArm1</a>. Assume that the robot’s base element is
 70cm long and that its upper arm and forearm are each 50cm long. As
 argued on page <a href="#/">inverse-kinematics-not-unique</a>, the inverse kinematics of a robot is often
@@ -267,12 +279,16 @@ not unique. State an explicit closed-form solution of the inverse
 kinematics for this arm. Under what exact conditions is the solution
 unique?</p>
 
-<p><strong>25.7</strong> [voronoi-exercise]Implement an algorithm for calculating the Voronoi
+<p><a href="25-7/">Exercise 25.7 [voronoi-exercise]</a></p>
+
+<p>Implement an algorithm for calculating the Voronoi
 diagram of an arbitrary 2D environment, described by an $n\times n$
 Boolean array. Illustrate your algorithm by plotting the Voronoi diagram
 for 10 interesting maps. What is the complexity of your algorithm?</p>
 
-<p><strong>25.8</strong> [confspace-exercise]This exercise explores the relationship between
+<p><a href="25-8/">Exercise 25.8 [confspace-exercise]</a></p>
+
+<p>This exercise explores the relationship between
 workspace and configuration space using the examples shown in
 Figure <a href="#FigEx2">FigEx2</a>.</p>
 
@@ -354,7 +370,9 @@ about a non-planar obstacle?</p>
   </tbody>
 </table>
 
-<p><strong>25.9</strong> Consider a mobile robot moving on a horizontal surface. Suppose that the
+<p><a href="25-9/">Exercise 25.9</a></p>
+
+<p>Consider a mobile robot moving on a horizontal surface. Suppose that the
 robot can execute two kinds of motions:</p>
 
 <ul>
@@ -418,7 +436,9 @@ and non-monotonic.</p>
 <b id="FigEx3">Figure [FigEx3]</b> Simplified robot in a maze. See Exercise [robot-exploration-exercise](#/)</center>
 <p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" /></p>
 
-<p><strong>25.10</strong> [robot-exploration-exercise]Consider the simplified robot shown in
+<p><a href="25-10/">Exercise 25.10 [robot-exploration-exercise]</a></p>
+
+<p>Consider the simplified robot shown in
 Figure <a href="#FigEx3">FigEx3</a>. Suppose the robot’s Cartesian
 coordinates are known at all times, as are those of its goal location.
 However, the locations of the obstacles are unknown. The robot can sense
@@ -457,7 +477,9 @@ fails (or explain why it cannot fail).</p>
   </li>
 </ol>
 
-<p><strong>25.11</strong> [subsumption-exercise]In Figure <a href="#/">Fig5</a>(b) on
+<p><a href="25-11/">Exercise 25.11 [subsumption-exercise]</a></p>
+
+<p>In Figure <a href="#/">Fig5</a>(b) on
 page <a href="#/">Fig5</a>, we encountered an augmented finite state machine for
 the control of a single leg of a hexapod robot. In this exercise, the
 aim is to design an AFSM that, when combined with six copies of the
@@ -469,7 +491,9 @@ waste energy (e.g., by sliding legs), and in that it propels the robot
 at reasonably high speeds. Prove that your controller satisfies the
 dynamic stability condition given on page <a href="#/">polygon-stability-condition-page</a>.</p>
 
-<p><strong>25.12</strong> [human-robot-exercise](This exercise was first devised by Michael
+<p><a href="25-12/">Exercise 25.12 [human-robot-exercise]</a></p>
+
+<p>(This exercise was first devised by Michael
 Genesereth and Nils Nilsson. It works for first graders through graduate
 students.) Humans are so adept at basic household tasks that they often
 forget how complex these tasks are. In this exercise you will discover

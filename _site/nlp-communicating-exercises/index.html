@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Main –  – </title>
+    <title>Natural Language Processing –  – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -15,8 +15,8 @@
     <meta name="author" content="" />
 
     
-    <meta property="og:title" content="Main" />
-    <meta property="twitter:title" content="Main" />
+    <meta property="og:title" content="Natural Language Processing" />
+    <meta property="twitter:title" content="Natural Language Processing" />
     
 
     <!--[if lt IE 9]>
@@ -159,7 +159,9 @@
 
 <h1 id="22-natural-language-processing">22. Natural Language Processing</h1>
 
-<p><strong>22.1</strong> This exercise explores the quality of the $n$-gram model of language.
+<p><a href="22-1/">Exercise 22.1</a></p>
+
+<p>This exercise explores the quality of the $n$-gram model of language.
 Find or create a monolingual corpus of 100,000 words or more. Segment it
 into words, and compute the frequency of each word. How many distinct
 words are there? Also count frequencies of bigrams (two consecutive
@@ -169,7 +171,9 @@ turn, generate a 100-word text by making random choices according to the
 frequency counts. Compare the three generated texts with actual
 language. Finally, calculate the perplexity of each model.</p>
 
-<p><strong>22.2</strong> Write a program to do <strong>segmentation</strong> of
+<p><a href="22-2/">Exercise 22.2</a></p>
+
+<p>Write a program to do <strong>segmentation</strong> of
 words without spaces. Given a string, such as the URL
 “thelongestlistofthelongeststuffatthelongestdomainnameatlonglast.com,”
 return a list of component words: [“the,” “longest,” “list,”
@@ -179,7 +183,9 @@ that do not have spaces between words. It can be solved with a unigram
 or bigram word model and a dynamic programming algorithm similar to the
 Viterbi algorithm.</p>
 
-<p><strong>22.3</strong> <em>Zipf’s law</em> of word distribution states the following:
+<p><a href="22-3/">Exercise 22.3</a></p>
+
+<p><em>Zipf’s law</em> of word distribution states the following:
 Take a large corpus of text, count the frequency of every word in the
 corpus, and then rank these frequencies in decreasing order. Let $f_{I}$
 be the $I$th largest frequency in this list; that is, $f_{1}$ is the
@@ -189,7 +195,9 @@ that $f_{I}$ is approximately equal to $\alpha / I$ for some constant
 $\alpha$. The law tends to be highly accurate except for very small and
 very large values of $I$.</p>
 
-<p><strong>22.4</strong> Choose a corpus of at least 20,000 words of online text, and verify
+<p><a href="22-4/">Exercise 22.4</a></p>
+
+<p>Choose a corpus of at least 20,000 words of online text, and verify
 Zipf’s law experimentally. Define an error measure and find the value of
 $\alpha$ where Zipf’s law best matches your experimental data. Create a
 log–log graph plotting $f_{I}$ vs. $I$ and $\alpha/I$ vs. $I$. (On a
@@ -197,7 +205,9 @@ log–log graph, the function $\alpha/I$ is a straight line.) In carrying
 out the experiment, be sure to eliminate any formatting tokens (e.g.,
 HTML tags) and normalize upper and lower case.</p>
 
-<p><strong>22.5</strong> (Adapted from @Jurafsky+Martin:2000.) In this exercise you will develop a classifier for
+<p><a href="22-5/">Exercise 22.5</a></p>
+
+<p>(Adapted from @Jurafsky+Martin:2000.) In this exercise you will develop a classifier for
 authorship: given a text, the classifier predicts which of two candidate
 authors wrote the text. Obtain samples of text from two different
 authors. Separate them into training and test sets. Now train a language
@@ -212,7 +222,9 @@ disputed <em>Federalist Papers</em> @Mosteller+Wallace:1964 and
 some disputed works of Shakespeare @Hope:1994. @Khmelev+Tweedie:2001 produce good results with
 a simple letter bigram model.</p>
 
-<p><strong>22.6</strong> This exercise concerns the classification of spam email.
+<p><a href="22-6/">Exercise 22.6</a></p>
+
+<p>This exercise concerns the classification of spam email.
 Create a corpus of spam email and one of non-spam mail. Examine each
 corpus and decide what features appear to be useful for classification:
 unigram words? bigrams? message length, sender, time of arrival? Then
@@ -220,21 +232,31 @@ train a classification algorithm (decision tree, naive Bayes, SVM,
 logistic regression, or some other algorithm of your choosing) on a
 training set and report its accuracy on a test set.</p>
 
-<p><strong>22.7</strong> Create a test set of ten queries, and pose them to three major Web
+<p><a href="22-7/">Exercise 22.7</a></p>
+
+<p>Create a test set of ten queries, and pose them to three major Web
 search engines. Evaluate each one for precision at 1, 3, and 10
 documents. Can you explain the differences between engines?</p>
 
-<p><strong>22.8</strong> Try to ascertain which of the search engines from the previous exercise
+<p><a href="22-8/">Exercise 22.8</a></p>
+
+<p>Try to ascertain which of the search engines from the previous exercise
 are using case folding, stemming, synonyms, and spelling correction.</p>
 
-<p><strong>22.9</strong> Estimate how much storage space is necessary for the index to a 100
+<p><a href="22-9/">Exercise 22.9</a></p>
+
+<p>Estimate how much storage space is necessary for the index to a 100
 billion-page corpus of Web pages. Show the assumptions you made.</p>
 
-<p><strong>22.10</strong> Write a regular expression or a short program to extract company names.
+<p><a href="22-10/">Exercise 22.10</a></p>
+
+<p>Write a regular expression or a short program to extract company names.
 Test it on a corpus of business news articles. Report your recall and
 precision.</p>
 
-<p><strong>22.11</strong> Consider the problem of trying to evaluate the quality of an IR system
+<p><a href="22-11/">Exercise 22.11</a></p>
+
+<p>Consider the problem of trying to evaluate the quality of an IR system
 that returns a ranked list of answers (like most Web search engines).
 The appropriate measure of quality depends on the presumed model of what
 the searcher is trying to achieve, and what strategy she employs. For
@@ -267,8 +289,8 @@ end of the hour.</p>
   </li>
   <li>
     <p>The searcher will look through all the answers. Examining a document
-has cost $$A$; finding a relevant document has value $$B$; failing
-to find a relevant document has cost $$C$ for each relevant
+has cost \$ A; finding a relevant document has value \$ B; failing
+to find a relevant document has cost \$ C for each relevant
 document not found.</p>
   </li>
   <li>
