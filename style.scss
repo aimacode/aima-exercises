@@ -493,3 +493,27 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: relative;
+  border-bottom: 15px solid grey;
+  border-radius: 3px;
+  left: -40px;
+  display: inline-block;
+  top: 42px;
+  cursor: pointer;
+  &:after{
+    content: attr(data-rating);
+    top: 14px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+    display: inline-block;
+    left: -10px;
+    color: grey;  
+  }
+}

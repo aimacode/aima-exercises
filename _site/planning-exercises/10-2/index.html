@@ -22,6 +22,10 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
+    <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
@@ -209,5 +213,68 @@ planning.</p>
 
     
 
+
+    <script type="text/javascript">
+      firestore =firebase.firestore();
+      function rateExercise(e){
+        console.log(e.target)
+        chapterLabel = $(e.target).data("chapter")
+        exerciseLabel = $(e.target).data("exercise")
+        docRef = firestore.collection("rating").doc(chapterLabel)
+        score = 0
+        docRef.get().then(function(doc){
+          if (doc && doc.exists){
+            myData = doc.data()
+            // score = myData
+            console.log(myData)
+            if(exerciseLabel in myData){
+              myData[exerciseLabel] += 1
+            }else{
+              myData[exerciseLabel] = 1
+            }
+            // $(e.target).data("rating",score);
+            docRef.set(myData).then(function(){
+              console.log("status saved")
+              console.log(myData[exerciseLabel])
+              $(e.target).attr("data-rating",myData[exerciseLabel]);
+            })
+          }
+          // else{
+          //   myData = {
+          //     "ex_1":0,
+          //     "ex_2":0,
+          //     "ex_3":0,
+          //     "ex_4":0,
+          //     "ex_5":0,
+          //     "ex_6":0,
+          //     "ex_7":0,
+          //     "ex_8":0,
+          //     "ex_9":0,
+          //     "ex_10":0
+          //   }
+          //   docRef.set(myData).then(function(){
+          //     console.log("status saved")
+          //     console.log(myData[exerciseLabel])
+          //     // $(e.target).attr("data-rating",myData[exerciseLabel]);
+          //   })
+          // }
+        })
+      }
+      getRealTimeUpdates = function(){
+        docRef = firestore.collection("rating").doc("intro-exercises");
+        docRef.onSnapshot(function(doc){
+          if (doc && doc.exists){
+            myData = doc.data()
+            for(key in myData){
+              console.log(key)  
+              // $(e.target).attr("data-rating",myData[exerciseLabel]);
+            }
+          }
+        })
+      }
+
+      getRealTimeUpdates()
+      $(document).on("click",".arrow-up", rateExercise)
+    </script>
   </body>
 </html>
