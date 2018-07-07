@@ -188,8 +188,8 @@ consistency, backjumping, min-conflicts, and cycle cutset.</p>
 
 <script type="text/javascript">
 var chapter  = /csp-exercises/6-18/
-var chapterName = String(chapter).replace(/[//]/g, "")
-$.get( "https://aima-exercises.firebaseapp.com/rating"+chapter, function( data ) {
+var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){
   	ex = $(element).data("exercise")
@@ -198,12 +198,20 @@ $.get( "https://aima-exercises.firebaseapp.com/rating"+chapter, function( data )
   		$(element).attr("data-rating",data[ex])
   	}
   })
-
 });
 
+$(document).on('click',"i[data-chapter]",function(e){
+	ele = $(e.target)
+	exerciseName = ele.data("exercise")
+	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
+	  console.log(data)
+	  ele.attr("data-rating",data["rating"])
+	});	
+})
 
 
 </script>
+
     </div>
 
     <div class="wrapper-footer">
