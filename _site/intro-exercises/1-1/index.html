@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="intro-exercises" data-exercise="ex_1" data-rating="0"></i></div>
 <p><a href="1-1/">Exercise 1.1</a></p>
 
 <p>Define in your own words: (a) intelligence, (b) artificial intelligence,
@@ -186,7 +187,7 @@
 </article>
 
 <script type="text/javascript">
-var chapter  = /intro-exercises/1-1/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

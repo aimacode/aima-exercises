@@ -190,7 +190,7 @@ poker.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /game-playing-exercises/5-4/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

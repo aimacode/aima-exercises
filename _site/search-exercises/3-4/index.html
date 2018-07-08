@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="search-exercises" data-exercise="ex_4" data-rating="0"></i></div>
 <p><a href="3-4/">Exercise 3.4</a></p>
 
 <p>You have a $9 \times 9$ grid of squares, each of which can be colored
@@ -217,7 +218,7 @@ solutions for problem (a)?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /search-exercises/3-4/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

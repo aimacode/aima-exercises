@@ -201,7 +201,7 @@ brothers-in-law, Zara’s great-grandparents, and Eugenie’s ancestors.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /fol-exercises/8-17/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

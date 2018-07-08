@@ -188,7 +188,7 @@ it do that? What would happen if it went in the opposite direction?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /csp-exercises/6-15/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

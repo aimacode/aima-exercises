@@ -194,7 +194,7 @@ they look like.)</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /kr-exercises/12-1/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

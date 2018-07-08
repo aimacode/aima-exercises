@@ -212,7 +212,7 @@ show only the steps that lead to success.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /logical-inference-exercises/9-11/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

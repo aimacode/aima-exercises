@@ -340,7 +340,7 @@ the problem and minimizes the use of the ${Medicate}$ action.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /advanced-planning-exercises/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

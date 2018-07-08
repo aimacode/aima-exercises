@@ -200,7 +200,7 @@ set of all strings whose second half is the same as the first half.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /nlp-english-exercises/23-6/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

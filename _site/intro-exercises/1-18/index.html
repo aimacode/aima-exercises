@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="intro-exercises" data-exercise="ex_18" data-rating="0"></i></div>
 <p><a href="1-18/">Exercise 1.18</a></p>
 
 <p>Examine the AI literature to discover whether the following tasks can
@@ -201,7 +202,7 @@ currently be solved by computers:</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /intro-exercises/1-18/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)

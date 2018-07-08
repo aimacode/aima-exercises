@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="search-exercises" data-exercise="ex_5" data-rating="0"></i></div>
 <p><a href="3-5/">Exercise 3.5 [two-friends-exercise]</a></p>
 
 <p>Suppose two friends live in different cities on
@@ -212,7 +213,7 @@ the same city twice?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = /search-exercises/3-5/
+var chapter  = window.location.pathname
 var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
