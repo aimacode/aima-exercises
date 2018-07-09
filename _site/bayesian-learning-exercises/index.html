@@ -396,8 +396,8 @@ and investigate the nature of the fixed point reached in part (c).</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/bayesian-learning-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

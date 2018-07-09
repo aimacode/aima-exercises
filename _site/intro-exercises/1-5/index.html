@@ -189,8 +189,8 @@ this mean that AI is impossible?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/intro-exercises/1-5/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

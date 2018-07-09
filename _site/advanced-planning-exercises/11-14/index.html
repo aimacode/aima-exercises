@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="advanced-planning-exercises" data-exercise="ex_14" data-rating="0"></i></div>
 <p><a href="11-14/">Exercise 11.14</a></p>
 
 <p>Consider the following problem: A patient arrives at the doctor’s office
@@ -192,8 +193,8 @@ plan that solves the problem, enumerating all relevant possible worlds.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/advanced-planning-exercises/11-14/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

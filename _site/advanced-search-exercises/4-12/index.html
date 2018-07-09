@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="advanced-search-exercises" data-exercise="ex_12" data-rating="0"></i></div>
 <p><a href="4-12/">Exercise 4.12 [path-planning-agent-exercise]</a></p>
 
 <p>We can turn the navigation problem in
@@ -249,8 +250,8 @@ What do solutions look like?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/advanced-search-exercises/4-12/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

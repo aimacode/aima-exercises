@@ -306,8 +306,8 @@ of points A, B, C, D, and E from the camera baseline, and on what basis?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/perception-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise 24.5 –  – </title>
+    <title>Exercise 24.3 –  – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -15,8 +15,8 @@
     <meta name="author" content="" />
 
     
-    <meta property="og:title" content="Exercise 24.5" />
-    <meta property="twitter:title" content="Exercise 24.5" />
+    <meta property="og:title" content="Exercise 24.3" />
+    <meta property="twitter:title" content="Exercise 24.3" />
     
 
     <!--[if lt IE 9]>
@@ -132,8 +132,8 @@
     
      
      
-  <!-- /search-exercises -->
-     <li><a class="breadcrumb-text" href="/search-exercises">search-exercises</a> &#187; </li>
+  <!-- /perception-exercises -->
+     <li><a class="breadcrumb-text" href="/perception-exercises">perception-exercises</a> &#187; </li>
 
      
     
@@ -170,31 +170,16 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<p><a href="24-5/">Exercise 24.5</a></p>
+<div><i class="arrow-up" data-chapter="perception-exercises" data-exercise="ex_3" data-rating="0"></i></div>
+<p><a href="24-3/">Exercise 24.3</a></p>
 
-<p>A stereoscopic system is being contemplated for terrain mapping. It will
-consist of two CCD cameras, each having ${512}\times {512}$ pixels on a
-10 cm $\times$ 10 cm square sensor. The lenses to be used have a focal
-length of 16 cm, with the focus fixed at infinity. For corresponding
-points ($u_1,v_1$) in the left image and ($u_2,v_2$) in the right image,
-$v_1=v_2$ because the $x$-axes in the two image planes are parallel to
-the epipolar lines—the lines from the object to the camera. The optical
-axes of the two cameras are parallel. The baseline between the cameras
-is 1 meter.</p>
-
-<ol>
-  <li>
-    <p>If the nearest distance to be measured is 16 meters, what is the
-largest disparity that will occur (in pixels)?</p>
-  </li>
-  <li>
-    <p>What is the distance resolution at 16 meters, due to the pixel
-spacing?</p>
-  </li>
-  <li>
-    <p>What distance corresponds to a disparity of one pixel?</p>
-  </li>
-</ol>
+<p>Consider an infinitely long cylinder of radius $r$ oriented with its
+axis along the $y$-axis. The cylinder has a Lambertian surface and is
+viewed by a camera along the positive $z$-axis. What will you expect to
+see in the image if the cylinder is illuminated by a point source at
+infinity located on the positive $x$-axis? Draw the contours of constant
+brightness in the projected image. Are the contours of equal brightness
+uniformly spaced?</p>
 
 
   </div>
@@ -208,8 +193,8 @@ spacing?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/perception-exercises/24-3/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

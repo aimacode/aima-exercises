@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="planning-exercises" data-exercise="ex_4" data-rating="0"></i></div>
 <p><a href="10-4/">Exercise 10.4</a></p>
 
 <p>The monkey-and-bananas problem is faced by a monkey in a laboratory with
@@ -219,8 +220,8 @@ heavy objects.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/planning-exercises/10-4/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

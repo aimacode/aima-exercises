@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise 24.4 –  – </title>
+    <title>Exercise 24.7 –  – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -15,8 +15,8 @@
     <meta name="author" content="" />
 
     
-    <meta property="og:title" content="Exercise 24.4" />
-    <meta property="twitter:title" content="Exercise 24.4" />
+    <meta property="og:title" content="Exercise 24.7" />
+    <meta property="twitter:title" content="Exercise 24.7" />
     
 
     <!--[if lt IE 9]>
@@ -132,8 +132,8 @@
     
      
      
-  <!-- /search-exercises -->
-     <li><a class="breadcrumb-text" href="/search-exercises">search-exercises</a> &#187; </li>
+  <!-- /perception-exercises -->
+     <li><a class="breadcrumb-text" href="/perception-exercises">perception-exercises</a> &#187; </li>
 
      
     
@@ -170,15 +170,37 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<p><a href="24-4/">Exercise 24.4</a></p>
+<div><i class="arrow-up" data-chapter="perception-exercises" data-exercise="ex_7" data-rating="0"></i></div>
+<p><a href="24-7/">Exercise 24.7</a></p>
 
-<p>Edges in an image can correspond to a variety of events in a scene.
-Consider Figure <a href="#/">illuminationfigure</a>
-(page <a href="#/">illuminationfigure</a>), and assume that it is a picture of a real
-three-dimensional scene. Identify ten different brightness edges in the
-image, and for each, state whether it corresponds to a discontinuity in
-(a) depth, (b) surface orientation, (c) reflectance, or (d)
-illumination.</p>
+<p>Which of the following are true, and which are false?</p>
+
+<ol>
+  <li>
+    <p>Finding corresponding points in stereo images is the easiest phase
+of the stereo depth-finding process.</p>
+  </li>
+  <li>
+    <p>In stereo views of the same scene, greater accuracy is obtained in
+the depth calculations if the two camera positions are
+farther apart.</p>
+  </li>
+  <li>
+    <p>Lines with equal lengths in the scene always project to equal
+lengths in the image.</p>
+  </li>
+  <li>
+    <p>Straight lines in the image necessarily correspond to straight lines
+in the scene.</p>
+  </li>
+</ol>
+
+<center>
+<b id="bottle-figure">Figure [bottle-figure]</b> Top view of
+a two-camera vision system observing a bottle with a wall behind it.
+</center>
+
+<p><img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/bottle-stereo.svg" alt="bottle-figure" /></p>
 
 
   </div>
@@ -192,8 +214,8 @@ illumination.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/perception-exercises/24-7/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

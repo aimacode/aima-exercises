@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="probability-exercises" data-exercise="ex_16" data-rating="0"></i></div>
 <p><a href="13-16/">Exercise 13.16</a></p>
 
 <p>Consider two medical tests, A and B, for a virus. Test A is 95%
@@ -195,8 +196,8 @@ virus? Justify your answer mathematically.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/probability-exercises/13-16/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

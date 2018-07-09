@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="game-playing-exercises" data-exercise="ex_15" data-rating="0"></i></div>
 <p><a href="5-15/">Exercise 5.15</a></p>
 
 <p>Prove that the alpha–beta algorithm takes time $O(b^{m/2})$ with optimal
@@ -187,8 +188,8 @@ move ordering, where $m$ is the maximum depth of the game tree.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/game-playing-exercises/5-15/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

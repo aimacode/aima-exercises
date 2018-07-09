@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="nlp-english-exercises" data-exercise="ex_21" data-rating="0"></i></div>
 <p><a href="23-21/">Exercise 23.21</a></p>
 
 <p>Calculate the most probable path through the HMM in
@@ -188,8 +189,8 @@ $[C_1,C_2,C_3,C_4,C_4,C_6,C_7]$. Also give its probability.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/nlp-english-exercises/23-21/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

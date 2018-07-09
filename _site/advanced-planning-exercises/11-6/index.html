@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="advanced-planning-exercises" data-exercise="ex_6" data-rating="0"></i></div>
 <p><a href="11-6/">Exercise 11.6</a></p>
 
 <p>In Figure <a href="#/">jobshop-cpm-figure</a> we showed how to describe
@@ -192,8 +193,8 @@ example for each of the three.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/advanced-planning-exercises/11-6/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

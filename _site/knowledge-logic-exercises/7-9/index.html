@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="knowledge-logic-exercises" data-exercise="ex_9" data-rating="0"></i></div>
 <p><a href="7-9/">Exercise 7.9</a></p>
 
 <p>Consider a vocabulary with only four propositions, $A$, $B$, $C$, and
@@ -199,8 +200,8 @@ $D$. How many models are there for the following sentences?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/knowledge-logic-exercises/7-9/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

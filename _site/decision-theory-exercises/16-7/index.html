@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="decision-theory-exercises" data-exercise="ex_7" data-rating="0"></i></div>
 <p><a href="16-7/">Exercise 16.7 [surprise-candy-exercise]</a></p>
 
 <p>The Surprise Candy Company makes candy in
@@ -229,8 +230,8 @@ candy box now worth more than less than, or the same as before?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/decision-theory-exercises/16-7/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

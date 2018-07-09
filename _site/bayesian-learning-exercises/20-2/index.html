@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="bayesian-learning-exercises" data-exercise="ex_2" data-rating="0"></i></div>
 <p><a href="20-2/">Exercise 20.2</a></p>
 
 <p>Repeat Exercise <a href="#/">bayes-candy-exercise</a>, this time
@@ -189,8 +190,8 @@ $P(D_{N+1}=lime|h_{ML})$.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/bayesian-learning-exercises/20-2/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

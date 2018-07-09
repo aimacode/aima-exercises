@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="planning-exercises" data-exercise="ex_10" data-rating="0"></i></div>
 <p><a href="10-10/">Exercise 10.10</a></p>
 
 <p>Construct levels 0, 1, and 2 of the planning graph for the problem in
@@ -187,8 +188,8 @@ Figure <a href="#/">airport-pddl-algorithm</a>.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/planning-exercises/10-10/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

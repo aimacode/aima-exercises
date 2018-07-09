@@ -170,6 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div><i class="arrow-up" data-chapter="reinforcement-learning-exercises" data-exercise="ex_8" data-rating="0"></i></div>
 <p><a href="21-8/">Exercise 21.8</a></p>
 
 <p>Devise suitable features for reinforcement learning in stochastic grid
@@ -188,8 +189,8 @@ obstacles and multiple terminal states with rewards of $+1$ or $-1$.</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/reinforcement-learning-exercises/21-8/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exercise 24.2 –  – </title>
+    <title>Exercise 24.6 –  – </title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -15,8 +15,8 @@
     <meta name="author" content="" />
 
     
-    <meta property="og:title" content="Exercise 24.2" />
-    <meta property="twitter:title" content="Exercise 24.2" />
+    <meta property="og:title" content="Exercise 24.6" />
+    <meta property="twitter:title" content="Exercise 24.6" />
     
 
     <!--[if lt IE 9]>
@@ -132,8 +132,8 @@
     
      
      
-  <!-- /search-exercises -->
-     <li><a class="breadcrumb-text" href="/search-exercises">search-exercises</a> &#187; </li>
+  <!-- /perception-exercises -->
+     <li><a class="breadcrumb-text" href="/perception-exercises">perception-exercises</a> &#187; </li>
 
      
     
@@ -170,13 +170,29 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<p><a href="24-2/">Exercise 24.2</a></p>
+<div><i class="arrow-up" data-chapter="perception-exercises" data-exercise="ex_6" data-rating="0"></i></div>
+<p><a href="24-6/">Exercise 24.6</a></p>
 
-<p>Consider a picture of a white sphere floating in front of a black
-backdrop. The image curve separating white pixels from black pixels is
-sometimes called the “outline” of the sphere. Show that the outline of a
-sphere, viewed in a perspective camera, can be an ellipse. Why do
-spheres not look like ellipses to you?</p>
+<p>Which of the following are true, and which are false?</p>
+
+<ol>
+  <li>
+    <p>Finding corresponding points in stereo images is the easiest phase
+of the stereo depth-finding process.</p>
+  </li>
+  <li>
+    <p>Shape-from-texture can be done by projecting a grid of light-stripes
+onto the scene.</p>
+  </li>
+  <li>
+    <p>Lines with equal lengths in the scene always project to equal
+lengths in the image.</p>
+  </li>
+  <li>
+    <p>Straight lines in the image necessarily correspond to straight lines
+in the scene.</p>
+  </li>
+</ol>
 
 
   </div>
@@ -190,8 +206,8 @@ spheres not look like ellipses to you?</p>
 </article>
 
 <script type="text/javascript">
-var chapter  = window.location.pathname
-var chapterName = String(chapter).match(/\/([^\/]*)\//, "")[1]
+var chapter  = String('/perception-exercises/24-6/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
 $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
   console.log(data)
   $("i[data-chapter='"+chapterName+"']").each(function(index,element){
