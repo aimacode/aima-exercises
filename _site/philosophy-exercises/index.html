@@ -163,7 +163,7 @@
 
 <h1 id="26-philosphical-foundations">26. Philosphical Foundations</h1>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_1" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_1" data-rating="0"></i></div>
 <p><a href="26-1/">Exercise 26.1 [disability-exercise]</a></p>
 
 <p>Go through Turing’s list of alleged
@@ -171,20 +171,20 @@
 are achievable in principle by a program, and which are still
 problematic because they require conscious mental states.</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_2" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_2" data-rating="0"></i></div>
 <p><a href="26-2/">Exercise 26.2</a></p>
 
 <p>Find and analyze an account in the popular media of one or more of the
 arguments to the effect that AI is impossible.</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_3" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_3" data-rating="0"></i></div>
 <p><a href="26-3/">Exercise 26.3</a></p>
 
 <p>Attempt to write definitions of the terms “intelligence,” “thinking,”
 and “consciousness.” Suggest some possible objections to your
 definitions.</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_4" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_4" data-rating="0"></i></div>
 <p><a href="26-4/">Exercise 26.4</a></p>
 
 <p>Does a refutation of the Chinese room argument necessarily prove that
@@ -192,7 +192,7 @@ appropriately programmed computers have mental states? Does an
 acceptance of the argument necessarily mean that computers cannot have
 mental states?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_5" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_5" data-rating="0"></i></div>
 <p><a href="26-5/">Exercise 26.5 [brain-prosthesis-exercise]</a></p>
 
 <p>In the brain replacement argument, it is
@@ -203,14 +203,14 @@ updating those neurophysiological properties of the neurons relating to
 conscious experience, as distinct from those involved in the functional
 behavior of the neurons?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_6" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_6" data-rating="0"></i></div>
 <p><a href="26-6/">Exercise 26.6</a></p>
 
 <p>Suppose that a Prolog program containing many clauses about the rules of
 British citizenship is compiled and run on an ordinary computer. Analyze
 the “brain states” of the computer under wide and narrow content.</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_7" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_7" data-rating="0"></i></div>
 <p><a href="26-7/">Exercise 26.7</a></p>
 
 <p>Alan Perlis [@Perlis:1982] wrote, “A year spent in artificial
@@ -225,7 +225,7 @@ completely successful; that is, we have build intelligent agents capable
 of carrying out any human cognitive task at human levels of ability. To
 what extent would that shed light on these issues?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_8" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_8" data-rating="0"></i></div>
 <p><a href="26-8/">Exercise 26.8</a></p>
 
 <p>Compare the social impact of artificial intelligence in the last fifty
@@ -233,7 +233,7 @@ years with the social impact of the introduction of electric appliances
 and the internal combustion engine in the fifty years between 1890 and
 1940.</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_9" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_9" data-rating="0"></i></div>
 <p><a href="26-9/">Exercise 26.9</a></p>
 
 <p>I. J. Good claims that intelligence is the most important quality, and
@@ -243,21 +243,21 @@ could build ultrafast machines, that would change everything,” and a
 sentient elephant claims “You’re both wrong; what we need is ultrastrong
 machines.” What do you think of these arguments?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_10" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_10" data-rating="0"></i></div>
 <p><a href="26-10/">Exercise 26.10</a></p>
 
 <p>Analyze the potential threats from AI technology to society. What
 threats are most serious, and how might they be combated? How do they
 compare to the potential benefits?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_11" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_11" data-rating="0"></i></div>
 <p><a href="26-11/">Exercise 26.11</a></p>
 
 <p>How do the potential threats from AI technology compare with those from
 other computer science technologies, and to bio-, nano-, and nuclear
 technologies?</p>
 
-<div><i class="arrow-up" data-chapter="philosophy-exercises" data-exercise="ex_12" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="philosophy-exercises" data-exercise="ex_12" data-rating="0"></i></div>
 <p><a href="26-12/">Exercise 26.12</a></p>
 
 <p>Some critics object that AI is impossible, while others object that it
@@ -287,15 +287,18 @@ $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( d
   		console.log(data[ex])
   		$(element).attr("data-rating",data[ex])
   	}
+    $(".arrow-up").removeClass("loader")
   })
 });
 
 $(document).on('click',"i[data-chapter]",function(e){
 	ele = $(e.target)
+  ele.addClass("loader")
 	exerciseName = ele.data("exercise")
 	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
 	  console.log(data)
 	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
 	});	
 })
 

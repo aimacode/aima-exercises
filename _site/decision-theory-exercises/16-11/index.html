@@ -170,7 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div><i class="arrow-up" data-chapter="decision-theory-exercises" data-exercise="ex_11" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="decision-theory-exercises" data-exercise="ex_11" data-rating="0"></i></div>
 <p><a href="16-11/">Exercise 16.11 [assessment-exercise]</a></p>
 
 <p>Assess your own utility for different incremental
@@ -202,15 +202,18 @@ $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( d
   		console.log(data[ex])
   		$(element).attr("data-rating",data[ex])
   	}
+    $(".arrow-up").removeClass("loader")
   })
 });
 
 $(document).on('click',"i[data-chapter]",function(e){
 	ele = $(e.target)
+  ele.addClass("loader")
 	exerciseName = ele.data("exercise")
 	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
 	  console.log(data)
 	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
 	});	
 })
 

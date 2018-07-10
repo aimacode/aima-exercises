@@ -170,7 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div><i class="arrow-up" data-chapter="complex-decisions-exercises" data-exercise="ex_22" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="complex-decisions-exercises" data-exercise="ex_22" data-rating="0"></i></div>
 <p><a href="17-22/">Exercise 17.22</a></p>
 
 <p>The following payoff matrix, from @Blinder:1983 by way of @Bernstein:1996, shows a game between
@@ -238,15 +238,18 @@ $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( d
   		console.log(data[ex])
   		$(element).attr("data-rating",data[ex])
   	}
+    $(".arrow-up").removeClass("loader")
   })
 });
 
 $(document).on('click',"i[data-chapter]",function(e){
 	ele = $(e.target)
+  ele.addClass("loader")
 	exerciseName = ele.data("exercise")
 	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
 	  console.log(data)
 	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
 	});	
 })
 

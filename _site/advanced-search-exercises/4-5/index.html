@@ -170,7 +170,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div><i class="arrow-up" data-chapter="advanced-search-exercises" data-exercise="ex_5" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="advanced-search-exercises" data-exercise="ex_5" data-rating="0"></i></div>
 <p><a href="4-5/">Exercise 4.5 [cond-plan-repeated-exercise]</a></p>
 
 <p>The <strong>And-Or-Graph-Search</strong> algorithm in
@@ -209,15 +209,18 @@ $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( d
   		console.log(data[ex])
   		$(element).attr("data-rating",data[ex])
   	}
+    $(".arrow-up").removeClass("loader")
   })
 });
 
 $(document).on('click',"i[data-chapter]",function(e){
 	ele = $(e.target)
+  ele.addClass("loader")
 	exerciseName = ele.data("exercise")
 	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
 	  console.log(data)
 	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
 	});	
 })
 

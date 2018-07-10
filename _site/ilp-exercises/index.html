@@ -163,14 +163,14 @@
 
 <h1 id="19-knowledge-in-learning">19. Knowledge in Learning</h1>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_1" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_1" data-rating="0"></i></div>
 <p><a href="19-1/">Exercise 19.1 [dbsig-exercise]</a></p>
 
 <p>Show, by translating into conjunctive normal form and
 applying resolution, that the conclusion drawn on page <a href="#/">dbsig-page</a>
 concerning Brazilians is sound.</p>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_2" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_2" data-rating="0"></i></div>
 <p><a href="19-2/">Exercise 19.2</a></p>
 
 <p>For each of the following determinations, write down the logical
@@ -193,7 +193,7 @@ maternal grandfather.</p>
   </li>
 </ol>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_3" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_3" data-rating="0"></i></div>
 <p><a href="19-3/">Exercise 19.3</a></p>
 
 <p>For each of the following determinations, write down the logical
@@ -216,13 +216,13 @@ maternal grandfather.</p>
   </li>
 </ol>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_4" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_4" data-rating="0"></i></div>
 <p><a href="19-4/">Exercise 19.4</a></p>
 
 <p>Would a probabilistic version of determinations be useful? Suggest a
 definition.</p>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_5" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_5" data-rating="0"></i></div>
 <p><a href="19-5/">Exercise 19.5 [ir-step-exercise]</a></p>
 
 <p>Fill in the missing values for the clauses $C_1$ or
@@ -248,7 +248,7 @@ $C_2 = ??$.</p>
 <p>If there is more than one possible solution, provide one example of each
 different kind.</p>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_6" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_6" data-rating="0"></i></div>
 <p><a href="19-6/">Exercise 19.6 [prolog-ir-exercise]</a></p>
 
 <p>Suppose one writes a logic program that carries
@@ -262,7 +262,7 @@ in generating the appropriate results of an inverse resolution step?
 Would you need any special modifications to the logic programming system
 for this to work?</p>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_7" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_7" data-rating="0"></i></div>
 <p><a href="19-7/">Exercise 19.7 [foil-literals-exercise]</a></p>
 
 <p>Suppose that is considering adding a literal
@@ -286,7 +286,7 @@ variables?</p>
   </li>
 </ol>
 
-<div><i class="arrow-up" data-chapter="ilp-exercises" data-exercise="ex_8" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="ilp-exercises" data-exercise="ex_8" data-rating="0"></i></div>
 <p><a href="19-8/">Exercise 19.8</a></p>
 
 <p>Using the data from the family tree in
@@ -315,15 +315,18 @@ $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( d
   		console.log(data[ex])
   		$(element).attr("data-rating",data[ex])
   	}
+    $(".arrow-up").removeClass("loader")
   })
 });
 
 $(document).on('click',"i[data-chapter]",function(e){
 	ele = $(e.target)
+  ele.addClass("loader")
 	exerciseName = ele.data("exercise")
 	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
 	  console.log(data)
 	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
 	});	
 })
 

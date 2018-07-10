@@ -508,12 +508,27 @@ footer {
   cursor: pointer;
   &:after{
     content: attr(data-rating);
-    top: 14px;
+    top: 20px;
     position: relative;
     text-align: center;
     width: 20px;
     display: inline-block;
     left: -10px;
     color: grey;  
+    position: absolute;
+  }
+  &.loader{
+    &:after{
+      content: "";
+      left: -20px;
+      top: 14px;
+      background-image: url(/images/loader.gif);
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+    }
   }
 }

@@ -7,5 +7,5 @@ breadcrumb: Logical Agents
 
 {% include mathjax_support %}
 
-<div><i class="arrow-up" data-chapter="knowledge-logic-exercises" data-exercise="ex_18" data-rating="0"></i></div>
+<div><i class="arrow-up loader" data-chapter="knowledge-logic-exercises" data-exercise="ex_18" data-rating="0"></i></div>
 {% include_relative question.md %}
