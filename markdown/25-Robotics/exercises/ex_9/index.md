@@ -1,0 +1,11 @@
+---
+layout: exercise
+title: Exercise 25.9
+permalink: /robotics-exercises/ex_9/
+breadcrumb: Robotics
+---
+
+{% include mathjax_support %}
+
+<div><i class="arrow-up loader" data-chapter="robotics-exercises" data-exercise="ex_9" data-rating="0"></i></div>
+{% include_relative question.md %}
