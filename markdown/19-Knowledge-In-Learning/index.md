@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: chapter
 title: Knowledge in Learning
 permalink: /ilp-exercises/
 ---

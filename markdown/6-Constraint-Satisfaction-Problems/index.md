@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: chapter
 title: Main
 permalink: /csp-exercises/
 ---

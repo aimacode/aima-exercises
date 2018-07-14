@@ -1,5 +1,5 @@
  ---
-layout: exercise
+layout: chapter
 title: Learning from Examples
 permalink: /concept-learning-exercises/
 ---

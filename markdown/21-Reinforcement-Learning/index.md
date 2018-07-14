@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: chapter
 title: Reinforcement Learning
 permalink: /reinforcement-learning-exercises/
 ---

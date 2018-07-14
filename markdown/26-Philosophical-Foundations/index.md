@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: chapter
 title: Philosphical Foundations
 permalink: /philosophy-exercises/
 ---

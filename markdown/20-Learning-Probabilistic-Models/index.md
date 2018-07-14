@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: chapter
 title: Learning Probabilistic Models
 permalink: /bayesian-learning-exercises/
 ---
