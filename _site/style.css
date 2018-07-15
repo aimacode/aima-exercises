@@ -97,6 +97,16 @@ body {
       padding: 5px;
       cursor: pointer;
       background-color: #c63434; }
+  .container.exercise_mode {
+    text-align: center;
+    margin-top: 100px; }
+    .container.exercise_mode .mode_btn {
+      width: 200px;
+      float: none;
+      margin: 10px auto;
+      border: 1px solid;
+      border-radius: 5px;
+      cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
