@@ -35,6 +35,9 @@ body {
   &.home{
     text-align: justify;
     padding-top: 40px;
+    ul, ol{
+      list-style-type: none;
+    }
     .goto_kaggle{
       width: 300px;
       margin: 30px auto;

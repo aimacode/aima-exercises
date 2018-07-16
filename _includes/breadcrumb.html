@@ -3,12 +3,13 @@
 {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
 {% assign previous="" %}
 <ul class="breadcrumb">
-<label for="toggletoc" class="toc-icon">
-  <span></span>
-  <span></span>
-  <span></span>
-</label>
 {% if page_url_without_index_html != "/" %}
+  <label for="toggletoc" class="toc-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
    {% if num_parts == "0" or num_parts == "-1" %}
     <li><a class="breadcrumb-text" href="{{site.baseurl}}/{{previous}}">home</a> &nbsp; </li>
    {% else %}

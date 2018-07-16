@@ -71,6 +71,8 @@ body {
   .container.home {
     text-align: justify;
     padding-top: 40px; }
+    .container.home ul, .container.home ol {
+      list-style-type: none; }
     .container.home .goto_kaggle {
       width: 300px;
       margin: 30px auto;
