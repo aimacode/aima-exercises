@@ -69,7 +69,7 @@ body {
   padding: 0 10px;
   width: 100%; }
   .container.home {
-    text-align: center;
+    text-align: justify;
     padding-top: 40px; }
     .container.home .goto_kaggle {
       width: 300px;
