@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 24.1
 permalink: /perception-exercises/ex_1/
-breadcrumb: Perception
+breadcrumb: 24-Perception
 ---
 
 {% include mathjax_support %}

@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 25.11
 permalink: /robotics-exercises/ex_11/
-breadcrumb: Robotics
+breadcrumb: 25-Robotics
 ---
 
 {% include mathjax_support %}

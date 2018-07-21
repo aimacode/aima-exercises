@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 17.14
 permalink: /complex-decisions-exercises/ex_14/
-breadcrumb: Making Complex Decisions
+breadcrumb: 17-Making-Complex-Decision
 ---
 
 {% include mathjax_support %}

@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 20.7
 permalink: /bayesian-learning-exercises/ex_7/
-breadcrumb: Learning Probabilistic Models
+breadcrumb: 20-Learning-Probabilistic-Models
 ---
 
 {% include mathjax_support %}

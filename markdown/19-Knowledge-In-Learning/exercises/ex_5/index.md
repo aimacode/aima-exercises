@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 19.5
 permalink: /ilp-exercises/ex_5/
-breadcrumb: Knowledge in Learning
+breadcrumb: 19-Knowledge-In-Learning
 ---
 
 {% include mathjax_support %}

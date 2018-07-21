@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 2.10
 permalink: /agents-exercises/ex_10/
-breadcrumb: Intelligent Agent
+breadcrumb: 2-Intelligent-Agent
 ---
 
 {% include mathjax_support %}

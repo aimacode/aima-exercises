@@ -148,6 +148,9 @@
       <article class="post">
 
   <div class="entry">
+    <div class="mode_btn view_question_source">
+      <a class="edit_question" href="#">Edit Question</a>
+    </div>
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -217,41 +220,44 @@ nonadjacent states?</p>
  -->
 <div class="container exercise_mode">
   <div class="mode_btn view_answer">View Answer</div> 
-  <div class="mode_btn add_answer">Add Answer</div>
   <div class="mode_btn request_answer">Request Answer</div>
-  <div class="mode_btn view_question_source">View Question Source</div>
 </div>
   
 
 </article>
 
 <script type="text/javascript">
-var chapter  = String('/search-exercises/ex_32/')
-var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
-$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
-  console.log(data)
-  $("i[data-chapter='"+chapterName+"']").each(function(index,element){
-  	ex = $(element).data("exercise")
-  	if(ex in data){
-  		console.log(data[ex])
-  		$(element).attr("data-rating",data[ex])
-  	}
-    $(".arrow-up").removeClass("loader")
-  })
-});
+  $(document).ready(function(){
+    var chapter  = String('/search-exercises/ex_32/')
+    var chapterName = String('3-Solving-Problems-By-Searching')
+    console.log(chapter)
+    var chapterLabel = chapter.match(/\/([^\/]*)\//, "")[1]
+    exerciseName = $(".arrow-up").attr("data-exercise");
+    $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel, function( data ) {
+      console.log(data)
+      $("i[data-chapter='"+chapterLabel+"']").each(function(index,element){
+        ex = $(element).data("exercise")
+        if(ex in data){
+          console.log(data[ex])
+          $(element).attr("data-rating",data[ex])
+        }
+        $(".arrow-up").removeClass("loader")
+      })
+    });
+    $(document).on('click',"i[data-chapter]",function(e){
+      ele = $(e.target)
+      ele.addClass("loader")
+      $.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel+"/"+exerciseName, function( data ) {
+        console.log(data)
+        ele.attr("data-rating",data["rating"])
+        ele.removeClass("loader")
+      });
+    });
+    base_url = "http://github.com/aimacode/aima-exercises/"
+    path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/question.md"
+    $(".edit_question").attr("href",base_url+path)
 
-$(document).on('click',"i[data-chapter]",function(e){
-	ele = $(e.target)
-  ele.addClass("loader")
-	exerciseName = ele.data("exercise")
-	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
-	  console.log(data)
-	  ele.attr("data-rating",data["rating"])
-    ele.removeClass("loader")
-	});	
-})
-
-
+  });
 </script>
 
     </div>

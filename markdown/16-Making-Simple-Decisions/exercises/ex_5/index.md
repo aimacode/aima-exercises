@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 16.5
 permalink: /decision-theory-exercises/ex_5/
-breadcrumb: Making Simple Decisions
+breadcrumb: 16-Making-Simple-Decisions
 ---
 
 {% include mathjax_support %}

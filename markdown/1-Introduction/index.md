@@ -2,6 +2,7 @@
 layout: chapter
 title: Main
 permalink: /intro-exercises/
+chapterLabel: 1-Introduction
 breadcrumb: Introduction
 ---
 

@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 1.2
 permalink: /intro-exercises/ex_2/
-breadcrumb: Introduction
+breadcrumb: 1-Introduction
 ---
 
 {% include mathjax_support %}

@@ -2,6 +2,7 @@
 layout: exercise
 title: Exercise 1.9
 permalink: /intro-exercises/ex_9/
+chapterLabel: 1-Introduction
 breadcrumb: Introduction
 ---
 

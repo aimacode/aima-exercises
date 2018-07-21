@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 8.25
 permalink: /fol-exercises/ex_25/
-breadcrumb: First Order Logic
+breadcrumb: 8-First-Order-Logic
 ---
 
 {% include mathjax_support %}

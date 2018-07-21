@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 15.6
 permalink: /dbn-exercises/ex_6/
-breadcrumb: Probabilistic Reasoning over Time
+breadcrumb: 15-Probabilistic-Reasoning-Over-Time
 ---
 
 {% include mathjax_support %}

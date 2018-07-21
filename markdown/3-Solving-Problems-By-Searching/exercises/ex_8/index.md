@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 3.8
 permalink: /search-exercises/ex_8/
-breadcrumb: Solving Problems By Searching
+breadcrumb: 3-Solving-Problems-By-Searching
 ---
 
 {% include mathjax_support %}

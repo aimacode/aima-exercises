@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 23.5
 permalink: /nlp-english-exercises/ex_5/
-breadcrumb: Natural Language for Communication
+breadcrumb: 23-Natural-Language-For-Communication
 ---
 
 {% include mathjax_support %}

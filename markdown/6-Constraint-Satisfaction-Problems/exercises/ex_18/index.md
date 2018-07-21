@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 6.18
 permalink: /csp-exercises/ex_18/
-breadcrumb: Constraint Satisfaction Problems
+breadcrumb: 6-Constraint-Satisfaction-Problems
 ---
 
 {% include mathjax_support %}

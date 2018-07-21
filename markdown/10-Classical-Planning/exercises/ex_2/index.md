@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 10.2
 permalink: /planning-exercises/ex_2/
-breadcrumb: Classical Planning
+breadcrumb: 10-Classical-Planning
 ---
 
 {% include mathjax_support %}

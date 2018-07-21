@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 4.16
 permalink: /advanced-search-exercises/ex_16/
-breadcrumb: Beyond Classical Search
+breadcrumb: 4-Beyond-Classical-Search
 ---
 
 {% include mathjax_support %}

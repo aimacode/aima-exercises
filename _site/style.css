@@ -427,6 +427,21 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
 .post .read-more {
   text-transform: uppercase;
   font-size: 15px; }
+.post .view_question_source a {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+  border-radius: 5px;
+  top: 35px;
+  float: right;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background-image: linear-gradient(#ffffff, #f2f2f2);
+  color: #4183C4; }
+  .post .view_question_source a:hover {
+    background: #fff; }
 
 .inactive {
   display: none; }

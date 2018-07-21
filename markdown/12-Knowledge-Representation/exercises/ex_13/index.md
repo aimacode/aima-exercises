@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 12.13
 permalink: /kr-exercises/ex_13/
-breadcrumb: Knowledge Representation
+breadcrumb: 12-Knowledge-Representation
 ---
 
 {% include mathjax_support %}

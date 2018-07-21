@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 18.22
 permalink: /concept-learning-exercises/ex_22/
-breadcrumb: Learning from Examples
+breadcrumb: 18-Learning-From-Examples
 ---
 
 {% include mathjax_support %}

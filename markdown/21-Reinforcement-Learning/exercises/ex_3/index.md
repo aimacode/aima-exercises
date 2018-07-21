@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 21.3
 permalink: /reinforcement-learning-exercises/ex_3/
-breadcrumb: Reinforcement Learning
+breadcrumb: 21-Reinforcement-Learning
 ---
 
 {% include mathjax_support %}

@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 14.24
 permalink: /bayes-nets-exercises/ex_24/
-breadcrumb: Probabilistic Reasoning
+breadcrumb: 14-Probabilistic-Reasoning
 ---
 
 {% include mathjax_support %}

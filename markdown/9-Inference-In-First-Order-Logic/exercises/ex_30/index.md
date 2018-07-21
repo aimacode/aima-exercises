@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 9.30
 permalink: /logical-inference-exercises/ex_30/
-breadcrumb: Inference in First-Order Logic
+breadcrumb: 9-Inference-In-First-Order-Logic
 ---
 
 {% include mathjax_support %}

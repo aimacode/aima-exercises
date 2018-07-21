@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 5.18
 permalink: /game-playing-exercises/ex_18/
-breadcrumb: Adversarial Search
+breadcrumb: 5-Adversarial-Search
 ---
 
 {% include mathjax_support %}

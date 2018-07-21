@@ -2,7 +2,7 @@
 layout: chapter
 title: Main
 permalink: /agents-exercises/
-breadcrumb: Intelligent Agent
+breadcrumb: 2-Intelligent-Agent
 ---
 
 {% include mathjax_support %}

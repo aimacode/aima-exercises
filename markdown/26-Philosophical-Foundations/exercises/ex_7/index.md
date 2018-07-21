@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 26.7
 permalink: /philosophy-exercises/ex_7/
-breadcrumb: Philosphical Foundations
+breadcrumb: 26-Philosophical-Foundations
 ---
 
 {% include mathjax_support %}

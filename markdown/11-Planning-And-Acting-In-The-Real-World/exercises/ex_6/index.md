@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 11.6
 permalink: /advanced-planning-exercises/ex_6/
-breadcrumb: Planning and Acting in the Real World
+breadcrumb: 11-Planning-And-Acting-In-The-Real-World
 ---
 
 {% include mathjax_support %}

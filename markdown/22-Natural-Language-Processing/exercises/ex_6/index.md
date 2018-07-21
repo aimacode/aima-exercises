@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 22.6
 permalink: /nlp-communicating-exercises/ex_6/
-breadcrumb: Natural Language Processing
+breadcrumb: 22-Natural-Language-Processing
 ---
 
 {% include mathjax_support %}

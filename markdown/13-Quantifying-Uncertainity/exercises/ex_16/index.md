@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 13.16
 permalink: /probability-exercises/ex_16/
-breadcrumb: Quantifying Uncertainity
+breadcrumb: 13-Quantifying-Uncertainity
 ---
 
 {% include mathjax_support %}

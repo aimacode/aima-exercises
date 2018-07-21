@@ -2,7 +2,7 @@
 layout: exercise
 title: Exercise 7.6
 permalink: /knowledge-logic-exercises/ex_6/
-breadcrumb: Logical Agents
+breadcrumb: 7-Logical-Agents
 ---
 
 {% include mathjax_support %}
