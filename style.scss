@@ -70,7 +70,7 @@ body {
   }
   &.exercise_mode{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     .mode_btn{
       width: 200px;
       float: none;
@@ -466,6 +466,9 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
 }
 
 .post {
+  .entry{
+    margin-bottom: 60px;
+  }
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -482,6 +485,29 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+  }
+  .answer_container{
+    border: 1px solid #808080;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+    .edit_answer{
+      display: inline-block;
+      border: 1px solid #e5e5e5;
+      padding: 5px;
+      border-radius: 5px;
+      float: right;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      background-image: linear-gradient(#ffffff, #f2f2f2);
+      color: #4183C4;
+    }
+    .answer_content{
+      clear:both;
+    }
   }
   .view_question_source{
     a{

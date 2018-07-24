@@ -185,10 +185,14 @@ training-set size goes to infinity? Why or why not?</p>
 
   </div>
 
-<!--   <div class="date">
-    Written on 
+  <div class="answer_container">
+    <div>
+      <b>Answer</b>
+      <a class="edit_answer" href="#">Improve This Solution</a>
+    </div>
+    <div class="answer_content">Not Available</div>
   </div>
- -->
+
 <div class="container exercise_mode">
   <div class="mode_btn view_answer">View Answer</div> 
   <div class="mode_btn request_answer">Request Answer</div>
@@ -215,6 +219,17 @@ training-set size goes to infinity? Why or why not?</p>
         $(".arrow-up").removeClass("loader")
       })
     });
+    $(document).on('click',".view_answer",function(e){
+      if($(".answer_container").is(":visible")){
+        $(this).html("View Answer");
+        $(".answer_container").hide();
+      }
+      else{
+        $(this).html("Hide Answer");
+        $(".answer_container").show();
+      }
+      
+    })
     $(document).on('click',"i[data-chapter]",function(e){
       ele = $(e.target)
       ele.addClass("loader")
@@ -225,8 +240,9 @@ training-set size goes to infinity? Why or why not?</p>
       });
     });
     base_url = "http://github.com/aimacode/aima-exercises/"
-    path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/question.md"
-    $(".edit_question").attr("href",base_url+path)
+    path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName
+    $(".edit_question").attr("href",base_url+path+"/question.md")
+    $(".edit_answer").attr("href",base_url+path+"/answer.md")
 
   });
 </script>
