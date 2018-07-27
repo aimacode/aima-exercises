@@ -194,7 +194,7 @@ extend easily to other lines.</p>
       <b>Answer</b>
       <a class="edit_answer" href="#">Improve This Solution</a>
     </div>
-    <div class="answer_content">Not Available</div>
+    <div class="answer_content"></div>
   </div>
 
 <div class="container exercise_mode">
@@ -224,11 +224,18 @@ extend easily to other lines.</p>
       })
     });
     $(document).on('click',".view_answer",function(e){
+      ele = $(".answer_container")
       if($(".answer_container").is(":visible")){
         $(this).html("View Answer");
         $(".answer_container").hide();
       }
       else{
+        ele.addClass("loader")
+        url = "http://raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
+        $.get(url, function( data ) {
+          $(".answer_content").html(data)
+          ele.removeClass("loader")
+        });
         $(this).html("Hide Answer");
         $(".answer_container").show();
       }

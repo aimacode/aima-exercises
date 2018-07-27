@@ -449,6 +449,16 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     color: #4183C4; }
   .post .answer_container .answer_content {
     clear: both; }
+  .post .answer_container.loader .answer_content {
+    clear: both; }
+    .post .answer_container.loader .answer_content:after {
+      content: "";
+      background-image: url(images/loader.gif);
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      display: block;
+      width: 40px;
+      height: 40px; }
 .post .view_question_source a {
   position: relative;
   display: inline-block;

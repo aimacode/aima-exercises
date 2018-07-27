@@ -508,6 +508,20 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     .answer_content{
       clear:both;
     }
+    &.loader{
+      .answer_content{
+        clear:both;
+        &:after{
+          content: "";
+          background-image: url(images/loader.gif);
+          background-size: 40px 40px;
+          background-repeat: no-repeat;
+          display: block;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
   }
   .view_question_source{
     a{
