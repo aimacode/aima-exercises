@@ -52,7 +52,7 @@ layout: default
       }
       else{
         ele.addClass("loader")
-        url = "http://raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
+        url = "//raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
         $.get(url, function( data ) {
           $(".answer_content").html(data)
           ele.removeClass("loader")
