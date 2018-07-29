@@ -253,7 +253,7 @@ show only the steps that lead to success.</p>
 
 <div class="container exercise_mode">
   <div class="mode_btn view_answer">View Answer</div> 
-  <div class="mode_btn request_answer">Request Answer</div>
+  <div class="mode_btn request_answer"><a href="#">Request Answer</a></div>
 </div>
   
 
@@ -285,7 +285,7 @@ show only the steps that lead to success.</p>
       }
       else{
         ele.addClass("loader")
-        url = "http://raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
+        url = "//raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
         $.get(url, function( data ) {
           $(".answer_content").html(data)
           ele.removeClass("loader")
@@ -308,7 +308,7 @@ show only the steps that lead to success.</p>
     path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName
     $(".edit_question").attr("href",base_url+path+"/question.md")
     $(".edit_answer").attr("href",base_url+path+"/answer.md")
-
+    $(".request_answer a").attr("href",base_url+"issues/new?title=Request to get solution for Exercise '"+exerciseName+"' in '"+chapterName+"'&body=Describe the issue/requirement in detail").attr("target","_blank");
   });
 </script>
 

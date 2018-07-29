@@ -109,6 +109,9 @@ body {
       border: 1px solid;
       border-radius: 5px;
       cursor: pointer; }
+      .container.exercise_mode .mode_btn a {
+        color: #333;
+        font-weight: normal; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
