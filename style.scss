@@ -67,6 +67,26 @@ body {
       cursor: pointer;
       background-color: #c63434;
     }
+    .search_container{
+      text-align: center;
+      margin: 20px 0;
+      input{
+        width: 250px;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        border-style: none;
+        border: 1px solid #c4c4c4;
+      }
+      .search-btn{
+        display: inline-block;
+        border: 1px solid #c4c4c4;
+        font-size: 14px;
+        padding: 4px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
   }
   &.exercise_mode{
     text-align: center;
