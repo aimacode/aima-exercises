@@ -68,6 +68,23 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%; }
+  .container .search_container {
+    text-align: center;
+    margin: 20px 0; }
+    .container .search_container input {
+      width: 250px;
+      font-size: 14px;
+      padding: 5px;
+      border-radius: 5px;
+      border-style: none;
+      border: 1px solid #c4c4c4; }
+    .container .search_container .search-btn {
+      display: inline-block;
+      border: 1px solid #c4c4c4;
+      font-size: 14px;
+      padding: 4px;
+      border-radius: 5px;
+      cursor: pointer; }
   .container.home {
     text-align: justify;
     padding-top: 40px; }
@@ -99,23 +116,6 @@ body {
       padding: 5px;
       cursor: pointer;
       background-color: #c63434; }
-    .container.home .search_container {
-      text-align: center;
-      margin: 20px 0; }
-      .container.home .search_container input {
-        width: 250px;
-        font-size: 14px;
-        padding: 5px;
-        border-radius: 5px;
-        border-style: none;
-        border: 1px solid #c4c4c4; }
-      .container.home .search_container .search-btn {
-        display: inline-block;
-        border: 1px solid #c4c4c4;
-        font-size: 14px;
-        padding: 4px;
-        border-radius: 5px;
-        cursor: pointer; }
   .container.exercise_mode {
     text-align: center;
     margin-top: 50px; }
