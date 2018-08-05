@@ -44,12 +44,15 @@ body {
       border: 1px solid #c4c4c4;
     }
     .search-btn{
+      height: 28px;
+      width: 50px;
       display: inline-block;
       border: 1px solid #c4c4c4;
       font-size: 14px;
       padding: 4px;
       border-radius: 5px;
       cursor: pointer;
+      background-color: #fff;
     }
   }
   &.home{

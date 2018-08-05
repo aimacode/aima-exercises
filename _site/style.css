@@ -79,12 +79,15 @@ body {
       border-style: none;
       border: 1px solid #c4c4c4; }
     .container .search_container .search-btn {
+      height: 28px;
+      width: 50px;
       display: inline-block;
       border: 1px solid #c4c4c4;
       font-size: 14px;
       padding: 4px;
       border-radius: 5px;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #fff; }
   .container.home {
     text-align: justify;
     padding-top: 40px; }

@@ -137,9 +137,21 @@
 </ul>
 
       <div class="search_container">
-	<input type="text" name="search" placeholder="Search within AIMA Exercises">
-	<div class="search-btn">Search</div>
+	<form action="get" id="site_search">
+		<center>
+			<input type="text" name="search" placeholder="Search within AIMA Exercises" id="search_box">
+			<input type="submit" value="Go!" class="search-btn">
+		</center>
+	</form>
+	<br/>&nbsp;
+	<br/>&nbsp;
 </div>
+
+<ul id="search_results"></ul>
+
+<script src="/js/lunr.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/search.js"></script>
     </div>
 
     <div class="wrapper-footer">
