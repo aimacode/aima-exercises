@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Perception
+title: Main
 permalink: /perception-exercises/
 ---
 

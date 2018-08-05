@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Robotics
+title: Main
 permalink: /robotics-exercises/
 ---
 

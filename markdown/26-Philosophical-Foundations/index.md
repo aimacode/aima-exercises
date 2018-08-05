@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Philosphical Foundations
+title: Main
 permalink: /philosophy-exercises/
 ---
 

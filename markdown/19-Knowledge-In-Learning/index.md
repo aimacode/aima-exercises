@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Knowledge in Learning
+title: Main
 permalink: /ilp-exercises/
 ---
 
