@@ -36,7 +36,7 @@ body {
     text-align: center;
     margin: 20px 0;
     input{
-      width: 250px;
+      width: 100%;
       font-size: 14px;
       padding: 5px;
       border-radius: 5px;
@@ -46,6 +46,7 @@ body {
     .search-btn{
       height: 28px;
       width: 50px;
+      margin: 15px;
       display: inline-block;
       border: 1px solid #c4c4c4;
       font-size: 14px;
@@ -53,6 +54,20 @@ body {
       border-radius: 5px;
       cursor: pointer;
       background-color: #fff;
+    }
+    ul#search_results{
+      list-style-type: none;
+      text-align: left;
+      padding: 0;
+      li{
+        border: 1px solid #c4c4c4;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        &:hover{
+          background-color: #0000001a;
+        }
+      }    
     }
   }
   &.home{

@@ -72,7 +72,7 @@ body {
     text-align: center;
     margin: 20px 0; }
     .container .search_container input {
-      width: 250px;
+      width: 100%;
       font-size: 14px;
       padding: 5px;
       border-radius: 5px;
@@ -81,6 +81,7 @@ body {
     .container .search_container .search-btn {
       height: 28px;
       width: 50px;
+      margin: 15px;
       display: inline-block;
       border: 1px solid #c4c4c4;
       font-size: 14px;
@@ -88,6 +89,17 @@ body {
       border-radius: 5px;
       cursor: pointer;
       background-color: #fff; }
+    .container .search_container ul#search_results {
+      list-style-type: none;
+      text-align: left;
+      padding: 0; }
+      .container .search_container ul#search_results li {
+        border: 1px solid #c4c4c4;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px; }
+        .container .search_container ul#search_results li:hover {
+          background-color: #0000001a; }
   .container.home {
     text-align: justify;
     padding-top: 40px; }
