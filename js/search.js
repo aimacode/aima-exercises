@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     // Wait for data to load
     window.data.then(function(loaded_data) {
-
+      element = document.getElementById("search_results");
       // Are there any results?
       if (results.length) {
         $search_results.empty(); // Clear any old results
@@ -40,13 +40,19 @@ $(document).ready(function(){
         // Iterate over the results
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
+          breadcrumbFilter = item.breadcrumb.match(/^(\D*)(\d+)-/)[0];
+          contentFilter = item.content.match(/^(\D*)(\d+).(\D*)(\d+)/)[0];
 
           // Build a snippet of HTML for this result
-          var appendString = '<li><a href="' + item.url + '">' +" Intelligent Agents | "+ item.title + '</a></li>';
+          var appendString = '<li><a href="' + item.url + '">' + item.title + " | "+ 
+                            item.breadcrumb.replace(breadcrumbFilter,"")+ '</a><div>'+ 
+                            item.content.replace(contentFilter,"").substring(0,250); +
+                            '</div></li>';
 
           // Add the snippet to the collection of results.
           $search_results.append(appendString);
         });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub,element]);
       } else {
         // If there are no results, let the user know.
         $search_results.html('<li>No results found.<br/>Please check spelling and spacing...</li>');

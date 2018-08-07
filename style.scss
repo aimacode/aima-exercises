@@ -67,6 +67,9 @@ body {
         &:hover{
           background-color: #0000001a;
         }
+        div:after{
+          content: "...";
+        }
       }    
     }
   }
