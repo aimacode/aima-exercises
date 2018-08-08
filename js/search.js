@@ -9,14 +9,22 @@ $(document).ready(function(){
 
   // Get the generated search_data.json file so lunr.js can search it locally.
   window.data = $.getJSON('/search_data.json');
+  var query = unescape(getQueryString("query"));
+  $("#search_box").val(query);
 
   // Wait for the data to load and add it to lunr
   window.data.then(function(loaded_data){
+
     $.each(loaded_data, function(index, value){
-    window.idx.add(
-      $.extend({ "id": index }, value)
-    );
+      window.idx.add(
+        $.extend({ "id": index }, value)
+      );
     });
+
+    if(query){
+      var results = window.idx.search(query); // Get lunr to perform a search
+      display_search_results(results); // Hand the results off to be displayed
+    }
   });
 
   // Event when the form is submitted
@@ -59,4 +67,12 @@ $(document).ready(function(){
       }
     });
   }
+
+  function getQueryString( field) {
+    var href = window.location.href;
+    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+    var string = reg.exec(href);
+    return string ? string[1] : null;
+  };
+
 })

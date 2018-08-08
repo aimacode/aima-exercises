@@ -16,8 +16,10 @@ layout: post
 	</div>
 	<div>
 	<div class="search_container">
-		<input type="text" name="search" placeholder="Search within AIMA Exercises">
-		<div class="search-btn">Search</div>
+		<form action="search" id="site_search" autocomplete="off" method="GET">
+			<input type="text" name="query" placeholder="Search within AIMA Exercises">
+			<input type="submit" value="Go!" class="search-btn">
+		</form>
 	</div>
 	<ul>
 		<li>
