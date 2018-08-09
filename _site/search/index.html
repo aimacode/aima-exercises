@@ -49,7 +49,9 @@
     <input type="checkbox" id="toggletoc">
     <div class="toc">
       <div>Table of Contents</div>
-      <input type="text" class="toc_search" placeholder="Search within AIMA-Exercises">
+      <form action="/search" id="site_search" autocomplete="off" method="GET">
+        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
+      </form>
       <ul>
 	<li>
 		<span>Part &#x2160; Artificial Intelligence</span>
@@ -162,12 +164,10 @@
 
 
 <div class="search_container">
-	<form action="get" id="site_search" autocomplete="off">
-		<center>
-			<input type="text" name="search" placeholder="Search within AIMA Exercises" id="search_box">
-			<input type="submit" value="Go!" class="search-btn">
-		</center>
-	</form>
+	<center>
+		<input type="text" name="query" placeholder="Search within AIMA Exercises" id="search_box">
+		<input type="submit" value="Go!" class="search-btn" id="search-btn">
+	</center>
 	<br/>
 	<br/>
 

@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   // Get the generated search_data.json file so lunr.js can search it locally.
   window.data = $.getJSON('/search_data.json');
-  var query = unescape(getQueryString("query"));
+  var query = unescape(getQueryString("query")).replace(/\+/g," ");
   $("#search_box").val(query);
 
   // Wait for the data to load and add it to lunr
@@ -28,7 +28,7 @@ $(document).ready(function(){
   });
 
   // Event when the form is submitted
-  $("#site_search").submit(function(event){
+  $("#search-btn").on("click",function(event){
       event.preventDefault();
       var query = $("#search_box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search

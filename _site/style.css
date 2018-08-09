@@ -359,6 +359,10 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     margin-right: 15px;
     color: #fff;
     border-bottom: 1px solid white; }
+  .toc .toc_search {
+    width: 270px;
+    position: relative;
+    top: -15px; }
   .toc ul {
     list-style-type: none;
     padding: 16px 0;
@@ -366,7 +370,6 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     height: 95%;
     overflow: auto;
     right: -20px;
-    margin-top: 34px;
     top: -40px;
     position: relative; }
     .toc ul li {

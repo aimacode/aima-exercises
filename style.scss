@@ -393,6 +393,11 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     color: #fff;
     border-bottom: 1px solid rgb(255,255,255);
   }
+  .toc_search{
+    width: 270px;
+    position: relative;
+    top: -15px;
+  }
   ul{
     list-style-type: none;
     padding: 16px 0;
@@ -400,7 +405,6 @@ input[type=checkbox]#toggleheader:checked ~ .wrapper-masthead .container > heade
     height: 95%;
     overflow: auto;
     right: -20px;
-    margin-top: 34px;
     top: -40px;
     position: relative;
     li{

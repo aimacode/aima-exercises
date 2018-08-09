@@ -35,6 +35,9 @@
     <input type="checkbox" id="toggletoc">
     <div class="toc">
       <div>Table of Contents</div>
+      <form action="/search" id="site_search" autocomplete="off" method="GET">
+        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
+      </form>
       {% include aima-toc.html %}
     </div>
     <div id="main" role="main" class="container">
