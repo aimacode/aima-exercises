@@ -5,11 +5,6 @@ layout: post
 <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
 
-<!-- <div>
-	<button id="login" onclick="login()">Login</button>	
-	<button id="logout" onclick="logout()" class="inactive">Logout</button>	
-</div>
- -->  
 <div class="home container">
 	<div>
 		AIMA-exercises is an open-source community of students, instructors and developers. Anyone can add an exercise, suggest answers to existing questions, or simply help us improve the platform. We accept contributions on <a href="https://github.com/aimacode/aima-exercises">this github repository</a>.
@@ -86,61 +81,4 @@ layout: post
 		</li>
 	</ul>
 	</div>
-<!-- 	<div>Integrate AIMA-Exercises in your curriculum.</div>
-	<div class="goto_kaggle">
-		<a href="//www.kaggle.com/aimaexercises/aima-exercises-table-of-contents" target="_blank">Use the Kaggle Version</a>
-	</div>
-	or
-	<div class="login_github">Login via Github</div> 
-	<div class="logout_github">Logout</div> 
-	<div class="user_info">
-		<div class="user_profile">
-			<img src=""  style="width: 100px;">
-		</div>
-		<div class="username"></div>
-		<div class="user_email"></div>
-	</div>
- -->	<!-- to explore the exercises rightaway. -->
 </div>
-
-
-<script>
-function login(){
-  var provider = new firebase.auth.GithubAuthProvider();
-  var promise = firebase.auth().signInWithPopup(provider)
-
-  promise.catch(e => console.log(e.message))
-
-  // .then(function(result){
-  //  var token = result.credential.accessToken;
-  //  var user = result.user;
-  //  console.log(user)
-  // })
-  // $("#login").on("click",login)
-}
-
-function logout(){
-	firebase.auth().signOut();
-}
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
-	if(firebaseUser){
-		console.log(firebaseUser)
-		$(".logout_github").removeClass("inactive")
-		$(".login_github").addClass("inactive")
-		$(".user_info .user_profile img").attr("src",firebaseUser.photoURL)
-		$(".user_info .username").html(firebaseUser.displayName)
-		$(".user_info .user_email").html(firebaseUser.email)
-		$(".user_info").removeClass("inactive")
-	}else{
-		console.log("NOT LOGGED IN")
-		$(".login_github").removeClass("inactive")
-		$(".logout_github").addClass("inactive")
-		$(".user_info").addClass("inactive")
-	}
-})
-
-$(document).on("click",".login_github", login)
-$(document).on("click",".logout_github", logout)
-
-</script>

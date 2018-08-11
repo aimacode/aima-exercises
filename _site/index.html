@@ -134,11 +134,6 @@
 <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
 
-<!-- <div>
-	<button id="login" onclick="login()">Login</button>	
-	<button id="logout" onclick="logout()" class="inactive">Logout</button>	
-</div>
- -->  
 <div class="home container">
 	<div>
 		AIMA-exercises is an open-source community of students, instructors and developers. Anyone can add an exercise, suggest answers to existing questions, or simply help us improve the platform. We accept contributions on <a href="https://github.com/aimacode/aima-exercises">this github repository</a>.
@@ -215,71 +210,8 @@
 		</li>
 	</ul>
 	</div>
-<!-- 	<div>Integrate AIMA-Exercises in your curriculum.</div>
-	<div class="goto_kaggle">
-		<a href="//www.kaggle.com/aimaexercises/aima-exercises-table-of-contents" target="_blank">Use the Kaggle Version</a>
-	</div>
-	or
-	<div class="login_github">Login via Github</div> 
-	<div class="logout_github">Logout</div> 
-	<div class="user_info">
-		<div class="user_profile">
-			<img src=""  style="width: 100px;">
-		</div>
-		<div class="username"></div>
-		<div class="user_email"></div>
-	</div>
- -->	<!-- to explore the exercises rightaway. -->
 </div>
-
-
-<script>
-function login(){
-  var provider = new firebase.auth.GithubAuthProvider();
-  var promise = firebase.auth().signInWithPopup(provider)
-
-  promise.catch(e => console.log(e.message))
-
-  // .then(function(result){
-  //  var token = result.credential.accessToken;
-  //  var user = result.user;
-  //  console.log(user)
-  // })
-  // $("#login").on("click",login)
-}
-
-function logout(){
-	firebase.auth().signOut();
-}
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
-	if(firebaseUser){
-		console.log(firebaseUser)
-		$(".logout_github").removeClass("inactive")
-		$(".login_github").addClass("inactive")
-		$(".user_info .user_profile img").attr("src",firebaseUser.photoURL)
-		$(".user_info .username").html(firebaseUser.displayName)
-		$(".user_info .user_email").html(firebaseUser.email)
-		$(".user_info").removeClass("inactive")
-	}else{
-		console.log("NOT LOGGED IN")
-		$(".login_github").removeClass("inactive")
-		$(".logout_github").addClass("inactive")
-		$(".user_info").addClass("inactive")
-	}
-})
-
-$(document).on("click",".login_github", login)
-$(document).on("click",".logout_github", logout)
-
-</script>
-
   </div>
-
-<!--   <div class="date">
-    Last compiled on 25th Feb, 2018
-  </div>
- -->
 </article>
 
     </div>
@@ -287,22 +219,6 @@ $(document).on("click",".logout_github", logout)
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-<!--            Designed by <a href="http://nalinc.github.io" style="color:#2196F3">Nalin</a> &#9889; 
-           Written in <a href="#/" style="color: #2a932a">Markdown</a> &#9889; 
-           Powered by <a href="http://jekyllrb.com" style="color: #d73838">Jekyll</a>    -->
-          <!-- 
-
-
-
-
-
-
-
-
-
-
-
- -->
         </footer>
       </div>
     </div>
@@ -310,48 +226,5 @@ $(document).on("click",".logout_github", logout)
     
 
 
-    <script type="text/javascript">
-      // firestore =firebase.firestore();
-      // function rateExercise(e){
-      //   console.log(e.target)
-      //   chapterLabel = $(e.target).data("chapter")
-      //   exerciseLabel = $(e.target).data("exercise")
-      //   docRef = firestore.collection("rating").doc(chapterLabel)
-      //   score = 0
-      //   docRef.get().then(function(doc){
-      //     if (doc && doc.exists){
-      //       myData = doc.data()
-      //      // score = myData
-      //       console.log(myData)
-      //       if(exerciseLabel in myData){
-      //         myData[exerciseLabel] += 1
-      //       }else{
-      //         myData[exerciseLabel] = 1
-      //       }
-      //      // $(e.target).data("rating",score);
-      //       docRef.set(myData).then(function(){
-      //         console.log("status saved")
-      //         console.log(myData[exerciseLabel])
-      //         $(e.target).attr("data-rating",myData[exerciseLabel]);
-      //       })
-      //     }
-      //   })
-      // }
-      // getRealTimeUpdates = function(){
-      //   docRef = firestore.collection("rating").doc("intro-exercises");
-      //   docRef.onSnapshot(function(doc){
-      //     if (doc && doc.exists){
-      //       myData = doc.data()
-      //       for(key in myData){
-      //         console.log(key)  
-      //         // $(e.target).attr("data-rating",myData[exerciseLabel]);
-      //       }
-      //     }
-      //   })
-      // }
-
-      // getRealTimeUpdates()
-      // $(document).on("click",".arrow-up", rateExercise)
-    </script>
   </body>
 </html>
