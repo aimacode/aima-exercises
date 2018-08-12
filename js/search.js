@@ -58,7 +58,7 @@ $(document).ready(function(){
           }
 
           // Build a snippet of HTML for this result
-          var appendString = '<li><a href="' +window.aimaBaseURL+item.url + '">' + item.title + " | "+ 
+          var appendString = '<li><a href="' +window.aimaBaseURL+item.url.trim() + '">' + item.title + " | "+ 
                             item.breadcrumb.replace(breadcrumbFilter,"")+ '</a><div>'+ 
                             item.content.replace(contentFilter,"").substring(0,250); +
                             '</div></li>';
