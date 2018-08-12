@@ -8,7 +8,7 @@ $(document).ready(function(){
   });
 
   // Get the generated search_data.json file so lunr.js can search it locally.
-  window.data = $.getJSON(window.aimaBaseURL+'search_data.json');
+  window.data = $.getJSON(window.aimaBaseURL+'/search_data.json');
   var query = unescape(getQueryString("query")).replace(/\+/g," ");
   $("#search_box").val(query);
 
