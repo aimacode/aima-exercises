@@ -6,7 +6,7 @@ $(document).ready(function(){
     this.field('title', { boost: 10 });
     this.field('url');
   });
-  
+
   // Get the generated search_data.json file so lunr.js can search it locally.
   window.data = $.getJSON(window.aimaBaseURL+'/search_data.json');
   var query = unescape(getQueryString("query")).replace(/\+/g," ");
@@ -48,8 +48,14 @@ $(document).ready(function(){
         // Iterate over the results
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
-          breadcrumbFilter = item.breadcrumb.match(/^(\D*)(\d+)-/)[0];
-          contentFilter = item.content.match(/^(\D*)(\d+).(\D*)(\d+)/)[0];
+          breadcrumbFilter=""
+          contentFilter=""
+          if(item.breadcrumb){
+            breadcrumbFilter = item.breadcrumb.match(/^(\D*)(\d+)-/)[0];  
+          }
+          if(item.breadcrumb){
+            contentFilter = item.content.match(/^(\D*)(\d+).(\D*)(\d+)/)[0];  
+          }
 
           // Build a snippet of HTML for this result
           var appendString = '<li><a href="' + item.url + '">' + item.title + " | "+ 
