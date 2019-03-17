@@ -19,7 +19,7 @@
 | 15 | Unanswered | [`Question`](exercises/ex_15/question.md) / [`Answer`](exercises/ex_15/answer.md)|
 | 16 | Unanswered | [`Question`](exercises/ex_16/question.md) / [`Answer`](exercises/ex_16/answer.md)|
 | 17 | Unanswered | [`Question`](exercises/ex_17/question.md) / [`Answer`](exercises/ex_17/answer.md)|
-| 18 | Answered | [`Question`](exercises/ex_18/question.md) / [`Answer`](exercises/ex_18/answer.md)|
+| 18 | Unanswered | [`Question`](exercises/ex_18/question.md) / [`Answer`](exercises/ex_18/answer.md)|
 | 19 | Unanswered | [`Question`](exercises/ex_19/question.md) / [`Answer`](exercises/ex_19/answer.md)|
 | 20 | Unanswered | [`Question`](exercises/ex_20/question.md) / [`Answer`](exercises/ex_20/answer.md)|
 | 21 | Unanswered | [`Question`](exercises/ex_21/question.md) / [`Answer`](exercises/ex_21/answer.md)|
