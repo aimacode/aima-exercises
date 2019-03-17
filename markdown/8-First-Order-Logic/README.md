@@ -37,4 +37,4 @@
 | 33 | Unanswered | [`Question`](exercises/ex_33/question.md) / [`Answer`](exercises/ex_33/answer.md)|
 | 34 | Unanswered | [`Question`](exercises/ex_34/question.md) / [`Answer`](exercises/ex_34/answer.md)|
 | 35 | Unanswered | [`Question`](exercises/ex_35/question.md) / [`Answer`](exercises/ex_35/answer.md)|
-| 36 | Unanswered | [`Question`](exercises/ex_36/question.md) / [`Answer`](exercises/ex_36/answer.md)|
+| 36 | Answered | [`Question`](exercises/ex_36/question.md) / [`Answer`](exercises/ex_36/answer.md)|
