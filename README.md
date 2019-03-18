@@ -6,7 +6,7 @@ The first step will be to translate the LaTeX exercises (in the [`latex`](https:
 
 # Index of Files
 
-Here is a table of the latex and markdown version of the exercise files for *Artificial Intelligence: A Modern Approach,* with their respository location. Unimplemented files and the *future exercises* file are a good place for new contributors to start.
+Here is a table of the latex and markdown version of the exercise files for *Artificial Intelligence: A Modern Approach,* with their respository location. The *future exercises* file is a good place for new contributors to start.
 
 | **Chapter** | **LaTex File** | **Status** | **Jupyter Notebook**| **Markdown** |
 |:------------|:---------------|:-----------|:-----------------|:-----------------|
