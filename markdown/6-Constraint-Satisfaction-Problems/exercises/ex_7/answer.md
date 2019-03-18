@@ -1,1 +1,3 @@
-Not Available
+The “Zebra Puzzle” can be represented as a CSP by introducing a variable for each color, pet, drink, country, and cigarette brand 
+(a total of 25 variables). The value of each variable is a number from 1 to 5 indicating the house number. 
+This is a good representation because it easy to represent all the constraints given in the problem definition this way. Besides ease of expressing a problem, the other reason to choose a representation is the efficiency of finding a solution. Here we have mixed results— on some runs, min-conflicts local search finds a solution for this problem in seconds, whileon other runs it fails to find a solution after minutes.Another representation is to have five variables for each house, one with the domain of colors, one with pets, and so on.
