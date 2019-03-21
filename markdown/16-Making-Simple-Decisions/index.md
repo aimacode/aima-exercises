@@ -76,9 +76,3 @@ permalink: /decision-theory-exercises/
 
 <div><i class="arrow-up loader" data-chapter="decision-theory-exercises" data-exercise="ex_23" data-rating="0"></i></div>
 {% include_relative exercises/ex_23/question.md %}
-
-
-The answers to Exercise [almanac-game](#/) (where M stands
-for million): First set: 3M, 1.6M, 1541, 41M, 4768, 221, 649M, 295M,
-132, 25,546. Second set: 1917, 155M, 4,500M, 11M, 120,000, 1.1M, 1636,
-19,340, 1,595, 41,710.
