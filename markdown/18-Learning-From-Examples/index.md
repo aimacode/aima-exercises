@@ -1,4 +1,4 @@
- ---
+---
 layout: chapter
 title: Main
 permalink: /concept-learning-exercises/
