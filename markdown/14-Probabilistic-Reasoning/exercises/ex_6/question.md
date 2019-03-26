@@ -15,5 +15,7 @@ observed.
 <b id="handedness-figure">Figure [handedness-figure]</b> Three possible structures for a Bayesian network describing genetic inheritance of handedness.
 </center>
 
-![handedness-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/handedness1.svg)
-
+$\quad\quad\quad$ |  $\quad\quad\quad$ | $\quad\quad\quad$
+:-------------------------:|:-------------------------:|:-------------------------:
+![handedness-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/handedness1.svg)  |  ![handedness-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/handedness2.svg) |  ![handedness-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/handedness3.svg)
+(a) | (b) | (c)
