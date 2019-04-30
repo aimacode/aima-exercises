@@ -2,7 +2,7 @@
 
 Consider the problem of finding the shortest
 path between two points on a plane that has convex polygonal obstacles
-as shown in . This is an idealization of the problem that a robot has to
+as shown in Figure [polygonal obstacles](#polygonal-obstacles). This is an idealization of the problem that a robot has to
 solve to navigate in a crowded environment.
 
 1.  Suppose the state space consists of all positions $(x,y)$ in
@@ -23,3 +23,6 @@ solve to navigate in a crowded environment.
 
 4.  Apply one or more of the algorithms in this chapter to solve a range
     of problems in the domain, and comment on their performance.
+<br>
+<b id='polygonal-obstacles'>Figure</b> A scene with polygonal obstacles. S and G are the start and goal states.
+![polygonal obstacles](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/geometric-scene.svg)
