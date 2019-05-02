@@ -14,7 +14,7 @@
 | 10 | Unanswered | [`Question`](exercises/ex_10/question.md) / [`Answer`](exercises/ex_10/answer.md)|
 | 11 | Unanswered | [`Question`](exercises/ex_11/question.md) / [`Answer`](exercises/ex_11/answer.md)|
 | 12 | Unanswered | [`Question`](exercises/ex_12/question.md) / [`Answer`](exercises/ex_12/answer.md)|
-| 13 | Unanswered | [`Question`](exercises/ex_13/question.md) / [`Answer`](exercises/ex_13/answer.md)|
+| 13 | Answered | [`Question`](exercises/ex_13/question.md) / [`Answer`](exercises/ex_13/answer.md)|
 | 14 | Unanswered | [`Question`](exercises/ex_14/question.md) / [`Answer`](exercises/ex_14/answer.md)|
 | 15 | Unanswered | [`Question`](exercises/ex_15/question.md) / [`Answer`](exercises/ex_15/answer.md)|
 | 16 | Unanswered | [`Question`](exercises/ex_16/question.md) / [`Answer`](exercises/ex_16/answer.md)|
