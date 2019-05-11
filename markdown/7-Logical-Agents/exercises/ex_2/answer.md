@@ -44,9 +44,10 @@ Proof that Unicorns are Mythical:
 6. ¬Horned ∨ Magical
 7. ¬Mythical
 8. Mammal [ 3, 7 ]
-9. ¬Mammal [ 5, 6 ]
-10. ( ) [ 8, 9 ]
- 
+9. Mortal [ 2, 7 ]
+10. Horned [ 5, 8 ]
+11. Magical [ 6, 10 ]
+And that's about as far as you can get with this one. Since it (at least it seems) is impossible to resolve these statements to the empty clause, we cannot prove that Unicorns are Mythical.
 
 Proof that Unicorns are Magical:
 
@@ -78,4 +79,4 @@ Proof that Unicorns are Horned:
 10. Immortal [ 1, 9 ]
 11. ( ) [ 4, 10]
  
- And since we got the empty clause for all three, we now have proof that Unicorns are indeed Mythical, Magical, and Horned! 🦄
+ And since we got the empty clause for all three, we now have proof that Unicorns are indeed Magical and Horned. But we cannot say that Unicorns are Mythical 👀🦄
