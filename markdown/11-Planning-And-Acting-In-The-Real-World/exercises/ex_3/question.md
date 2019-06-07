@@ -1,4 +1,4 @@
-[Exercise 11.3 \[HLA-unique-exercise\]](ex_3/)
+
 
 Suppose that a high-level action has exactly one
 implementation as a sequence of primitive actions. Give an algorithm for

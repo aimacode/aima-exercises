@@ -1,145 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>Main –  – </title>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-        <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <title>
     
-    <meta name="description" content="">
-    <meta property="og:description" content="" />
+      Quantifying Uncertainty &middot; AIMA Exercises 
     
-    <meta name="author" content="" />
+  </title>
 
-    
-    <meta property="og:title" content="Main" />
-    <meta property="twitter:title" content="Main" />
-    
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
-<!--     <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
- -->
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
- -->
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <body>
-    <input type="checkbox" id="toggleheader">
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
           <center>
-            <h1>Aritificial Intelligence: A Modern Approach</h1>
-            <h3>Stuart J. Russell and Peter Norvig</h3>
-          </center>
-        </header>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
       </div>
     </div>
-    <input type="checkbox" id="toggletoc">
-    <div class="toc">
-      <div>Table of Contents</div>
-      <form action="/search" id="site_search" autocomplete="off" method="GET">
-        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
-      </form>
-      <ul>
-	<li>
-		<span>Part &#x2160; Artificial Intelligence</span>
-		<ol>
-			<li><a href="/intro-exercises">1. Introduction</a></li>
-			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2161; Problem-solving</span>
-		<ol>
-			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
-			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
-			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
-			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
-		<ol>
-			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
-			<li><a href="/fol-exercises">8. First Order Logic</a></li>
-			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
-			<li><a href="/planning-exercises">10. Classical Planning</a></li>
-			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
-			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2163; Uncertain knowledge and reasoning</span>
-		<ol>
-			<li><a href="/probability-exercises">13. Quantifying Uncertainity</a></li>
-			<li><a href="/bayes-nets-exercises">14. Probabilistic Reasoning</a></li>
-			<li><a href="/dbn-exercises">15. Probabilistic Reasoning Over Time</a></li>
-			<li><a href="/decision-theory-exercises">16. Making Simple Decisions</a></li>
-			<li><a href="/complex-decisions-exercises">17. Making Complex Decision</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2164; Learning</span>
-		<ol>
-			<li><a href="/concept-learning-exercises">18. Learning From Examples</a></li>
-			<li><a href="/ilp-exercises">19. Knowledge In Learning</a></li>
-			<li><a href="/bayesian-learning-exercises">20. Learning Probabilistic Models</a></li>
-			<li><a href="/reinforcement-learning-exercises">21. Reinforcement Learning</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2165; Communicating, perceiving, and acting</span>
-		<ol>
-			<li><a href="/nlp-communicating-exercises">22. Natural Language Processing</a></li>
-			<li><a href="/nlp-english-exercises">23. Natural Language For Communication</a></li>
-			<li><a href="/perception-exercises">24. Perception</a></li>
-			<li><a href="/robotics-exercises">25. Robotics</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2166; Conclusions</span>
-		<ol>
-			<li><a href="/philosophy-exercises">26. Philosophical Foundations</a></li>
-			<li><a href="/#/"> Future Exercises</a></li>
-		</ol>
-	</li>
-</ul>
-    </div>
-    <div id="main" role="main" class="container">
-      
-
-
-
-<ul class="breadcrumb">
-
-  <label for="toggletoc" class="toc-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-   
-    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
-   
-
-<label for="toggleheader" class="toggleheader" title="Toggle Header">
-    &#9167;
-</label>
-</ul>
-
-      <article class="post">
+      <div class="container content">
+        <article class="post">
 
   <div class="entry">
     <script type="text/x-mathjax-config">
@@ -167,272 +141,319 @@
 
 <h1 id="13-quantifying-uncertainity">13. Quantifying Uncertainity</h1>
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_1" data-rating="0"></i></div>
-<p><a href="ex_1/">Exercise 13.1</a></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_1/" class="p-2">Exercise 1 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.1');" href="#"><i id="ex13.1" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.1);" href="#"><i id="ex13.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Show from first principles that $P(ab\land a) = 1$.</p>
+Show from first principles that $P(ab\land a) = 1$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_2/" class="p-2">Exercise 2 (sum-to-1-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.2');" href="#"><i id="ex13.2" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.2);" href="#"><i id="ex13.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_2" data-rating="0"></i></div>
-<p><a href="ex_2/">Exercise 13.2 [sum-to-1-exercise]</a></p>
+Using the axioms of probability, prove that any
+probability distribution on a discrete random variable must sum to 1.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_3/" class="p-2">Exercise 3 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.3');" href="#"><i id="ex13.3" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.3);" href="#"><i id="ex13.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Using the axioms of probability, prove that any
-probability distribution on a discrete random variable must sum to 1.</p>
+For each of the following statements, either prove it is true or give a
+counterexample.<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_3" data-rating="0"></i></div>
-<p><a href="ex_3/">Exercise 13.3</a></p>
+1.  If $P(a b, c) = P(b a, c)$, then
+    $P(a c) = P(b c)$ <br />
 
-<p>For each of the following statements, either prove it is true or give a
-counterexample.</p>
+2.  If $P(a b, c) = P(a)$, then $P(b c) = P(b)$ <br />
 
-<ol>
-  <li>
-    <p>If $P(a b, c) = P(b a, c)$, then
-$P(a c) = P(b c)$</p>
-  </li>
-  <li>
-    <p>If $P(a b, c) = P(a)$, then $P(b c) = P(b)$</p>
-  </li>
-  <li>
-    <p>If $P(a b) = P(a)$, then
-$P(a b, c) = P(a c)$</p>
-  </li>
-</ol>
+3.  If $P(a b) = P(a)$, then
+    $P(a b, c) = P(a c)$<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_4/" class="p-2">Exercise 4 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.4');" href="#"><i id="ex13.4" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.4);" href="#"><i id="ex13.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_4" data-rating="0"></i></div>
-<p><a href="ex_4/">Exercise 13.4</a></p>
-
-<p>Would it be rational for an agent to hold the three beliefs
+Would it be rational for an agent to hold the three beliefs
 $P(A) {0.4}$, $P(B) {0.3}$, and
 $P(A \lor B) {0.5}$? If so, what range of probabilities would
 be rational for the agent to hold for $A \land B$? Make up a table like
-the one in Figure <a href="#/">de-finetti-table</a>, and show how it
+the one in Figure <a href="#">de-finetti-table</a>, and show how it
 supports your argument about rationality. Then draw another version of
 the table where $P(A \lor B)
 {0.7}$. Explain why it is rational to have this probability,
 even though the table shows one case that is a loss and three that just
-break even. (<em>Hint:</em> what is Agent 1 committed to about the
+break even. (<i>Hint:</i> what is Agent 1 committed to about the
 probability of each of the four cases, especially the case that is a
-loss?)</p>
+loss?)
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_5/" class="p-2">Exercise 5 (exclusive-exhaustive-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.5');" href="#"><i id="ex13.5" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.5);" href="#"><i id="ex13.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_5" data-rating="0"></i></div>
-<p><a href="ex_5/">Exercise 13.5 [exclusive-exhaustive-exercise]</a></p>
-
-<p>This question deals with the properties
-of possible worlds, defined on page <a href="#/">possible-worlds-page</a> as assignments to all
+This question deals with the properties
+of possible worlds, defined on page <a href="#">possible-worlds-page</a> as assignments to all
 random variables. We will work with propositions that correspond to
 exactly one possible world because they pin down the assignments of all
-the variables. In probability theory, such propositions are called <strong>atomic event</strong>. For
+the variables. In probability theory, such propositions are called <b>atomic event</b>. For
 example, with Boolean variables $X_1$, $X_2$, $X_3$, the proposition
 $x_1\land \lnot x_2 \land \lnot x_3$ fixes the assignment of the
 variables; in the language of propositional logic, we would say it has
-exactly one model.</p>
+exactly one model.<br />
 
-<ol>
-  <li>
-    <p>Prove, for the case of $n$ Boolean variables, that any two distinct
-atomic events are mutually exclusive; that is, their conjunction is
-equivalent to ${false}$.</p>
-  </li>
-  <li>
-    <p>Prove that the disjunction of all possible atomic events is
-logically equivalent to ${true}$.</p>
-  </li>
-  <li>
-    <p>Prove that any proposition is logically equivalent to the
-disjunction of the atomic events that entail its truth.</p>
-  </li>
-</ol>
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_6" data-rating="0"></i></div>
-<p><a href="ex_6/">Exercise 13.6 [inclusion-exclusion-exercise]</a></p>
+1.  Prove, for the case of $n$ Boolean variables, that any two distinct
+    atomic events are mutually exclusive; that is, their conjunction is
+    equivalent to ${false}$.<br />
 
-<p>Prove
-Equation (<a href="#/">kolmogorov-disjunction-equation</a>) from
-Equations (<a href="#/">basic-probability-axiom-equation</a>)
-and (<a href="#/">proposition-probability-equation</a>).</p>
+2.  Prove that the disjunction of all possible atomic events is
+    logically equivalent to ${true}$.<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_7" data-rating="0"></i></div>
-<p><a href="ex_7/">Exercise 13.7</a></p>
+3.  Prove that any proposition is logically equivalent to the
+    disjunction of the atomic events that entail its truth.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_6/" class="p-2">Exercise 6 (inclusion-exclusion-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.6');" href="#"><i id="ex13.6" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.6);" href="#"><i id="ex13.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Consider the set of all possible five-card poker hands dealt fairly from
-a standard deck of fifty-two cards.</p>
+Prove
+Equation (<a href="#">kolmogorov-disjunction-equation</a>) from
+Equations <a href="#">basic-probability-axiom-equation</a>
+and (<a href="#">proposition-probability-equation</a>.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_7/" class="p-2">Exercise 7 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.7');" href="#"><i id="ex13.7" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.7);" href="#"><i id="ex13.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<ol>
-  <li>
-    <p>How many atomic events are there in the joint probability
-distribution (i.e., how many five-card hands are there)?</p>
-  </li>
-  <li>
-    <p>What is the probability of each atomic event?</p>
-  </li>
-  <li>
-    <p>What is the probability of being dealt a royal straight flush? Four
-of a kind?</p>
-  </li>
-</ol>
+Consider the set of all possible five-card poker hands dealt fairly from
+a standard deck of fifty-two cards.<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_8" data-rating="0"></i></div>
-<p><a href="ex_8/">Exercise 13.8</a></p>
+1.  How many atomic events are there in the joint probability
+    distribution (i.e., how many five-card hands are there)?<br />
 
-<p>Given the full joint distribution shown in
-Figure <a href="#/">dentist-joint-table</a>, calculate the following:</p>
+2.  What is the probability of each atomic event?<br />
 
-<ol>
-  <li>
-    <p>$\textbf{P}({toothache})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Cavity})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Toothache}{cavity})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Cavity}{toothache}\lor {catch})$.</p>
-  </li>
-</ol>
+3.  What is the probability of being dealt a royal straight flush? Four
+    of a kind?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_8/" class="p-2">Exercise 8 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.8');" href="#"><i id="ex13.8" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.8);" href="#"><i id="ex13.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_9" data-rating="0"></i></div>
-<p><a href="ex_9/">Exercise 13.9</a></p>
+Given the full joint distribution shown in
+Figure <a href="#">dentist-joint-table</a>, calculate the following:<br />
 
-<p>Given the full joint distribution shown in
-Figure <a href="#/">dentist-joint-table</a>, calculate the following:</p>
+1.  $\textbf{P}({toothache})$.<br />
 
-<ol>
-  <li>
-    <p>$\textbf{P}({toothache})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Catch})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Cavity}{catch})$.</p>
-  </li>
-  <li>
-    <p>$\textbf{P}({Cavity}{toothache}\lor {catch})$.</p>
-  </li>
-</ol>
+2.  $\textbf{P}({Cavity})$.<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_10" data-rating="0"></i></div>
-<p><a href="ex_10/">Exercise 13.10 [unfinished-game-exercise]</a></p>
+3.  $\textbf{P}({Toothache}{cavity})$.<br />
 
-<p>In his letter of August 24, 1654, Pascal
+4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_9/" class="p-2">Exercise 9 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.9');" href="#"><i id="ex13.9" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.9);" href="#"><i id="ex13.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Given the full joint distribution shown in
+Figure <a href="#">dentist-joint-table</a>, calculate the following:<br />
+
+1.  $\textbf{P}({toothache})$.<br />
+
+2.  $\textbf{P}({Catch})$.<br />
+
+3.  $\textbf{P}({Cavity}{catch})$.<br />
+
+4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_10/" class="p-2">Exercise 10 (unfinished-game-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.10');" href="#"><i id="ex13.10" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.10);" href="#"><i id="ex13.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+In his letter of August 24, 1654, Pascal
 was trying to show how a pot of money should be allocated when a
 gambling game must end prematurely. Imagine a game where each turn
-consists of the roll of a die, player <em>E</em> gets a point when
-the die is even, and player  <em>O</em> gets a point when the die
+consists of the roll of a die, player <i>E</i> gets a point when
+the die is even, and player  <i>O</i> gets a point when the die
 is odd. The first player to get 7 points wins the pot. Suppose the game
-is interrupted with <em>E</em> leading 4–2. How should the money
+is interrupted with <i>E</i> leading 4–2. How should the money
 be fairly split in this case? What is the general formula? (Fermat and
 Pascal made several errors before solving the problem, but you should be
-able to get it right the first time.)</p>
+able to get it right the first time.)
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_11/" class="p-2">Exercise 11 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.11');" href="#"><i id="ex13.11" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.11);" href="#"><i id="ex13.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_11" data-rating="0"></i></div>
-<p><a href="ex_11/">Exercise 13.11</a></p>
-
-<p>Deciding to put probability theory to good use, we encounter a slot
+Deciding to put probability theory to good use, we encounter a slot
 machine with three independent wheels, each producing one of the four
 symbols bar, bell, lemon, or
 cherry with equal probability. The slot machine has the
 following payout scheme for a bet of 1 coin (where “?” denotes that we
-don’t care what comes up for that wheel):</p>
+don’t care what comes up for that wheel): <br />
 
-<blockquote>
-  <p>bar/bar/bar pays 20 coins</p>
-</blockquote>
+&gt; bar/bar/bar pays 20 coins<br />
 
-<blockquote>
-  <p>bell/bell/bell pays 15 coins</p>
-</blockquote>
+&gt; bell/bell/bell pays 15 coins<br />
 
-<blockquote>
-  <p>lemon/lemon/lemon pays 5 coins</p>
-</blockquote>
+&gt; lemon/lemon/lemon pays 5 coins<br />
 
-<blockquote>
-  <p>cherry/cherry/cherry pays 3 coins</p>
-</blockquote>
+&gt; cherry/cherry/cherry pays 3 coins<br />
 
-<blockquote>
-  <p>cherry/cherry/? pays 2 coins</p>
-</blockquote>
+&gt; cherry/cherry/? pays 2 coins<br />
 
-<blockquote>
-  <p>cherry/?/? pays 1 coin</p>
-</blockquote>
+&gt; cherry/?/? pays 1 coin<br />
 
-<ol>
-  <li>
-    <p>Compute the expected “payback” percentage of the machine. In other
-words, for each coin played, what is the expected coin return?</p>
-  </li>
-  <li>
-    <p>Compute the probability that playing the slot machine once will
-result in a win.</p>
-  </li>
-  <li>
-    <p>Estimate the mean and median number of plays you can expect to make
-until you go broke, if you start with 10 coins. You can run a
-simulation to estimate this, rather than trying to compute an
-exact answer.</p>
-  </li>
-</ol>
+1.  Compute the expected “payback” percentage of the machine. In other
+    words, for each coin played, what is the expected coin return?<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_12" data-rating="0"></i></div>
-<p><a href="ex_12/">Exercise 13.12</a></p>
+2.  Compute the probability that playing the slot machine once will
+    result in a win.<br />
 
-<p>Deciding to put our knowledge of probability to good use, we encounter a
-slot machine with three independently turning reels, each producing one
-of the four symbols bar, bell,
-lemon, or cherry with equal probability. The
-slot machine has the following payout scheme for a bet of 1 coin (where
-“?” denotes that we don’t care what comes up for that wheel):</p>
+3.  Estimate the mean and median number of plays you can expect to make
+    until you go broke, if you start with 10 coins. You can run a
+    simulation to estimate this, rather than trying to compute an
+    exact answer.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_12/" class="p-2">Exercise 12 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.12');" href="#"><i id="ex13.12" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.12);" href="#"><i id="ex13.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<blockquote>
-  <p>bar/bar/bar pays 21 coins</p>
-</blockquote>
+Deciding to put probability theory to good use, we encounter a slot
+machine with three independent wheels, each producing one of the four
+symbols bar, bell, lemon, or
+cherry with equal probability. The slot machine has the
+following payout scheme for a bet of 1 coin (where “?” denotes that we
+don’t care what comes up for that wheel): <br />
 
-<blockquote>
-  <p>bell/bell/bell pays 16 coins</p>
-</blockquote>
+&gt; bar/bar/bar pays 20 coins<br />
 
-<blockquote>
-  <p>lemon/lemon/lemon pays 5 coins</p>
-</blockquote>
+&gt; bell/bell/bell pays 15 coins<br />
 
-<blockquote>
-  <p>cherry/cherry/cherry pays 3 coins</p>
-</blockquote>
+&gt; lemon/lemon/lemon pays 5 coins<br />
 
-<blockquote>
-  <p>cherry/cherry/? pays 2 coins</p>
-</blockquote>
+&gt; cherry/cherry/cherry pays 3 coins<br />
 
-<blockquote>
-  <p>cherry/?/? pays 1 coin</p>
-</blockquote>
+&gt; cherry/cherry/? pays 2 coins<br />
 
-<ol>
-  <li>
-    <p>Compute the expected “payback” percentage of the machine. In other
-words, for each coin played, what is the expected coin return?</p>
-  </li>
-  <li>
-    <p>Compute the probability that playing the slot machine once will
-result in a win.</p>
-  </li>
-  <li>
-    <p>Estimate the mean and median number of plays you can expect to make
-until you go broke, if you start with 8 coins. You can run a
-simulation to estimate this, rather than trying to compute an
-exact answer.</p>
-  </li>
-</ol>
+&gt; cherry/?/? pays 1 coin<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_13" data-rating="0"></i></div>
-<p><a href="ex_13/">Exercise 13.13</a></p>
+1.  Compute the expected “payback” percentage of the machine. In other
+    words, for each coin played, what is the expected coin return?<br />
 
-<p>We wish to transmit an $n$-bit message to a receiving agent. The bits in
+2.  Compute the probability that playing the slot machine once will
+    result in a win.<br />
+
+3.  Estimate the mean and median number of plays you can expect to make
+    until you go broke, if you start with 10 coins. You can run a
+    simulation to estimate this, rather than trying to compute an
+    exact answer.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_13/" class="p-2">Exercise 13 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.13');" href="#"><i id="ex13.13" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.13);" href="#"><i id="ex13.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+We wish to transmit an $n$-bit message to a receiving agent. The bits in
 the message are independently corrupted (flipped) during transmission
 with $\epsilon$ probability each. With an extra parity bit sent along
 with the original information, a message can be corrected by the
@@ -440,12 +461,21 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon0.001$, $\delta0.01$.</p>
+$\epsilon0.001$, $\delta0.01$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_14/" class="p-2">Exercise 14 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.14');" href="#"><i id="ex13.14" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.14);" href="#"><i id="ex13.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_14" data-rating="0"></i></div>
-<p><a href="ex_14/">Exercise 13.14</a></p>
-
-<p>We wish to transmit an $n$-bit message to a receiving agent. The bits in
+We wish to transmit an $n$-bit message to a receiving agent. The bits in
 the message are independently corrupted (flipped) during transmission
 with $\epsilon$ probability each. With an extra parity bit sent along
 with the original information, a message can be corrected by the
@@ -453,18 +483,36 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon0.002$, $\delta0.01$.</p>
+$\epsilon0.002$, $\delta0.01$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_15/" class="p-2">Exercise 15 (independence-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.15');" href="#"><i id="ex13.15" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.15);" href="#"><i id="ex13.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_15" data-rating="0"></i></div>
-<p><a href="ex_15/">Exercise 13.15 [independence-exercise]</a></p>
+Show that the three forms of independence in
+Equation (<a href="#">independence-equation</a>) are equivalent.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_16/" class="p-2">Exercise 16 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.16');" href="#"><i id="ex13.16" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.16);" href="#"><i id="ex13.16" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Show that the three forms of independence in
-Equation (<a href="#/">independence-equation</a>) are equivalent.</p>
-
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_16" data-rating="0"></i></div>
-<p><a href="ex_16/">Exercise 13.16</a></p>
-
-<p>Consider two medical tests, A and B, for a virus. Test A is 95%
+Consider two medical tests, A and B, for a virus. Test A is 95%
 effective at recognizing the virus when it is present, but has a 10%
 false positive rate (indicating that the virus is present, when it is
 not). Test B is 90% effective at recognizing the virus, but has a 5%
@@ -473,238 +521,342 @@ identifying the virus. The virus is carried by 1% of all people. Say
 that a person is tested for the virus using only one of the tests, and
 that test comes back positive for carrying the virus. Which test
 returning positive is more indicative of someone really carrying the
-virus? Justify your answer mathematically.</p>
+virus? Justify your answer mathematically.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_17/" class="p-2">Exercise 17 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.17');" href="#"><i id="ex13.17" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.17);" href="#"><i id="ex13.17" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_17" data-rating="0"></i></div>
-<p><a href="ex_17/">Exercise 13.17</a></p>
-
-<p>Suppose you are given a coin that lands ${heads}$ with probability $x$
+Suppose you are given a coin that lands ${heads}$ with probability $x$
 and ${tails}$ with probability $1 - x$. Are the outcomes of successive
 flips of the coin independent of each other given that you know the
 value of $x$? Are the outcomes of successive flips of the coin
-independent of each other if you do <em>not</em> know the value of
-$x$? Justify your answer.</p>
+independent of each other if you do <i>not</i> know the value of
+$x$? Justify your answer.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_18/" class="p-2">Exercise 18 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.18');" href="#"><i id="ex13.18" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.18);" href="#"><i id="ex13.18" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_18" data-rating="0"></i></div>
-<p><a href="ex_18/">Exercise 13.18</a></p>
-
-<p>After your yearly checkup, the doctor has bad news and good news. The
+After your yearly checkup, the doctor has bad news and good news. The
 bad news is that you tested positive for a serious disease and that the
 test is 99% accurate (i.e., the probability of testing positive when you
 do have the disease is 0.99, as is the probability of testing negative
 when you don’t have the disease). The good news is that this is a rare
 disease, striking only 1 in 10,000 people of your age. Why is it good
 news that the disease is rare? What are the chances that you actually
-have the disease?</p>
+have the disease?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_19/" class="p-2">Exercise 19 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.19');" href="#"><i id="ex13.19" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.19);" href="#"><i id="ex13.19" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_19" data-rating="0"></i></div>
-<p><a href="ex_19/">Exercise 13.19</a></p>
-
-<p>After your yearly checkup, the doctor has bad news and good news. The
+After your yearly checkup, the doctor has bad news and good news. The
 bad news is that you tested positive for a serious disease and that the
 test is 99% accurate (i.e., the probability of testing positive when you
 do have the disease is 0.99, as is the probability of testing negative
 when you don’t have the disease). The good news is that this is a rare
 disease, striking only 1 in 100,000 people of your age. Why is it good
 news that the disease is rare? What are the chances that you actually
-have the disease?</p>
+have the disease?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_20/" class="p-2">Exercise 20 (conditional-bayes-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.20');" href="#"><i id="ex13.20" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.20);" href="#"><i id="ex13.20" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_20" data-rating="0"></i></div>
-<p><a href="ex_20/">Exercise 13.20 [conditional-bayes-exercise]</a></p>
-
-<p>It is quite often useful to consider the
+It is quite often useful to consider the
 effect of some specific propositions in the context of some general
 background evidence that remains fixed, rather than in the complete
 absence of information. The following questions ask you to prove more
 general versions of the product rule and Bayes’ rule, with respect to
-some background evidence $\textbf{e}$:</p>
+some background evidence $\textbf{e}$: <br />
 
-<ol>
-  <li>
-    <p>Prove the conditionalized version of the general product rule:
-<script type="math/tex">{\textbf{P}}(X,Y \textbf{e}) = {\textbf{P}}(XY,\textbf{e}) {\textbf{P}}(Y\textbf{e})\ .</script></p>
-  </li>
-  <li>
-    <p>Prove the conditionalized version of Bayes’ rule in
-Equation (<a href="#/">conditional-bayes-equation</a>).</p>
-  </li>
-</ol>
+1.  Prove the conditionalized version of the general product rule:
+    $${\textbf{P}}(X,Y \textbf{e}) = {\textbf{P}}(XY,\textbf{e}) {\textbf{P}}(Y\textbf{e})\ .$$ <br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_21" data-rating="0"></i></div>
-<p><a href="ex_21/">Exercise 13.21 [pv-xyz-exercise]</a></p>
+2.  Prove the conditionalized version of Bayes’ rule in
+    Equation (<a href="#">conditional-bayes-equation</a>). <br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_21/" class="p-2">Exercise 21 (pv-xyz-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.21');" href="#"><i id="ex13.21" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.21);" href="#"><i id="ex13.21" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Show that the statement of conditional independence
-<script type="math/tex">{\textbf{P}}(X,Y Z) = {\textbf{P}}(XZ) {\textbf{P}}(YZ)</script>
+Show that the statement of conditional independence
+$${\textbf{P}}(X,Y Z) = {\textbf{P}}(XZ) {\textbf{P}}(YZ)$$
 is equivalent to each of the statements
-<script type="math/tex">{\textbf{P}}(XY,Z) = {\textbf{P}}(XZ) \quad\mbox{and}\quad {\textbf{P}}(YX,Z) = {\textbf{P}}(YZ)\ .</script></p>
+$${\textbf{P}}(XY,Z) = {\textbf{P}}(XZ) \quad\mbox{and}\quad {\textbf{P}}(YX,Z) = {\textbf{P}}(YZ)\ .$$
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_22/" class="p-2">Exercise 22 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.22');" href="#"><i id="ex13.22" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.22);" href="#"><i id="ex13.22" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_22" data-rating="0"></i></div>
-<p><a href="ex_22/">Exercise 13.22</a></p>
-
-<p>Suppose you are given a bag containing $n$ unbiased coins. You are told
+Suppose you are given a bag containing $n$ unbiased coins. You are told
 that $n-1$ of these coins are normal, with heads on one side and tails
-on the other, whereas one coin is a fake, with heads on both sides.</p>
+on the other, whereas one coin is a fake, with heads on both sides. <br />
 
-<ol>
-  <li>
-    <p>Suppose you reach into the bag, pick out a coin at random, flip it,
-and get a head. What is the (conditional) probability that the coin
-you chose is the fake coin?</p>
-  </li>
-  <li>
-    <p>Suppose you continue flipping the coin for a total of $k$ times
-after picking it and see $k$ heads. Now what is the conditional
-probability that you picked the fake coin?</p>
-  </li>
-  <li>
-    <p>Suppose you wanted to decide whether the chosen coin was fake by
-flipping it $k$ times. The decision procedure returns ${fake}$ if
-all $k$ flips come up heads; otherwise it returns ${normal}$. What
-is the (unconditional) probability that this procedure makes an
-error?</p>
-  </li>
-</ol>
+1.  Suppose you reach into the bag, pick out a coin at random, flip it,
+    and get a head. What is the (conditional) probability that the coin
+    you chose is the fake coin? <br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_23" data-rating="0"></i></div>
-<p><a href="ex_23/">Exercise 13.23 [normalization-exercise]</a></p>
+2.  Suppose you continue flipping the coin for a total of $k$ times
+    after picking it and see $k$ heads. Now what is the conditional
+    probability that you picked the fake coin? <br />
 
-<p>In this exercise, you will complete the
+3.  Suppose you wanted to decide whether the chosen coin was fake by
+    flipping it $k$ times. The decision procedure returns ${fake}$ if
+    all $k$ flips come up heads; otherwise it returns ${normal}$. What
+    is the (unconditional) probability that this procedure makes an
+    error?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_23/" class="p-2">Exercise 23 (normalization-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.23');" href="#"><i id="ex13.23" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.23);" href="#"><i id="ex13.23" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+In this exercise, you will complete the
 normalization calculation for the meningitis example. First, make up a
 suitable value for $P(s\lnot m)$, and use it to calculate
 unnormalized values for $P(ms)$ and $P(\lnot m s)$
 (i.e., ignoring the $P(s)$ term in the Bayes’ rule expression,
-Equation (<a href="#/">meningitis-bayes-equation</a>)). Now normalize
-these values so that they add to 1.</p>
+Equation (<a href="#">meningitis-bayes-equation</a>). Now normalize
+these values so that they add to 1.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_24/" class="p-2">Exercise 24 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.24');" href="#"><i id="ex13.24" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.24);" href="#"><i id="ex13.24" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_24" data-rating="0"></i></div>
-<p><a href="ex_24/">Exercise 13.24</a></p>
-
-<p>This exercise investigates the way in which conditional independence
+This exercise investigates the way in which conditional independence
 relationships affect the amount of information needed for probabilistic
-calculations.</p>
+calculations.<br />
 
-<ol>
-  <li>
-    <p>Suppose we wish to calculate $P(he_1,e_2)$ and we have no
-conditional independence information. Which of the following sets of
-numbers are sufficient for the calculation?</p>
+1.  Suppose we wish to calculate $P(he_1,e_2)$ and we have no
+    conditional independence information. Which of the following sets of
+    numbers are sufficient for the calculation?<br />
 
-    <ol>
-      <li>
-        <p>${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-${\textbf{P}}(E_1H)$,
-${\textbf{P}}(E_2H)$</p>
-      </li>
-      <li>
-        <p>${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-${\textbf{P}}(E_1,E_2H)$</p>
-      </li>
-      <li>
-        <p>${\textbf{P}}(H)$,
-${\textbf{P}}(E_1H)$,
-${\textbf{P}}(E_2H)$</p>
-      </li>
-    </ol>
-  </li>
-  <li>
-    <p>Suppose we know that
-${\textbf{P}}(E_1H,E_2)={\textbf{P}}(E_1H)$
-for all values of $H$, $E_1$, $E_2$. Now which of the three sets are
-sufficient?</p>
-  </li>
-</ol>
+    1.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
+        ${\textbf{P}}(E_1H)$,
+        ${\textbf{P}}(E_2H)$
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_25" data-rating="0"></i></div>
-<p><a href="ex_25/">Exercise 13.25</a></p>
+    2.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
+        ${\textbf{P}}(E_1,E_2H)$<br />
 
-<p>Let $X$, $Y$, $Z$ be Boolean random variables. Label the eight entries
+    3.  ${\textbf{P}}(H)$,
+        ${\textbf{P}}(E_1H)$,
+        ${\textbf{P}}(E_2H)$<br />
+
+2.  Suppose we know that
+    ${\textbf{P}}(E_1H,E_2)={\textbf{P}}(E_1H)$
+    for all values of $H$, $E_1$, $E_2$. Now which of the three sets are
+    sufficient?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_25/" class="p-2">Exercise 25 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.25');" href="#"><i id="ex13.25" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.25);" href="#"><i id="ex13.25" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Let $X$, $Y$, $Z$ be Boolean random variables. Label the eight entries
 in the joint distribution ${\textbf{P}}(X,Y,Z)$ as $a$ through
 $h$. Express the statement that $X$ and $Y$ are conditionally
 independent given $Z$, as a set of equations relating $a$ through $h$.
-How many <em>nonredundant</em> equations are there?</p>
+How many <i>nonredundant</i>equations are there?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_26/" class="p-2">Exercise 26 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.26');" href="#"><i id="ex13.26" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.26);" href="#"><i id="ex13.26" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_26" data-rating="0"></i></div>
-<p><a href="ex_26/">Exercise 13.26</a></p>
-
-<p>(Adapted from Pearl [-@Pearl:1988].) Suppose you are a witness to a
+(Adapted from Pearl [-@Pearl:1988].) Suppose you are a witness to a
 nighttime hit-and-run accident involving a taxi in Athens. All taxis in
 Athens are blue or green. You swear, under oath, that the taxi was blue.
 Extensive testing shows that, under the dim lighting conditions,
-discrimination between blue and green is 75% reliable.</p>
+discrimination between blue and green is 75% reliable. <br />
 
-<ol>
-  <li>
-    <p>Is it possible to calculate the most likely color for the taxi?
-(<em>Hint:</em> distinguish carefully between the proposition
-that the taxi <em>is</em> blue and the proposition that it
-<em>appears</em> blue.)</p>
-  </li>
-  <li>
-    <p>What if you know that 9 out of 10 Athenian taxis are green?</p>
-  </li>
-</ol>
+1.  Is it possible to calculate the most likely color for the taxi?
+    (*Hint:* distinguish carefully between the proposition
+    that the taxi *is* blue and the proposition that it
+    *appears* blue.) <br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_27" data-rating="0"></i></div>
-<p><a href="ex_27/">Exercise 13.27</a></p>
+2.  What if you know that 9 out of 10 Athenian taxis are green?<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_27/" class="p-2">Exercise 27 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.27');" href="#"><i id="ex13.27" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.27);" href="#"><i id="ex13.27" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Write out a general algorithm for answering queries of the form
+Write out a general algorithm for answering queries of the form
 ${\textbf{P}}({Cause}\textbf{e})$, using a naive Bayes
 distribution. Assume that the evidence $\textbf{e}$ may assign values to
-<em>any subset</em> of the effect variables.</p>
+<i>any subset</i> of the effect variables.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_28/" class="p-2">Exercise 28 (naive-bayes-retrieval-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.28');" href="#"><i id="ex13.28" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.28);" href="#"><i id="ex13.28" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_28" data-rating="0"></i></div>
-<p><a href="ex_28/">Exercise 13.28 [naive-bayes-retrieval-exercise]</a></p>
-
-<p>Text categorization is the task of
+Text categorization is the task of
 assigning a given document to one of a fixed set of categories on the
 basis of the text it contains. Naive Bayes models are often used for
 this task. In these models, the query variable is the document category,
 and the “effect” variables are the presence or absence of each word in
 the language; the assumption is that words occur independently in
-documents, with frequencies determined by the document category.</p>
+documents, with frequencies determined by the document category.<br />
 
-<ol>
-  <li>
-    <p>Explain precisely how such a model can be constructed, given as
-“training data” a set of documents that have been assigned
-to categories.</p>
-  </li>
-  <li>
-    <p>Explain precisely how to categorize a new document.</p>
-  </li>
-  <li>
-    <p>Is the conditional independence assumption reasonable? Discuss.</p>
-  </li>
-</ol>
+1.  Explain precisely how such a model can be constructed, given as
+    “training data” a set of documents that have been assigned
+    to categories.<br />
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_29" data-rating="0"></i></div>
-<p><a href="ex_29/">Exercise 13.29</a></p>
+2.  Explain precisely how to categorize a new document.<br />
 
-<p>In our analysis of the wumpus world, we used the fact that
+3.  Is the conditional independence assumption reasonable? Discuss.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_29/" class="p-2">Exercise 29 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.29');" href="#"><i id="ex13.29" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.29);" href="#"><i id="ex13.29" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+In our analysis of the wumpus world, we used the fact that
 each square contains a pit with probability 0.2, independently of the
 contents of the other squares. Suppose instead that exactly $N/5$ pits
 are scattered at random among the $N$ squares other than [1,1]. Are
 the variables $P_{i,j}$ and $P_{k,l}$ still independent? What is the
 joint distribution ${\textbf{P}}(P_{1,1},\ldots,P_{4,4})$ now?
 Redo the calculation for the probabilities of pits in [1,3] and
-[2,2].</p>
-
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_30" data-rating="0"></i></div>
-<p><a href="ex_30/">Exercise 13.30</a></p>
-
-<p>Redo the probability calculation for pits in [1,3] and [2,2],
+[2,2].
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_30/" class="p-2">Exercise 30 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.30');" href="#"><i id="ex13.30" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.30);" href="#"><i id="ex13.30" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+Redo the probability calculation for pits in [1,3] and [2,2],
 assuming that each square contains a pit with probability 0.01,
 independent of the other squares. What can you say about the relative
-performance of a logical versus a probabilistic agent in this case?</p>
+performance of a logical versus a probabilistic agent in this case?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_31/" class="p-2">Exercise 31 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex13.31');" href="#"><i id="ex13.31" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex13.31);" href="#"><i id="ex13.31" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="probability-exercises" data-exercise="ex_31" data-rating="0"></i></div>
-<p><a href="ex_31/">Exercise 13.31</a></p>
-
-<p>Implement a hybrid probabilistic agent for the wumpus world, based on
+Implement a hybrid probabilistic agent for the wumpus world, based on
 the hybrid agent in
-Figure <a href="#/">hybrid-wumpus-agent-algorithm</a> and the
-probabilistic inference procedure outlined in this chapter.</p>
-
+Figure <a href="#">hybrid-wumpus-agent-algorithm</a> and the
+probabilistic inference procedure outlined in this chapter.
+</p>
+</div>
+</div>
+<p><br /></p>
 
   </div>
 
@@ -713,22 +865,6 @@ probabilistic inference procedure outlined in this chapter.</p>
   </div>
  -->
   
-<div class="comments">
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-
-	    var disqus_shortname = 'nalinc';
-
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-
 
 </article>
 
@@ -761,17 +897,25 @@ $(document).on('click',"i[data-chapter]",function(e){
 
 </script>
 
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-        </footer>
       </div>
-    </div>
-
-    
 
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/main.js"></script>
   </body>
 </html>

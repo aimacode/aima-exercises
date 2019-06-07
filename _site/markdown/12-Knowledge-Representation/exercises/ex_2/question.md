@@ -1,4 +1,4 @@
-[Exercise 12.2](ex_2/)
+
 
 You are to create a system for advising computer science undergraduates
 on what courses to take over an extended period in order to satisfy the
@@ -15,4 +15,4 @@ into account knowledge about student preferences, the workload, good and
 bad instructors, and so on. For each kind of knowledge, explain how it
 could be expressed logically. Could your system easily incorporate this
 information to find all feasible programs of study for a student? Could
-it find the *best* program?
+it find the <i>best</i> program?

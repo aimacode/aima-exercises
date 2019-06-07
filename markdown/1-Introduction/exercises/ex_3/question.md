@@ -1,5 +1,3 @@
-[Exercise 1.3](ex_3/)
-
 Every year the Loebner Prize is awarded to the program that comes
 closest to passing a version of the Turing Test. Research and report on
 the latest winner of the Loebner prize. What techniques does it use? How

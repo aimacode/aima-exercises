@@ -1,58 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
-<!--     <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
- -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
- -->
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-
-  <body>
-    <input type="checkbox" id="toggleheader">
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
+<html lang="en-us">
+  {% include head.html %}
+  <body class="theme-base-08">
+    {% include sidebar2.html %}
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
+          </h3>
+          <br>
           <center>
-            <h1>Aritificial Intelligence: A Modern Approach</h1>
-            <h3>Stuart J. Russell and Peter Norvig</h3>
-          </center>
-        </header>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
       </div>
     </div>
-    <input type="checkbox" id="toggletoc">
-    <div class="toc">
-      <div>Table of Contents</div>
-      <form action="{{ site.baseurl }}/search" id="site_search" autocomplete="off" method="GET">
-        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
-      </form>
-      {% include aima-toc.html %}
-    </div>
-    <div id="main" role="main" class="container">
-      {% include breadcrumb.html %}
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-        </footer>
+      <div class="container content">
+        {{ content }}
       </div>
-    </div>
 
-    {% include analytics.html %}
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="{{ site.baseurl }}/main.js"></script>
   </body>
 </html>

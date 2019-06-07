@@ -1,4 +1,4 @@
-[Exercise 22.1](ex_1/)
+
 
 This exercise explores the quality of the $n$-gram model of language.
 Find or create a monolingual corpus of 100,000 words or more. Segment it

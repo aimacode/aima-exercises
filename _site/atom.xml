@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Artificial Intelligence</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2019-06-06T16:39:53+05:30</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Sachin Chopra</name>
+   <email>schopra@mt.iitr.ac.in</email>
+ </author>
+
+ 
+
+</feed>

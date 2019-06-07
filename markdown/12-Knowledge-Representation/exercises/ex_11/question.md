@@ -1,4 +1,4 @@
-[Exercise 12.11 \[alt-measure-exercise\]](ex_11/)
+
 
 An alternative scheme for representing measures
 involves applying the units function to an abstract length object. In

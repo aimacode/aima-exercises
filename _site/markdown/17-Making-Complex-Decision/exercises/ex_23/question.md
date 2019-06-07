@@ -1,4 +1,4 @@
-[Exercise 17.23](ex_23/)
+
 
 A Dutch auction is similar in an English auction, but rather than
 starting the bidding at a low price and increasing, in a Dutch auction

@@ -1,4 +1,4 @@
-[Exercise 10.15](ex_15/)
+
 
 We contrasted forward and backward state-space searchers with
 partial-order planners, saying that the latter is a plan-space searcher.

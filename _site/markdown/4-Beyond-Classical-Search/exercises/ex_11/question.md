@@ -1,4 +1,4 @@
-[Exercise 4.11 \[vacuum-solvable-exercise\]](ex_11/)
+
 
 Consider the sensorless version of the
 erratic vacuum world. Draw the belief-state space reachable from the

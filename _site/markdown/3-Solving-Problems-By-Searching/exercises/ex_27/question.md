@@ -1,4 +1,4 @@
-[Exercise 3.27](ex_27/)
+
 
 Trace the operation of A search applied to the problem of getting to
 Bucharest from Lugoj using the straight-line distance heuristic. That

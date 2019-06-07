@@ -1,4 +1,4 @@
-[Exercise 9.30](ex_30/)
+
 
 Resolution can produce nonconstructive proofs for queries with
 variables, so we had to introduce special mechanisms to extract definite

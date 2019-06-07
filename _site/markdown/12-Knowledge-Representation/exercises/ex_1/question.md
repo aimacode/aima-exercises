@@ -1,4 +1,4 @@
-[Exercise 12.1](ex_1/)
+
 
 Define an ontology in first-order logic for tic-tac-toe. The ontology
 should contain situations, actions, squares, players, marks (X, O, or

@@ -1,4 +1,4 @@
-[Exercise 5.19](ex_19/)
+
 
 Implement the expectiminimax algorithm and the \*-alpha–beta algorithm,
 which is described by @Ballard:1983, for pruning game trees with chance nodes. Try

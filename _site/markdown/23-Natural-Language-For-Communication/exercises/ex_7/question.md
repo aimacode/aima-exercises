@@ -1,16 +1,16 @@
-[Exercise 23.7](ex_7/)
+
 
 Consider the sentence “Someone walked slowly to the supermarket” and a
-lexicon consisting of the following words:
+lexicon consisting of the following words:<br>
 
-$Pronoun \rightarrow \textbf{someone} \quad Verb \rightarrow \textbf{walked}$
+$Pronoun \rightarrow \textbf{someone} \quad Verb \rightarrow \textbf{walked}$<br>
 
-$Adv \rightarrow \textbf{slowly} \quad Prep \rightarrow \textbf{to}$
+$Adv \rightarrow \textbf{slowly} \quad Prep \rightarrow \textbf{to}$<br>
 
-$Article \rightarrow \textbf{the} \quad Noun \rightarrow \textbf{supermarket}$
+$Article \rightarrow \textbf{the} \quad Noun \rightarrow \textbf{supermarket}$<br>
 
 Which of the following three grammars, combined with the lexicon,
-generates the given sentence? Show the corresponding parse tree(s).
+generates the given sentence? Show the corresponding parse tree(s).<br>
 
 | $\quad\quad\quad\quad (A):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(B):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(C):\quad\quad\quad\quad$ |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ generates the given sentence? Show the corresponding parse tree(s).
 | $VP\rightarrow Verb$ | $Vmod\rightarrow Adv\space Vmod$ | $Adv\rightarrow PP$ |
 | $PP\rightarrow Prep\space NP$ | $Vmod\rightarrow Adv$ | $PP\rightarrow Prep\space NP$ |
 | $NP\rightarrow Noun$ | $Adv\rightarrow PP$ | $NP\rightarrow Noun$ |
-| $\quad$ | $PP\rightarrow Prep\space NP$ | $\quad$ |
+| $\quad$ | $PP\rightarrow Prep\space NP$ | $\quad$ |<br>
 
 
 For each of the preceding three grammars, write down three sentences of

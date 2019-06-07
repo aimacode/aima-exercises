@@ -1,4 +1,4 @@
-[Exercise 17.24](ex_24/)
+
 
 Imagine an auction mechanism that is just like an ascending-bid auction,
 except that at the end, the winning bidder, the one who bid $b_{max}$,

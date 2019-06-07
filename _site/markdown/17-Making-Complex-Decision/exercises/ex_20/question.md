@@ -1,3 +1,3 @@
-[Exercise 17.20](ex_20/)
 
-Solve the game of *three*-finger Morra.
+
+Solve the game of <i>three</i>-finger Morra.

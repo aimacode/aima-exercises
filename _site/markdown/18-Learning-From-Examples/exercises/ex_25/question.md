@@ -1,4 +1,4 @@
-[Exercise 18.25](ex_25/)
+
 
 A simple perceptron cannot represent xor (or, generally,
 the parity function of its inputs). Describe what happens to the weights

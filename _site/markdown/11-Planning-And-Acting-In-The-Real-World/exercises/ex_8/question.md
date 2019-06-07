@@ -1,7 +1,7 @@
-[Exercise 11.8](ex_8/)
+
 
 Consider the following argument: In a framework that allows uncertain
-initial states, **nondeterministic effects**
+initial states, <b>nondeterministic effects</b>
 are just a notational convenience, not a source of additional
 representational power. For any action schema $a$ with nondeterministic
 effect $P \lor Q$, we could always replace it with the conditional

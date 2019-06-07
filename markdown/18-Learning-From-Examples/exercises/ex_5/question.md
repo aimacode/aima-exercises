@@ -1,4 +1,4 @@
-[Exercise 18.5](ex_5/)
+
 
 Suppose we generate a training set from a decision tree and then apply
 decision-tree learning to that training set. Is it the case that the

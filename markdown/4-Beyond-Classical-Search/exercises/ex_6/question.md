@@ -1,4 +1,4 @@
-[Exercise 4.6 \[cond-loop-exercise\]](ex_6/)
+
 
 Explain precisely how to modify the **And-Or-Graph-Search** algorithm to
 generate a cyclic plan if no acyclic plan exists. You will need to deal

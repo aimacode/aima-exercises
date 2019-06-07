@@ -1,4 +1,4 @@
-[Exercise 6.10](ex_10/)
+
 
 Generate random instances of map-coloring problems as follows: scatter
 $n$ points on the unit square; select a point $X$ at random, connect $X$

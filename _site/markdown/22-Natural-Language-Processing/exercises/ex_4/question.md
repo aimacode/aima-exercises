@@ -1,4 +1,4 @@
-[Exercise 22.4](ex_4/)
+
 
 Choose a corpus of at least 20,000 words of online text, and verify
 Zipf’s law experimentally. Define an error measure and find the value of

@@ -1,0 +1,23 @@
+---
+layout: bookmark
+title: Bookmarks
+permalink: /bookmarks/
+---
+
+{% include mathjax_support %}
+
+<script type="text/javascript">
+  //window.onload = function(){
+
+      for (var i = 0, len = localStorage.length; i < len; ++i) {
+
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
+        document.write(key);
+
+
+          //document.write(key);
+      }
+  //};
+</script>
+<a href="#" onclick="location.href=this.href+'?key='+key;return false;">Link</a>

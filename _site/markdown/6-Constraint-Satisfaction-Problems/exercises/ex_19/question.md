@@ -1,4 +1,4 @@
-[Exercise 6.19](ex_19/)
+
 
 Suppose that a graph is known to have a cycle cutset of no more than $k$
 nodes. Describe a simple algorithm for finding a minimal cycle cutset

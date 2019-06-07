@@ -1,12 +1,12 @@
-[Exercise 12.29 \[shopping-grammar-exercise\]](ex_29/)
+
 
 A complete solution to the problem of
 inexact matches to the buyer’s description in shopping is very difficult
 and requires a full array of natural language processing and information
-retrieval techniques. (See Chapters [nlp1-chapter](#/)
-and [nlp-english-chapter](#/).) One small step is to allow the user to
+retrieval techniques. (See Chapters <a href="#">nlp1-chapter</a>
+and <a href="#">nlp-english-chapter</a>.) One small step is to allow the user to
 specify minimum and maximum values for various attributes. The buyer
-must use the following grammar for product descriptions:
+must use the following grammar for product descriptions:<br>
 
 $$
 Description \rightarrow Category \space [Connector \space Modifier]*
@@ -27,4 +27,3 @@ for the attribute. So the query “computer with at least a 2.5 GHz CPU
 for under 500” must be re-expressed as “computer with CPU $>$ 2.5 GHz
 and price $<$ 500.” Implement a shopping agent that accepts descriptions
 in this language.
-

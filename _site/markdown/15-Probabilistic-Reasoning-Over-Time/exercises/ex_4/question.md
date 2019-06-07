@@ -1,6 +1,6 @@
-[Exercise 15.4 \[flawed-viterbi-exercise\]](ex_4/)
 
-On page [flawed-viterbi-page](#/), we outlined a flawed
+
+On page <a href="#">flawed-viterbi-page</a>, we outlined a flawed
 procedure for finding the most likely state sequence, given an
 observation sequence. The procedure involves finding the most likely
 state at each time step, using smoothing, and returning the sequence

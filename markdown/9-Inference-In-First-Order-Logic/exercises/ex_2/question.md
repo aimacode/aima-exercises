@@ -1,4 +1,4 @@
-[Exercise 9.2](ex_2/)
+
 
 From ${Likes}({Jerry},{IceCream})$ it seems reasonable to infer
 ${\exists\,x\;\;}

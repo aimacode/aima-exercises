@@ -1,4 +1,4 @@
-[Exercise 13.18](ex_18/)
+
 
 After your yearly checkup, the doctor has bad news and good news. The
 bad news is that you tested positive for a serious disease and that the

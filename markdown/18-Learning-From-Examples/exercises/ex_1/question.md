@@ -1,4 +1,4 @@
-[Exercise 18.1 \[infant-language-exercise\]](ex_1/)
+
 
 Consider the problem faced by an infant
 learning to speak and understand a language. Explain how this process

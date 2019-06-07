@@ -1,4 +1,4 @@
-[Exercise 12.13 \[namematch-exercise\]](ex_13/)
+
 
 Add sentences to extend the definition of the
 predicate ${Name}(s, c)$ so that a string such as “laptop computer”

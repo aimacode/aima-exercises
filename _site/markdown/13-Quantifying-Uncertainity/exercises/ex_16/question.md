@@ -1,4 +1,4 @@
-[Exercise 13.16](ex_16/)
+
 
 Consider two medical tests, A and B, for a virus. Test A is 95%
 effective at recognizing the virus when it is present, but has a 10%

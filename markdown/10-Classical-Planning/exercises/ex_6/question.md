@@ -1,4 +1,4 @@
-[Exercise 10.6](ex_6/)
+
 
 A finite Turing machine has a finite one-dimensional tape of cells, each
 cell containing one of a finite number of symbols. One cell has a read
@@ -9,9 +9,9 @@ there are a set of actions we can choose from. Each action involves
 writing a symbol to the cell under the head, transitioning the machine
 to a state, and optionally moving the head left or right. The mapping
 that determines which actions are allowed is the Turing machine’s
-program. Your goal is to control the machine into the accept state.
-
+program. Your goal is to control the machine into the accept state.<br>
+<br>
 Represent the Turing machine acceptance problem as a planning problem.
 If you can do this, it demonstrates that determining whether a planning
 problem has a solution is at least as hard as the Turing acceptance
-problem, which is PSPACE-hard.
+problem, which is PSPACE-hard.<br>
