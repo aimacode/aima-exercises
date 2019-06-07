@@ -9,7 +9,7 @@ title:               Artificial Intelligence
 tagline:             'AIMA Exercises '
 description:         'AIMA Exercises: Exercises for the book Artificial Intelligence: A Modern Approach'
 url:                 https://aimacode.github.io/aima-exercises/
-baseurl:             ''
+baseurl:             'aima-exercises'
 incremental: true
 
 
