@@ -15,10 +15,10 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -29,8 +29,8 @@
 
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/aima_logo.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -48,9 +48,9 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/">Home</a>
-     <a class="sidebar-nav-item" href="/question_bank/">Question Bank</a>
-    <a class="sidebar-nav-item" href="/bookmarks/">Bookmarks</a>
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+     <a class="sidebar-nav-item" href="/aima-exercises/question_bank/">Question Bank</a>
+    <a class="sidebar-nav-item" href="/aima-exercises/bookmarks/">Bookmarks</a>
 
     <a class="sidebar-nav-item" href="#">Extract Exercises</a>
     <a class="sidebar-nav-item" href="#">Propose Exercises</a>
@@ -70,7 +70,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/" title="Home">Artificial Intelligence</a>
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
             <small>AIMA Exercises </small>
           </h3>
 
@@ -107,20 +107,129 @@
 
 
 <script type="text/javascript">
-  //window.onload = function(){
-
+  
       for (var i = 0, len = localStorage.length; i < len; ++i) {
-
         var key = localStorage.key(i);
-        var value = localStorage.getItem(key);
-        document.write(key);
-
-
-          //document.write(key);
-      }
+        var pos = key.lastIndexOf(".");
+        var ch = key.slice(2, pos);
+        var exx = key.slice(pos+1 , key.length);
+        var chapname = "random";
+        if(ch=="1")
+        {
+          chapname="1-Introduction";
+        }
+        else if(ch=="2")
+        {
+          chapname="2-Intelligent-Agent";
+        }
+        else if(ch=="3")
+        {
+          chapname="3-Solving-Problems-By-Searching";
+        }
+        else if(ch=="4")
+        {
+          chapname="4-Beyond-Classical-Search";
+        }
+        else if(ch=="5")
+        {
+          chapname="5-Adversarial-Search";
+        }
+        else if(ch=="6")
+        {
+          chapname="7-Logical-Agents";
+        }
+        else if(ch=="8")
+        {
+          chapname="8-First-Order-Logic";
+        }
+        else if(ch=="9")
+        {
+          chapname="9-Inference-in-First-Order-Logic";
+        }
+        else if(ch=="10")
+        {
+          chapname="10-Classical-Planning";
+        }
+        else if(ch=="11")
+        {
+          chapname="11-Planning-And-Acting-In-The-Real-World";
+        }
+        else if(ch=="12")
+        {
+          chapname="12-Knowledge-Representation";
+        }
+        else if(ch=="13")
+        {
+          chapname="13-Quantifying-Uncertainity";
+        }
+        else if(ch=="14")
+        {
+          chapname="14-Probabilistic-Reasoning";
+        }
+        else if(ch=="15")
+        {
+          chapname="15-Probabilistic-Reasoning-Over-Time";
+        }
+        else if(ch=="16")
+        {
+          chapname="16-Making-Simple-Decisions"
+        }
+        else if(ch=="17")
+        {
+          chapname="17-Making-Complex-Decisions";
+        }
+        else if(ch=="18")
+        {
+          chapname="18-Learning-From-Examples";
+        }
+        else if(ch=="19")
+        {
+          chapname="19-Knowledge-In-Learning";
+        }
+        else if(ch=="20")
+        {
+          chapname="20-Learning-Probabilistic-Models";
+        }
+        else if(ch=="21")
+        {
+          chapname="21-Reinforcement-Learning";
+        }
+        else if(ch=="22")
+        {
+          chapname="22-Natural-Language-Processing";
+        }
+        else if(ch=="23")
+        {
+          chapname="23-Natural-Language-For-Communication";
+        }
+        else if(ch=="24")
+        {
+          chapname="24-Perception";
+        }
+        else if(ch="25")
+        {
+          chapname="25-Robotics";
+        }
+        
+        
+        
+            document.write('<div class="card">');
+            document.write('<div class="card-header p-2">');
+            document.write('<a href="'+key+'/"'+ ' class="p-2">'+'Chapter: '+ chapname+' - ‖ - '+' Exercise '+(i+1)+'</a>');
+            document.write('<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('+key+');" href="#"><i id="'+key+'" class="fas fa-bookmark" style="color:white"></i></button>');
+            document.write('<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('+key+');" href="#"><i id="'+key+'" class="fas fa-thumbs-up" style="color:white"></i></button>');
+            document.write('</div>');
+            document.write('<div class="card-body">');
+            document.write('<p class="card-text">Some </p>');
+            document.write('</div>');
+            document.write('</div>');
+            document.write('<br>');
+      };
   //};
 </script>
-<a href="#" onclick="location.href=this.href+'?key='+key;return false;">Link</a>
+
+
+
 
   </div>
 
@@ -146,7 +255,7 @@
         }, false);
       })(document);
     </script>
-        <script src="/main.js"></script>
-          <script src="/bookmark.js"></script>
+        <script src="/aima-exercises/main.js"></script>
+          <script src="/aima-exercises/bookmark.js"></script>
   </body>
 </html>
