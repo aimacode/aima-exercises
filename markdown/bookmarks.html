@@ -5,127 +5,171 @@ permalink: /bookmarks/
 ---
 
 {% include mathjax_support %}
-
+<centre><h1>BOOKMARKED QUESTIONS</h1></centre><br>
 <script type="text/javascript">
-  
-      for (var i = 0, len = localStorage.length; i < len; ++i) {
+      if(localStorage.length == 0)
+      {
+        document.write("You have not bookmarked any question yet. Please go to the Chapter view mode for each Chapter to bookmark the questions.")
+      }
+      else{
+        for (var i = 0, len = localStorage.length; i < len; ++i) {
         var key = localStorage.key(i);
+        //document.write("key:"+key+" ");
         var pos = key.lastIndexOf(".");
+        //document.write("pos:"+pos+" ");
         var ch = key.slice(2, pos);
+        //document.write("ch:"+ch+" ");
         var exx = key.slice(pos+1 , key.length);
-        var chapname = "random";
-        if(ch=="1")
+        //document.write("exx:"+exx+" ");
+        var ananame2="random"
+        var ananame = "random2";
+        if(ch=="6")
         {
-          chapname="1-Introduction";
+          ananame="csp-exercises";
+        }
+        if(ch=="26")
+        {
+          ananame="philosophy-exercises";
+        }
+        else if(ch=="1")
+        {
+          ananame2="Introduction";
+          ananame="intro-exercises";
         }
         else if(ch=="2")
         {
-          chapname="2-Intelligent-Agent";
+          ananame2="Intelligent Agent";
+          ananame="agents-exercises";
         }
         else if(ch=="3")
         {
-          chapname="3-Solving-Problems-By-Searching";
+          ananame2="Solving Problems By Searching"
+          ananame="search-exercises";
         }
         else if(ch=="4")
         {
-          chapname="4-Beyond-Classical-Search";
+          ananame2="Beyond Classical Search"
+          ananame="advanced-search-exercises";
         }
         else if(ch=="5")
         {
-          chapname="5-Adversarial-Search";
+          ananame2="Adversarial Search";
+          ananame="game-playing-exercises";
         }
-        else if(ch=="6")
+        else if(ch=="7")
         {
-          chapname="7-Logical-Agents";
+          ananame2="Logical Agents";
+          ananame="knowledge-logic-exercises";
         }
         else if(ch=="8")
         {
-          chapname="8-First-Order-Logic";
+          ananame2="First Order Logic";
+          ananame="fol-exercises";
         }
         else if(ch=="9")
         {
-          chapname="9-Inference-in-First-Order-Logic";
+          ananame2="Inference in First Order  Logic";
+          ananame="logical-inference-exercises";
         }
         else if(ch=="10")
         {
-          chapname="10-Classical-Planning";
+          ananame2="Classical Planning";
+          ananame="planning-exercises";
         }
         else if(ch=="11")
         {
-          chapname="11-Planning-And-Acting-In-The-Real-World";
+          ananame2="Planning And Acting In The Real World";
+          ananame="advanced-planning-exercises";
         }
         else if(ch=="12")
         {
-          chapname="12-Knowledge-Representation";
+          ananame2="Knowledge Representation";
+          ananame="kr-exercises";
         }
         else if(ch=="13")
         {
-          chapname="13-Quantifying-Uncertainity";
+          ananame2="Quantifying Uncertainity";
+          ananame="probability-exercises";
         }
         else if(ch=="14")
         {
-          chapname="14-Probabilistic-Reasoning";
+          ananame2="Probabilistic Reasoning";
+          ananame="bayes-nets-exercises";
         }
         else if(ch=="15")
         {
-          chapname="15-Probabilistic-Reasoning-Over-Time";
+          ananame2="Probabilistic Reasoning Over Time";
+          ananame="dbn-exercises";
         }
         else if(ch=="16")
         {
-          chapname="16-Making-Simple-Decisions"
+          ananame2="Making Simple Decisions";
+          ananame="decision-theory-exercises";
         }
         else if(ch=="17")
         {
-          chapname="17-Making-Complex-Decisions";
+          ananame2="Making Complex Decisions";
+          ananame="complex-decisions-exercises";
         }
         else if(ch=="18")
         {
-          chapname="18-Learning-From-Examples";
+          ananame2="Learning From Examples";
+          ananame="concept-learning-exercises";
         }
         else if(ch=="19")
         {
-          chapname="19-Knowledge-In-Learning";
+          ananame2="Knowledge In Learning";
+          ananame="ilp-exercises";
         }
         else if(ch=="20")
         {
-          chapname="20-Learning-Probabilistic-Models";
+          ananame2="Learning Probabilistic Models";
+          ananame="bayesian-learning-exercises";
         }
         else if(ch=="21")
         {
-          chapname="21-Reinforcement-Learning";
+          ananame2="Reinforcement Learning";
+          ananame="reinforcement-learning-exercises";
         }
         else if(ch=="22")
         {
-          chapname="22-Natural-Language-Processing";
+          ananame2="Natural Language Processing";
+          ananame="nlp-communicating-exercises";
         }
         else if(ch=="23")
         {
-          chapname="23-Natural-Language-For-Communication";
+          ananame2="Natural Language For Communication";
+          ananame="nlp-english-exercises";
         }
         else if(ch=="24")
         {
-          chapname="24-Perception";
+          ananame2="Perception";
+          ananame="perception-exercises";
         }
         else if(ch="25")
         {
-          chapname="25-Robotics";
+          ananame2="Robotics";
+          ananame="robotics-exercises";
         }
         
         
         
+            
             document.write('<div class="card">');
             document.write('<div class="card-header p-2">');
-            document.write('<a href="'+key+'/"'+ ' class="p-2">'+'Chapter: '+ chapname+' - ‖ - '+' Exercise '+(i+1)+'</a>');
-            document.write('<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('+key+');" href="#"><i id="'+key+'" class="fas fa-bookmark" style="color:white"></i></button>');
-            document.write('<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('+key+');" href="#"><i id="'+key+'" class="fas fa-thumbs-up" style="color:white"></i></button>');
+            document.write('<a href="'+'{{ site.baseurl }}/'+ananame+'/'+'ex_'+exx+'"'+ ' class="p-2">'+'<b>Chapter:</b> '+ch+' '+ananame2+' - ‖ - '+' <b>Exercise</b> '+exx+'</a>');
+            
+            document.write('<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('+key+');" href="#"><i class="fas fa-thumbs-up" style="color:white"></i></button>');
             document.write('</div>');
             document.write('<div class="card-body">');
-            document.write('<p class="card-text">Some </p>');
+            document.write('<p class="card-text">Click<a href="'+'{{ site.baseurl }}/'+ananame+'/'+'ex_'+exx+'"'+ ' class="p-2">here</a>to revisit the question. </p>');
             document.write('</div>');
             document.write('</div>');
             document.write('<br>');
       };
-  //};
+      }
+      
+  
 </script>
 
 
