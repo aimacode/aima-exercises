@@ -11,7 +11,7 @@ description:         'AIMA Exercises: Exercises for the book Artificial Intellig
 url:                 https://aimacode.github.io/aima-exercises/
 baseurl:             '/aima-exercises'
 incremental: true
-
+port: 4444
 
 # About/contact
 author:
