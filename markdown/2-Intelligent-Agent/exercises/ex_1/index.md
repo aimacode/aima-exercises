@@ -56,7 +56,12 @@ breadcrumb3: 2intelligentAgent
           </div>
           <div class="card-body" id="hideandviewcommunitysolution">
           <p class="card-text">
-          {% include_relative answer.md %}
+          {% for item2 in site.data.answers.2intelligentAgent.ex_1.communityanswer.solutions %}
+          
+          {% for entry2 in item2.answers %}
+          {{entry2.answer}}
+          {% endfor %}
+          {% endfor %}
           </p>
           </div>
           </div>
@@ -72,7 +77,7 @@ breadcrumb3: 2intelligentAgent
 
 </div>
 <div class="card-body" id="hideandviewanswers">
-{% for item in site.data.answers.2intelligentAgent.ex_1.solutions %}
+{% for item in site.data.answers.2intelligentAgent.ex_1.useranswers.solutions %}
 <div class="card">
    <div class="card-header p-2">
       <a href="#" class="p-2">Author: {{item.name}}</a>
@@ -88,25 +93,7 @@ breadcrumb3: 2intelligentAgent
 {{entry2.answer}}
 {% endfor %}
 </p>
-<div class="card">
-   <div class="card-header p-2">
-      <a href="#" class="p-2">Comments</a>
 
-      <a class="add_comment" id="add_comment" href="#">
-      <button type="button" class="btn btn-dark float-right" title="Add Comment" style="margin-left:10px; margin-right:10px;" href="#" id="addcoment">
-      <i class="fas fa-comment" style="color:white"></i>
-      </button>
-      </a>
-      </div>
-      <div class="card-body" id="hideandviewcomments">
-      <p class="card-text">
-      <ul>{% for entry in item.comments %}
-      <li>{{entry.comment}}</li>
-      {% endfor %}
-      </ul>
-      </p>
-      </div>
-</div>
 </div>
 </div>
 <br>

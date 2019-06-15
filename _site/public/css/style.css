@@ -79,3 +79,10 @@ ul:first-child ul > li  {
   padding-bottom: 2px;
 
 }
+
+#hideandviewanswers p:nth-of-type(even){
+  border-bottom: 1px solid black;
+}
+#hideandviewanswers p:nth-of-type(odd){
+  border-top: 1px solid black;
+}

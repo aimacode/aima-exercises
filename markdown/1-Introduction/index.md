@@ -22,7 +22,7 @@ book.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.1');" href="#"><i id="ex1.1" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text" id="q1.1">{% include_relative exercises/ex_1/question.md %}</p>
+        <p class="card-text" id="x1.1">{% include_relative exercises/ex_1/question.md %}</p>
     </div>
 </div>
 
@@ -34,7 +34,7 @@ book.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.2');" href="#"><i id="1.2" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">{% include_relative exercises/ex_2/question.md %}</p>
+        <p class="card-text" id="x1.2">{% include_relative exercises/ex_2/question.md %}</p>
     </div>
 </div>
 
@@ -46,7 +46,7 @@ book.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.3');" href="#"><i id="1.3" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">{% include_relative exercises/ex_3/question.md %}</p>
+        <p class="card-text" id="x1.3">{% include_relative exercises/ex_3/question.md %}</p>
     </div>
 </div>
 
@@ -58,7 +58,7 @@ book.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.4');" href="#"><i id="1.4" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">{% include_relative exercises/ex_4/question.md %}</p>
+        <p class="card-text" id="x1.4">{% include_relative exercises/ex_4/question.md %}</p>
     </div>
 </div>
 
@@ -70,7 +70,7 @@ book.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.5');" href="#"><i id="1.5" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">{% include_relative exercises/ex_5/question.md %}</p>
+        <p class="card-text" id="x1.5">{% include_relative exercises/ex_5/question.md %}</p>
     </div>
 </div>
 
