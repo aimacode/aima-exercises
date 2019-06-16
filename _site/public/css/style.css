@@ -53,7 +53,7 @@ li {
   margin: 3px;
 }
 ul > li {
-  border-bottom: 3px solid black;
+  /*border-bottom: 3px solid black;*/
   font size: 80%;
 }
 li > ul > li {

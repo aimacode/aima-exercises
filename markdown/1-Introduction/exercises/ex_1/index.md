@@ -29,9 +29,9 @@ breadcrumb3: 1introduction
         </a>
 
     </div>
-    <div class="card-body">
-        <p class="card-text">{% include_relative question.md %}</p>
-    </div>
+   
+        <script src="https://gist.github.com/sachin10101998/4a3dd2d01cd3c9386e46a7dbc7074040.js"></script>
+    
 </div>
 <br>
 
