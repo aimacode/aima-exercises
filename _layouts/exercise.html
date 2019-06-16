@@ -7,21 +7,75 @@ comments: true
 
   <div class="entry">
     <div class="mode_btn view_question_source">
-
+      <a class="edit_question" href="#">Edit Question</a>
     </div>
-
     {{ content }}
   </div>
+
+  <div class="answer_container">
+    <div>
+      <b>Answer</b>
+      <a class="edit_answer" href="#">Improve This Solution</a>
+    </div>
+    <div class="answer_content"></div>
+  </div>
+
+<div class="container exercise_mode">
+  <div class="mode_btn view_answer">View Answer</div> 
+  <div class="mode_btn request_answer"><a href="#">Request Answer</a></div>
+</div>
+  {% include disqus.html %}
 </article>
 
-<script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('{{ page.breadcrumb }}');
-  var exerciseName = String('{{ page.breadcrumb2 }}');
-  var chapterNamestripped = String('{{ page.breadcrumb3 }}');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+<script type="text/javascript">
+  $(document).ready(function(){
+    var chapter  = String('{{ page.permalink }}')
+    var chapterName = String('{{ page.breadcrumb }}')
+    console.log(chapter)
+    var chapterLabel = chapter.match(/\/([^\/]*)\//, "")[1]
+    exerciseName = $(".arrow-up").attr("data-exercise");
+    $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel, function( data ) {
+      console.log(data)
+      $("i[data-chapter='"+chapterLabel+"']").each(function(index,element){
+        ex = $(element).data("exercise")
+        if(ex in data){
+          console.log(data[ex])
+          $(element).attr("data-rating",data[ex])
+        }
+        $(".arrow-up").removeClass("loader")
+      })
+    });
+    $(document).on('click',".view_answer",function(e){
+      ele = $(".answer_container")
+      if($(".answer_container").is(":visible")){
+        $(this).html("View Answer");
+        $(".answer_container").hide();
+      }
+      else{
+        ele.addClass("loader")
+        url = "//raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
+        $.get(url, function( data ) {
+          $(".answer_content").html(data)
+          ele.removeClass("loader")
+        });
+        $(this).html("Hide Answer");
+        $(".answer_container").show();
+      }
+      
+    })
+    $(document).on('click',"i[data-chapter]",function(e){
+      ele = $(e.target)
+      ele.addClass("loader")
+      $.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel+"/"+exerciseName, function( data ) {
+        console.log(data)
+        ele.attr("data-rating",data["rating"])
+        ele.removeClass("loader")
+      });
+    });
+    base_url = "http://github.com/aimacode/aima-exercises/"
+    path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName
+    $(".edit_question").attr("href",base_url+path+"/question.md")
+    $(".edit_answer").attr("href",base_url+path+"/answer.md")
+    $(".request_answer a").attr("href",base_url+"issues/new?title=Request to get solution for Exercise '"+exerciseName+"' in '"+chapterName+"'&body=Describe the issue/requirement in detail").attr("target","_blank");
+  });
 </script>

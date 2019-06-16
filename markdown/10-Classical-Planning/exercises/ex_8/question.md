@@ -1,7 +1,7 @@
+[Exercise 10.8 \[sussman-anomaly-exercise\]](ex_8/)
 
-
-Figure <a href="#">sussman-anomaly-figure</a>
-(page <a href="#">sussman-anomaly-figure</a>) shows a blocks-world problem that is known as the {Sussman anomaly}.
+Figure [sussman-anomaly-figure](#/)
+(page [sussman-anomaly-figure](#/)) shows a blocks-world problem that is known as the {Sussman anomaly}.
 The problem was considered anomalous because the noninterleaved planners
 of the early 1970s could not solve it. Write a definition of the problem
 and solve it, either by hand or with a planning program. A

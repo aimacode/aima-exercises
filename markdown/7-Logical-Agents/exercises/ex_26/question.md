@@ -1,19 +1,19 @@
-
+[Exercise 7.26 \[convert-clausal-exercise\]](ex_26/)
 
 Convert the following set of sentences to
-clausal form.<br>
+clausal form.
 
-1.  S1: $A {\;\;{\Leftrightarrow}\;\;}(B \lor E)$.<br>
+> S1: $A {\;\;{\Leftrightarrow}\;\;}(C \lor E)$.
 
-2.  S2: $E {\:\;{\Rightarrow}\:\;}D$.<br>
+> S2: $E {\:\;{\Rightarrow}\:\;}D$.
 
-3.  S3: $C \land F {\:\;{\Rightarrow}\:\;}\lnot B$.<br>
+> S3: $B \land F {\:\;{\Rightarrow}\:\;}\lnot C$.
 
-4.  S4: $E {\:\;{\Rightarrow}\:\;}B$.<br>
+> S4: $E {\:\;{\Rightarrow}\:\;}C$.
 
-5.  S5: $B {\:\;{\Rightarrow}\:\;}F$.<br>
+> S5: $C {\:\;{\Rightarrow}\:\;}F$.
 
-6.  S6: $B {\:\;{\Rightarrow}\:\;}C$<br>
+> S6: $C {\:\;{\Rightarrow}\:\;}B$
 
 Give a trace of the execution of DPLL on the conjunction of these
 clauses.

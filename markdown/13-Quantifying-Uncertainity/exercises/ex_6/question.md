@@ -1,6 +1,6 @@
-
+[Exercise 13.6 \[inclusion-exclusion-exercise\]](ex_6/)
 
 Prove
-Equation (<a href="#">kolmogorov-disjunction-equation</a>) from
-Equations <a href="#">basic-probability-axiom-equation</a>
-and (<a href="#">proposition-probability-equation</a>.
+Equation ([kolmogorov-disjunction-equation](#/)) from
+Equations ([basic-probability-axiom-equation](#/))
+and ([proposition-probability-equation](#/)).

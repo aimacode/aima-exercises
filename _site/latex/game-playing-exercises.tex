@@ -1,0 +1,527 @@
+\setlength{\medskipamount}{1.25\medskipamount}%%%%% Mona's suggestion
+
+%%%% 5.1: Games (6 exercises, 1 labelled)
+%%%% ====================================
+
+\begin{exercise}
+Suppose you have an oracle, \(OM(s)\), that correctly predicts the opponent's move
+in any state.  Using this, formulate the definition
+of a game as a (single-agent) search problem.  Describe an algorithm
+for finding the optimal move.
+\end{exercise} 
+% id=5.6 section=5.1
+
+\begin{exercise}%%Russell Fall 2005 midterm
+Consider the problem of solving two 8-puzzles.
+\begin{enumerate}
+\item Give a complete problem formulation in the style of \chapref{search-chapter}.
+\item How large is the reachable state space? Give an exact numerical expression.
+\item Suppose we make the problem adversarial as follows: the two players
+take turns moving; a coin is flipped to determine the puzzle on which to make a move in that turn; and the winner is the first to solve one puzzle. 
+Which algorithm can be used to choose a move in this setting?
+\item Does the game eventually end, given optimal play? Explain.
+%% [[WAS Give an informal proof that someone will eventually win if both play perfectly.]]
+\end{enumerate}
+\end{exercise} 
+% id=5.9 section=5.1
+
+\begin{figure}[tbp]
+\figboxnew{figures/pursuit-evasion-game.eps}
+\caption{(a) A map where the cost of every edge is 1. Initially the pursuer \(P\) is at
+node {\bf b} and the evader \(E\) is at node {\bf d}. (b) A partial game tree for this map.
+Each node is labeled with the \(P,E\) positions. \(P\) moves first. Branches marked ``?'' have yet to be explored.}
+\label{pursuit-evasion-game-figure}
+\end{figure} 
+% id=5.10 section=5.1
+
+\begin{exercise}%%Russell Spring 2005 midterm
+Imagine that, in \exref{two-friends-exercise}, one of the friends
+wants to avoid the other. The problem then becomes a two-player
+\newterm{pursuit--evasion} game\ntindex{game!pursuit--evasion}. We
+assume now that the players take turns moving.  The game ends only
+when the players are on the same node; the terminal payoff to the
+pursuer is minus the total time taken. (The evader ``wins'' by never
+losing.)  An example is shown in \figref{pursuit-evasion-game-figure}.
+\begin{enumerate}
+\item Copy the game tree and mark the values of the terminal nodes.
+\item Next to each internal node, write the strongest fact you can infer about its value (a number, one or more inequalities such as ``\(\geq 14\)'', or a ``?'').
+\item Beneath each question mark, write the name of the node reached by that branch.
+\item Explain how a bound on the value of the nodes in (c) can be derived from consideration of shortest-path lengths on the map, and derive such bounds for these nodes.
+Remember the cost to get to each leaf as well as the cost to solve it.
+\item Now suppose that the tree as given, with the leaf bounds from (d), is evaluated from left to right.
+Circle those ``?'' nodes that would {\em not} need to be expanded further, given the bounds from part (d), and cross out those that need not be
+considered at all.
+\item Can you prove anything in general about who wins the game on a map that is a tree?
+\end{enumerate}
+\end{exercise} 
+% id=5.11 section=5.1
+
+\begin{exercise}[game-playing-chance-exercise]%
+Describe and implement state descriptions, move generators, terminal
+tests, utility functions, and evaluation functions for one or more of
+the following stochastic games: Monopoly, Scrabble, bridge play with a given contract, or Texas hold'em poker.
+\end{exercise} 
+% id=5.14 section=5.1
+
+\begin{exercise}\prgex%
+Describe and implement a {\em real-time}, {\em multiplayer} game-playing
+environment\index{environment!game-playing}, where time is part of the environment state and players are given fixed time allocations.
+\end{exercise} 
+% id=5.16 section=5.1
+
+\begin{exercise}
+Discuss how well the standard approach to game playing would apply to
+games such as tennis, pool, and croquet, which take place in a continuous
+physical state space. 
+\end{exercise} 
+% id=5.19 section=5.1
+
+
+%%%% 5.2: Optimal Decisions in Games (2 exercises, 1 labelled)
+%%%% =========================================================
+
+\begin{exercise}[minimax-optimality-exercise]
+Prove the following assertion: For every game tree, the utility
+obtained by {\sc max} using minimax decisions against a suboptimal
+{\sc min} will never be lower than the utility obtained playing
+against an optimal {\sc min}. Can you come up with a game tree in which
+{\sc max} can do still better using a {\em suboptimal} strategy
+against a suboptimal {\sc min}?
+\end{exercise} 
+% id=5.5 section=5.2
+
+\begin{figure}[htbp]%deleted t 9/17/02
+%\epsfxsize = 0.3\textwidth
+\figboxnew{figures/line-game4.eps}
+\caption{The starting position of a simple game.
+Player \(A\) moves first. The two players take turns moving, and each
+player must move his token to an open adjacent space in either
+direction.  If the opponent occupies an adjacent space, then a player
+may jump over the opponent to the next open space if any. (For
+example, if \(A\) is on 3 and \(B\) is on 2, then \(A\) may move back to 1.)
+The game ends when one player reaches the opposite end of the board.
+If player \(A\) reaches space 4 first, then the value of the game to \(A\)
+is \(+1\); if player \(B\) reaches space 1 first, then the value of the
+game to \(A\) is \(-1\).}
+\label{line-game4-figure}
+\end{figure} 
+% id=5.7 section=5.2
+
+\begin{exercise}
+Consider the two-player game described in \figref{line-game4-figure}.
+\begin{enumerate}
+\item Draw the complete game tree, using the following conventions:
+\begin{itemize}
+\item Write each state as \((s_A,s_B)\), where \(s_A\) and \(s_B\) denote the token locations. 
+\item Put each terminal state in a square box and write its game value in a circle.
+\item Put {\em loop states} (states that already appear on the path to the root) in double square boxes.
+Since their value is unclear, annotate
+each with a ``?'' in a circle.
+\end{itemize}
+\item Now mark each node with its backed-up minimax value (also in
+a circle). Explain how you handled the ``?'' values and why.
+\item Explain why the standard minimax algorithm would fail on this game tree
+and briefly sketch how you might fix it, drawing on your answer to
+(b). Does your modified algorithm give optimal decisions for all games with loops?
+\item This 4-square game can be generalized to \(n\) squares for any \(n > 2\).
+Prove that \(A\) wins if \(n\) is even and loses if \(n\) is odd.
+\end{enumerate}
+\end{exercise} 
+% id=5.8 section=5.2
+
+
+%%%% 5.3: Alpha--Beta Pruning (6 exercises, 0 labelled)
+%%%% ==================================================
+
+\begin{exercise}
+This problem exercises the basic concepts of game playing, using
+\indextext{tic-tac-toe}\index{tic-tac-toe} 
+(noughts and crosses) as an example.  We define \(X_n\) as the number of
+rows, columns, or diagonals with exactly \(n\) \(X\)'s and no \(O\)'s.
+Similarly, \(O_n\) is the number of rows, columns, or diagonals with
+just \(n\) \(O\)'s.  The utility function assigns \(+1\) to any position
+with \(X_3=1\) and \(-1\) to any position with \(O_3 = 1\).  All other
+terminal positions have utility 0.  For nonterminal positions, we use
+a linear evaluation function defined as \(\J{Eval}(s) = 3X_2(s) + X_1(s) -
+(3O_2(s) + O_1(s))\).
+\begin{enumerate}
+\item Approximately how many possible games of tic-tac-toe are
+there?
+
+\item Show the whole game tree starting from an empty board down to
+depth 2 (i.e., one \(X\) and one \(O\) on the board), taking symmetry into
+account. 
+
+\item Mark on your tree the evaluations of all the positions at
+depth 2.
+
+\item Using the minimax algorithm, mark on your tree the backed-up 
+values for the positions at depths 1 and 0, and use those values to
+choose the best starting move.
+
+\item Circle the nodes at depth 2 that would {\it not} be evaluated
+if alpha--beta pruning were applied, assuming the nodes are
+generated in the optimal order for alpha--beta pruning.
+\end{enumerate}
+\end{exercise} 
+% id=5.1 section=5.3
+
+\begin{exercise}
+Consider the family of generalized tic-tac-toe games, defined as follows.
+Each particular game is specified by a set \(\mathcal S\) of {\em
+squares\/} and a collection \(\mathcal W\) of {\em winning positions.} Each 
+winning position is a subset of \(\mathcal S\). For example, in 
+standard tic-tac-toe,
+\(\mathcal S\) is a set of 9 squares and \(\mathcal W\) is a collection
+of 8 subsets of \(\cal W\): the three rows, the three columns, and the two 
+diagonals. In other respects, the game is identical to standard
+tic-tac-toe. Starting from an empty board, players alternate placing
+their marks on an empty square.  A player who marks every square in a
+winning position wins the game. It is a tie if all squares are marked
+and neither player has won.
+\begin{enumerate}
+\item Let \(N= |{\mathcal S}|\), the number of squares.
+Give an upper bound on the number of 
+nodes in the complete game tree for generalized tic-tac-toe
+as a function of \(N\).
+\item  Give a lower bound on the size of the game tree
+for the worst case, where \({\mathcal W} = \emptyset\).
+\item
+Propose a plausible evaluation function that can be used for any instance
+of generalized tic-tac-toe. The function may depend on \(\mathcal S\) and
+\(\mathcal W\).
+\item
+Assume that it is possible to generate a new board and check whether
+it is a winning position in 100\(N\) machine
+instructions and assume a 2 gigahertz processor. Ignore memory limitations.
+Using your estimate in (a), 
+roughly how large a game tree can be completely solved by alpha--beta in a second of CPU
+time? a minute? an hour?
+\end{enumerate}
+\end{exercise} 
+% id=5.2 section=5.3
+
+\begin{exercise}\prgex
+Develop a general game-playing program, capable of playing a variety of games.
+\begin{enumerate}
+\item Implement move generators and evaluation functions for one or more of
+the following games: Kalah, Othello, checkers, and chess.  
+\item Construct a
+general alpha--beta game-playing agent.
+\item Compare the effect of increasing search depth,
+improving move ordering, and improving the evaluation function. How
+close does your effective branching factor come to the ideal case of
+perfect move ordering?
+\item Implement a selective search algorithm, such as B* \cite{Berliner:1979},
+conspiracy number search \cite{McAllester:1988}, or MGSS* \cite{Russell+Wefald:1989}
+and compare its performance to A*.
+\end{enumerate}
+\end{exercise} 
+% id=5.12 section=5.3
+
+\begin{uexercise}
+Describe how the minimax and alpha--beta algorithms change for two-player,
+non-zero-sum games\tindex{game!zero-sum} in which each player 
+has a distinct utility function and both utility functions are known to both players.  If there are no constraints on
+the two terminal utilities, is it possible for any node to be pruned
+by alpha--beta? What if the player's utility functions on
+any state differ by at most a constant \(k\), making the game almost
+cooperative?
+\end{uexercise} 
+% id=5.20 section=5.3
+
+\begin{iexercise}
+Describe how the minimax and alpha--beta algorithms change for two-player,
+non-zero-sum games\tindex{game!zero-sum} in which each player 
+has a distinct utility function and both utility functions are known to both players.  If there are no constraints on
+the two terminal utilities, is it possible for any node to be pruned
+by alpha--beta? What if the player's utility functions on
+any state sum to a number between constants \(-k\) and \(k\), making the game almost
+zero-sum?
+\end{iexercise} 
+% id=5.20 section=5.3
+
+\begin{exercise}
+Develop a formal proof of correctness for alpha\index{alpha--beta pruning}--beta
+pruning. To do this, consider the situation shown in
+\figref{alpha-beta-proof-figure}. The question is whether to
+prune node \(n_j\), which is a max-node and a descendant of node \(n_1\).
+The basic idea is to prune it if and only if the minimax value of \(n_1\)
+can be shown to be independent of the value of \(n_j\). 
+\begin{enumerate} 
+\item Mode \(n_1\) takes on the minimum value among its children: \(n_1 = \min(n_2,n_{{21}},\ldots,n_{2b_2})\).
+Find a similar expression for \(n_2\) and hence an
+expression for \(n_1\) in terms of \(n_j\).
+\item Let \(l_i\) be the minimum (or maximum) value of the nodes to
+the {\em left} of node \(n_i\) at depth~\(i\), whose minimax
+value is already known. Similarly, let \(r_i\) be the minimum (or maximum) value of the unexplored
+nodes to the right of \(n_i\) at depth \(i\). Rewrite your expression for \(n_1\) in terms of the \(l_i\) and
+\(r_i\) values.
+\item Now reformulate the expression to show that in order to affect
+\(n_1\), \(n_j\) must not exceed a certain bound derived from the \(l_i\)
+values.
+\item Repeat the process for the case where \(n_j\) is a min-node.
+\end{enumerate}
+\end{exercise} 
+% id=5.21 section=5.3
+
+\begin{figure}[btp]
+%\epsfxsize=2in
+\figboxnew{figures/alpha-beta-proof.eps}
+\caption{Situation when considering whether to prune node \(n_j\).}
+\label{alpha-beta-proof-figure}
+\end{figure} 
+% id=5.22 section=5.3
+
+\begin{exercise}%%Nick Hay Question 5 
+Prove that the alpha--beta algorithm takes time \(O(b^{m/2})\) with optimal 
+move ordering, where \(m\) is the maximum depth of the game tree. 
+\end{exercise} 
+% id=5.23 section=5.3
+
+
+%%%% 5.4: Imperfect Real-Time Decisions (1 exercises, 0 labelled)
+%%%% ============================================================
+
+\begin{iexercise}
+Suppose you have a chess program that can evaluate 5 million nodes
+per second. Decide on a compact representation of a game
+state for storage in a transposition table.  About how many entries can
+you fit in a 1-gigabyte in-memory table? Will that be enough for the three minutes
+of search allocated for one move? How many table lookups can you do in 
+the time it would take to do one evaluation?  Now suppose the
+transposition table is stored on disk. About how many
+evaluations could you do in the time it takes to do one disk seek
+with standard disk hardware?
+\end{iexercise} 
+% id=5.24 section=5.4
+
+\begin{uexercise}
+Suppose you have a chess program that can evaluate 10 million nodes
+per second. Decide on a compact representation of a game
+state for storage in a transposition table.  About how many entries can
+you fit in a 2-gigabyte in-memory table? Will that be enough for the three minutes
+of search allocated for one move? How many table lookups can you do in 
+the time it would take to do one evaluation?  Now suppose the
+transposition table is stored on disk. About how many
+evaluations could you do in the time it takes to do one disk seek
+with standard disk hardware?
+\end{uexercise} 
+% id=5.24 section=5.4
+
+
+%%%% 5.5: Stochastic Games (5 exercises, 2 labelled)
+%%%% ===============================================
+
+\begin{figure}[tbp]
+%%\epsfxsize=3.5in 
+\figboxnew{figures/pruning.eps}
+\caption{The complete game tree for a trivial game with chance nodes.}
+\label{trivial-chance-game-figure}
+\end{figure} 
+% id=5.3 section=5.5
+
+\begin{exercise}%%Russell Spring 2004 final
+This question considers pruning in games with chance nodes.
+\figref{trivial-chance-game-figure} shows the complete game tree for a trivial game. Assume that the leaf 
+nodes are to be evaluated in left-to-right order, and that before a leaf node is evaluated, 
+we know nothing about its value---the range of possible values is \(-\infty\)
+to \(\infty\).
+\begin{enumerate}
+\item Copy the figure, mark the value of all the internal nodes, and indicate the best move at the root
+with an arrow.
+\item Given the values of the first six leaves, do we need to evaluate the seventh and eighth leaves?
+Given the values of the first seven leaves, do we need to evaluate the eighth leaf? Explain your answers.
+\item Suppose the leaf node values are known to lie between --2 and 2 inclusive.
+After  the first two leaves are evaluated, what is the value range for the left-hand chance node?
+\item Circle all the leaves that need not be evaluated under the assumption in (c).
+\end{enumerate}
+\end{exercise} 
+% id=5.4 section=5.5
+
+\begin{exercise}\prgex%
+Implement the expectiminimax algorithm and the *-alpha--beta
+algorithm, which is described by \citeA{Ballard:1983}, for pruning game
+trees with chance nodes. Try them on a game such as backgammon and
+measure the pruning effectiveness of *-alpha--beta.\libex
+\end{exercise} 
+% id=5.13 section=5.5
+
+\begin{exercise}[game-linear-transform]
+  Prove that with a positive linear transformation of leaf values
+  (i.e., transforming a value \(x\) to \(ax + b\) where \(a > 0\)),
+  the choice of move remains unchanged in a game tree, even when there
+  are chance nodes.
+\end{exercise} 
+% id=5.15 section=5.5
+
+\begin{exercise}[game-playing-monte-carlo-exercise]%
+Consider the following procedure for choosing moves in
+games with chance nodes: 
+\begin{itemize}
+\item Generate some dice-roll sequences (say, 50) down to
+a suitable depth (say, 8).
+\item With known dice rolls, the game tree becomes deterministic. For
+each dice-roll sequence, solve the resulting deterministic game tree
+using alpha--beta.
+\item Use the results to estimate the value of each move and to choose
+the best.
+\end{itemize}
+Will this procedure work well? Why (or why not)?
+\end{exercise} 
+% id=5.17 section=5.5
+
+\begin{uexercise}
+In the following, a ``max'' tree consists only of max nodes, whereas an ``expectimax'' tree consists
+of a max node at the root with alternating layers of chance and max nodes. At chance nodes, all outcome
+probabilities are nonzero. The goal is to
+{\em find the value of the root} with a bounded-depth search. For each of (a)--(f),
+either give an example or explain why this is impossible.
+\begin{enumerate}
+\item Assuming that leaf values
+are finite but unbounded, is pruning (as in alpha--beta) ever possible 
+in a max tree?
+
+\item Is pruning ever possible 
+in an expectimax tree under the same conditions?
+
+\item If leaf values are all nonnegative, is pruning ever possible 
+in a max tree? Give an example, or explain why not.
+
+\item If leaf values are all nonnegative, is pruning ever possible 
+in an expectimax tree? Give an example, or explain why not.
+
+\item If leaf values are all in the range \([0,1]\), is pruning ever possible 
+in a max tree? Give an example, or explain why not.
+
+\item If leaf values are all in the range \([0,1]\), is pruning ever possible 
+in an expectimax tree? 
+
+\item Consider the outcomes of a chance node in an expectimax tree.
+Which of the following evaluation orders is most likely to yield pruning opportunities?
+\begin{enumerate}
+\item Lowest probability first
+\item Highest probability first
+\item Doesn't make any difference
+\end{enumerate}
+\end{enumerate}
+\end{uexercise} 
+% id=5.25 section=5.5
+
+\begin{iexercise}
+In the following, a ``max'' tree consists only of max nodes, whereas an ``expectimax'' tree consists
+of a max node at the root with alternating layers of chance and max nodes. At chance nodes, all outcome
+probabilities are nonzero. The goal is to
+{\em find the value of the root} with a bounded-depth search.
+\begin{enumerate}
+\item Assuming that leaf values
+are finite but unbounded, is pruning (as in alpha--beta) ever possible 
+in a max tree? Give an example, or explain why not.
+
+\item Is pruning ever possible 
+in an expectimax tree under the same conditions? Give an example, or explain why not.
+
+\item If leaf values are constrained to be in the range \([0,1]\), is pruning ever possible 
+in a max tree? Give an example, or explain why not.
+
+\item If leaf values are constrained to be in the range \([0,1]\), is pruning ever possible 
+in an expectimax tree? Give an example (qualitatively different from your example in (e), if any), or explain why not.
+
+\item If leaf values are constrained to be nonnegative, is pruning ever possible 
+in a max tree? Give an example, or explain why not.
+
+\item If leaf values are constrained to be nonnegative, is pruning ever possible 
+in an expectimax tree? Give an example, or explain why not.
+
+\item Consider the outcomes of a chance node in an expectimax tree.
+Which of the following evaluation orders is most likely to yield pruning opportunities:
+(i) Lowest probability first; (ii) Highest probability first; (iii) Doesn't make any difference?
+\end{enumerate}
+\end{iexercise} 
+% id=5.25 section=5.5
+
+
+%%%% 5.6: Partially Observable Games (2 exercises, 0 labelled)
+%%%% =========================================================
+
+\begin{exercise}
+Which of the following are true and which are false? Give brief explanations.
+\begin{enumerate}
+\item In a fully observable, turn-taking, zero-sum game between two perfectly rational players,
+it does not help the first player to know what strategy the second player is using---that is,
+what move the second player will make, given the first player's move.
+\item In a partially observable, turn-taking, zero-sum game between two perfectly rational players,
+it does not help the first player to know what move the second player will make, given the first player's move.
+\item A perfectly rational backgammon agent never loses.
+\end{enumerate}
+\end{exercise} 
+% id=5.0 section=5.6
+
+\begin{exercise}
+Consider carefully the interplay of chance events and partial
+information in each of the games in 
+\exref{game-playing-chance-exercise}.
+\begin{enumerate}
+\item  For which is the standard
+expectiminimax model appropriate? Implement the algorithm and run it
+in your game-playing agent, with appropriate modifications to the
+game-playing environment.  
+\item For which would the scheme described
+in  \exref{game-playing-monte-carlo-exercise} be appropriate?
+\item Discuss how you might deal with the fact that in some of the
+games, the players do not have the same knowledge of the
+current state.
+\end{enumerate}
+\end{exercise} 
+% id=5.18 section=5.6
+
+
+
+
+
+
+
+
+
+
+
+
+% \begin{exercise} 
+% The algorithms described in this chapter construct a search tree for
+% each move from scratch.  Discuss the advantages and disadvantages of
+% retaining the search tree from one move to the next and extending the
+% appropriate portion. How would tree
+% retention interact with the use of selective search to examine
+% ``useful'' branches of the tree?
+% \end{exercise}
+
+%% \begin{exercise}\label{cards-minimax-exercise}
+%% The minimax algorithm assumes that players take turns moving, but in
+%% card games such as whist and bridge, the winner of the previous trick
+%% plays first on the next trick.
+%% \begin{enumerate}
+%% \item  Modify the
+%% algorithm to work properly for these games. You may assume that
+%% a function \noprog{Winner}(\(\J{s}\)) is available that reports
+%% which player won the trick just completed (if any).
+%% \item Draw the game tree for the first pair of hands shown on
+%% \pgref{bridge-page}.
+%% \end{enumerate}
+%% \end{exercise}
+
+%% \begin{exercise}
+%% For a game with which you are familiar, describe how an agent could be defined
+%% with condition-action rules, subgoals (and their conditions for generation),
+%% and action-utility rules, instead of by minimax search.
+%% \end{exercise}
+
+%% \begin{exercise}
+%% Estimate the number of possible positions in the search graph (not
+%% tree) of the game of chess.  One way to go about it: there are {\mathdelim}64
+%% \choose 32{\mathdelim} ways to put all 32 pieces on the board.  But all eight
+%% black pawns are identical, so divide that by {\mathdelim}8!{\mathdelim}, and do the same for
+%% the other identical pieces.  Now add in (an estimate of) the ways in which less than 32 pieces can be on the board.
+%% \end{exercise}
+
+
+\resetmedskipamount

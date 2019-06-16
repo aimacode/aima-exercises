@@ -1,6 +1,5 @@
+[Exercise 5.4 \[game-playing-chance-exercise\]](ex_4/)
 
-<div id="game-playing-chance-exercise">
-</div>
 Describe and implement state
 descriptions, move generators, terminal tests, utility functions, and
 evaluation functions for one or more of the following stochastic games:

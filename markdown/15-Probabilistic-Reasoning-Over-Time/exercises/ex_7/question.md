@@ -1,6 +1,6 @@
+[Exercise 15.7 \[hmm-robust-exercise\]](ex_7/)
 
-
-In Section <a href="#">hmm-localization-section</a>, the prior
+In Section [hmm-localization-section](#/), the prior
 distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually

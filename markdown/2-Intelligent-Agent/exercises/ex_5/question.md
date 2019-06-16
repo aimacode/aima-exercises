@@ -1,19 +1,19 @@
-
+[Exercise 2.5 \[PEAS-exercise\] ](ex_5/)
 
 For each of the following activities, give a PEAS
 description of the task environment and characterize it in terms of the
-properties listed in Section <a href="#">env-properties-subsection</a><br>
+properties listed in Section [env-properties-subsection](#/).
 
--   Performing a gymnastics floor routine.<br>
+-   Performing a gymnastics floor routine.
 
--   Exploring the subsurface oceans of Titan.<br>
+-   Exploring the subsurface oceans of Titan.
 
--   Playing soccer.<br>
+-   Playing soccer.
 
--   Shopping for used AI books on the Internet.<br>
+-   Shopping for used AI books on the Internet.
 
--   Practicing tennis against a wall.<br>
+-   Practicing tennis against a wall.
 
--   Performing a high jump.<br>
+-   Performing a high jump.
 
--   Bidding on an item at an auction.<br>
+-   Bidding on an item at an auction.

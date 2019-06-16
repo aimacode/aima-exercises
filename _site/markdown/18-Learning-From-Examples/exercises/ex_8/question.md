@@ -1,7 +1,7 @@
-
+[Exercise 18.8](ex_8/)
 
 Consider the following data set comprised of three binary input
-attributes ($A_1, A_2$, and $A_3$) and one binary output:<br>
+attributes ($A_1, A_2$, and $A_3$) and one binary output:
 
 |  $\quad \textbf{Example}$   | $\quad A_1\quad$ | $\quad A_2\quad$  | $\quad A_3\quad$  | $\quad Output\space y$  |
 | --- | --- | --- | --- | --- |
@@ -12,6 +12,6 @@ attributes ($A_1, A_2$, and $A_3$) and one binary output:<br>
 | $\textbf{x}_5$  | 1 | 1  | 0  | 1 |
 
 
-Use the algorithm in Figure <a href="#">DTL-algorithm</a>
-(page <a href="#">DTL-algorithm</a>) to learn a decision tree for these data. Show the
+Use the algorithm in Figure [DTL-algorithm](#/)
+(page [DTL-algorithm](#/)) to learn a decision tree for these data. Show the
 computations made to determine the attribute to split at each node.

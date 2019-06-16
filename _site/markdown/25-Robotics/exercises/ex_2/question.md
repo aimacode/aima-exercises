@@ -1,12 +1,14 @@
-
+[Exercise 25.2 \[mcl-implement-exercise\]](ex_2/)
 
 Implement Monte Carlo localization for a
 simulated robot with range sensors. A grid map and range data are
 available from the code repository at
-<a href="http://aima.cs.berkeley.edu">aima.cs.berkeley.edu</a>. You should demonstrate
+[aima.cs.berkeley.edu](http://aima.cs.berkeley.edu). You should demonstrate
 successful global localization of the robot.
 
-<figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/figRobot2.svg" alt="figRobot2" id="figRobot2" style="width:100%">
-  <figcaption><center><b>A Robot manipulator in two of its possible configurations.</b></center></figcaption>
-</figure>
+<center>
+<b id="figRobot2">Figure [figRobot2]</b> A Robot manipulator in two of its possible configurations.
+</center>
+
+![figRobot2](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/figRobot2.svg)
+

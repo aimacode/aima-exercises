@@ -1,0 +1,331 @@
+%%%% 15.1: Time and Uncertainty (1 exercises, 1 labelled)
+%%%% ====================================================
+
+\begin{exercise}[state-augmentation-exercise]
+Show that any second-order Markov process can be rewritten as a
+first-order Markov process with an augmented set of state
+variables. Can this always be done {\em parsimoniously}, i.e.,
+without increasing the number of parameters needed to specify the
+transition model?%
+\end{exercise}% 
+% id=15.3 section=15.1
+%%%% 15.2: Inference in Temporal Models (3 exercises, 3 labelled)
+%%%% ============================================================
+
+\begin{exercise}[markov-convergence-exercise]
+In this exercise, we examine what happens to the probabilities in the
+umbrella world in the limit of long time sequences.
+\begin{enumerate}
+\item Suppose we observe an unending sequence of days on which the
+umbrella appears. Show that, as the days go by, the probability of
+rain on the current day increases monotonically toward a fixed
+point. Calculate this fixed point.
+\item Now consider {\em forecasting} further and further into the
+future, given just the first two umbrella observations.
+First, compute the probability \(P(r_{2+k}|u_1,u_2)\) for \(k\eq
+1\ldots {20}\) and plot the results. You should see that the
+probability converges towards a fixed point. Prove that the exact value of this
+fixed point is 0.5.
+\end{enumerate}
+\end{exercise} 
+% id=15.4 section=15.2
+
+\begin{exercise}[island-exercise]
+This exercise develops a space-efficient variant of the
+forward--backward algorithm described in
+\figref{forward-backward-algorithm} (\pgref{forward-backward-algorithm}). We wish to compute
+\(\pv(\X_k|\e_{1:t})\) for \(k\eq 1,\ldots ,t\). This will be done with a
+divide-and-conquer approach.\index{divide-and-conquer}
+\begin{enumerate}
+\item Suppose, for simplicity, that \(t\) is odd, and let the halfway point
+be \(h\eq (t+1)/2\). Show that 
+\(\pv(\X_k|\e_{1:t})\) can be computed for \(k\eq 1,\ldots ,h\)
+given just the initial forward message \(\f_{1:0}\), the backward message
+\(\b_{h+1:t}\), and the evidence \(\e_{1:h}\). 
+\item Show a similar result for the second half of the sequence.
+\item Given the results of (a) and (b), a recursive
+divide-and-conquer algorithm can be constructed by first running
+forward along the sequence and then backward from the end, storing
+just the required messages at the middle and the ends. Then the
+algorithm is called on each half. Write out the algorithm in detail.
+\item Compute the time and space complexity of the algorithm as a
+function of \(t\), the length of the sequence. How does this change if
+we divide the input into more than two pieces?
+\end{enumerate}
+\end{exercise} 
+% id=15.5 section=15.2
+
+\begin{exercise}[flawed-viterbi-exercise]
+On \pgref{flawed-viterbi-page}, we outlined a flawed procedure for
+finding the most likely state sequence, given an observation sequence.
+The procedure involves finding the most likely state at each time
+step, using smoothing, and returning the sequence composed of these
+states. Show that, for some temporal probability models and
+observation sequences, this procedure returns an impossible state
+sequence (i.e., the posterior probability of the sequence is zero).
+\end{exercise} 
+% id=15.12 section=15.2
+
+
+%%%% 15.3: Hidden Markov Models (6 exercises, 3 labelled)
+%%%% ====================================================
+
+\begin{exercise}[hmm-likelihood-exercise]
+\eqref{matrix-filtering-equation} describes the filtering process for
+the matrix formulation of HMMs. Give a similar equation for the
+calculation of likelihoods, which was described generically in
+\eqref{forward-likelihood-equation}.
+\end{exercise} 
+% id=15.6 section=15.3
+
+\begin{uexercise}
+Consider the vacuum worlds of \figref{vacuum-maze-ch4-figure} (perfect sensing)
+and \figref{vacuum-maze-hmm2-figure} (noisy sensing). Suppose that the robot receives an observation sequence such that, with perfect sensing, there is exactly one possible location it could be in.
+Is this location necessarily the most probable location under noisy sensing for sufficiently small noise probability \(\epsilon\)? Prove your claim or find a counterexample.
+\end{uexercise} 
+% id=15.7 section=15.3
+
+\begin{exercise}[hmm-robust-exercise]
+\prgex
+In \secref{hmm-localization-section}, the prior distribution over locations is uniform and the transition model assumes
+an equal probability of moving to any neighboring square. What if those
+assumptions are wrong?  Suppose that the initial location is actually chosen uniformly from
+the northwest quadrant of the room and the \act{Move} action
+actually tends to move southeast\label{hmm-robot-southeast-page}.
+Keeping the HMM model fixed, explore the effect on localization and path accuracy
+as the southeasterly tendency increases, for different values of \(\epsilon\).
+\end{exercise} 
+% id=15.8 section=15.3
+
+\begin{exercise}[roomba-viterbi-exercise]
+Consider a version of the vacuum robot (\pgref{vacuum-maze-hmm2-figure}) that has the policy of going straight for as long
+as it can; only when it encounters an obstacle does it change to a new
+(randomly selected) heading.  To model this robot, each state in the
+model consists of a {\em (location, heading)} pair.  Implement this
+model and see how well the Viterbi algorithm can track a robot with this
+model.  The robot's policy is more constrained than the random-walk robot;
+does that mean that predictions of the most likely path are more accurate?
+\end{exercise} 
+% id=15.9 section=15.3
+
+\begin{iexercise}\prgex%
+We have described three policies for the vacuum robot: (1) a uniform random
+walk, (2) a bias for wandering southeast, as described in \exref{hmm-robust-exercise},
+and (3) the policy described in \exref{roomba-viterbi-exercise}.
+Suppose an observer is given the observation sequence from a vacuum
+robot, but is not sure which of the three policies the robot is
+following.  What approach should the observer use to find the most
+likely path, given the observations?  Implement the approach and test
+it.  How much does the localization accuracy suffer, compared to the case in which the
+observer knows which policy the robot is following?
+\end{iexercise} 
+% id=15.10 section=15.3
+
+\begin{uexercise}
+This exercise is concerned with filtering in an environment with no
+landmarks.  Consider a vacuum robot in an empty room, represented by
+an \(n \times m\) rectangular grid.  The robot's location is hidden;
+the only evidence available to the observer is a noisy location sensor
+that gives an approximation to the robot's location. If the robot is
+at location \((x, y)\) then with probability .1 the sensor gives the
+correct location, with probability .05 each it reports one of the 8
+locations immediately surrounding \((x, y)\), with probability .025
+each it reports one of the 16 locations that surround those 8, and
+with the remaining probability of .1 it reports ``no reading.''  The
+robot's policy is to pick a direction and follow it with probability
+.8 on each step; the robot switches to a randomly selected new heading
+with probability .2 (or with probability 1 if it encounters a
+wall). Implement this as an HMM and do filtering to track the
+robot. How accurately can we track the robot's path?
+\end{uexercise} 
+% id=15.11 section=15.3
+
+\begin{iexercise}
+This exercise is concerned with filtering in an environment with no
+landmarks.  Consider a vacuum robot in an empty room, represented by
+an \(n \times m\) rectangular grid.  The robot's location is hidden;
+the only evidence available to the observer is a noisy location sensor
+that gives an approximation to the robot's location. If the robot is
+at location \((x, y)\) then with probability .1 the sensor gives the
+correct location, with probability .05 each it reports one of the 8
+locations immediately surrounding \((x, y)\), with probability .025
+each it reports one of the 16 locations that surround those 8, and
+with the remaining probability of .1 it reports ``no reading.''  The
+robot's policy is to pick a direction and follow it with probability
+.7 on each step; the robot switches to a randomly selected new heading
+with probability .3 (or with probability 1 if it encounters a
+wall). Implement this as an HMM and do filtering to track the
+robot. How accurately can we track the robot's path?
+\end{iexercise} 
+% id=15.11 section=15.3
+
+
+%%%% 15.4: Kalman Filters (3 exercises, 3 labelled)
+%%%% ==============================================
+
+\begin{figure}[tp]
+%%\epsfxsize=0.5\maxfigwidth
+\figboxnew{figures/switching-kf.eps}
+\caption{A Bayesian network representation of a switching Kalman filter.
+The switching variable \(S_t\) is a discrete state variable whose value determines
+the transition model for the continuous state variables \(\X_t\).
+For any discrete state \(i\), the transition model
+\(\pv(\X_{t+1}|\X_t,S_t\eq i)\) is a linear Gaussian model, just as in a
+regular Kalman filter. The transition model for the discrete state,
+\(\pv(S_{t+1}|S_t)\), can be thought of as a matrix, as in a hidden
+Markov model.}
+\label{switching-kf-figure}
+\end{figure} 
+% id=15.13 section=15.4
+
+\begin{exercise}[switching-kf-exercise]
+Often, we wish to monitor a continuous-state system whose behavior
+switches unpredictably among a set of \(k\) distinct ``modes.'' For example,
+an aircraft trying to evade a missile can execute a series of
+distinct maneuvers that the missile may attempt to track. A Bayesian network
+representation of such a \termi{switching Kalman filter} model is shown in
+\figref{switching-kf-figure}.
+\begin{enumerate}
+\item Suppose that the discrete state \(S_t\) has \(k\) possible values
+and that the prior continuous state estimate \(\pv(\X_0)\) is a multivariate Gaussian
+distribution. Show that the prediction \(\pv(\X_1)\) is a \termi{mixture
+of Gaussians}---that is, a weighted sum of Gaussians such that the
+weights sum to 1.
+\item Show that if the current continuous state estimate
+\(\pv(\X_t|\e_{1:t})\) is a mixture of \(m\) Gaussians, then in the
+general case the updated state estimate \(\pv(\X_{t+1}|\e_{1:t+1})\)
+will be a mixture of \(km\) Gaussians.
+\item What aspect of the temporal process do the weights in the 
+Gaussian mixture represent?
+\end{enumerate}
+The results in (a) and (b) show that the representation of the posterior
+grows without limit even for switching Kalman filters, which are among the
+simplest hybrid dynamic models.
+\end{exercise} 
+% id=15.14 section=15.4
+
+\begin{exercise}[kalman-update-exercise]
+Complete the missing step in the derivation of
+\eqref{kalman-one-step-equation} on \pgref{kalman-one-step-equation}, the first update step
+for the one-dimensional Kalman filter.
+\end{exercise} 
+% id=15.15 section=15.4
+
+\begin{exercise}[kalman-variance-exercise]
+Let us examine the behavior of the variance update in 
+\eqref{kalman-univariate-equation} (\pgref{kalman-univariate-equation}).
+\begin{enumerate}
+\item Plot the value of \(\sigma_t^2\) as a function of \(t\), given various
+values for \(\sigma_x^2\) and \(\sigma_z^2\).
+
+\item Show that the update has a fixed point \(\sigma^2\) such
+that \(\sigma_t^2 \rightarrow \sigma^2\) as \(t \rightarrow \infty\), and
+calculate the value of \(\sigma^2\).
+
+\item Give a qualitative explanation for what
+happens as \(\sigma_x^2\rightarrow 0\) and as \(\sigma_z^2\rightarrow 0\).
+\end{enumerate}
+\end{exercise} 
+% id=15.16 section=15.4
+
+
+%%%% 15.5: Dynamic Bayesian Networks (5 exercises, 3 labelled)
+%%%% =========================================================
+
+\begin{uexercise}[sleep1-exercise]
+A professor wants to know if students are getting enough sleep.  Each day,
+the professor observes
+whether the students sleep in class, and whether they have red eyes.
+The professor has the following domain theory:
+\begin{itemize}
+\item The prior probability of getting enough sleep, with no observations, is 0.7.
+\item The probability of getting enough sleep on night \(t\) is 0.8 given
+that the student got enough sleep the previous night, and 0.3 if not.
+\item The probability of having red eyes is 0.2 if the student got enough sleep,
+and 0.7 if not.
+\item The probability of sleeping in class is 0.1 if the student got enough sleep,
+and 0.3 if not.
+\end{itemize}
+Formulate this information as a dynamic Bayesian network that the professor could use to 
+filter or predict from a sequence of observations.  Then reformulate it as a
+hidden Markov model that has only a single observation variable.  Give the complete
+probability tables for the model.
+\end{uexercise} 
+% id=15.0 section=15.5
+
+\begin{iexercise}[sleep1-exercise]
+A professor wants to know if students are getting enough sleep.  Each day,
+the professor observes
+whether the students sleep in class, and whether they have red eyes.
+The professor has the following domain theory:
+\begin{itemize}
+\item The prior probability of getting enough sleep, with no observations, is 0.6.
+\item The probability of getting enough sleep on night \(t\) is 0.8 given
+that the student got enough sleep the previous night, and 0.2 if not.
+\item The probability of having red eyes is 0.2 if the student got enough sleep,
+and 0.7 if not.
+\item The probability of sleeping in class is 0.1 if the student got enough sleep,
+and 0.3 if not.
+\end{itemize}
+Formulate this information as a dynamic Bayesian network that the professor could use to 
+filter or predict from a sequence of observations.  Then reformulate it as a
+hidden Markov model that has only a single observation variable.  Give the complete
+probability tables for the model.
+\end{iexercise} 
+% id=15.0 section=15.5
+
+\begin{exercise}
+For the DBN specified in \exref{sleep1-exercise}
+and for the evidence values
+\begin{formula}
+\e_1 = \mbox{not red eyes, not sleeping in class}\\
+\e_2 = \mbox{red eyes, not sleeping in class}\\
+\e_3 = \mbox{red eyes, sleeping in class}
+\end{formula}
+perform the following computations:
+\begin{enumerate}
+\item State estimation: Compute \(P(\J{EnoughSleep}_t | \e_{1:t})\) for each of \(t = 1,2,3\).
+\item Smoothing: Compute  \(P(\J{EnoughSleep}_t | \e_{1:3})\) for each of \(t = 1,2,3\).
+\item Compare the filtered and smoothed probabilities for \(t=1\) and \(t=2\).
+\end{enumerate}
+\end{exercise} 
+% id=15.1 section=15.5
+
+\begin{exercise}
+Suppose that a particular student shows up with red eyes and sleeps in class every day.
+Given the model described in \exref{sleep1-exercise}, explain why the probability
+that the student had enough sleep the previous night converges to a fixed point rather than continuing to go down
+as we gather more days of evidence. What is the fixed point? Answer this both numerically (by computation) and analytically.
+\end{exercise} 
+% id=15.2 section=15.5
+
+\begin{exercise}[battery-sequence-exercise]
+This exercise analyzes in more detail the persistent-failure
+model for the battery sensor in
+\figref{battery-persistence-figure}(a) (\pgref{battery-persistence-figure}).
+\begin{enumerate}
+\item \figref{battery-persistence-figure}(b) stops at \(t\eq
+{32}\). Describe qualitatively what should happen as \(t\to\infty\) if the
+sensor continues to read 0.
+\item Suppose that the external temperature affects the battery
+sensor in such a way that transient failures become more likely as
+temperature increases. Show how to augment the DBN structure in
+\figref{battery-persistence-figure}(a), and explain any required
+changes to the CPTs.
+\item Given the new network structure, can battery readings be used by
+the robot to infer the current temperature?
+\end{enumerate}
+\end{exercise} 
+% id=15.17 section=15.5
+
+\begin{exercise}[dbn-elimination-exercise]
+Consider applying the variable elimination algorithm to the umbrella
+DBN unrolled for three slices, where the query is
+\(\pv(R_3|u_1,u_2,u_3)\). Show that the space complexity of the
+algorithm---the size of the largest factor---is the same, regardless
+of whether the rain variables are eliminated in forward or backward
+order.
+\end{exercise} 
+% id=15.18 section=15.5
+
+

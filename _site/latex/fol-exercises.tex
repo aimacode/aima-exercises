@@ -1,0 +1,615 @@
+%%%% 8.1: Representation Revisited (1 exercises, 0 labelled)
+%%%% =======================================================
+
+\begin{exercise}
+A logical knowledge\index{knowledge!base} base represents the world
+using a set of sentences with no explicit structure. An
+\term{analogical}\tindex{knowledge representation!analogical}
+representation, on the other hand, has physical structure that
+corresponds directly to the structure of the thing represented.
+Consider a road map of your country as an analogical representation of
+facts about the country---it represents facts with a map language. The two-dimensional structure of the map
+corresponds to the two-dimensional surface of the area.
+\begin{enumerate}
+\item Give five examples of {\it symbols} in the map language.
+\item An {\it explicit} sentence is a sentence that the creator of the
+representation actually writes down. An {\it implicit} sentence is a sentence
+that results from explicit sentences because of properties of the
+analogical representation.
+Give three examples each of {\it implicit} and {\it explicit}
+sentences in the map language.
+\item Give three examples of facts about the physical
+structure of your country that cannot be represented in the map language.
+\item Give two examples of facts that are much easier to express
+in the map language than in first-order logic.
+\item Give two other examples of useful analogical
+representations. What are the advantages and disadvantages of each of
+these languages?
+\end{enumerate}
+\end{exercise} 
+% id=8.0 section=8.1
+
+
+%%%% 8.2: Syntax and Semantics of First-Order Logic (12 exercises, 4 labelled)
+%%%% =========================================================================
+
+\begin{exercise}
+Consider a knowledge base containing just two sentences: \(P(a)\) and \(P(b)\).
+Does this knowledge base entail \(\forall\,x\ P(x)\)? Explain your answer
+in terms of models.
+\end{exercise} 
+% id=8.1 section=8.2
+
+\begin{exercise}
+Is the sentence \(\Exi{x,y} x\eq y\) valid? Explain.
+\end{exercise} 
+% id=8.2 section=8.2
+
+\begin{uexercise}
+Write down a logical sentence such that every world in which it is
+true contains exactly one object.
+\end{uexercise} 
+% id=8.3 section=8.2
+
+\begin{iexercise}
+Write down a logical sentence such that every world in which it is
+true contains exactly two objects.
+\end{iexercise} 
+% id=8.3 section=8.2
+
+\begin{exercise}[fol-model-count-exercise]
+Consider a symbol vocabulary that contains \(c\) constant symbols, \(p_k\)
+predicate symbols of each arity \(k\), and \(f_k\) function symbols of
+each arity \(k\), where \(1\leq k\leq A\).  Let the domain size be fixed
+at \(D\).  For any given model, each
+predicate or function symbol is mapped onto a relation or function,
+respectively, of the same arity.  You may assume that the functions in
+the model allow some input tuples to have no value for the function
+(i.e., the value is the invisible object).  Derive a formula for the
+number of possible models for a domain with
+\(D\) elements. Don't worry about eliminating redundant combinations.
+\end{exercise} 
+% id=8.4 section=8.2
+
+\begin{exercise}
+Which of the following are valid (necessarily true) sentences?
+\begin{enumerate}
+  \item \((\exists x\ x\eq x) \implies (\All{y} \exists z\ y\eq z)\).
+  \item \(\All{x} P(x) \lor \lnot P(x)\).
+  \item \(\All{x} \J{Smart}(x) \lor (x\eq x)\).
+\end{enumerate}
+\end{exercise} 
+% id=8.5 section=8.2
+
+\begin{exercise}[empty-universe-exercise]
+Consider a version of the semantics for first-order logic in which
+models with empty domains are allowed. Give at least two examples of
+sentences that are valid according to the standard semantics but not
+according to the new semantics.  Discuss which outcome makes more
+intuitive sense for your examples.
+\end{exercise} 
+% id=8.6 section=8.2
+
+\begin{exercise}[hillary-exercise]%
+Does the fact \(\lnot \J{Spouse}(\J{George},\J{Laura})\)
+follow from the facts \(\J{Jim}\neq \J{George}\) and 
+\noindent \(\J{Spouse}(\J{Jim},\J{Laura})\)? If so, give a proof; if not, supply additional axioms as needed. What happens if we use \(\J{Spouse}\) as a unary function symbol instead of a binary predicate?
+\end{exercise} 
+% id=8.9 section=8.2
+
+\begin{uexercise}%%Ernie Davis
+This exercise uses the function \(\J{MapColor}\) and predicates \(\J{In}(x,y)\), \(\J{Borders}(x,y)\),  and \(\J{Country}(x)\), whose arguments are geographical regions,
+along with constant symbols for various regions.  In each of the following we give an English 
+sentence and a number of candidate logical expressions. For each of
+the logical expressions, state whether it
+(1) correctly expresses the English sentence; (2) is
+syntactically invalid and therefore meaningless; or (3) is syntactically valid
+but does not express the meaning of the English sentence. 
+\begin{enumerate}
+\item Paris and Marseilles are both in France. 
+\begin{enumerate}
+\item \(\J{In}(\J{Paris} \land \J{Marseilles}, \J{France})\).
+\item \(\J{In}(\J{Paris},\J{France}) \land \J{In}(\J{Marseilles},\J{France})\).
+\item \(\J{In}(\J{Paris},\J{France}) \lor \J{In}(\J{Marseilles},\J{France})\).
+\end{enumerate}
+
+\item There is a country that borders both Iraq and Pakistan.
+\begin{enumerate}
+\item \(\Exi{c}\) \(\J{Country}(c) \land \J{Border}(c,\J{Iraq}) \land \J{Border}(c,\J{Pakistan})\).
+\item \(\Exi{c}\) \(\J{Country}(c) \implies [\J{Border}(c,\J{Iraq}) \land \J{Border}(c,\J{Pakistan})]\).
+\item \([\Exi{c}\) \(\J{Country}(c)] \implies [\J{Border}(c,\J{Iraq}) \land \J{Border}(c,\J{Pakistan})]\).
+\item \(\Exi{c}\) \(\J{Border}(\J{Country}(c),\J{Iraq} \land \J{Pakistan})\).
+\end{enumerate}
+
+\item All countries that border Ecuador are in South America.
+\begin{enumerate}
+\item \(\All{c}  Country(c) \land \J{Border}(c,\J{Ecuador}) \implies \J{In}(c,\J{SouthAmerica})\).
+\item \(\All{c}  \J{Country}(c) \implies [\J{Border}(c,\J{Ecuador}) \implies \J{In}(c,\J{SouthAmerica})]\).
+\item \(\All{c}  [\J{Country}(c) \implies \J{Border}(c,\J{Ecuador})] \implies \J{In}(c,\J{SouthAmerica})\).
+\item \(\All{c}  Country(c) \land \J{Border}(c,\J{Ecuador}) \land \J{In}(c,\J{SouthAmerica})\).
+\end{enumerate}
+
+\item No region in South America borders any region in Europe.
+\begin{enumerate}
+\item \(\lnot [\Exi{c,d}  \J{In}(c,\J{SouthAmerica}) \land \J{In}(d,\J{Europe}) \land \J{Borders}(c,d)]\).
+\item \(\All{c,d}  [\J{In}(c,\J{SouthAmerica}) \land \J{In}(d,\J{Europe})] \implies \lnot \J{Borders}(c,d)]\).
+\item \(\lnot \All{c}  \J{In}(c,\J{SouthAmerica}) \implies \Exi{d} \J{In}(d,\J{Europe}) \land 
+\lnot \J{Borders}(c,d)\).
+\item \(\All{c} \J{In}(c,\J{SouthAmerica}) \implies \All{d} \J{In}(d,\J{Europe}) \implies \lnot \J{Borders}(c,d)\). 
+\end{enumerate}
+
+\item No two adjacent countries have the same map color.
+\begin{enumerate}
+  \item \(\All{x,y} \lnot \J{Country}(x) \lor \lnot \J{Country}(y) \lor \lnot \J{Borders}(x,y) \lor {}\)\\
+        \tab\tab\(\lnot (\J{MapColor}(x) = \J{MapColor}(y))\).
+  \item \(\All{x,y} (\J{Country}(x) \land \J{Country}(y) \land \J{Borders}(x,y) \land \lnot(x=y)) \implies {}\)\\
+        \tab\tab\(\lnot (\J{MapColor}(x) = \J{MapColor}(y))\).
+  \item \(\All{x,y} \J{Country}(x) \land \J{Country}(y) \land \J{Borders}(x,y) \land {}\)\\
+        \tab\tab\(\lnot (\J{MapColor}(x) = \J{MapColor}(y))\).
+  \item \(\All{x,y} (\J{Country}(x) \land \J{Country}(y) \land \J{Borders}(x,y) ) \implies \J{MapColor}(x\neq y)\).
+\end{enumerate}\end{enumerate}
+\end{uexercise} 
+% id=8.25 section=8.2
+
+\begin{exercise}%%Ernie Davis
+Consider a vocabulary with the following symbols:
+\begin{quote}
+\(\J{Occupation}(p,o)\): Predicate. Person \(p\) has occupation \(o\). \\
+\(\J{Customer}(p1,p2)\): Predicate. Person \(p1\) is a customer of person \(p2\). \\
+\(\J{Boss}(p1,p2)\): Predicate. Person \(p1\) is a boss of person \(p2\). \\
+\(\J{Doctor}\), \( \J{Surgeon}\), \( \J{Lawyer}\), \( \J{Actor}\): Constants denoting occupations. \\
+\(\J{Emily}\), \( \J{Joe}\): Constants denoting people.
+\end{quote}
+Use these symbols to write the following assertions in first-order logic:
+\begin{enumerate}
+\item Emily is either a surgeon or a lawyer.
+\item Joe is an actor, but he also holds another job.
+\item All surgeons are doctors.
+\item Joe does not have a lawyer (i.e., is not a customer of any lawyer).
+\item Emily has a boss who is a lawyer.
+\item There exists a lawyer all of whose customers are doctors.
+\item Every surgeon has a lawyer.
+\end{enumerate}
+\end{exercise} 
+% id=8.28 section=8.2
+
+\begin{iexercise}%% Russell Fall 2002 final
+In each of the following we give an English 
+sentence and a number of candidate logical expressions. For each of
+the logical expressions, state whether it
+(1) correctly expresses the English sentence; (2) is
+syntactically invalid and therefore meaningless; or (3) is syntactically valid
+but does not express the meaning of the English sentence. 
+\begin{enumerate}
+\item  Every cat loves its mother or father.
+\begin{enumerate}
+  \item \(\All{x} \J{Cat}(x) \implies \J{Loves}(x,\J{Mother}(x)\lor \J{Father}(x))\).
+  \item \(\All{x} \lnot \J{Cat}(x) \lor \J{Loves}(x,\J{Mother}(x)) \lor \J{Loves}(x,\J{Father}(x))\).
+  \item \(\All{x} \J{Cat}(x) \land (\J{Loves}(x,\J{Mother}(x))\lor \J{Loves}(x,\J{Father}(x)))\).
+\end{enumerate}
+
+\item Every dog who loves one of its brothers is happy.
+\begin{enumerate}
+  \item \(\All{x} \J{Dog}(x) \land (\exists y\ \J{Brother}(y,x) \land \J{Loves}(x,y)) \implies \J{Happy}(x)\).
+  \item \(\All{x,y} \J{Dog}(x) \land \J{Brother}(y,x) \land \J{Loves}(x,y) \implies \J{Happy}(x)\).
+  \item \(\All{x} \J{Dog}(x) \land [\All{y} \J{Brother}(y,x) \lequiv \J{Loves}(x,y)] \implies \J{Happy}(x)\).
+\end{enumerate}
+
+\item No dog bites a child of its owner.
+\begin{enumerate}
+  \item \(\All{x} \J{Dog}(x) \implies \lnot \J{Bites}(x,\J{Child}(\J{Owner}(x)))\).
+  \item \(\lnot \Exi{x,y} \J{Dog}(x) \land \J{Child}(y,\J{Owner}(x)) \land \J{Bites}(x,y)\).
+  \item \(\All{x} \J{Dog}(x) \implies (\All{y} \J{Child}(y,\J{Owner}(x)) \implies \lnot \J{Bites}(x,y))\).
+  \item \(\lnot \Exi{x} \J{Dog}(x) \implies (\Exi{y} \J{Child}(y,\J{Owner}(x)) \land \J{Bites}(x,y))\).
+\end{enumerate}
+
+\item Everyone's zip code within a state has the same first digit.
+\begin{enumerate}
+  \item \(\All{x,s,z_1} [\J{State}(s) \land \J{LivesIn}(x,s) \land \J{Zip}(x)\eq z_1] \implies {}\)\\
+        \tab\tab\([\All{y,z_2} \J{LivesIn}(y,s) \land \J{Zip}(y)\eq z_2 \implies \J{Digit}(1,z_1) \eq \J{Digit}(1,z_2) ]\).
+  \item \(\All{x,s} [\J{State}(s) \land \J{LivesIn}(x,s) \land \Exi{z_1} \J{Zip}(x)\eq z_1] \implies{}\)\\
+        \tab\tab\( [\All{y,z_2} \J{LivesIn}(y,s) \land \J{Zip}(y)\eq z_2 \land \J{Digit}(1,z_1) \eq \J{Digit}(1,z_2) ]\).
+  \item \(\All{x,y,s} \J{State}(s) \land \J{LivesIn}(x,s) \land \J{LivesIn}(y,s) \implies \J{Digit}(1,\J{Zip}(x)\eq \J{Zip}(y))\).
+  \item \(\All{x,y,s} \J{State}(s) \land \J{LivesIn}(x,s) \land \J{LivesIn}(y,s) \implies {}\)\\
+        \tab\tab\(\J{Digit}(1,\J{Zip}(x)) \eq \J{Digit}(1,\J{Zip}(y))\).
+\end{enumerate}
+\end{enumerate}
+\end{iexercise} 
+% id=8.29 section=8.2
+
+\begin{exercise}[language-determination-exercise]
+Complete the following exercises about logical sentences:
+\begin{enumerate}
+\item Translate into {\em good, natural} English (no \(x\)s or \(y\)s!):
+\begin{formula}
+  \All{x,y,l} \J{SpeaksLanguage}(x,l) \land \J{SpeaksLanguage}(y,l)\\
+  \qquad\qquad \implies \J{Understands}(x,y) \land \J{Understands}(y,x).
+\end{formula}
+\item Explain why this sentence is entailed by the sentence
+\begin{formula}
+  \All{x,y,l} \J{SpeaksLanguage}(x,l) \land \J{SpeaksLanguage}(y,l)\\
+  \qquad\qquad \implies \J{Understands}(x,y).
+\end{formula}
+\item Translate into first-order logic the following sentences:
+\begin{enumerate}
+\item Understanding leads to friendship.
+\item Friendship is transitive.
+\end{enumerate}
+Remember to define all predicates, functions, and constants you use.
+\end{enumerate}
+\end{exercise} 
+% id=8.30 section=8.2
+
+\begin{iexercise}
+True or false? Explain.
+\begin{enumerate}
+\item \(\Exi{x} x\eq \J{Rumpelstiltskin}\) is a valid (necessarily true) sentence of first-order logic.
+\item Every existentially quantified sentence in first-order logic
+is true in any model that contains exactly one object.
+\item \(\All{x,y} x\eq y\)\quad is satisfiable.
+\end{enumerate}
+\end{iexercise} 
+% id=8.31 section=8.2
+
+
+%%%% 8.3: Using First-Order Logic (15 exercises, 5 labelled)
+%%%% =======================================================
+
+\begin{exercise}[Peano-completion-exercise]
+Rewrite the first two Peano axioms in \secref{Peano-section} as a single axiom that 
+defines \(\J{NatNum}(x)\) so as to exclude the possibility of natural numbers except for those generated by the successor function.
+\end{exercise} 
+% id=8.7 section=8.3.3
+
+\begin{exercise}[wumpus-diagnostic-exercise]
+\eqref{pit-biconditional-equation} on
+\pgref{pit-biconditional-equation} defines the conditions under which
+a square is breezy.  Here we consider two other ways to describe this
+aspect of the wumpus world.
+\begin{enumerate}
+\item We can write \newterm[diagnostic rule]{diagnostic rules}\ntindex{rule!diagnostic}\ntindex{diagnostic rule}
+leading from observed effects to hidden causes. For finding pits, the obvious
+diagnostic rules say that if a square is breezy, some adjacent
+square must contain a pit; and if a square is not breezy, then no adjacent square contains a pit.
+Write these two rules in first-order logic and show that their conjunction is logically equivalent to \eqref{pit-biconditional-equation}.
+\item We can write \newterm[causal rule]{causal rules}\ntindex{rule!causal}\ntindex{causal rule} leading from cause to effect.
+One obvious causal rule is that a pit causes all adjacent squares to be breezy.
+Write this rule in first-order logic, explain why it is incomplete compared to \eqref{pit-biconditional-equation},
+and supply the missing axiom.
+\end{enumerate}
+\end{exercise} 
+% id=8.11 section=8.3.4
+
+\begin{exercise}[kinship-exercise]%
+\prgex
+Write axioms describing the predicates \(\J{Grandchild}\), \(\J{Greatgrandparent}\), \(\J{Ancestor}\), 
+\(\J{Brother}\), \(\J{Sister}\), \(\J{Daughter}\), \(\J{Son}\), \(\J{FirstCousin}\), \(\J{BrotherInLaw}\),
+\(\J{SisterInLaw}\), \(\J{Aunt}\), and \(\J{Uncle}\). Find out the proper
+definition of \(m\)th cousin \(n\) times removed, and write the
+definition in first-order
+logic.
+Now write down the basic facts depicted in the family tree in
+\figref{family1-figure}. Using a suitable logical reasoning system,
+\prog{Tell} it all the sentences you have written down, and \prog{Ask}
+it who are Elizabeth's grandchildren, Diana's brothers-in-law,
+Zara's great-grandparents, and Eugenie's ancestors.
+\end{exercise} 
+% id=8.12 section=8.3
+
+\begin{figure}[tp]
+%%\epsfxsize=3.5in
+\figboxnew{figures/family1.eps}
+\caption{A typical family tree. The symbol ``\(\bowtie\)'' connects spouses and arrows 
+point to children.}\label{family1-figure}
+\end{figure} 
+% id=8.13 section=8.3
+
+\begin{iexercise}
+Write down a sentence asserting that + is a commutative function.
+Does your sentence follow from the Peano axioms? If so, explain why;
+if not, give a model in which the axioms are true and your sentence is
+false.
+\end{iexercise} 
+% id=8.14 section=8.3.3
+
+\begin{uexercise}
+Explain what is wrong with the following proposed definition of the
+set membership predicate \(\elt\):
+\begin{formula}\zt 
+\All{x,s} x \elt \{x|s\}\\\zt 
+\All{x,s} x \elt s \implies \All{y} x \elt \{y|s\}\ .
+\end{formula}
+\end{uexercise} 
+% id=8.15 section=8.3.3
+
+\begin{exercise}[list-representation-exercise]%
+Using the set axioms as examples, write axioms for the list domain, including
+all the constants, functions, and predicates mentioned in the chapter.
+\end{exercise} 
+% id=8.16 section=8.3.3
+
+\begin{exercise}[adjacency-exercise]%
+Explain what is wrong with the following proposed definition of 
+adjacent squares in the wumpus world:
+\[
+\All{x,y} \J{Adjacent}([x,y], [x+1, y]) \land \J{Adjacent}([x,y], [x, y+1])\ .
+\]
+\end{exercise} 
+% id=8.17 section=8.3.4
+
+\begin{exercise}
+Write out the axioms required for reasoning about the wumpus's
+location, using a constant symbol \(\J{Wumpus}\) and a binary predicate
+\(\J{At}(\J{Wumpus}, \J{Location})\).  Remember that there is only one wumpus. 
+% Repeat the exercise
+% using a unary predicate {\mathdelim}WumpusIn{\mathdelim} that is true of a square occupied
+% by a wumpus.
+\end{exercise} 
+% id=8.18 section=8.3.4
+
+\begin{exercise}%%Ernie Davis
+Assuming predicates \(\J{Parent}(p,q)\) and \(\J{Female}(p)\) and constants
+\(\J{Joan}\) and \(\J{Kevin}\), with the obvious meanings, express each of the
+following sentences in first-order logic.  (You may use the abbreviation
+\(\exists^{1}\) to mean ``there exists exactly one.'')
+\begin{enumerate}
+\item Joan has a daughter (possibly more than one, and possibly sons as well).
+\item Joan has exactly one daughter (but may have sons as well).
+\item Joan has exactly one child, a daughter.
+\item Joan and Kevin have exactly one child together.
+\item Joan has at least one child with Kevin, and no children with anyone
+else.
+\end{enumerate}
+\end{exercise} 
+% id=8.24 section=8.3.2
+
+\begin{exercise}%%Ernie Davis
+Arithmetic assertions can be written in first-order logic with the
+predicate symbol \(<\), the function symbols \({+}\) and \({\times}\),
+and the constant symbols 0 and 1. Additional predicates can also be
+defined with biconditionals.
+\begin{enumerate}
+\item Represent the property ``\(x\) is an even number.''
+\item Represent the property ``\(x\) is prime.''
+\item Goldbach's conjecture is the conjecture (unproven as yet)
+that every even number is equal to the sum of two primes.  Represent this conjecture as a logical sentence.
+\end{enumerate}
+\end{exercise} 
+% id=8.26 section=8.3.3
+
+\begin{exercise}%%Ernie Davis
+In \chapref{csp-chapter}, we used equality to indicate the relation between a variable and
+its value.  For instance, we wrote \(\J{WA}\eq \J{red}\) to mean that Western
+Australia is colored red. Representing this in first-order logic, we must
+write more verbosely \(\J{ColorOf}(\J{WA})\eq \J{red}\).  What incorrect inference could
+be drawn if we wrote sentences such as \(\J{WA}\eq \J{red}\) directly as logical assertions?
+\end{exercise} 
+% id=8.27 section=8.3.1
+
+\begin{exercise}
+Write in first-order logic the assertion that every key and at least
+one of every pair of socks will eventually be lost forever, using only
+the following vocabulary: \(\J{Key}(x)\), \(x\) is a key; \(\J{Sock}(x)\),
+\(x\) is a sock; \(\J{Pair}(x,y)\), \(x\) and \(y\) are a pair; \(\J{Now}\),
+the current time; \(\J{Before}(t_1,t_2)\), time \(t_1\) comes before time
+\(t_2\); \(\J{Lost}(x,t)\), object \(x\) is lost at time \(t\).
+\end{exercise} 
+% id=8.32 section=8.3
+
+\begin{uexercise}
+For each of the following sentences in English, decide if the
+accompanying first-order logic sentence is a good translation.
+If not, explain why not and correct it. (Some sentences may have more than one error!)
+\begin{enumerate}
+\item No two people have the same social security number.
+\[
+  \lnot \Exi{x,y,n} \J{Person}(x) \land \J{Person}(y) \implies [\J{HasSS}\#(x,n) \land \J{HasSS}\#(y,n)].
+\]
+
+\item John's social security number is the same as Mary's.
+\[
+   \Exi{n} \J{HasSS}\#(\J{John},n) \land \J{HasSS}\#(\J{Mary},n).
+\]
+  
+\item Everyone's social security number has nine digits.
+\[
+   \All{x,n} \J{Person}(x) \implies [\J{HasSS}\#(x,n) \land \J{Digits}(n,9)].
+\]
+
+\item Rewrite each of the above (uncorrected) sentences using 
+a function symbol \(\J{SS}\#\) instead of the predicate \(\J{HasSS}\#\).
+\end{enumerate}
+\end{uexercise} 
+% id=8.33 section=8.3
+
+\begin{iexercise}
+Translate into first-order logic the sentence ``Everyone's DNA is unique
+and is derived from their parents' DNA.''
+You must specify the precise intended meaning of your vocabulary terms.
+({\em Hint}: Do not use the predicate \(\J{Unique}(x)\), since uniqueness
+is not really a property of an object in itself!)
+\end{iexercise} 
+% id=8.34 section=8.3
+
+\begin{iexercise}
+For each of the following sentences in English, decide if the
+accompanying first-order logic sentence is a good translation.
+If not, explain why not and correct it.
+\begin{enumerate}
+\item Any apartment in London has lower rent than some apartments
+  in Paris.
+\begin{formula}
+  \All{x} [\J{Apt}(x) \land \J{In}(x,\J{London})] \implies \Exi{y} ([\J{Apt}(y) \land \J{In}(y,\J{Paris})] \implies {}\\
+  \ \ \ \ \ \ (\J{Rent}(x) < \J{Rent}(y))) \ .
+\end{formula}
+
+\item There is exactly one apartment in Paris with rent below \$1000.
+\begin{formula}
+  \Exi{x} \J{Apt}(x) \land \J{In}(x,\J{Paris}) \land {}\\
+  \ \ \ \ \ \   \All{y} [\J{Apt}(y) \land \J{In}(y,\J{Paris}) \land (\J{Rent}(y) < \J{Dollars}(1000)) ]\implies (y\eq x).
+\end{formula}
+  
+\item If an apartment is more expensive than all apartments in
+  London, it must be in Moscow.
+\begin{formula}
+  \All{x} \J{Apt}(x) \land [\All{y} \J{Apt}(y) \land \J{In}(y,\J{London}) \land (\J{Rent}(x) > \J{Rent}(y))] \implies {}\\
+  \ \ \ \ \ \  \J{In}(x,\J{Moscow}).
+\end{formula}
+
+\end{enumerate}
+
+\end{iexercise} 
+% id=8.35 section=8.3
+
+
+%%%% 8.4: Knowledge Engineering in First-Order Logic (6 exercises, 1 labelled)
+%%%% =========================================================================
+
+\begin{uexercise}
+Represent the following sentences in first-order logic, using a consistent
+vocabulary (which you must define):
+\begin{enumerate}
+\item Some students took French in spring 2001.
+\item Every student who takes French passes it.
+\item Only one student took Greek in spring 2001.
+\item The best score in Greek is always higher than the best score in French.
+\item Every person who buys a policy is smart.
+\item No person buys an expensive policy.
+\item There is an agent who sells policies only to people who are not insured.
+\item There is a barber who shaves all men in town who do not shave themselves.
+\item A person born in the UK, each of whose parents is a UK citizen or a UK resident, is a UK citizen by birth.
+\item A person born outside the UK, one of whose parents is a UK citizen by birth, is a UK citizen
+by descent.
+\item Politicians can fool some of the people all of the time, and they can fool
+all of the people some of the time, but they can't fool all of the people all
+of the time.
+\item All Greeks speak the same language. (Use \(\J{Speaks}(x,l)\) to mean that person \(x\)
+speaks language \(l\).)
+\end{enumerate}
+\end{uexercise} 
+% id=8.8 section=8.4.1
+
+\begin{iexercise}
+Represent the following sentences in first-order logic, using a consistent
+vocabulary (which you must define):
+\begin{enumerate}
+\item Some students took French in spring 2009.
+\item Every student who takes French passes it.
+\item Only one student took Greek in spring 2009.
+\item The best score in Greek is always lower than the best score in French.
+\item Every person who buys a policy is smart.
+\item There is an agent who sells policies only to people who are not insured.
+\item There is a barber who shaves all men in town who do not shave themselves.
+\item A person born in the UK, each of whose parents is a UK citizen or a UK resident, is a UK citizen by birth.
+\item A person born outside the UK, one of whose parents is a UK citizen by birth, is a UK citizen
+by descent.
+\item Politicians can fool some of the people all of the time, and they can fool
+all of the people some of the time, but they can't fool all of the people all
+of the time.
+\item All Greeks speak the same language. (Use \(\J{Speaks}(x,l)\) to mean that person \(x\)
+speaks language \(l\).)
+\end{enumerate}
+\end{iexercise} 
+% id=8.8 section=8.4.1
+
+\begin{exercise}
+Write a general set of facts and axioms to represent the assertion
+``Wellington heard about Napoleon's death'' and to correctly answer the question
+``Did Napoleon hear about Wellington's death?''
+\end{exercise} 
+% id=8.10 section=8.4.1
+
+\begin{exercise}[4bit-adder-exercise]%
+\prgex Extend the vocabulary from \secref{circuits-section} to define
+addition for \(n\)-bit binary numbers.
+Then encode the description of the four-bit adder in \figref{4bit-adder-figure},
+and pose the queries needed to verify that it is in fact correct.
+\end{exercise} 
+% id=8.19 section=8.4.2
+
+\begin{figure}[tbp]
+%%\epsfxsize=4in
+\figboxnew{figures/4bit-adder.eps}
+\caption{A four-bit adder. Each \(\J{Ad}_i\) is a one-bit adder, as in \figref{adder-figure}
+on \pgref{adder-figure}.}\label{4bit-adder-figure}
+\end{figure} 
+% id=8.20 section=8.4.2
+
+\begin{iexercise}
+The circuit representation in the chapter is more detailed than necessary
+if we care only about circuit functionality. A simpler formulation
+describes any \(m\)-input, \(n\)-output gate or circuit using a predicate
+with \(m+n\) arguments, such that the predicate is true exactly when the
+inputs and outputs are consistent. For example, NOT gates are described
+by the binary predicate \(\J{NOT}(i,o)\), for which \(\J{NOT}(0,1)\) and \(\J{NOT}(1,0)\)
+are known. Compositions of gates are defined by conjunctions
+of gate predicates in which shared variables indicate direct connections.
+For example, a NAND circuit can be composed from \(\J{AND}\)s and \(\J{NOT}\)s:
+\[
+  \All{i_1,i_2,o_a,o} \J{AND}(i_1,i_2,o_a) \land \J{NOT}(o_a,o) \implies \J{NAND}(i_1,i_2,o)\ .
+\]
+Using this representation, define the one-bit adder in \figref{adder-figure}
+and the four-bit adder in \figref{4bit-adder-figure}, and explain
+what queries you would use to verify the designs.
+What kinds of queries are {\em not} supported by this representation
+that {\em are} supported by the representation in \secref{circuits-section}?
+\end{iexercise} 
+% id=8.21 section=8.4.2
+
+\begin{exercise}
+Obtain a passport application for your country, identify the rules
+determining eligibility for a passport, and translate them into
+first-order logic, following the steps outlined in
+\secref{circuits-section}.
+\end{exercise} 
+% id=8.22 section=8.4.1
+
+\begin{exercise}%%Ernie Davis
+Consider a first-order logical knowledge base that describes worlds containing people,
+songs, albums (e.g., ``Meet the Beatles'') and disks (i.e., particular physical instances of CDs).
+The vocabulary contains the following symbols:
+\begin{quote}
+\(\J{CopyOf}(d,a)\): Predicate. Disk \(d\) is a copy of album \(a\). \\
+\(\J{Owns}(p,d)\): Predicate. Person \(p\) owns disk \(d\). \\
+\(\J{Sings}(p,s,a)\): Album \(a\) includes a recording of song \(s\) sung by person \(p\).\\
+\(\J{Wrote}(p,s)\): Person \(p\) wrote song \(s\). \\
+\(\J{McCartney}\), \(\J{Gershwin}\), \(\J{BHoliday}\), \(\J{Joe}\), \(\J{EleanorRigby}\), \(\J{TheManILove}\), \(\J{Revolver}\):
+Constants with the obvious meanings.
+\end{quote}
+Express the following statements in first-order logic:
+\begin{enumerate}
+\item Gershwin wrote ``The Man I Love.''
+\item Gershwin did not write ``Eleanor Rigby.''
+\item Either Gershwin or McCartney wrote ``The Man I Love.''
+\item Joe has written at least one song.
+\item Joe owns a copy of {\em Revolver}.
+\item Every song that McCartney sings on {\em Revolver} was written by 
+McCartney.
+\item Gershwin did not write any of the songs on {\em Revolver}.
+\item Every song that Gershwin wrote has been recorded on some album.
+(Possibly different songs are recorded on different albums.)
+\item There is a single album that contains every song that Joe has written.
+\item Joe owns a copy of an album that has 
+Billie Holiday singing ``The Man I Love.''
+\item Joe owns a copy of every album that has a song sung by McCartney.
+(Of course, each different album is instantiated in a different physical
+CD.)
+\item Joe owns a copy of every album on which all the songs are sung by
+Billie Holiday.
+\end{enumerate}
+\end{exercise} 
+% id=8.23 section=8.4.1
+
+
+%\begin{exercise}\label{not-member-exercise}%
+%Prove the statement:
+%\[\lnot(C \elt \{A|\{B|\emptyset\}\}) \lequiv A \neq C \land B \neq C  \]
+%given the three axioms:
+%\[\All{s} \J{Set}(s) \lequiv s \eq  \emptyset 
+%                          \lor \Exi{x,s_2} s \eq  \{x|s_2\}\]
+%\[ \All{x,y,s} x \elt \{y|s\} \lequiv x \eq  y \lor x \elt s \]
+%\[ \lnot \Exi{x} x \elt \emptyset \]
+%\end{exercise}
+
+
+

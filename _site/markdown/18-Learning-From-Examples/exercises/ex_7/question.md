@@ -1,4 +1,4 @@
-
+[Exercise 18.7 \[nonnegative-gain-exercise\]](ex_7/)
 
 \[nonnegative-gain-exercise\]Suppose that an attribute splits the set of
 examples $E$ into subsets $E_k$ and that each subset has $p_k$

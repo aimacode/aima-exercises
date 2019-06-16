@@ -1,12 +1,12 @@
+[Exercise 12.10 \[part-decomposition-exercise\]](ex_10/)
 
+Write definitions for the following:
 
-Write definitions for the following:<br>
+1.  ${ExhaustivePartDecomposition}$
 
-1.  ${ExhaustivePartDecomposition}$<br>
+2.  ${PartPartition}$
 
-2.  ${PartPartition}$<br>
-
-3.  ${PartwiseDisjoint}$<br>
+3.  ${PartwiseDisjoint}$
 
 These should be analogous to the definitions for
 ${ExhaustiveDecomposition}$, ${Partition}$, and ${Disjoint}$. Is

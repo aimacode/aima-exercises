@@ -1,4 +1,4 @@
-
+[Exercise 14.7 \[handedness-exercise\]](ex_7/)
 
 Let $H_x$ be a random variable denoting the
 handedness of an individual $x$, with possible values $l$ or $r$. A
@@ -8,28 +8,28 @@ values $l$ or $r$, and perhaps actual handedness turns out mostly the
 same (with some probability $s$) as the gene an individual possesses.
 Furthermore, perhaps the gene itself is equally likely to be inherited
 from either of an individual’s parents, with a small nonzero probability
-$m$ of a random mutation flipping the handedness.<br>
+$m$ of a random mutation flipping the handedness.
 
 1.  Which of the three networks in
-    Figure <a href="#">handedness-figure</a> claim that
-    $ {\textbf{P}}(G_{father},G_{mother},G_{child}) = {\textbf{P}}(G_{father}){\textbf{P}}(G_{mother}){\textbf{P}}(G_{child})$?<br>
+    Figure [handedness-figure](#handedness-figure) claim that
+    $ {\textbf{P}}(G_{father},G_{mother},G_{child}) = {\textbf{P}}(G_{father}){\textbf{P}}(G_{mother}){\textbf{P}}(G_{child})$?
 
 2.  Which of the three networks make independence claims that are
-    consistent with the hypothesis about the inheritance of handedness?<br>
+    consistent with the hypothesis about the inheritance of handedness?
 
 3.  Which of the three networks is the best description of the
-    hypothesis?<br>
+    hypothesis?
 
 4.  Write down the CPT for the $G_{child}$ node in network (a), in
-    terms of $s$ and $m$.<br>
+    terms of $s$ and $m$.
 
 5.  Suppose that
     $P(G_{father}{{\,=\,}}l)=P(G_{mother}{{\,=\,}}l)=q$. In
     network (a), derive an expression for $P(G_{child}{{\,=\,}}l)$
-    in terms of $m$ and $q$ only, by conditioning on its parent nodes.<br>
+    in terms of $m$ and $q$ only, by conditioning on its parent nodes.
 
 6.  Under conditions of genetic equilibrium, we expect the distribution
     of genes to be the same across generations. Use this to calculate
     the value of $q$, and, given what you know about handedness in
     humans, explain why the hypothesis described at the beginning of
-    this question must be wrong.<br>
+    this question must be wrong.

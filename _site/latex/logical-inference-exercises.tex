@@ -1,0 +1,549 @@
+\setlength{\medskipamount}{1.6\medskipamount}%%%%% Mona's suggestion
+
+%%%% 9.1: Propositional vs.\nobreakspace  {}First-Order Inference (3 exercises, 0 labelled)
+%%%% ======================================================================================
+
+\begin{exercise}
+Prove that Universal Instantiation
+is sound and that Existential Instantiation produces
+an inferentially equivalent knowledge base.
+\end{exercise} 
+% id=9.0 section=9.1.1
+
+\begin{exercise}
+From \(\J{Likes}(\J{Jerry},\J{IceCream})\) it seems reasonable to infer \(\Exi{x}
+\J{Likes}(x,\J{IceCream})\). Write down a general inference rule,
+\newterm{Existential Introduction}\ntindex{Existential Introduction},
+that sanctions this inference. State carefully the conditions
+that must be satisfied by the variables and terms involved.
+\end{exercise} 
+% id=9.1 section=9.1.1
+
+\begin{exercise}
+Suppose a knowledge base contains just one sentence, \(\exists\,x\ \J{AsHighAs}(x,\J{Everest})\).
+Which of the following are legitimate results of applying Existential Instantiation?
+\begin{enumerate}
+\item \(\J{AsHighAs}(\J{Everest},\J{Everest})\).
+\item \(\J{AsHighAs}(\J{Kilimanjaro},\J{Everest})\).
+\item \(\J{AsHighAs}(\J{Kilimanjaro},\J{Everest}) \land \J{AsHighAs}(\J{BenNevis},\J{Everest})\) \\
+(after two applications).
+\end{enumerate}
+\end{exercise} 
+% id=9.2 section=9.1.1
+
+
+%%%% 9.2: Unification and Lifting (4 exercises, 2 labelled)
+%%%% ======================================================
+
+\begin{uexercise}
+For each pair of atomic sentences,
+give the most\index{unifier, most general (MGU)} 
+\index{most general unifier (MGU)}\index{MGU (most general unifier)} general unifier if it exists:
+\begin{enumerate}
+\item \(P(A,B,B)\), \(P(x,y,z)\).
+\item \(Q(y,G(A,B))\), \(Q(G(x,x),y)\).
+\item \(\J{Older}(\J{Father}(y),y)\), \(\J{Older}(\J{Father}(x),\J{John})\).
+\item \(\J{Knows}(\J{Father}(y),y)\), \(\J{Knows}(x,x)\).
+\end{enumerate}
+\end{uexercise} 
+% id=9.3 section=9.2.2
+
+\begin{iexercise}
+For each pair of atomic sentences,
+give the most\index{unifier, most general (MGU)} 
+\index{most general unifier (MGU)}\index{MGU (most general unifier)} general unifier if it exists:
+\begin{enumerate}
+\item \(P(A,A,B)\), \(P(x,y,z)\).
+\item \(Q(y,G(A,B))\), \(Q(G(x,x),y)\).
+\item \(\J{Older}(\J{Father}(y),y)\), \(\J{Older}(\J{Father}(x),\J{Jerry})\).
+\item \(\J{Knows}(\J{Father}(y),y)\), \(\J{Knows}(x,x)\).
+\end{enumerate}
+\end{iexercise} 
+% id=9.3 section=9.2.2
+
+\begin{exercise}[subsumption-lattice-exercise]%
+Consider the subsumption lattices shown in \figref{subsumption-lattice-figure} (\pgref{subsumption-lattice-figure}).
+\begin{enumerate}
+\item Construct the lattice for the sentence \(\J{Employs}(\J{Mother}(\J{John}),\J{Father}(\J{Richard}))\).
+\item Construct the lattice for the sentence \(\J{Employs}(\J{IBM},y)\) (``Everyone works for IBM''). 
+Remember to include every kind of query that unifies with the sentence.
+\item Assume that \prog{Store} indexes each sentence under every node in its subsumption lattice.
+Explain how \prog{Fetch} should work when some of these sentences
+contain variables; use as examples the sentences in (a) and (b) and
+the query \(\J{Employs}(x,\J{Father}(x))\).
+\end{enumerate}
+\end{exercise} 
+% id=9.5 section=9.2
+
+\begin{exercise}[fol-horses-exercise]%
+Write down logical representations for the following
+sentences, suitable for use with Generalized Modus\index{Modus Ponens} Ponens:
+\begin{enumerate}
+\item Horses, cows, and pigs are mammals.
+\item An offspring of a horse is a horse.
+\item Bluebeard is a horse.
+\item Bluebeard is Charlie's parent.
+\item Offspring and parent are inverse relations.
+\item Every mammal has a parent.
+\end{enumerate}
+\end{exercise} 
+% id=9.9 section=9.2
+
+\begin{exercise}
+These questions concern concern issues with substitution and Skolemization.
+\begin{enumerate}
+\item Given the premise $\All{x} \Exi{y} P(x,y)$, it is not valid to 
+conclude that $\Exi{q} P(q,q)$. Give an example of a predicate $P$ where
+the first is true but the second is false.
+\item Suppose that an inference engine is incorrectly written with the
+occurs check omitted, 
+so that it allows a literal like $P(x,F(x))$ to be unified with $P(q,q)$.
+(As mentioned, most standard implementations of Prolog actually do allow this.) 
+Show that such an inference engine will allow the conclusion
+$\Exi{y} P(q,q)$ to be inferred from the premise $\All{x} \Exi{y} P(x,y)$.
+\item
+Suppose that a procedure that converts first-order logic to clausal form
+incorrectly Skolemizes $\All{x} \Exi{y} P(x,y)$ to $P(x,Sk0)$---that is, it
+replaces $y$ by a Skolem constant rather than by a Skolem function of $x$.
+Show that an inference engine that uses such a procedure will likewise allow
+$\Exi{q} P(q,q)$ to be inferred from the premise $\All{x} \Exi{y} P(x,y)$.
+\item
+A common error among students is to suppose that, in unification, one is 
+allowed to substitute a term for a Skolem constant instead of for a variable.
+For instance, they will say that the formulas $P(Sk1)$ and $P(A)$ can be 
+unified
+under the substitution $\{ Sk1/A \}$. Give an example where this leads to an
+invalid inference.
+\end{enumerate}
+\end{exercise} 
+% id=9.23 section=9.2
+
+
+%%%% 9.3: Forward Chaining (4 exercises, 1 labelled)
+%%%% ===============================================
+
+\begin{iexercise}%% Russell Fall 2002 final
+This question considers Horn KBs, such as the following:
+\[\begin{array}{l}
+P(F(x)) \implies P(x)\\
+Q(x) \implies P(F(x))\\
+P(A)\\
+Q(B)
+\end{array}\]
+Let FC be a breadth-first forward-chaining algorithm
+that repeatedly adds all consequences of currently satisfied rules;
+let BC be a depth-first left-to-right backward-chaining algorithm
+that tries clauses in the order given in the KB. Which of the following are true?
+\begin{enumerate}
+\item FC will infer the literal \(Q(A)\).
+\item FC will infer the literal \(P(B)\).
+\item If FC has failed to infer a given literal, then it is not entailed by the KB.
+\item BC will return \(\J{true}\) given the query \(P(B)\).
+\item If BC does not return \(\J{true}\) given a query literal, then it is not entailed by the KB.
+\end{enumerate}
+\end{iexercise} 
+% id=9.4 section=9.3.2
+
+\begin{exercise}[csp-clause-exercise]%
+Explain how to write any given 3-SAT\index{three SAT@3-SAT} problem
+of arbitrary size using a single first-order definite clause
+and no more than 30 ground facts.
+\end{exercise} 
+% id=9.8 section=9.3.1
+
+\begin{uexercise}
+Suppose you are given the following axioms:
+\begin{quote}
+1. $0 \leq 3$. \\
+2. $7 \leq 9$. \\
+3. $\All{x} \; \; x \leq x$. \\
+4. $\All{x} \; \; x \leq x+0$. \\
+5. $\All{x} \; \; x+0 \leq x$. \\
+6. $\All{x,y} \; \; x+y \leq y+x$. \\
+7. $\All {w,x,y,z} \; \; w \leq y$ $\wedge$ $x \leq z$ $\implies$ $w+x \leq y+z$.
+\\
+8. $\All{x,y,z} \; \; x \leq y \wedge y \leq z \: \implies \: x \leq z$
+\end{quote}
+\begin{enumerate}
+\item Give a backward-chaining proof of the sentence $7 \leq 3+9$.
+(Be sure, of course, to use only the axioms given here, not anything else
+you may know about arithmetic.)  Show only the steps that leads to success,
+not the irrelevant steps.
+\item Give a forward-chaining proof of the sentence $7 \leq 3+9$.
+Again, show only the steps that lead to success.\end{enumerate}
+\end{uexercise} 
+% id=9.11 section=9.3
+
+\begin{iexercise}
+Suppose you are given the following axioms:
+\begin{quote}
+1. $0 \leq 4$. \\
+2. $5 \leq 9$. \\
+3. $\All{x} \; \; x \leq x$. \\
+4. $\All{x} \; \; x \leq x+0$. \\
+5. $\All{x} \; \; x+0 \leq x$. \\
+6. $\All{x,y} \; \; x+y \leq y+x$. \\
+7. $\All {w,x,y,z} \; \; w \leq y$ $\wedge$ $x \leq z$ $\implies$ $w+x \leq y+z$.
+\\
+8. $\All{x,y,z} \; \; x \leq y \wedge y \leq z \: \implies \: x \leq z$
+\end{quote}
+\begin{enumerate}
+\item Give a backward-chaining proof of the sentence $5 \leq 4+9$.
+(Be sure, of course, to use only the axioms given here, not anything else
+you may know about arithmetic.)  Show only the steps that leads to success,
+not the irrelevant steps.
+\item Give a forward-chaining proof of the sentence $5 \leq 4+9$.
+Again, show only the steps that lead to success.\end{enumerate}
+\end{iexercise} 
+% id=9.11 section=9.3
+
+\begin{exercise}
+A popular children's riddle is ``Brothers and sisters have I none, but
+that man's father is my father's son.''  Use the rules of the family
+domain (\secref{kinship-domain-section} on \pgref{kinship-domain-section}) to show who that man is.  You may apply
+any of the inference methods described in this chapter. Why do you think
+that this riddle is difficult?
+\end{exercise} 
+% id=9.12 section=9.3
+
+
+%%%% 9.4: Backward Chaining (9 exercises, 3 labelled)
+%%%% ================================================
+
+\begin{exercise}
+Suppose we put into a logical knowledge base a segment of the U.S.\ census
+data listing the age, city of residence, date of birth, and mother of
+every person, using social security numbers as identifying constants
+for each person. Thus, George's age is given by
+\(\J{Age}(\mbox{{443}-{65}-{1282}}, {56})\). Which of the following indexing schemes S1--S5
+enable an efficient solution for which of the queries Q1--Q4
+(assuming normal backward chaining)?
+\begin{description}
+\colonitem{S1} an index for each atom in each position.
+\colonitem{S2} an index for each first argument.
+\colonitem{S3} an index for each predicate atom.
+\colonitem{S4} an index for each {\it combination} of predicate and 
+first argument.
+\colonitem{S5} an index for each {\it combination} of predicate and second
+argument and an index for each first argument.
+\end{description}
+\begin{description}
+\colonitem{Q1} \(\J{Age}(\mbox{{443}-{44}-{4321}},x)\)
+\colonitem{Q2} \(\J{ResidesIn}(x,\J{Houston})\)
+\colonitem{Q3} \(\J{Mother}(x,y)\)
+\colonitem{Q4} \(\J{Age}(x,{34}) \land \J{ResidesIn}(x,\J{TinyTownUSA})\)
+\end{description}
+\end{exercise} 
+% id=9.6 section=9.4
+
+\begin{exercise}[standardize-failure-exercise]%
+One might suppose that we can avoid the problem of variable conflict
+in unification during backward chaining by
+standardizing\index{standardizing apart} apart all of the sentences in
+the knowledge base once and for all. Show that, for some sentences,
+this approach cannot work. ({\em Hint}: Consider a sentence in which one part
+unifies with another.)
+\end{exercise} 
+% id=9.7 section=9.4
+
+\begin{exercise}
+In this exercise,  use the sentences you wrote
+in \exref{fol-horses-exercise} to answer a question by using a
+backward-chaining algorithm.
+\begin{enumerate}
+\item
+Draw the proof tree generated by an exhaustive backward-chaining
+algorithm for the query \(\Exi{h}\J{Horse}(h)\), where clauses are matched
+in the order given.
+\item
+What do you notice about this domain?
+\item 
+How many solutions for \(h\) actually follow from your sentences?
+\item 
+Can you think of a way to find all of them? ({\em Hint}: See
+\citeA{Smith+al:1986}.)
+\end{enumerate}
+\end{exercise} 
+% id=9.10 section=9.4
+
+\begin{exercise}[bc-trace-exercise]%
+Trace the execution of the backward-chaining algorithm in
+\figref{backward-chaining-algorithm} (\pgref{backward-chaining-algorithm}) when it is applied to solve the crime
+problem (\pgref{west-problem-page}). Show the sequence of values taken on by  the \var{goals}
+variable, and arrange them into a tree.
+\end{exercise} 
+% id=9.14 section=9.4
+
+\begin{uexercise}
+The following Prolog code defines a predicate {\tt P}.
+(Remember that uppercase terms are variables, not constants, in Prolog.)
+\begin{verbatim}
+    P(X,[X|Y]).
+    P(X,[Y|Z]) :- P(X,Z).
+\end{verbatim}
+\begin{enumerate}
+\item Show proof trees and solutions for the queries
+{\tt P(A,[2,1,3])} and {\tt P(2,[1,A,3])}.
+\item What standard list operation does {\tt P} represent?
+\end{enumerate}
+\end{uexercise} 
+% id=9.15 section=9.4
+
+\begin{iexercise}
+The following Prolog code defines a predicate {\tt P}.
+(Remember that uppercase terms are variables, not constants, in Prolog.)
+\begin{verbatim}
+    P(X,[X|Y]).
+    P(X,[Y|Z]) :- P(X,Z).
+\end{verbatim}
+\begin{enumerate}
+\item Show proof trees and solutions for the queries
+{\tt P(A,[1,2,3])} and {\tt P(2,[1,A,3])}.
+\item What standard list operation does {\tt P} represent?
+\end{enumerate}
+\end{iexercise} 
+% id=9.15 section=9.4
+
+\begin{exercise}
+\prgex This exercise looks at sorting in Prolog.
+\begin{enumerate}
+\item
+Write Prolog clauses that define the predicate {\tt sorted(L)}, which
+is true if and only if list {\tt L} is sorted in ascending order.
+\item
+Write a Prolog definition for the predicate {\tt perm(L,M)}, which is
+true if and only if {\tt L} is a permutation of {\tt M}.
+\item Define {\tt sort(L,M)} ({\tt M} is a sorted version of {\tt L})
+using {\tt perm} and {\tt sorted}.
+\item Run {\tt sort} on longer and longer lists until you lose
+patience.
+What is the time complexity of your program?
+\item Write a faster sorting algorithm, such as insertion sort or
+quicksort, in Prolog.
+\end{enumerate}
+\end{exercise} 
+% id=9.16 section=9.4
+
+\begin{exercise}[diff-simplify-exercise]%
+\prgex
+This exercise looks at the recursive application of
+rewrite\index{rewrite rule} rules, using logic programming. A rewrite
+rule (or \term{demodulator}\index{demodulation} in \system{Otter} terminology)
+is an equation with a specified direction. For example, the rewrite
+rule \(x+0 \rightarrow x\) suggests replacing any expression that
+matches \(x+0\) with the expression \(x\). Rewrite
+rules are a key component of equational reasoning systems.
+Use the predicate {\tt rewrite(X,Y)} to represent rewrite
+rules. For example, the earlier rewrite rule is written as
+{\tt rewrite(X+0,X)}. Some terms are {\em primitive}
+and cannot be further simplified; thus, we  write
+{\tt primitive(0)} to say that 0 is a primitive term.
+\begin{enumerate}
+\item 
+Write a definition of a predicate {\tt simplify(X,Y)}, that is true when
+{\tt Y} is a simplified version of {\tt X}---that is, when no further
+rewrite rules apply to any subexpression of {\tt Y}.
+\item 
+Write a collection of rules for the simplification of expressions
+involving arithmetic operators, and apply your simplification
+algorithm to some sample expressions.
+\item
+Write a collection of rewrite rules for symbolic\index{symbolic differentiation} differentiation,
+and use them along with your simplification rules to differentiate and
+simplify expressions involving arithmetic expressions, including
+exponentiation.
+\end{enumerate}
+\end{exercise} 
+% id=9.17 section=9.4.2
+
+\begin{exercise}
+This exercise considers the implementation of search
+algorithms in Prolog.  Suppose that {\tt successor(X,Y)} is true when
+state {\tt Y} is a successor of state {\tt X}; and that {\tt goal(X)}
+is true when {\tt X} is a goal state. Write a definition for {\tt
+solve(X,P)}, which means that {\tt P} is a path (list of states)
+beginning with {\tt X}, ending in a goal state, and consisting of a
+sequence of legal steps as defined by {\tt successor}. You will find
+that depth-first search is the easiest way to do this. How easy would
+it be to add heuristic search control?
+\end{exercise} 
+% id=9.18 section=9.4.2
+
+
+%%%% 9.5: Resolution (8 exercises, 1 labelled)
+%%%% =========================================
+
+\begin{uexercise} % mt-f05
+Suppose a knowledge base contains just the following first-order Horn clauses:
+\begin{formula}
+        Ancestor(Mother(x),x)\\
+        Ancestor(x,y) \land Ancestor(y,z) \implies Ancestor(x,z)
+\end{formula}
+Consider a forward chaining algorithm that, on the $j$th iteration,
+terminates if the KB contains a sentence that unifies with the query,
+else adds to the KB every atomic sentence that can be inferred
+from the sentences already in the KB after iteration $j-1$.
+\begin{enumerate}
+\item For each of the following queries, say whether the algorithm will 
+(1) give an answer (if so, write down that answer); or (2) terminate with no 
+answer; or (3) never terminate.
+\begin{enumerate}
+\item $Ancestor(Mother(y),John)$
+\item $Ancestor(Mother(Mother(y)),John)$
+\item $Ancestor(Mother(Mother(Mother(y))),Mother(y))$
+\item $Ancestor(Mother(John),Mother(Mother(John)))$
+\end{enumerate}
+\item Can a resolution algorithm prove the sentence $\lnot Ancestor(John,John)$ from the original knowledge
+base? Explain how, or why not.
+\item Suppose we add the assertion that
+$\lnot(Mother(x)\eq x)$ and augment the resolution algorithm with
+inference rules for equality. Now what is the answer to (b)?
+\end{enumerate}
+\end{uexercise} 
+% id=extras-28-oct.11 section=9.5
+
+\begin{exercise}
+Let $\cal L$ be the first-order language with a single predicate $S(p,q)$,
+meaning ``$p$~shaves~ $q$.''  Assume a domain of people.
+\begin{enumerate}
+\item Consider the sentence ``There exists a person $P$ who shaves every
+one who does not shave themselves, and only people that do not shave 
+themselves.'' Express this in $\cal L$.
+\item Convert the sentence in (a) to clausal form.
+\item Construct a resolution proof to show that the clauses in (b) are
+inherently inconsistent. (Note: you do not need any additional axioms.)
+\end{enumerate}
+\end{exercise} 
+% id=9.13 section=9.5
+
+\begin{exercise}
+How can resolution be used to show that a sentence is valid? Unsatisfiable?
+\end{exercise} 
+% id=9.19 section=9.5
+
+\begin{exercise}
+Construct an example of two clauses that can be resolved together in two 
+different ways giving two different outcomes.
+\end{exercise} 
+% id=9.20 section=9.5
+
+\begin{uexercise}
+From ``Horses are animals,'' it follows that ``The head of a horse is
+the head of an animal.''  Demonstrate that this inference is valid by
+carrying out the following steps: 
+\begin{enumerate}
+\item Translate the premise and the conclusion into the language of
+first-order logic.  Use three predicates: \(\J{HeadOf}(h,x)\) (meaning ``\(h\) is the head of \(x\)''), \(\J{Horse}(x)\), and
+\(\J{Animal}(x)\).
+\item Negate the conclusion, and convert the premise and the negated
+conclusion into conjunctive normal form.
+\item Use resolution to show that the conclusion follows from the
+premise.
+\end{enumerate}
+\end{uexercise} 
+% id=9.21 section=9.5
+
+\begin{iexercise}
+From ``Sheep are animals,'' it follows that ``The head of a sheep is
+the head of an animal.''  Demonstrate that this inference is valid by
+carrying out the following steps: 
+\begin{enumerate}
+\item Translate the premise and the conclusion into the language of
+first-order logic.  Use three predicates: \(\J{HeadOf}(h,x)\) (meaning ``\(h\) is the head of \(x\)''), \(\J{Sheep}(x)\), and
+\(\J{Animal}(x)\).
+\item Negate the conclusion, and convert the premise and the negated
+conclusion into conjunctive normal form.
+\item Use resolution to show that the conclusion follows from the
+premise.
+\end{enumerate}
+\end{iexercise} 
+% id=9.21 section=9.5
+
+\begin{exercise}[quantifier-order-exercise]%
+Here are two sentences in the language of first-order
+logic:
+\begin{itemize}
+\item[] {\bf (A)} \(\All{x} \Exi{y} ( x \geq y )\)
+\item[] {\bf (B)} \(\Exi{y} \All{x} ( x \geq y )\)
+\end{itemize}
+\begin{enumerate}
+\item Assume that the variables range over all the natural numbers
+\(0,1,2,\ldots, \infty\) and that the ``\(\geq\)'' predicate means
+``is greater~than or equal~to.''  Under this interpretation, translate
+(A) and (B) into English.
+\item Is (A) true under this interpretation?
+\item Is (B) true under this interpretation?
+\item Does (A) logically entail (B)?  
+\item Does (B) logically entail (A)?
+\item Using resolution, try to prove that (A) follows from (B).  Do
+this even if you think that (B) does not logically entail (A);
+continue until the proof breaks down and you cannot proceed (if it
+does break down). Show the unifying substitution for each resolution step.
+If the proof fails, explain exactly where, how, and why it breaks
+down.
+\item Now try to prove that (B) follows from (A).  
+\end{enumerate}
+\end{exercise} 
+% id=9.22 section=9.5
+
+\begin{exercise}
+Resolution can produce nonconstructive proofs for queries with variables,
+so we had to introduce special mechanisms to extract definite answers.
+Explain why this issue does not arise with knowledge bases containing only definite clauses.
+\end{exercise} 
+% id=9.24 section=9.5
+
+\begin{exercise}
+We said in this chapter that resolution cannot be used to generate all
+logical consequences of a set of sentences.  Can any algorithm do
+this?
+\end{exercise} 
+% id=9.25 section=9.5
+
+
+
+
+
+
+%% \begin{exercise}
+%% <<rewrite this one]]
+%% Show that the final state of the knowledge base after a series of
+%% calls to \prog{Forward-Chain} is independent of the order of the calls.
+%% Does the number of inference steps required depend on the order
+%% in which sentences are added? Suggest a useful heuristic for choosing an order.
+%% \end{exercise}
+
+% \begin{exercise}
+% Why do you think that Prolog includes no heuristics for guiding the search for a solution to the query?
+% \end{exercise}
+
+% \begin{exercise}
+% \prgex
+% The code repository contains a logical reasoning system whose
+% components can be replaced by other versions.
+% Re-implement some or all of the following components, and make sure
+% that the resulting system works using the circuit example from
+% \chapref{kr-chapter}.
+% \begin{enumerate}
+% \item Basic data types and access functions for sentences and their components.
+% \item \prog{Store} and \prog{Fetch} for atomic sentences (disregarding
+% efficiency). 
+% \item Efficient indexing mechanisms for \prog{Store} and \prog{Fetch}.
+% \item A unification algorithm.
+% \item A forward-chaining algorithm.
+% \item A backward-chaining algorithm using iterative deepening.
+% \end{enumerate}
+% \end{exercise}
+
+
+
+%% \begin{exercise}\label{completeness-lemma-exercise}%
+%% In this exercise, you will complete the proof of the ground resolution theorem
+%% given in the chapter. The proof rests on the claim that 
+%% if {\mathdelim}T{\mathdelim} is the resolution closure of a set of ground clauses {\mathdelim}S'{\mathdelim},
+%% and {\mathdelim}T{\mathdelim} does not contain the clause {\mathdelim}False{\mathdelim}, then a satisfying assignment
+%% can be constructed for {\mathdelim}S'{\mathdelim} using the construction given in the chapter.
+%% Show that the assignment does indeed satisfy {\mathdelim}S'{\mathdelim}, as claimed.
+%% \end{exercise}
+
+\resetmedskipamount

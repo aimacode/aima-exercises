@@ -1,21 +1,18 @@
-
+[Exercise 5.7 \[minimax-optimality-exercise\]](ex_7/)
 
 Prove the following assertion: For every
 game tree, the utility obtained by max using minimax
 decisions against a suboptimal min will never be lower than
 the utility obtained playing against an optimal min. Can
 you come up with a game tree in which max can do still
-better using a <i>suboptimal</i> strategy against a suboptimal
+better using a *suboptimal* strategy against a suboptimal
 min?
 
+<center>
+<b id="line-game4-figure">Figure [line-game4-figure]</b> The starting position of a simple game.
+</center>
 
-<figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/line-game4.svg" alt="line-game4-figure" id="line-game4-figure" style="width:100%">
-  <figcaption><center><b>The starting position of a simple game.</b></center></figcaption>
-</figure>
-
-
-
+![line-game4-figure](http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/line-game4.svg)
 
 Player $A$ moves first. The two players take turns moving, and each
 player must move his token to an open adjacent space in either

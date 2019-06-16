@@ -1,4 +1,4 @@
+[Exercise 16.17 \[airport-au-id-exercise\]](ex_17/)
 
-
-Repeat Exercise <a href="#">airport-id-exercise</a>, using the action-utility
-representation shown in Figure <a href="#">airport-au-id-figure</a>.
+Repeat Exercise [airport-id-exercise](#/), using the action-utility
+representation shown in Figure [airport-au-id-figure](#/).

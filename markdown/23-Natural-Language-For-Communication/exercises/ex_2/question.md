@@ -1,6 +1,6 @@
+[Exercise 23.2](ex_2/)
 
-
-An <i>HMM grammar</i> is essentially a standard HMM whose state
+An *HMM grammar* is essentially a standard HMM whose state
 variable is $N$ (nonterminal, with values such as $Det$, $Adjective$,
 $Noun$ and so on) and whose evidence variable is $W$ (word, with values
 such as $is$, $duck$, and so on). The HMM model includes a prior

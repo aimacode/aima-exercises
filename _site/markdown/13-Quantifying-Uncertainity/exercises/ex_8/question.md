@@ -1,12 +1,12 @@
-
+[Exercise 13.8](ex_8/)
 
 Given the full joint distribution shown in
-Figure <a href="#">dentist-joint-table</a>, calculate the following:<br>
+Figure [dentist-joint-table](#/), calculate the following:
 
-1.  $\textbf{P}({toothache})$.<br>
+1.  $\textbf{P}({toothache})$.
 
-2.  $\textbf{P}({Cavity})$.<br>
+2.  $\textbf{P}({Cavity})$.
 
-3.  $\textbf{P}({Toothache}{{\,|\,}}{cavity})$.<br>
+3.  $\textbf{P}({Toothache}{{\,|\,}}{cavity})$.
 
 4.  $\textbf{P}({Cavity}{{\,|\,}}{toothache}\lor {catch})$.

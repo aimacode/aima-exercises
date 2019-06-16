@@ -1,125 +1,159 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Exercise 11.3 –  – </title>
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-  <title>
     
-      Exercise 11.3 &middot; AIMA Exercises 
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
     
-  </title>
+    <meta name="author" content="" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
-  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
-  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
-  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    
+    <meta property="og:title" content="Exercise 11.3" />
+    <meta property="twitter:title" content="Exercise 11.3" />
+    
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
+<!--     <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+ -->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-</head>
-
-  <body class="theme-base-08">
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-<!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>Artificial Intelligence : A Modern Approach</p>
-  </div>
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
-    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
-  <span class="sidebar-nav-item">Part - II Problem Solving</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
-  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
-  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
-  <span class="sidebar-nav-item">Part - V Lerning</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
-  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
-  <span class="sidebar-nav-item">Part - VII Conclusions</span>
-  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
-  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
-    <span class="sidebar-nav-item">Currently v1.0.0</span>
-  </nav>
-
-  <div class="sidebar-item">
-    <p>
-      &copy; 2019. All rights reserved.
-    </p>
-  </div>
-</div>
-
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
-            <small>AIMA Exercises </small>
-          </h3>
-          <br>
+  <body>
+    <input type="checkbox" id="toggleheader">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
-              <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
-            </form>
-            <br>
-            </center>
-
-
+            <h1>Aritificial Intelligence: A Modern Approach</h1>
+            <h3>Stuart J. Russell and Peter Norvig</h3>
+          </center>
+        </header>
       </div>
     </div>
-      <div class="container content">
-        <article class="post">
+    <input type="checkbox" id="toggletoc">
+    <div class="toc">
+      <div>Table of Contents</div>
+      <form action="/search" id="site_search" autocomplete="off" method="GET">
+        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
+      </form>
+      <ul>
+	<li>
+		<span>Part &#x2160; Artificial Intelligence</span>
+		<ol>
+			<li><a href="/intro-exercises">1. Introduction</a></li>
+			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2161; Problem-solving</span>
+		<ol>
+			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
+			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
+			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
+			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
+		<ol>
+			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
+			<li><a href="/fol-exercises">8. First Order Logic</a></li>
+			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
+			<li><a href="/planning-exercises">10. Classical Planning</a></li>
+			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
+			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2163; Uncertain knowledge and reasoning</span>
+		<ol>
+			<li><a href="/probability-exercises">13. Quantifying Uncertainity</a></li>
+			<li><a href="/bayes-nets-exercises">14. Probabilistic Reasoning</a></li>
+			<li><a href="/dbn-exercises">15. Probabilistic Reasoning Over Time</a></li>
+			<li><a href="/decision-theory-exercises">16. Making Simple Decisions</a></li>
+			<li><a href="/complex-decisions-exercises">17. Making Complex Decision</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2164; Learning</span>
+		<ol>
+			<li><a href="/concept-learning-exercises">18. Learning From Examples</a></li>
+			<li><a href="/ilp-exercises">19. Knowledge In Learning</a></li>
+			<li><a href="/bayesian-learning-exercises">20. Learning Probabilistic Models</a></li>
+			<li><a href="/reinforcement-learning-exercises">21. Reinforcement Learning</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2165; Communicating, perceiving, and acting</span>
+		<ol>
+			<li><a href="/nlp-communicating-exercises">22. Natural Language Processing</a></li>
+			<li><a href="/nlp-english-exercises">23. Natural Language For Communication</a></li>
+			<li><a href="/perception-exercises">24. Perception</a></li>
+			<li><a href="/robotics-exercises">25. Robotics</a></li>
+		</ol>
+	</li>
+	<li>
+		<span>Part &#x2166; Conclusions</span>
+		<ol>
+			<li><a href="/philosophy-exercises">26. Philosophical Foundations</a></li>
+			<li><a href="/#/"> Future Exercises</a></li>
+		</ol>
+	</li>
+</ul>
+    </div>
+    <div id="main" role="main" class="container">
+      
+
+
+
+<ul class="breadcrumb">
+
+  <label for="toggletoc" class="toc-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+   
+    <li><a class="breadcrumb-text" href="/">home</a> &#187; </li>
+
+    
+     
+     
+  <!-- /advanced-planning-exercises -->
+     <li><a class="breadcrumb-text" href="/advanced-planning-exercises">advanced-planning-exercises</a> &#187; </li>
+
+     
+    
+   
+
+<label for="toggleheader" class="toggleheader" title="Toggle Header">
+    &#9167;
+</label>
+</ul>
+
+      <article class="post">
 
   <div class="entry">
     <div class="mode_btn view_question_source">
-
+      <a class="edit_question" href="#">Edit Question</a>
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,84 +177,113 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 3
-        </a>
+<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_3" data-rating="0"></i></div>
+<p><a href="ex_3/">Exercise 11.3 [HLA-unique-exercise]</a></p>
 
-        <a class="solve_question" id="solve_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="ex11.3" class="fas fa-pen" style="color:white"></i>
-        </button>
-        </a>
-
-        <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex11.3');" href="#" id="buttonsolve">
-        <i id="ex11.3" class="far fa-edit" style="color:white"></i>
-        </button>
-        </a>
-
-    </div>
-    <div class="card-body">
-        <p class="card-text">
-
-Suppose that a high-level action has exactly one
+<p>Suppose that a high-level action has exactly one
 implementation as a sequence of primitive actions. Give an algorithm for
 computing its preconditions and effects, given the complete refinement
-hierarchy and schemas for the primitive actions.
-</p>
-    </div>
-</div>
+hierarchy and schemas for the primitive actions.</p>
 
-<p><br /></p>
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
-
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
-        </button>
-
-</div>
-<div class="card-body" id="hideandviewanswers">
-
-</div></div>
 
   </div>
+
+  <div class="answer_container">
+    <div>
+      <b>Answer</b>
+      <a class="edit_answer" href="#">Improve This Solution</a>
+    </div>
+    <div class="answer_content"></div>
+  </div>
+
+<div class="container exercise_mode">
+  <div class="mode_btn view_answer">View Answer</div> 
+  <div class="mode_btn request_answer"><a href="#">Request Answer</a></div>
+</div>
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'nalinc';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
 </article>
 
-<script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('11-Planning-And-Acting-In-The-Real-World');
-  var exerciseName = String('ex_3');
-  var chapterNamestripped = String('11planningAndActingInTheRealWorld');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+<script type="text/javascript">
+  $(document).ready(function(){
+    var chapter  = String('/advanced-planning-exercises/ex_3/')
+    var chapterName = String('11-Planning-And-Acting-In-The-Real-World')
+    console.log(chapter)
+    var chapterLabel = chapter.match(/\/([^\/]*)\//, "")[1]
+    exerciseName = $(".arrow-up").attr("data-exercise");
+    $.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel, function( data ) {
+      console.log(data)
+      $("i[data-chapter='"+chapterLabel+"']").each(function(index,element){
+        ex = $(element).data("exercise")
+        if(ex in data){
+          console.log(data[ex])
+          $(element).attr("data-rating",data[ex])
+        }
+        $(".arrow-up").removeClass("loader")
+      })
+    });
+    $(document).on('click',".view_answer",function(e){
+      ele = $(".answer_container")
+      if($(".answer_container").is(":visible")){
+        $(this).html("View Answer");
+        $(".answer_container").hide();
+      }
+      else{
+        ele.addClass("loader")
+        url = "//raw.githubusercontent.com/aimacode/aima-exercises/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName+"/answer.md"
+        $.get(url, function( data ) {
+          $(".answer_content").html(data)
+          ele.removeClass("loader")
+        });
+        $(this).html("Hide Answer");
+        $(".answer_container").show();
+      }
+      
+    })
+    $(document).on('click',"i[data-chapter]",function(e){
+      ele = $(e.target)
+      ele.addClass("loader")
+      $.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterLabel+"/"+exerciseName, function( data ) {
+        console.log(data)
+        ele.attr("data-rating",data["rating"])
+        ele.removeClass("loader")
+      });
+    });
+    base_url = "http://github.com/aimacode/aima-exercises/"
+    path = "edit/gh-pages/markdown/"+chapterName+"/exercises/"+exerciseName
+    $(".edit_question").attr("href",base_url+path+"/question.md")
+    $(".edit_answer").attr("href",base_url+path+"/answer.md")
+    $(".request_answer a").attr("href",base_url+"issues/new?title=Request to get solution for Exercise '"+exerciseName+"' in '"+chapterName+"'&body=Describe the issue/requirement in detail").attr("target","_blank");
+  });
 </script>
 
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+        </footer>
       </div>
+    </div>
+
+    
 
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-        <script src="/aima-exercises/main.js"></script>
   </body>
 </html>

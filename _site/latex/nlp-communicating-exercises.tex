@@ -1,0 +1,185 @@
+%%%% 22.1: Language Models (3 exercises, 0 labelled)
+%%%% ===============================================
+
+\begin{uexercise}\prgex
+This exercise explores the quality of the \(n\)-gram model of language.
+Find or create a monolingual corpus of 100,000 words or more. Segment it
+into words, and compute the frequency of each word. How many distinct
+words are there?  Also count frequencies of
+bigrams (two consecutive words) and trigrams (three consecutive
+words).  Now use those frequencies to generate language: from the
+unigram, bigram, and trigram models, in turn, generate a 100-word text
+by making random choices according to the frequency counts.  Compare
+the three generated texts with actual language. Finally, calculate the
+perplexity of each model.
+\end{uexercise} 
+% id=22.1 section=22.1
+
+\begin{exercise}\prgex
+  Write a program to do \term{segmentation}\index{segmentation (of words)} of words without spaces.
+Given a string, such as the URL
+``thelongestlistofthelongeststuffatthelongestdomainnameatlonglast.com,''
+return a list of component words: [``the,'' ``longest,'' ``list,''
+\(\ldots\)]. This task is useful for parsing URLs, for spelling correction when words runtogether,
+and for languages such as Chinese that do not have spaces between words. It can be solved
+with a unigram or bigram word model and a dynamic programming algorithm similar to the Viterbi algorithm.
+\end{exercise} 
+% id=22.3 section=22.1
+
+\begin{iexercise}\prgex
+  {\em Zipf's law} of word distribution states the following: Take a large corpus
+of text, count the frequency of every word in the corpus, and then rank these
+frequencies in decreasing order. Let $f_{I}$ be the $I$th largest frequency in
+this list; that is, $f_{1}$ is the frequency of the most common word (usually
+``the''), $f_{2}$ is the frequency of the second most common word, and so on.
+Zipf's law states that $f_{I}$ is approximately equal to $\alpha / I$ for
+some constant $\alpha$.  The law tends to be highly accurate except for 
+very small and very large values of $I$.
+
+Choose a corpus of at least 20,000 words of online text, and verify 
+Zipf's law experimentally. Define an error measure and find the value of
+$\alpha$ where Zipf's law best matches your experimental data. Create
+a log--log graph plotting $f_{I}$ vs. $I$ and $\alpha/I$ vs. $I$. (On
+a log--log graph, the function $\alpha/I$ is a straight line.)
+In carrying out the experiment, be sure to eliminate any formatting tokens
+(e.g., HTML tags) and normalize upper and lower case. 
+\end{iexercise} 
+% id=22.7 section=22.1
+
+
+%%%% 22.2: Text Classification (2 exercises, 0 labelled)
+%%%% ===================================================
+
+\begin{exercise}\prgex
+(Adapted from \citeA{Jurafsky+Martin:2000}.)  In this exercise you
+will develop a classifier for authorship: given a text, the classifier
+predicts which of two candidate authors wrote the text.  Obtain
+samples of text from two different authors.  Separate them into
+training and test sets. Now train a language model on the training
+set. You can choose what features to use; \(n\)-grams of words or
+letters are the easiest, but you can add additional features that you
+think may help. Then compute the probability of the text under each
+language model and chose the most probable model. Assess the accuracy
+of this technique. How does accuracy change as you alter the set of
+features? This subfield of linguistics is called
+\newtermi{stylometry}; its successes include the identification of the
+author of the disputed {\em Federalist Papers} \cite{Mosteller+Wallace:1964}
+and some disputed works of Shakespeare
+\cite{Hope:1994}. \citeA{Khmelev+Tweedie:2001} produce good results
+with a simple letter bigram model.
+\end{exercise} 
+% id=22.0 section=22.2
+
+\begin{exercise}\prgex
+This exercise concerns the classification of \indextext{spam email}.
+Create a corpus of spam email and one of non-spam mail.  Examine each
+corpus and decide what features appear to be useful for
+classification: unigram words? bigrams? message length, sender, time
+of arrival?  Then train a classification algorithm (decision tree,
+naive Bayes, SVM, logistic regression, or some other algorithm of your
+choosing) on a training set and report its accuracy on a test set.
+\end{exercise} 
+% id=22.2 section=22.2
+
+
+%%%% 22.3: Information Retrieval (3 exercises, 0 labelled)
+%%%% =====================================================
+
+\begin{exercise}
+Create a test set of ten queries, and pose them to three major Web
+search engines. Evaluate each one for precision at 1, 3, and 10
+documents. Can you explain the
+differences between engines?
+\end{exercise} 
+% id=22.4 section=22.3
+
+\begin{uexercise}
+Try to ascertain which of the search engines from the previous
+exercise are using case folding, stemming, synonyms, and spelling
+correction.
+\end{uexercise} 
+% id=22.5 section=22.3
+
+\begin{iexercise}
+Estimate how much storage space is necessary for the index to a
+100 billion-page corpus of Web pages.  Show the assumptions you made.
+\end{iexercise} 
+% id=22.6 section=22.3
+
+
+%%%% 22.4: Information Extraction (2 exercises, 0 labelled)
+%%%% ======================================================
+
+\begin{exercise}\prgex
+Write a regular expression or a short program to extract company
+names. Test it on a corpus of business news articles. Report your
+recall and precision.
+\end{exercise} 
+% id=22.8 section=22.4
+
+\begin{exercise}
+Consider the problem of trying to evaluate the quality of an IR system that
+returns a ranked list of answers (like most Web search engines). The 
+appropriate measure of quality depends on the presumed model of what the searcher
+is trying to achieve, and what strategy she employs.
+For each of the
+following models, propose a corresponding numeric measure.
+
+\begin{enumerate}
+\item The searcher will look at the first twenty answers returned, with the
+objective of getting as much relevant information as possible.
+\item The searcher needs only one relevant document, and will go down the list
+until she finds the first one. 
+\item The searcher has a fairly narrow query and is able to examine all the
+answers retrieved. She wants to be sure that she has seen everything in the
+document collection that is relevant to her query. (E.g., a lawyer wants to be
+sure that she has found {\em all\/} relevant precedents, and is willing to
+spend considerable resources on that.) 
+\item The searcher needs just one document relevant to the query, and can 
+afford to
+pay a research assistant for an hour's work looking through the results.
+The assistant can look through 100 retrieved documents in an hour. 
+The assistant will charge the searcher for the full hour regardless of whether
+he finds it immediately or at the end of the hour.
+\item The searcher will look through all the answers. Examining a document
+has cost \$$A$; finding a relevant document has value \$$B$; failing to
+find a relevant document has cost \$$C$ for each relevant document not found.
+\item The searcher wants to collect as many relevant documents as possible,
+but needs steady encouragement. She looks through the documents in order. If the
+documents she has looked at so far are mostly good, she will continue; otherwise, she will stop.
+\end{enumerate}
+
+\end{exercise} 
+% id=22.9 section=22.4
+
+
+%% Ch 22 exercises
+
+
+% \begin{exercise}
+% Some sports announcers have been known to celebrate a score with the drawn out
+% pronunciation [g ow ow ow ow ow ow el].  Draw a word HMM for ``goal'' such
+% that the most probable path has a sequence of four [ow]s, but any number
+% greater than 1 is possible.
+% \end{exercise}
+
+% \begin{exercise}
+% The Viterbi\index{Viterbi algorithm} algorithm finds the most probable
+% sequence of phones corresponding 
+% to the speech signal.  Under the assumption that some words can be pronounced
+% with more than one sequence of phones, explain why the Viterbi algorithm only
+% computes an approximation to {\mathdelim}P(words|signal){\mathdelim}.
+% \end{exercise}
+
+
+
+% \begin{exercise}\label{dictionary-error-exercise}%
+% One way to define the task of spelling\index{spelling correction}
+% correction is this: given a misspelled word and a dictionary of
+% correctly spelled words, find the word(s) in the dictionary that can
+% be transformed into the misspelled word in one insertion, deletion,
+% substitution, or transposition.  Given a dictionary of {\mathdelim}w{\mathdelim} words and a
+% misspelled word that is {\mathdelim}k{\mathdelim} letters long, give the average case time
+% complexity of spelling correction for a dictionary implemented as (a)
+% a hash table, (b) a b-tree, and (c) a trie.
+% \end{exercise}

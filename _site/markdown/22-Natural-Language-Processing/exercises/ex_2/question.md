@@ -1,4 +1,4 @@
-
+[Exercise 22.2](ex_2/)
 
 Write a program to do **segmentation** of
 words without spaces. Given a string, such as the URL

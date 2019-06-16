@@ -1,12 +1,12 @@
-
+[Exercise 18.13 \[gain-ratio-DTL-exercise\]](ex_13/)
 
 In
-Section <a href="#">broadening-decision-tree-section</a>, we noted that
+Section [broadening-decision-tree-section](#/), we noted that
 attributes with many different possible values can cause problems with
 the gain measure. Such attributes tend to split the examples into
 numerous small classes or even singleton classes, thereby appearing to
 be highly relevant according to the gain measure. The
-<b>gain-ratio</b> criterion selects attributes
+**gain-ratio** criterion selects attributes
 according to the ratio between their gain and their intrinsic
 information content—that is, the amount of information contained in the
 answer to the question, “What is the value of this attribute?” The

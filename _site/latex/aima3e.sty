@@ -1,0 +1,2082 @@
+% aima3e.sty - style file for AIMA consistent with latex2e
+
+% these are needed for international/us version split -- Nick
+% 	Do not use the comment environment provided by \usepackage{comment}, 
+%   somehow the below code  mysteriously clobbers it into outputting {\sc RR}, 
+%   even after commenting out \renewcommand{\comment}...
+\usepackage{comment}	% this must be before \renewcommand{\comment} below
+\usepackage{ifthen}
+
+
+\setcounter{tocdepth}{1}
+
+\def\aima{{\em AIMA}}
+\def\kernel{{\mathcal{K}}}
+\newcommand{\emorbf}{\bf} %% Bold or italics for subentries in 26,27?
+\newcommand{\citeAIEEE}[1]{\citeA{#1} \textcircled{c} IEEE}  %% daf says no ``Used by permission.'' %%
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\def\returns{\rightarrow}
+\newcommand{\constraint}[2]{\langle #1 , #2 \rangle}
+% a list of variables in a CSP constraint
+\newcommand{\varlist}[1]{(#1)}
+%% pnorvig Nov 15 2000
+\newcommand{\condstep}[3]{\mbf{if}~#1~\mbf{then}~#2~\mbf{else}~#3}
+\newcommand{\whilestep}[2]{\mbf{while}~#1~\mbf{do}~#2}
+\newcommand{\condeff}[2]{\mbf{when}~#1{:}~#2}
+%%%SR: changed to use \condeff only in math mode (no stealth dollars)
+%%%\newcommand{\condeffmathmode}[2]{{\mbox{\key{when}} #1: #2}}
+\newcommand{\codenobox}[1]{\code{#1}}
+\newenvironment{pddl}{\begin{formula}\begin{array}[t]{l}}{\end{array}\end{formula}}
+
+
+\newcommand{\TermBox}[1]{\(\begin{array}{c}\, \\ \, \fbox{#1} \, \\ \, \end{array}\)}
+
+\newskip\saveskip
+\newskip\saveindent
+\saveskip=\baselineskip
+%% For aima2e was \setcounter{secnumdepth}{1} 
+\setcounter{secnumdepth}{2} 
+
+%%%%%%%%% names for language customization
+
+\def\prefacename{Preface}
+\def\authorpagename{About the Authors}
+\def\contentsname{Contents}
+\def\bibname{Bibliography}
+\def\indexname{Index}
+
+%%%%%%%%% Hyphenation
+\hyphenation{Diet-ter-ich}%%%% This could go somewhere else...
+\hyphenation{Rein-frank}
+\hyphenation{ra-tion-al-ity}
+\hyphenation{ra-tion-al}
+
+%%%%%%%%% defining the text files %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\includefront{%
+\include{front/halftitle-page}
+\include{front/series-page}
+\recto
+\include{front/title-page}
+\include{front/copyright-page}
+\recto
+\include{front/dedication-page}
+\recto
+\include{front/preface}
+\newpage
+\include{front/author-page}
+\recto
+%\include{front/contents-summary}
+%\newpage
+%\recto
+\include{front/contents-full}}
+
+\def\includefronti{% INTERNATIONAL VERSION
+\include{front/halftitle-page}
+\include{front/series-page}
+\recto
+\include{front/phipe-title-page}
+\include{front/phipe-copyright-page}
+\recto
+\include{front/dedication-page}
+\recto
+\include{front/phipe-preface}
+\newpage
+\include{front/author-page}
+\recto
+%\include{front/contents-summary}
+%\newpage
+%\recto
+\include{front/contents-full}}
+
+
+\def\includebody{%
+%% \include{part1}%
+\include{intro-chapter}%01
+\include{agents-chapter}%02
+%% \include{part2}%
+\include{search-chapter}%03
+\include{advanced-search-chapter}%04
+\include{game-playing-chapter}%05
+\include{csp-chapter}%06
+%% \include{part3}%
+\include{knowledge+logic-chapter}%07
+\include{fol-chapter}%08
+\include{logical-inference-chapter}%09
+\include{planning-chapter}%10
+\include{advanced-planning-chapter}%11
+\include{kr-chapter}%12
+%% \include{part4}%
+\include{probability-chapter}%13
+\include{bayes-nets-chapter}%14
+\include{dbn-chapter}%15
+\include{decision-theory-chapter}%16
+\include{complex-decisions-chapter}%17
+%% \include{part5}%
+\include{concept-learning-chapter}%18
+\include{ilp-chapter}%19
+\include{bayesian-learning-chapter}%20
+\include{reinforcement-learning-chapter}%21
+%% \include{part6}%
+\include{nlp-communicating-chapter}%22
+\include{nlp-english-chapter}%23
+\include{perception-chapter}%24
+\include{robotics-chapter}%25
+%% \include{part7}%
+\include{philosophy-chapter}%26
+\include{future-chapter}%27
+\appendix%
+\include{math-appendix}%
+\include{programming-appendix}}
+
+\def\includeend{%
+\begin{mybibliography}
+\bibliographystyle{theapa-aima}
+\bibliography{all}
+\end{mybibliography}
+\input{newbook.ind}}
+
+
+%%%%%%%%% document typesetting controls
+\clubpenalty=400 \widowpenalty=400
+
+
+%%%%%%%%% design elements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% page headings
+
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+\def\@evenhead{{\mdseries\hspace*{-\headeroffset}%
+\thepage\hfill\leftmark
+\hspace*{-\textplusmarginwidth}\rule[-2mm]{\textplusmarginwidth}{\fboxrule}}}%
+\def\@oddhead{{\mdseries\hspace*{-\headeroffset}%
+\rightmark\hfill \thepage%
+\hspace*{-\textplusmarginwidth}\rule[-2mm]{\textplusmarginwidth}{\fboxrule}}}%
+%%\def\@oddfoot{\hfill\raisebox{-\baselineskip}[0pt][0pt]{{\small\tt AIMA3e} \copyright\ {\small\tt 2008 by Russell and Norvig. DRAFT---DO NOT DISTRIBUTE}}}%
+%%\def\@evenfoot{\raisebox{-\baselineskip}[0pt][0pt]{{\small\tt AIMA3e} \copyright\ {\small\tt 2008 by Russell and Norvig. DRAFT---DO NOT DISTRIBUTE\hfill}}}%
+\def\@oddfoot{}%
+\def\@evenfoot{}%
+\def\chaptermark##1{\markboth{\chaptermarker\chaptertitle}{}}%
+\def\sectionmark##1{\markright{\sectionmarker\sectiontitle}}%
+\def\subsectionmark##1{}}
+
+
+\pagestyle{myheadings}
+
+%% change to make the blank page REALLY blank
+\def\recto{\ifodd\c@page\else\thispagestyle{empty}\ \newpage\fi}
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+%% use this to start text at the headline level
+\def\verytop{\vspace*{-\headtotal}}
+
+%%%%%% Front matter, including table of contents
+
+\newcommand{\preface}{%
+\noindent{\Large\ct \prefacename}%
+\def\chaptermarker{}\def\chaptertitle{\prefacename}%
+\def\sectionmarker{}\def\sectiontitle{\prefacename}%
+\chaptermark{}\sectionmark{}
+\thispagestyle{plain}%
+\bigskip\noindent}
+
+\newcommand{\authors}{%
+\noindent{\Large\ct \authorpagename}%
+\def\chaptermarker{}\def\chaptertitle{\authorpagename}%
+\def\sectionmarker{}\def\sectiontitle{\authorpagename}%
+\chaptermark{}\sectionmark{}
+\thispagestyle{plain}%
+\bigskip\noindent}
+
+\newcommand{\summarycontents}{%
+\summarycontentstyle
+\noindent{\Large\ct Summary of Contents}%
+\def\chaptermarker{}\def\chaptertitle{Summary of Contents}%
+\def\sectionmarker{}\def\sectiontitle{Summary of Contents}%
+\chaptermark{}\sectionmark{}
+\thispagestyle{plain}%
+\bigskip\noindent}
+
+\newcommand{\contents}{%
+\fullcontentstyle
+\noindent{\Large\ct \contentsname}%
+\def\chaptermarker{}\def\chaptertitle{\contentsname}%
+\def\sectionmarker{}\def\sectiontitle{\contentsname}%
+\chaptermark{}\sectionmark{}
+\thispagestyle{plain}%
+\bigskip\noindent}
+
+\def\recordcontents{\begingroup
+  \makeatletter
+  \if@filesw \expandafter\newwrite\csname tf@toc\endcsname
+             \immediate\openout \csname tf@toc\endcsname \jobname.toc\relax
+  \fi \global\@nobreakfalse \endgroup}
+
+\def\l@part#1#2{\addpenalty{-\@highpenalty}%
+   \addvspace{\contentspartskip}% space above part line
+   \begingroup
+   \@tempdima 3em
+     \parindent \z@ \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     {\large \bfseries
+     \leavevmode
+     #1\hfil \hbox to\@pnumwidth{\hss #2}}\par
+     \nobreak
+    \global\@nobreaktrue
+    \everypar{\global\@nobreakfalse\everypar{}}%% suggested by
+
+   \endgroup}
+
+\def\l@chapter#1#2{\addpenalty{-\@highpenalty}%
+   \vskip \contentschapskip
+   \@tempdima 1.5em
+   \begingroup
+     \parindent \z@ \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     \bfseries
+     \leavevmode
+      \advance\leftskip\@tempdima
+      \maybeindent
+     #1\nobreak\maybedotfill \nobreak\hbox to\@pnumwidth{\hss #2}\par
+     \penalty\@highpenalty
+   \endgroup}
+
+\def\l@section{\@dottedtocline{1}{1.5em}{2.8em}}
+\def\l@subsection{\@dottedtocline{2}{4.3em}{3.5em}}
+\def\l@subsubsection{\@dottedtocline{3}{7.8em}{4.1em}}
+\def\l@paragraph{\@dottedtocline{4}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
+
+\def\summarycontentstyle{%
+  \def\maybeindent{\hskip 1em}
+  \def\maybedotfill{\dotfill}
+  \contentspartskip=0.2em
+  \contentschapskip=0.00em}
+\def\fullcontentstyle{%
+  \def\maybeindent{\hskip -\leftskip}
+  \def\maybedotfill{\hfil}
+  \contentspartskip=1.5em plus 1pt
+  \contentschapskip=0.8em plus 1pt}
+
+
+%%\twocolumn%%%%%%%-pn Experiment -- not quite working
+%%\addtolength{\textwidth}{.7in} %%%%%%-pn
+%%\addtolength{\oddsidemargin}{-.7in} %%%%%%-pn
+%%\addtolength{\evensidemargin}{-.7in} %%%%%%-pn
+
+%%%%%% For major headings
+
+\def\titlebox#1{%
+{\fboxrule=1.0mm \fboxsep=0.7mm \framebox{{\fboxrule=0.12mm \framebox{#1}}}}}
+
+%%%%%% parts
+
+\def\part{%
+  \if@twocolumn
+     \onecolumn
+     \@tempswatrue
+    \else \@tempswafalse
+  \fi
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{\ifnum \c@secnumdepth >-2\relax
+        \refstepcounter{part}%
+
+        \addcontentslinenopage{toc}{part}{\thepart
+        \hspace{1em}#1}\else
+
+        \addcontentsline{toc}{part}{#1}\fi
+   \@endpart}
+
+\def\@endpart{%
+   \if@tempswa
+     \twocolumn
+   \fi}
+
+\def\addcontentslinenopage#1#2#3{%
+  \addtocontents{#1}{\protect\contentsline{#2}{#3}{}}}
+
+\newenvironment{parttext}{\begin{large}\noindent\relax\ignorespaces}{\end{large}\emptypage}
+
+
+%%%%%% chapters
+
+\def\chaptertitle{}\def\chaptermarker{}  %% 
+\def\sectiontitle{}\def\sectionmarker{}  %% 
+\newcommand{\chaphead}[1]{\noindent\hspace*{-\marginwidth}%
+\begin{quote} {\em In which \lowercase{#1}} \end{quote}%
+\vspace*{0.3in}\par\noindent\ignorespaces} 
+
+\def\@makechapterhead#1{%
+%  \epsfxsize=\textplusmarginwidth%
+%  \noindent\hspace*{-\marginwidth}\epsfbox{figures/chapter-device.ps}\par%
+%  \vspace*{20\p@}%%
+  \noindent\hspace*{-\marginwidth}\titlebox{\rule[-.61in]{0in}{1.2in}\parbox{\chaptitleboxwidth}{%
+    \centerline{%
+    \parbox{\chapnumberwidth}{\begin{centering}\cn \thechapter\end{centering}}%
+    \hspace*{0.25in}%
+    \raisebox{0pt}{\parbox{\chaptitlewidth}{\baselineskip=27pt \begin{centering} \begin{flushleft} \ct \uppercase{#1}%
+	           \end{flushleft} \end{centering}}}}}}\par%
+%  \vspace*{20\p@}%%
+%  \epsfxsize=\textplusmarginwidth%
+%  \noindent\hspace*{-\marginwidth}\epsfbox{figures/chapter-device.ps}%
+    \vskip 40\p@%
+  }
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \Huge \bfseries
+    #1\par
+    \nobreak
+    \vskip 40\p@
+  }}
+
+\def\chapter{\clearpage %%% was cleardoublepage
+   \thispagestyle{plain}%
+   \global\@topnum\z@
+   \@afterindentfalse
+   \secdef\@chapter\@schapter}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+        \refstepcounter{chapter}%
+        \typeout{\@chapapp\space\thechapter.}%
+        \addcontentsline{toc}{chapter}{\protect
+        \numberline{\thechapter}#1}\else
+      \addcontentsline{toc}{chapter}{#1}\fi
+   \def\chaptertitle{#1}\def\chaptermarker{\@chapapp\quad\thechapter.\qquad}
+   \chaptermark{}%
+   \addtocontents{lof}%
+       {\protect\addvspace{10\p@}}% Adds between-chapter space
+   \addtocontents{lot}%
+       {\protect\addvspace{10\p@}}% to lists of figs & tables.
+   \if@twocolumn
+           \@topnewpage[\@makechapterhead{#2}]%
+     \else \@makechapterhead{#2}%
+           \@afterheading
+     \fi}
+
+\def\@schapter#1{\if@twocolumn \@topnewpage[\@makeschapterhead{#1}]%
+        \else \@makeschapterhead{#1}%
+              \@afterheading\fi}
+
+%%%%%% appendices
+\def\appendix{\par
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+  \def\@chapapp{\appendixname}%
+  \def\thechapter{\Alph{chapter}}}
+
+%%%%%% bibliography
+\def\thebibliography#1{%
+%%\vspace*{-22.5pt}%%%no longer seems necessary
+\list
+  {\@biblabel{\arabic{enumiv}}}{\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth
+%%  \advance\leftmargin\labelsep %%dropped - indents for nonexistent label!
+    \usecounter{enumiv}%
+    \let\p@enumiv\@empty
+    \def\theenumiv{\arabic{enumiv}}}%
+    \def\newblock{\hskip .11em plus.33em minus.10em}%
+    \clubpenalty4000\widowpenalty4000
+    \sfcode`\.=\@m%
+	\setlength{\itemsep}{0.5em plus 0.3em minus 0.1em}}
+
+
+\def\endthebibliography{%
+  \def\@noitemerr{\@warning{Empty `thebibliography' environment}}%
+  \endlist}
+
+\newenvironment{mybibliography}{%
+\cleardoublepage
+\centerline{{\ct \bibname}}\par\bigskip\par
+\addcontentsline{toc}{part}{Bibliography}%
+\renewcommand{\baselinestretch}{0.93}\small\normalsize %%% this does the shrink
+\columnsep=16pt%
+% Key
+\thispagestyle{plain}%
+\noindent{The following abbreviations are used for frequently cited conferences and journals:}\\[10pt]
+\begin{footnotesize}\input{bib-keys}\end{footnotesize}%
+% Bibliography
+\def\chaptermarker{}\def\chaptertitle{\bibname}%
+\def\sectionmarker{}\def\sectiontitle{\bibname}%
+\chaptermark{}\sectionmark{}
+\newpage%
+\begin{scriptsize}%
+\begin{multicols}{3}%
+%
+}{\end{multicols}\end{scriptsize}}
+
+%%%%%% index
+
+\newcommand{\indexkey}{Page numbers in {\bfseries bold} refer to definitions
+of terms and algorithms; page numbers in {\itshape italics} refer to
+items in the bibliography.}
+
+\def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
+\cleardoublepage
+\centerline{{\ct \indexname}}\par\bigskip\par
+\noindent\indexkey\par\bigskip\par%
+\addcontentsline{toc}{part}{Index}%
+\renewcommand{\baselinestretch}{0.93}\small\normalsize %%% this does the shrink
+\raggedright
+\columnseprule \z@
+\columnsep 16\p@%
+\begin{footnotesize}
+\begin{multicols}{3}%
+\def\chaptermarker{}\def\chaptertitle{\indexname}%
+\def\sectionmarker{}\def\sectiontitle{\indexname}%
+\chaptermark{}\sectionmark{}
+\thispagestyle{plain}\parindent\z@
+\parskip\z@ plus .3\p@\relax\let\item\@idxitem}
+
+\def\@idxitem{\par\hangindent 3em}
+
+\def\subitem{\par\hangindent 3em \hspace*{1em}}
+
+\def\subsubitem{\par\hangindent 3em \hspace*{2em}}
+
+\def\endtheindex{\end{multicols}\end{footnotesize}}
+
+\def\indexspace{\par \vskip 10\p@ plus5\p@ minus3\p@\relax}
+
+
+
+%%%%%% sections
+
+%%% redefined \@sect and \@ssect (ie \section*) from latex.tex
+
+\def\@sect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
+     \let\@svsec\@empty\else
+     \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname\hskip 1em}\fi
+     \@tempskipa #5\relax
+      \ifdim \@tempskipa>\z@
+        \begingroup #6\relax
+          \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M %
+          #8
+          \postheading\par}%
+        \endgroup
+       \csname #1mark\endcsname{#7}\addcontentsline
+         {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                      \protect\numberline{\csname the#1\endcsname}\fi
+                    #7}\else
+        \def\@svsechd{#6\hskip #3\relax  %% \relax added 2 May 90
+                   \@svsec #8\csname #1mark\endcsname
+                      {#7}\addcontentsline
+                           {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                             \protect\numberline{\csname the#1\endcsname}\fi
+                       #7}}\fi
+     \@xsect{#5}}
+
+\def\@ssect#1#2#3#4#5{\@tempskipa #3\relax
+   \ifdim \@tempskipa>\z@
+     \begingroup \preheading #4\@hangfrom{\hskip #1}{\interlinepenalty \@M #5\par}\endgroup
+   \else \def\@svsechd{#4\hskip #1\relax #5}\fi
+    \@xsect{#3}}
+
+\def\section#1{%
+\def\sectiontitle{#1}\def\sectionmarker{Section \thesection.\qquad}%
+\def\postheading{\ \\\hspace*{-\marginwidth}%
+\raisebox{0.88\baselineskip}[0pt][0pt]{\rule{\textplusmarginwidth}{0.2mm}}%
+\hspace*{-\marginwidth}}%
+\@startsection {section}{1}{-\marginwidth}{-2.5ex plus-.5ex minus
+    -.2ex}{2.0ex plus.2ex}{\reset@font\Large\sc}{#1}%
+}
+
+\def\summary{\section{Summary}}
+
+\def\hbib{%
+\def\sectiontitle{Bibliographical and Historical Notes}\def\sectionmarker{}%
+\def\preheading{\noindent\hspace*{-\marginwidth}%
+\rule{\textplusmarginwidth}{0.8mm}\hfill\\}%
+\sectionmark{Bibliographical and Historical Notes}%
+\@startsection {section}{1}{-\marginwidth}{-3.0ex plus-1ex minus
+    -.2ex}{2.3ex plus.2ex}{\reset@font\large\sc}*{Bibliographical and Historical Notes}%
+\addcontentsline{toc}{section}{Bibliographical and Historical Notes}%
+}
+
+\def\exercises{%
+\def\sectiontitle{Exercises}\def\sectionmarker{}%
+\def\preheading{\noindent\hspace*{-\marginwidth}%
+\sectionmark{Exercises}%
+\rule{\textplusmarginwidth}{0.8mm}\hfill\\}%
+\@startsection {section}{1}{-\marginwidth}{-3.0ex plus-1ex minus
+    -.2ex}{2.3ex plus.2ex}{\reset@font\large\sc}*{Exercises}
+\addcontentsline{toc}{section}{Exercises}%
+}
+
+%%%%%% subsections
+\def\subsection{%
+\def\postheading{}\@startsection{subsection}{2}{\z@}{-2.0ex plus-0.5ex
+    minus-.2ex}{1.4ex plus.2ex}{\reset@font\large\bfseries}}
+
+%%%%%% subsubsections
+\def\subsubsection{%
+\def\postheading{}\@startsection{subsubsection}{3}{\z@}{-2.0ex plus
+    -0.5ex minus-.2ex}{1.3ex plus.2ex}{\reset@font\normalsize\bfseries}}
+
+%%%%%% paragraph
+\def\paragraph{%
+\def\postheading{}\@startsection
+    {paragraph}{4}{\z@}{1.5ex plus0.3ex minus.2ex}{-1em}{\reset@font
+    \normalsize\bfseries}}
+
+%%%%%% side bars
+
+\newcommand{\sideb}[2]{%
+\def\marginalnote{\nomarginalnote}%
+\begin{figure*}[p]%
+\noindent\hspace*{-\marginwidth}%
+\framebox[\textplusmarginwidth]{%
+%\epsfxsize=\marginparwidth [[dropped this - tex now ignores it! Fixed screen]]
+\epsfysize=\sidebarheight%
+\raisebox{-\sidebardrop}[\charheight][\sidebardrop]{\epsffile{figures/screen.ps}}
+%\raisebox{-\sidebardrop}[\charheight][\sidebardrop]{\rule{\marginparwidth}{\sidebarheight}}%
+\hspace*{2\marginparsep}%
+\begin{minipage}[t]{\sidebartextwidth}\parindent=20pt
+\noindent{\large\sc #1}\par\bigskip\noindent\ignorespaces #2
+\end{minipage}\hfill}
+\vspace*{3in}\end{figure*}%
+\def\marginalnote{\yesmarginalnote}%
+}
+
+
+\newenvironment{sidebar}[1]{%
+\def\marginalnote{\nomarginalnote}%
+\begin{figure*}[p]%
+\noindent\hspace*{-\marginwidth}%
+\rule[-1.2\baselineskip]{\textplusmarginwidth}{\fboxrule}\\*%
+\hspace*{-\marginwidth}{\large\sc #1}\\\\%
+\hspace*{-\marginwidth}\epsfxsize=\marginparwidth \epsfysize=\sidebarheight%
+\raisebox{-\sidebardrop}[\charheight][\sidebardrop]{\epsffile{figures/screen.ps}}
+\hspace*{\marginparsep}%
+\begin{minipage}[t]{\sidebartextwidth}\parindent=20pt\noindent\ignorespaces}%
+{\end{minipage}
+\par
+\vspace*{-.5in}\par
+\noindent\hspace*{-\marginwidth}%
+\rule[60pt]{\textplusmarginwidth}{\fboxrule}%
+\end{figure*}%
+\def\marginalnote{\yesmarginalnote}%
+}
+
+%%%%%% footnotes
+
+%% from book.sty: changed to do no indentation, allow a small space
+\long\def\@makefntext#1{\noindent
+            \hbox to 1.2em{\raisebox{-1pt}{$\m@th^{\@thefnmark}$}\hss}#1}
+
+%% from book.sty: changed to shorten
+\def\footnoterule{\kern-3\p@
+  \hrule width .25\columnwidth
+  \kern 2.6\p@}
+
+\interfootnotelinepenalty=5000 %%% no idea what effect this will have
+
+
+%%%%%% for notes (either in margin or not to appear at all)
+%\renewcommand{\comment}[1]{\marginpar{\scriptsize #1}} 
+\renewcommand{\comment}[1]{}
+
+\reversemarginpar %% puts into left margin
+
+%%%%%% special keywords
+
+\newlength{\savelineskip}
+\newcommand{\term}[1]{{\bfseries #1}}% maybe put into index,glossary too?
+\newcommand{\termi}[1]{{\bfseries #1}\tindex{#1}}% termi puts in index
+
+\def\newterm{\@ifnextchar[{\newtermopt}{\newtermnoopt}}
+\def\newtermi{\@ifnextchar[{\newtermiopt}{\newterminoopt}}
+\def\newtermnoopt#1{\newtermopt[#1]{#1}}
+\def\newtermopt[#1]#2{{\bfseries #2}\marginalnote{#1}}
+\def\newterminoopt#1{\newtermiopt[#1]{#1}}
+\def\newtermiopt[#1]#2{{\bfseries #2}\marginalnote{#1}\ntindex{#1}}
+
+\newcommand{\marginalnote}[1]{\yesmarginalnote{#1}}
+
+\newcommand{\yesmarginalnote}[1]{%
+\setlength{\savelineskip}{\baselineskip}%
+\marginpar{%
+\raisebox{0pt}[0pt][0pt]{\parbox[c]{\marginparwidth}{\begin{flushleft} {\nt \uppercase{#1}}%
+\setlength{\baselineskip}{\marginlineskip}%
+\end{flushleft}}}}% % end marginpar
+\setlength{\baselineskip}{\savelineskip}%
+}
+
+\newcommand{\nomarginalnote}[1]{}  %%% [[check this - seems wrong]]
+
+%%%%%% description lists
+
+\def\Box{\,{\fboxsep=2.7pt\raisebox{3pt}{\framebox{}}}\,}
+\def\Diamond{\diamondsuit}
+
+\def\itemchar{\bullet}  %% \Box undefined in nlatex !!!!!
+
+\renewenvironment{description}{\begin{itemize}\ignorespaces}{\end{itemize}}
+
+\newcommand{\colonitem}[1]{\item[${\itemchar}$]  {\bfseries #1}:}
+\newcommand{\plainitem}[1]{\item[${\itemchar}$]  {\bfseries #1}}
+\newcommand{\lineitem}[1]{\item[${\itemchar}$]  {\bfseries #1}\\}
+\newcommand{\newtermitem}[1]{\item[${\itemchar}$]  {\bfseries #1}:\marginalnote{#1}}
+\newcommand{\plainnewtermitem}[1]{\item[${\itemchar}$]  {\bfseries #1}\marginalnote{#1}}
+
+
+%%%%%% theorem-like environments, points, quotes etc.
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}[theorem]
+
+%\newenvironment{point}{\hfill\\%
+%\rule[8pt]{\textwidth}{0.1mm}\\*[-\baselineskip]\em\relax\ignorespaces}%
+%{\hfill\\*%
+%\raisebox{\baselineskip}{\rule[-2pt]{\textwidth}{0.1mm}}%
+%\\[-\baselineskip]\ignorespaces}
+
+\newenvironment{point}{\hand\em\ignorespaces}{}
+
+\newcommand{\hand}{\hspace*{0pt}\marginpar{%%%\epsfxsize=0.5\marginparwidth%
+\noindent\raisebox{-11pt}[0pt][0pt]{\figfile{figures/hand.eps}}}}
+
+\newenvironment{squote}%
+{\par\begin{small}\begin{quote}}{\end{quote}\end{small}}
+
+
+%%%%%%%%% US and international exercises
+
+\newcounter{algorithm}[chapter]
+
+\newcounter{exrcs}[chapter]
+\def\p@exrcs{\thechapter.}
+%\newenvironment{exercise}{%
+%\refstepcounter{exrcs}
+%\def\labelenumi{\theenumi.}
+%\def\theenumi{{\bfseries\alph{enumi}}}
+%\def\labelenumii{(\theenumii)}
+%\def\theenumii{\roman{enumii}}
+%\def\p@enumii{\theenumi}
+%\def\labelenumiii{\theenumiii.}
+%\def\theenumiii{\Alph{enumiii}}
+%\def\p@enumiii{\theenumi(\theenumii)}
+%\par\medskip\noindent{\bfseries \thechapter.\arabic{exrcs}}\quad\ignorespaces}%
+%{\def\labelenumi{\theenumi.} 
+%\def\theenumi{\arabic{enumi}} 
+%\def\labelenumii{(\theenumii)}
+%\def\theenumii{\alph{enumii}}
+%\def\p@enumii{\theenumi}
+%\def\labelenumiii{\theenumiii.}
+%\def\theenumiii{\roman{enumiii}}
+%\def\p@enumiii{\theenumi(\theenumii)}}
+
+\newenvironment{exercise}[1][?137!]{%
+\refstepcounter{exrcs}
+\def\labelenumi{\theenumi.}
+\def\theenumi{{\bfseries\alph{enumi}}}
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\roman{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\Alph{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+\par\medskip\noindent{\bfseries \thechapter.\arabic{exrcs}}\ifthenelse{\equal{?137!}{#1}}{}{\label{#1}}\quad\ignorespaces}%
+{\def\labelenumi{\theenumi.} 
+\def\theenumi{\arabic{enumi}} 
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}}
+
+% The next two environments are just for \debugversion
+\newenvironment{uuexercise}[1][?137!]{%
+\refstepcounter{exrcs}
+\def\labelenumi{\theenumi.}
+\def\theenumi{{\bfseries\alph{enumi}}}
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\roman{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\Alph{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+\par\medskip\noindent{\bfseries \thechapter.\arabic{exrcs}}\ifthenelse{\equal{?137!}{#1}}{}{\label{#1}}\quad$(\mathcal{U})$ \ignorespaces}%
+{\def\labelenumi{\theenumi.} 
+\def\theenumi{\arabic{enumi}} 
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}}
+
+\newenvironment{iiexercise}[1][?137!]{%
+\refstepcounter{exrcs}
+\def\labelenumi{\theenumi.}
+\def\theenumi{{\bfseries\alph{enumi}}}
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\roman{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\Alph{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+\par\medskip\noindent{\bfseries \thechapter.\arabic{exrcs}}\ifthenelse{\equal{?137!}{#1}}{}{\label{#1}}\quad$(\mathcal{I})$ \ignorespaces}%
+{\def\labelenumi{\theenumi.} 
+\def\theenumi{\arabic{enumi}} 
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}}
+
+\def\usversion{\let\uexercise=\exercise\let\enduexercise=\endexercise}
+\def\intlversion{\def\iexercise{\exercise}\def\endiexercise{\endexercise}}
+
+\def\nousversion{\excludecomment{uexercise}}
+\def\nointlversion{\excludecomment{iexercise}}
+\nousversion
+\nointlversion
+
+%\usversion
+%\intlversion
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\prgex}{\marginpar{%%%%\epsfxsize=0.7\marginparwidth%
+\noindent\raisebox{-9pt}[0pt][0pt]{\figfile{figures/keyboard.eps}}}}
+
+\newcommand{\libex}{\marginpar{%%%%\epsfxsize=0.7\marginparwidth%
+\noindent\raisebox{-19pt}[0pt][0pt]{\figfile{figures/book.eps}}}}
+
+%%\newcommand{\url}[1]{\[\mbox{{\tt #1}}\]}
+
+\newenvironment{noanswer}{\noanswernumber}{}
+
+\newcommand{\answernumber}[1]{{\bf #1}\quad\ignorespaces}
+\newcommand{\noanswernumber}{}
+\newenvironment{answer}{%
+\def\labelenumi{\theenumi.}
+\def\theenumi{{\bf\alph{enumi}}}
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\roman{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\Alph{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+\par\medskip\noindent\answernumber}%
+{\def\labelenumi{\theenumi.} 
+\def\theenumi{\arabic{enumi}} 
+\def\labelenumii{(\theenumii)}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi}
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}}
+
+
+%%%%%% Stuff for fixing math environments
+
+\def\J#1{{\it #1}}
+\newcommand{\N}[1]{{\rm #1}}
+\def\zt{}
+
+\newenvironment{formula}{\[\zt\begin{array}{@{}lll}\zt}{\end{array}\]}
+\def\<{\langle}\def\>{\rangle}
+
+
+
+
+%%%%%% figures, tables and captions
+
+%% tables are set as figures, but with a minute adjustment to table width/place
+\renewenvironment{table}%
+{\def\caption{\tcaption}\begin{figure}}%
+{\end{figure}\ignorespaces}
+
+\newcommand{\tabtop}{\rule{0pt}{12.5pt}}%%Use after hline in body of table
+\newcommand{\tabbot}{\rule[-6.5pt]{0pt}{11pt}}%%Use before hline " " " "
+\newcommand{\tabhead}{\rule[-5.8pt]{0pt}{17.5pt}}%%Use in lines between hlines
+\newcommand{\squad}{\hspace*{0.5em}}%%Use occasionally at left edge
+\newcommand{\sq}[1]{\hspace*{#1\tablewidth}}
+
+\newenvironment{mytabular}%
+{\noindent\begin{tabular*}{\textwidth}}%
+{\end{tabular*}}
+
+\setcounter{topnumber}{2}
+\def\topfraction{.95}
+\def\bottomfraction{.95}
+\def\textfraction{.05}
+\def\floatpagefraction{.9}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+
+\def\figfile{\epsffile}
+
+\def\epsfflex#1#2{\epsfxsize=#1\maxfigwidth\epsffile{#2}}
+
+\def\textfigbox#1{\framebox[\textwidth]{#1}}
+
+\def\textfigboxnew#1{\framebox[\textwidth]{#1}}
+
+%%\def\graphbox#1{%
+%%\framebox[\textwidth]{\hbox{\hfill\epsffile{#1}\hspace*{0.4in}\hbox{}\hfill}}}
+
+\def\graphboxnew#1{%
+\noindent\framebox[\textwidth]{\begin{minipage}{\maxfigwidth}%
+\vspace*{5pt}\hbox{\hfill\epsffile{#1}\hspace*{0.4in}\hbox{}\hfill}\end{minipage}}}
+
+\def\figbox#1{%
+\framebox[\textwidth]{\hbox{\hfill\epsffile{#1}\hfill}}}
+
+\def\figboxnew#1{%
+\noindent\framebox[\textwidth]{\hbox{\hfill\epsffile{#1}\hfill}}}
+
+\def\figboxspacenew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\hbox{\hfill\epsffile{#2}\hfill}%
+\vspace*{#1}%
+\end{minipage}}}
+
+\def\figboxspacebothnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\hbox{\hfill\epsffile{#2}\hfill}%
+\vspace*{#3}%
+\end{minipage}}}
+
+
+%%% figures and graphs with added labels
+\def\figlabelsize{\small}
+
+\def\twographboxspacenew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\vspace*{5pt}%
+\noindent\epsffile{#2}%
+\hspace*{0.0\maxfigwidth}%
+\epsffile{#3}\\[6pt]
+\raisebox{8pt}[6pt][0pt]{\makebox[0.07\maxfigwidth]{}\makebox[0.41\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.04\maxfigwidth]{}\makebox[0.44\maxfigwidth]{{\figlabelsize (b)}}}%
+\vspace*{#1}%
+\end{minipage}}}
+
+\def\twographboxspacebothnew#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\vspace*{5pt}%
+\noindent\epsffile{#2}%
+\hspace*{0.0\maxfigwidth}%
+\epsffile{#3}\\[#4]
+\raisebox{8pt}[6pt][0pt]{\makebox[0.07\maxfigwidth]{}\makebox[0.41\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.04\maxfigwidth]{}\makebox[0.44\maxfigwidth]{{\figlabelsize (b)}}}%
+\end{minipage}}}
+
+\def\twographboxnew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{5pt}%
+\hspace*{0.0\maxfigwidth}%
+%\epsfxsize=0.50\maxfigwidth
+\noindent\epsffile{#1}%
+\hspace*{0.0\maxfigwidth}%
+%\epsfxsize=0.50\maxfigwidth
+\epsffile{#2}\\[6pt]
+\raisebox{8pt}[6pt][0pt]{\makebox[0.07\maxfigwidth]{}\makebox[0.41\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.04\maxfigwidth]{}\makebox[0.44\maxfigwidth]{{\figlabelsize (b)}}}%
+\end{minipage}}}
+
+\def\twographboxnewdirect#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{5pt}%
+\hspace*{0.0\maxfigwidth}%
+%\epsfxsize=0.50\maxfigwidth
+\noindent\epsffile{#1}%
+\hspace*{0.0\maxfigwidth}%
+%\epsfxsize=0.50\maxfigwidth
+\epsffile{#2}\\[6pt]
+\raisebox{8pt}[6pt][0pt]{\makebox[0.07\maxfigwidth]{}\makebox[0.41\maxfigwidth]{{\figlabelsize (#3)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.04\maxfigwidth]{}\makebox[0.44\maxfigwidth]{{\figlabelsize (#4)}}}%
+\end{minipage}}}
+
+\def\twofigbox#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\epsfxsize=0.48\maxfigwidth
+\noindent \epsffile{#1}\hfill
+\epsfxsize=0.48\maxfigwidth
+\epsffile{#2}\\
+\makebox[0.48\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.48\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+%%  New version of twofigboxnew looks better if a figure is not
+%%  full width in the 0.48\maxfigwidth box
+\def\twofigboxnew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\makebox[0.48\maxfigwidth]{\epsffile{#1}}%
+\hfill
+\makebox[0.48\maxfigwidth]{\epsffile{#2}}\\
+\makebox[0.48\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.48\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+\def\twofigboxspacenew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\makebox[0.48\maxfigwidth]{\epsffile{#2}}%
+\hfill
+\makebox[0.48\maxfigwidth]{\epsffile{#3}}\\
+\makebox[0.48\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.48\maxfigwidth]{{\figlabelsize (b)}}%
+\vspace*{#1}%
+\end{minipage}}}
+
+\def\twofigboxnoabnew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\makebox[0.48\maxfigwidth]{\epsffile{#1}}%
+\hfill
+\makebox[0.48\maxfigwidth]{\epsffile{#2}}
+\end{minipage}}}
+
+\def\twofigboxflexnew#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsffile{#2}\hfill
+\epsffile{#4}\\
+\makebox[#1\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[#3\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+\def\twofigboxflexspacenew#1#2#3#4#5{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#5}%
+\noindent \epsffile{#2}\hfill
+\epsffile{#4}\\
+\makebox[#1\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[#3\maxfigwidth]{{\figlabelsize (b)}}%
+\vspace*{#5}%
+\end{minipage}}}
+
+\def\twofigboxflexnoabnew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsffile{#1}\hfill\epsffile{#2}%
+\end{minipage}}}
+
+%%  figgraphboxnew for figure + graph combinations
+%%  where the graph is made using twographbox
+\def\figgraphboxnew#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\makebox[0.48\maxfigwidth]{\epsffile{#1}}%
+\hfill
+\makebox[0.50\maxfigwidth]{\epsffile{#2}}\\
+\makebox[0.48\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.50\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+\def\twofigboxold#1#2{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\epsfxsize=0.48\maxfigwidth
+\noindent \epsffile{#1}\hfill
+\epsfxsize=0.48\maxfigwidth
+\epsffile{#2}\\
+\makebox[0.48\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.48\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+\def\threegraphbox#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{-10pt}%
+\hspace*{-0.01\maxfigwidth}%
+\epsfxsize=0.3633\maxfigwidth
+\noindent\epsffile{#1}%
+\hspace*{-0.04\maxfigwidth}%
+\epsfxsize=0.3633\maxfigwidth
+\epsffile{#2}%
+\hspace*{-0.04\maxfigwidth}%
+\epsfxsize=0.3633\maxfigwidth
+\epsffile{#3}\\
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}}%
+\end{minipage}}}
+
+
+\def\threegraphboxnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent\epsffile{#1}%
+\epsffile{#2}%
+\epsffile{#3}\\
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}}%
+\end{minipage}}}
+
+\def\threegraphboxflexnew#1#2#3#4#5#6{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent\epsffile{#2}\epsffile{#4}\epsffile{#6}\\
+\raisebox{8pt}[6pt][0pt]{\makebox[#1\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[#3\maxfigwidth]{{\figlabelsize (b)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[#5\maxfigwidth]{{\figlabelsize (c)}}}%
+\end{minipage}}}
+
+\def\threegraphboxspacebothnew#1#2#3#4#5{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\vspace*{#1}%
+\vspace*{5pt}%
+\noindent\epsffile{#2}%
+\epsffile{#3}%
+\epsffile{#4}\\[#5]
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}}\hfill
+\raisebox{8pt}[6pt][0pt]{\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}}%
+\end{minipage}}}
+
+\def\threefigbox#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsfxsize=0.32\maxfigwidth
+\epsffile{#1}\hfill
+\epsfxsize=0.32\maxfigwidth
+\epsffile{#2}\hfill
+\epsfxsize=0.32\maxfigwidth
+\epsffile{#3}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}%
+\end{minipage}}}
+
+\def\threefigboxnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent 
+%\epsfxsize=0.32\maxfigwidth
+\epsffile{#1}\hfill
+%\epsfxsize=0.32\maxfigwidth
+\epsffile{#2}\hfill
+%\epsfxsize=0.32\maxfigwidth
+\epsffile{#3}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}%
+\end{minipage}}}
+
+%% commented out - not sure what it does, causes latex error - SR
+%%\newenvironment{\defn}{\begin{figure}}{\end{figure}}
+
+%% I hope this works -pn
+\def\fourfigbox#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent
+\epsfflex{0.24}{#1}\hfill
+\epsfflex{0.24}{#2}\hfill
+\epsfflex{0.24}{#3}\hfill
+\epsfflex{0.24}{#4}
+\end{minipage}}}
+
+\def\fourfigboxnew#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent
+\epsffile{#1}\hfill
+\epsffile{#2}\hfill
+\epsffile{#3}\hfill
+\epsffile{#4}
+\end{minipage}}}
+
+
+%% I hope this works -pn
+\def\fourfigboxdefg#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsfxsize=0.24\maxfigwidth
+\epsffile{#1}\hfill
+\epsfxsize=0.24\maxfigwidth
+\epsffile{#2}\hfill
+\epsfxsize=0.24\maxfigwidth
+\epsffile{#3}\hfill
+\epsfxsize=0.24\maxfigwidth
+\epsffile{#4}\\
+\makebox[0.24\maxfigwidth]{{\figlabelsize (d)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (e)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (f)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (g)}}%
+\end{minipage}}}
+
+
+%% I hope this works -pn
+\def\fourfigboxnewdefg#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsfxsize=0.24\maxfigwidth
+\epsffile{#1}\hfill
+%\epsfxsize=0.24\maxfigwidth
+\epsffile{#2}\hfill
+%\epsfxsize=0.24\maxfigwidth
+\epsffile{#3}\hfill
+%\epsfxsize=0.24\maxfigwidth
+\epsffile{#4}\\
+\makebox[0.24\maxfigwidth]{{\figlabelsize (d)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (e)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (f)}}\hfill%
+\makebox[0.24\maxfigwidth]{{\figlabelsize (g)}}%
+\end{minipage}}}
+
+
+\newcommand{\FigBox}[1]{%%% The alternative to figbox - pnorvig
+\def\marginalnote{\nomarginalnote}%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\codewidth}%
+#1%
+\end{minipage}}%
+\def\marginalnote{\nomarginalnote}%  %%% [[check this - seems wrong]]
+}
+
+\def\caption{\refstepcounter\@captype \@dblarg{\@caption\@captype}}
+\def\tcaption{\refstepcounter\@captype \@dblarg{\@tcaption\@captype}}
+\def\scaption{\refstepcounter\@captype \@dblarg{\@scaption\@captype}}
+\def\sfnum@figure{\figurename~S\thefigure}
+
+%% moved from latex.tex in order to avoid \addcontentsline
+\long\def\@caption#1[#2]#3{\par\begingroup
+    \@parboxrestore
+    \normalsize
+    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
+  \endgroup}
+
+\long\def\@makecaption#1#2{%
+\vspace*{\captionskip}%
+\framebox[\textwidth]{~~\begin{minipage}{\codewidth}
+\begin{small}%
+\rule{0pt}{10pt}{\bfseries #1}\hspace*{1.5em}#2\par%  %%need strut - boxes overlap
+\end{small}%
+\end{minipage}}}
+
+\long\def\@tcaption#1[#2]#3{\par\begingroup
+    \@parboxrestore
+    \normalsize
+    \@tmakecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
+  \endgroup}
+
+\long\def\@scaption#1[#2]#3{\par\begingroup
+    \@parboxrestore
+    \normalsize
+    \@makecaption{\csname sfnum@#1\endcsname}{\ignorespaces #3}\par
+  \endgroup}
+
+%%workaround for table bug; [[currently limits caption box to 70pt high]]
+\def\lvline{\vrule \@width \arrayrulewidth \@height \maxtcaptionheight \@depth 6.5pt}
+\def\zvline{\hskip -0.5\arrayrulewidth \vline \hskip -0.5\arrayrulewidth}
+\def\zlvline{\hskip -0.5\arrayrulewidth \raisebox{0pt}[0pt][0pt]{\lvline}\hskip -0.5\arrayrulewidth}
+\def\zline{\noalign{\ifnum0=`}\fi\hrule \@height 0pt \futurelet
+   \@tempa\@xhline}
+
+\long\def\@tmakecaption#1#2{%
+\vspace*{\tcaptionskip}
+\par\noindent
+\begin{tabular*}{\textwidth}{@{}l@{}}
+%\zline
+%\zsvline\makebox[\textwidth]{\quad}\zsvline\\
+\hline
+%\zlvline\makebox[\textwidth]{\parbox[b]{\codewidth}{\begin{small}%
+%\tabtop {\bfseries #1}\hspace*{1.5em}#2\tabbot
+%\end{small}}}\zlvline\\
+\zlvline\makebox[\textwidth]{\begin{minipage}[b]{\codewidth}
+\begin{small}%
+\tabtop {\bfseries #1}\hspace*{1.5em}#2\tabbot\par
+\end{small}\end{minipage}}\zlvline\\
+\hline
+\end{tabular*}}
+
+
+%%% pnorvig April 12
+\newcommand{\BOX}[1]{{\framebox[\textwidth]{#1}}}
+
+
+%%%%%% cross references
+\newcommand{\chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\chapters}[2]{Chapters~\ref{#1} and \ref{#2}}
+\newcommand{\chaprefs}[2]{Chapters~\ref{#1} and~\ref{#2}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\secrefs}[2]{Sections~\ref{#1} and~\ref{#2}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\sfigref}[1]{Figure~S\ref{#1}}
+\newcommand{\tabref}[1]{Figure~\ref{#1}}
+\newcommand{\exref}[1]{Exercise~\ref{#1}}
+\newcommand{\eqref}[1]{Equation~(\ref{#1})}
+\newcommand{\eqrefs}[2]{Equations~(\ref{#1}) and~(\ref{#2})}
+\newcommand{\partref}[1]{Part~\ref{#1}} 
+\newcommand{\appref}[1]{Appendix~\ref{#1}} 
+\newcommand{\sideref}[1]{the sidebar titled #1}
+\newcommand{\pgref}[1]{page~\pageref{#1}}
+\newcommand{\pgrefs}[2]{pages~\pageref{#1} and~\pageref{#2}}
+\newcommand{\defref}[1]{Definition~\ref{#1}}
+
+%%%%%% citations; this assumes that customized theapa.sty is used
+
+\def\cite{\abbrcite} %%% always uses ``et al'' for more than two authors
+\def\citeA{\abbrciteA} %%% always uses ``et al'' for more than two authors
+\citepunct{(}{and}{and}{, }{; }{, }{)}{}{.}
+\NoCommaBetweenTwoAuthors
+
+%% TEMPORARY VERSION TO AVOID GENERATING BIB, MULTIPLE LATEX RUNS, ETC.
+\def\biboff{\def\cite##1{[##1]}%
+\def\nocite##1{}%
+\def\citeyear##1{[##1]}%
+\def\citeA##1{[##1]}}
+\def\bibon{}
+
+%%%%%% page control
+
+\newcommand{\emptypage}{\newpage\thispagestyle{empty}\ \newpage}
+\newcommand{\blankpage}{\ \newpage}   %use this one for page count/ toc
+%\newcommand{\blankpage}{}   %use this one to reduce waste
+
+
+%%%%%% index entries
+
+\newcommand{\indextext}[1]{#1\index{#1}}
+
+\newcommand{\tindex}[1]{\index{#1}}
+\newcommand{\nindex}[1]{\index{#1}}
+\newcommand{\cindex}[1]{\index{#1}}
+\newcommand{\iindex}[1]{\protect\index{#1|ii}}
+\newcommand{\ntindex}[1]{\index{#1|bi}}
+\newcommand{\pindex}[1]{\index{#1@{\sc #1}}}
+
+\newcommand{\itindex}[1]{\index{#1@{\it #1}}}
+
+\newcommand{\ii}[1]{{\itshape #1}}
+\newcommand{\bi}[1]{{\bfseries #1}}
+
+
+%%%%%%%%%%%% elements of programs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\defprog}[1]{\mbox{{\sc #1}}\index{#1@{\sc #1}|bi}} %%%index bold
+\newcommand{\prog}[1]{\mbox{{\sc #1}}}   %%% our own programs
+\newcommand{\noprog}[1]{\mbox{{\sc #1}}}            %%% no indexing
+\newcommand{\system}[1]{\mbox{{\sc #1}}\pindex{#1}} %%% other people's systems
+\newcommand{\nosystem}[1]{\mbox{{\sc #1}}}          %%% no indexing
+\newcommand{\act}[1]{\mbox{{\itshape #1}}}
+\newcommand{\key}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\default}[2]{\v{#1}{=}#2} %% default argument
+\newcommand{\setfield}[3]{\setq{\v{#1}}{\noprog{#2}}{#3}}
+\def\k{\key}
+\def\kforeach{\k{for each}{}}
+\def\kthendo{\k{then}{}}
+%%%\newcommand{\var}[1]{\ensuremath{\mbox{{\itshape #1}}}} %%%%%%%pnorvig ensuremath
+\newcommand{\var}[1]{\ensuremath{\J{#1}}} %%%%%%%SR:  [[CM italic]]
+%%\def\v{\var}[[dropped for now - needed for caron accent!]]
+\newcommand{\vaccent}{} %%%%%%%%% For Capek; \v{C} can't be used.
+\newcommand{\caron}{\accent141} %%%%%%%%% For Capek; \v{C} can't be used.
+\def\p{\prg}
+\newcommand{\setq}[2]{#1\hbox{$\,\leftarrow\,$}#2}
+\newcommand{\setqmath}[2]{#1 \leftarrow #2}
+\newcommand{\field}[2]{#1.#2}
+
+%%pnorvig Mar 14 1994:
+\newcommand{\labl}[1]{\prog{#1}}	% Statement Label in code
+\newcommand{\cmt}[1]{{\ttfamily /*} {\itshape #1} {\ttfamily */}}	% Comment in code
+\newcommand{\rcmt}[1]{\hfill {\ttfamily /*} {\itshape #1} {\ttfamily */}}
+\newcommand{\Endfn}[1]{}		% End of a function in code
+\newcommand{\fnsep}{\hspace*{0in}\raisebox{3pt}{\rule{\codewidth}{0.2pt}}\hfill}	% Between functions in code
+
+\def\lisp{\code}
+\def\code{\noindent\nobreak\vskip 6pt\parskip=0pt\begin{small}
+        \begingroup\obeylines\obeyspaces\docode}
+\def\docode#1{\noindent\framebox[\textwidth][l]%
+{~~\begin{minipage}{\codewidth}~
+#1
+~\end{minipage}}\endgroup%
+\nobreak\parskip=0pt\end{small}\noindent\ignorespaces}
+\def\asis{\obeylines\obeyspaces}
+\def\ttp{.\skip -0.5em\ }
+\def\tab{\hbox{\kern10pt}}
+{\obeyspaces\global\def {\ }}
+
+
+%% stuff I added (T. Huang)
+
+\newcommand{\ac}{,\hspace{0.15em}}
+\newcommand{\ts}{\hspace{1pt}}
+\newcommand{\tsf}{\hspace{1.5pt}}
+\newcommand{\bodysep}{\vspace{0.1in}}
+\newcommand{\smallbodysep}{\vspace{0.06in}}
+\newcommand{\subfnsep}{\vspace{0.06in}}
+\newcommand{\prebnfsep}{\vspace{-0.25in}}
+\newcommand{\postbnfsep}{\vspace{0.1in}}
+\newcommand{\fnvar}[1]{\prog{#1}}
+\newcommand{\func}[3]{\key{function} \defprog{#1}(#2) \key{returns} #3}
+\newcommand{\generator}[3]{\key{generator} \noprog{#1}(#2) \key{yields} #3}
+\newcommand{\nofunc}[3]{\key{function} \noprog{#1}(#2) \key{returns} #3}
+\newcommand{\proc}[2]{\key{procedure} \defprog{#1}(#2)}
+\newcommand{\noproc}[2]{\key{procedure} \noprog{#1}(#2)}
+\newcommand{\firstinputs}[2]{\key{inputs}: {#1}, #2}
+\newcommand{\inputs}[2]{\phantom{\key{inputs}: }{#1}, #2}
+\newcommand{\firstlocal}[2]{\key{local variables}: {#1}, #2}
+\newcommand{\local}[2]{\phantom{\key{local variables}: }{#1}, #2}
+\newcommand{\firststatic}[2]{\key{persistent}: {#1}, #2}
+\newcommand{\static}[2]{\phantom{\key{persistent}: }{#1}, #2}
+
+
+%%%%%%%%%% general notation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\DollarSign{\$}
+\def\tm{$^{{\rm TM}}$}
+\def\star{$\!^*$}
+
+%%%%%% Italic font in math mode: try setting to text italic [[fix this!!]]
+\def\mit{\it}
+%%\DeclareMathAlphabet{\mathit}{\vtex@tempa}{tmr}{m}{it}%
+
+%%%%%% bold font in math mode; this sucks but is simplest for now
+\newcommand{\mbf}[1]{\mbox{{\rm\bfseries #1}}}
+\newcommand{\smbf}[1]{\mbox{{\scriptsize\rm\bfseries #1}}}
+
+\def\U{\mbf{U}}
+\def\u{\mbf{u}}
+\def\V{\mbf{V}}
+\def\W{\mbf{W}} 
+\def\a{\mbf{a}} 
+\def\A{\mbf{A}} 
+\def\bw{\mbf{w}} %% \w already defined
+\def\sw{\smbf{w}} %% \w already defined
+\def\X{\mbf{X}}
+\def\x{\mbf{x}}
+\def\sx{\smbf{x}}
+\def\Y{\mbf{Y}}
+\def\y{\mbf{y}}
+\def\sy{\smbf{y}}
+\def\E{\mbf{E}}
+\def\e{\mbf{e}}
+\def\sbe{\smbf{e}}
+\def\sE{\smbf{E}}
+\def\T{\mbf{T}}
+\def\O{\mbf{O}}
+\def\o{\mbf{o}}
+\def\se{\smbf{e}}
+\def\Z{\mbf{Z}}
+\def\z{\mbf{z}}
+\def\sz{\smbf{z}}
+\def\F{\mbf{F}}
+\def\f{\mbf{f}}
+\def\subf{\smbf{f}}
+\def\B{\mbf{B}}
+\def\b{\mbf{b}}
+\def\m{\mbf{m}}
+\def\I{\mbf{I}}
+\def\H{\mbf{H}}
+\def\h{\mbf{h}}
+\def\zeroes{\mbf{0}}
+\def\ones{\mbf{1}}
+\def\ev{\mbf{ev}}
+\def\fv{\mbf{fv}}
+\def\sv{\mbf{sv}}
+
+
+\newcommand{\bell}{\mbox{\mathversion{bold}$\ell$\mathversion{normal}}}
+\newcommand{\bomega}{\mbox{\mathversion{bold}$\omega$\mathversion{normal}}}
+\newcommand{\bSigma}{\mbox{\mathversion{bold}$\Sigma$\mathversion{normal}}}
+\newcommand{\blambda}{\mbox{\mathversion{bold}$\lambda$\mathversion{normal}}}
+\newcommand{\sblambda}{\mbox{\mathversion{bold}\scriptsize$\lambda$\mathversion{normal}}}
+\newcommand{\btheta}{\mbox{\mathversion{bold}$\theta$\mathversion{normal}}}
+\newcommand{\sbtheta}{\mbox{\mathversion{bold}\scriptsize$\theta$\mathversion{normal}}}
+\newcommand{\bmu}{\mbox{\mathversion{bold}$\mu$\mathversion{normal}}}
+\newcommand{\mean}{\bmu}
+\newcommand{\covariance}{\bSigma}
+
+\def\AIMA{{\mbox {\itshape AIMA}}}
+\def\Diff{{\mbox {\itshape Diff}}}
+
+%%%% From Thruin Oct 20, 2002:
+\def\argmax{\mathop{\rm argmax}}
+\def\argmin{\mathop{\rm argmin}}
+\def\half{{\mbox{$\frac{1}{2}$}}}
+\newcommand{\ignore}[1]{}
+
+
+%%%%%% logical symbols
+\newcommand{\entails}{\models}
+\newcommand{\implies}{\:\;{\Rightarrow}\:\;}
+\newcommand{\textimplies}{\;{\Rightarrow}\;}
+\newcommand{\impliessymbol}{\Rightarrow}
+\newcommand{\lequiv}{\;\;{\Leftrightarrow}\;\;}
+\newcommand{\textlequiv}{\;{\Leftrightarrow}\;}
+\newcommand{\lequivsymbol}{\Leftrightarrow}
+\newcommand{\xor}{\not\lequiv}
+\newcommand{\All}[1]{\forall\,#1\;\;}
+\newcommand{\Exi}[1]{\exists\,#1\;\;}
+\newcommand{\NoAll}[1]{}
+\newcommand{\NoExi}[1]{}
+\newcommand{\Exii}[1]{\exists!\,#1\;\;}% -pnorvig
+\newcommand{\Iot}[2]{\iota\,#1\,#2}
+\newcommand{\Lam}[2]{\lambda #1\;#2}
+\newcommand{\Qua}[3]{[#1\,#2\;#3]}
+
+\newcommand{\union}{{\,{\cup}\,}}
+\newcommand{\intersection}{{\,{\cap}\,}}
+\renewcommand{\emptyset}{\{\,\}}
+\newcommand{\emptylist}{[\,]}
+\newcommand{\adjoin}[2]{\{#1|#2\}}
+\newcommand{\elt}{{\,{\in}\,}}  %%%cuts down on spacing
+\newcommand{\eq}{{\,{=}\,}}     %%%cuts down on spacing
+\def\stimes{{\,\times\,}}       %%%cuts down on spacing
+\def\splus{{\,+\,}}       %%%cuts down on spacing
+\def\sminus{{\,-\,}}       %%%cuts down on spacing
+
+\def\ceiling#1{\lceil #1 \rceil}
+\def\floor#1{\lfloor #1 \rfloor}
+
+
+\def\deg{{}^{{\rm o}}} %%[[fix later]]
+
+%%% The following seems shorter and less confusing with Holding!!
+\def\Holds{T}
+
+\newcommand{\sr}[1]{\mathrel{\raisebox{-0.6ex}{$\stackrel{#1}{\longrightarrow}$}}}
+\newcommand{\srbox}[1]{\sr{\fboxsep=1pt\fbox{$\,{\scriptstyle #1}\,$}}}
+\newcommand{\srboxbox}[1]{\sr{\fboxsep=1pt\fbox{\fbox{$\,{\scriptstyle #1}\,$}}}}
+
+%%%%%% probability and decision theory
+\newcommand{\pv}{\mbox{\bfseries P}}
+\newcommand{\qv}{\mbox{\bfseries Q}}
+\newcommand{\given}{{\,|\,}}
+\newcommand{\otherthan}{\overline}
+\newcommand{\Parents}{Parents}
+\newcommand{\parents}{parents}
+\newcommand{\Children}{Children}
+\newcommand{\children}{children}
+\newcommand{\MarkovBlanket}{MB}
+\newcommand{\markovBlanket}{mb}
+
+%%%%%%% Search problems and MDPs
+%%%%%%% write \result{\(s\)}{\(a\)} and ``The {\Result} function...''
+\def\cost#1#2#3{c(#1,#2,#3)}
+\def\result#1#2{\noprog{Result}(#1{\ac}#2)}
+\def\Result{\noprog{Result}}
+\def\results#1#2{\noprog{Results}(#1{\ac}#2)}
+\def\Results{\noprog{Results}}
+\def\reach#1#2{\noprog{Reach}(#1{\ac}#2)}
+\def\Reach{\noprog{Reach}}
+\def\oreach#1#2{\noprog{Reach}^{+}(#1{\ac}#2)}
+\def\OReach{\noprog{Reach}^{+}}
+\def\preach#1#2{\noprog{Reach}^{-}(#1{\ac}#2)}
+\def\PReach{\noprog{Reach}^{-}}
+\def\transition#1#2{q(#1\rightarrow #2)}
+\def\transitioni#1#2{q_i(#1\rightarrow #2)}
+\def\Rmax{R_{\mbox{\scriptsize max}}}
+
+\def\effect{\textit{effect}}
+\def\Effect{\textit{Effect}}
+
+%obsolete, for polytree algorithm
+%\def\e{E}
+%\def\ec{E^{+}}
+%\def\ee{E^{-}}
+
+\def\transpose{^\top}
+
+\def\kftm{\mbf{F}}        %% Kalman filter transition (linear system) matrix
+\def\kftv{\covariance_x}  %% Kalman filter transition noise covariance
+\def\kfsm{\mbf{H}}        %% Kalman filter sensor (linear system) matrix
+\def\kfsv{\covariance_z}  %% Kalman filter sensor noise covariance
+\def\kfgm{\mbf{K}}        %% Kalman filter gain matrix
+
+\def\indiff{\mathrel{\sim}}
+\def\pref{\mathrel{\succ}}
+\def\prefeq{\mathrel{\raisebox{-1.5pt}%
+{$\stackrel{{\raisebox{-0.65pt}{$\textstyle\succ$}}}{\sim}$}}}
+\def\ubest{u_\top}
+\def\uworst{u_\bot}
+
+\def\pistar{\pi^*}
+\def\transprob#1#2#3{P(#3\given #1,#2)}
+\def\pomdptransprob#1#2#3{P(#3\given #1,#2)}
+\def\observation#1#2{P(#2\given #1)}
+
+%%%%%%%%%%% From NLP: %pnorvig Apr  2 1994:
+\newcommand{\gap}{{\mbox{$_\sqcup$}}}
+\newcommand{\Eng}[1]{\mbox{${\cal E}_{#1}$}}
+\newcommand{\blank}{\framebox{~~}}
+\newcommand{\qt}[1]{\mbox{``\(#1\)''}}%QUOTE
+\newcommand{\uq}[1]{\underline{#1}}%UNQUOTE - better choice?
+\newcommand{\vertex}[1]{\(~_{#1}\)}
+\newcommand{\stackii}[2]{$\left\{\begin{array}{c} \mbox{#1} \\ \mbox{#2} \end{array}\right\}$}
+
+\newcommand{\nbar}{\bnf{Noun}}
+\newcommand{\nbars}{{\mbox{$_{\it Noun}$}}}
+\newcommand{\chdot}{\mbox{\begin{footnotesize}$\ts\bullet\ts$\end{footnotesize}}}
+
+
+%% BNF grammars %pnorvig Mar 14 1994:   %%%%%%%%%%%%%% added ensuremath -pn
+\newcommand{\bl}{\ensuremath{\;}}			%A blank between BNF constituents
+%%%%%%%\newcommand{\bnf}[1]{\mbox{\itshape #1}}		%A BNF constituent
+%%%%%%%\newcommand{\bnf}[1]{\ensuremath{\mbox{\itshape #1}}}	%A BNF constituent
+\newcommand{\bnf}[1]{\ensuremath{{\it #1}}}	%A BNF constituent
+%%%%%%%\newcommand{\bnfeq}{\rightarrow}	% BNF arrow (separates LHS from RHS)
+\newcommand{\bnfeq}{\ensuremath{\bl\rightarrow\bl}} % BNF arrow (separates LHS/RHS)
+%%%%%%%\newcommand{\bnfreveq}{\leftarrow}	% Reverse BNF arrow
+\newcommand{\bnfreveq}{\ensuremath{\leftarrow}}	% Reverse BNF arrow
+%%%%%%%\newcommand{\bnft}[1]{\mbox{\boldmath \( #1 \)}} % A BNF terminal 
+\newcommand{\bnft}[1]{\mbf{#1}} % A BNF terminal 
+\newcommand{\bnfv}[1]{\bnf{#1}} 	% A BNF terminal variable constituent
+\newcommand{\bnfnull}{\bnft{\epsilon}} 	% An empty BNF right-hand-side
+%%%%%%%\newcommand{\bnfor}{\mid\bl} 		% A BNF disjunction
+\newcommand{\bnfor}{\ensuremath{\mid\bl}} 		% A BNF disjunction
+\newcommand{\dcg}{\Leftarrow_{dcg}}	% Obsolete!
+
+\newcommand{\fhs}[3]{\frac{#1}{#2} #3}	% Filler, Hole, Semantics
+
+%% Planning %pnorvig Mar 14 1994; updated 7 July 2008
+\newcommand{\cl}[3]{#1 \mathrel{\raisebox{-0.4ex}{$\stackrel{#2}{\longrightarrow}$}} #3}
+\newcommand{\before}{{\,\prec\,}}
+\newcommand{\after}{{\,\succ\,}}
+\newcommand{\Act}[1]{\noprog{Action:} #1}
+\newcommand{\Pre}[1]{\noprog{Precond:} #1}
+\newcommand{\Eff}[1]{\noprog{Effect:} #1}
+%%\newcommand{\Res}[1]{\noprog{Resource:} #1}
+\newcommand{\Dur}[1]{\noprog{Duration:} #1}
+\newcommand{\Con}[1]{\noprog{Condition:} #1}
+\newcommand{\Use}[1]{\noprog{Use:} #1}
+\newcommand{\Consume}[1]{\noprog{Consume:} #1}
+\newcommand{\Decr}{\noprog{Decrease}}
+\newcommand{\Incr}{\noprog{Increase}}
+\newcommand{\AtStart}[1]{\noprog{AtStart}(#1)}
+\newcommand{\AtEnd}[1]{\noprog{AtEnd}(#1)}
+\newcommand{\OverAll}[1]{\noprog{OverAll}(#1)}
+\newcommand{\noplan}{\emptylist}
+\newcommand{\strips}[3]{\begin{array}{l} Op(\Act{#1},\Pre{#2},\Eff{#3}
+			\end{array}}
+\def\SFO{\bnf{SFO}}%%was{\mbox{{\it SFO}}}
+\def\JFK{\bnf{JFK}}
+\def\LAX{\bnf{LAX}}
+
+%%%%%% learning
+
+\def\leadsto{\rightarrow}  %%latex2e does not have \leadsto but latex disallows
+
+%\newcommand{\w}[2]{W_{#1 \rightarrow #2}}  %% Winston does this
+\newcommand{\w}[2]{w_{#1,#2}}
+\renewcommand{\wp}[1]{w_{#1}}
+
+\newcommand{\error}{\mbox{error}}
+\newcommand{\Hyp}{\mathcal{H}}   %%% was \mbf{H}
+\newcommand{\Hbad}{\Hyp_{\mbox{\scriptsize bad}}}
+\newcommand{\kdl}{k\mbox{\scriptsize -DL}}
+\newcommand{\kdt}{k\mbox{\scriptsize -DT}}
+\def\Hmap{H_{\mbox{\scriptsize MAP}}}
+\def\Hml{H_{\mbox{\scriptsize ML}}}
+\newcommand{\Data}{\mbf{D}}
+\newcommand{\data}{\mbf{d}}
+\newcommand{\Datum}{D}
+\newcommand{\datum}{d}
+\newcommand{\hmap}{h_{{\rm MAP}}}
+\newcommand{\hml}{h_{{\rm ML}}}
+\newcommand{\BetaDist}{{\rm beta}}
+
+\newcommand{\Ncount}{N}%%number of examples
+\newcommand{\Acount}{n}%%number of attributes
+\newcommand{\Vcount}{d}%%number of values (domain size) of variable
+\newcommand{\dtvalue}{k}%%index over values used in decision tree calculations
+\def\nninput{i}
+\def\nnunit{j}
+\def\nnoutput{k}
+\def\ChiSquaredDeviation{\Delta}
+\def\knnquery{\x}
+\def\knnpoint{\mbf{p}}
+\def\Ecount{K}%%number of hypotheses in ensemble
+\def\Ccount{K}%%number of experts in committee
+\def\Mcount{M}%%number of mistakes
+\def\BinH{B}
+
+
+
+%%robotics
+\newcommand{\reals}{\hbox{{\cal R}}}
+\newcommand{\cspace}{\hbox{${\cal C}$}}
+\newcommand{\espace}{\hbox{${\cal E}$}}
+\newcommand{\wspace}{\hbox{${\cal W}$}}
+\newcommand{\co}{\hbox{${\cal O}$}}
+\newcommand{\fp}{\hbox{${\cal F}$}}
+
+
+%\@twosidefalse
+\@mparswitchfalse
+
+\def\thedate{\@date}
+%\date{}
+
+
+
+%%%%%%%%%% size parameters for writing and proofreading purposes %%%%%%%%%%
+
+
+
+\renewcommand{\baselinestretch}{1.0}
+
+%%%%%% To move from 7.5x9.25 to 8x10: add 0.5in to width, 0.75 in to height
+%%%%%% [[This is probably too much - margins should be slightly larger.]]
+%%%%%% [[change parindent because we're using 11pt?]]
+
+%%%%%% basic latex sizes
+
+\textheight=8.05594in    %%44pc [+ 0.75in]
+\textwidth=5.60986in     %%31pc + 1/16in + 0.1in [+ 0.5in]
+\topmargin=0.5in
+\oddsidemargin=1.075in   %%was 1.2in
+\evensidemargin=0.725in  %%was 0.8in
+
+\marginparwidth 0.75in    %  Width of marginal notes. (was 0.8in)
+\marginparsep 0.15in      %  Space between text and marginal note (was 0.2in)
+\marginparpush \baselineskip
+
+\parindent=25pt
+\parskip=0pt
+
+\skip\footins 8pt plus 2pt
+\footnotesep=8.65pt
+
+\itemsep=2pt plus 1pt minus 0.5pt
+\listparindent=\parindent
+\parsep=-25pt
+\partopsep=0pt
+\topsep=4.5pt plus 2pt minus 2pt %%% Note: this is used both for lists and eqns!
+
+%% the above settings are totally ignored - reset immediately by list envts!!!
+
+\def\@listI{\leftmargin\leftmargini \parsep 0pt \listparindent 15pt
+\topsep 4.5pt plus2pt minus2pt
+\itemsep 2pt plus1pt minus1pt}
+
+\let\@listi\@listI
+\@listi
+
+\def\@listii{\leftmargin\leftmarginii
+   \labelwidth\leftmarginii\advance\labelwidth-\labelsep
+   \topsep 3.5pt plus1.5pt minus1pt
+   \parsep 0pt \listparindent 15pt
+   \itemsep 1pt plus 1pt minus1pt}
+
+\def\@listiii{\leftmargin\leftmarginiii
+    \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
+    \topsep 2pt plus1pt minus1pt
+    \parsep 0pt \partopsep 0pt \listparindent 15pt
+    \itemsep 1pt plus 1pt minus1pt}
+
+\leftmargini 25pt
+\leftmarginii 22pt
+\leftmarginiii 18.7pt
+\leftmarginiv 17pt
+\leftmarginv 10pt
+\leftmarginvi 10pt
+
+\leftmargin\leftmargini
+\labelsep 5pt
+\labelwidth\leftmargini\advance\labelwidth-\labelsep
+
+\floatsep 8pt plus 2pt minus 3pt
+\intextsep 12pt plus 2pt minus 3pt
+\textfloatsep=13pt plus 2pt minus 5pt
+
+\abovedisplayskip 4pt plus2pt minus2pt  %%% not used in fleqn
+\belowdisplayskip \abovedisplayskip     %%% not used in fleqn
+
+\fboxsep = 5pt
+\fboxrule = .4pt
+\arrayrulewidth = .4pt
+
+\arraycolsep 3pt
+
+\tabcolsep 3pt
+
+
+%%%%%% special-purpose sizes
+
+\newlength{\headtotal}
+\setlength{\headtotal}{\headsep}
+\addtolength{\headtotal}{\headheight}
+
+\newlength{\codewidth}
+\setlength{\codewidth}{\textwidth}
+\addtolength{\codewidth}{-0.5in}
+
+\newlength{\bananasize}
+\setlength{\bananasize}{0.6in}
+
+\newlength{\boxwidth}
+\newlength{\boxheight}
+\newlength{\skipwidth}
+\newlength{\roomheight}
+\newlength{\charheight}
+\newlength{\headingwidth}
+\setlength{\charheight}{11pt} %% [[was 10pt]]
+
+\newlength{\marginlineskip}
+\newlength{\marginwidth}
+\setlength{\marginlineskip}{6.5pt}
+\setlength{\marginwidth}{\marginparwidth}
+\addtolength{\marginwidth}{\marginparsep}
+
+\newlength{\headeroffset}
+\setlength{\headeroffset}{\marginwidth}
+
+\newlength{\textplusmarginwidth}
+\setlength{\textplusmarginwidth}{\marginwidth}
+\addtolength{\textplusmarginwidth}{\textwidth}
+
+\newlength{\chapnumberwidth}
+\setlength{\chapnumberwidth}{0.95in}
+\newlength{\chaptitlewidth}
+\setlength{\chaptitlewidth}{3.6in}
+\newlength{\chaptitleboxwidth}
+\setlength{\chaptitleboxwidth}{\textplusmarginwidth}
+\addtolength{\chaptitleboxwidth}{-2.8mm}  %%% 4 x fboxsep in \titlebox
+\addtolength{\chaptitleboxwidth}{-2.24mm} %%% 2 x outer rule + 2 x inner rule
+
+\newlength{\contentspartskip}
+\newlength{\contentschapskip}
+
+%%%%%% [[sidebars will almost certainly be messed up in 8x10]]
+
+\newlength{\sidebartextwidth}
+\setlength{\sidebartextwidth}{\textwidth}
+%%% \addtolength{\sidebartextwidth}{-20pt}%%(old style)
+\addtolength{\sidebartextwidth}{-45pt}
+\newlength{\sidebarheight}
+\setlength{\sidebarheight}{\textheight}
+\addtolength{\sidebarheight}{-2\baselineskip} %%changed from 5 lines in 1E
+\newlength{\sidebardrop}
+\setlength{\sidebardrop}{\sidebarheight}
+\addtolength{\sidebardrop}{-\charheight}
+
+\newlength{\figwidth}
+\newlength{\maxfigwidth}
+\setlength{\maxfigwidth}{\textwidth}
+\addtolength{\maxfigwidth}{-2\fboxsep}
+\addtolength{\maxfigwidth}{-2\fboxrule}
+
+\newlength{\maxfigheight}
+\setlength{\maxfigheight}{\textheight}
+\addtolength{\maxfigheight}{-2\fboxsep}
+\addtolength{\maxfigheight}{-2\fboxrule}
+
+\newlength{\tablewidth}
+\setlength{\tablewidth}{\textwidth}
+
+\newlength{\captionskip}
+\setlength{\captionskip}{-1mm}
+
+\newlength{\tcaptionskip}
+\setlength{\tcaptionskip}{0pt}
+
+\newlength{\maxtcaptionheight}
+\setlength{\maxtcaptionheight}{70pt}
+\newlength{\savemaxtcaptionheight}
+\setlength{\savemaxtcaptionheight}{\maxtcaptionheight}
+
+\newlength{\savemedskipamount}
+\setlength{\savemedskipamount}{\medskipamount}
+\newcommand{\resetmedskipamount}{\setlength{\medskipamount}{\savemedskipamount}}
+
+
+
+%%%%%% special-purpose fonts [[should be changed to go with 11pt]]
+%%%%%% [[also need to then change chapter title layout]]
+
+\usepackage{chess}
+\usepackage{amsfonts}
+\usepackage{url}
+%\usepackage{skak}
+
+%\newfont{\nt}{phvrrn scaled 600}  
+%\newfont{\cn}{ptmr scaled 5000}   
+%\newfont{\ct}{ptmr scaled 2400}   
+\font\nt=phvrrn scaled 625 %% margin notes
+\font\cn=ptmr scaled 6100  %% chapter number in heading
+\font\ftfont=ptmr scaled 3600  %% full title page
+\font\fsfont=ptmr scaled 2400  %% full title page (subtitle)
+\font\fsifont=ptmri scaled 2400  %% full title page (subtitle)
+\font\htfont=ptmr scaled 3000  %% half title page
+\font\hsfont=ptmr scaled 2000  %% half title page
+\font\hsifont=ptmri scaled 2000  %% half title page
+\font\ct=ptmr scaled 2200  %% chapter title in heading
+\def\tf{\rm}               %% table headings
+
+%%%%%%%%%% Thrun
+
+%%\def\figboxflex#1#2{%
+%%\framebox[\textwidth]{\hbox{\hfill\epsfxsize=#1\maxfigwidth \epsffile{#2}\hfill}}}
+
+
+\def\onebythreefigbox#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#1}}}
+\centerline{{\figlabelsize (a)}}\vskip 2mm
+\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#2}}}
+\vskip 2mm
+\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#3}}}
+\end{minipage}}}
+
+\def\onebythreefigboxnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#1}}}
+\centerline{{\figlabelsize (a)}}\vskip 3mm
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#2}}}
+\centerline{{\figlabelsize (b)}}\vskip 3mm
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\mbox{\epsffile{#3}}}
+\centerline{{\figlabelsize (c)}}
+\end{minipage}}}
+
+\def\onebythreefigboxnoabcnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\epsffile{#1}}
+\vskip 3mm
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\epsffile{#2}}
+\vskip 3mm
+%\epsfxsize=0.5\maxfigwidth
+\centerline{\epsffile{#3}}
+\end{minipage}}}
+
+\def\twobytwofigboxframed#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\epsfxsize=0.44\maxfigwidth
+\noindent \fbox{\epsffile{#1}}\hfill
+\epsfxsize=0.44\maxfigwidth
+\fbox{\epsffile{#2}}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (b)}}\\[2mm]
+\epsfxsize=0.44\maxfigwidth
+\noindent \fbox{\epsffile{#3}}\hfill
+\epsfxsize=0.44\maxfigwidth
+\fbox{\epsffile{#4}}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (c)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (d)}}%
+\end{minipage}}}
+
+\def\twobytwofigboxnewframed#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+%\epsfxsize=0.44\maxfigwidth
+\noindent \fbox{\epsffile{#1}}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\fbox{\epsffile{#2}}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (b)}}\\[2mm]
+%\epsfxsize=0.44\maxfigwidth
+\noindent \fbox{\epsffile{#3}}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\fbox{\epsffile{#4}}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (c)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (d)}}%
+\end{minipage}}}
+
+\def\twobytwofigboxnew#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+%\epsfxsize=0.44\maxfigwidth
+\noindent
+\epsffile{#1}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\epsffile{#2}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (b)}}\\[2mm]
+%\epsfxsize=0.44\maxfigwidth
+\noindent
+\epsffile{#3}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\epsffile{#4}\\
+\makebox[0.46\maxfigwidth]{{\figlabelsize (c)}}\hfill\makebox[0.46\maxfigwidth]{{\figlabelsize (d)}}%
+\end{minipage}}}
+
+\def\twobytwofigboxnoabcdnew#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+%\epsfxsize=0.44\maxfigwidth
+\noindent \epsffile{#1}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\epsffile{#2}\\[2mm]
+%\epsfxsize=0.44\maxfigwidth
+\noindent \epsffile{#3}\hfill
+%\epsfxsize=0.44\maxfigwidth
+\epsffile{#4}%
+\end{minipage}}}
+
+\def\twofigboxflex#1#2#3#4{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\epsfxsize=#1\maxfigwidth
+\noindent \epsffile{#2}\hfill
+\epsfxsize=#3\maxfigwidth
+\epsffile{#4}\\
+\makebox[#1\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[#3\maxfigwidth]{{\figlabelsize (b)}}%
+\end{minipage}}}
+
+\def\threefigboxnewframed#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#1}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#2}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#3}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}%
+\end{minipage}}}
+
+\def\threefigboxnoabcnew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#1}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#2}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#3}%
+\end{minipage}}}
+
+\def\threefigboxframed#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#1}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#2}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#3}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}%
+\end{minipage}}}
+
+\def\threefigboxframednew#1#2#3{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent 
+\fbox{\epsffile{#1}}\hfill
+\fbox{\epsffile{#2}}\hfill
+\fbox{\epsffile{#3}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}%
+\end{minipage}}}
+
+\def\threebytwofigboxnewframed#1#2#3#4#5#6{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#1}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#2}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#3}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}\\[2mm]
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#4}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#5}}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#6}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (d)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (e)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (f)}}%
+\end{minipage}}}
+
+\def\threebytwofigboxnew#1#2#3#4#5#6{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#1}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#2}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#3}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}\\[2mm]
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#4}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#5}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#6}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (d)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (e)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (f)}}%
+\end{minipage}}}
+
+\def\threebytwofigboxnoabcdefnew#1#2#3#4#5#6{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#1}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#2}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#3}\\[2mm]
+\noindent%
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#4}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#5}\hfill
+%%%%\epsfxsize=0.30\maxfigwidth
+\epsffile{#6}%
+\end{minipage}}}
+
+\def\threebytwofigboxframed#1#2#3#4#5#6{%
+\noindent\framebox[\textwidth]{%
+\begin{minipage}{\maxfigwidth}%
+\noindent \epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#1}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#2}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#3}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (a)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (b)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (c)}}\\[2mm]
+\noindent \epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#4}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#5}}\hfill
+\epsfxsize=0.30\maxfigwidth
+\fbox{\epsffile{#6}}\\
+\makebox[0.32\maxfigwidth]{{\figlabelsize (d)}}\hfill\makebox[0.32\maxfigwidth]{{\figlabelsize (e)}}\makebox[0.32\maxfigwidth]{{\figlabelsize (f)}}%
+\end{minipage}}}
+
+\newcommand{\vect}[1]{{\bf #1}}
+\newcommand{\matx}[1]{{\cal #1}}
+\newcommand{\img}[1]{{\cal #1}}
+%\newcommand{\ignore}[1]{}
+\newcommand{\ea}{{\em et al.}}
+%\newcommand{\newterm}[1]{{\bf {#1}}}
+\newcommand{\todo}[1]{\marginalnote{{\em TO DO: #1}}}
+\def\daffigboxnew#1{%
+\noindent\framebox[\textwidth]{\hbox{\hfill\epsfxsize=0.95\textwidth \epsffile{#1}\hfill}}}
+\renewcommand\@pnumwidth{2.07em}
+
+%%\intlversion %%[[uncomment to switch to intl version]]
+\usversion %%[[comment out to switch to intl version]]
+\interfootnotelinepenalty=10000
+%\raggedbottom
+%\widowpenalty=10000
+%\clubpenalty=10000
+
+
+%%%% Note: \enlargethispage{\baselineskip}

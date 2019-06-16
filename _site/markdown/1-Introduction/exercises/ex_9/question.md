@@ -1,13 +1,13 @@
-
+[Exercise 1.9](ex_9/)
 
 To what extent are the following computer systems instances of
-artificial intelligence:<br>
+artificial intelligence:
 
--   Supermarket bar code scanners.<br>
+-   Supermarket bar code scanners.
 
--   Web search engines.<br>
+-   Web search engines.
 
--   Voice-activated telephone menus.<br>
+-   Voice-activated telephone menus.
 
 -   Internet routing algorithms that respond dynamically to the state of
     the network.
