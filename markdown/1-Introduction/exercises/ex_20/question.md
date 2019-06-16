@@ -1,4 +1,4 @@
-[Exercise 1.20](ex_20/)
+
 
 Various subfields of AI have held contests by defining a standard task
 and inviting researchers to do their best. Examples include the DARPA

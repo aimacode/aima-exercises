@@ -1,4 +1,4 @@
-[Exercise 8.26](ex_26/)
+
 
 Write in first-order logic the assertion that every key and at least one
 of every pair of socks will eventually be lost forever, using only the

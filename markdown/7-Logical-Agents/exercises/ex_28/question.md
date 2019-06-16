@@ -5,7 +5,7 @@ closely related to the wumpus world. A minesweeper world is
 a rectangular grid of $N$ squares with $M$ invisible mines scattered
 among them. Any square may be probed by the agent; instant death follows
 if a mine is probed. Minesweeper indicates the presence of mines by
-revealing, in each probed square, the *number* of mines
+revealing, in each probed square, the <i>number</i> of mines
 that are directly or diagonally adjacent. The goal is to probe every
 unmined square.
 
@@ -30,7 +30,7 @@ unmined square.
     when the global constraint is taken into account?
 
 6.  Give examples of configurations of probe values that induce
-    *long-range dependencies* such that the contents of a
+    <i>long-range dependencies</i> such that the contents of a
     given unprobed square would give information about the contents of a
-    far-distant square. (*Hint*: consider an
+    far-distant square. (<i>Hint</i>: consider an
     $N\times 1$ board.)

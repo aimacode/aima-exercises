@@ -1,4 +1,4 @@
-[Exercise 15.20 \[dbn-elimination-exercise\]](ex_20/)
+
 
 Consider applying the variable elimination
 algorithm to the umbrella DBN unrolled for three slices, where the query

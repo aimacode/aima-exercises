@@ -1,4 +1,4 @@
-[Exercise 3.36](ex_36/)
+
 
 Invent a heuristic function for the 8-puzzle that sometimes
 overestimates, and show how it can lead to a suboptimal solution on a

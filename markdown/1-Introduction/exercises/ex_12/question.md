@@ -1,4 +1,3 @@
-[Exercise 1.12](ex_12/)
 
 Some authors have claimed that perception and motor skills are the most
 important part of intelligence, and that “higher level” capacities are

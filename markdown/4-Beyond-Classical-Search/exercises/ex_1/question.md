@@ -1,16 +1,16 @@
-[Exercise 4.1](ex_1/)
+
 
 Give the name of the algorithm that results from each of the following
-special cases:
+special cases:<br>
 
-1.  Local beam search with $k = 1$.
+1.  Local beam search with $k = 1$.<br>
 
 2.  Local beam search with one initial state and no limit on the number
-    of states retained.
+    of states retained.<br>
 
 3.  Simulated annealing with $T = 0$ at all times (and omitting the
-    termination test).
+    termination test).<br>
 
-4.  Simulated annealing with $T=\infty$ at all times.
+4.  Simulated annealing with $T=\infty$ at all times.<br>
 
-5.  Genetic algorithm with population size $N = 1$.
+5.  Genetic algorithm with population size $N = 1$.<br>

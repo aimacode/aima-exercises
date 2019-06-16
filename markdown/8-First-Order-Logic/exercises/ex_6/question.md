@@ -1,6 +1,6 @@
-[Exercise 8.6 \[8puzzle-parity-exercise\]](ex_6/)
 
-\[fol-model-count-exercise\] Consider a symbol vocabulary that contains
+
+<a href="#">fol-model-count-exercise</a> Consider a symbol vocabulary that contains
 $c$ constant symbols, $p_k$ predicate symbols of each arity $k$, and
 $f_k$ function symbols of each arity $k$, where $1\leq k\leq A$. Let the
 domain size be fixed at $D$. For any given model, each predicate or

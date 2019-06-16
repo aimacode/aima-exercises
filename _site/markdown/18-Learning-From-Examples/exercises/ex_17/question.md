@@ -1,4 +1,4 @@
-[Exercise 18.17](ex_17/)
+
 
 Prove that a decision list can represent the same function as a decision
 tree while using at most as many rules as there are leaves in the

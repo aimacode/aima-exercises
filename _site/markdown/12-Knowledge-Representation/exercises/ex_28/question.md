@@ -1,4 +1,4 @@
-[Exercise 12.28](ex_28/)
+
 
 One part of the shopping process that was not covered in this chapter is
 checking for compatibility between items. For example, if a digital

@@ -1,6 +1,6 @@
-[Exercise 17.21](ex_21/)
 
-In the *Prisoner’s Dilemma*, consider the case where after
+
+In the <i>Prisoner’s Dilemma</i>, consider the case where after
 each round, Alice and Bob have probability $X$ meeting again. Suppose
 both players choose the perpetual punishment strategy (where each will
 choose ${refuse}$ unless the other player has ever played

@@ -1,4 +1,4 @@
-[Exercise 26.5 \[brain-prosthesis-exercise\]](ex_5/)
+
 
 In the brain replacement argument, it is
 important to be able to restore the subject’s brain to normal, such that

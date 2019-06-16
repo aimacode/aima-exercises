@@ -1,145 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>Main –  – </title>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-        <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <title>
     
-    <meta name="description" content="">
-    <meta property="og:description" content="" />
+      Natural Language For Communication &middot; AIMA Exercises 
     
-    <meta name="author" content="" />
+  </title>
 
-    
-    <meta property="og:title" content="Main" />
-    <meta property="twitter:title" content="Main" />
-    
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
-<!--     <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
- -->
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
- -->
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <body>
-    <input type="checkbox" id="toggleheader">
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
           <center>
-            <h1>Aritificial Intelligence: A Modern Approach</h1>
-            <h3>Stuart J. Russell and Peter Norvig</h3>
-          </center>
-        </header>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
       </div>
     </div>
-    <input type="checkbox" id="toggletoc">
-    <div class="toc">
-      <div>Table of Contents</div>
-      <form action="/search" id="site_search" autocomplete="off" method="GET">
-        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
-      </form>
-      <ul>
-	<li>
-		<span>Part &#x2160; Artificial Intelligence</span>
-		<ol>
-			<li><a href="/intro-exercises">1. Introduction</a></li>
-			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2161; Problem-solving</span>
-		<ol>
-			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
-			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
-			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
-			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
-		<ol>
-			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
-			<li><a href="/fol-exercises">8. First Order Logic</a></li>
-			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
-			<li><a href="/planning-exercises">10. Classical Planning</a></li>
-			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
-			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2163; Uncertain knowledge and reasoning</span>
-		<ol>
-			<li><a href="/probability-exercises">13. Quantifying Uncertainity</a></li>
-			<li><a href="/bayes-nets-exercises">14. Probabilistic Reasoning</a></li>
-			<li><a href="/dbn-exercises">15. Probabilistic Reasoning Over Time</a></li>
-			<li><a href="/decision-theory-exercises">16. Making Simple Decisions</a></li>
-			<li><a href="/complex-decisions-exercises">17. Making Complex Decision</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2164; Learning</span>
-		<ol>
-			<li><a href="/concept-learning-exercises">18. Learning From Examples</a></li>
-			<li><a href="/ilp-exercises">19. Knowledge In Learning</a></li>
-			<li><a href="/bayesian-learning-exercises">20. Learning Probabilistic Models</a></li>
-			<li><a href="/reinforcement-learning-exercises">21. Reinforcement Learning</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2165; Communicating, perceiving, and acting</span>
-		<ol>
-			<li><a href="/nlp-communicating-exercises">22. Natural Language Processing</a></li>
-			<li><a href="/nlp-english-exercises">23. Natural Language For Communication</a></li>
-			<li><a href="/perception-exercises">24. Perception</a></li>
-			<li><a href="/robotics-exercises">25. Robotics</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2166; Conclusions</span>
-		<ol>
-			<li><a href="/philosophy-exercises">26. Philosophical Foundations</a></li>
-			<li><a href="/#/"> Future Exercises</a></li>
-		</ol>
-	</li>
-</ul>
-    </div>
-    <div id="main" role="main" class="container">
-      
-
-
-
-<ul class="breadcrumb">
-
-  <label for="toggletoc" class="toc-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-   
-    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
-   
-
-<label for="toggleheader" class="toggleheader" title="Toggle Header">
-    &#9167;
-</label>
-</ul>
-
-      <article class="post">
+      <div class="container content">
+        <article class="post">
 
   <div class="entry">
     <script type="text/x-mathjax-config">
@@ -167,15 +141,20 @@
 
 <h1 id="23-natural-language-for-communication">23. Natural Language for Communication</h1>
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_1" data-rating="0"></i></div>
-<p><a href="ex_1/">Exercise 23.1 [washing-clothes-exercise]</a></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_1/" class="p-2">Exercise 1 (washing-clothes-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.1');" href="#"><i id="ex23.1" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.1);" href="#"><i id="ex23.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Read the following text once for
+Read the following text once for
 understanding, and remember as much of it as you can. There will be a
-test later.</p>
+test later.<br />
 
-<blockquote>
-  <p>The procedure is actually quite simple. First you arrange things into
+&gt; The procedure is actually quite simple. First you arrange things into
 different groups. Of course, one pile may be sufficient depending on how
 much there is to do. If you have to go somewhere else due to lack of
 facilities that is the next step, otherwise you are pretty well set. It
@@ -188,604 +167,530 @@ any end to the necessity for this task in the immediate future, but then
 one can never tell. After the procedure is completed one arranges the
 material into different groups again. Then they can be put into their
 appropriate places. Eventually they will be used once more and the whole
-cycle will have to be repeated. However, this is part of life.</p>
-</blockquote>
+cycle will have to be repeated. However, this is part of life.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_2/" class="p-2">Exercise 2 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.2');" href="#"><i id="ex23.2" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.2);" href="#"><i id="ex23.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_2" data-rating="0"></i></div>
-<p><a href="ex_2/">Exercise 23.2</a></p>
-
-<p>An <em>HMM grammar</em> is essentially a standard HMM whose state
+An <i>HMM grammar</i> is essentially a standard HMM whose state
 variable is $N$ (nonterminal, with values such as $Det$, $Adjective$,
 $Noun$ and so on) and whose evidence variable is $W$ (word, with values
 such as $is$, $duck$, and so on). The HMM model includes a prior
 ${\textbf{P}}(N_0)$, a transition model
 ${\textbf{P}}(N_{t+1}|N_t)$, and a sensor model
 ${\textbf{P}}(W_t|N_t)$. Show that every HMM grammar can be
-written as a PCFG. [Hint: start by thinking about how the HMM prior can
+written as a PCFG. \[Hint: start by thinking about how the HMM prior can
 be represented by PCFG rules for the sentence symbol. You may find it
 helpful to illustrate for the particular HMM with values $A$, $B$ for
-$N$ and values $x$, $y$ for $W$.]</p>
+$N$ and values $x$, $y$ for $W$.\]
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_3/" class="p-2">Exercise 3 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.3');" href="#"><i id="ex23.3" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.3);" href="#"><i id="ex23.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_3" data-rating="0"></i></div>
-<p><a href="ex_3/">Exercise 23.3</a></p>
+Consider the following PCFG for simple verb phrases:<br />
 
-<p>Consider the following PCFG for simple verb phrases:</p>
+&gt; 0.1: VP $\rightarrow$ Verb<br />
 
-<blockquote>
-  <p>0.1: VP $\rightarrow$ Verb</p>
-</blockquote>
+&gt; 0.2: VP $\rightarrow$ Copula Adjective<br />
 
-<blockquote>
-  <p>0.2: VP $\rightarrow$ Copula Adjective</p>
-</blockquote>
+&gt; 0.5: VP $\rightarrow$ Verb the Noun<br />
 
-<blockquote>
-  <p>0.5: VP $\rightarrow$ Verb the Noun</p>
-</blockquote>
+&gt; 0.2: VP $\rightarrow$ VP Adverb<br />
 
-<blockquote>
-  <p>0.2: VP $\rightarrow$ VP Adverb</p>
-</blockquote>
+&gt; 0.5: Verb $\rightarrow$ is<br />
 
-<blockquote>
-  <p>0.5: Verb $\rightarrow$ is</p>
-</blockquote>
+&gt; 0.5: Verb $\rightarrow$ shoots<br />
 
-<blockquote>
-  <p>0.5: Verb $\rightarrow$ shoots</p>
-</blockquote>
+&gt; 0.8: Copula $\rightarrow$ is<br />
 
-<blockquote>
-  <p>0.8: Copula $\rightarrow$ is</p>
-</blockquote>
+&gt; 0.2: Copula $\rightarrow$ seems<br />
 
-<blockquote>
-  <p>0.2: Copula $\rightarrow$ seems</p>
-</blockquote>
+&gt; 0.5: Adjective $\rightarrow$ <b>unwell</b><br />
 
-<blockquote>
-  <p>0.5: Adjective $\rightarrow$ <strong>unwell</strong></p>
-</blockquote>
+&gt; 0.5: Adjective $\rightarrow$ <b>well</b><br />
 
-<blockquote>
-  <p>0.5: Adjective $\rightarrow$ <strong>well</strong></p>
-</blockquote>
+&gt; 0.5: Adverb $\rightarrow$ <b>well</b><br />
 
-<blockquote>
-  <p>0.5: Adverb $\rightarrow$ <strong>well</strong></p>
-</blockquote>
+&gt; 0.5: Adverb $\rightarrow$ <b>badly</b><br />
 
-<blockquote>
-  <p>0.5: Adverb $\rightarrow$ <strong>badly</strong></p>
-</blockquote>
+&gt; 0.6: Noun $\rightarrow$ <b>duck</b><br />
 
-<blockquote>
-  <p>0.6: Noun $\rightarrow$ <strong>duck</strong></p>
-</blockquote>
+&gt; 0.4: Noun $\rightarrow$ <b>well</b><br />
 
-<blockquote>
-  <p>0.4: Noun $\rightarrow$ <strong>well</strong></p>
-</blockquote>
+1.  Which of the following have a nonzero probability as a VP? (i)
+    shoots the duck well well well(ii) seems the well well(iii) shoots
+    the unwell well badly<br />
 
-<ol>
-  <li>
-    <p>Which of the following have a nonzero probability as a VP? (i)
-shoots the duck well well well(ii) seems the well well(iii) shoots
-the unwell well badly</p>
-  </li>
-  <li>
-    <p>What is the probability of generating “is well well”?</p>
-  </li>
-  <li>
-    <p>What types of ambiguity are exhibited by the phrase in (b)?</p>
-  </li>
-  <li>
-    <p>Given any PCFG, is it possible to calculate the probability that the
-PCFG generates a string of exactly 10 words?</p>
-  </li>
-</ol>
+2.  What is the probability of generating “is well well”?<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_4" data-rating="0"></i></div>
-<p><a href="ex_4/">Exercise 23.4</a></p>
+3.  What types of ambiguity are exhibited by the phrase in (b)?<br />
 
-<p>Consider the following simple PCFG for noun phrases:</p>
+4.  Given any PCFG, is it possible to calculate the probability that the
+    PCFG generates a string of exactly 10 words?<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_4/" class="p-2">Exercise 4 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.4');" href="#"><i id="ex23.4" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.4);" href="#"><i id="ex23.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<blockquote>
-  <p>0.6: NP $\rightarrow$ Det\ AdjString\ Noun</p>
-</blockquote>
+Consider the following simple PCFG for noun phrases:<br />
 
-<blockquote>
-  <p>0.4: NP $\rightarrow$ Det\ NounNounCompound</p>
-</blockquote>
+&gt; 0.6: NP $\rightarrow$ Det\ AdjString\ Noun<br />
 
-<blockquote>
-  <p>0.5: AdjString $\rightarrow$ Adj\ AdjString</p>
-</blockquote>
+&gt; 0.4: NP $\rightarrow$ Det\ NounNounCompound<br />
 
-<blockquote>
-  <p>0.5: AdjString $\rightarrow$ $\Lambda$</p>
-</blockquote>
+&gt; 0.5: AdjString $\rightarrow$ Adj\ AdjString<br />
 
-<blockquote>
-  <p>1.0: NounNounCompound $\rightarrow$ Noun</p>
-</blockquote>
+&gt; 0.5: AdjString $\rightarrow$ $\Lambda$<br />
 
-<blockquote>
-  <p>0.8: Det $\rightarrow$ <strong>the</strong></p>
-</blockquote>
+&gt; 1.0: NounNounCompound $\rightarrow$ Noun<br />
 
-<blockquote>
-  <p>0.2: Det $\rightarrow$ <strong>a</strong></p>
-</blockquote>
+&gt; 0.8: Det $\rightarrow$ <b>the</b><br />
 
-<blockquote>
-  <p>0.5: Adj $\rightarrow$ <strong>small</strong></p>
-</blockquote>
+&gt; 0.2: Det $\rightarrow$ <b>a</b><br />
 
-<blockquote>
-  <p>0.5: Adj $\rightarrow$ <strong>green</strong></p>
-</blockquote>
+&gt; 0.5: Adj $\rightarrow$ <b>small</b><br />
 
-<blockquote>
-  <p>0.6: Noun $\rightarrow$ <strong>village</strong></p>
-</blockquote>
+&gt; 0.5: Adj $\rightarrow$ <b>green</b><br />
 
-<blockquote>
-  <p>0.4: Noun $\rightarrow$ <strong>green</strong></p>
-</blockquote>
+&gt; 0.6: Noun $\rightarrow$ <b>village</b><br />
 
-<p>where $\Lambda$ denotes the empty string.</p>
+&gt; 0.4: Noun $\rightarrow$ <b>green</b><br />
 
-<ol>
-  <li>
-    <p>What is the longest NP that can be generated by this grammar? (i)
-three words(ii) four words(iii) infinitely many words</p>
-  </li>
-  <li>
-    <p>Which of the following have a nonzero probability of being generated
-as complete NPs? (i) a small green village(ii) a green
-green green(iii) a small village green</p>
-  </li>
-  <li>
-    <p>What is the probability of generating “the green green”?</p>
-  </li>
-  <li>
-    <p>What types of ambiguity are exhibited by the phrase in (c)?</p>
-  </li>
-  <li>
-    <p>Given any PCFG and any finite word sequence, is it possible to
-calculate the probability that the sequence was generated by the
-PCFG?</p>
-  </li>
-</ol>
+where $\Lambda$ denotes the empty string.<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_5" data-rating="0"></i></div>
-<p><a href="ex_5/">Exercise 23.5</a></p>
+1.  What is the longest NP that can be generated by this grammar? (i)
+    three words(ii) four words(iii) infinitely many words<br />
 
-<p>Outline the major differences between Java (or any other computer
+2.  Which of the following have a nonzero probability of being generated
+    as complete NPs? (i) a small green village(ii) a green
+    green green(iii) a small village green<br />
+
+3.  What is the probability of generating “the green green”?<br />
+
+4.  What types of ambiguity are exhibited by the phrase in (c)?<br />
+
+5.  Given any PCFG and any finite word sequence, is it possible to
+    calculate the probability that the sequence was generated by the
+    PCFG?<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_5/" class="p-2">Exercise 5 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.5');" href="#"><i id="ex23.5" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.5);" href="#"><i id="ex23.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Outline the major differences between Java (or any other computer
 language with which you are familiar) and English, commenting on the
 “understanding” problem in each case. Think about such things as
 grammar, syntax, semantics, pragmatics, compositionality,
 context-dependence, lexical ambiguity, syntactic ambiguity, reference
 finding (including pronouns), background knowledge, and what it means to
-“understand” in the first place.</p>
+“understand” in the first place.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_6/" class="p-2">Exercise 6 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.6');" href="#"><i id="ex23.6" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.6);" href="#"><i id="ex23.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_6" data-rating="0"></i></div>
-<p><a href="ex_6/">Exercise 23.6</a></p>
+This exercise concerns grammars for very simple languages.<br />
 
-<p>This exercise concerns grammars for very simple languages.</p>
+1.  Write a context-free grammar for the language $a^n b^n$.<br />
 
-<ol>
-  <li>
-    <p>Write a context-free grammar for the language $a^n b^n$.</p>
-  </li>
-  <li>
-    <p>Write a context-free grammar for the palindrome language: the set of
-all strings whose second half is the reverse of the first half.</p>
-  </li>
-  <li>
-    <p>Write a context-sensitive grammar for the duplicate language: the
-set of all strings whose second half is the same as the first half.</p>
-  </li>
-</ol>
+2.  Write a context-free grammar for the palindrome language: the set of
+    all strings whose second half is the reverse of the first half.<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_7" data-rating="0"></i></div>
-<p><a href="ex_7/">Exercise 23.7</a></p>
+3.  Write a context-sensitive grammar for the duplicate language: the
+    set of all strings whose second half is the same as the first half.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_7/" class="p-2">Exercise 7 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.7');" href="#"><i id="ex23.7" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.7);" href="#"><i id="ex23.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Consider the sentence “Someone walked slowly to the supermarket” and a
-lexicon consisting of the following words:</p>
+Consider the sentence “Someone walked slowly to the supermarket” and a
+lexicon consisting of the following words:<br />
 
-<p>$Pronoun \rightarrow \textbf{someone} \quad Verb \rightarrow \textbf{walked}$</p>
+$Pronoun \rightarrow \textbf{someone} \quad Verb \rightarrow \textbf{walked}$<br />
 
-<p>$Adv \rightarrow \textbf{slowly} \quad Prep \rightarrow \textbf{to}$</p>
+$Adv \rightarrow \textbf{slowly} \quad Prep \rightarrow \textbf{to}$<br />
 
-<p>$Article \rightarrow \textbf{the} \quad Noun \rightarrow \textbf{supermarket}$</p>
+$Article \rightarrow \textbf{the} \quad Noun \rightarrow \textbf{supermarket}$<br />
 
-<p>Which of the following three grammars, combined with the lexicon,
-generates the given sentence? Show the corresponding parse tree(s).</p>
+Which of the following three grammars, combined with the lexicon,
+generates the given sentence? Show the corresponding parse tree(s).<br />
 
-<table>
-  <thead>
-    <tr>
-      <th>$\quad\quad\quad\quad (A):\quad\quad\quad\quad$</th>
-      <th>$\quad\quad\quad\quad(B):\quad\quad\quad\quad$</th>
-      <th>$\quad\quad\quad\quad(C):\quad\quad\quad\quad$</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>$S\rightarrow NP\space VP$</td>
-      <td>$S\rightarrow NP\space VP$</td>
-      <td>$S\rightarrow NP\space VP$</td>
-    </tr>
-    <tr>
-      <td>$NP\rightarrow Pronoun$</td>
-      <td>$NP\rightarrow Pronoun$</td>
-      <td>$NP\rightarrow Pronoun$</td>
-    </tr>
-    <tr>
-      <td>$NP\rightarrow Article\space Noun $</td>
-      <td>$NP\rightarrow Noun$</td>
-      <td>$NP\rightarrow Article\space NP$</td>
-    </tr>
-    <tr>
-      <td>$VP\rightarrow VP\space PP$</td>
-      <td>$NP\rightarrow Article\space NP$</td>
-      <td>$VP\rightarrow Verb\space Adv$</td>
-    </tr>
-    <tr>
-      <td>$VP\rightarrow VP\space Adv\space Adv$</td>
-      <td>$VP\rightarrow Verb\space Vmod$</td>
-      <td>$Adv\rightarrow Adv\space Adv$</td>
-    </tr>
-    <tr>
-      <td>$VP\rightarrow Verb$</td>
-      <td>$Vmod\rightarrow Adv\space Vmod$</td>
-      <td>$Adv\rightarrow PP$</td>
-    </tr>
-    <tr>
-      <td>$PP\rightarrow Prep\space NP$</td>
-      <td>$Vmod\rightarrow Adv$</td>
-      <td>$PP\rightarrow Prep\space NP$</td>
-    </tr>
-    <tr>
-      <td>$NP\rightarrow Noun$</td>
-      <td>$Adv\rightarrow PP$</td>
-      <td>$NP\rightarrow Noun$</td>
-    </tr>
-    <tr>
-      <td>$\quad$</td>
-      <td>$PP\rightarrow Prep\space NP$</td>
-      <td>$\quad$</td>
-    </tr>
-  </tbody>
-</table>
+| $\quad\quad\quad\quad (A):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(B):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(C):\quad\quad\quad\quad$ |
+| --- | --- | --- |
+| $S\rightarrow NP\space VP$ | $S\rightarrow NP\space VP$ | $S\rightarrow NP\space VP$ |
+| $NP\rightarrow Pronoun$ | $NP\rightarrow Pronoun$ | $NP\rightarrow Pronoun$ |
+| $NP\rightarrow Article\space Noun $ | $NP\rightarrow Noun$ | $NP\rightarrow Article\space NP$ |
+| $VP\rightarrow VP\space PP$ | $NP\rightarrow Article\space NP$ | $VP\rightarrow Verb\space Adv$ |
+| $VP\rightarrow VP\space Adv\space Adv$ | $VP\rightarrow Verb\space Vmod$ | $Adv\rightarrow Adv\space Adv$ |
+| $VP\rightarrow Verb$ | $Vmod\rightarrow Adv\space Vmod$ | $Adv\rightarrow PP$ |
+| $PP\rightarrow Prep\space NP$ | $Vmod\rightarrow Adv$ | $PP\rightarrow Prep\space NP$ |
+| $NP\rightarrow Noun$ | $Adv\rightarrow PP$ | $NP\rightarrow Noun$ |
+| $\quad$ | $PP\rightarrow Prep\space NP$ | $\quad$ |<br />
 
-<p>For each of the preceding three grammars, write down three sentences of
+
+For each of the preceding three grammars, write down three sentences of
 English and three sentences of non-English generated by the grammar.
 Each sentence should be significantly different, should be at least six
 words long, and should include some new lexical entries (which you
 should define). Suggest ways to improve each grammar to avoid generating
-the non-English sentences.</p>
+the non-English sentences.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_8/" class="p-2">Exercise 8 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.8');" href="#"><i id="ex23.8" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.8);" href="#"><i id="ex23.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_8" data-rating="0"></i></div>
-<p><a href="ex_8/">Exercise 23.8</a></p>
-
-<p>Collect some examples of time expressions, such as “two o’clock,”
+Collect some examples of time expressions, such as “two o’clock,”
 “midnight,” and “12:46.” Also think up some examples that are
 ungrammatical, such as “thirteen o’clock” or “half past two fifteen.”
-Write a grammar for the time language.</p>
+Write a grammar for the time language.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_9/" class="p-2">Exercise 9 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.9');" href="#"><i id="ex23.9" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.9);" href="#"><i id="ex23.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_9" data-rating="0"></i></div>
-<p><a href="ex_9/">Exercise 23.9</a></p>
+Some linguists have argued as follows:<br />
+<br />
+ Children learning a language hear only <i>positive
+ examples</i> of the language and no <i>negative
+ examples</i>. Therefore, the hypothesis that “every possible
+ sentence is in the language” is consistent with all the observed
+ examples. Moreover, this is the simplest consistent hypothesis.
+ Furthermore, all grammars for languages that are supersets of the true
+ language are also consistent with the observed data. Yet children do
+ induce (more or less) the right grammar. It follows that they begin
+ with very strong innate grammatical constraints that rule out all of
+ these more general hypotheses <i>a priori</i>.<br />
 
-<p>Some linguists have argued as follows:</p>
+Comment on the weak point(s) in this argument from a statistical
+learning viewpoint.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_10/" class="p-2">Exercise 10 (chomsky-form-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.10');" href="#"><i id="ex23.10" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.10);" href="#"><i id="ex23.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<blockquote>
-  <p>Children learning a language hear only <em>positive
-examples</em> of the language and no <em>negative
-examples</em>. Therefore, the hypothesis that “every possible
-sentence is in the language” is consistent with all the observed
-examples. Moreover, this is the simplest consistent hypothesis.
-Furthermore, all grammars for languages that are supersets of the true
-language are also consistent with the observed data. Yet children do
-induce (more or less) the right grammar. It follows that they begin
-with very strong innate grammatical constraints that rule out all of
-these more general hypotheses <em>a priori</em>.</p>
-</blockquote>
-
-<p>Comment on the weak point(s) in this argument from a statistical
-learning viewpoint.</p>
-
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_10" data-rating="0"></i></div>
-<p><a href="ex_10/">Exercise 23.10 [chomsky-form-exercise]</a></p>
-
-<p>In this exercise you will transform $\large \varepsilon_0$  into
+In this exercise you will transform $\large \varepsilon_0$  into
 Chomsky Normal Form (CNF). There are five steps: (a) Add a new start
 symbol, (b) Eliminate $\epsilon$ rules, (c) Eliminate multiple words on
-right-hand sides, (d) Eliminate rules of the form
-(${\it X}$
-$\rightarrow$${\it Y}$),
-(e) Convert long right-hand sides into binary rules.</p>
+right-hand sides, (d) Eliminate rules of the form<br />
+(${\it X}$<br />
+$\rightarrow$${\it Y}$),<br />
+(e) Convert long right-hand sides into binary rules.<br />
 
-<ol>
-  <li>
-    <p>The start symbol, $S$, can occur only on the left-hand side in CNF.
-Replace ${\it S}$ everywhere by a new symbol
-${\it S’}$ and add a rule of the form
-${\it S}$
-$\rightarrow$${\it S’}$.</p>
-  </li>
-  <li>
-    <p>The empty string, $\epsilon$ cannot appear on the right-hand side
-in CNF. $\large \varepsilon_0$ does not have any rules with $\epsilon$, so this is not
-an issue.</p>
-  </li>
-  <li>
-    <p>A word can appear on the right-hand side in a rule only of the form
-(${\it X}$
-$\rightarrow$<em>word</em>).
-Replace each rule of the form (${\it X}$
-$\rightarrow$…<em>word</em> …)
-with (${\it X}$
-$\rightarrow$…${\it W’}$ …)
-and (${\it W’}$
-$\rightarrow$<em>word</em>),
-using a new symbol ${\it W’}$.</p>
-  </li>
-  <li>
-    <p>A rule (${\it X}$
-$\rightarrow<script type="math/tex">{\it Y}$)
-is not allowed in CNF; it must be (${\it X}$
-$\rightarrow</script>{\it Y}$
-${\it Z}$) or (${\it X}$
-$\rightarrow$<em>word</em>).
-Replace each rule of the form (${\it X}$
-$\rightarrow$${\it Y}$)
-with a set of rules of the form (${\it X}$
-$\rightarrow$…), one
-for each rule (${\it Y}$
-$\rightarrow$…),
-where (…) indicates one or more symbols.</p>
-  </li>
-  <li>
-    <p>Replace each rule of the form (${\it X}$
-$\rightarrow<script type="math/tex">{\it Y}$
-${\it Z}$ …) with two rules, (${\it X}$
-$\rightarrow</script>{\it Y}$
-${\it Z’}$) and (${\it Z’}$
-$\rightarrow$${\it Z}$
-…), where ${\it Z’}$ is a new symbol.</p>
-  </li>
-</ol>
+1.  The start symbol, $S$, can occur only on the left-hand side in CNF.
+    Replace ${\it S}$ everywhere by a new symbol
+    ${\it S'}$ and add a rule of the form
+    ${\it S}$
+    $\rightarrow$${\it S'}$.<br />
 
-<p>Show each step of the process and the final set of rules.</p>
+2.  The empty string, $\epsilon$ cannot appear on the right-hand side
+    in CNF. $\large \varepsilon_0$ does not have any rules with $\epsilon$, so this is not
+    an issue.<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_11" data-rating="0"></i></div>
-<p><a href="ex_11/">Exercise 23.11</a></p>
+3.  A word can appear on the right-hand side in a rule only of the form
+    (${\it X}$
+    $\rightarrow$*word*).
+    Replace each rule of the form (${\it X}$
+    $\rightarrow$…*word* …)
+    with (${\it X}$
+    $\rightarrow$…${\it W'}$ …)
+    and (${\it W'}$
+    $\rightarrow$*word*),
+    using a new symbol ${\it W'}$.<br />
 
-<p>Consider the following toy grammar:</p>
+4.  A rule (${\it X}$
+    $\rightarrow$${\it Y}$)
+    is not allowed in CNF; it must be (${\it X}$
+    $\rightarrow$${\it Y}$
+    ${\it Z}$) or (${\it X}$
+    $\rightarrow$*word*).
+    Replace each rule of the form (${\it X}$
+    $\rightarrow$${\it Y}$)
+    with a set of rules of the form (${\it X}$
+    $\rightarrow$…), one
+    for each rule (${\it Y}$
+    $\rightarrow$…),
+    where (…) indicates one or more symbols.<br />
 
-<blockquote>
-  <p>$S \rightarrow NP\space VP$</p>
-</blockquote>
+5.  Replace each rule of the form (${\it X}$
+    $\rightarrow$${\it Y}$
+    ${\it Z}$ …) with two rules, (${\it X}$
+    $\rightarrow$${\it Y}$
+    ${\it Z'}$) and (${\it Z'}$
+    $\rightarrow$${\it Z}$
+    …), where ${\it Z'}$ is a new symbol.<br />
 
-<blockquote>
-  <p>$NP \rightarrow Noun$</p>
-</blockquote>
+Show each step of the process and the final set of rules.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_11/" class="p-2">Exercise 11 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.11');" href="#"><i id="ex23.11" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.11);" href="#"><i id="ex23.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<blockquote>
-  <p>$NP \rightarrow NP\space and\space NP$</p>
-</blockquote>
+Consider the following toy grammar:<br />
 
-<blockquote>
-  <p>$NP \rightarrow NP\space PP$</p>
-</blockquote>
+&gt; $S \rightarrow NP\space VP$<br />
 
-<blockquote>
-  <p>$VP \rightarrow Verb$</p>
-</blockquote>
+&gt; $NP \rightarrow Noun$<br />
 
-<blockquote>
-  <p>$VP \rightarrow VP\space and \space VP$</p>
-</blockquote>
+&gt; $NP \rightarrow NP\space and\space NP$<br />
 
-<blockquote>
-  <p>$VP \rightarrow VP\space PP$</p>
-</blockquote>
+&gt; $NP \rightarrow NP\space PP$<br />
 
-<blockquote>
-  <p>$PP \rightarrow Prep\space NP$</p>
-</blockquote>
+&gt; $VP \rightarrow Verb$<br />
 
-<blockquote>
-  <p>$Noun \rightarrow Sally\space; pools\space; streams\space; swims$</p>
-</blockquote>
+&gt; $VP \rightarrow VP\space and \space VP$<br />
 
-<blockquote>
-  <p>$Prep \rightarrow in$</p>
-</blockquote>
+&gt; $VP \rightarrow VP\space PP$<br />
 
-<blockquote>
-  <p>$Verb \rightarrow pools\space; streams\space; swims$</p>
-</blockquote>
+&gt; $PP \rightarrow Prep\space NP$<br />
 
-<ol>
-  <li>
-    <p>Show all the parse trees in this grammar for the sentence “Sally
-swims in streams and pools.”</p>
-  </li>
-  <li>
-    <p>Show all the table entries that would be made by
-a (non-probabalistic) CYK parser on this sentence.</p>
-  </li>
-</ol>
+&gt; $Noun \rightarrow Sally\space; pools\space; streams\space; swims$<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_12" data-rating="0"></i></div>
-<p><a href="ex_12/">Exercise 23.12 [exercise-subj-verb-agree]</a></p>
+&gt; $Prep \rightarrow in$<br />
 
-<p>Using DCG notation, write a grammar for a
+&gt; $Verb \rightarrow pools\space; streams\space; swims$<br />
+
+1.  Show all the parse trees in this grammar for the sentence “Sally
+    swims in streams and pools.”<br />
+
+2.  Show all the table entries that would be made by
+    a (non-probabalistic) CYK parser on this sentence.<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_12/" class="p-2">Exercise 12(exercise-subj-verb-agree) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.12');" href="#"><i id="ex23.12" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.12);" href="#"><i id="ex23.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Using DCG notation, write a grammar for a
 language that is just like $\large \varepsilon_1$, except that it enforces agreement between
 the subject and verb of a sentence and thus does not generate
-ungrammatical sentences such as “I smells the wumpus.”</p>
+ungrammatical sentences such as “I smells the wumpus.”
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_13/" class="p-2">Exercise 13 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.13');" href="#"><i id="ex23.13" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.13);" href="#"><i id="ex23.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_13" data-rating="0"></i></div>
-<p><a href="ex_13/">Exercise 23.13</a></p>
+Consider the following PCFG:<br />
 
-<p>Consider the following PCFG:</p>
+&gt; $S \rightarrow NP \space VP[1.0] $<br />
 
-<blockquote>
-  <p>$S \rightarrow NP \space VP[1.0] $</p>
-</blockquote>
+&gt; $NP \rightarrow \textit{Noun}[0.6] \space|\space \textit{Pronoun}[0.4] $<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$NP \rightarrow \textit{Noun}[0.6] \space</td>
-        <td>\space \textit{Pronoun}[0.4] $</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
+&gt; $VP \rightarrow \textit{Verb} \space NP[0.8] \space|\space \textit{Modal}\space \textit{Verb}[0.2]$<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$VP \rightarrow \textit{Verb} \space NP[0.8] \space</td>
-        <td>\space \textit{Modal}\space \textit{Verb}[0.2]$</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
+&gt; $\textit{Noun} \rightarrow \textbf{can}[0.1] \space|\space \textbf{fish}[0.3] \space|\space ...$<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$\textit{Noun} \rightarrow \textbf{can}[0.1] \space</td>
-        <td>\space \textbf{fish}[0.3] \space</td>
-        <td>\space …$</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
+&gt; $\textit{Pronoun} \rightarrow \textbf{I}[0.4] \space|\space ...$<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$\textit{Pronoun} \rightarrow \textbf{I}[0.4] \space</td>
-        <td>\space …$</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
+&gt; $\textit{Verb} \rightarrow \textbf{can}[0.01] \space|\space \textbf{fish}[0.1] \space|\space ...$<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$\textit{Verb} \rightarrow \textbf{can}[0.01] \space</td>
-        <td>\space \textbf{fish}[0.1] \space</td>
-        <td>\space …$</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
+&gt; $\textit{Modal} \rightarrow \textbf{can}[0.3] \space|\space ...$<br />
 
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>$\textit{Modal} \rightarrow \textbf{can}[0.3] \space</td>
-        <td>\space …$</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<p>The sentence “I can fish” has two parse trees with this grammar. Show
+The sentence “I can fish” has two parse trees with this grammar. Show
 the two trees, their prior probabilities, and their conditional
-probabilities, given the sentence.</p>
+probabilities, given the sentence.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_14/" class="p-2">Exercise 14 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.14');" href="#"><i id="ex23.14" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.14);" href="#"><i id="ex23.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_14" data-rating="0"></i></div>
-<p><a href="ex_14/">Exercise 23.14</a></p>
-
-<p>An augmented context-free grammar can represent languages that a regular
+An augmented context-free grammar can represent languages that a regular
 context-free grammar cannot. Show an augmented context-free grammar for
 the language $a^nb^nc^n$. The allowable values for augmentation
 variables are 1 and $SUCCESSOR(n)$, where $n$ is a value. The rule for a sentence
-in this language is
-<script type="math/tex">S(n) \rightarrow}}A(n) B(n) C(n) \ .</script>
+in this language is<br />
+$$S(n) \rightarrow}}A(n) B(n) C(n) \ .$$
 Show the rule(s) for each of ${\it A}$,
-${\it B}$, and ${\it C}$.</p>
+${\it B}$, and ${\it C}$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_15/" class="p-2">Exercise 15 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.15');" href="#"><i id="ex23.15" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.15);" href="#"><i id="ex23.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_15" data-rating="0"></i></div>
-<p><a href="ex_15/">Exercise 23.15</a></p>
-
-<p>Augment the $\large \varepsilon_1$ grammar so that it handles article–noun agreement. That is,
+Augment the $\large \varepsilon_1$ grammar so that it handles article–noun agreement. That is,
 make sure that “agents” and “an agent” are ${\it NP}$s, but
-“agent” and “an agents” are not.</p>
+“agent” and “an agents” are not.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_16/" class="p-2">Exercise 16 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.16');" href="#"><i id="ex23.16" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.16);" href="#"><i id="ex23.16" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_16" data-rating="0"></i></div>
-<p><a href="ex_16/">Exercise 23.16</a></p>
+Consider the following sentence (from <i>The New York Times,</i>
+July 28, 2008):<br />
 
-<p>Consider the following sentence (from <em>The New York Times,</em>
-July 28, 2008):</p>
+&gt; Banks struggling to recover from multibillion-dollar loans on real
+&gt; estate are curtailing loans to American businesses, depriving even
+&gt; healthy companies of money for expansion and hiring.
 
-<blockquote>
-  <p>Banks struggling to recover from multibillion-dollar loans on real
-estate are curtailing loans to American businesses, depriving even
-healthy companies of money for expansion and hiring.</p>
-</blockquote>
+1.  Which of the words in this sentence are lexically ambiguous?<br />
 
-<ol>
-  <li>
-    <p>Which of the words in this sentence are lexically ambiguous?</p>
-  </li>
-  <li>
-    <p>Find two cases of syntactic ambiguity in this sentence (there are
-more than two.)</p>
-  </li>
-  <li>
-    <p>Give an instance of metaphor in this sentence.</p>
-  </li>
-  <li>
-    <p>Can you find semantic ambiguity?</p>
-  </li>
-</ol>
+2.  Find two cases of syntactic ambiguity in this sentence (there are
+    more than two.)<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_17" data-rating="0"></i></div>
-<p><a href="ex_17/">Exercise 23.17 [washing-clothes2-exercise]</a></p>
+3.  Give an instance of metaphor in this sentence.<br />
 
-<p>Without looking back at
-Exercise <a href="#/">washing-clothes-exercise</a>, answer the following
-questions:</p>
+4.  Can you find semantic ambiguity?
+<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_17/" class="p-2">Exercise 17 (washing-clothes2-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.17');" href="#"><i id="ex23.17" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.17);" href="#"><i id="ex23.17" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<ol>
-  <li>
-    <p>What are the four steps that are mentioned?</p>
-  </li>
-  <li>
-    <p>What step is left out?</p>
-  </li>
-  <li>
-    <p>What is “the material” that is mentioned in the text?</p>
-  </li>
-  <li>
-    <p>What kind of mistake would be expensive?</p>
-  </li>
-  <li>
-    <p>Is it better to do too few things or too many? Why?</p>
-  </li>
-</ol>
+Without looking back at
+Exercise <a href="#">washing-clothes-exercise</a>, answer the following
+questions:<br />
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_18" data-rating="0"></i></div>
-<p><a href="ex_18/">Exercise 23.18</a></p>
+1.  What are the four steps that are mentioned?<br />
 
-<p>Select five sentences and submit them to an online translation service.
+2.  What step is left out?<br />
+
+3.  What is “the material” that is mentioned in the text?<br />
+
+4.  What kind of mistake would be expensive?<br />
+
+5.  Is it better to do too few things or too many? Why?<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_18/" class="p-2">Exercise 18 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.18');" href="#"><i id="ex23.18" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.18);" href="#"><i id="ex23.18" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Select five sentences and submit them to an online translation service.
 Translate them from English to another language and back to English.
 Rate the resulting sentences for grammaticality and preservation of
 meaning. Repeat the process; does the second round of iteration give
@@ -793,66 +698,98 @@ worse results or the same results? Does the choice of intermediate
 language make a difference to the quality of the results? If you know a
 foreign language, look at the translation of one paragraph into that
 language. Count and describe the errors made, and conjecture why these
-errors were made.</p>
+errors were made.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_19/" class="p-2">Exercise 19 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.19');" href="#"><i id="ex23.19" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.19);" href="#"><i id="ex23.19" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_19" data-rating="0"></i></div>
-<p><a href="ex_19/">Exercise 23.19</a></p>
+The $D_i$ values for the sentence in
+Figure <a href="#">mt-alignment-figure</a> sum to 0. Will that be true
+of every translation pair? Prove it or give a counterexample.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_20/" class="p-2">Exercise 20 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.20');" href="#"><i id="ex23.20" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.20);" href="#"><i id="ex23.20" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>The $D_i$ values for the sentence in
-Figure <a href="#/">mt-alignment-figure</a> sum to 0. Will that be true
-of every translation pair? Prove it or give a counterexample.</p>
-
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_20" data-rating="0"></i></div>
-<p><a href="ex_20/">Exercise 23.20</a></p>
-
-<p>(Adapted from [@Knight:1999].) Our translation model assumes that, after the phrase
+(Adapted from [@Knight:1999].) Our translation model assumes that, after the phrase
 translation model selects phrases and the distortion model permutes
 them, the language model can unscramble the permutation. This exercise
 investigates how sensible that assumption is. Try to unscramble these
-proposed lists of phrases into the correct order:</p>
+proposed lists of phrases into the correct order:<br />
 
-<ol>
-  <li>
-    <p>have, programming, a, seen, never, I, language, better</p>
-  </li>
-  <li>
-    <p>loves, john, mary</p>
-  </li>
-  <li>
-    <p>is the, communication, exchange of, intentional, information
-brought, by, about, the production, perception of, and signs, from,
-drawn, a, of, system, signs, conventional, shared</p>
-  </li>
-  <li>
-    <p>created, that, we hold these, to be, all men, truths, are, equal,
-self-evident</p>
-  </li>
-</ol>
+1.  have, programming, a, seen, never, I, language, better<br />
 
-<p>Which ones could you do? What type of knowledge did you draw upon? Train
+2.  loves, john, mary<br />
+
+3.  is the, communication, exchange of, intentional, information
+    brought, by, about, the production, perception of, and signs, from,
+    drawn, a, of, system, signs, conventional, shared<br />
+
+4.  created, that, we hold these, to be, all men, truths, are, equal,
+    self-evident<br />
+
+Which ones could you do? What type of knowledge did you draw upon? Train
 a bigram model from a training corpus, and use it to find the
 highest-probability permutation of some sentences from a test corpus.
-Report on the accuracy of this model.</p>
+Report on the accuracy of this model.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_21/" class="p-2">Exercise 21 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.21');" href="#"><i id="ex23.21" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.21);" href="#"><i id="ex23.21" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_21" data-rating="0"></i></div>
-<p><a href="ex_21/">Exercise 23.21</a></p>
+Calculate the most probable path through the HMM in
+Figure <a href="#">sr-hmm-figure</a> for the output sequence
+$[C_1,C_2,C_3,C_4,C_4,C_6,C_7]$. Also give its probability.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_22/" class="p-2">Exercise 22 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex23.22');" href="#"><i id="ex23.22" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex23.22);" href="#"><i id="ex23.22" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Calculate the most probable path through the HMM in
-Figure <a href="#/">sr-hmm-figure</a> for the output sequence
-$[C_1,C_2,C_3,C_4,C_4,C_6,C_7]$. Also give its probability.</p>
-
-<div><i class="arrow-up loader" data-chapter="nlp-english-exercises" data-exercise="ex_22" data-rating="0"></i></div>
-<p><a href="ex_22/">Exercise 23.22</a></p>
-
-<p>We forgot to mention that the text in
-Exercise <a href="#/">washing-clothes-exercise</a> is entitled “Washing
+We forgot to mention that the text in
+Exercise <a href="#">washing-clothes-exercise</a> is entitled “Washing
 Clothes.” Reread the text and answer the questions in
-Exercise <a href="#/">washing-clothes2-exercise</a>. Did you do better
+Exercise <a href="#">washing-clothes2-exercise</a>. Did you do better
 this time? Bransford and Johnson [@Bransford+Johnson:1973] used this
 text in a controlled experiment and found that the title helped
 significantly. What does this tell you about how language and memory
-works?</p>
-
+works?
+</p>
+</div>
+</div>
+<p><br /></p>
 
   </div>
 
@@ -861,22 +798,6 @@ works?</p>
   </div>
  -->
   
-<div class="comments">
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-
-	    var disqus_shortname = 'nalinc';
-
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-
 
 </article>
 
@@ -909,17 +830,25 @@ $(document).on('click',"i[data-chapter]",function(e){
 
 </script>
 
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-        </footer>
       </div>
-    </div>
-
-    
 
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
   </body>
 </html>

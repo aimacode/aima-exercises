@@ -1,4 +1,4 @@
-[Exercise 11.10](ex_10/)
+
 
 In the blocks world we were forced to introduce two action schemas,
 ${Move}$ and ${MoveToTable}$, in order to maintain the ${Clear}$

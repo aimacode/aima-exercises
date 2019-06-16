@@ -1,4 +1,4 @@
-[Exercise 8.2](ex_2/)
+
 
 Consider a knowledge base containing just two sentences: $P(a)$ and
 $P(b)$. Does this knowledge base entail $\forall\,x\ P(x)$? Explain your

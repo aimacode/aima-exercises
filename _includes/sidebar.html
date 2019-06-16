@@ -1,0 +1,28 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" >
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+     <a class="sidebar-nav-item" href="{{ site.baseurl }}/question_bank/">Question Bank</a>
+    <a class="sidebar-nav-item" href="{{ site.baseurl }}/bookmarks/">Bookmarks</a>
+
+    <a class="sidebar-nav-item" href="#">Extract Exercises</a>
+    <a class="sidebar-nav-item" href="#">Propose Exercises</a>
+    <a class="sidebar-nav-item" href="https://github.com/aimacode/aima-exercises">Github Project</a>
+
+    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>

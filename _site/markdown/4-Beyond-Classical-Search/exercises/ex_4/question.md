@@ -1,4 +1,4 @@
-[Exercise 4.4 \[hill-climbing-exercise\]](ex_4/)
+
 
 Generate a large number of 8-puzzle and
 8-queens instances and solve them (where possible) by hill climbing

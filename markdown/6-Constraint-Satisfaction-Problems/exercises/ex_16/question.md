@@ -1,4 +1,4 @@
-[Exercise 6.16](ex_16/)
+
 
 We introduced Sudoku as a CSP to be solved by search over partial
 assignments because that is the way people generally undertake solving

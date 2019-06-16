@@ -1,4 +1,4 @@
-[Exercise 13.21 \[pv-xyz-exercise\]](ex_21/)
+
 
 Show that the statement of conditional independence
 $${\textbf{P}}(X,Y {{\,|\,}}Z) = {\textbf{P}}(X{{\,|\,}}Z) {\textbf{P}}(Y{{\,|\,}}Z)$$

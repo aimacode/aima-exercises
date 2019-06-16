@@ -1,4 +1,4 @@
-[Exercise 1.17](ex_17/)
+
 
 “Surely animals, humans, and computers cannot be intelligent—they can do
 only what their constituent atoms are told to do by the laws of

@@ -1,4 +1,4 @@
-[Exercise 15.10](ex_10/)
+
 
 This exercise is concerned with filtering in an environment with no
 landmarks. Consider a vacuum robot in an empty room, represented by an

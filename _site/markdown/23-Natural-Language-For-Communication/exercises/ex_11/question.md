@@ -1,31 +1,31 @@
-[Exercise 23.11](ex_11/)
 
-Consider the following toy grammar:
 
-> $S \rightarrow NP\space VP$
+Consider the following toy grammar:<br>
 
-> $NP \rightarrow Noun$
+> $S \rightarrow NP\space VP$<br>
 
-> $NP \rightarrow NP\space and\space NP$
+> $NP \rightarrow Noun$<br>
 
-> $NP \rightarrow NP\space PP$
+> $NP \rightarrow NP\space and\space NP$<br>
 
-> $VP \rightarrow Verb$
+> $NP \rightarrow NP\space PP$<br>
 
-> $VP \rightarrow VP\space and \space VP$
+> $VP \rightarrow Verb$<br>
 
-> $VP \rightarrow VP\space PP$
+> $VP \rightarrow VP\space and \space VP$<br>
 
-> $PP \rightarrow Prep\space NP$
+> $VP \rightarrow VP\space PP$<br>
 
-> $Noun \rightarrow Sally\space; pools\space; streams\space; swims$
+> $PP \rightarrow Prep\space NP$<br>
 
-> $Prep \rightarrow in$
+> $Noun \rightarrow Sally\space; pools\space; streams\space; swims$<br>
 
-> $Verb \rightarrow pools\space; streams\space; swims$
+> $Prep \rightarrow in$<br>
+
+> $Verb \rightarrow pools\space; streams\space; swims$<br>
 
 1.  Show all the parse trees in this grammar for the sentence “Sally
-    swims in streams and pools.”
+    swims in streams and pools.”<br>
 
 2.  Show all the table entries that would be made by
-    a (non-probabalistic) CYK parser on this sentence.
+    a (non-probabalistic) CYK parser on this sentence.<br>

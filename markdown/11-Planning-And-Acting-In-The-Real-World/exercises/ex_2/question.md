@@ -1,4 +1,4 @@
-[Exercise 11.2](ex_2/)
+
 
 You have a number of trucks with which to deliver a set of packages.
 Each package starts at some location on a grid map, and has a

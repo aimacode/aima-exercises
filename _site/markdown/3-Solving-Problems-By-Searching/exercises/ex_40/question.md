@@ -1,4 +1,4 @@
-[Exercise 3.40](ex_40/)
+
 
 We gave two simple heuristics for the 8-puzzle: Manhattan distance and
 misplaced tiles. Several heuristics in the literature purport to improve

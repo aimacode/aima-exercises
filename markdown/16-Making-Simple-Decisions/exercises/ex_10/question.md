@@ -1,4 +1,4 @@
-[Exercise 16.10](ex_10/)
+
 
 Tickets to a lottery cost 1. There are two possible prizes:
 a 10 payoff with probability 1/50, and a 1,000,000 payoff with

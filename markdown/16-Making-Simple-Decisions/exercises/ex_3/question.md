@@ -1,4 +1,4 @@
-[Exercise 16.3](ex_3/)
+
 
 Chris considers five used cars before buying the one with maximum
 expected utility. Pat considers eleven cars and does the same. All other

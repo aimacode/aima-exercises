@@ -1,4 +1,4 @@
-[Exercise 26.7](ex_7/)
+
 
 Alan Perlis [@Perlis:1982] wrote, “A year spent in artificial
 intelligence is enough to make one believe in God”. He also wrote, in a

@@ -1,4 +1,4 @@
-[Exercise 6.8](ex_8/)
+
 
 Consider the graph with 8 nodes $A_1$, $A_2$, $A_3$, $A_4$, $H$, $T$,
 $F_1$, $F_2$. $A_i$ is connected to $A_{i+1}$ for all $i$, each $A_i$ is

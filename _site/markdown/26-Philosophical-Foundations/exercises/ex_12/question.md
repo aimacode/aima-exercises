@@ -1,4 +1,4 @@
-[Exercise 26.12](ex_12/)
+
 
 Some critics object that AI is impossible, while others object that it
 is *too* possible and that ultraintelligent machines pose a

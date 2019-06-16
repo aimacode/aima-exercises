@@ -1,4 +1,4 @@
-[Exercise 24.1](ex_1/)
+
 
 In the shadow of a tree with a dense, leafy canopy, one sees a number of
 light spots. Surprisingly, they all appear to be circular. Why? After

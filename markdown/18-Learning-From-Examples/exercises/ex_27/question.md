@@ -1,7 +1,7 @@
-[Exercise 18.27](ex_27/)
+
 
 Consider the following set of examples, each with six inputs and one
-target output:
+target output:<br>
 
 |    |  |   |   |  |  |  |   |   |  |  |  |   |  |  |
 | --- | --- | --- | --- | --- | --- |
@@ -15,9 +15,9 @@ target output:
 
 
 1.  Run the perceptron learning rule on these data and show the
-    final weights.
+    final weights.<br>
 
 2.  Run the decision tree learning rule, and show the resulting
-    decision tree.
+    decision tree.<br>
 
-3.  Comment on your results.
+3.  Comment on your results.<br>

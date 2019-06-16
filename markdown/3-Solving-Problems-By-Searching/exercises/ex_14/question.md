@@ -1,4 +1,4 @@
-[Exercise 3.14](ex_14/)
+
 
 An action such as really consists of a long sequence of finer-grained
 actions: turn on the car, release the brake, accelerate forward, etc.

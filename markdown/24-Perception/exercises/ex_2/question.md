@@ -1,4 +1,4 @@
-[Exercise 24.2](ex_2/)
+
 
 Consider a picture of a white sphere floating in front of a black
 backdrop. The image curve separating white pixels from black pixels is

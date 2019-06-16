@@ -1,5 +1,3 @@
-[Exercise 1.2](ex_2/)
-
 Read Turing’s original paper on AI @Turing:1950. In the paper, he
 discusses several objections to his proposed enterprise and his test for
 intelligence. Which objections still carry weight? Are his refutations

@@ -1,4 +1,4 @@
-[Exercise 12.27 \[natural-stupidity-exercise\]](ex_27/)
+
 
 One might suppose that the syntactic
 distinction between unboxed links and singly boxed links in semantic

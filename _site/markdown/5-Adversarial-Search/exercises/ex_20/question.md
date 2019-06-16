@@ -1,4 +1,4 @@
-[Exercise 5.20 \[game-linear-transform\]](ex_20/)
+
 
 Prove that with a positive linear
 transformation of leaf values (i.e., transforming a value $x$ to

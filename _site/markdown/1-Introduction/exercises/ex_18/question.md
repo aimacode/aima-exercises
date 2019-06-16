@@ -1,4 +1,4 @@
-[Exercise 1.18](ex_18/)
+
 
 Examine the AI literature to discover whether the following tasks can
 currently be solved by computers:

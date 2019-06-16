@@ -1,4 +1,4 @@
-[Exercise 26.9](ex_9/)
+
 
 I. J. Good claims that intelligence is the most important quality, and
 that building ultraintelligent machines will change everything. A

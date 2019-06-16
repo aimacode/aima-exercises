@@ -1,4 +1,4 @@
-[Exercise 3.20](ex_20/)
+
 
 Implement two versions of the function for the 8-puzzle: one that copies
 and edits the data structure for the parent node $s$ and one that

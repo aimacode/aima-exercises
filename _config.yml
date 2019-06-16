@@ -1,2 +1,26 @@
-theme: jekyll-theme-minimal
-disqus: nalinc
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+
+# Setup
+title:               Artificial Intelligence
+tagline:             'AIMA Exercises '
+description:         'AIMA Exercises: Exercises for the book Artificial Intelligence: A Modern Approach'
+url:                 https://aimacode.github.io/aima-exercises/
+baseurl:             '/aima-exercises'
+incremental: true
+
+
+# About/contact
+author:
+  name:              Sachin Chopra
+  url:               sachin10101998.github.io
+  email:             schopra@mt.iitr.ac.in
+
+# Custom vars
+version:             1.0.0
+plugins:
+  - jekyll-paginate
+paginate: 5

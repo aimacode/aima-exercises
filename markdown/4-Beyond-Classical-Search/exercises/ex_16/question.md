@@ -1,4 +1,4 @@
-[Exercise 4.16](ex_16/)
+
 
 Like DFS, online DFS is incomplete for reversible state spaces with
 infinite paths. For example, suppose that states are points on the

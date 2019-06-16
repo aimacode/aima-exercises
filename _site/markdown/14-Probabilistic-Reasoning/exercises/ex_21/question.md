@@ -1,21 +1,21 @@
-[Exercise 14.21](ex_21/)
+
 
 Consider the query
 ${\textbf{P}}({Rain}{{\,|\,}}{Sprinkler}{{\,=\,}}{true},{WetGrass}{{\,=\,}}{true})$
-in Figure [rain-clustering-figure](#/)(a)
-(page [rain-clustering-figure](#/)) and how Gibbs sampling can answer it.
+in Figure <a href="#">rain-clustering-figure</a>(a)
+(page <a href="#">rain-clustering-figure</a>) and how Gibbs sampling can answer it.<br>
 
-1.  How many states does the Markov chain have?
+1.  How many states does the Markov chain have?<br>
 
-2.  Calculate the **transition matrix**
+2.  Calculate the <b>transition matrix</b>
     ${\textbf{Q}}$ containing
     $q({\textbf{y}}$ $\rightarrow$ ${\textbf{y}}')$
-    for all ${\textbf{y}}$, ${\textbf{y}}'$.
+    for all ${\textbf{y}}$, ${\textbf{y}}'$.<br>
 
 3.  What does ${\textbf{ Q}}^2$, the square of the
-    transition matrix, represent?
+    transition matrix, represent?<br>
 
-4.  What about ${\textbf{Q}}^n$ as $n\to \infty$?
+4.  What about ${\textbf{Q}}^n$ as $n\to \infty$?<br>
 
 5.  Explain how to do probabilistic inference in Bayesian networks,
     assuming that ${\textbf{Q}}^n$ is available. Is this a

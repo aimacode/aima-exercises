@@ -1,4 +1,4 @@
-[Exercise 23.18](ex_18/)
+
 
 Select five sentences and submit them to an online translation service.
 Translate them from English to another language and back to English.

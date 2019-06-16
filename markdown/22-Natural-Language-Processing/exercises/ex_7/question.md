@@ -1,4 +1,4 @@
-[Exercise 22.7](ex_7/)
+
 
 Create a test set of ten queries, and pose them to three major Web
 search engines. Evaluate each one for precision at 1, 3, and 10
