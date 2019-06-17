@@ -1,4 +1,4 @@
-[Exercise 8.34](ex_34/)
+
 
 The circuit representation in the chapter is more detailed than
 necessary if we care only about circuit functionality. A simpler
@@ -12,9 +12,9 @@ indicate direct connections. For example, a NAND circuit can be composed
 from ${AND}$s and ${NOT}$s:
 $${\forall\,i_1,i_2,o_a,o\;\;} {AND}(i_1,i_2,o_a) \land {NOT}(o_a,o) {\:\;{\Rightarrow}\:\;}{NAND}(i_1,i_2,o)\ .$$
 Using this representation, define the one-bit adder in
-Figure [adder-figure](#adder-figure) and the four-bit adder in
-Figure [4bit-adder-figure](#adder-figure), and explain what queries you
+Figure <a href="#4bit-adder-figure">adder-figure</a> and the four-bit adder in
+Figure <a href="#4bit-adder-figure">adder-figure</a>, and explain what queries you
 would use to verify the designs. What kinds of queries are
 *not* supported by this representation that
 *are* supported by the representation in
-Section [circuits-section](#/)?
+Section <a href="#">circuits-section</a>?

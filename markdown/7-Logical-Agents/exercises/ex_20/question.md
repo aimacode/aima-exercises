@@ -1,4 +1,4 @@
-[Exercise 7.20](ex_20/)
+
 
 Explain why every nonempty propositional clause, by itself, is
 satisfiable. Prove rigorously that every set of five 3-SAT clauses is

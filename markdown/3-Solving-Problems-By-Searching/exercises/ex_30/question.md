@@ -1,4 +1,4 @@
-[Exercise 3.30](ex_30/)
+
 
 Accurate heuristics don’t necessarily reduce search time in the worst
 case. Given any depth $d$, define a search problem with a goal node at

@@ -1,4 +1,4 @@
-[Exercise 8.28](ex_28/)
+
 
 Translate into first-order logic the sentence “Everyone’s DNA is unique
 and is derived from their parents’ DNA.” You must specify the precise

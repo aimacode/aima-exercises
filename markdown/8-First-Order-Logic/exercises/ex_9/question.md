@@ -1,4 +1,4 @@
-[Exercise 8.9 \[hillary-exercise\]](ex_9/)
+
 
 Does the fact
 $\lnot {Spouse}({George},{Laura})$ follow from the facts

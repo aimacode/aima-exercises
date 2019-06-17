@@ -1,7 +1,7 @@
-[Exercise 21.2](ex_2/)
 
-Chapter [complex-decisions-chapter](#/) defined a
-**proper policy** for an MDP as one that is
+
+Chapter <a href="#">complex-decisions-chapter</a> defined a
+<b>proper policy</b> for an MDP as one that is
 guaranteed to reach a terminal state. Show that it is possible for a
 passive ADP agent to learn a transition model for which its policy $\pi$
 is improper even if $\pi$ is proper for the true MDP; with such models,

@@ -1,4 +1,4 @@
-[Exercise 18.9](ex_9/)
+
 
 Construct a data set (set of examples with attributes and
 classifications) that would cause the decision-tree learning algorithm

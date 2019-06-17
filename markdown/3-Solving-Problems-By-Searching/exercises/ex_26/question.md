@@ -1,4 +1,4 @@
-[Exercise 3.26](ex_26/)
+
 
 Compare the performance of A and RBFS on a set of randomly generated
 problems in the 8-puzzle (with Manhattan distance) and TSP (with MST—see

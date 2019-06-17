@@ -1,4 +1,4 @@
-[Exercise 21.1](ex_1/)
+
 
 Implement a passive learning agent in a simple environment, such as the
 $4\times 3$ world. For the case of an initially unknown environment

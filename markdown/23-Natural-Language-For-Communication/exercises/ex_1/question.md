@@ -1,8 +1,8 @@
-[Exercise 23.1 \[washing-clothes-exercise\]](ex_1/)
+
 
 Read the following text once for
 understanding, and remember as much of it as you can. There will be a
-test later.
+test later.<br>
 
 > The procedure is actually quite simple. First you arrange things into
 different groups. Of course, one pile may be sufficient depending on how

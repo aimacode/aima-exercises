@@ -1,4 +1,4 @@
-[Exercise 22.5](ex_5/)
+
 
 (Adapted from @Jurafsky+Martin:2000.) In this exercise you will develop a classifier for
 authorship: given a text, the classifier predicts which of two candidate
@@ -10,7 +10,7 @@ additional features that you think may help. Then compute the
 probability of the text under each language model and chose the most
 probable model. Assess the accuracy of this technique. How does accuracy
 change as you alter the set of features? This subfield of linguistics is
-called **stylometry**; its successes include the identification of the author of the
-disputed *Federalist Papers* @Mosteller+Wallace:1964 and
+called <b>stylometry</b>; its successes include the identification of the author of the
+disputed <i>Federalist Papers</i> @Mosteller+Wallace:1964 and
 some disputed works of Shakespeare @Hope:1994. @Khmelev+Tweedie:2001 produce good results with
 a simple letter bigram model.

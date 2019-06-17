@@ -1,6 +1,6 @@
-[Exercise 8.11](ex_11/)
 
-Consider a vocabulary with the following symbols:
+
+Consider a vocabulary with the following symbols:<br>
 
 > ${Occupation}(p,o)$: Predicate. Person $p$ has occupation $o$.
 
@@ -13,18 +13,18 @@ Consider a vocabulary with the following symbols:
 > ${Emily}$, $ {Joe}$: Constants denoting people.
 
 Use these symbols to write the following assertions in first-order
-logic:
+logic:<br>
 
-1.  Emily is either a surgeon or a lawyer.
+1.  Emily is either a surgeon or a lawyer.<br>
 
-2.  Joe is an actor, but he also holds another job.
+2.  Joe is an actor, but he also holds another job.<br>
 
-3.  All surgeons are doctors.
+3.  All surgeons are doctors.<br>
 
-4.  Joe does not have a lawyer (i.e., is not a customer of any lawyer).
+4.  Joe does not have a lawyer (i.e., is not a customer of any lawyer).<br>
 
-5.  Emily has a boss who is a lawyer.
+5.  Emily has a boss who is a lawyer.<br>
 
-6.  There exists a lawyer all of whose customers are doctors.
+6.  There exists a lawyer all of whose customers are doctors.<br>
 
-7.  Every surgeon has a lawyer.
+7.  Every surgeon has a lawyer.<br>

@@ -1,4 +1,4 @@
-[Exercise 18.15](ex_15/)
+
 
 Suppose that a learning algorithm is trying to find a consistent
 hypothesis when the classifications of examples are actually random.

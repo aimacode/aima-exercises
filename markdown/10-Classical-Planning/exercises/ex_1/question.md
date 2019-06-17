@@ -1,7 +1,7 @@
-[Exercise 10.1](ex_1/)
+
 
 Consider a robot whose operation is described by the following PDDL
-operators:
+operators:<br>
 
 $$
 Op({Go(x,y)},{At(Robot,x)},{\lnot At(Robot,x) \land At(Robot,y)})
@@ -15,7 +15,7 @@ $$
 
 1.  The operators allow the robot to hold more than one object. Show how
     to modify them with an $EmptyHand$ predicate for a robot that can
-    hold only one object.
+    hold only one object.<br>
 
 2.  Assuming that these are the only actions in the world, write a
-    successor-state axiom for $EmptyHand$.
+    successor-state axiom for $EmptyHand$.<br>
