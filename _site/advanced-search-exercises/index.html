@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Beyond Classical Search &middot; AIMA Exercises 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="4-beyond-classical-search">4. Beyond Classical Search</h1>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_1/" class="p-2">Exercise 1</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.1');" href="#"><i id="ex4.1" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.1');" href="#"><i id="ex4.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Give the name of the algorithm that results from each of the following
+special cases:<br />
+
+1.  Local beam search with $k = 1$.<br />
+
+2.  Local beam search with one initial state and no limit on the number
+    of states retained.<br />
+
+3.  Simulated annealing with $T = 0$ at all times (and omitting the
+    termination test).<br />
+
+4.  Simulated annealing with $T=\infty$ at all times.<br />
+
+5.  Genetic algorithm with population size $N = 1$.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_2/" class="p-2">Exercise 2</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.2');" href="#"><i id="ex4.2" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.2');" href="#"><i id="ex4.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Exercise <a href="#">brio-exercise</a> considers the problem of
+building railway tracks under the assumption that pieces fit exactly
+with no slack. Now consider the real problem, in which pieces don’t fit
+exactly but allow for up to 10 degrees of rotation to either side of the
+“proper” alignment. Explain how to formulate the problem so it could be
+solved by simulated annealing.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_3/" class="p-2">Exercise 3</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.3');" href="#"><i id="ex4.3" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.3');" href="#"><i id="ex4.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+In this exercise, we explore the use of local search methods to solve
+TSPs of the type defined in Exercise <a href="#">tsp-mst-exercise</a><br />
+
+1.  Implement and test a hill-climbing method to solve TSPs. Compare the
+    results with optimal solutions obtained from the A* algorithm with
+    the MST heuristic (Exercise <a href="#">tsp-mst-exercise</a>)<br />
+
+2.  Repeat part (a) using a genetic algorithm instead of hill climbing.
+    You may want to consult @Larranaga+al:1999 for some suggestions for representations.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_4/" class="p-2">Exercise 4 (hill-climbing-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.4');" href="#"><i id="ex4.4" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.4');" href="#"><i id="ex4.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Generate a large number of 8-puzzle and
+8-queens instances and solve them (where possible) by hill climbing
+(steepest-ascent and first-choice variants), hill climbing with random
+restart, and simulated annealing. Measure the search cost and percentage
+of solved problems and graph these against the optimal solution cost.
+Comment on your results.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_5/" class="p-2">Exercise 5 (cond-plan-repeated-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.5');" href="#"><i id="ex4.5" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.5');" href="#"><i id="ex4.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+The **And-Or-Graph-Search** algorithm in
+Figure <a href="#">and-or-graph-search-algorithm</a> checks for
+repeated states only on the path from the root to the current state.
+Suppose that, in addition, the algorithm were to store
+*every* visited state and check against that list. (See in
+Figure <a href="#">breadth-first-search-algorithm</a> for an example.)
+Determine the information that should be stored and how the algorithm
+should use that information when a repeated state is found.
+(*Hint*: You will need to distinguish at least between
+states for which a successful subplan was constructed previously and
+states for which no subplan could be found.) Explain how to use labels,
+as defined in Section <a href="#">cyclic-plan-section</a>, to avoid
+having multiple copies of subplans.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_6/" class="p-2">Exercise 6 (cond-loop-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.6');" href="#"><i id="ex4.6" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.6');" href="#"><i id="ex4.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Explain precisely how to modify the **And-Or-Graph-Search** algorithm to
+generate a cyclic plan if no acyclic plan exists. You will need to deal
+with three issues: labeling the plan steps so that a cyclic plan can
+point back to an earlier part of the plan, modifying **Or-Search** so that it
+continues to look for acyclic plans after finding a cyclic plan, and
+augmenting the plan representation to indicate whether a plan is cyclic.
+Show how your algorithm works on (a) the slippery vacuum world, and (b)
+the slippery, erratic vacuum world. You might wish to use a computer
+implementation to check your results.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_7/" class="p-2">Exercise 7</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.7');" href="#"><i id="ex4.7" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.7');" href="#"><i id="ex4.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+In Section <a href="#">conformant-section</a> we introduced belief
+states to solve sensorless search problems. A sequence of actions solves
+a sensorless problem if it maps every physical state in the initial
+belief state $b$ to a goal state. Suppose the agent knows $h^\*(s)$, the
+true optimal cost of solving the physical state $s$ in the fully
+observable problem, for every state $s$ in $b$. Find an admissible
+heuristic $h(b)$ for the sensorless problem in terms of these costs, and
+prove its admissibilty. Comment on the accuracy of this heuristic on the
+sensorless vacuum problem of
+Figure <a href="#">vacuum2-sets-figure</a>. How well does A* perform?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_8/" class="p-2">Exercise 8 (belief-state-superset-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.8');" href="#"><i id="ex4.8" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.8');" href="#"><i id="ex4.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">This exercise explores
+subset–superset relations between belief states in sensorless or
+partially observable environments.<br />
+
+1.  Prove that if an action sequence is a solution for a belief state
+    $b$, it is also a solution for any subset of $b$. Can anything be
+    said about supersets of $b$?<br />
+
+2.  Explain in detail how to modify graph search for sensorless problems
+    to take advantage of your answers in (a).<br />
+
+3.  Explain in detail how to modify and–or search for
+    partially observable problems, beyond the modifications you describe
+    in (b).<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_9/" class="p-2">Exercise 9 (multivalued-sensorless-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.9');" href="#"><i id="ex4.9" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.9');" href="#"><i id="ex4.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+On page <a href="#">multivalued-sensorless-page</a> it was assumed
+that a given action would have the same cost when executed in any
+physical state within a given belief state. (This leads to a
+belief-state search problem with well-defined step costs.) Now consider
+what happens when the assumption does not hold. Does the notion of
+optimality still make sense in this context, or does it require
+modification? Consider also various possible definitions of the “cost”
+of executing an action in a belief state; for example, we could use the
+*minimum* of the physical costs; or the
+*maximum*; or a cost *interval* with the lower
+bound being the minimum cost and the upper bound being the maximum; or
+just keep the set of all possible costs for that action. For each of
+these, explore whether A* (with modifications if necessary) can return
+optimal solutions.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_10/" class="p-2">Exercise 10 (vacuum-solvable-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.10');" href="#"><i id="ex4.10" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.10');" href="#"><i id="ex4.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the sensorless version of the
+erratic vacuum world. Draw the belief-state space reachable from the
+initial belief state $\{1,2,3,4,5,6,7,8\}$, and explain why the
+problem is unsolvable.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_11/" class="p-2">Exercise 11 (vacuum-solvable-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.11');" href="#"><i id="ex4.11" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.11');" href="#"><i id="ex4.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the sensorless version of the
+erratic vacuum world. Draw the belief-state space reachable from the
+initial belief state $\{ 1,3,5,7 \}$, and explain why the problem
+is unsolvable.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_1/" class="p-2">Exercise 12 (path-planning-agent-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.12');" href="#"><i id="ex4.12" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.12');" href="#"><i id="ex4.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+We can turn the navigation problem in
+Exercise <a hreef="#">path-planning-exercis</a> into an environment as
+follows:<br />
+
+-   The percept will be a list of the positions, *relative to the
+    agent*, of the visible vertices. The percept does
+    *not* include the position of the robot! The robot must
+    learn its own position from the map; for now, you can assume that
+    each location has a different “view.”<br />
+
+-   Each action will be a vector describing a straight-line path
+    to follow. If the path is unobstructed, the action succeeds;
+    otherwise, the robot stops at the point where its path first
+    intersects an obstacle. If the agent returns a zero motion vector
+    and is at the goal (which is fixed and known), then the environment
+    teleports the agent to a *random location* (not inside
+    an obstacle).<br />
+
+-   The performance measure charges the agent 1 point for each unit of
+    distance traversed and awards 1000 points each time the goal
+    is reached.<br />
+
+1.  Implement this environment and a problem-solving agent for it. After
+    each teleportation, the agent will need to formulate a new problem,
+    which will involve discovering its current location.<br />
+
+2.  Document your agent’s performance (by having the agent generate
+    suitable commentary as it moves around) and report its performance
+    over 100 episodes.<br />
+
+3.  Modify the environment so that 30% of the time the agent ends up at
+    an unintended destination (chosen randomly from the other visible
+    vertices if any; otherwise, no move at all). This is a crude model
+    of the motion errors of a real robot. Modify the agent so that when
+    such an error is detected, it finds out where it is and then
+    constructs a plan to get back to where it was and resume the
+    old plan. Remember that sometimes getting back to where it was might
+    also fail! Show an example of the agent successfully overcoming two
+    successive motion errors and still reaching the goal.<br />
+
+4.  Now try two different recovery schemes after an error: (1) head for
+    the closest vertex on the original route; and (2) replan a route to
+    the goal from the new location. Compare the performance of the three
+    recovery schemes. Would the inclusion of search costs affect the
+    comparison?<br />
+
+5.  Now suppose that there are locations from which the view
+    is identical. (For example, suppose the world is a grid with
+    square obstacles.) What kind of problem does the agent now face?
+    What do solutions look like?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_1/" class="p-2">Exercise 13 (online-offline-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.13');" href="#"><i id="ex4.13" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.13');" href="#"><i id="ex4.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Suppose that an agent is in a $3 \times 3$
+maze environment like the one shown in
+Figure <a href="#">maze-3x3-figure</a>. The agent knows that its
+initial location is (1,1), that the goal is at (3,3), and that the
+actions *Up*, *Down*, *Left*, *Right* have their usual
+effects unless blocked by a wall. The agent does *not* know
+where the internal walls are. In any given state, the agent perceives
+the set of legal actions; it can also tell whether the state is one it
+has visited before.<br />
+
+1.  Explain how this online search problem can be viewed as an offline
+    search in belief-state space, where the initial belief state
+    includes all possible environment configurations. How large is the
+    initial belief state? How large is the space of belief states?<br />
+
+2.  How many distinct percepts are possible in the initial state?<br />
+
+3.  Describe the first few branches of a contingency plan for this
+    problem. How large (roughly) is the complete plan?<br />
+
+Notice that this contingency plan is a solution for *every
+possible environment* fitting the given description. Therefore,
+interleaving of search and execution is not strictly necessary even in
+unknown environments.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_14/" class="p-2">Exercise 14 (online-offline-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.14');" href="#"><i id="ex4.14" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.14');" href="#"><i id="ex4.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Suppose that an agent is in a $3 \times 3$
+maze environment like the one shown in
+Figure <a href="#">maze-3x3-figure</a>. The agent knows that its
+initial location is (3,3), that the goal is at (1,1), and that the four
+actions *Up*, *Down*, *Left*, *Right* have their usual
+effects unless blocked by a wall. The agent does *not* know
+where the internal walls are. In any given state, the agent perceives
+the set of legal actions; it can also tell whether the state is one it
+has visited before or is a new state.<br />
+
+1.  Explain how this online search problem can be viewed as an offline
+    search in belief-state space, where the initial belief state
+    includes all possible environment configurations. How large is the
+    initial belief state? How large is the space of belief states?<br />
+
+2.  How many distinct percepts are possible in the initial state?<br />
+
+3.  Describe the first few branches of a contingency plan for this
+    problem. How large (roughly) is the complete plan?<br />
+
+Notice that this contingency plan is a solution for *every
+possible environment* fitting the given description. Therefore,
+interleaving of search and execution is not strictly necessary even in
+unknown environments.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_15/" class="p-2">Exercise 15 (path-planning-hc-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.15');" href="#"><i id="ex4.15" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.15');" href="#"><i id="ex4.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+In this exercise, we examine hill climbing
+in the context of robot navigation, using the environment in
+Figure <a href="#">geometric-scene-figure</a> as an example.<br />
+
+1.  Repeat Exercise <a href="#">path-planning-agent-exercise</a> using
+    hill climbing. Does your agent ever get stuck in a local minimum? Is
+    it *possible* for it to get stuck with convex
+    obstacles?<br />
+
+2.  Construct a nonconvex polygonal environment in which the agent
+    gets stuck.<br />
+
+3.  Modify the hill-climbing algorithm so that, instead of doing a
+    depth-1 search to decide where to go next, it does a
+    depth-$k$ search. It should find the best $k$-step path and do one
+    step along it, and then repeat the process.<br />
+
+4.  Is there some $k$ for which the new algorithm is guaranteed to
+    escape from local minima?<br />
+
+5.  Explain how LRTA enables the agent to escape from local minima in
+    this case.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_16/" class="p-2">Exercise 16</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.16');" href="#"><i id="ex4.16" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.16');" href="#"><i id="ex4.16" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Like DFS, online DFS is incomplete for reversible state spaces with
+infinite paths. For example, suppose that states are points on the
+infinite two-dimensional grid and actions are unit vectors $(1,0)$,
+$(0,1)$, $(-1,0)$, $(0,-1)$, tried in that order. Show that online DFS
+starting at $(0,0)$ will not reach $(1,-1)$. Suppose the agent can
+observe, in addition to its current state, all successor states and the
+actions that would lead to them. Write an algorithm that is complete
+even for bidirected state spaces with infinite paths. What states does
+it visit in reaching $(1,-1)$?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_17/" class="p-2">Exercise 17</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex4.17');" href="#"><i id="ex4.17" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.17');" href="#"><i id="ex4.17" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Relate the time complexity of LRTA* to its space complexity.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+</article>
+
+<script type="text/javascript">
+var chapter  = String('/advanced-search-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
+$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
+  console.log(data)
+  $("i[data-chapter='"+chapterName+"']").each(function(index,element){
+  	ex = $(element).data("exercise")
+  	if(ex in data){
+  		console.log(data[ex])
+  		$(element).attr("data-rating",data[ex])
+  	}
+    $(".arrow-up").removeClass("loader")
+  })
+});
+
+$(document).on('click',"i[data-chapter]",function(e){
+	ele = $(e.target)
+  ele.addClass("loader")
+	exerciseName = ele.data("exercise")
+	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
+	  console.log(data)
+	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
+	});	
+})
+
+
+</script>
+
+      </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Adversarial Search &middot; AIMA Exercises 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="5-adversarial-search">5. Adversarial Search</h1>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_1/" class="p-2">Exercise 1</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.1');" href="#"><i id="ex5.1" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.1');" href="#"><i id="ex5.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Suppose you have an oracle, $OM(s)$, that correctly predicts the
+opponent’s move in any state. Using this, formulate the definition of a
+game as a (single-agent) search problem. Describe an algorithm for
+finding the optimal move.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_2/" class="p-2">Exercise 2</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.2');" href="#"><i id="ex5.2" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.2');" href="#"><i id="ex5.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the problem of solving two 8-puzzles.<br />
+
+1.  Give a complete problem formulation in the style of
+    Chapter <a href="#">search-chapter.</a><br />
+
+2.  How large is the reachable state space? Give an exact
+    numerical expression.<br />
+
+3.  Suppose we make the problem adversarial as follows: the two players
+    take turns moving; a coin is flipped to determine the puzzle on
+    which to make a move in that turn; and the winner is the first to
+    solve one puzzle. Which algorithm can be used to choose a move in
+    this setting?<br />
+
+4.  Does the game eventually end, given optimal play? Explain.<br />
+
+
+(a) A map where the cost of every edge is 1. Initially the pursuer $P$ is at
+node <b>b</b> and the evader $E$ is at node <b>d</b> <br />(b) A partial game tree for this map.
+Each node is labeled with the $P,E$ positions. $P$ moves first. Branches marked "?" have yet to be explored.
+
+
+<figure>
+  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/pursuit-evasion-game.svg" alt="pursuit-evasion-game-figure" id="pursuit-evasion-game-figure" style="width:100%" />
+  <figcaption><center><b>Pursuit evasion game Figure</b></center></figcaption>
+</figure>
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_3/" class="p-2">Exercise 3</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.3');" href="#"><i id="ex5.3" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.3');" href="#"><i id="ex5.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Imagine that, in Exercise \[two-friends-exercise\], one of
+the friends wants to avoid the other. The problem then becomes a
+two-player game. We assume now that the players take turns moving. The
+game ends only when the players are on the same node; the terminal
+payoff to the pursuer is minus the total time taken. (The evader “wins”
+by never losing.) An example is shown in Figure.
+<a href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br />
+
+
+1.  Copy the game tree and mark the values of the terminal nodes.<br />
+
+2.  Next to each internal node, write the strongest fact you can infer
+    about its value (a number, one or more inequalities such as
+    “$\geq 14$”, or a “?”).<br />
+
+3.  Beneath each question mark, write the name of the node reached by
+    that branch.<br />
+
+4.  Explain how a bound on the value of the nodes in (c) can be derived
+    from consideration of shortest-path lengths on the map, and derive
+    such bounds for these nodes. Remember the cost to get to each leaf
+    as well as the cost to solve it.<br />
+
+5.  Now suppose that the tree as given, with the leaf bounds from (d),
+    is evaluated from left to right. Circle those “?” nodes that would
+    <i>not</i> need to be expanded further, given the bounds
+    from part (d), and cross out those that need not be considered
+    at all.<br />
+
+6.  Can you prove anything in general about who wins the game on a map
+    that is a tree?<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_4/" class="p-2">Exercise 4 (game-playing-chance-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.4');" href="#"><i id="ex5.4" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.4');" href="#"><i id="ex5.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+<div id="game-playing-chance-exercise">
+</div>
+Describe and implement state
+descriptions, move generators, terminal tests, utility functions, and
+evaluation functions for one or more of the following stochastic games:
+Monopoly, Scrabble, bridge play with a given contract, or Texas hold’em
+poker.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_5/" class="p-2">Exercise 5</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.5');" href="#"><i id="ex5.5" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.5');" href="#"><i id="ex5.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Describe and implement a <i>real-time</i>,
+<i>multiplayer</i> game-playing environment, where time is part
+of the environment state and players are given fixed time allocations.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_6/" class="p-2">Exercise 6</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.6');" href="#"><i id="ex5.6" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.6');" href="#"><i id="ex5.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Discuss how well the standard approach to game playing would apply to
+games such as tennis, pool, and croquet, which take place in a
+continuous physical state space.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_7/" class="p-2">Exercise 7 (minimax-optimality-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.7');" href="#"><i id="ex5.7" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.7');" href="#"><i id="ex5.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Prove the following assertion: For every
+game tree, the utility obtained by max using minimax
+decisions against a suboptimal min will never be lower than
+the utility obtained playing against an optimal min. Can
+you come up with a game tree in which max can do still
+better using a <i>suboptimal</i> strategy against a suboptimal
+min?
+
+
+<figure>
+  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/line-game4.svg" alt="line-game4-figure" id="line-game4-figure" style="width:100%" />
+  <figcaption><center><b>The starting position of a simple game.</b></center></figcaption>
+</figure>
+
+
+
+
+Player $A$ moves first. The two players take turns moving, and each
+player must move his token to an open adjacent space in either
+direction.  If the opponent occupies an adjacent space, then a player
+may jump over the opponent to the next open space if any. (For
+example, if $A$ is on 3 and $B$ is on 2, then $A$ may move back to 1.)
+The game ends when one player reaches the opposite end of the board.
+If player $A$ reaches space 4 first, then the value of the game to $A$
+is $+1$; if player $B$ reaches space 1 first, then the value of the
+game to $A$ is $-1$.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_8/" class="p-2">Exercise 8</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.8');" href="#"><i id="ex5.8" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.8');" href="#"><i id="ex5.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the two-player game described in
+Figure <a href="#line-game4-figure">line-game4-figure</a><br />
+
+1.  Draw the complete game tree, using the following conventions:<br />
+
+    -   Write each state as $(s_A,s_B)$, where $s_A$ and $s_B$ denote
+        the token locations.<br />
+
+    -   Put each terminal state in a square box and write its game value
+        in a circle.<br />
+
+    -   Put <i>loop states</i> (states that already appear on
+        the path to the root) in double square boxes. Since their value
+        is unclear, annotate each with a “?” in a circle.<br />
+
+2.  Now mark each node with its backed-up minimax value (also in
+    a circle). Explain how you handled the “?” values and why.<br />
+
+3.  Explain why the standard minimax algorithm would fail on this game
+    tree and briefly sketch how you might fix it, drawing on your answer
+    to (b). Does your modified algorithm give optimal decisions for all
+    games with loops?<br />
+
+4.  This 4-square game can be generalized to $n$ squares for any
+    $n &gt; 2$. Prove that $A$ wins if $n$ is even and loses if $n$ is odd.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_9/" class="p-2">Exercise 9</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.9');" href="#"><i id="ex5.9" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.9');" href="#"><i id="ex5.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+This problem exercises the basic concepts of game playing, using
+tic-tac-toe (noughts and crosses) as an example. We define
+$X_n$ as the number of rows, columns, or diagonals with exactly $n$
+$X$’s and no $O$’s. Similarly, $O_n$ is the number of rows, columns, or
+diagonals with just $n$ $O$’s. The utility function assigns $+1$ to any
+position with $X_3=1$ and $-1$ to any position with $O_3 = 1$. All other
+terminal positions have utility 0. For nonterminal positions, we use a
+linear evaluation function defined as ${Eval}(s) = 3X_2(s) + X_1(s) -
+(3O_2(s) + O_1(s))$. <br />
+
+1.  Approximately how many possible games of tic-tac-toe are there?<br />
+
+2.  Show the whole game tree starting from an empty board down to depth
+    2 (i.e., one $X$ and one $O$ on the board), taking symmetry
+    into account.<br />
+
+3.  Mark on your tree the evaluations of all the positions at depth 2.<br />
+
+4.  Using the minimax algorithm, mark on your tree the backed-up values
+    for the positions at depths 1 and 0, and use those values to choose
+    the best starting move.<br />
+
+5.  Circle the nodes at depth 2 that would <i>not</i> be
+    evaluated if alpha–beta pruning were applied, assuming the nodes are
+    generated in the optimal order for alpha–beta pruning.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_10/" class="p-2">Exercise 10</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.10');" href="#"><i id="ex5.10" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.10');" href="#"><i id="ex5.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the family of generalized tic-tac-toe games, defined as
+follows. Each particular game is specified by a set $\mathcal S$ of
+<i>squares</i> and a collection $\mathcal W$ of <i>winning
+positions.</i> Each winning position is a subset of $\mathcal S$.
+For example, in standard tic-tac-toe, $\mathcal S$ is a set of 9 squares
+and $\mathcal W$ is a collection of 8 subsets of $\cal W$: the three
+rows, the three columns, and the two diagonals. In other respects, the
+game is identical to standard tic-tac-toe. Starting from an empty board,
+players alternate placing their marks on an empty square. A player who
+marks every square in a winning position wins the game. It is a tie if
+all squares are marked and neither player has won.<br />
+
+1.  Let $N= |{\mathcal S}|$, the number of squares. Give an upper bound
+    on the number of nodes in the complete game tree for generalized
+    tic-tac-toe as a function of $N$.<br />
+
+2.  Give a lower bound on the size of the game tree for the worst case,
+    where ${\mathcal W} = {\{\,\}}$.<br />
+
+3.  Propose a plausible evaluation function that can be used for any
+    instance of generalized tic-tac-toe. The function may depend on
+    $\mathcal S$ and $\mathcal W$.<br />
+
+4.  Assume that it is possible to generate a new board and check whether
+    it is a winning position in 100$N$ machine instructions and assume a
+    2 gigahertz processor. Ignore memory limitations. Using your
+    estimate in (a), roughly how large a game tree can be completely
+    solved by alpha–beta in a second of CPU time? a minute? an hour?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_11/" class="p-2">Exercise 11</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.11');" href="#"><i id="ex5.11" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.11');" href="#"><i id="ex5.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Develop a general game-playing program, capable of playing a variety of
+games.<br />
+
+1.  Implement move generators and evaluation functions for one or more
+    of the following games: Kalah, Othello, checkers, and chess.<br />
+
+2.  Construct a general alpha–beta game-playing agent.<br />
+
+3.  Compare the effect of increasing search depth, improving move
+    ordering, and improving the evaluation function. How close does your
+    effective branching factor come to the ideal case of perfect move
+    ordering?<br />
+
+4.  Implement a selective search algorithm, such as B\* @Berliner:1979,
+    conspiracy number search @McAllester:1988, or MGSS\*
+    @Russell+Wefald:1989 and compare its performance to A\*.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_12/" class="p-2">Exercise 12</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.12');" href="#"><i id="ex5.12" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.12');" href="#"><i id="ex5.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Describe how the minimax and alpha–beta algorithms change for
+two-player, non-zero-sum games in which each player has a distinct
+utility function and both utility functions are known to both players.
+If there are no constraints on the two terminal utilities, is it
+possible for any node to be pruned by alpha–beta? What if the player’s
+utility functions on any state differ by at most a constant $k$, making
+the game almost cooperative?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_13/" class="p-2">Exercise 13</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.13');" href="#"><i id="ex5.13" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.13');" href="#"><i id="ex5.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Describe how the minimax and alpha–beta algorithms change for
+two-player, non-zero-sum games in which each player has a distinct
+utility function and both utility functions are known to both players.
+If there are no constraints on the two terminal utilities, is it
+possible for any node to be pruned by alpha–beta? What if the player’s
+utility functions on any state sum to a number between constants $-k$
+and $k$, making the game almost zero-sum?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_14/" class="p-2">Exercise 14</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.14');" href="#"><i id="ex5.14" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.14');" href="#"><i id="ex5.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Develop a formal proof of correctness for alpha–beta pruning. To do
+this, consider the situation shown in
+Figure <a href="#alpha-beta-proof-figure">alpha-beta-proof-figure</a>. The question is whether
+to prune node $n_j$, which is a max-node and a descendant of node $n_1$.
+The basic idea is to prune it if and only if the minimax value of $n_1$
+can be shown to be independent of the value of $n_j$.<br />
+
+1.  Mode $n_1$ takes on the minimum value among its children:
+    $n_1 = \min(n_2,n_21,\ldots,n_{2b_2})$. Find a similar
+    expression for $n_2$ and hence an expression for $n_1$ in terms of
+    $n_j$.<br />
+
+2.  Let $l_i$ be the minimum (or maximum) value of the nodes to the
+    <i>left</i> of node $n_i$ at depth $i$, whose minimax value
+    is already known. Similarly, let $r_i$ be the minimum (or maximum)
+    value of the unexplored nodes to the right of $n_i$ at depth $i$.
+    Rewrite your expression for $n_1$ in terms of the $l_i$ and
+    $r_i$ values.<br />
+
+3.  Now reformulate the expression to show that in order to affect
+    $n_1$, $n_j$ must not exceed a certain bound derived from the
+    $l_i$ values.<br />
+
+4.  Repeat the process for the case where $n_j$ is a min-node.<br />
+
+
+
+<figure>
+  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/alpha-beta-proof.svg" alt="alpha-beta-proof-figure" id="alpha-beta-proof-figure" style="width:100%" />
+  <figcaption><center><b>Situation when considering whether to prune node $n_j$.</b></center></figcaption>
+</figure>
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_15/" class="p-2">Exercise 15</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.15');" href="#"><i id="ex5.15" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.15');" href="#"><i id="ex5.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Prove that the alpha–beta algorithm takes time $O(b^{m/2})$ with optimal
+move ordering, where $m$ is the maximum depth of the game tree.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_16/" class="p-2">Exercise 16</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.16');" href="#"><i id="ex5.16" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.16');" href="#"><i id="ex5.16" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Suppose you have a chess program that can evaluate 5 million nodes per
+second. Decide on a compact representation of a game state for storage
+in a transposition table. About how many entries can you fit in a
+1-gigabyte in-memory table? Will that be enough for the three minutes of
+search allocated for one move? How many table lookups can you do in the
+time it would take to do one evaluation? Now suppose the transposition
+table is stored on disk. About how many evaluations could you do in the
+time it takes to do one disk seek with standard disk hardware?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_17/" class="p-2">Exercise 17</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.17');" href="#"><i id="ex5.17" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.17');" href="#"><i id="ex5.17" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Suppose you have a chess program that can evaluate 10 million nodes per
+second. Decide on a compact representation of a game state for storage
+in a transposition table. About how many entries can you fit in a
+2-gigabyte in-memory table? Will that be enough for the three minutes of
+search allocated for one move? How many table lookups can you do in the
+time it would take to do one evaluation? Now suppose the transposition
+table is stored on disk. About how many evaluations could you do in the
+time it takes to do one disk seek with standard disk hardware?<br />
+
+
+<figure>
+  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/pruning.svg" alt="trivial-chance-game-figure" id="trivial-chance-game-figure" style="width:100%" />
+  <figcaption><center><b>The complete game tree for a trivial game with chance nodes..</b></center></figcaption>
+</figure>
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_18/" class="p-2">Exercise 18</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.18');" href="#"><i id="ex5.18" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.18');" href="#"><i id="ex5.18" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+This question considers pruning in games with chance nodes.
+Figure <a href="#trivial-chance-game-figure">trivial-chance-game-figure</a> shows the complete
+game tree for a trivial game. Assume that the leaf nodes are to be
+evaluated in left-to-right order, and that before a leaf node is
+evaluated, we know nothing about its value—the range of possible values
+is $-\infty$ to $\infty$.<br />
+
+1.  Copy the figure, mark the value of all the internal nodes, and
+    indicate the best move at the root with an arrow.<br />
+
+2.  Given the values of the first six leaves, do we need to evaluate the
+    seventh and eighth leaves? Given the values of the first seven
+    leaves, do we need to evaluate the eighth leaf? Explain
+    your answers.<br />
+
+3.  Suppose the leaf node values are known to lie between –2 and 2
+    inclusive. After the first two leaves are evaluated, what is the
+    value range for the left-hand chance node?<br />
+
+4.  Circle all the leaves that need not be evaluated under the
+    assumption in (c).<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_19/" class="p-2">Exercise 19</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.19');" href="#"><i id="ex5.19" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.19');" href="#"><i id="ex5.19" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Implement the expectiminimax algorithm and the \*-alpha–beta algorithm,
+which is described by @Ballard:1983, for pruning game trees with chance nodes. Try
+them on a game such as backgammon and measure the pruning effectiveness
+of \*-alpha–beta.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_20/" class="p-2">Exercise 20 (game-linear-transform)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.20');" href="#"><i id="ex5.20" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.20');" href="#"><i id="ex5.20" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Prove that with a positive linear
+transformation of leaf values (i.e., transforming a value $x$ to
+$ax + b$ where $a &gt; 0$), the choice of move remains unchanged in a game
+tree, even when there are chance nodes.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_21/" class="p-2">Exercise 21 (game-playing-monte-carlo-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.21');" href="#"><i id="ex5.21" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.21');" href="#"><i id="ex5.21" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+<div id="ex5.21"></div>
+Consider the following procedure
+for choosing moves in games with chance nodes:<br />
+
+-   Generate some dice-roll sequences (say, 50) down to a suitable depth
+    (say, 8).<br />
+
+-   With known dice rolls, the game tree becomes deterministic. For each
+    dice-roll sequence, solve the resulting deterministic game tree
+    using alpha–beta.<br />
+
+-   Use the results to estimate the value of each move and to choose
+    the best.<br />
+
+Will this procedure work well? Why (or why not)?<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_22/" class="p-2">Exercise 22</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.22');" href="#"><i id="ex5.22" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.22');" href="#"><i id="ex5.22" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+In the following, a “max” tree consists only of max nodes, whereas an
+“expectimax” tree consists of a max node at the root with alternating
+layers of chance and max nodes. At chance nodes, all outcome
+probabilities are nonzero. The goal is to <i>find the value of the
+root</i> with a bounded-depth search. For each of (a)–(f), either
+give an example or explain why this is impossible.<br />
+
+1.  Assuming that leaf values are finite but unbounded, is pruning (as
+    in alpha–beta) ever possible in a max tree?<br />
+
+2.  Is pruning ever possible in an expectimax tree under the same
+    conditions?<br />
+
+3.  If leaf values are all nonnegative, is pruning ever possible in a
+    max tree? Give an example, or explain why not.<br />
+
+4.  If leaf values are all nonnegative, is pruning ever possible in an
+    expectimax tree? Give an example, or explain why not.<br />
+
+5.  If leaf values are all in the range $[0,1]$, is pruning ever
+    possible in a max tree? Give an example, or explain why not.<br />
+
+6.  If leaf values are all in the range $[0,1]$, is pruning ever
+    possible in an expectimax tree?1<br />
+
+7.  Consider the outcomes of a chance node in an expectimax tree. Which
+    of the following evaluation orders is most likely to yield pruning
+    opportunities?<br />
+
+    i.  Lowest probability first<br />
+
+    ii.  Highest probability first<br />
+
+    iii.  Doesn’t make any difference<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_23/" class="p-2">Exercise 23</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.23');" href="#"><i id="ex5.23" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.23');" href="#"><i id="ex5.23" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+In the following, a “max” tree consists only of max nodes, whereas an
+“expectimax” tree consists of a max node at the root with alternating
+layers of chance and max nodes. At chance nodes, all outcome
+probabilities are nonzero. The goal is to <i>find the value of the
+root</i> with a bounded-depth search.<br />
+
+1.  Assuming that leaf values are finite but unbounded, is pruning (as
+    in alpha–beta) ever possible in a max tree? Give an example, or
+    explain why not.<br />
+
+2.  Is pruning ever possible in an expectimax tree under the same
+    conditions? Give an example, or explain why not.<br />
+
+3.  If leaf values are constrained to be in the range $[0,1]$, is
+    pruning ever possible in a max tree? Give an example, or explain
+    why not.<br />
+
+4.  If leaf values are constrained to be in the range $[0,1]$, is
+    pruning ever possible in an expectimax tree? Give an example
+    (qualitatively different from your example in (e), if any), or
+    explain why not.<br />
+
+5.  If leaf values are constrained to be nonnegative, is pruning ever
+    possible in a max tree? Give an example, or explain why not.<br />
+
+6.  If leaf values are constrained to be nonnegative, is pruning ever
+    possible in an expectimax tree? Give an example, or explain why not.<br />
+
+7.  Consider the outcomes of a chance node in an expectimax tree. Which
+    of the following evaluation orders is most likely to yield pruning
+    opportunities: (i) Lowest probability first; (ii) Highest
+    probability first; (iii) Doesn’t make any difference?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_24/" class="p-2">Exercise 24</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.24');" href="#"><i id="ex5.24" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.1');" href="#"><i id="ex5.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">Suppose you have an oracle, $OM(s)$, that correctly predicts the
+opponent’s move in any state. Using this, formulate the definition of a
+game as a (single-agent) search problem. Describe an algorithm for
+finding the optimal move.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_25/" class="p-2">Exercise 25</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex5.25');" href="#"><i id="ex5.25" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex5.25');" href="#"><i id="ex5.25" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider carefully the interplay of chance events and partial
+information in each of the games in
+Exercise <a href="#game-playing-chance-exercise">game-playing-chance-exercise</a>.<br />
+
+1.  For which is the standard expectiminimax model appropriate?
+    Implement the algorithm and run it in your game-playing agent, with
+    appropriate modifications to the game-playing environment.<br />
+
+2.  For which would the scheme described in
+    Exercise <a href="#ex5.21">game-playing-monte-carlo-exercise</a> be
+    appropriate?<br />
+
+3.  Discuss how you might deal with the fact that in some of the games,
+    the players do not have the same knowledge of the current state.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+</article>
+
+<script type="text/javascript">
+var chapter  = String('/game-playing-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
+$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
+  console.log(data)
+  $("i[data-chapter='"+chapterName+"']").each(function(index,element){
+  	ex = $(element).data("exercise")
+  	if(ex in data){
+  		console.log(data[ex])
+  		$(element).attr("data-rating",data[ex])
+  	}
+    $(".arrow-up").removeClass("loader")
+  })
+});
+
+$(document).on('click',"i[data-chapter]",function(e){
+	ele = $(e.target)
+  ele.addClass("loader")
+	exerciseName = ele.data("exercise")
+	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
+	  console.log(data)
+	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
+	});	
+})
+
+
+</script>
+
+      </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
+  </body>
+</html>

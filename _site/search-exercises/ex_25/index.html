@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Exercise 3.25 &middot; AIMA Exercises 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
+
+  <div class="entry">
+    <div class="mode_btn view_question_source">
+
+    </div>
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Exercise 25
+        </a>
+
+        <a class="solve_question" id="solve_question" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
+        <i id="ex3.25" class="fas fa-pen" style="color:white"></i>
+        </button>
+        </a>
+
+        <a class="edit_question" id="editt_question" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex3.25');" href="#" id="buttonsolve">
+        <i id="ex3.25" class="far fa-edit" style="color:white"></i>
+        </button>
+        </a>
+
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Prove each of the following statements,
+or give a counterexample: <br />
+
+1.  Breadth-first search is a special case of uniform-cost search.<br />
+
+2.  Depth-first search is a special case of best-first tree search.<br />
+
+3.  Uniform-cost search is a special case of A search.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+<div class="card">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Community Solution</a>
+
+
+
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+
+                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+
+
+
+
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution">
+          <p class="card-text">
+          Not Available
+          </p>
+          </div>
+          </div>
+<p><br /></p>
+<div class="card">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Answers</a>
+
+
+        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
+        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        </button>
+
+</div>
+<div class="card-body" id="hideandviewanswers">
+
+</div></div>
+
+  </div>
+</article>
+
+<script>
+  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
+
+  var chapterName = String('3-Solving-Problems-By-Searching');
+  var exerciseName = String('ex_25');
+  var chapterNamestripped = String('3solvingProblemsBySearching');
+  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
+
+  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+</script>
+
+      </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
+  </body>
+</html>

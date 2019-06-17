@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Learning Probabilistic Models &middot; AIMA Exercises 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="20-learning-probabilistic-models">20. Learning Probabilistic Models</h1>
+
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_1/" class="p-2">Exercise 1 (bayes-candy-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.1');" href="#"><i id="ex20.1" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.1);" href="#"><i id="ex20.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+The data used for
+Figure <a href="#">bayes-candy-figure</a> on page <a href="#">bayes-candy-figure</a> can be
+viewed as being generated by $h_5$. For each of the other four
+hypotheses, generate a data set of length 100 and plot the corresponding
+graphs for $P(h_i|d_1,\ldots,d_N)$ and
+$P(D_{N+1}=lime|d_1,\ldots,d_N)$. Comment on
+your results.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_2/" class="p-2">Exercise 2 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.2');" href="#"><i id="ex20.2" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.2);" href="#"><i id="ex20.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Repeat Exercise <a href="#">bayes-candy-exercise</a>, this time
+plotting the values of
+$P(D_{N+1}=lime|h_{MAP})$ and
+$P(D_{N+1}=lime|h_{ML})$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_3/" class="p-2">Exercise 3 (candy-trade-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.3');" href="#"><i id="ex20.3" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.3);" href="#"><i id="ex20.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Suppose that Ann’s utilities for cherry and
+lime candies are $c_A$ and $\ell_A$, whereas Bob’s utilities are $c_B$
+and $\ell_B$. (But once Ann has unwrapped a piece of candy, Bob won’t
+buy it.) Presumably, if Bob likes lime candies much more than Ann, it
+would be wise for Ann to sell her bag of candies once she is
+sufficiently sure of its lime content. On the other hand, if Ann unwraps
+too many candies in the process, the bag will be worth less. Discuss the
+problem of determining the optimal point at which to sell the bag.
+Determine the expected utility of the optimal procedure, given the prior
+distribution from Section <a href="#">statistical-learning-section</a>.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_4/" class="p-2">Exercise 4 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.4');" href="#"><i id="ex20.4" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.4);" href="#"><i id="ex20.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Two statisticians go to the doctor and are both given the same
+prognosis: A 40% chance that the problem is the deadly disease $A$, and
+a 60% chance of the fatal disease $B$. Fortunately, there are anti-$A$
+and anti-$B$ drugs that are inexpensive, 100% effective, and free of
+side-effects. The statisticians have the choice of taking one drug,
+both, or neither. What will the first statistician (an avid Bayesian)
+do? How about the second statistician, who always uses the maximum
+likelihood hypothesis?<br />
+
+The doctor does some research and discovers that disease $B$ actually
+comes in two versions, dextro-$B$ and levo-$B$, which are equally likely
+and equally treatable by the anti-$B$ drug. Now that there are three
+hypotheses, what will the two statisticians do?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_5/" class="p-2">Exercise 5 (BNB-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.5');" href="#"><i id="ex20.5" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.5);" href="#"><i id="ex20.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Explain how to apply the boosting method of
+Chapter <a href="#">concept-learning-chapter</a> to naive Bayes
+learning. Test the performance of the resulting algorithm on the
+restaurant learning problem.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_6/" class="p-2">Exercise 6 (linear-regression-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.6');" href="#"><i id="ex20.6" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.6);" href="#"><i id="ex20.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Consider $N$ data points $(x_j,y_j)$,
+where the $y_j$s are generated from the $x_j$s according to the linear
+Gaussian model in
+Equation (<a href="#">linear-gaussian-likelihood-equation</a>). Find
+the values of $\theta_1$, $\theta_2$, and $\sigma$ that maximize the
+conditional log likelihood of the data.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_7/" class="p-2">Exercise 7 (noisy-OR-ML-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.7');" href="#"><i id="ex20.7" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.7);" href="#"><i id="ex20.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Consider the noisy-OR model for fever described
+in Section <a href="#">canonical-distribution-section</a>. Explain how
+to apply maximum-likelihood learning to fit the parameters of such a
+model to a set of complete data. (<i>Hint</i>: use the chain
+rule for partial derivatives.)
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_8/" class="p-2">Exercise 8 (beta-integration-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.8');" href="#"><i id="ex20.8" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.8);" href="#"><i id="ex20.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+This exercise investigates properties of
+the Beta distribution defined in
+Equation (<a href="#">beta-equation</a><br />.
+
+1.  By integrating over the range $[0,1]$, show that the normalization
+    constant for the distribution $[a,b]$ is given by
+    $\alpha = \Gamma(a+b)/\Gamma(a)\Gamma(b)$ where $\Gamma(x)$ is the <b>Gamma function</b>,
+    defined by $\Gamma(x+1)x\cdot\Gamma(x)$ and
+    $\Gamma(1)1$. (For integer $x$,
+    $\Gamma(x+1)x!$.)<br />
+
+2.  Show that the mean is $a/(a+b)$.<br />
+
+3.  Find the mode(s) (the most likely value(s) of $\theta$).<br />
+
+4.  Describe the distribution $[\epsilon,\epsilon]$ for very
+    small $\epsilon$. What happens as such a distribution is updated?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_9/" class="p-2">Exercise 9 (ML-parents-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.9');" href="#"><i id="ex20.9" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.9);" href="#"><i id="ex20.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Consider an arbitrary Bayesian network, a
+complete data set for that network, and the likelihood for the data set
+according to the network. Give a simple proof that the likelihood of the
+data cannot decrease if we add a new link to the network and recompute
+the maximum-likelihood parameter values.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_10/" class="p-2">Exercise 10 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.10');" href="#"><i id="ex20.10" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.10);" href="#"><i id="ex20.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Consider a single Boolean random variable $Y$ (the “classification”).
+Let the prior probability $P(Y=true)$ be $\pi$. Let’s try to
+find $\pi$, given a training set $D=(y_1,\ldots,y_N)$ with $N$
+independent samples of $Y$. Furthermore, suppose $p$ of the $N$ are
+positive and $n$ of the $N$ are negative.<br />
+
+1.  Write down an expression for the likelihood of $D$ (i.e., the
+    probability of seeing this particular sequence of examples, given a
+    fixed value of $\pi$) in terms of $\pi$, $p$, and $n$.<br />
+
+2.  By differentiating the log likelihood $L$, find the value of $\pi$
+    that maximizes the likelihood.<br />
+
+3.  Now suppose we add in $k$ Boolean random variables
+    $X_1, X_2,\ldots,X_k$ (the “attributes”) that describe each sample,
+    and suppose we assume that the attributes are conditionally
+    independent of each other given the goal $Y$. Draw the Bayes net
+    corresponding to this assumption.<br />
+
+4.  Write down the likelihood for the data including the attributes,
+    using the following additional notation:<br />
+
+    -   $\alpha_i$ is $P(X_i=true \| Y=true)$.<br />
+
+    -   $\beta_i$ is $P(X_i=true \| Y=false)$.<br />
+
+    -   $p_i^+$ is the count of samples for which $X_i=true$
+        and $Y=true$.<br />
+
+    -   $n_i^+$ is the count of samples for which $X_i=false$
+        and $Y=true$.<br />
+
+    -   $p_i^-$ is the count of samples for which $X_i=true$
+        and $Y=false$.<br />
+
+    -   $n_i^-$ is the count of samples for which $X_i=false$
+        and $Y=false$.<br />
+
+    \[<i>Hint</i>: consider first the probability of seeing a
+    single example with specified values for $X_1, X_2,\ldots,X_k$ and
+    $Y$.\]<br />
+
+5.  By differentiating the log likelihood $L$, find the values of
+    $\alpha_i$ and $\beta_i$ (in terms of the various counts) that
+    maximize the likelihood and say in words what these
+    values represent.<br />
+
+6.  Let $k = 2$, and consider a data set with 4 all four possible
+    examples of thexor function. Compute the maximum
+    likelihood estimates of $\pi$, $\alpha_1$, $\alpha_2$, $\beta_1$,
+    and $\beta_2$.<br />
+
+7.  Given these estimates of $\pi$, $\alpha_1$, $\alpha_2$, $\beta_1$,
+    and $\beta_2$, what are the posterior probabilities
+    $P(Y=true | x_1,x_2)$ for each example?<br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_11/" class="p-2">Exercise 11 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex20.11');" href="#"><i id="ex20.11" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex20.11);" href="#"><i id="ex20.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
+
+Consider the application of EM to learn the parameters for the network
+in Figure <a href="#">mixture-networks-figure</a>(a), given the true
+parameters in Equation (<a href="#">candy-true-equation</a>).
+
+1.  Explain why the EM algorithm would not work if there were just two
+    attributes in the model rather than three.
+
+2.  Show the calculations for the first iteration of EM starting from
+    Equation (<a href="#">candy-64-equation</a>).
+
+3.  What happens if we start with all the parameters set to the same
+    value $p$? (<i>Hint</i>: you may find it helpful to
+    investigate this empirically before deriving the general result.)
+
+4.  Write out an expression for the log likelihood of the tabulated
+    candy data on page <a href="#">candy-counts-page</a> in terms of the parameters,
+    calculate the partial derivatives with respect to each parameter,
+    and investigate the nature of the fixed point reached in part (c).
+</p>
+</div>
+</div>
+<p><br /></p>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+</article>
+
+<script type="text/javascript">
+var chapter  = String('/bayesian-learning-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
+$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
+  console.log(data)
+  $("i[data-chapter='"+chapterName+"']").each(function(index,element){
+  	ex = $(element).data("exercise")
+  	if(ex in data){
+  		console.log(data[ex])
+  		$(element).attr("data-rating",data[ex])
+  	}
+    $(".arrow-up").removeClass("loader")
+  })
+});
+
+$(document).on('click',"i[data-chapter]",function(e){
+	ele = $(e.target)
+  ele.addClass("loader")
+	exerciseName = ele.data("exercise")
+	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
+	  console.log(data)
+	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
+	});	
+})
+
+
+</script>
+
+      </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
+  </body>
+</html>

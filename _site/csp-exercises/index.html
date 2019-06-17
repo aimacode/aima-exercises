@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Constraint Satisfaction Problems &middot; AIMA Exercises 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
+
+  <div class="entry">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX", 
+      availableFonts: ["STIX","TeX"], 
+      styles: {".MathJax": {}} 
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1 id="6-constraint-satisfaction-problems">6. Constraint Satisfaction Problems</h1>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_1/" class="p-2">Exercise 1 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.1');" href="#"><i id="ex6.1" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.1');" href="#"><i id="ex6.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+How many solutions are there for the map-coloring problem in
+Figure <a href="#">australia-figure</a>? How many solutions if four
+colors are allowed? Two colors?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_2/" class="p-2">Exercise 2 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.2');" href="#"><i id="ex6.2" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.2');" href="#"><i id="ex6.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the problem of placing $k$ knights on an $n\times n$
+chessboard such that no two knights are attacking each other, where $k$
+is given and $k\leq n^2$.<br />
+
+1.  Choose a CSP formulation. In your formulation, what are the
+    variables?<br />
+
+2.  What are the possible values of each variable?<br />
+
+3.  What sets of variables are constrained, and how?<br />
+
+4.  Now consider the problem of putting *as many knights as
+    possible* on the board without any attacks. Explain how to
+    solve this with local search by defining appropriate ACTIONS and RESULT functions
+    and a sensible objective function.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_3/" class="p-2">Exercise 3 (crossword-exercise) </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.3');" href="#"><i id="ex6.3" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.3');" href="#"><i id="ex6.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the problem of <a href="#footnote1">constructing</a> (not solving)
+crossword puzzles fitting words into a rectangular grid. The grid,
+which is given as part of the problem, specifies which squares are blank
+and which are shaded. Assume that a list of words (i.e., a dictionary)
+is provided and that the task is to fill in the blank squares by using
+any subset of the list. Formulate this problem precisely in two ways:<br />
+
+1.  As a general search problem. Choose an appropriate search algorithm
+    and specify a heuristic function. Is it better to fill in blanks one
+    letter at a time or one word at a time?<br />
+
+2.  As a constraint satisfaction problem. Should the variables be words
+    or letters?<br />
+
+Which formulation do you think will be better? Why?<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_4/" class="p-2">Exercise 4 (csp-definition-exercise) </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.4');" href="#"><i id="ex6.4" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.4');" href="#"><i id="ex6.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Give precise formulations for each of the
+following as constraint satisfaction problems:<br />
+
+1.  Rectilinear floor-planning: find non-overlapping places in a large
+    rectangle for a number of smaller rectangles.<br />
+
+2.  Class scheduling: There is a fixed number of professors and
+    classrooms, a list of classes to be offered, and a list of possible
+    time slots for classes. Each professor has a set of classes that he
+    or she can teach.<br />
+
+3.  Hamiltonian tour: given a network of cities connected by roads,
+    choose an order to visit all cities in a country without
+    repeating any.<br />
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_5/" class="p-2">Exercise 5 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.5');" href="#"><i id="ex6.5" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.5');" href="#"><i id="ex6.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Solve the cryptarithmetic problem in
+Figure <a href="#">cryptarithmetic-figure</a> by hand, using the
+strategy of backtracking with forward checking and the MRV and
+least-constraining-value heuristics.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_6/" class="p-2">Exercise 6 (nary-csp-exercise) </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.6');" href="#"><i id="ex6.6" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.6');" href="#"><i id="ex6.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Show how a single ternary constraint such as
+“$A + B = C$” can be turned into three binary constraints by using an
+auxiliary variable. You may assume finite domains. (*Hint:*
+Consider a new variable that takes on values that are pairs of other
+values, and consider constraints such as “$X$ is the first element of
+the pair $Y$.”) Next, show how constraints with more than three
+variables can be treated similarly. Finally, show how unary constraints
+can be eliminated by altering the domains of variables. This completes
+the demonstration that any CSP can be transformed into a CSP with only
+binary constraints.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_7/" class="p-2">Exercise 7 (zebra-exercise) </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.7');" href="#"><i id="ex6.7" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.7');" href="#"><i id="ex6.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the following logic puzzle: In five houses,
+each with a different color, live five persons of different
+nationalities, each of whom prefers a different brand of candy, a
+different drink, and a different pet. Given the following facts, the
+questions to answer are “Where does the zebra live, and in which house
+do they drink water?”<br />
+
+The Englishman lives in the red house.<br />
+
+The Spaniard owns the dog.<br />
+
+The Norwegian lives in the first house on the left.<br />
+
+The green house is immediately to the right of the ivory house.<br />
+
+The man who eats Hershey bars lives in the house next to the man with
+the fox.<br />
+
+Kit Kats are eaten in the yellow house.<br />
+
+The Norwegian lives next to the blue house.<br />
+
+The Smarties eater owns snails.<br />
+
+The Snickers eater drinks orange juice.<br />
+
+The Ukrainian drinks tea.<br />
+
+The Japanese eats Milky Ways.<br />
+
+Kit Kats are eaten in a house next to the house where the horse is kept.<br />
+
+Coffee is drunk in the green house.<br />
+
+Milk is drunk in the middle house.<br />
+
+Discuss different representations of this problem as a CSP. Why would
+one prefer one representation over another?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_8/" class="p-2">Exercise 8 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.8');" href="#"><i id="ex6.8" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.8');" href="#"><i id="ex6.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the graph with 8 nodes $A_1$, $A_2$, $A_3$, $A_4$, $H$, $T$,
+$F_1$, $F_2$. $A_i$ is connected to $A_{i+1}$ for all $i$, each $A_i$ is
+connected to $H$, $H$ is connected to $T$, and $T$ is connected to each
+$F_i$. Find a 3-coloring of this graph by hand using the following
+strategy: backtracking with conflict-directed backjumping, the variable
+order $A_1$, $H$, $A_4$, $F_1$, $A_2$, $F_2$, $A_3$, $T$, and the value
+order $R$, $G$, $B$.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_9/" class="p-2">Exercise 9 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.9');" href="#"><i id="ex6.9" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.9');" href="#"><i id="ex6.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Explain why it is a good heuristic to choose the variable that is
+*most* constrained but the value that is
+*least* constraining in a CSP search.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_10/" class="p-2">Exercise 10 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.10');" href="#"><i id="ex6.10" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.10');" href="#"><i id="ex6.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Generate random instances of map-coloring problems as follows: scatter
+$n$ points on the unit square; select a point $X$ at random, connect $X$
+by a straight line to the nearest point $Y$ such that $X$ is not already
+connected to $Y$ and the line crosses no other line; repeat the previous
+step until no more connections are possible. The points represent
+regions on the map and the lines connect neighbors. Now try to find
+$k$-colorings of each map, for both $k3$ and
+$k4$, using min-conflicts, backtracking, backtracking with
+forward checking, and backtracking with MAC. Construct a table of
+average run times for each algorithm for values of $n$ up to the largest
+you can manage. Comment on your results.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_11/" class="p-2">Exercise 11 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.11');" href="#"><i id="ex6.11" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.11');" href="#"><i id="ex6.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Use the AC-3 algorithm to show that arc consistency can detect the
+inconsistency of the partial assignment
+${green},V{red}$ for the problem
+shown in Figure <a href="#">australia-figure</a>.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_12/" class="p-2">Exercise 12 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.12');" href="#"><i id="ex6.12" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.12');" href="#"><i id="ex6.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Use the AC-3 algorithm to show that arc consistency can detect the
+inconsistency of the partial assignment
+${red},V{blue}$ for the problem
+shown in Figure <a href="#">australia-figure</a>.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex_13/" class="p-2">Exercise 13 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.13');" href="#"><i id="ex6.13" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.13');" href="#"><i id="ex6.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+What is the worst-case complexity of running AC-3 on a tree-structured
+CSP?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex14/" class="p-2">Exercise 14 (ac4-exercise)</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.14');" href="#"><i id="ex6.14" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.14');" href="#"><i id="ex6.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+AC-3 puts back on the queue *every* arc
+($X_{k}, X_{i}$) whenever *any* value is deleted from the
+domain of $X_{i}$, even if each value of $X_{k}$ is consistent with
+several remaining values of $X_{i}$. Suppose that, for every arc
+($X_{k}, X_{i}$), we keep track of the number of remaining values of
+$X_{i}$ that are consistent with each value of $X_{k}$. Explain how to
+update these numbers efficiently and hence show that arc consistency can
+be enforced in total time $O(n^2d^2)$.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex15/" class="p-2">Exercise 15 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.15');" href="#"><i id="ex6.15" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.15');" href="#"><i id="ex6.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+The Tree-CSP-Solver (Figure <a href="#">tree-csp-figure</a>) makes arcs consistent
+starting at the leaves and working backwards towards the root. Why does
+it do that? What would happen if it went in the opposite direction?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex16/" class="p-2">Exercise 16 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.16');" href="#"><i id="ex6.16" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.14');" href="#"><i id="ex6.16" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+We introduced Sudoku as a CSP to be solved by search over partial
+assignments because that is the way people generally undertake solving
+Sudoku problems. It is also possible, of course, to attack these
+problems with local search over complete assignments. How well would a
+local solver using the min-conflicts heuristic do on Sudoku problems?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex17/" class="p-2">Exercise 17 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.17');" href="#"><i id="ex6.17" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.17');" href="#"><i id="ex6.17" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Define in your own words the terms constraint, backtracking search, arc
+consistency, backjumping, min-conflicts, and cycle cutset.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex18/" class="p-2">Exercise 18 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.18');" href="#"><i id="ex6.18" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.18');" href="#"><i id="ex6.18" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Define in your own words the terms constraint, commutativity, arc
+consistency, backjumping, min-conflicts, and cycle cutset.
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex19/" class="p-2">Exercise 19 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.19');" href="#"><i id="ex6.19" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.19');" href="#"><i id="ex6.19" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Suppose that a graph is known to have a cycle cutset of no more than $k$
+nodes. Describe a simple algorithm for finding a minimal cycle cutset
+whose run time is not much more than $O(n^k)$ for a CSP with $n$
+variables. Search the literature for methods for finding approximately
+minimal cycle cutsets in time that is polynomial in the size of the
+cutset. Does the existence of such algorithms make the cycle cutset
+method practical?
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+<div class="card">
+    <div class="card-header p-2">
+        <a href="ex20/" class="p-2">Exercise 20 </a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex6.20');" href="#"><i id="ex6.20" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex6.20');" href="#"><i id="ex6.20" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+
+Consider the problem of tiling a surface (completely and exactly
+covering it) with $n$ dominoes ($2\times
+1$ rectangles). The surface is an arbitrary edge-connected (i.e.,
+adjacent along an edge, not just a corner) collection of $2n$
+$1\times 1$ squares (e.g., a checkerboard, a checkerboard with some
+squares missing, a $10\times 1$ row of squares, etc.).<br />
+
+1.  Formulate this problem precisely as a CSP where the dominoes are
+    the variables.<br />
+
+2.  Formulate this problem precisely as a CSP where the squares are the
+    variables, keeping the state space as small as possible.
+    (*Hint:* does it matter which particular domino goes on
+    a given pair of squares?)<br />
+
+3.  Construct a surface consisting of 6 squares such that your CSP
+    formulation from part (b) has a *tree-structured*
+    constraint graph.<br />
+
+4.  Describe exactly the set of solvable instances that have a
+    tree-structured constraint graph.<br />
+
+<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
+@Littman+al:1999 tackle the harder problem of solving them.</div>
+</p>
+    </div>
+</div>
+
+<p><br /></p>
+
+  </div>
+
+<!--   <div class="date">
+    Written on 
+  </div>
+ -->
+  
+</article>
+
+<script type="text/javascript">
+var chapter  = String('/csp-exercises/')
+var chapterName = chapter.match(/\/([^\/]*)\//, "")[1]
+$.get( "https://aima-exercises.firebaseapp.com/rating/"+chapterName, function( data ) {
+  console.log(data)
+  $("i[data-chapter='"+chapterName+"']").each(function(index,element){
+  	ex = $(element).data("exercise")
+  	if(ex in data){
+  		console.log(data[ex])
+  		$(element).attr("data-rating",data[ex])
+  	}
+    $(".arrow-up").removeClass("loader")
+  })
+});
+
+$(document).on('click',"i[data-chapter]",function(e){
+	ele = $(e.target)
+  ele.addClass("loader")
+	exerciseName = ele.data("exercise")
+	$.post( "https://aima-exercises.firebaseapp.com/rating/"+chapterName+"/"+exerciseName, function( data ) {
+	  console.log(data)
+	  ele.attr("data-rating",data["rating"])
+    ele.removeClass("loader")
+	});	
+})
+
+
+</script>
+
+      </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
+  </body>
+</html>

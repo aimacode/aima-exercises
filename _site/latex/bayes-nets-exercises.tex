@@ -1,0 +1,506 @@
+%%%% 14.2: The Semantics of Bayesian Networks (7 exercises, 3 labelled)
+%%%% ==================================================================
+
+\begin{uexercise}
+We have a bag of three biased coins \(a\), \(b\), and \(c\) with probabilities of coming 
+up heads of 20\%, 60\%, and 80\%, respectively.  One coin is drawn randomly from the bag (with equal 
+likelihood of drawing each of the three coins), and then the coin is flipped three times to 
+generate the outcomes \(X_1\), \(X_2\), and \(X_3\). 
+\begin{enumerate}
+\item Draw the Bayesian network corresponding to this setup and define the necessary 
+CPTs.
+\item Calculate which coin was most likely to have been drawn from the bag if the observed flips
+come out heads twice and tails once.
+\end{enumerate}
+\end{uexercise} 
+% id=14.0 section=14.2
+
+\begin{iexercise}
+We have a bag of three biased coins \(a\), \(b\), and \(c\) with probabilities of coming 
+up heads of 30\%, 60\%, and 75\%, respectively.  One coin is drawn randomly from the bag (with equal 
+likelihood of drawing each of the three coins), and then the coin is flipped three times to 
+generate the outcomes \(X_1\), \(X_2\), and \(X_3\). 
+\begin{enumerate}
+\item Draw the Bayesian network corresponding to this setup and define the necessary 
+CPTs.
+\item Calculate which coin was most likely to have been drawn from the bag if the observed flips
+come out heads twice and tails once.
+\end{enumerate}
+\end{iexercise} 
+% id=14.0 section=14.2
+
+\begin{exercise}[cpt-equivalence-exercise]
+\eqref{parameter-joint-repn-equation} on \pgref{parameter-joint-repn-equation} defines the joint
+distribution represented by a Bayesian network in terms of
+the parameters \(\theta(X_i\given \Parents(X_i))\). This exercise asks you to derive the equivalence
+between the parameters and the conditional probabilities \(\pv(X_i\given \Parents(X_i))\) from this definition.
+\begin{enumerate}
+\item Consider a simple network \(X\rightarrow Y\rightarrow Z\) with three Boolean variables. 
+Use \eqrefs{conditional-probability-equation}{marginalization-equation} (\pgrefs{conditional-probability-equation}{marginalization-equation}) to express the conditional probability \(P(z\given y)\) as the ratio of two sums, each over entries in the joint distribution \(\pv(X,Y,Z)\).
+\item Now use \eqref{parameter-joint-repn-equation} to write this expression in terms of the network parameters \(\theta(X)\), \(\theta(Y\given X)\), and \(\theta(Z\given Y)\).
+\item Next, expand out the summations in your expression from part (b), writing out explicitly the terms for the true and false values of each summed variable.
+Assuming that all network parameters satisfy the constraint \(\sum_{x_i} \theta(x_i\given \parents(X_i))\eq 1\), show that the resulting expression reduces to \(\theta(z\given y)\).
+\item Generalize this derivation to show that \(\theta(X_i\given \Parents(X_i)) = \pv(X_i\given \Parents(X_i))\) for any Bayesian network.
+\end{enumerate}
+\end{exercise} 
+% id=14.1 section=14.2
+
+\begin{exercise}
+The operation of \newtermi{arc reversal} in a Bayesian network allows us to change the direction of an 
+arc \(X\rightarrow Y\) while preserving the joint probability distribution that the network represents~\cite{Shachter:1986}.  Arc reversal
+may require introducing new arcs:  all the parents of \(X\) also become 
+parents of \(Y\), and all parents of \(Y\) also become parents of \(X\).
+\begin{enumerate}
+\item Assume that \(X\) and \(Y\) start with \(m\) and \(n\) parents, respectively,
+and that all variables have \(k\) values. By calculating the change in size for the CPTs of \(X\) and \(Y\),
+show that the total number of parameters in the network cannot decrease during arc reversal. ({\em Hint}: the parents of
+\(X\) and \(Y\) need not be disjoint.)
+\item Under what circumstances can the total number remain constant?
+\item Let the parents of \(X\) be \(\U \cup \V\) and the parents of \(Y\) be \(\V \cup \W\), where \(\U\) and \(\W\) are disjoint.
+The formulas for the new CPTs after arc reversal are as follows:
+\begin{eqnarray*}
+\pv(Y\given \U,\V,\W) &=& \sum_x \pv(Y\given \V,\W, x) \pv(x\given \U, \V) \\
+\pv(X\given \U,\V,\W, Y) &=& \pv(Y\given X, \V, \W) \pv(X\given \U, \V) / \pv(Y\given \U,\V,\W)\ .
+\end{eqnarray*}
+Prove that the new network expresses the same joint distribution over all variables as the original network.
+\end{enumerate}
+\end{exercise} 
+% id=14.8 section=14.2
+
+\begin{exercise}
+Consider the Bayesian network in \figref{burglary-figure}.
+\begin{enumerate}
+\item If no evidence is observed, are \(\J{Burglary}\) and \(\J{Earthquake}\) independent?
+Prove this from the numerical semantics and from the topological semantics.
+\item If we observe \(\J{Alarm}\eq \J{true}\), are \(\J{Burglary}\) and \(\J{Earthquake}\) independent?
+Justify your answer by calculating whether the probabilities involved satisfy the definition of conditional independence.
+\end{enumerate}
+\end{exercise} 
+% id=14.9 section=14.2
+
+\begin{uexercise}
+Suppose that in a Bayesian network containing an unobserved variable \(Y\), all the 
+variables in the Markov blanket \(\J{MB}(Y)\) have been observed.
+\begin{enumerate}
+\item Prove that removing the node \(Y\) from the network will not affect the 
+posterior distribution for any other unobserved variable in the network.
+\item Discuss whether we can remove \(Y\) if we are planning to use (i) rejection sampling and (ii) likelihood weighting.
+\end{enumerate}
+\end{uexercise} 
+% id=14.10 section=14.2
+
+\begin{figure}[h]
+\threefigboxnew{figures/handedness1.eps}{figures/handedness2.eps}{figures/handedness3.eps}%%<<<upgrade figure]]
+\caption{Three possible structures for a Bayesian network describing genetic inheritance of handedness.}
+\label{handedness-figure}
+\end{figure} 
+% id=14.13 section=14.2
+
+\begin{exercise}[handedness-exercise]
+Let \(H_x\) be a random variable denoting the handedness of an individual \(x\), with possible values \(l\) or \(r\).
+A common hypothesis is that left- or right-handedness is inherited by a simple mechanism; that is, perhaps there is
+a gene \(G_x\), also with values \(l\) or \(r\), and perhaps actual handedness
+turns out mostly the same (with some probability \(s\)) as the gene an individual possesses.
+Furthermore, perhaps the gene itself is equally likely
+to be inherited from either of an individual's parents, with a small nonzero probability \(m\)
+of a random mutation flipping the handedness.  
+\begin{enumerate}
+\item Which of the three networks in \figref{handedness-figure} claim that 
+\( \pv(G_{\J{father}},G_{\J{mother}},G_{\J{child}}) = \pv(G_{\J{father}})\pv(G_{\J{mother}})\pv(G_{\J{child}})\)?
+\item Which of the three networks make independence claims that are consistent with the hypothesis about the inheritance of handedness?
+\item Which of the three networks is the best description of the hypothesis?
+\item Write down the CPT for the \(G_{\J{child}}\) node in network (a), in terms of \(s\) and \(m\).
+\item Suppose that \(P(G_{\J{father}}\eq l)=P(G_{\J{mother}}\eq l)=q\). In network (a), derive an expression
+for \(P(G_{\J{child}}\eq l)\) in terms of \(m\) and \(q\) only, by conditioning on its parent nodes.
+\item Under conditions of genetic equilibrium, we expect the
+distribution of genes to be the same across generations.
+Use this to calculate the value of \(q\), and, given what you
+know about handedness in humans, explain why the hypothesis described
+at the beginning of this question must be wrong.
+\end{enumerate}
+\end{exercise} 
+% id=14.14 section=14.2
+
+\begin{exercise}[markov-blanket-exercise]
+The \term{Markov blanket}\index{Markov!blanket} of a variable is defined on
+\pgref{markov-blanket-page}. Prove that a variable is independent of all other variables in
+the network, given its Markov blanket and derive \eqref{markov-blanket-equation} (\pgref{markov-blanket-equation}).
+\end{exercise} 
+% id=14.21 section=14.2
+
+
+%%%% 14.3: Efficient Representation of Conditional Distributions (4 exercises, 2 labelled)
+%%%% =====================================================================================
+
+\begin{figure}[htp]
+%%\epsfxsize=3.85in
+\figboxnew{figures/car-starts.eps}
+\caption{A Bayesian network describing some features of a car's electrical
+system and engine. Each variable is Boolean, and the \(\J{true}\) value indicates
+that the corresponding aspect of the vehicle is in working order.}
+\label{car-starts-figure}
+\end{figure} 
+% id=14.2 section=14.3
+
+\begin{exercise}
+Consider the network for car diagnosis shown in \figref{car-starts-figure}. 
+\begin{enumerate}
+\item Extend the network with the Boolean variables \(\J{IcyWeather}\) and
+\(\J{StarterMotor}\).
+\item Give reasonable conditional probability tables for all the nodes.
+\item How many independent values are contained in the joint
+probability distribution for eight Boolean nodes, assuming that  no conditional
+independence relations are known to hold among them?
+\item How many independent probability values do your network tables contain?
+\item The conditional distribution for \(\J{Starts}\) could be described
+as a \termi{noisy-AND} distribution. Define this family in general and relate it to 
+the noisy-OR distribution.
+\end{enumerate}
+\end{exercise} 
+% id=14.3 section=14.3
+
+\begin{iexercise}
+Consider a simple Bayesian network with root variables \(\J{Cold}\),
+\(\J{Flu}\), and \(\J{Malaria}\) and child variable \(\J{Fever}\),
+with a noisy-OR conditional distribution for \(\J{Fever}\) as
+described in \secref{canonical-distribution-section}. By adding
+appropriate auxiliary variables for inhibition events and
+fever-inducing events, construct an equivalent Bayesian network whose
+CPTs (except for root variables) are deterministic. Define the CPTs
+and prove equivalence.
+\end{iexercise} 
+% id=14.15 section=14.3
+
+\begin{exercise}[LG-exercise]
+Consider the family of linear Gaussian networks, as defined on
+\pgref{LG-network-page}. 
+\begin{enumerate}
+\item In a two-variable network, let \(X_1\) be the parent of \(X_2\), let
+\(X_1\) have a Gaussian prior, and let \(\pv(X_2\given X_1)\) be a linear Gaussian
+distribution. Show that the joint distribution \(P(X_1,X_2)\) is a
+multivariate Gaussian, and calculate its covariance matrix.
+\item Prove by induction that the joint distribution for a general
+linear Gaussian network on \(X_1,\ldots,X_n\) is also a multivariate Gaussian.
+\end{enumerate}
+\end{exercise} 
+% id=14.16 section=14.3
+
+\begin{exercise}[multivalued-probit-exercise]
+The probit distribution defined on \pgref{probit-page} describes the
+probability distribution for a Boolean child, given a single continuous
+parent.
+\begin{enumerate}
+\item How might the definition be extended to cover multiple continuous parents?
+\item How might it be extended to handle a {\em multivalued} child
+variable? Consider both cases where the child's values are ordered (as
+in selecting a gear while driving, depending on speed, slope, desired
+acceleration, etc.) and cases where they are unordered (as in
+selecting bus, train, or car to get to work). ({\em Hint}: Consider
+ways to divide the possible values into two sets, to mimic a Boolean
+variable.)
+\end{enumerate}
+\end{exercise} 
+% id=14.17 section=14.3
+
+
+%%%% 14.4: Exact Inference in Bayesian Networks (6 exercises, 3 labelled)
+%%%% ====================================================================
+
+\begin{exercise}
+In your local nuclear\index{nuclear power} power station, there is an
+alarm that senses when a temperature gauge exceeds a given
+threshold. The gauge measures the temperature of the core.  Consider the
+Boolean variables \(A\) (alarm sounds), \(F_A\) (alarm is faulty), and
+\(F_G\) (gauge is faulty) and the multivalued nodes \(G\) (gauge reading)
+and \(T\) (actual core temperature).
+\begin{enumerate}
+\item Draw a Bayesian network for this domain, given that the gauge is more likely to
+fail when the core temperature gets too high.
+
+\item Is your network a polytree? Why or why not?
+
+\item Suppose there are just two possible actual and measured
+temperatures, normal and high; the probability that the gauge gives
+the correct temperature is \(x\) when it is working, but \(y\) when it is
+faulty. Give the conditional probability table associated with \(G\).
+
+\item  Suppose the alarm works correctly unless it is faulty, in which case it
+never sounds. Give the conditional probability table associated with \(A\).
+
+\item  Suppose the alarm and gauge are working and the alarm
+sounds. Calculate an expression for
+the probability that the temperature of the core is too high, in terms of
+the various conditional probabilities in the network.
+
+%% \item  In a given time period, the probability that the temperature
+%% exceeds threshold is {\mathdelim}p{\mathdelim}. The cost of shutting down the reactor is {\mathdelim}c_s{\mathdelim}; the
+%% cost of not shutting it down when the temperature is in fact too high is {\mathdelim}c_m{\mathdelim}
+%% ({\mathdelim}m{\mathdelim} is for meltdown). Assuming the gauge and alarm to be working normally,
+%% calculate the maximum value for {\mathdelim}x{\mathdelim} for which the gauge is of any use (i.e.,
+%% if {\mathdelim}x{\mathdelim} is any higher than this, we have to shut down the reactor all the time).
+%% 
+%% \item  Suppose we add a second temperature gauge {\mathdelim}H{\mathdelim}, connected so
+%% that the alarm goes off when either gauge reads High. Add {\mathdelim}H{\mathdelim} and {\mathdelim}F_H{\mathdelim}
+%% (the event of {\mathdelim}H{\mathdelim} failing) to the network.
+%%
+%% \item  Are there circumstances under which adding a second gauge
+%% would mean that we would need {\it more} accurate (i.e., more likely
+%% to give the correct temperature) gauges? Why (not)?
+
+\end{enumerate}
+\end{exercise} 
+% id=14.4 section=14.4
+
+\begin{exercise}[telescope-exercise]
+Two astronomers\index{astronomer} in different parts of the world make measurements
+\(M_1\) and \(M_2\) of the number of stars \(N\) in some small region of the
+sky, using their telescopes\index{telescope}. Normally, there is a small possibility \(e\)
+of error by up to one star in each direction. Each telescope can also (with a much
+smaller probability \(f\)) be badly out of focus (events \(F_1\) and \(F_2\)), in
+which case the scientist will undercount by three or more stars (or
+if \(N\) is less than 3, fail to detect any stars at all). Consider
+the three networks shown in \figref{telescope-nets-figure}.
+\begin{enumerate}
+\item Which of these Bayesian networks  are correct (but not
+necessarily efficient) representations of the preceding
+information? 
+
+\item Which is the best network? Explain.
+
+\item Write out a conditional distribution for \(\pv(M_1\given N)\),
+for the case where \(N\elt\{1,2,3\}\) and \(M_1\elt\{0,1,2,3,4\}\).
+Each entry in the conditional distribution should be expressed
+as a function of the parameters \(e\) and/or \(f\).
+
+\item Suppose \(M_1\eq 1\) and \(M_2\eq 3\). What are the {\em possible} numbers
+of stars if you assume no prior constraint on the values of \(N\)?
+
+\item What is the {\em most likely} number of stars, given these observations?  
+Explain how to compute this, or if it is not possible to compute, explain what additional
+information is needed and how it would affect the result.
+\end{enumerate}
+\end{exercise} 
+% id=14.5 section=14.4
+
+\begin{uexercise}
+Consider the network shown in \figref{telescope-nets-figure}(ii),
+and assume that the two telescopes work identically.
+\(N\elt\{1,2,3\}\) and \(M_1,M_2\elt\{0,1,2,3,4\}\),
+with the symbolic CPTs as described in \exref{telescope-exercise}.
+Using the enumeration algorithm (\figref{enumeration-algorithm} on \pgref{enumeration-algorithm}), calculate the probability
+distribution \(\pv(N\given M_1\eq 2,M_2\eq 2)\).
+\end{uexercise} 
+% id=14.6 section=14.4
+
+\begin{figure}[tbp]
+\figboxspacenew{3pt}{figures/telescope-nets.eps}
+\caption{Three possible networks for the telescope problem.}
+\label{telescope-nets-figure}
+\end{figure} 
+% id=14.7 section=14.4
+
+\begin{figure}[h]
+\figboxnew{figures/politics.eps}%%<<<upgrade figure]]
+\caption{A simple Bayes net with
+Boolean variables \(B\eq \J{BrokeElectionLaw}\), \(I\eq \J{Indicted}\), 
+\(M\eq \J{PoliticallyMotivatedProsecutor}\), \(G\eq \J{FoundGuilty}\), 
+\(J\eq \J{Jailed}\).}
+\label{politics-figure}
+\end{figure} 
+% id=14.11 section=14.4
+
+\begin{uexercise}
+Consider the Bayes net shown in \figref{politics-figure}.
+\begin{enumerate}
+\item Which of the following are asserted by the network {\em structure}?
+\begin{enumerate}
+\item \(\pv(B,I,M) = \pv(B)\pv(I)\pv(M)\).
+\item \(\pv(J\given G) = \pv(J\given G,I)\).
+\item \(\pv(M\given G,B,I) = \pv(M\given G,B,I,J)\).
+\end{enumerate}
+\item Calculate the value of \(P(b,i,\lnot m,g,j)\).
+\item Calculate the probability that someone goes to jail given that they
+broke the law, have been indicted, and face a politically motivated prosecutor.
+\item A \term{context-specific independence}\tindex{independence!context-specific} (see \pgref{CSI-page})
+allows a variable to be independent of some of its parents given certain values of others. In addition to the usual
+conditional independences given by the graph structure, what context-specific independences
+exist in the Bayes net in \figref{politics-figure}?
+\item Suppose we want to add the variable \(P\eq \J{PresidentialPardon}\)
+to the network; draw the new network and 
+briefly explain any links you add.
+\end{enumerate}
+\end{uexercise} 
+% id=14.12 section=14.4
+
+\begin{iexercise}
+Consider the Bayes net shown in \figref{politics-figure}.
+\begin{enumerate}
+\item Which, if any, of the following are asserted by the 
+network {\em structure} (ignoring the CPTs for now)?
+\begin{enumerate}
+\item \(\pv(B,I,M) = \pv(B)\pv(I)\pv(M)\).
+\item \(\pv(J\given G) = \pv(J\given G,I)\).
+\item \(\pv(M\given G,B,I) = \pv(M\given G,B,I,J)\).
+\end{enumerate}
+\item Calculate the value of \(P(b,i,m,\lnot g,j)\).
+\item Calculate the probability that someone goes to jail given that they
+broke the law, have been indicted, and face a politically motivated prosecutor.
+\item A \term{context-specific independence}\tindex{independence!context-specific} (see \pgref{CSI-page})
+allows a variable to be independent of some of its parents given certain values of others. In addition to the usual
+conditional independences given by the graph structure, what context-specific independences
+exist in the Bayes net in \figref{politics-figure}?
+\item Suppose we want to add the variable \(P\eq \J{PresidentialPardon}\)
+to the network; draw the new network and 
+briefly explain any links you add.
+\end{enumerate}
+\end{iexercise} 
+% id=14.12 section=14.4
+
+
+
+\begin{exercise}[VE-exercise]
+Consider the variable elimination algorithm  in
+\figref{elimination-ask-algorithm} (\pgref{elimination-ask-algorithm}). 
+\begin{enumerate}
+\item \secref{exact-inference-section} applies
+variable elimination to the query 
+\[
+  \pv(\J{Burglary}\given \J{JohnCalls}\eq \J{true},\J{MaryCalls}\eq \J{true})\ .
+\]
+Perform the calculations indicated and check that the answer is correct.
+\item Count the number of arithmetic operations performed,
+and compare it with the number performed by the enumeration algorithm.
+\item Suppose a network has the form of a {\em chain}: a sequence of
+Boolean variables \(X_1,\ldots, X_n\) where \(\Parents(X_i)\eq \{X_{i-1}\}\) for
+\(i\eq 2,\ldots,n\). What is the complexity of computing \(\pv(X_1\given X_n\eq
+\J{true})\) using enumeration? Using variable elimination?
+\item Prove that the complexity of running variable elimination on a
+polytree network is linear in the size of the tree for any variable ordering
+consistent with the network structure.
+\end{enumerate}
+\end{exercise} 
+% id=14.18 section=14.4
+
+\begin{exercise}[bn-complexity-exercise]
+Investigate the complexity of exact inference in general Bayesian networks:
+\begin{enumerate}
+\item Prove that any 3-SAT problem can be reduced to exact inference
+in a Bayesian network constructed to represent the particular problem
+and hence that exact inference is NP-hard. ({\em Hint}: Consider a network
+with one variable for each proposition symbol, one for each clause,
+and one for the conjunction of clauses.)
+\item The problem of counting the number of satisfying assignments for
+a 3-SAT problem is \#P-complete. Show that exact
+inference is at least as hard as this.
+\end{enumerate}
+\end{exercise} 
+% id=14.19 section=14.4
+
+
+%%%% 14.5: Approximate Inference in Bayesian Networks (4 exercises, 3 labelled)
+%%%% ==========================================================================
+
+\begin{exercise}[primitive-sampling-exercise]
+Consider the problem of generating a random sample from a specified
+distribution on a single variable. Assume you have a random number
+generator that returns a random number uniformly
+distributed between 0 and 1.
+\begin{enumerate}
+\item Let \(X\) be a discrete variable with \(P(X\eq x_i)\eq p_i\)
+for \(i\elt\{1,\ldots,k\}\). The \newterm{cumulative distribution}\ntindex{distribution!cumulative} of
+\(X\) gives the probability that \(X\elt\{x_1,\ldots,x_j\}\) for each
+possible \(j\). (See also \appref{math-appendix}.) Explain how to calculate the cumulative distribution in
+\(O(k)\) time and how to generate a single sample of \(X\)
+from it. Can the latter be done in less than
+\(O(k)\) time?
+
+\item Now suppose we want to generate \(N\) samples of \(X\), where \(N\gg k\).
+Explain how to do this with an expected run time per sample that is
+{\em constant} (i.e., independent of \(k\)).
+\item Now consider a continuous-valued variable with a parameterized
+distribution (e.g., Gaussian). How can samples be generated from such
+a distribution? 
+\item Suppose you want to query a continuous-valued variable and you
+are using a sampling algorithm such as \noprog{LikelihoodWeighting} to
+do the inference. How would you have to modify the query-answering
+process?
+\end{enumerate}
+\end{exercise} 
+% id=14.20 section=14.5
+
+\begin{exercise}
+Consider the query \(\pv(\J{Rain}\given \J{Sprinkler}\eq
+\J{true},\J{WetGrass}\eq \J{true})\) in \figref{rain-clustering-figure}(a) (\pgref{rain-clustering-figure})
+and how Gibbs sampling can answer it.
+\begin{enumerate}
+\item How many states does the Markov chain have?
+\item Calculate the \term{transition matrix}\tindex{transition matrix}
+\(\mbf{Q}\) containing \(\transition{\mbf{y}}{\mbf{y}'}\) for all \(\mbf{y}\),
+\(\mbf{y}'\).
+\item What does \(\mbf{Q}^2\), the square of the transition matrix, represent?
+\item What about \(\mbf{Q}^n\) as \(n\to \infty\)?
+\item Explain how to do probabilistic inference in Bayesian networks,
+assuming that \(\mbf{Q}^n\) is available. Is this a practical way to do inference?
+\end{enumerate}
+\end{exercise} 
+% id=14.22 section=14.5
+
+\begin{exercise}[gibbs-proof-exercise]
+This exercise explores the stationary distribution for Gibbs sampling methods.
+\begin{enumerate}
+\item The convex composition \([\alpha, q_1; 1-\alpha, q_2]\) of \(q_1\) and \(q_2\) is a transition probability distribution that first chooses one of \(q_1\) and \(q_2\) with probabilities \(\alpha\) and \(1-\alpha\), respectively, and then applies whichever is chosen.
+Prove that if \(q_1\) and \(q_2\) are in detailed balance with \(\pi\),
+then their convex composition is also in detailed balance with \(\pi\). ({\em Note}: this result justifies a variant of \noprog{Gibbs-Ask} in which variables are chosen at random rather than sampled in a fixed sequence.)
+\item Prove that if each of \(q_1\) and \(q_2\) has \(\pi\) as its stationary distribution,
+then the sequential composition \(q \eq q_1 \circ q_2\) also has \(\pi\) as its stationary distribution.
+\end{enumerate}
+\end{exercise} 
+% id=14.23 section=14.5
+
+\begin{exercise}[MH-exercise]
+The \newtermi{Metropolis--Hastings} algorithm is a member of the MCMC family; as such, it is designed to generate samples \(\x\) (eventually) according to target probabilities \(\pi(\x)\). (Typically we are interested in sampling from \(\pi(\x)\eq P(\x\given \e)\).)
+Like simulated annealing, Metropolis--Hastings operates in two stages. First,
+it samples a new state \(\x'\) from a \newtermi{proposal distribution} \(q(\x'\given \x)\), given the current state \(\x\). Then, it probabilistically accepts or rejects \(\x'\) according to
+the \newterm{acceptance probability}
+\[
+   \alpha(\x'\given \x) = \min\ \left(1,\frac{\pi(\x')q(\x\given \x')}{\pi(\x)q(\x'\given \x)}  \right)\ .
+\]
+If the proposal is rejected, the state remains at \(\x\).
+\begin{enumerate}
+\item Consider an ordinary Gibbs sampling step for a specific variable \(X_i\). Show that this step, considered as a proposal, is guaranteed to be accepted by Metropolis--Hastings.
+(Hence, Gibbs sampling is a special case of Metropolis--Hastings.)
+\item Show that the two-step process above, viewed as a transition probability distribution, is in detailed balance with \(\pi\).
+\end{enumerate}
+\end{exercise} 
+% id=14.24 section=14.5
+
+
+%%%% 14.6: Relational and First-Order Probability Models (1 exercises, 1 labelled)
+%%%% =============================================================================
+
+\begin{exercise}[soccer-rpm-exercise]\prgex%
+Three soccer teams \(A\), \(B\), and \(C\), play each other once. Each match
+is between two teams, and can be won, drawn, or lost. Each team has a
+fixed, unknown degree of quality---an integer ranging from 0 to
+3---and the outcome of a match depends probabilistically on the
+difference in quality between the two teams.
+\begin{enumerate}
+\item Construct a relational probability model to describe this
+domain, and suggest numerical values for
+all the necessary probability distributions.
+\item Construct the equivalent Bayesian network for the three matches.
+\item Suppose that in the first two matches \(A\) beats \(B\) and draws with \(C\).
+Using an exact inference algorithm of your choice, compute the posterior
+distribution for the outcome of the third match.
+\item Suppose there are \(n\) teams in the league and we have the results
+for all but the last match. How does the complexity of predicting
+the last game vary with \(n\)?
+\item Investigate the application of MCMC to this problem. How quickly
+does it converge in practice and how well does it scale?
+\end{enumerate}
+\end{exercise} 
+% id=14.25 section=14.6
+
+
+
+

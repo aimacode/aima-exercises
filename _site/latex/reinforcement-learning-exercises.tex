@@ -1,0 +1,155 @@
+%%%% 21.2: Passive Reinforcement Learning (5 exercises, 1 labelled)
+%%%% ==============================================================
+
+\begin{exercise}
+\prgex
+Implement a passive\index{agent!passive learning} learning agent in a simple environment, such as
+the \(4\stimes 3\) world. For the case of an
+initially unknown environment model, compare the learning performance
+of the direct utility estimation, TD, and ADP algorithms.
+Do the comparison for the optimal policy and for several random policies.
+For which do the utility estimates converge faster?
+What happens when the size of the environment is increased?
+(Try environments with and without obstacles.)
+\end{exercise} 
+% id=21.0 section=21.2
+
+\begin{uexercise}
+\chapref{complex-decisions-chapter} defined a \termi{proper policy} for
+an MDP as one that is guaranteed to reach a terminal state.  Show that
+it is possible for a passive ADP agent to learn a transition model for
+which its policy \(\pi\) is improper even if \(\pi\) is proper for the
+true MDP; with such models, the \prog{Policy-Evaluation} step may fail if
+\(\gamma\eq 1\). Show that this problem cannot arise if \prog{Policy-Evaluation}
+is applied to the learned model only at the end of a
+trial.
+\end{uexercise} 
+% id=21.1 section=21.2
+
+\begin{exercise}[prioritized-sweeping-exercise]%
+\prgex
+Starting with the passive ADP\index{adaptive dynamic programming} agent\index{agent!passive ADP}, modify it to use an approximate
+\index{adaptive dynamic programming}\index{dynamic programming!adaptive}
+ADP algorithm as discussed in the text. Do this in two steps:
+\begin{enumerate}
+\item Implement a priority queue\index{queue!priority}\index{priority queue} for adjustments to the utility
+estimates. Whenever a state is adjusted, all of its predecessors also
+become candidates for adjustment and should be added to the queue.
+The queue is initialized with the state from which the most recent
+transition took place.  Allow only a fixed
+number of adjustments.
+\item Experiment with various heuristics for ordering the priority
+queue, examining their effect on learning rates and computation time.
+\end{enumerate}
+\end{exercise} 
+% id=21.2 section=21.2
+
+\begin{iexercise}
+The direct utility estimation method in
+\secref{passive-rl-section} uses distinguished terminal states to
+indicate the end of a trial. How could it be modified for
+environments with discounted rewards and no terminal states?
+\end{iexercise} 
+% id=21.3 section=21.2
+
+\begin{exercise}
+Write out the parameter update equations for TD learning with
+\[
+  \hat{U}(x,y) = \theta_0 + \theta_1 x + \theta_2 y + \theta_3\,\sqrt{(x-x_g)^2 + (y-y_g)^2}\ .
+\]
+\end{exercise} 
+% id=21.7 section=21.2
+
+
+%%%% 21.4: Generalization in Reinforcement Learning (5 exercises, 2 labelled)
+%%%% ========================================================================
+
+\begin{iexercise}\prgex
+Adapt the vacuum\index{vacuum world} world (\chapref{agents-chapter}) for
+reinforcement learning by including rewards for squares being clean.
+Make the world observable by providing suitable percepts. Now experiment with
+different reinforcement learning agents. Is function approximation
+necessary for success? What sort of approximator works for this application?
+\end{iexercise} 
+% id=21.5 section=21.4
+
+\begin{exercise}[approx-LMS-exercise]%
+\prgex Implement an exploring reinforcement learning agent that uses direct utility estimation.
+Make two versions---one with a tabular representation and one using the function approximator in \eqref{4x3-linear-approx-equation}.
+Compare their performance in three environments:
+\begin{enumerate}
+\item The \(4\stimes 3\) world described in the chapter.
+\item A \({10}\stimes {10}\) world with no obstacles and a +1 reward at (10,10).
+\item A \({10}\stimes {10}\) world with no obstacles and a +1 reward at (5,5).
+\end{enumerate}
+\end{exercise} 
+% id=21.6 section=21.4
+
+\begin{uexercise}
+Devise suitable features for reinforcement learning in stochastic grid worlds (generalizations of the \(4\stimes 3\) world)
+that contain multiple obstacles and multiple terminal states with rewards of \(+1\) or \(-1\).
+\end{uexercise} 
+% id=21.8 section=21.4
+
+\begin{exercise}
+\prgex Extend the standard game-playing
+environment\index{environment!game-playing}
+(\chapref{game-playing-chapter}) to incorporate a reward signal. Put
+two reinforcement learning agents into the environment (they may, of
+course, share the agent program) and have them play against each
+other.  Apply the generalized TD update rule
+(\eqref{generalized-td-equation}) to update the evaluation
+function. You might wish to start with a simple linear weighted
+evaluation function and a simple game, such as tic-tac-toe.
+\end{exercise} 
+% id=21.10 section=21.4
+
+\begin{exercise}[10x10-exercise]
+Compute the true utility function and the best linear approximation in
+\(x\) and \(y\) (as in \eqref{4x3-linear-approx-equation}) for the
+following environments:
+\begin{enumerate}
+\item A \({10}\stimes {10}\) world with a single \(+1\) terminal state at (10,10).
+\item As in (a), but add a \(-1\) terminal state at (10,1).
+\item As in (b), but add obstacles in 10 randomly selected squares.
+\item As in (b), but place a wall stretching from (5,2) to (5,9).
+\item As in (a), but with the terminal state at (5,5).
+\end{enumerate}
+The actions are deterministic moves in the four directions.
+In each case, compare the results using three-dimensional plots.
+For each environment, propose additional features (besides \(x\) and \(y\)) that
+would improve the approximation and show the results.
+\end{exercise} 
+% id=21.9 section=21.4
+
+
+
+%%%% 21.5: Policy Search (1 exercises, 0 labelled)
+%%%% =============================================
+
+\begin{exercise}
+\prgex Implement the \system{Reinforce} and \system{Pegasus} algorithms and
+apply them to the \(4\stimes 3\) world, using a policy family of your own choosing.
+Comment on the results.
+\end{exercise} 
+% id=21.11 section=21.5
+
+
+%%%% 21.6: Applications of Reinforcement Learning (2 exercises, 0 labelled)
+%%%% ======================================================================
+
+\begin{iexercise}\libex%
+Investigate the application of reinforcement learning ideas to the
+modeling of human and animal behavior.
+\end{iexercise} 
+% id=21.12 section=21.6
+
+\begin{uexercise}\libex%
+Is reinforcement learning an appropriate abstract model for evolution?
+What connection exists, if any, between hardwired reward signals and evolutionary fitness?
+\end{uexercise} 
+% id=21.13 section=21.6
+
+
+
+%%<<<add exercises on Q-learning!!]]

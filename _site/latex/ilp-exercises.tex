@@ -1,0 +1,112 @@
+\setlength{\medskipamount}{1.6\medskipamount}%%%%% Mona's suggestion
+
+%%%% 19.2: Knowledge in Learning (1 exercises, 1 labelled)
+%%%% =====================================================
+
+\begin{exercise}[dbsig-exercise]%
+Show, by translating into conjunctive normal form and applying
+resolution, that the conclusion drawn on \pgref{dbsig-page} concerning
+Brazilians is sound.
+\end{exercise} 
+% id=19.0 section=19.2
+
+
+%%%% 19.4: Learning Using Relevance Information (2 exercises, 0 labelled)
+%%%% ====================================================================
+
+\begin{uexercise}
+For each of the following determinations\index{determination}, write down the logical
+representation and explain why the determination is true (if it is):
+\begin{enumerate}
+\item Design and denomination determine the mass of a coin.
+\item For a given program, input determines output.
+\item Climate, food intake, exercise, and metabolism determine weight gain
+and loss.
+\item Baldness is determined by the baldness (or lack thereof) of
+one's maternal grandfather.
+\end{enumerate}
+\end{uexercise} 
+% id=19.1 section=19.4
+
+\begin{iexercise}
+For each of the following determinations\index{determination}, write down the logical
+representation and explain why the determination is true (if it is):
+\begin{enumerate}
+\item Zip code determines the state (U.S.).
+\item Design and denomination determine the mass of a coin.
+\item Climate, food intake, exercise, and metabolism determine weight gain
+and loss.
+\item Baldness is determined by the baldness (or lack thereof) of
+one's maternal grandfather.
+\end{enumerate}
+\end{iexercise} 
+% id=19.1 section=19.4
+
+\begin{exercise}
+Would a probabilistic version of determinations be useful? Suggest a
+definition.
+\end{exercise} 
+% id=19.2 section=19.4
+
+
+%%%% 19.5: Inductive Logic Programming (4 exercises, 3 labelled)
+%%%% ===========================================================
+
+\begin{exercise}[ir-step-exercise]%
+Fill in the missing values for the clauses \(C_1\) or \(C_2\) (or both) in the
+following sets of clauses, given that \(C\) is the resolvent of \(C_1\)
+and \(C_2\):
+\begin{enumerate}
+\item \(C = \J{True} \implies P(A,B)\), \(C_1 = P(x,y) \implies Q(x,y)\), \(C_2
+= ??\).
+\item \(C = \J{True} \implies P(A,B)\), \(C_1 = ??\), \(C_2 = ??\).
+\item \(C = P(x,y) \implies P(x,f(y))\), \(C_1 = ??\), \(C_2 = ??\).
+\end{enumerate}
+If there is more than one possible solution, provide one example of
+each different kind.
+\end{exercise} 
+% id=19.3 section=19.5
+
+\begin{exercise}[prolog-ir-exercise]%
+\prgex Suppose one writes a logic program that carries out a
+resolution\index{resolution} inference step. That is, let \(\J{Resolve}(c_1,c_2,c)\) succeed
+if \(c\) is the result of resolving \(c_1\) and \(c_2\). Normally, \(\J{Resolve}\)
+would be used as part of a theorem prover by calling it with \(c_1\) and
+\(c_2\) instantiated to particular clauses, thereby generating the
+resolvent \(c\). Now suppose instead that we call it with \(c\)
+instantiated and \(c_1\) and \(c_2\) uninstantiated. Will this succeed in
+generating the appropriate results of an inverse resolution step?
+Would you need any special modifications to the logic programming
+system for this to work?
+\end{exercise} 
+% id=19.4 section=19.5
+
+\begin{exercise}[foil-literals-exercise]%
+Suppose that \prog{Foil} is considering adding a literal to a clause
+using a binary predicate \(P\) and that previous literals (including
+the head of the clause) contain five different variables. 
+\begin{enumerate}
+\item How many
+functionally different literals can be generated? Two
+literals are functionally identical if they differ only in the names
+of the {\em new} variables that they contain.
+\item Can you find a
+general formula for the number of different literals with a predicate
+of arity \(r\) when there are \(n\) variables previously used?
+\item Why does \prog{Foil} not allow literals that contain no
+previously used variables?
+\end{enumerate}
+\end{exercise} 
+% id=19.5 section=19.5
+
+\begin{uexercise}
+Using the data from the family tree in \figref{family2-figure}, or a
+subset thereof, apply the \prog{Foil} algorithm to learn a definition
+for the \(\J{Ancestor}\) predicate.
+\end{uexercise} 
+% id=19.6 section=19.5
+
+
+
+
+\resetmedskipamount

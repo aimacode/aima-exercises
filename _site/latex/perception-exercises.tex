@@ -1,0 +1,194 @@
+%%%% 24.1: Image Formation (3 exercises, 0 labelled)
+%%%% ===============================================
+
+\begin{exercise}
+In the shadow of a tree with a dense, leafy canopy, one sees a number of 
+light spots. Surprisingly, they all appear to be circular. Why? After all,
+the gaps between the leaves through which the sun shines are not
+likely to be circular.
+\end{exercise} 
+% id=24.0 section=24.1
+
+\begin{uexercise}
+Consider a picture of a white sphere floating in front of a black backdrop.  The image curve separating white pixels from
+black pixels is sometimes called the ``outline'' of the sphere.  Show that the outline of a sphere, viewed in
+a perspective camera, can be an ellipse.  Why do spheres not look like ellipses to you?
+\end{uexercise} 
+% id=24.1 section=24.1
+
+\begin{exercise}
+Consider an infinitely long cylinder of radius \(r\) oriented with its
+axis along the \(y\)-axis. The cylinder has a Lambertian\index{Lambertian surface} surface
+and is viewed by a camera along the positive \(z\)-axis.  What will you
+expect to see in the image  if the cylinder is
+illuminated by a point source at infinity located on the positive
+\(x\)-axis?  Draw the contours of constant brightness in
+the projected image. Are the contours of equal brightness uniformly spaced?
+\end{exercise} 
+% id=24.2 section=24.1
+
+
+%%%% 24.2: Early Image-Processing Operations (1 exercises, 0 labelled)
+%%%% =================================================================
+
+\begin{exercise}
+Edges in an image can correspond to a variety of events in a scene.
+Consider \figref{illuminationfigure} (\pgref{illuminationfigure}), and
+assume that it is a picture of a real three-dimensional
+scene. Identify ten different brightness edges in the image, and for
+each, state whether it corresponds to a discontinuity in (a) depth,
+(b) surface orientation, (c) reflectance, or (d) illumination.
+\end{exercise} 
+% id=24.3 section=24.2.1
+
+
+%%%% 24.4: Reconstructing the 3D World (3 exercises, 0 labelled)
+%%%% ===========================================================
+
+\begin{exercise}
+A stereoscopic system is being contemplated for terrain mapping. It
+will consist of two CCD\index{charge-coupled device}\index{CCD
+(charge-coupled device)} cameras, each having \({512}\times {512}\)
+pixels on a 10 cm \(\times\) 10 cm square sensor.  The lenses to be
+used have a focal length of 16 cm, with the focus fixed at
+infinity. For corresponding points (\(u_1,v_1\)) in the left image and
+(\(u_2,v_2\)) in the right image, \(v_1=v_2\) because the \(x\)-axes
+in the two image planes are parallel to the epipolar lines---the lines
+from the object to the camera.  The optical axes of the two cameras
+are parallel. The baseline between the cameras is 1 meter.
+\begin{enumerate}
+\item If the nearest distance to be measured is 16 meters, what is the largest
+disparity that will occur (in pixels)?
+
+\item  What is the distance resolution at 16 meters, due to the pixel spacing?
+
+\item  What distance corresponds to a disparity of one pixel?
+\end{enumerate}
+\end{exercise} 
+% id=24.4 section=24.4.2
+
+
+\begin{uexercise}
+Which of the following are true, and which are false?
+\begin{enumerate}
+\item Finding corresponding points in stereo images is the easiest phase of
+the stereo depth-finding process.
+\item Shape-from-texture can be done by projecting a grid of light-stripes
+onto the scene.
+%\item The Huffman--Clowes labelling scheme can deal with all polyhedral
+%objects.
+%\item Generalized cylinders provide a viewpoint--independent
+%representation of volume elements.
+%\item In line drawings of curved objects, the line label can change from one 
+%end of the line to the other. 
+\item  Lines with equal lengths in the scene  always project to equal
+lengths in the image.
+\item  Straight lines in the image necessarily correspond to straight lines 
+in the scene.
+\end{enumerate}
+\end{uexercise} 
+% id=24.7 section=24.4
+
+\begin{iexercise}
+Which of the following are true, and which are false?
+\begin{enumerate}
+\item Finding corresponding points in stereo images is the easiest phase of
+the stereo depth-finding process.
+%\item The Huffman--Clowes labelling scheme can deal with all polyhedral
+%objects.
+%\item Generalized cylinders provide a viewpoint--independent
+%representation of volume elements.
+%\item In line drawings of curved objects, the line label can change from one 
+%end of the line to the other. 
+\item In stereo views of the same scene, greater accuracy is obtained in the
+depth calculations if the two camera positions are farther apart.
+\item  Lines with equal lengths in the scene  always project to equal
+lengths in the image.
+\item  Straight lines in the image necessarily correspond to straight lines 
+in the scene.
+\end{enumerate}
+\end{iexercise} 
+% id=24.7 section=24.4
+
+
+%% \ignore{\begin{exercise}
+%% Label the line drawing in \figref{l-shape-figure}, assuming that the
+%% outside edges have been labeled as occluding and that all vertices
+%% are trihedral. Do this by a backtracking\index{search!backtracking}\index{backtracking} algorithm that examines the
+%% vertices in the order \(A\), \(B\), \(C\), and \(D\), picking at each stage a choice
+%% consistent with previously labeled junctions and edges. Now try 
+%% the order \(B\), \(D\), \(A\), and \(C\).
+%% \end{exercise}
+
+
+
+%% \begin{figure}[ht]
+%% %%%%\epsfxsize=2.6in
+%% \figboxnew{figures/l-shape.eps}
+%% \caption{A drawing to be labeled, in which all vertices are trihedral.}
+%% \label{l-shape-figure}
+%% \end{figure}
+%% }
+
+
+
+\ignore{
+\begin{exercise}
+Show that convolution\index{convolution} with a given function \(f\) commutes with
+differentiation; that is, show that
+\((f \ast g)' = f \ast g'\ \).
+\end{exercise}
+}
+
+%% \begin{exercise}\label{cross-ratio-exercise}%
+%% In \figref{cross-ratio-figure}, physically measure the cross ratio of
+%% the points {\mathdelim}ABCD{\mathdelim} as well as of the points {\mathdelim}A'B'C'D'{\mathdelim}. Are they equal?
+%% \end{exercise}
+
+\ignore{
+\begin{exercise}
+Suppose we wish to use the alignment algorithm in an industrial
+situation in which flat parts move along a conveyor belt and are
+photographed by a camera vertically above the conveyor belt.  The pose
+of the part is specified by three variables---one for the rotation and
+two for the two-dimensional position. This simplifies the problem and
+the function \prog{Find-Transform} needs only two pairs of
+corresponding image and model features to determine the pose.
+Determine the worst-case complexity of the alignment procedure.
+\end{exercise}
+}
+
+
+
+\ignore{
+\begin{exercise}
+\figref{lane-marker-figure} is taken from the point of
+view of a car in the exit lane of a freeway. Two cars
+are visible in the lane immediately to the left.
+What reasons does the viewer have to conclude that one is
+closer than the other?
+\end{exercise}
+}
+
+\pagebreak
+
+\begin{figure}[ht]
+%%%%\epsfxsize=0.48\maxfigwidth
+\figboxnew{figures/bottle-stereo.eps}
+\caption{Top view of
+a two-camera vision system observing a bottle with a wall behind it.}
+\label{bottle-figure}
+\end{figure} 
+% id=24.6 section=24.4.3
+
+\begin{exercise} (Courtesy of Pietro Perona.)
+\figref{bottle-figure} shows two cameras at X
+and Y
+observing a scene. Draw the image seen at each camera,
+assuming that all named points are in the same horizontal plane.
+What can be concluded from these two images about the relative
+distances of points A, B, C, D, and E from the camera baseline, and
+on what basis?
+\end{exercise} 
+% id=24.5 section=24.4.3
+
