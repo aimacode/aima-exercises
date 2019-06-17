@@ -1,4 +1,4 @@
-[Exercise 16.20](ex_20/)
+
 
 Consider a student who has the choice to buy or not buy a textbook for a
 course. We’ll model this as a decision problem with one Boolean decision
@@ -14,14 +14,14 @@ P(p|b,m) = 0.9              & P(m|b) = 0.9       \\
 P(p|b, \lnot m) = 0.5       & P(m|\lnot b) = 0.7 \\
 P(p|\lnot b, m) = 0.8       & \\
 P(p|\lnot b, \lnot m) = 0.3 & \\
-\end{array}$$ 
+\end{array}$$<br>
 
 You might think that $P$ would be independent of $B$ given
-$M$, But this course has an open-book final—so having the book helps.
+$M$, But this course has an open-book final—so having the book helps.<br>
 
-1.  Draw the decision network for this problem.
+1.  Draw the decision network for this problem.<br>
 
 2.  Compute the expected utility of buying the book and of not
     buying it.
-
+<br>
 3.  What should Sam do?

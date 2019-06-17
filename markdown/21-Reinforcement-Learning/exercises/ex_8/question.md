@@ -1,4 +1,4 @@
-[Exercise 21.8](ex_8/)
+
 
 Devise suitable features for reinforcement learning in stochastic grid
 worlds (generalizations of the $4\times 3$ world) that contain multiple

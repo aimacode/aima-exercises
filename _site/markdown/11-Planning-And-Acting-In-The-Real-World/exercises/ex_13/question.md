@@ -1,4 +1,4 @@
-[Exercise 11.13](ex_13/)
+
 
 The following quotes are from the backs of shampoo bottles. Identify
 each as an unconditional, conditional, or execution-monitoring plan. (a)

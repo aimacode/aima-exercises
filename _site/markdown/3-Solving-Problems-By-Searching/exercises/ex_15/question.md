@@ -1,4 +1,4 @@
-[Exercise 3.15](ex_15/)
+
 
 Does a finite state space always lead to a finite search tree? How about
 a finite state space that is a tree? Can you be more precise about what

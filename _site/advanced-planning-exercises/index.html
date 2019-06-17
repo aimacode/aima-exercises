@@ -1,145 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title>Main –  – </title>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-        <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <title>
     
-    <meta name="description" content="">
-    <meta property="og:description" content="" />
+      Planning and Acting In real life &middot; AIMA Exercises 
     
-    <meta name="author" content="" />
+  </title>
 
-    
-    <meta property="og:title" content="Main" />
-    <meta property="twitter:title" content="Main" />
-    
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
-<!--     <script src="//http://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
- -->
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
- -->
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <body>
-    <input type="checkbox" id="toggleheader">
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body class="theme-base-08">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
           <center>
-            <h1>Aritificial Intelligence: A Modern Approach</h1>
-            <h3>Stuart J. Russell and Peter Norvig</h3>
-          </center>
-        </header>
+            <form class="form-inline active-pink-3 active-pink-4">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            </form>
+            <br>
+            </center>
+
+
       </div>
     </div>
-    <input type="checkbox" id="toggletoc">
-    <div class="toc">
-      <div>Table of Contents</div>
-      <form action="/search" id="site_search" autocomplete="off" method="GET">
-        <input type="text" name="query" class="toc_search" placeholder="Search within AIMA Exercises">
-      </form>
-      <ul>
-	<li>
-		<span>Part &#x2160; Artificial Intelligence</span>
-		<ol>
-			<li><a href="/intro-exercises">1. Introduction</a></li>
-			<li><a href="/agents-exercises">2. Intelligent Agent</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2161; Problem-solving</span>
-		<ol>
-			<li><a href="/search-exercises">3. Solving Problems By Searching</a></li>
-			<li><a href="/advanced-search-exercises">4. Beyond Classical Search</a></li>
-			<li><a href="/game-playing-exercises">5. Adversarial Search</a></li>
-			<li><a href="/csp-exercises">6. Constraint Satisfaction Problems</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2162; Knowledge, reasoning, and planning</span>
-		<ol>
-			<li><a href="/knowledge-logic-exercises">7. Logical Agents</a></li>
-			<li><a href="/fol-exercises">8. First Order Logic</a></li>
-			<li><a href="/logical-inference-exercises">9. Inference In First Order Logic</a></li>
-			<li><a href="/planning-exercises">10. Classical Planning</a></li>
-			<li><a href="/advanced-planning-exercises">11. Planning And Acting In The Real World</a></li>
-			<li><a href="/kr-exercises">12. Knowledge Representation</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2163; Uncertain knowledge and reasoning</span>
-		<ol>
-			<li><a href="/probability-exercises">13. Quantifying Uncertainity</a></li>
-			<li><a href="/bayes-nets-exercises">14. Probabilistic Reasoning</a></li>
-			<li><a href="/dbn-exercises">15. Probabilistic Reasoning Over Time</a></li>
-			<li><a href="/decision-theory-exercises">16. Making Simple Decisions</a></li>
-			<li><a href="/complex-decisions-exercises">17. Making Complex Decision</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2164; Learning</span>
-		<ol>
-			<li><a href="/concept-learning-exercises">18. Learning From Examples</a></li>
-			<li><a href="/ilp-exercises">19. Knowledge In Learning</a></li>
-			<li><a href="/bayesian-learning-exercises">20. Learning Probabilistic Models</a></li>
-			<li><a href="/reinforcement-learning-exercises">21. Reinforcement Learning</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2165; Communicating, perceiving, and acting</span>
-		<ol>
-			<li><a href="/nlp-communicating-exercises">22. Natural Language Processing</a></li>
-			<li><a href="/nlp-english-exercises">23. Natural Language For Communication</a></li>
-			<li><a href="/perception-exercises">24. Perception</a></li>
-			<li><a href="/robotics-exercises">25. Robotics</a></li>
-		</ol>
-	</li>
-	<li>
-		<span>Part &#x2166; Conclusions</span>
-		<ol>
-			<li><a href="/philosophy-exercises">26. Philosophical Foundations</a></li>
-			<li><a href="/#/"> Future Exercises</a></li>
-		</ol>
-	</li>
-</ul>
-    </div>
-    <div id="main" role="main" class="container">
-      
-
-
-
-<ul class="breadcrumb">
-
-  <label for="toggletoc" class="toc-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-   
-    <li><a class="breadcrumb-text" href="/">home</a> &nbsp; </li>
-   
-
-<label for="toggleheader" class="toggleheader" title="Toggle Header">
-    &#9167;
-</label>
-</ul>
-
-      <article class="post">
+      <div class="container content">
+        <article class="post">
 
   <div class="entry">
     <script type="text/x-mathjax-config">
@@ -167,95 +141,159 @@
 
 <h1 id="11-planning-and-acting-in-the-real-world">11. Planning and Acting in the Real World</h1>
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_1" data-rating="0"></i></div>
-<p><a href="ex_1/">Exercise 11.1</a></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_1/" class="p-2">Exercise 1 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.1');" href="#"><i id="ex11.1" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.1);" href="#"><i id="ex11.1" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>The goals we have considered so far all ask the planner to make the
+The goals we have considered so far all ask the planner to make the
 world satisfy the goal at just one time step. Not all goals can be
 expressed this way: you do not achieve the goal of suspending a
 chandelier above the ground by throwing it in the air. More seriously,
 you wouldn’t want your spacecraft life-support system to supply oxygen
-one day but not the next. A <em>maintenance goal</em> is achieved
+one day but not the next. A <i>maintenance goal</i> is achieved
 when the agent’s plan causes a condition to hold continuously from a
 given state onward. Describe how to extend the formalism of this chapter
-to support maintenance goals.</p>
+to support maintenance goals.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_2/" class="p-2">Exercise 2 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.2');" href="#"><i id="ex11.2" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.2);" href="#"><i id="ex11.2" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_2" data-rating="0"></i></div>
-<p><a href="ex_2/">Exercise 11.2</a></p>
-
-<p>You have a number of trucks with which to deliver a set of packages.
+You have a number of trucks with which to deliver a set of packages.
 Each package starts at some location on a grid map, and has a
 destination somewhere else. Each truck is directly controlled by moving
 forward and turning. Construct a hierarchy of high-level actions for
 this problem. What knowledge about the solution does your hierarchy
-encode?</p>
+encode?
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_3/" class="p-2">Exercise 3 (HLA-unique-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.3');" href="#"><i id="ex11.3" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.3);" href="#"><i id="ex11.3" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_3" data-rating="0"></i></div>
-<p><a href="ex_3/">Exercise 11.3 [HLA-unique-exercise]</a></p>
-
-<p>Suppose that a high-level action has exactly one
+Suppose that a high-level action has exactly one
 implementation as a sequence of primitive actions. Give an algorithm for
 computing its preconditions and effects, given the complete refinement
-hierarchy and schemas for the primitive actions.</p>
+hierarchy and schemas for the primitive actions.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_4/" class="p-2">Exercise 4 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.4');" href="#"><i id="ex11.4" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.4);" href="#"><i id="ex11.4" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_4" data-rating="0"></i></div>
-<p><a href="ex_4/">Exercise 11.4</a></p>
-
-<p>Suppose that the optimistic reachable set of a high-level plan is a
+Suppose that the optimistic reachable set of a high-level plan is a
 superset of the goal set; can anything be concluded about whether the
 plan achieves the goal? What if the pessimistic reachable set doesn’t
-intersect the goal set? Explain.</p>
+intersect the goal set? Explain.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_5/" class="p-2">Exercise 5 (HLA-progression-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.5');" href="#"><i id="ex11.5" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.5);" href="#"><i id="ex11.5" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">[Exercise 11.5 \[HLA-progression-exercise\]](ex_5/)
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_5" data-rating="0"></i></div>
-<p><a href="ex_5/">Exercise 11.5 [HLA-progression-exercise]</a></p>
-
-<p>Write an algorithm that takes an initial
+Write an algorithm that takes an initial
 state (specified by a set of propositional literals) and a sequence of
 HLAs (each defined by preconditions and angelic specifications of
 optimistic and pessimistic reachable sets) and computes optimistic and
-pessimistic descriptions of the reachable set of the sequence.</p>
+pessimistic descriptions of the reachable set of the sequence.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_6/" class="p-2">Exercise 6 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.6');" href="#"><i id="ex11.6" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.6);" href="#"><i id="ex11.6" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_6" data-rating="0"></i></div>
-<p><a href="ex_6/">Exercise 11.6</a></p>
-
-<p>In Figure <a href="#/">jobshop-cpm-figure</a> we showed how to describe
+In Figure <a href="#">jobshop-cpm-figure</a> we showed how to describe
 actions in a scheduling problem by using separate fields for , , and .
 Now suppose we wanted to combine scheduling with nondeterministic
 planning, which requires nondeterministic and conditional effects.
 Consider each of the three fields and explain if they should remain
 separate fields, or if they should become effects of the action. Give an
-example for each of the three.</p>
+example for each of the three.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_7/" class="p-2">Exercise 7 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.7');" href="#"><i id="ex11.7" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.7);" href="#"><i id="ex11.7" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_7" data-rating="0"></i></div>
-<p><a href="ex_7/">Exercise 11.7</a></p>
-
-<p>Some of the operations in standard programming languages can be modeled
+Some of the operations in standard programming languages can be modeled
 as actions that change the state of the world. For example, the
 assignment operation changes the contents of a memory location, and the
 print operation changes the state of the output stream. A program
 consisting of these operations can also be considered as a plan, whose
 goal is given by the specification of the program. Therefore, planning
 algorithms can be used to construct programs that achieve a given
-specification.</p>
+specification. <br />
 
-<ol>
-  <li>
-    <p>Write an action schema for the assignment operator (assigning the
-value of one variable to another). Remember that the original value
-will be overwritten!</p>
-  </li>
-  <li>
-    <p>Show how object creation can be used by a planner to produce a plan
-for exchanging the values of two variables by using a
-temporary variable.</p>
-  </li>
-</ol>
+1.  Write an action schema for the assignment operator (assigning the
+    value of one variable to another). Remember that the original value
+    will be overwritten! <br />
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_8" data-rating="0"></i></div>
-<p><a href="ex_8/">Exercise 11.8</a></p>
+2.  Show how object creation can be used by a planner to produce a plan
+    for exchanging the values of two variables by using a
+    temporary variable. <br />
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_8/" class="p-2">Exercise 8 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.8');" href="#"><i id="ex11.8" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.8);" href="#"><i id="ex11.8" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<p>Consider the following argument: In a framework that allows uncertain
-initial states, <strong>nondeterministic effects</strong>
+Consider the following argument: In a framework that allows uncertain
+initial states, <b>nondeterministic effects</b>
 are just a notational convenience, not a source of additional
 representational power. For any action schema $a$ with nondeterministic
 effect $P \lor Q$, we could always replace it with the conditional
@@ -265,73 +303,139 @@ reduced to two regular actions. The proposition $R$ stands for a random
 proposition that is unknown in the initial state and for which there are
 no sensing actions. Is this argument correct? Consider separately two
 cases, one in which only one instance of action schema $a$ is in the
-plan, the other in which more than one instance is.</p>
+plan, the other in which more than one instance is.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_9/" class="p-2">Exercise 9 (conformant-flip-literal-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.9');" href="#"><i id="ex11.9" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.9);" href="#"><i id="ex11.9" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_9" data-rating="0"></i></div>
-<p><a href="ex_9/">Exercise 11.9 [conformant-flip-literal-exercise]</a></p>
-
-<p>Suppose the ${Flip}$ action
+Suppose the ${Flip}$ action
 always changes the truth value of variable $L$. Show how to define its
 effects by using an action schema with conditional effects. Show that,
 despite the use of conditional effects, a 1-CNF belief state
-representation remains in 1-CNF after a ${Flip}$.</p>
+representation remains in 1-CNF after a ${Flip}$.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_10/" class="p-2">Exercise 10 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.10');" href="#"><i id="ex11.10" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.10);" href="#"><i id="ex11.10" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_10" data-rating="0"></i></div>
-<p><a href="ex_10/">Exercise 11.10</a></p>
-
-<p>In the blocks world we were forced to introduce two action schemas,
+In the blocks world we were forced to introduce two action schemas,
 ${Move}$ and ${MoveToTable}$, in order to maintain the ${Clear}$
 predicate properly. Show how conditional effects can be used to
-represent both of these cases with a single action.</p>
+represent both of these cases with a single action.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_11/" class="p-2">Exercise 11 (alt-vacuum-exercise) </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.11');" href="#"><i id="ex11.11" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.11);" href="#"><i id="ex11.11" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_11" data-rating="0"></i></div>
-<p><a href="ex_11/">Exercise 11.11 [alt-vacuum-exercise]</a></p>
-
-<p>Conditional effects were illustrated for the
+Conditional effects were illustrated for the
 ${Suck}$ action in the vacuum world—which square becomes clean depends
 on which square the robot is in. Can you think of a new set of
 propositional variables to define states of the vacuum world, such that
-${Suck}$ has an <em>unconditional</em> description? Write out
+${Suck}$ has an <i>unconditional</i> description? Write out
 the descriptions of ${Suck}$, ${Left}$, and ${Right}$, using your
 propositions, and demonstrate that they suffice to describe all possible
-states of the world.</p>
+states of the world.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_12/" class="p-2">Exercise 12 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.12');" href="#"><i id="ex11.12" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.12);" href="#"><i id="ex11.12" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_12" data-rating="0"></i></div>
-<p><a href="ex_12/">Exercise 11.12</a></p>
-
-<p>Find a suitably dirty carpet, free of obstacles, and vacuum it. Draw the
+Find a suitably dirty carpet, free of obstacles, and vacuum it. Draw the
 path taken by the vacuum cleaner as accurately as you can. Explain it,
-with reference to the forms of planning discussed in this chapter.</p>
+with reference to the forms of planning discussed in this chapter.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_13/" class="p-2">Exercise 13 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.13');" href="#"><i id="ex11.13" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.13);" href="#"><i id="ex11.13" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_13" data-rating="0"></i></div>
-<p><a href="ex_13/">Exercise 11.13</a></p>
-
-<p>The following quotes are from the backs of shampoo bottles. Identify
+The following quotes are from the backs of shampoo bottles. Identify
 each as an unconditional, conditional, or execution-monitoring plan. (a)
 “Lather. Rinse. Repeat.” (b) “Apply shampoo to scalp and let it remain
 for several minutes. Rinse and repeat if necessary.” (c) “See a doctor
-if problems persist.”</p>
+if problems persist.”
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_14/" class="p-2">Exercise 14 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.14');" href="#"><i id="ex11.14" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.14);" href="#"><i id="ex11.14" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_14" data-rating="0"></i></div>
-<p><a href="ex_14/">Exercise 11.14</a></p>
-
-<p>Consider the following problem: A patient arrives at the doctor’s office
+Consider the following problem: A patient arrives at the doctor’s office
 with symptoms that could have been caused either by dehydration or by
 disease $D$ (but not both). There are two possible actions: ${Drink}$,
 which unconditionally cures dehydration, and ${Medicate}$, which cures
 disease $D$ but has an undesirable side effect if taken when the patient
 is dehydrated. Write the problem description, and diagram a sensorless
-plan that solves the problem, enumerating all relevant possible worlds.</p>
+plan that solves the problem, enumerating all relevant possible worlds.
+</p>
+</div>
+</div>
+<p><br /></p>
+<div class="card">
+<div class="card-header p-2">
+<a href="ex_15/" class="p-2">Exercise 15 </a>
+<button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ex11.15');" href="#"><i id="ex11.15" class="fas fa-bookmark" style="color:white"></i></button>
+<button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex11.15);" href="#"><i id="ex11.15" class="fas fa-thumbs-up" style="color:white"></i></button>
+</div>
+<div class="card-body">
+<p class="card-text">
 
-<div><i class="arrow-up loader" data-chapter="advanced-planning-exercises" data-exercise="ex_15" data-rating="0"></i></div>
-<p><a href="ex_15/">Exercise 11.15</a></p>
-
-<p>To the medication problem in the previous exercise, add a ${Test}$
+To the medication problem in the previous exercise, add a ${Test}$
 action that has the conditional effect ${CultureGrowth}$ when
 ${Disease}$ is true and in any case has the perceptual effect
 ${Known}({CultureGrowth})$. Diagram a conditional plan that solves
-the problem and minimizes the use of the ${Medicate}$ action.</p>
-
+the problem and minimizes the use of the ${Medicate}$ action.
+</p>
+</div>
+</div>
+<p><br /></p>
 
   </div>
 
@@ -340,23 +444,6 @@ the problem and minimizes the use of the ${Medicate}$ action.</p>
   </div>
  -->
   
-<div class="comments">
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
-
-	    var disqus_shortname = 'nalinc';
-
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-
-
 </article>
 
 <script type="text/javascript">
@@ -388,17 +475,25 @@ $(document).on('click',"i[data-chapter]",function(e){
 
 </script>
 
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-        </footer>
       </div>
-    </div>
-
-    
 
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/main.js"></script>
   </body>
 </html>

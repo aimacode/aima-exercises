@@ -1,4 +1,4 @@
-[Exercise 19.6 \[prolog-ir-exercise\]](ex_6/)
+
 
 Suppose one writes a logic program that carries
 out a resolution inference step. That is, let ${Resolve}(c_1,c_2,c)$

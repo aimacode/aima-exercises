@@ -1,4 +1,4 @@
-[Exercise 24.3](ex_3/)
+
 
 Consider an infinitely long cylinder of radius $r$ oriented with its
 axis along the $y$-axis. The cylinder has a Lambertian surface and is

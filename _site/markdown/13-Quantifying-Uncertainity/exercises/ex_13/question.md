@@ -1,4 +1,4 @@
-[Exercise 13.13](ex_13/)
+
 
 We wish to transmit an $n$-bit message to a receiving agent. The bits in
 the message are independently corrupted (flipped) during transmission

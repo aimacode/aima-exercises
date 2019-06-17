@@ -1,8 +1,8 @@
-[Exercise 18.28 \[perceptron-ML-gradient-exercise\]](ex_28/)
 
-Section [logistic-regression-section](#/)
-(page [logistic-regression-section](#/)) noted that the output of the logistic function
-could be interpreted as a *probability* $p$ assigned by the
+
+Section <a href="#">logistic-regression-section</a>
+(page <a href="#">logistic-regression-section</a>) noted that the output of the logistic function
+could be interpreted as a <i>probability</i> $p$ assigned by the
 model to the proposition that $f(\textbf{x}){{\,=\,}}1$; the probability that
 $f(\textbf{x}){{\,=\,}}0$ is therefore $1-p$. Write down the probability $p$
 as a function of $\textbf{x}$ and calculate the derivative of $\log p$ with

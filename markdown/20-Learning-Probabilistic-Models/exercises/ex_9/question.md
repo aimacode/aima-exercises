@@ -1,4 +1,4 @@
-[Exercise 20.9 \[ML-parents-exercise\]](ex_9/)
+
 
 Consider an arbitrary Bayesian network, a
 complete data set for that network, and the likelihood for the data set

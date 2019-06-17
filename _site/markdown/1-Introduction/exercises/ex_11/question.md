@@ -1,4 +1,4 @@
-[Exercise 1.11](ex_11/)
+
 
 Many of the computational models of cognitive activities that have been
 proposed involve quite complex mathematical operations, such as

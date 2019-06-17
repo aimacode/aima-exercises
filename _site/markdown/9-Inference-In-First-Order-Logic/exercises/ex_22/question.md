@@ -1,4 +1,4 @@
-[Exercise 9.22](ex_22/)
+
 
 This exercise considers the implementation of search algorithms in
 Prolog. Suppose that successor(X,Y) is true when state

@@ -1,4 +1,4 @@
-[Exercise 23.8](ex_8/)
+
 
 Collect some examples of time expressions, such as “two o’clock,”
 “midnight,” and “12:46.” Also think up some examples that are

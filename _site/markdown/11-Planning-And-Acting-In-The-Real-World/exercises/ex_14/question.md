@@ -1,4 +1,4 @@
-[Exercise 11.14](ex_14/)
+
 
 Consider the following problem: A patient arrives at the doctor’s office
 with symptoms that could have been caused either by dehydration or by

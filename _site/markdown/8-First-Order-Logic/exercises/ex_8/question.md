@@ -1,4 +1,4 @@
-[Exercise 8.8 \[empty-universe-exercise\]](ex_8/)
+
 
 Consider a version of the semantics for
 first-order logic in which models with empty domains are allowed. Give

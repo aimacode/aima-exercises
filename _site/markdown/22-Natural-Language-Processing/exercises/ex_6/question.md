@@ -1,4 +1,4 @@
-[Exercise 22.6](ex_6/)
+
 
 This exercise concerns the classification of spam email.
 Create a corpus of spam email and one of non-spam mail. Examine each

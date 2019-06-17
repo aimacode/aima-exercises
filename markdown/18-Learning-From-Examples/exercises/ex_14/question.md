@@ -1,4 +1,4 @@
-[Exercise 18.14](ex_14/)
+
 
 Suppose you are running a learning experiment on a new algorithm for
 Boolean classification. You have a data set consisting of 100 positive

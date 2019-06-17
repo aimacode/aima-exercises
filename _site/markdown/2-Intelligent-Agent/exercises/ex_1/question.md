@@ -1,4 +1,4 @@
-[Exercise 2.1](ex_1/)
+
 
 Suppose that the performance measure is concerned with just the first
 $T$ time steps of the environment and ignores everything thereafter.

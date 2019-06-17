@@ -1,6 +1,6 @@
-[Exercise 22.3](ex_3/)
 
-*Zipf’s law* of word distribution states the following:
+
+<i>Zipf’s law</i> of word distribution states the following:
 Take a large corpus of text, count the frequency of every word in the
 corpus, and then rank these frequencies in decreasing order. Let $f_{I}$
 be the $I$th largest frequency in this list; that is, $f_{1}$ is the

@@ -1,4 +1,4 @@
-[Exercise 25.7 \[voronoi-exercise\]](ex_7/)
+
 
 Implement an algorithm for calculating the Voronoi
 diagram of an arbitrary 2D environment, described by an $n\times n$

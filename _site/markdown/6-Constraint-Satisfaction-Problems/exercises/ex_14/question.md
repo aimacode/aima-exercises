@@ -1,4 +1,4 @@
-[Exercise 6.14 \[ac4-exercise\]](ex_14/)
+
 
 AC-3 puts back on the queue *every* arc
 ($X_{k}, X_{i}$) whenever *any* value is deleted from the

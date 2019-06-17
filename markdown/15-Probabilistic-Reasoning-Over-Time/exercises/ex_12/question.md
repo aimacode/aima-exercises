@@ -1,19 +1,19 @@
-[Exercise 15.12 \[switching-kf-exercise\]](ex_12/)
+
 
 Often, we wish to monitor a continuous-state
 system whose behavior switches unpredictably among a set of $k$ distinct
 “modes.” For example, an aircraft trying to evade a missile can execute
 a series of distinct maneuvers that the missile may attempt to track. A
-Bayesian network representation of such a **switching Kalman
-filter** model is shown in
+Bayesian network representation of such a <b>switching Kalman
+filter</b> model is shown in
 Figure [switching-kf-figure](#switching-kf-figure).
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
     $${\textbf{P}}(\textbf{X}_0)$$ is a multivariate
     Gaussian distribution. Show that the prediction
-    $${\textbf{P}}(\textbf{X}_1)$$ is a **mixture of
-    Gaussians**—that is, a weighted sum of Gaussians such
+    $${\textbf{P}}(\textbf{X}_1)$$ is a <b>mixture of
+    Gaussians</b>—that is, a weighted sum of Gaussians such
     that the weights sum to 1.
 
 2.  Show that if the current continuous state estimate

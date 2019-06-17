@@ -1,4 +1,4 @@
-[Exercise 8.21 \[adjacency-exercise\]](ex_21/)
+
 
 Explain what is wrong with the following proposed
 definition of adjacent squares in the wumpus world:

@@ -1,4 +1,4 @@
-[Exercise 18.22 \[svm-exercise\]](ex_22/)
+
 
 Construct a support vector machine that computes the
 xor function. Use values of +1 and –1 (instead of 1 and 0)

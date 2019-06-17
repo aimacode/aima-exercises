@@ -1,4 +1,4 @@
-[Exercise 6.6 \[nary-csp-exercise\]](ex_6/)
+
 
 Show how a single ternary constraint such as
 “$A + B = C$” can be turned into three binary constraints by using an

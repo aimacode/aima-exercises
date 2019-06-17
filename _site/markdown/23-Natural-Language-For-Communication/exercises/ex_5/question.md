@@ -1,4 +1,4 @@
-[Exercise 23.5](ex_5/)
+
 
 Outline the major differences between Java (or any other computer
 language with which you are familiar) and English, commenting on the

@@ -1,4 +1,4 @@
-[Exercise 5.12](ex_12/)
+
 
 Describe how the minimax and alpha–beta algorithms change for
 two-player, non-zero-sum games in which each player has a distinct

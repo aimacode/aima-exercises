@@ -1,4 +1,4 @@
-[Exercise 5.16](ex_16/)
+
 
 Suppose you have a chess program that can evaluate 5 million nodes per
 second. Decide on a compact representation of a game state for storage

@@ -1,4 +1,4 @@
-[Exercise 18.30](ex_30/)
+
 
 Implement a data structure for layered, feed-forward neural networks,
 remembering to provide the information needed for both forward

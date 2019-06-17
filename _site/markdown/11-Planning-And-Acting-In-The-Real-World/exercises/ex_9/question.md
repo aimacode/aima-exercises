@@ -1,4 +1,4 @@
-[Exercise 11.9 \[conformant-flip-literal-exercise\]](ex_9/)
+
 
 Suppose the ${Flip}$ action
 always changes the truth value of variable $L$. Show how to define its

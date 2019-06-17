@@ -1,4 +1,4 @@
-[Exercise 2.9](ex_9/)
+
 
 Consider a simple thermostat that turns on a furnace when the
 temperature is at least 3 degrees below the setting, and turns off a

@@ -1,4 +1,4 @@
-[Exercise 18.20 \[knn-mean-mode\]](ex_20/)
+
 
 Suppose a $7$-nearest-neighbors regression search
 returns $ \{4, 2, 8, 4, 9, 11, 100\} $ as the 7 nearest $y$ values for a
