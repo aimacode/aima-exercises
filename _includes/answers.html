@@ -1,0 +1,18 @@
+<div class="answerss">
+  <div id="accordion">
+    {% if site.data.Introduction.answers[0] %}
+        {% for book in site.data.Introduction.answers %}
+
+        <div>
+                {% if book.Answers[0] %}
+                <ul>
+                    {% for chapter in book.Answers %}
+                    <li class="nav-item bg-light"><a class="nav-link" href="{{ site.baseurl }}/{{chapter.url}}">{{chapter.Answer1}}</a></li>
+                    {% endfor %}
+                </ul>
+                {%endif%}
+        </div>
+        {%endfor%}
+    {%endif%}
+    </div>
+    </div>

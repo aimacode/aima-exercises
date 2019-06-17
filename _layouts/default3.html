@@ -2,7 +2,7 @@
 <html lang="en-us">
   {% include head.html %}
   <body class="theme-base-08">
-    {% include sidebar2.html %}
+    {% include sidebar.html %}
     <div class="wrap">
       <div class="masthead">
         <div class="container">
@@ -10,22 +10,15 @@
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
-          <br>
-          <center>
-            <form class="form-inline active-pink-3 active-pink-4">
-              <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
-            </form>
-            <br>
-            </center>
 
+        </div>
 
       </div>
-    </div>
+
       <div class="container content">
         {{ content }}
       </div>
-
+    </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
@@ -34,15 +27,19 @@
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+
         document.addEventListener('click', function(e) {
           var target = e.target;
+
           if(!checkbox.checked ||
              sidebar.contains(target) ||
              (target === checkbox || target === toggle)) return;
+
           checkbox.checked = false;
         }, false);
       })(document);
     </script>
         <script src="{{ site.baseurl }}/main.js"></script>
+          <script src="{{ site.baseurl }}/bookmark.js"></script>
   </body>
 </html>
