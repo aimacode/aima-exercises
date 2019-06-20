@@ -195,24 +195,37 @@ physics.” Is the latter statement true, and does it imply the former?
           </div>
           <div class="card-body" id="hideandviewcommunitysolution">
           <p class="card-text">
-          Not Available
+          No community answer available yet.
+
           </p>
           </div>
           </div>
 <p><br /></p>
-<div class="card">
+<div class="card" id="borderbottom">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">User Submitted Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" href="#" id="addanswerorcomment2" onclick="myFunction()">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
+
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#">
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
+
 
 </div>
-<div class="card-body" id="hideandviewanswers">
+<div class="card-body" id="hideandviewusersolution">
+    <div id="content">
+<div class="hideit" id="link">https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/1-Introduction/exercises/ex_17/answers</div>
+</div>
+  </div>
+</div>
 
-</div></div>
 
   </div>
 </article>
@@ -225,8 +238,10 @@ physics.” Is the latter statement true, and does it imply the former?
   var chapterNamestripped = String('1introduction');
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
   document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
   document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+  
+
+
 </script>
 
       </div>
@@ -249,5 +264,7 @@ physics.” Is the latter statement true, and does it imply the former?
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

@@ -88,8 +88,8 @@ breadcrumb3: 1introduction
 
 </div>
 <div class="card-body" id="hideandviewusersolution" markdown="1">
-
-{% include_relative answers/useranswers.yaml %}
-
+<div id="content">
 </div>
 </div>
+</div>
+<div class="hideit" id="link">https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/1-Introduction/exercises/ex_1/answers</div>

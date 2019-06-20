@@ -224,21 +224,13 @@ would have today? In another 50 years?
 
 </div>
 <div class="card-body" id="hideandviewusersolution">
-
-    <ul>
-      <li>Author: <a href="#">@not_available</a>
-        <ul>
-          <li>No answer submitted yet.
-            <ul>
-              <li>No comment available. <a href="#">–@not_available</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div id="content">
+<div class="hideit" id="link">https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/1-Introduction/exercises/ex_2/answers</div>
+</div>
 
   </div>
 </div>
+
 
   </div>
 </article>
@@ -251,8 +243,10 @@ would have today? In another 50 years?
   var chapterNamestripped = String('1introduction');
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
   document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
   document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+  
+
+
 </script>
 
       </div>
@@ -275,5 +269,7 @@ would have today? In another 50 years?
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>
