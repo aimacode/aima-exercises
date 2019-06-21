@@ -36,24 +36,16 @@ breadcrumb3: 8firstOrderLogic
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-
-
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a href="#" class="reqcomm" id="reqcomm">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
                 </a>
-
-                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
                 </button>
                 </a>
-
-
-
-
           </div>
           <div class="card-body" id="hideandviewcommunitysolution">
           <p class="card-text">
@@ -67,23 +59,22 @@ breadcrumb3: 8firstOrderLogic
         <a href="#" class="p-2">Student Answers</a>
 
         <a class="addanswerorcomment" id="addanswerorcomment" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" href="#" id="addanswerorcomment2" onclick="myFunction()">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" style="margin-top:30px; " href="#" id="addanswerorcomment2" onclick="myFunction()">
         <i class="fas fa-edit" style="color:white"></i>
         </button>
         </a>
 
-        <a class="viewusersolution" id="viewusersolution" href="#">
-        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <div class="viewusersolution" id="viewusersolution" >
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px; margin-top:0px; paddin-top:0px;" id="viewanswers" onclick="myFunction4()" href="#" >
         <i class="fas fa-bars" style="color:white"></i>
         </button>
-        </a>
+        </div>
 
 
 </div>
 <div class="card-body" id="hideandviewusersolution" markdown="1">
 <div id="content">
 <div class="hideit" id="link">https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/8-First-Order-Logic/exercises/ex_1/answers</div>
-
 </div>
 </div>
 </div>

@@ -94,3 +94,7 @@ ul:first-child ul > li  {
 .hideit{
   display:none;
 }
+.viewusersolution{
+  padding-top: 0px;
+  margin-top: 0px;
+}
