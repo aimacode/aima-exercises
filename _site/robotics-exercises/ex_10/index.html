@@ -203,17 +203,49 @@ worlds with a valid path from the start to the goal location.<br />
 <p><br /></p>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a href="#" class="reqcomm" id="reqcomm">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution">
+          <p class="card-text">
+          No Community answer available yet.
+          </p>
+          </div>
+          </div>
+<p><br /></p>
+<div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" style="margin-top:30px; " href="#" id="addanswerorcomment2" onclick="myFunction()">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
+
+        <div class="viewusersolution" id="viewusersolution">
+        <button type="button" class="btn btn-dark float-right" title="Double Click to View Answers" style="margin-left:10px; margin-right:10px; margin-top:0px; paddin-top:0px;" id="viewanswers" onclick="myFunction4()" href="#">
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </div>
+
 
 </div>
-<div class="card-body" id="hideandviewanswers">
-
-</div></div>
+<div class="card-body" id="hideandviewusersolution">
+    <div id="content">
+<div class="hideit" id="link">https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/25-Robotics/exercises/ex_10/answers</div>
+</div>
+  </div>
+</div>
 
   </div>
 </article>
