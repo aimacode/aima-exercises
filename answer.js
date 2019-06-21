@@ -12,8 +12,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
       console.log(files)
       for (file of files){
         f = file["download_url"]
-        
-        httpGetAsync(f, renderContent)
+        g = file["name"]
+        console.log(f)
+        console.log(g)
+        if(g=="communityanswer.md")
+        {
+          console.log("Won't render")
+        }
+        else{
+          httpGetAsync(f, renderContent)
+        }
+       
       }
     }
     

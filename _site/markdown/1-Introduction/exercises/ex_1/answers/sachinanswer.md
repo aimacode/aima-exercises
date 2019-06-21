@@ -1,0 +1,1 @@
+Sample answer for testing the Answer submission feature.
