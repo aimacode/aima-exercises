@@ -195,26 +195,37 @@ search node? Why is this distinction useful?
           </div>
           <div class="card-body" id="hideandviewcommunitysolution">
           <p class="card-text">
-          Not Available
+          Community Answer is not available yet.
+
           </p>
           </div>
           </div>
 <p><br /></p>
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
-
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
-        </button>
-
-</div>
-<div class="card-body" id="hideandviewanswers">
-
-</div></div>
 
   </div>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
+
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" href="#" id="addanswerorcomment2" onclick="myFunction()">
+        <i class="fas fa-edit" style="color:white"></i>
+        </button>
+        </a>
+
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
+</div>
+
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content">
+    <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
 </article>
 
 <script>
@@ -225,8 +236,8 @@ search node? Why is this distinction useful?
   var chapterNamestripped = String('3solvingProblemsBySearching');
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
   document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
   document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
 
       </div>
@@ -249,5 +260,7 @@ search node? Why is this distinction useful?
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

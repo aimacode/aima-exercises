@@ -28,7 +28,7 @@ reward for $B$ is always equal and opposite.)<br>
 
 
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" id="grid-mdp-figure" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" id="grid-mdp-figure" style="width:100%">
       <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a href="#">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a href="#">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
       The start state has reward 0.</b></center></figcaption>
     </figure>
