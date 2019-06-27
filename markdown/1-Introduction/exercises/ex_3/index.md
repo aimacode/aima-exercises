@@ -65,27 +65,3 @@ breadcrumb3: 1introduction
           </div>
 <br>
 
-<div class="card" id="borderbottom">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Student Answers</a>
-
-        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" href="#" id="addanswerorcomment2" onclick="myFunction()">
-        <i class="fas fa-edit" style="color:white"></i>
-        </button>
-        </a>
-
-        <a class="viewusersolution" id="viewusersolution" href="#">
-        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
-        <i class="fas fa-bars" style="color:white"></i>
-        </button>
-        </a>
-
-
-</div>
-<div class="card-body" id="hideandviewusersolution" markdown="1">
-
-{% include_relative answers/useranswers.yaml %}
-
-</div>
-</div>

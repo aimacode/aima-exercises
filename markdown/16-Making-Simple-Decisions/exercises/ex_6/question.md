@@ -41,5 +41,3 @@ Figure <a href="#3candy-figure">3candy-figure</a>.<br>
       <figcaption><center><b>Three proposed Bayes nets for the Surprise Candy
       problem</b></center></figcaption>
     </figure>
-
-    
