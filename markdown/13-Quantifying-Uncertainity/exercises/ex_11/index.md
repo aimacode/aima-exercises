@@ -35,51 +35,22 @@ breadcrumb3: 13quantifyingUncertainity
 <br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
-
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
-        </button>
-
-</div>
-<div class="card-body" id="hideandviewanswers">
-{% for item in site.data.answers.13quantifyingUncertainity.ex_11.solutions %}
-<div class="card">
-   <div class="card-header p-2">
-      <a href="#" class="p-2">Author: {{item.name}}</a>
-      <a class="upvote_answer" id="upvote_answer" href="#">
-      <button type="button" class="btn btn-dark float-right" title="Upvote answer" style="margin-left:10px; margin-right:10px;" href="#" id="upvoteanswer">
-      <i class="far fa-thumbs-up" style="color:white"></i>
-      </button>
-      </a>
-      </div>
-<div class="card-body">
-<p class="card-text">
-{% for entry2 in item.answers %}
-{{entry2.answer}}
-{% endfor %}
-</p>
-<div class="card">
-   <div class="card-header p-2">
-      <a href="#" class="p-2">Comments</a>
-
-      <a class="add_comment" id="add_comment" href="#">
-      <button type="button" class="btn btn-dark float-right" title="Add Comment" style="margin-left:10px; margin-right:10px;" href="#" id="addcoment">
-      <i class="fas fa-comment" style="color:white"></i>
-      </button>
-      </a>
-      </div>
-      <div class="card-body" id="hideandviewcomments">
-      <p class="card-text">
-      <ul>{% for entry in item.comments %}
-      <li>{{entry.comment}}</li>
-      {% endfor %}
-      </ul>
-      </p>
-      </div>
-</div>
-</div>
-</div>
+        <a href="#" class="p-2">Community Solution</a>
+                <a href="#" class="reqcomm" id="reqcomm">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution">
+          <p class="card-text">
+          {% include_relative answers/communityanswer.md %}
+          </p>
+          </div>
+          </div>
 <br>
-{% endfor %}
