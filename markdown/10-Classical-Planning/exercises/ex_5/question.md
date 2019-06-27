@@ -31,6 +31,6 @@ Construct a plan for Shakey to
 get ${Box}{}_2$ into ${Room}{}_2$.<br>
 
   <figure>
-    <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/shakey2.svg" alt="shakey-figure" id="shakey-figure" style="width:100%">
+    <img src="https://aimacode.github.io/aima-exercises/figures/shakey2.svg" alt="shakey-figure" id="shakey-figure" style="width:100%">
     <figcaption><center><b>Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.</b></center></figcaption>
   </figure>

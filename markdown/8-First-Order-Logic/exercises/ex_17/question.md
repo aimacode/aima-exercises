@@ -13,6 +13,6 @@ brothers-in-law, Zara’s great-grandparents, and Eugenie’s ancestors.<br>
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/family1.svg" alt="family1-figure" id="family1-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/family1.svg" alt="family1-figure" id="family1-figure" style="width:100%">
   <figcaption><center><b>A typical family tree. The symbol $\bowtie$ connects spouses and arrows point to children.</b></center></figcaption>
 </figure>
