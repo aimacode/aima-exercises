@@ -18,7 +18,7 @@ Which of the following are true, and which are false?<br>
 
 
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/bottle-stereo.svg" alt="bottle-figure" id="bottle-figure" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/bottle-stereo.svg" alt="bottle-figure" id="bottle-figure" style="width:100%">
       <figcaption><center><b>Top view of
       a two-camera vision system observing a bottle with a wall behind it.</b></center></figcaption>
     </figure>

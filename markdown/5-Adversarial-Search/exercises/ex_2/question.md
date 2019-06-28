@@ -23,6 +23,6 @@ Each node is labeled with the $P,E$ positions. $P$ moves first. Branches marked 
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/pursuit-evasion-game.svg" alt="pursuit-evasion-game-figure" id="pursuit-evasion-game-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/pursuit-evasion-game.svg" alt="pursuit-evasion-game-figure" id="pursuit-evasion-game-figure" style="width:100%">
   <figcaption><center><b>Pursuit evasion game Figure</b></center></figcaption>
 </figure>
