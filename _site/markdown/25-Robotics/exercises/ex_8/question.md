@@ -39,26 +39,26 @@ Figure <a href="#FigEx2">FigEx2</a>.
     about a non-planar obstacle?<br>
 
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseRobot1.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseRobot1.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(a)</b></center></figcaption>
     </figure>
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseRobot3.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseRobot3.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(b)</b></center></figcaption>
     </figure>
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseRobot6.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseRobot6.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(c)</b></center></figcaption>
     </figure>
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseConf2.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseConf2.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(d)</b></center></figcaption>
     </figure>
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseConf4.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseConf4.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(e)</b></center></figcaption>
     </figure>
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/exerciseConf5.svg" alt="FigEx2" id="FigEx2" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/exerciseConf5.svg" alt="FigEx2" id="FigEx2" style="width:100%">
       <figcaption><center><b>(f)</b></center></figcaption>
     </figure>

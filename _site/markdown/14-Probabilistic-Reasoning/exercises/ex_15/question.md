@@ -11,13 +11,13 @@ ${\textbf{P}}(N{{\,|\,}}M_1{{\,=\,}}2,M_2{{\,=\,}}2)$.<br>
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/telescope-nets.svg" alt="telescope-nets-figure" id="telescope-nets-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/telescope-nets.svg" alt="telescope-nets-figure" id="telescope-nets-figure" style="width:100%">
   <figcaption><center><b>Three possible networks for the telescope problem.</b></center></figcaption>
 </figure>
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/politics.svg" alt="car-starts-figure" id="car-starts-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/politics.svg" alt="car-starts-figure" id="car-starts-figure" style="width:100%">
   <figcaption><center><b>A simple Bayes net with
   Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotivatedProsecutor}, G= {FoundGuilty}, J = {Jailed}.</b></center></figcaption>
 </figure>

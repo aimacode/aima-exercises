@@ -817,7 +817,7 @@ Translate the following description logic expression (from
 page <a href="#">description-logic-ex</a>) into first-order logic, and comment on the result:
 
 $$
-And(Man, AtLeast(3,Son), AtMost(2,Daughter), All(Son,And(Unemployed,Married, All(Spouse,Doctor ))), All(Daughter,And(Professor, Fills(Department ,Physics,Math))))
+And(Man, AtLeast(3,Son), AtMost(2,Daughter), <br />All(Son,And(Unemployed,Married, All(Spouse,Doctor ))), <br />All(Daughter,And(Professor, Fills(Department ,Physics,Math))))
 $$
 </p>
 </div>
@@ -1024,5 +1024,8 @@ $(document).on('click',"i[data-chapter]",function(e){
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        <script src="/aima-exercises/bookmark.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

@@ -79,3 +79,21 @@ ul:first-child ul > li  {
   padding-bottom: 2px;
 
 }
+#link{
+  width:80%;
+}
+
+#content{
+  padding-left:15px;
+}
+
+#content p{
+  border-bottom:1px solid black;
+}
+.hideit{
+  display:none;
+}
+.viewusersolution{
+  padding-top: 0px;
+  margin-top: 0px;
+}

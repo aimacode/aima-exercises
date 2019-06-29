@@ -16,7 +16,7 @@ if it encounters a wall). Implement this as an HMM and do filtering to
 track the robot. How accurately can we track the robot’s path?
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/switching-kf.svg" alt="switching-kf-figure" id="switching-kf-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/switching-kf.svg" alt="switching-kf-figure" id="switching-kf-figure" style="width:100%">
   <figcaption><center><b>A Bayesian network representation of a switching Kalman filter. The switching variable $S_t$ is a discrete state variable whose value determines
   the transition model for the continuous state variables $\textbf{X}_t$.
   For any discrete state $\textit{i}$, the transition model

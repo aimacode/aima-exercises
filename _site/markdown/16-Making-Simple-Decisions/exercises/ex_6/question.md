@@ -37,7 +37,7 @@ Figure <a href="#3candy-figure">3candy-figure</a>.<br>
 
 
     <figure>
-      <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/3candy.svg" alt="3candy-figure" id="3candy-figure" style="width:100%">
+      <img src="https://aimacode.github.io/aima-exercises/figures/3candy.svg" alt="3candy-figure" id="3candy-figure" style="width:100%">
       <figcaption><center><b>Three proposed Bayes nets for the Surprise Candy
       problem</b></center></figcaption>
     </figure>
