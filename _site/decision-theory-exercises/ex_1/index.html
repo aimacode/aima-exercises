@@ -36,7 +36,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +114,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,23 +140,21 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 1
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 16.1</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
         <i id="ex16.1" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex16.1');" href="#" id="buttonsolve">
         <i id="ex16.1" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -173,30 +168,30 @@ low. Also give your guess at a 25th percentile estimate, that is, a
 number that you think has a 25% chance of being too high, and a 75%
 chance of being too low. Do the same for the 75th percentile. (Thus, you
 should give three estimates in all—low, median, and high—for each
-question.)<br />
+question.)<br>
 
 1.  Number of passengers who flew between New York and Los Angeles
-    in 1989.<br />
+    in 1989.<br>
 
-2.  Population of Warsaw in 1992.<br />
+2.  Population of Warsaw in 1992.<br>
 
-3.  Year in which Coronado discovered the Mississippi River.<br />
+3.  Year in which Coronado discovered the Mississippi River.<br>
 
 4.  Number of votes received by Jimmy Carter in the 1976
-    presidential election.<br />
+    presidential election.<br>
 
-5.  Age of the oldest living tree, as of 2002.<br />
+5.  Age of the oldest living tree, as of 2002.<br>
 
-6.  Height of the Hoover Dam in feet.<br />
+6.  Height of the Hoover Dam in feet.<br>
 
-7.  Number of eggs produced in Oregon in 1985.<br />
+7.  Number of eggs produced in Oregon in 1985.<br>
 
-8.  Number of Buddhists in the world in 1992.<br />
+8.  Number of Buddhists in the world in 1992.<br>
 
 9.  Number of deaths due to AIDS in the United States
-    in 1981.<br />
+    in 1981.<br>
 
-10. Number of U.S. patents granted in 1901.<br />
+10. Number of U.S. patents granted in 1901.<br>
 
 The correct answers appear after the last exercise of this chapter. From
 the point of view of decision analysis, the interesting thing is not how
@@ -207,62 +202,89 @@ people, you will be more sure of yourself than you should be, and fewer
 than half the answers will fall within the bounds. With practice, you
 can calibrate yourself to give realistic bounds, and thus be more useful
 in supplying information for decision making. Try this second set of
-questions and see if there is any improvement:<br />
+questions and see if there is any improvement:<br>
 
-1.  Year of birth of Zsa Zsa Gabor.<br />
+1.  Year of birth of Zsa Zsa Gabor.<br>
 
-2.  Maximum distance from Mars to the sun in miles.<br />
+2.  Maximum distance from Mars to the sun in miles.<br>
 
-3.  Value in dollars of exports of wheat from the United States in 1992.<br />
+3.  Value in dollars of exports of wheat from the United States in 1992.<br>
 
-4.  Tons handled by the port of Honolulu in 1991.<br />
+4.  Tons handled by the port of Honolulu in 1991.<br>
 
-5.  Annual salary in dollars of the governor of California in 1993.<br />
+5.  Annual salary in dollars of the governor of California in 1993.<br>
 
-6.  Population of San Diego in 1990.<br />
+6.  Population of San Diego in 1990.<br>
 
-7.  Year in which Roger Williams founded Providence, Rhode Island.<br />
+7.  Year in which Roger Williams founded Providence, Rhode Island.<br>
 
-8.  Height of Mt. Kilimanjaro in feet.<br />
+8.  Height of Mt. Kilimanjaro in feet.<br>
 
-9.  Length of the Brooklyn Bridge in feet.<br />
+9.  Length of the Brooklyn Bridge in feet.<br>
 
 10. Number of deaths due to automobile accidents in the United States
-    in 1992.<br />
+    in 1992.<br>
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
 
-  </div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('16-Making-Simple-Decisions');
-  var exerciseName = String('ex_1');
-  var chapterNamestripped = String('16makingSimpleDecisions');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/"
+var chapterName = String('16-Making-Simple-Decisions');
+var exerciseName = String('ex_1');
+var chapterNamestripped = String('16makingSimpleDecisions');
+document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+document.getElementById("solve_question").href = "#writeeanswer";
+document.getElementById("addanswerorcomment").href= "#writeeanswer";
+document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -283,5 +305,11 @@ questions and see if there is any improvement:<br />
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        
+        <script src="/aima-exercises/commsol.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

@@ -36,7 +36,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +114,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,83 +140,108 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 18
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 14.18</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
         <i id="ex14.18" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex14.18');" href="#" id="buttonsolve">
         <i id="ex14.18" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
 
 Consider the variable elimination algorithm in
-Figure <a href="#">elimination-ask-algorithm</a> (page <a href="#">elimination-ask-algorithm</a>).<br />
+Figure <a href="#">elimination-ask-algorithm</a> (page <A href="#">elimination-ask-algorithm</a>).<br>
 
 1.  Section <a href="#">exact-inference-section</a> applies variable
     elimination to the query
     $${\textbf{P}}({Burglary}{JohnCalls}{true},{MaryCalls}{true})\ .$$
     Perform the calculations indicated and check that the answer
-    is correct.<br />
+    is correct.<br>
 
 2.  Count the number of arithmetic operations performed, and compare it
-    with the number performed by the enumeration algorithm.<br />
+    with the number performed by the enumeration algorithm.<br>
 
 3.  Suppose a network has the form of a <i>chain</i>: a sequence
     of Boolean variables $X_1,\ldots, X_n$ where
     ${Parents}(X_i)\{X_{i-1}\}$ for $i2,\ldots,n$.
     What is the complexity of computing
     ${\textbf{P}}(X_1X_n{true})$ using
-    enumeration? Using variable elimination?<br />
+    enumeration? Using variable elimination?<br>
 
 4.  Prove that the complexity of running variable elimination on a
     polytree network is linear in the size of the tree for any variable
-    ordering consistent with the network structure.<br />
+    ordering consistent with the network structure.<br>
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
 
-  </div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('14-Probabilistic-Reasoning');
-  var exerciseName = String('ex_18');
-  var chapterNamestripped = String('14probabilisticReasoning');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/"
+var chapterName = String('14-Probabilistic-Reasoning');
+var exerciseName = String('ex_18');
+var chapterNamestripped = String('14probabilisticReasoning');
+document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+document.getElementById("solve_question").href = "#writeeanswer";
+document.getElementById("addanswerorcomment").href= "#writeeanswer";
+document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -240,5 +262,11 @@ Figure <a href="#">elimination-ask-algorithm</a> (page <a href="#">elimination
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        
+        <script src="/aima-exercises/commsol.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

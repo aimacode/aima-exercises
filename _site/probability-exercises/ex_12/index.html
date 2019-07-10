@@ -36,7 +36,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +114,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,23 +140,21 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 12
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 13.12</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
         <i id="ex13.12" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex13.12');" href="#" id="buttonsolve">
         <i id="ex13.12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -169,64 +164,91 @@ machine with three independent wheels, each producing one of the four
 symbols bar, bell, lemon, or
 cherry with equal probability. The slot machine has the
 following payout scheme for a bet of 1 coin (where “?” denotes that we
-don’t care what comes up for that wheel): <br />
+don’t care what comes up for that wheel): <br>
 
-&gt; bar/bar/bar pays 20 coins<br />
+> bar/bar/bar pays 20 coins<br>
 
-&gt; bell/bell/bell pays 15 coins<br />
+> bell/bell/bell pays 15 coins<br>
 
-&gt; lemon/lemon/lemon pays 5 coins<br />
+> lemon/lemon/lemon pays 5 coins<br>
 
-&gt; cherry/cherry/cherry pays 3 coins<br />
+> cherry/cherry/cherry pays 3 coins<br>
 
-&gt; cherry/cherry/? pays 2 coins<br />
+> cherry/cherry/? pays 2 coins<br>
 
-&gt; cherry/?/? pays 1 coin<br />
+> cherry/?/? pays 1 coin<br>
 
 1.  Compute the expected “payback” percentage of the machine. In other
-    words, for each coin played, what is the expected coin return?<br />
+    words, for each coin played, what is the expected coin return?<br>
 
 2.  Compute the probability that playing the slot machine once will
-    result in a win.<br />
+    result in a win.<br>
 
 3.  Estimate the mean and median number of plays you can expect to make
     until you go broke, if you start with 10 coins. You can run a
     simulation to estimate this, rather than trying to compute an
-    exact answer.<br />
+    exact answer.<br>
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
 
-  </div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('13-Quantifying-Uncertainity');
-  var exerciseName = String('ex_12');
-  var chapterNamestripped = String('13quantifyingUncertainity');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/"
+var chapterName = String('13-Quantifying-Uncertainity');
+var exerciseName = String('ex_12');
+var chapterNamestripped = String('13quantifyingUncertainity');
+document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+document.getElementById("solve_question").href = "#writeeanswer";
+document.getElementById("addanswerorcomment").href= "#writeeanswer";
+document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -247,5 +269,11 @@ don’t care what comes up for that wheel): <br />
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        
+        <script src="/aima-exercises/commsol.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

@@ -36,7 +36,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +114,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,33 +140,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 9
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 25.9</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
         <i id="ex25.9" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex25.9');" href="#" id="buttonsolve">
         <i id="ex25.9" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
 
 Consider a mobile robot moving on a horizontal surface. Suppose that the
-robot can execute two kinds of motions:<br />
+robot can execute two kinds of motions:<br>
 
--   Rolling forward a specified distance.<br />
+-   Rolling forward a specified distance.<br>
 
--   Rotating in place through a specified angle.<br />
+-   Rotating in place through a specified angle.<br>
 
 The state of such a robot can be characterized in terms of three
 parameters ${\langle}x,y,\phi$, the x-coordinate and y-coordinate of the
@@ -177,14 +172,14 @@ robot (more precisely, of its center of rotation) and the robot’s
 orientation expressed as the angle from the positive x direction. The
 action “$Roll(D)$” has the effect of changing state ${\langle}x,y,\phi$
 to ${\langle}x+D \cos(\phi), y+D \sin(\phi), \phi {\rangle}$, and the
-action $Rotate(\theta)$ has the effect of changing state<br />
+action $Rotate(\theta)$ has the effect of changing state<br>
 ${\langle}x,y,\phi {\rangle}$ to
 ${\langle}x,y, \phi + \theta {\rangle}$.
 
 1.  Suppose that the robot is initially at ${\langle}0,0,0 {\rangle}$
     and then executes the actions $Rotate(60^{\circ})$, $Roll(1)$,
     $Rotate(25^{\circ})$, $Roll(2)$. What is the final state of the
-    robot?<br />
+    robot?<br>
 
 2.  Now suppose that the robot has imperfect control of its own
     rotation, and that, if it attempts to rotate by $\theta$, it may
@@ -193,7 +188,7 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     out the sequence of actions in (A), there is a range of possible
     ending states. What are the minimal and maximal values of the
     x-coordinate, the y-coordinate and the orientation in the final
-    state?<br />
+    state?<br>
 
 3.  Let us modify the model in (B) to a probabilistic model in which,
     when the robot attempts to rotate by $\theta$, its actual angle of
@@ -204,54 +199,81 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     to the result of rotating exactly $90^{\circ}$ and then rolling
     forward 1 unit, and (b) that the distribution of locations at the
     end does not follow a Gaussian. (Do not attempt to calculate the
-    true mean or the true distribution.)<br />
+    true mean or the true distribution.)<br>
 
     The point of this exercise is that rotational uncertainty quickly
     gives rise to a lot of positional uncertainty and that dealing with
     rotational uncertainty is painful, whether uncertainty is treated in
     terms of hard intervals or probabilistically, due to the fact that
     the relation between orientation and position is both non-linear
-    and non-monotonic.<br />
+    and non-monotonic.<br>
 
 
         <figure>
-          <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%" />
+          <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
           <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
         </figure>
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution" href="#">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution" href="#">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
 
-  </div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
-  var chapterName = String('25-Robotics');
-  var exerciseName = String('ex_9');
-  var chapterNamestripped = String('25robotics');
-  document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/"
+var chapterName = String('25-Robotics');
+var exerciseName = String('ex_9');
+var chapterNamestripped = String('25robotics');
+document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+document.getElementById("solve_question").href = "#writeeanswer";
+document.getElementById("addanswerorcomment").href= "#writeeanswer";
+document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -272,5 +294,11 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
       })(document);
     </script>
         <script src="/aima-exercises/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/answer.js"></script>
+        
+        <script src="/aima-exercises/commsol.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

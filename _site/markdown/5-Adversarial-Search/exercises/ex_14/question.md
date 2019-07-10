@@ -28,6 +28,6 @@ can be shown to be independent of the value of $n_j$.<br>
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/alpha-beta-proof.svg" alt="alpha-beta-proof-figure" id="alpha-beta-proof-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/alpha-beta-proof.svg" alt="alpha-beta-proof-figure" id="alpha-beta-proof-figure" style="width:100%">
   <figcaption><center><b>Situation when considering whether to prune node $n_j$.</b></center></figcaption>
 </figure>
