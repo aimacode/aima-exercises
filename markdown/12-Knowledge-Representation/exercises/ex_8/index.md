@@ -3,9 +3,7 @@ layout: exercise
 title: Exercise 12.8
 permalink: /kr-exercises/ex_8/
 breadcrumb: 12-Knowledge-Representation
-breadcrumb2: ex_8
-breadcrumb5: ex12.8
+bookmarkID: ex12.8
 ---
 
 {% include mathjax_support %}
-

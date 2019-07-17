@@ -3,9 +3,7 @@ layout: exercise
 title: Exercise 16.12
 permalink: /decision-theory-exercises/ex_12/
 breadcrumb: 16-Making-Simple-Decisions
-breadcrumb2: ex_12
-breadcrumb5: ex16.12
+bookmarkID: ex16.12
 ---
 
 {% include mathjax_support %}
-

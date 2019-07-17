@@ -3,9 +3,7 @@ layout: exercise
 title: Exercise 10.8
 permalink: /planning-exercises/ex_8/
 breadcrumb: 10-Classical-Planning
-breadcrumb2: ex_8
-breadcrumb5: ex10.8
+bookmarkID: ex10.8
 ---
 
 {% include mathjax_support %}
-

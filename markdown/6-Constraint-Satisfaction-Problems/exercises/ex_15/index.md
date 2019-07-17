@@ -3,8 +3,7 @@ layout: exercise
 title: Exercise 6.15
 permalink: /csp-exercises/ex_15/
 breadcrumb: 6-Constraint-Satisfaction-Problems
-breadcrumb2: ex_15
-breadcrumb5: ex6.15
+bookmarkID: ex6.15
 ---
 
 {% include mathjax_support %}

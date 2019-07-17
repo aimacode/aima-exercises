@@ -3,12 +3,7 @@ layout: exercise
 title: Exercise 1.19
 permalink: /intro-exercises/ex_19/
 breadcrumb: 1-Introduction
-breadcrumb2: ex_19
-breadcrumb5: ex1.19
+bookmarkID: ex1.19
 ---
 
 {% include mathjax_support %}
-
-
-
-

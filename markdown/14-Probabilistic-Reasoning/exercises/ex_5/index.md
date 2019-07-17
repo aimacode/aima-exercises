@@ -3,9 +3,7 @@ layout: exercise
 title: Exercise 14.5
 permalink: /bayes-nets-exercises/ex_5/
 breadcrumb: 14-Probabilistic-Reasoning
-breadcrumb2: ex_5
-breadcrumb5: ex14.5
+bookmarkID: ex14.5
 ---
 
 {% include mathjax_support %}
-

@@ -3,8 +3,7 @@ layout: exercise
 title: Exercise 7.15
 permalink: /knowledge-logic-exercises/ex_15/
 breadcrumb: 7-Logical-Agents
-breadcrumb2: ex_15
-breadcrumb5: ex7.15
+bookmarkID: ex7.15
 home: "true"
 ---
 
