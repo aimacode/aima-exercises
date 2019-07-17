@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 17.16
 permalink: /complex-decisions-exercises/ex_16/
 breadcrumb: 17-Making-Complex-Decision
-bookmarkID: ex17.16
+canonical_id: ex17.16
 ---
 
 {% include mathjax_support %}

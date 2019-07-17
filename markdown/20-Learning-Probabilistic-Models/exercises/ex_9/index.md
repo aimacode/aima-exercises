@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 20.9
 permalink: /bayesian-learning-exercises/ex_9/
 breadcrumb: 20-Learning-Probabilistic-Models
-bookmarkID: ex20.9
+canonical_id: ex20.9
 ---
 
 {% include mathjax_support %}

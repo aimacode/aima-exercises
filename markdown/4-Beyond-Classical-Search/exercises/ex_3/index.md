@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 4.3
 permalink: /advanced-search-exercises/ex_3/
 breadcrumb: 4-Beyond-Classical-Search
-bookmarkID: ex4.3
+canonical_id: ex4.3
 ---
 
 {% include mathjax_support %}

@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 11.15
 permalink: /advanced-planning-exercises/ex_15/
 breadcrumb: 11-Planning-And-Acting-In-The-Real-World
-bookmarkID: ex11.15
+canonical_id: ex11.15
 ---
 
 {% include mathjax_support %}

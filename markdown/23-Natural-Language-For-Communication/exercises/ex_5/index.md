@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 23.5
 permalink: /nlp-english-exercises/ex_5/
 breadcrumb: 23-Natural-Language-For-Communication
-bookmarkID: ex23.5
+canonical_id: ex23.5
 ---
 
 {% include mathjax_support %}

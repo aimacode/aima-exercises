@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 13.3
 permalink: /probability-exercises/ex_3/
 breadcrumb: 13-Quantifying-Uncertainity
-bookmarkID: ex13.3
+canonical_id: ex13.3
 ---
 
 {% include mathjax_support %}
