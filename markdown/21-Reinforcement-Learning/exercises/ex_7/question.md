@@ -1,5 +1,3 @@
-
-
 Implement an exploring reinforcement learning
 agent that uses direct utility estimation. Make two versions—one with a
 tabular representation and one using the function approximator in
