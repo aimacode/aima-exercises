@@ -48,9 +48,7 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     terms of hard intervals or probabilistically, due to the fact that
     the relation between orientation and position is both non-linear
     and non-monotonic.<br>
-
-
-        <figure>
-          <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
-          <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
-        </figure>
+<figure>
+  <img src="http://aimacode.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
+    <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
+</figure>
