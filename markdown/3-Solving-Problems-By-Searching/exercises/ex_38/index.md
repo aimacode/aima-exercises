@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 3.38
 permalink: /search-exercises/ex_38/
 breadcrumb: 3-Solving-Problems-By-Searching
-canonical_id: ex3.38
+canonical_id: ch3ex38
 ---
 
 {% include mathjax_support %}

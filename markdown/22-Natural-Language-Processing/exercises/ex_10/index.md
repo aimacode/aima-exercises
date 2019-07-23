@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 22.10
 permalink: /nlp-communicating-exercises/ex_10/
 breadcrumb: 22-Natural-Language-Processing
-canonical_id: ex22.10
+canonical_id: ch22ex10
 ---
 
 {% include mathjax_support %}

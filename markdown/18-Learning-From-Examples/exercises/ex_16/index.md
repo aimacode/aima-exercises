@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 18.16
 permalink: /concept-learning-exercises/ex_16/
 breadcrumb: 18-Learning-From-Examples
-canonical_id: ex18.16
+canonical_id: ch18ex16
 ---
 
 {% include mathjax_support %}

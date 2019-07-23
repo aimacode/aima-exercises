@@ -19,14 +19,13 @@
   <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
   <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
   <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
@@ -36,7 +35,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +113,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,36 +139,34 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 12
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 4.12</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="ex4.12" class="fas fa-pen" style="color:white"></i>
+        <i id="ch4ex12" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex4.12');" href="#" id="buttonsolve">
-        <i id="ex4.12" class="far fa-edit" style="color:white"></i>
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch4ex12');" href="#" id="buttonsolve">
+        <i id="ch4ex12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
 
 We can turn the navigation problem in
 Exercise <a hreef="#">path-planning-exercis</a> into an environment as
-follows:<br />
+follows:<br>
 
 -   The percept will be a list of the positions, *relative to the
     agent*, of the visible vertices. The percept does
     *not* include the position of the robot! The robot must
     learn its own position from the map; for now, you can assume that
-    each location has a different “view.”<br />
+    each location has a different “view.”<br>
 
 -   Each action will be a vector describing a straight-line path
     to follow. If the path is unobstructed, the action succeeds;
@@ -180,19 +174,19 @@ follows:<br />
     intersects an obstacle. If the agent returns a zero motion vector
     and is at the goal (which is fixed and known), then the environment
     teleports the agent to a *random location* (not inside
-    an obstacle).<br />
+    an obstacle).<br>
 
 -   The performance measure charges the agent 1 point for each unit of
     distance traversed and awards 1000 points each time the goal
-    is reached.<br />
+    is reached.<br>
 
 1.  Implement this environment and a problem-solving agent for it. After
     each teleportation, the agent will need to formulate a new problem,
-    which will involve discovering its current location.<br />
+    which will involve discovering its current location.<br>
 
 2.  Document your agent’s performance (by having the agent generate
     suitable commentary as it moves around) and report its performance
-    over 100 episodes.<br />
+    over 100 episodes.<br>
 
 3.  Modify the environment so that 30% of the time the agent ends up at
     an unintended destination (chosen randomly from the other visible
@@ -202,13 +196,13 @@ follows:<br />
     constructs a plan to get back to where it was and resume the
     old plan. Remember that sometimes getting back to where it was might
     also fail! Show an example of the agent successfully overcoming two
-    successive motion errors and still reaching the goal.<br />
+    successive motion errors and still reaching the goal.<br>
 
 4.  Now try two different recovery schemes after an error: (1) head for
     the closest vertex on the original route; and (2) replan a route to
     the goal from the new location. Compare the performance of the three
     recovery schemes. Would the inclusion of search costs affect the
-    comparison?<br />
+    comparison?<br>
 
 5.  Now suppose that there are locations from which the view
     is identical. (For example, suppose the world is a grid with
@@ -217,37 +211,102 @@ follows:<br />
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
-
-  </div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
+<br><br>
+<div id="writeeanswer"></div>
+<div class="styling" id="styling2">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch4ex12">
+    <span class="contact100-form-title">
+        <center>Submit Solution</center>
+    </span>
+<br>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required" >
+        <span class="label-input100">Your Display Name</span>
+        <input class="input100" type="text" placeholder="Enter your Display name" name="fields[Name]" tabindex="3">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Email</span>
+        <input class="input100" type="text" placeholder="Enter your email addess" name="fields[Email]" tabindex="2">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+        <span class="label-input100">Solution</span>
+        <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
+        <span class="focus-input100"></span>
+    </div>
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
+    
+    <div class="container-contact100-form-btn">
+        
+        <button class="contact100-form-btn" tabindex="5">
+            <span>
+                Submit
+                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></center>
+            </span>
+        </button>
+    </div>
+</form>
+</div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('4-Beyond-Classical-Search');
-  var exerciseName = String('ex_12');
-  var chapterNamestripped = String('beyondClassicalSearch');
+  var fullName = String('ch4ex12');
+  var dot = fullName.indexOf("x");
+  var exerciseName = "ex_";
+  var subs = fullName.substring(dot+1,fullName.length);
+  exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+  document.getElementById("solve_question").href = "#writeeanswer";
+  document.getElementById("addanswerorcomment").href= "#writeeanswer";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -267,6 +326,12 @@ follows:<br />
         }, false);
       })(document);
     </script>
-        <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/js/answer.js"></script>
+        
+        <script src="/aima-exercises/js/commsol.js"></script>
+        <script src="/aima-exercises/js/forms.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

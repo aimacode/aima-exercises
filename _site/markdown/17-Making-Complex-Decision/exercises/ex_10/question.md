@@ -1,5 +1,3 @@
-
-
 Consider the $3 \times 3$ world shown in
 Figure <a href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
 same as in the $4\times 3$

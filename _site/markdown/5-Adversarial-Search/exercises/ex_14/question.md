@@ -1,5 +1,3 @@
-
-
 Develop a formal proof of correctness for alpha–beta pruning. To do
 this, consider the situation shown in
 Figure <a href="#alpha-beta-proof-figure">alpha-beta-proof-figure</a>. The question is whether
@@ -24,10 +22,7 @@ can be shown to be independent of the value of $n_j$.<br>
     $l_i$ values.<br>
 
 4.  Repeat the process for the case where $n_j$ is a min-node.<br>
-
-
-
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/alpha-beta-proof.svg" alt="alpha-beta-proof-figure" id="alpha-beta-proof-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/Jupyter%20notebook/figures/alpha-beta-proof.svg" alt="alpha-beta-proof-figure" id="alpha-beta-proof-figure" style="width:100%">
   <figcaption><center><b>Situation when considering whether to prune node $n_j$.</b></center></figcaption>
 </figure>

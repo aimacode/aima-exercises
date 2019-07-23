@@ -19,14 +19,13 @@
   <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
   <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
   <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
@@ -36,7 +35,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body class="theme-base-08">
+  <body>
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -114,12 +113,9 @@
     </div>
       <div class="container content">
         <article class="post">
-
   <div class="entry">
     <div class="mode_btn view_question_source">
-
     </div>
-
     <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -143,23 +139,21 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div class="card">
-    <div class="card-header p-2">
-        <a href="#" class="p-2">Exercise 12
-        </a>
 
+  </div>
+  <div class="card">
+    <div class="card-header p-2">
+        <a href='#' class="p-2">Exercise 8.12</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="ex8.12" class="fas fa-pen" style="color:white"></i>
+        <i id="ch8ex12" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
-
         <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ex8.12');" href="#" id="buttonsolve">
-        <i id="ex8.12" class="far fa-edit" style="color:white"></i>
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch8ex12');" href="#" id="buttonsolve">
+        <i id="ch8ex12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -168,81 +162,146 @@ In each of the following we give an English sentence and a number of
 candidate logical expressions. For each of the logical expressions,
 state whether it (1) correctly expresses the English sentence; (2) is
 syntactically invalid and therefore meaningless; or (3) is syntactically
-valid but does not express the meaning of the English sentence.<br />
+valid but does not express the meaning of the English sentence.<br>
 
-1.  Every cat loves its mother or father.<br />
+1.  Every cat loves its mother or father.<br>
 
-    1.  ${\forall\,x\;\;} {Cat}(x) {\:\;{\Rightarrow}\:\;}{Loves}(x,{Mother}(x)\lor {Father}(x))$.<br />
+    1.  ${\forall\,x\;\;} {Cat}(x) {\:\;{\Rightarrow}\:\;}{Loves}(x,{Mother}(x)\lor {Father}(x))$.<br>
 
-    2.  ${\forall\,x\;\;} \lnot {Cat}(x) \lor {Loves}(x,{Mother}(x)) \lor {Loves}(x,{Father}(x))$.<br />
+    2.  ${\forall\,x\;\;} \lnot {Cat}(x) \lor {Loves}(x,{Mother}(x)) \lor {Loves}(x,{Father}(x))$.<br>
 
-    3.  ${\forall\,x\;\;} {Cat}(x) \land ({Loves}(x,{Mother}(x))\lor {Loves}(x,{Father}(x)))$.<br />
+    3.  ${\forall\,x\;\;} {Cat}(x) \land ({Loves}(x,{Mother}(x))\lor {Loves}(x,{Father}(x)))$.<br>
 
-2.  Every dog who loves one of its brothers is happy.<br />
+2.  Every dog who loves one of its brothers is happy.<br>
 
-    1.  ${\forall\,x\;\;} {Dog}(x) \land (\exists y\ {Brother}(y,x) \land {Loves}(x,y)) {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br />
+    1.  ${\forall\,x\;\;} {Dog}(x) \land (\exists y\ {Brother}(y,x) \land {Loves}(x,y)) {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br>
 
-    2.  ${\forall\,x,y\;\;} {Dog}(x) \land {Brother}(y,x) \land {Loves}(x,y) {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br />
+    2.  ${\forall\,x,y\;\;} {Dog}(x) \land {Brother}(y,x) \land {Loves}(x,y) {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br>
 
-    3.  ${\forall\,x\;\;} {Dog}(x) \land [{\forall\,y\;\;} {Brother}(y,x) {\;\;{\Leftrightarrow}\;\;}{Loves}(x,y)] {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br />
+    3.  ${\forall\,x\;\;} {Dog}(x) \land [{\forall\,y\;\;} {Brother}(y,x) {\;\;{\Leftrightarrow}\;\;}{Loves}(x,y)] {\:\;{\Rightarrow}\:\;}{Happy}(x)$.<br>
 
-3.  No dog bites a child of its owner.<br />
+3.  No dog bites a child of its owner.<br>
 
-    1.  ${\forall\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}\lnot {Bites}(x,{Child}({Owner}(x)))$.<br />
+    1.  ${\forall\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}\lnot {Bites}(x,{Child}({Owner}(x)))$.<br>
 
-    2.  $\lnot {\exists\,x,y\;\;} {Dog}(x) \land {Child}(y,{Owner}(x)) \land {Bites}(x,y)$.<br />
+    2.  $\lnot {\exists\,x,y\;\;} {Dog}(x) \land {Child}(y,{Owner}(x)) \land {Bites}(x,y)$.<br>
 
-    3.  ${\forall\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}({\forall\,y\;\;} {Child}(y,{Owner}(x)) {\:\;{\Rightarrow}\:\;}\lnot {Bites}(x,y))$.<br />
+    3.  ${\forall\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}({\forall\,y\;\;} {Child}(y,{Owner}(x)) {\:\;{\Rightarrow}\:\;}\lnot {Bites}(x,y))$.<br>
 
-    4.  $\lnot {\exists\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}({\exists\,y\;\;} {Child}(y,{Owner}(x)) \land {Bites}(x,y))$.<br />
+    4.  $\lnot {\exists\,x\;\;} {Dog}(x) {\:\;{\Rightarrow}\:\;}({\exists\,y\;\;} {Child}(y,{Owner}(x)) \land {Bites}(x,y))$.<br>
 
-4.  Everyone’s zip code within a state has the same first digit.<br />
+4.  Everyone’s zip code within a state has the same first digit.<br>
 
     1.  ${\forall\,x,s,z_1\;\;} [{State}(s) \land {LivesIn}(x,s) \land {Zip}(x)z_1] {\:\;{\Rightarrow}\:\;}{}$\
-        $[{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 {\:\;{\Rightarrow}\:\;}{Digit}(1,z_1) {Digit}(1,z_2) ]$.<br />
+        $[{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 {\:\;{\Rightarrow}\:\;}{Digit}(1,z_1) {Digit}(1,z_2) ]$.<br>
 
     2.  ${\forall\,x,s\;\;} [{State}(s) \land {LivesIn}(x,s) \land {\exists\,z_1\;\;} {Zip}(x)z_1] {\:\;{\Rightarrow}\:\;}{}$\
-        $ [{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 \land {Digit}(1,z_1) {Digit}(1,z_2) ]$.<br />
+        $ [{\forall\,y,z_2\;\;} {LivesIn}(y,s) \land {Zip}(y)z_2 \land {Digit}(1,z_1) {Digit}(1,z_2) ]$.<br>
 
-    3.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{Digit}(1,{Zip}(x){Zip}(y))$.<br />
+    3.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{Digit}(1,{Zip}(x){Zip}(y))$.<br>
 
     4.  ${\forall\,x,y,s\;\;} {State}(s) \land {LivesIn}(x,s) \land {LivesIn}(y,s) {\:\;{\Rightarrow}\:\;}{}$\
         ${Digit}(1,{Zip}(x)) {Digit}(1,{Zip}(y))$.
-<br />
+<br>
 </p>
     </div>
 </div>
-
-<p><br /></p>
+<br>
 <div class="card">
     <div class="card-header p-2">
-        <a href="#" class="p-2">Answers</a>
+        <a href="#" class="p-2">Community Solution</a>
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
+                <a class="viewcommsolution" id="viewcommsolution">
+                <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
+                <i class="fas fa-bars" style="color:white"></i>
+                </button>
+                </a>
+          </div>
+          <div class="card-body" id="hideandviewcommunitysolution" markdown="1">
+            <div id="content2" markdown="1">
+              <div class="hideit" id="link2"></div>
+              </div>
+          </div>
+          </div>
+<br>
+  <div class="card" id="borderbottom">
+    <div class="card-header p-2">
+        <a href="#" class="p-2">Student Answers</a>
 
-
-        <button type="button" class="btn btn-dark float-right" title="View Answers" id="viewanswers" onclick="myFunction()">
-        <i id="view_answers1" class="fas fa-bars" style="color:white"></i>
+        <a class="addanswerorcomment" id="addanswerorcomment" href="#">
+        <button type="button" class="btn btn-dark float-right" title="Add answer/comment" id="addanswerorcomment2" href="#">
+        <i class="fas fa-edit" style="color:white"></i>
         </button>
+        </a>
 
+        <a class="viewusersolution" id="viewusersolution">
+        <button type="button" class="btn btn-dark float-right" title="View Answers" style="margin-left:10px; margin-right:10px;" id="viewanswers" onclick="myFunction4()" href="#" >
+        <i class="fas fa-bars" style="color:white"></i>
+        </button>
+        </a>
 </div>
-<div class="card-body" id="hideandviewanswers">
 
-</div></div>
-
-  </div>
+  <div class="card-body" id="hideandviewusersolution" markdown="1">
+    <div id="content" markdown="1">
+      <div class="hideit" id="link"></div>
+    </div>
+    </div>
+    </div>
+<br><br>
+<div id="writeeanswer"></div>
+<div class="styling" id="styling2">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch8ex12">
+    <span class="contact100-form-title">
+        <center>Submit Solution</center>
+    </span>
+<br>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required" >
+        <span class="label-input100">Your Display Name</span>
+        <input class="input100" type="text" placeholder="Enter your Display name" name="fields[Name]" tabindex="3">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Email</span>
+        <input class="input100" type="text" placeholder="Enter your email addess" name="fields[Email]" tabindex="2">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+        <span class="label-input100">Solution</span>
+        <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
+        <span class="focus-input100"></span>
+    </div>
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
+    
+    <div class="container-contact100-form-btn">
+        
+        <button class="contact100-form-btn" tabindex="5">
+            <span>
+                Submit
+                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></center>
+            </span>
+        </button>
+    </div>
+</form>
+</div>
 </article>
-
 <script>
-  var baseurl="https://github.com/sachin10101998/gsoc-aima-exercises/edit/master/markdown/";
-
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('8-First-Order-Logic');
-  var exerciseName = String('ex_12');
-  var chapterNamestripped = String('8firstOrderLogic');
+  var fullName = String('ch8ex12');
+  var dot = fullName.indexOf("x");
+  var exerciseName = "ex_";
+  var subs = fullName.substring(dot+1,fullName.length);
+  exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/answers/useranswers.yaml";
-
-  document.getElementById("addanswerorcomment").href= baseurl+chapterName+"/exercises/"+exerciseName+"/answers"+"useranswers.yaml";
+  document.getElementById("solve_question").href = "#writeeanswer";
+  document.getElementById("addanswerorcomment").href= "#writeeanswer";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
-
       </div>
 
 
@@ -262,6 +321,12 @@ valid but does not express the meaning of the English sentence.<br />
         }, false);
       })(document);
     </script>
-        <script src="/aima-exercises/main.js"></script>
+        <script src="/aima-exercises/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/js/answer.js"></script>
+        
+        <script src="/aima-exercises/js/commsol.js"></script>
+        <script src="/aima-exercises/js/forms.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

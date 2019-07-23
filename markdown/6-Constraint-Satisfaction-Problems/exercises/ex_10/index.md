@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 6.100
 permalink: /csp-exercises/ex_10/
 breadcrumb: 6-Constraint-Satisfaction-Problems
-canonical_id: ex6.10
+canonical_id: ch6ex10
 ---
 
 {% include mathjax_support %}
