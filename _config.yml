@@ -16,9 +16,6 @@ author:
   email:             schopra@mt.iitr.ac.in
 # Custom vars
 version:             1.0.0
-plugins:
-  - jekyll-paginate
-paginate: 5
 #Staticman 
 staticman:
   repository : aimacode/aima-exercises # GitHub username/repository eg. "daattali/beautiful-jekyll"
