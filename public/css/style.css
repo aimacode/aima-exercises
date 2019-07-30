@@ -77,16 +77,13 @@ color: black;
 /*#borderbottom {
 border-bottom: 3px solid black;
 padding-bottom: 2px;
-
 }
 #link{
 width:80%;
 }
-
 #content{
 padding-left:15px;
 }
-
 #content p{
 border-bottom:1px solid black;
 }*/
@@ -99,10 +96,6 @@ margin-top: 0px;
 }
 
 /*
-
-
-
-
 //////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -716,7 +709,7 @@ rgba(0,0,0,.03)
 
 #answeridstyle p:first-of-type:hover{
 background-color: #d0d0d0;
-cursor: pointer;
+
 }
 #answeridstyle p:nth-of-type(2){
 font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
