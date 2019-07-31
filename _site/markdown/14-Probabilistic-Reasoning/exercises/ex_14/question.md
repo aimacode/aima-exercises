@@ -1,5 +1,3 @@
-
-
 Two astronomers in different parts of the world
 make measurements $M_1$ and $M_2$ of the number of stars $N$ in some
 small region of the sky, using their telescopes. Normally, there is a

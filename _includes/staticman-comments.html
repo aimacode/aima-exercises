@@ -1,0 +1,36 @@
+<br><br>
+<div id="writeeanswer"></div>
+<div class="styling" id="styling2">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="{{ site.staticman.endpoint | default: 'https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master' }}/{{ page.canonical_id }}">
+    <span class="contact100-form-title">
+        <center>Submit Solution</center>
+    </span>
+<br>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required" >
+        <span class="label-input100">Your Display Name</span>
+        <input class="input100" type="text" placeholder="Enter your Display name" name="fields[Name]" tabindex="3">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Email</span>
+        <input class="input100" type="text" placeholder="Enter your email addess" name="fields[Email]" tabindex="2">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+        <span class="label-input100">Solution</span>
+        <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
+        <span class="focus-input100"></span>
+    </div>
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
+    
+    <div class="container-contact100-form-btn">
+        
+        <button class="contact100-form-btn" tabindex="5">
+            <span>
+                Submit
+                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></center>
+            </span>
+        </button>
+    </div>
+</form>
+</div>

@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 15.11
 permalink: /dbn-exercises/ex_11/
 breadcrumb: 15-Probabilistic-Reasoning-Over-Time
-canonical_id: ex15.11
+canonical_id: ch15ex11
 ---
 
 {% include mathjax_support %}

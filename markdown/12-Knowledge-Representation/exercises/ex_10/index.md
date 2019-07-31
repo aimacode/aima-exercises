@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 12.10
 permalink: /kr-exercises/ex_10/
 breadcrumb: 12-Knowledge-Representation
-canonical_id: ex12.10
+canonical_id: ch12ex10
 ---
 
 {% include mathjax_support %}

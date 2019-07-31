@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 5.5
 permalink: /game-playing-exercises/ex_5/
 breadcrumb: 5-Adversarial-Search
-canonical_id: ex5.5
+canonical_id: ch5ex5
 ---
 
 {% include mathjax_support %}

@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 7.17
 permalink: /knowledge-logic-exercises/ex_17/
 breadcrumb: 7-Logical-Agents
-canonical_id: ex7.17
+canonical_id: ch7ex17
 home: "true"
 ---
 

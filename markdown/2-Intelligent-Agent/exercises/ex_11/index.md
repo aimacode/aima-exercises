@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 2.11
 permalink: /agents-exercises/ex_11/
 breadcrumb: 2-Intelligent-Agent
-canonical_id: ex2.11
+canonical_id: ch2ex11
 ---
 
 {% include mathjax_support %}

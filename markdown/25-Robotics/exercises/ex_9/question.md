@@ -49,6 +49,6 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     the relation between orientation and position is both non-linear
     and non-monotonic.<br>
 <figure>
-  <img src="http://aimacode.github.io/aima-exercises/Jupyter%20notebook/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
+  <img src="http://aimacode.github.io/aima-exercises/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
     <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
 </figure>

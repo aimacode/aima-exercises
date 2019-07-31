@@ -11,6 +11,6 @@ time it takes to do one disk seek with standard disk hardware?<br>
 
 
 <figure>
-  <img src="http://nalinc.github.io/aima-exercises/Jupyter%20notebook/figures/pruning.svg" alt="trivial-chance-game-figure" id="trivial-chance-game-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/pruning.svg" alt="trivial-chance-game-figure" id="trivial-chance-game-figure" style="width:100%">
   <figcaption><center><b>The complete game tree for a trivial game with chance nodes..</b></center></figcaption>
 </figure>

@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 25.6
 permalink: /robotics-exercises/ex_6/
 breadcrumb: 25-Robotics
-canonical_id: ex25.6
+canonical_id: ch25ex6
 ---
 
 {% include mathjax_support %}

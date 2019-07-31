@@ -16,7 +16,7 @@ If player $A$ reaches space 4 first, then the value of the game to $A$
 is $+1$; if player $B$ reaches space 1 first, then the value of the
 game to $A$ is $-1$.
 <figure>
-  <img src="https://aimacode.github.io/aima-exercises/Jupyter%20notebook/figures/line-game4.svg" alt="line-game4-figure" id="line-game4-figure" style="width:100%">
+  <img src="https://aimacode.github.io/aima-exercises/figures/line-game4.svg" alt="line-game4-figure" id="line-game4-figure" style="width:100%">
   <figcaption><center><b>The starting position of a simple game.</b></center></figcaption>
 </figure>
 

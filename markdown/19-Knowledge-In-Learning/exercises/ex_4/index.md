@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 19.4
 permalink: /ilp-exercises/ex_4/
 breadcrumb: 19-Knowledge-In-Learning
-canonical_id: ex19.4
+canonical_id: ch19ex4
 ---
 
 {% include mathjax_support %}

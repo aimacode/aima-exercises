@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 21.4
 permalink: /reinforcement-learning-exercises/ex_4/
 breadcrumb: 21-Reinforcement-Learning
-canonical_id: ex21.4
+canonical_id: ch21ex4
 ---
 
 {% include mathjax_support %}

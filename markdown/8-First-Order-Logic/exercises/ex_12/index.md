@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 8.12
 permalink: /fol-exercises/ex_12/
 breadcrumb: 8-First-Order-Logic
-canonical_id: ex8.12
+canonical_id: ch8ex12
 ---
 
 {% include mathjax_support %}

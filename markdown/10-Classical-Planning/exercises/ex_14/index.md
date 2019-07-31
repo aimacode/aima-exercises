@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 10.14
 permalink: /planning-exercises/ex_14/
 breadcrumb: 10-Classical-Planning
-canonical_id: ex10.14
+canonical_id: ch10ex14
 ---
 
 {% include mathjax_support %}

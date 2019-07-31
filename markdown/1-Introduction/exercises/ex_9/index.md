@@ -3,7 +3,7 @@ layout: exercise
 title: Exercise 1.9
 permalink: /intro-exercises/ex_9/
 breadcrumb: 1-Introduction
-canonical_id: ex1.9
+canonical_id: ch1ex9
 ---
 
 {% include mathjax_support %}

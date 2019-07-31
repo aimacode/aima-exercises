@@ -1,5 +1,5 @@
 ---
-layout: chapter2
+layout: questionbank
 title: Question Bank
 permalink: /question_bank/
 breadcrumb: questionbank
