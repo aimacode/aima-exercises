@@ -77,13 +77,16 @@ color: black;
 /*#borderbottom {
 border-bottom: 3px solid black;
 padding-bottom: 2px;
+
 }
 #link{
 width:80%;
 }
+
 #content{
 padding-left:15px;
 }
+
 #content p{
 border-bottom:1px solid black;
 }*/
@@ -96,6 +99,10 @@ margin-top: 0px;
 }
 
 /*
+
+
+
+
 //////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -684,38 +691,132 @@ margin-left: 40%;
 border-bottom: 1px solid rgb(90, 88, 88 , 0.3);
 margin-top: 0px;
 
-margin-bottom: 5px;
+margin-bottom: 0px;
 padding-top: 0px;
 
 }
 
 #answeridstyle p:nth-of-type(1){
 color: #070101;
-background-color: rgb(226, 223, 223);;
-font-weight:bold;
+
 padding: 15px;
-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-display: none;
-border-radius: 8px;
+font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+font-weight: bold;
 }
 hr {
 display: none;
 }
 
-#hideandviewusersolution{
-rgba(0,0,0,.03)
-}
 
-#answeridstyle p:first-of-type:hover{
-background-color: #d0d0d0;
 
-}
 #answeridstyle p:nth-of-type(2){
 font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 font-size: 17px;
-color: #070101
+color: #070101;
+margin-left: 10%;
+
+
 }
 #answeridstyle hr:last-of-type {
 display: none;
 }
+
+.breadcrumbb{
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-bottom: 0px;
+  list-style: none;
+  margin-left: 20%;
+  margin-bottom: 0%;
+  margin-top: 5px;
+
+  
+  
+}
+.breadcrumb-text{
+  text-transform: uppercase;
+}
+
+
+
+#bbreadcrumb{
+  list-style-type: none;
+  display: inline-block;
+ }
+ 
+ #bbreadcrumb li{
+  float: left;
+ }
+ 
+ #bbreadcrumb li a{
+  color: #fff;
+  display: block;
+  background: #000000;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+  margin-bottom: 0px;
+ }
+ 
+ #bbreadcrumb li:nth-child(even) a:before{
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li:first-child a{
+  padding-left: 15px;
+  border-radius: 4px 0 0 4px;
+ }
+ 
+ #bbreadcrumb li:first-child a:before{
+  border: none;
+ }
+ 
+ #bbreadcrumb li:last-child a{
+  padding-right: 15px;
+  border-radius: 0 4px 4px 0;
+ }
+ 
+ #bbreadcrumb li:last-child a:after{
+  border: none;
+ }
+ 
+ #bbreadcrumb li a:before, #bbreadcrumb li a:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #000000;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+ }
+ 
+ #bbreadcrumb li a:before{
+  left: -20px;
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li a:after{
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #000000;
+ }
+ 
+ #bbreadcrumb li a:hover{
+  background: #362cc9;
+ }
+ 
+ #bbreadcrumb li a:hover:before{
+  border-color: #362cc9;
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li a:hover:after{
+  border-left-color: #362cc9;
+ }
+
