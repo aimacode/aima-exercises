@@ -1,0 +1,33 @@
+{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+{% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
+{% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+{% assign previous="" %}
+<ul class="breadcrumbb" id="bbreadcrumb">
+{% if page_url_without_index_html != "/" %}
+  <label for="toggletoc" class="toc-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+   {% if num_parts == "0" or num_parts == "-1" %}
+   
+    <li><a class="breadcrumb-text" href="{{site.baseurl}}/{{previous}}"><i class="fa fa-home"></i></a>  </li>
+   {% else %}
+   
+    <li><a class="breadcrumb-text" href="{{site.baseurl}}/{{previous}}"><i class="fa fa-home"></i></a>  </li>
+
+    {% for unused in page.content limit:num_parts %}
+     {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+     {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+  <!-- {{ previous}} -->
+  
+  
+     <li><a class="breadcrumb-text" href="{{ site.baseurl}}{{previous}}">{{ first_word }}</a>  </li>
+
+     {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+    {% endfor %}
+   {% endif %}
+{% endif %}
+
+</ul>
