@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>
     
-      Exercise 3.5 &middot; AIMA Exercises 
+      Exercise 3.4 &middot; AIMA Exercises 
     
   </title>
   <!-- CSS -->
@@ -164,45 +164,76 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+You have a $9 \times 9$ grid of squares, each of which can be colored
+red or blue. The grid is initially colored all blue, but you can change
+the color of any square any number of times. Imagining the grid divided
+into nine $3 \times 3$ sub-squares, you want each sub-square to be all
+one color but neighboring sub-squares to be different colors.<br />
+
+1.  Formulate this problem in the straightforward way. Compute the size
+    of the state space.<br />
+
+2.  You need color a square only once. Reformulate, and compute the size
+    of the state space. Would breadth-first graph search perform faster
+    on this problem than on the one in (a)? How about iterative
+    deepening tree search?<br />
+
+3.  Given the goal, we need consider only colorings where each
+    sub-square is uniformly colored. Reformulate the problem and compute
+    the size of the state space.<br />
+
+4.  How many solutions does this problem have?<br />
+
+5.  Parts (b) and (c) successively abstracted the original problem (a).
+    Can you give a translation from solutions in problem (c) into
+    solutions in problem (b), and from solutions in problem (b) into
+    solutions for problem (a)?<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
-        <a href='#' class="p-2">Exercise 3.5</a>
+        <a href='#' class="p-2">Exercise 3.4</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="ch3ex5" class="fas fa-pen" style="color:white"></i>
+        <i id="ch3ex4" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
         <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex5');" href="#" id="buttonsolve">
-        <i id="ch3ex5" class="far fa-edit" style="color:white"></i>
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex4');" href="#" id="buttonsolve">
+        <i id="ch3ex4" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
     </div>
     <div class="card-body">
         <p class="card-text">
 
-Suppose two friends live in different cities on
-a map, such as the Romania map shown in . On every turn, we can
-simultaneously move each friend to a neighboring city on the map. The
-amount of time needed to move from city $i$ to neighbor $j$ is equal to
-the road distance $d(i,j)$ between the cities, but on each turn the
-friend that arrives first must wait until the other one arrives (and
-calls the first on his/her cell phone) before the next turn can begin.
-We want the two friends to meet as quickly as possible.<br>
+You have a $9 \times 9$ grid of squares, each of which can be colored
+red or blue. The grid is initially colored all blue, but you can change
+the color of any square any number of times. Imagining the grid divided
+into nine $3 \times 3$ sub-squares, you want each sub-square to be all
+one color but neighboring sub-squares to be different colors.<br>
 
-1.  Write a detailed formulation for this search problem. (You will find
-    it helpful to define some formal notation here.)<br>
+1.  Formulate this problem in the straightforward way. Compute the size
+    of the state space.<br>
 
-2.  Let $D(i,j)$ be the straight-line distance between cities $i$ and
-    $j$. Which of the following heuristic functions are admissible? (i)
-    $D(i,j)$; (ii) $2\cdot D(i,j)$; (iii) $D(i,j)/2$. <br>
+2.  You need color a square only once. Reformulate, and compute the size
+    of the state space. Would breadth-first graph search perform faster
+    on this problem than on the one in (a)? How about iterative
+    deepening tree search?<br>
 
-3.  Are there completely connected maps for which no solution exists? <br>
+3.  Given the goal, we need consider only colorings where each
+    sub-square is uniformly colored. Reformulate the problem and compute
+    the size of the state space.<br>
 
-4.  Are there maps in which all solutions require one friend to visit
-    the same city twice?
+4.  How many solutions does this problem have?<br>
+
+5.  Parts (b) and (c) successively abstracted the original problem (a).
+    Can you give a translation from solutions in problem (c) into
+    solutions in problem (b), and from solutions in problem (b) into
+    solutions for problem (a)?<br>
 </p>
     </div>
 </div>
@@ -254,7 +285,7 @@ We want the two friends to meet as quickly as possible.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex5">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex4">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -291,7 +322,7 @@ We want the two friends to meet as quickly as possible.<br>
 <script>
 var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('3-Solving-Problems-By-Searching');
-  var fullName = String('ch3ex5');
+  var fullName = String('ch3ex4');
   var dot = fullName.indexOf("x");
   var exerciseName = "ex_";
   var subs = fullName.substring(dot+1,fullName.length);
