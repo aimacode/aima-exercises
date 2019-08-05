@@ -820,3 +820,12 @@ display: none;
   border-left-color: #362cc9;
  }
 
+.search_container ul li{
+  border: 1px solid #c4c4c4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.search_container ul li:hover{
+  background-color: #0000001a;
+}

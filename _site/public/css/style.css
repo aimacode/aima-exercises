@@ -722,100 +722,110 @@ display: none;
 }
 
 .breadcrumbb{
-background-color: transparent;
-display: flex;
-flex-wrap: wrap;
-padding: .75rem 1rem;
-margin-bottom: 0px;
-list-style: none;
-margin-left: 20%;
-margin-bottom: 0%;
-margin-top: 5px;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-bottom: 0px;
+  list-style: none;
+  margin-left: 20%;
+  margin-bottom: 0%;
+  margin-top: 5px;
 
-
-
+  
+  
 }
 .breadcrumb-text{
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
 
 #bbreadcrumb{
-list-style-type: none;
-display: inline-block;
-}
+  list-style-type: none;
+  display: inline-block;
+ }
+ 
+ #bbreadcrumb li{
+  float: left;
+ }
+ 
+ #bbreadcrumb li a{
+  color: #fff;
+  display: block;
+  background: #000000;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+  margin-bottom: 0px;
+ }
+ 
+ #bbreadcrumb li:nth-child(even) a:before{
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li:first-child a{
+  padding-left: 15px;
+  border-radius: 4px 0 0 4px;
+ }
+ 
+ #bbreadcrumb li:first-child a:before{
+  border: none;
+ }
+ 
+ #bbreadcrumb li:last-child a{
+  padding-right: 15px;
+  border-radius: 0 4px 4px 0;
+ }
+ 
+ #bbreadcrumb li:last-child a:after{
+  border: none;
+ }
+ 
+ #bbreadcrumb li a:before, #bbreadcrumb li a:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #000000;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+ }
+ 
+ #bbreadcrumb li a:before{
+  left: -20px;
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li a:after{
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #000000;
+ }
+ 
+ #bbreadcrumb li a:hover{
+  background: #362cc9;
+ }
+ 
+ #bbreadcrumb li a:hover:before{
+  border-color: #362cc9;
+  border-left-color: transparent;
+ }
+ 
+ #bbreadcrumb li a:hover:after{
+  border-left-color: #362cc9;
+ }
 
-#bbreadcrumb li{
-float: left;
+.search_container ul li{
+  border: 1px solid #c4c4c4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
 }
-
-#bbreadcrumb li a{
-color: #fff;
-display: block;
-background: #000000;
-text-decoration: none;
-position: relative;
-height: 40px;
-line-height: 40px;
-padding: 0 10px 0 5px;
-text-align: center;
-margin-right: 23px;
-margin-bottom: 0px;
-}
-
-#bbreadcrumb li:nth-child(even) a:before{
-border-left-color: transparent;
-}
-
-#bbreadcrumb li:first-child a{
-padding-left: 15px;
-border-radius: 4px 0 0 4px;
-}
-
-#bbreadcrumb li:first-child a:before{
-border: none;
-}
-
-#bbreadcrumb li:last-child a{
-padding-right: 15px;
-border-radius: 0 4px 4px 0;
-}
-
-#bbreadcrumb li:last-child a:after{
-border: none;
-}
-
-#bbreadcrumb li a:before, #bbreadcrumb li a:after{
-content: "";
-position: absolute;
-top: 0;
-border: 0 solid #000000;
-border-width: 20px 10px;
-width: 0;
-height: 0;
-}
-
-#bbreadcrumb li a:before{
-left: -20px;
-border-left-color: transparent;
-}
-
-#bbreadcrumb li a:after{
-left: 100%;
-border-color: transparent;
-border-left-color: #000000;
-}
-
-#bbreadcrumb li a:hover{
-background: #362cc9;
-}
-
-#bbreadcrumb li a:hover:before{
-border-color: #362cc9;
-border-left-color: transparent;
-}
-
-#bbreadcrumb li a:hover:after{
-border-left-color: #362cc9;
+.search_container ul li:hover{
+  background-color: #0000001a;
 }
