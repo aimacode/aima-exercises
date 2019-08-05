@@ -8,3 +8,4 @@ canonical_id: ch6ex2
 
 {% include mathjax_support %}
 
+<div id="hiddden">{% include_relative question.md %}</div>

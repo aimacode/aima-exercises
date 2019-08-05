@@ -6,3 +6,4 @@ breadcrumb: 25-Robotics
 canonical_id: ch25ex12
 ---
 {% include mathjax_support %}
+<div id="hiddden">{% include_relative question.md %}</div>

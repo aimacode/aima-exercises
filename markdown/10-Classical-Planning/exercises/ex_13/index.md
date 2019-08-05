@@ -7,3 +7,4 @@ bookmarkID: ex10.13
 ---
 
 {% include mathjax_support %}
+<div id="hiddden">{% include_relative question.md %}</div>

@@ -728,7 +728,6 @@ display: none;
   padding: .75rem 1rem;
   margin-bottom: 0px;
   list-style: none;
-  margin-left: 20%;
   margin-bottom: 0%;
   margin-top: 5px;
 
@@ -828,4 +827,7 @@ display: none;
 }
 .search_container ul li:hover{
   background-color: #0000001a;
+}
+#hiddden{
+  display: none;
 }

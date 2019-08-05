@@ -8,3 +8,4 @@ breadcrumb5: ex9.25
 
 {% include mathjax_support %}
 
+<div id="hiddden">{% include_relative question.md %}</div>
