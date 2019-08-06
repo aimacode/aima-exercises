@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,29 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Compute the true utility function and the best linear
+approximation in $x$ and $y$ (as in
+Equation (<a href="#">4x3-linear-approx-equation</a>)) for the
+following environments:<br />
+
+1.  A ${10}\times {10}$ world with a single $+1$ terminal state
+    at (10,10).<br />
+
+2.  As in (a), but add a $-1$ terminal state at (10,1).<br />
+
+3.  As in (b), but add obstacles in 10 randomly selected squares.<br />
+
+4.  As in (b), but place a wall stretching from (5,2) to (5,9).<br />
+
+5.  As in (a), but with the terminal state at (5,5).<br />
+
+The actions are deterministic moves in the four directions. In each
+case, compare the results using three-dimensional plots. For each
+environment, propose additional features (besides $x$ and $y$) that
+would improve the approximation and show the results.
+</div>
 
   </div>
   <div class="card">

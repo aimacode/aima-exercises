@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,26 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Suppose you are given a bag containing $n$ unbiased coins. You are told
+that $n-1$ of these coins are normal, with heads on one side and tails
+on the other, whereas one coin is a fake, with heads on both sides. <br />
+
+1.  Suppose you reach into the bag, pick out a coin at random, flip it,
+    and get a head. What is the (conditional) probability that the coin
+    you chose is the fake coin? <br />
+
+2.  Suppose you continue flipping the coin for a total of $k$ times
+    after picking it and see $k$ heads. Now what is the conditional
+    probability that you picked the fake coin? <br />
+
+3.  Suppose you wanted to decide whether the chosen coin was fake by
+    flipping it $k$ times. The decision procedure returns ${fake}$ if
+    all $k$ flips come up heads; otherwise it returns ${normal}$. What
+    is the (unconditional) probability that this procedure makes an
+    error?
+</div>
 
   </div>
   <div class="card">

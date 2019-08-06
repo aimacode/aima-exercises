@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Which of the following are true, and which are false?<br />
+
+1.  Finding corresponding points in stereo images is the easiest phase
+    of the stereo depth-finding process.<br />
+
+2.  In stereo views of the same scene, greater accuracy is obtained in
+    the depth calculations if the two camera positions are
+    farther apart.<br />
+
+3.  Lines with equal lengths in the scene always project to equal
+    lengths in the image.<br />
+
+4.  Straight lines in the image necessarily correspond to straight lines
+    in the scene.<br />
+
+
+
+    <figure>
+      <img src="https://aimacode.github.io/aima-exercises/figures/bottle-stereo.svg" alt="bottle-figure" id="bottle-figure" style="width:100%" />
+      <figcaption><center><b>Top view of
+      a two-camera vision system observing a bottle with a wall behind it.</b></center></figcaption>
+    </figure>
+</div>
 
   </div>
   <div class="card">

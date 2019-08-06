@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,21 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Starting with the passive ADP agent,
+modify it to use an approximate ADP algorithm as discussed in the text.
+Do this in two steps:<br />
+
+1.  Implement a priority queue for adjustments to the utility estimates.
+    Whenever a state is adjusted, all of its predecessors also become
+    candidates for adjustment and should be added to the queue. The
+    queue is initialized with the state from which the most recent
+    transition took place. Allow only a fixed number of adjustments.<br />
+
+2.  Experiment with various heuristics for ordering the priority queue,
+    examining their effect on learning rates and computation time.
+</div>
 
   </div>
   <div class="card">

@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+The standard DECISION-TREE-LEARNING algorithm described in the
+chapter does not handle cases in which some examples have missing
+attribute values.<br />
+
+1.  First, we need to find a way to classify such examples, given a
+    decision tree that includes tests on the attributes for which values
+    can be missing. Suppose that an example $\textbf{x}$ has a missing value for
+    attribute $A$ and that the decision tree tests for $A$ at a node
+    that $\textbf{x}$ reaches. One way to handle this case is to pretend that
+    the example has <i>all</i> possible values for the
+    attribute, but to weight each value according to its frequency among
+    all of the examples that reach that node in the decision tree. The
+    classification algorithm should follow all branches at any node for
+    which a value is missing and should multiply the weights along each
+    path. Write a modified classification algorithm for decision trees
+    that has this behavior.<br />
+
+2.  Now modify the information-gain calculation so that in any given
+    collection of examples $C$ at a given node in the tree during the
+    construction process, the examples with missing values for any of
+    the remaining attributes are given “as-if” values according to the
+    frequencies of those values in the set $C$.<br />
+</div>
 
   </div>
   <div class="card">

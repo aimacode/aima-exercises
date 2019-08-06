@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,18 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+In the <i>Prisoner’s Dilemma</i>, consider the case where after
+each round, Alice and Bob have probability $X$ meeting again. Suppose
+both players choose the perpetual punishment strategy (where each will
+choose ${refuse}$ unless the other player has ever played
+${testify}$). Assume neither player has played ${testify}$ thus far.
+What is the expected future total payoff for choosing to ${testify}$
+versus ${refuse}$ when $X = .2$? How about when $X = .05$? For what
+value of $X$ is the expected future total payoff the same whether one
+chooses to ${testify}$ or ${refuse}$ in the current round?
+</div>
 
   </div>
   <div class="card">

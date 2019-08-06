@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,18 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+We wish to transmit an $n$-bit message to a receiving agent. The bits in
+the message are independently corrupted (flipped) during transmission
+with $\epsilon$ probability each. With an extra parity bit sent along
+with the original information, a message can be corrected by the
+receiver if at most one bit in the entire message (including the parity
+bit) has been corrupted. Suppose we want to ensure that the correct
+message is received with probability at least $1-\delta$. What is the
+maximum feasible value of $n$? Calculate this value for the case
+$\epsilon0.001$, $\delta0.01$.
+</div>
 
   </div>
   <div class="card">

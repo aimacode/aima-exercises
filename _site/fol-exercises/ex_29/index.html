@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,34 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+For each of the following sentences in English, decide if the
+accompanying first-order logic sentence is a good translation. If not,
+explain why not and correct it.<br />
+
+1.  Any apartment in London has lower rent than some apartments
+    in Paris.<br />
+
+$$
+\forall {x} [{Apt}(x) \land {In}(x,{London})]
+\implies \exists {y} ([{Apt}(y) \land {In}(y,{Paris})] \implies ({Rent}(x) &lt; {Rent}(y)))
+$$
+
+2.  There is exactly one apartment in Paris with rent below \$1000.<br />
+
+$$
+\exists {x} {Apt}(x) \land {In}(x,{Paris}) \land \forall{y} [{Apt}(y) \land {In}(y,{Paris}) \land ({Rent}(y) &lt; {Dollars}(1000))] \implies (y = x)
+$$
+
+3.  If an apartment is more expensive than all apartments in London, it
+    must be in Moscow.<br />
+
+$$
+\forall{x} {Apt}(x) \land [\forall{y} {Apt}(y) \land {In}(y,{London}) \land ({Rent}(x) &gt; {Rent}(y))] \implies
+{In}(x,{Moscow}).
+$$
+</div>
 
   </div>
   <div class="card">

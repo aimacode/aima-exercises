@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -120,18 +120,34 @@
     <li><a class="breadcrumb-text" href="/aima-exercises/"><i class="fa fa-home"></i></a>  </li>
 
     
+     
+     
+  <!-- /search-exercises -->
+  
+  
+     <li><a class="breadcrumb-text" href="/aima-exercises/search-exercises">search-exercises</a>  </li>
+
+     
+    
    
 
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
   <div class="entry">
     <div class="mode_btn view_question_source">
     </div>
-    
+    <div id="hiddden">
+
+Does a finite state space always lead to a finite search tree? How about
+a finite state space that is a tree? Can you be more precise about what
+types of state spaces always lead to finite search trees? (Adapted from
+, 1996.)
+</div>
 
   </div>
   <div class="card">

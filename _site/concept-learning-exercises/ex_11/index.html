@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,20 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise considers $\chi^2$ pruning of
+decision trees (Section <a href="#">chi-squared-section</a><br />.
+
+1.  Create a data set with two input attributes, such that the
+    information gain at the root of the tree for both attributes is
+    zero, but there is a decision tree of depth 2 that is consistent
+    with all the data. What would $\chi^2$ pruning do on this data set
+    if applied bottom up? If applied top down?<br />
+
+2.  Modify DECISION-TREE-LEARNING to include $\chi^2$-pruning. You might wish to consult
+    Quinlan [@Quinlan:1986] or [@Kearns+Mansour:1998] for details.<br />
+</div>
 
   </div>
   <div class="card">

@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,22 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+The **And-Or-Graph-Search** algorithm in
+Figure <a href="#">and-or-graph-search-algorithm</a> checks for
+repeated states only on the path from the root to the current state.
+Suppose that, in addition, the algorithm were to store
+*every* visited state and check against that list. (See in
+Figure <a href="#">breadth-first-search-algorithm</a> for an example.)
+Determine the information that should be stored and how the algorithm
+should use that information when a repeated state is found.
+(*Hint*: You will need to distinguish at least between
+states for which a successful subplan was constructed previously and
+states for which no subplan could be found.) Explain how to use labels,
+as defined in Section <a href="#">cyclic-plan-section</a>, to avoid
+having multiple copies of subplans.
+</div>
 
   </div>
   <div class="card">

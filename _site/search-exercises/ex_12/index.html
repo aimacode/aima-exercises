@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Define in your own words the following terms: state, state space, search
+tree, search node, goal, action, transition model, and branching factor.
+</div>
 
   </div>
   <div class="card">
@@ -170,35 +176,20 @@
         <a href='#' class="p-2">Exercise 3.12</a>
         <a class="solve_question" id="solve_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="ch3ex11" class="fas fa-pen" style="color:white"></i>
+        <i id="ch3ex12" class="fas fa-pen" style="color:white"></i>
         </button>
         </a>
         <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex11');" href="#" id="buttonsolve">
-        <i id="ch3ex11" class="far fa-edit" style="color:white"></i>
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex12');" href="#" id="buttonsolve">
+        <i id="ch3ex12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
     </div>
     <div class="card-body">
         <p class="card-text">
 
-The problem is usually stated as follows. Three
-missionaries and three cannibals are on one side of a river, along with
-a boat that can hold one or two people. Find a way to get everyone to
-the other side without ever leaving a group of missionaries in one place
-outnumbered by the cannibals in that place. This problem is famous in AI
-because it was the subject of the first paper that approached problem
-formulation from an analytical viewpoint @Amarel:1968. <br>
-
-1.  Formulate the problem precisely, making only those distinctions
-    necessary to ensure a valid solution. Draw a diagram of the complete
-    state space.<br>
-
-2.  Implement and solve the problem optimally using an appropriate
-    search algorithm. Is it a good idea to check for repeated states? <br>
-
-3.  Why do you think people have a hard time solving this puzzle, given
-    that the state space is so simple? <br>
+Define in your own words the following terms: state, state space, search
+tree, search node, goal, action, transition model, and branching factor.
 </p>
     </div>
 </div>
@@ -250,7 +241,7 @@ formulation from an analytical viewpoint @Amarel:1968. <br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex11">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex12">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -287,7 +278,7 @@ formulation from an analytical viewpoint @Amarel:1968. <br>
 <script>
 var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('3-Solving-Problems-By-Searching');
-  var fullName = String('ch3ex11');
+  var fullName = String('ch3ex12');
   var dot = fullName.indexOf("x");
   var exerciseName = "ex_";
   var subs = fullName.substring(dot+1,fullName.length);

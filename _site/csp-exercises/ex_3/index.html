@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,24 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the problem of <a href="#footnote1">constructing</a> (not solving)
+crossword puzzles fitting words into a rectangular grid. The grid,
+which is given as part of the problem, specifies which squares are blank
+and which are shaded. Assume that a list of words (i.e., a dictionary)
+is provided and that the task is to fill in the blank squares by using
+any subset of the list. Formulate this problem precisely in two ways:<br />
+
+1.  As a general search problem. Choose an appropriate search algorithm
+    and specify a heuristic function. Is it better to fill in blanks one
+    letter at a time or one word at a time?<br />
+
+2.  As a constraint satisfaction problem. Should the variables be words
+    or letters?<br />
+
+Which formulation do you think will be better? Why?<br />
+</div>
 
   </div>
   <div class="card">

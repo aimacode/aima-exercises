@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,25 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Suppose that you are working with the robot in
+Exercise <a href="#">AB-manipulator-ex</a> and you are given the
+problem of finding a path from the starting configuration of
+figure <a href="figRobot2">figRobot2</a> to the ending configuration. Consider a potential
+function $$D(A, {Goal})^2 + D(B, {Goal})^2 + \frac{1}{D(A, B)^2}$$
+where $D(A,B)$ is the distance between the closest points of A and B.<br />
+
+1.  Show that hill climbing in this potential field will get stuck in a
+    local minimum.<br />
+
+2.  Describe a potential field where hill climbing will solve this
+    particular problem. You need not work out the exact numerical
+    coefficients needed, just the general form of the solution. (Hint:
+    Add a term that “rewards" the hill climber for moving A out of B’s
+    way, even in a case like this where this does not reduce the
+    distance from A to B in the above sense.)<br />
+</div>
 
   </div>
   <div class="card">

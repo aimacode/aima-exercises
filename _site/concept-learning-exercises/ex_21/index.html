@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,25 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Figure &lt;ahref=""#"&gt;kernel-machine-figure&lt;/a&gt;
+showed how a circle at the origin can be linearly separated by mapping
+from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
+But what if the circle is not located at the origin? What if it is an
+ellipse, not a circle? The general equation for a circle (and hence the
+decision boundary) is $(x_1-a)^2 +
+(x_2-b)^2 - r^20$, and the general equation for an ellipse is
+$c(x_1-a)^2 + d(x_2-b)^2 - 1 0$.
+<br />
+1.  Expand out the equation for the circle and show what the weights
+    $w_i$ would be for the decision boundary in the four-dimensional
+    feature space $(x_1, x_2, x_1^2, x_2^2)$. Explain why this means
+    that any circle is linearly separable in this space.<br />
+
+2.  Do the same for ellipses in the five-dimensional feature space
+    $(x_1, x_2, x_1^2, x_2^2, x_1 x_2)$.
+</div>
 
   </div>
   <div class="card">

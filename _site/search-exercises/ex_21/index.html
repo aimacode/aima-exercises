@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+On page <a href="#">iterative-lengthening-page</a>,
+we mentioned <b>iterative lengthening search</b>,
+an iterative analog of uniform cost search. The idea is to use increasing limits on
+path cost. If a node is generated whose path cost exceeds the current
+limit, it is immediately discarded. For each new iteration, the limit is
+set to the lowest path cost of any node discarded in the previous
+iteration.<br />
+
+1.  Show that this algorithm is optimal for general path costs.<br />
+
+2.  Consider a uniform tree with branching factor $b$, solution depth
+    $d$, and unit step costs. How many iterations will iterative
+    lengthening require?<br />
+
+3.  Now consider step costs drawn from the continuous range
+    $[\epsilon,1]$, where $0 &lt; \epsilon &lt; 1$. How many iterations are
+    required in the worst case? <br />
+
+4.  Implement the algorithm and apply it to instances of the 8-puzzle
+    and traveling salesperson problems. Compare the algorithm’s
+    performance to that of uniform-cost search, and comment on
+    your results. <br />
+</div>
 
   </div>
   <div class="card">

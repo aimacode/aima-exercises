@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the problem of separating
+$N$ data points into positive and negative examples using a linear
+separator. Clearly, this can always be done for $N2$ points
+on a line of dimension $d1$, regardless of how the points are
+labeled or where they are located (unless the points are in the same
+place).<br />
+
+1.  Show that it can always be done for $N3$ points on a
+    plane of dimension $d2$, unless they are collinear.<br />
+
+2.  Show that it cannot always be done for $N4$ points on a
+    plane of dimension $d2$.<br />
+
+3.  Show that it can always be done for $N4$ points in a
+    space of dimension $d3$, unless they are coplanar.<br />
+
+4.  Show that it cannot always be done for $N5$ points in a
+    space of dimension $d3$.<br />
+
+5.  The ambitious student may wish to prove that $N$ points in general
+    position (but not $N+1$) are linearly separable in a space of
+    dimension $N-1$.<br />
+</div>
 
   </div>
   <div class="card">

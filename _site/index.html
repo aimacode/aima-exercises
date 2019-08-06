@@ -78,13 +78,14 @@
 <script src="//www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="//aima-exercises.firebaseapp.com/config.js"></script>
 <div style="border:0px; padding-left:10px; padding-right:10px; border-style: solid; border-color: gray;"><p>AIMA-exercises is an open-source community of students, instructors and developers. Anyone can add an exercise, suggest answers to existing questions, or simply help us improve the platform. We accept contributions on <a href="https://github.com/aimacode/aima-exercises">this github repository</a>.</p> 
-  <center>
-    <form class="form-inline active-pink-3 active-pink-4">
-      <i class="fas fa-search" aria-hidden="true"></i>
-      <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
-    </form>
-    <br>
-    </center>
+	<center>
+		<form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
+		  <i class="fas fa-search" aria-hidden="true"></i>
+		<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+		<input type="submit" value="Go!" class="search-btn">
+		</form>
+		<br>
+		</center>
     </div>
 <div class="card">
     <div class="card-header p-2">

@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,34 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise concerns the problem of planning a route for a robot to
+take from one city to another. The basic action taken by the robot is
+${Go}(x,y)$, which takes it from city $x$ to city $y$ if there is a
+route between those cities. ${Road}(x, y)$ is true if and only if
+there is a road connecting cities $x$ and $y$; if there is, then
+${Distance}(x, y)$ gives the length of the road. See the map on
+page <a href="#">romania-distances-figure</a> for an example. The robot begins in Arad and must
+reach Bucharest.<br />
+
+1.  Write a suitable logical description of the initial situation of
+    the robot.<br />
+
+2.  Write a suitable logical query whose solutions provide possible
+    paths to the goal.<br />
+
+3.  Write a sentence describing the ${Go}$ action.<br />
+
+4.  Now suppose that the robot consumes fuel at the rate of .02 gallons
+    per mile. The robot starts with 20 gallons of fuel. Augment your
+    representation to include these considerations.<br />
+
+5.  Now suppose some of the cities have gas stations at which the robot
+    can fill its tank. Extend your representation and write all the
+    rules needed to describe gas stations, including the
+    ${Fillup}$ action.<br />
+</div>
 
   </div>
   <div class="card">

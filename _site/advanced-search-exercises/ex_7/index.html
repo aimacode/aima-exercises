@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,19 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+In Section <a href="#">conformant-section</a> we introduced belief
+states to solve sensorless search problems. A sequence of actions solves
+a sensorless problem if it maps every physical state in the initial
+belief state $b$ to a goal state. Suppose the agent knows $h^\*(s)$, the
+true optimal cost of solving the physical state $s$ in the fully
+observable problem, for every state $s$ in $b$. Find an admissible
+heuristic $h(b)$ for the sensorless problem in terms of these costs, and
+prove its admissibilty. Comment on the accuracy of this heuristic on the
+sensorless vacuum problem of
+Figure <a href="#">vacuum2-sets-figure</a>. How well does A* perform?
+</div>
 
   </div>
   <div class="card">

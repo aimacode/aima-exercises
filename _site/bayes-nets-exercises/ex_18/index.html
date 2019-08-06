@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,31 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the variable elimination algorithm in
+Figure <a href="#">elimination-ask-algorithm</a> (page <a href="#">elimination-ask-algorithm</a>).<br />
+
+1.  Section <a href="#">exact-inference-section</a> applies variable
+    elimination to the query
+    $${\textbf{P}}({Burglary}{JohnCalls}{true},{MaryCalls}{true})\ .$$
+    Perform the calculations indicated and check that the answer
+    is correct.<br />
+
+2.  Count the number of arithmetic operations performed, and compare it
+    with the number performed by the enumeration algorithm.<br />
+
+3.  Suppose a network has the form of a <i>chain</i>: a sequence
+    of Boolean variables $X_1,\ldots, X_n$ where
+    ${Parents}(X_i)\{X_{i-1}\}$ for $i2,\ldots,n$.
+    What is the complexity of computing
+    ${\textbf{P}}(X_1X_n{true})$ using
+    enumeration? Using variable elimination?<br />
+
+4.  Prove that the complexity of running variable elimination on a
+    polytree network is linear in the size of the tree for any variable
+    ordering consistent with the network structure.<br />
+</div>
 
   </div>
   <div class="card">

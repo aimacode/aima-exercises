@@ -6,3 +6,4 @@ breadcrumb: 1-Introduction
 canonical_id: ch1ex3
 ---
 {% include mathjax_support %}
+<div id="hiddden">{% include_relative question.md %}</div>

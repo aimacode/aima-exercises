@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,25 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Some of the operations in standard programming languages can be modeled
+as actions that change the state of the world. For example, the
+assignment operation changes the contents of a memory location, and the
+print operation changes the state of the output stream. A program
+consisting of these operations can also be considered as a plan, whose
+goal is given by the specification of the program. Therefore, planning
+algorithms can be used to construct programs that achieve a given
+specification. <br />
+
+1.  Write an action schema for the assignment operator (assigning the
+    value of one variable to another). Remember that the original value
+    will be overwritten! <br />
+
+2.  Show how object creation can be used by a planner to produce a plan
+    for exchanging the values of two variables by using a
+    temporary variable. <br />
+</div>
 
   </div>
   <div class="card">

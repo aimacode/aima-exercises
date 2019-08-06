@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,18 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider a version of the vacuum robot
+(page <a href="#">vacuum-maze-hmm2-figure</a>) that has the policy of going straight for as long
+as it can; only when it encounters an obstacle does it change to a new
+(randomly selected) heading. To model this robot, each state in the
+model consists of a <i>(location, heading)</i> pair. Implement
+this model and see how well the Viterbi algorithm can track a robot with
+this model. The robot’s policy is more constrained than the random-walk
+robot; does that mean that predictions of the most likely path are more
+accurate?
+</div>
 
   </div>
   <div class="card">

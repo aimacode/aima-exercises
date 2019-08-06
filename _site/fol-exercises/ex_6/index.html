@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,19 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+<a href="#">fol-model-count-exercise</a> Consider a symbol vocabulary that contains
+$c$ constant symbols, $p_k$ predicate symbols of each arity $k$, and
+$f_k$ function symbols of each arity $k$, where $1\leq k\leq A$. Let the
+domain size be fixed at $D$. For any given model, each predicate or
+function symbol is mapped onto a relation or function, respectively, of
+the same arity. You may assume that the functions in the model allow
+some input tuples to have no value for the function (i.e., the value is
+the invisible object). Derive a formula for the number of possible
+models for a domain with $D$ elements. Don’t worry about eliminating
+redundant combinations.
+</div>
 
   </div>
   <div class="card">

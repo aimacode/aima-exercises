@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,43 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Suppose a knowledge base contains just the following first-order Horn
+clauses:<br />
+
+$$
+Ancestor(Mother(x),x)
+$$
+$$
+Ancestor(x,y) \land Ancestor(y,z) \implies Ancestor(x,z)
+$$
+
+Consider a forward chaining algorithm that, on the $j$th iteration,
+terminates if the KB contains a sentence that unifies with the query,
+else adds to the KB every atomic sentence that can be inferred from the
+sentences already in the KB after iteration $j-1$.<br />
+
+1.  For each of the following queries, say whether the algorithm
+    will (1) give an answer (if so, write down that answer); or (2)
+    terminate with no answer; or (3) never terminate.<br />
+
+    1.  $Ancestor(Mother(y),John)$<br />
+
+    2.  $Ancestor(Mother(Mother(y)),John)$<br />
+
+    3.  $Ancestor(Mother(Mother(Mother(y))),Mother(y))$<br />
+
+    4.  $Ancestor(Mother(John),Mother(Mother(John)))$<br />
+
+2.  Can a resolution algorithm prove the sentence
+    $\lnot Ancestor(John,John)$ from the original knowledge base?
+    Explain how, or why not.<br />
+
+3.  Suppose we add the assertion that $\lnot(Mother(x)x)$ and
+    augment the resolution algorithm with inference rules for equality.
+    Now what is the answer to (b)?<br />
+</div>
 
   </div>
   <div class="card">

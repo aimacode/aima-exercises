@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,26 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+The <b>Metropolis--Hastings</b> algorithm is a member of the MCMC family; as such,
+it is designed to generate samples $\textbf{x}$ (eventually) according to target
+probabilities $\pi(\textbf{x})$. (Typically we are interested in sampling from
+$\pi(\textbf{x})P(\textbf{x}\textbf{e})$.) Like simulated annealing,
+Metropolis–Hastings operates in two stages. First, it samples a new
+state $\textbf{x'}$ from a <b>proposal distribution</b> $q(\textbf{x'}\textbf{x})$, given the current state $\textbf{x}$.
+Then, it probabilistically accepts or rejects $\textbf{x'}$ according to the <b>acceptance probability</b>
+$$\alpha(\textbf{x'}\textbf{x}) = \min\ \left(1,\frac{\pi(\textbf{x'})q(\textbf{x}\textbf{x'})}{\pi(\textbf{x})q(\textbf{x'}\textbf{x})}  \right)\ .$$
+If the proposal is rejected, the state remains at $\textbf{x}$.<br />
+
+1.  Consider an ordinary Gibbs sampling step for a specific variable
+    $X_i$. Show that this step, considered as a proposal, is guaranteed
+    to be accepted by Metropolis–Hastings. (Hence, Gibbs sampling is a
+    special case of Metropolis–Hastings.)<br />
+
+2.  Show that the two-step process above, viewed as a transition
+    probability distribution, is in detailed balance with $\pi$.<br />
+</div>
 
   </div>
   <div class="card">

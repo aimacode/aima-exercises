@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,23 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Suppose you have a chess program that can evaluate 10 million nodes per
+second. Decide on a compact representation of a game state for storage
+in a transposition table. About how many entries can you fit in a
+2-gigabyte in-memory table? Will that be enough for the three minutes of
+search allocated for one move? How many table lookups can you do in the
+time it would take to do one evaluation? Now suppose the transposition
+table is stored on disk. About how many evaluations could you do in the
+time it takes to do one disk seek with standard disk hardware?<br />
+
+
+<figure>
+  <img src="https://aimacode.github.io/aima-exercises/figures/pruning.svg" alt="trivial-chance-game-figure" id="trivial-chance-game-figure" style="width:100%" />
+  <figcaption><center><b>The complete game tree for a trivial game with chance nodes..</b></center></figcaption>
+</figure>
+</div>
 
   </div>
   <div class="card">

@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,26 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise analyzes in more detail the
+persistent-failure model for the battery sensor in
+Figure <a href="#">battery-persistence-figure</a>(a)
+(page <a href="#">battery-persistence-figure</a>).<br />
+
+1.  Figure <a href="#">battery-persistence-figure</a>(b) stops at
+    $t=32$. Describe qualitatively what should happen as
+    $t\to\infty$ if the sensor continues to read 0.<br />
+
+2.  Suppose that the external temperature affects the battery sensor in
+    such a way that transient failures become more likely as
+    temperature increases. Show how to augment the DBN structure in
+    Figure <a href="#">battery-persistence-figure</a>(a), and explain
+    any required changes to the CPTs.<br />
+
+3.  Given the new network structure, can battery readings be used by the
+    robot to infer the current temperature?<br />
+</div>
 
   </div>
   <div class="card">

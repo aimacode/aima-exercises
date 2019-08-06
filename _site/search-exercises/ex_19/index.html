@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,28 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+A basic wooden railway set contains the pieces shown in
+. The task is to connect these pieces into a railway that has no
+overlapping tracks and no loose ends where a train could run off onto
+the floor.<br />
+
+1.  Suppose that the pieces fit together <i>exactly</i> with no
+    slack. Give a precise formulation of the task as a search problem.<br />
+
+2.  Identify a suitable uninformed search algorithm for this task and
+    explain your choice.<br />
+
+3.  Explain why removing any one of the “fork” pieces makes the
+    problem unsolvable. <br />
+
+4.  Give an upper bound on the total size of the state space defined by
+    your formulation. (<i>Hint</i>: think about the maximum
+    branching factor for the construction process and the maximum depth,
+    ignoring the problem of overlapping pieces and loose ends. Begin by
+    pretending that every piece is unique.)
+</div>
 
   </div>
   <div class="card">

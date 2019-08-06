@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,36 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the Bayes net shown in Figure <a href="#politics-figure">politics-figure</a><br />.
+
+1.  Which of the following are asserted by the network
+    <i>structure</i>?<br />
+
+    1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br />
+
+    2.  ${\textbf{P}}(JG) = {\textbf{P}}(JG,I)$.<br />
+
+    3.  ${\textbf{P}}(MG,B,I) = {\textbf{P}}(MG,B,I,J)$.<br />
+
+2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br />
+
+3.  Calculate the probability that someone goes to jail given that they
+    broke the law, have been indicted, and face a politically
+    motivated prosecutor.<br />
+
+4.  A <b>context-specific independence</b> (see
+    page <a href="#">CSI-page</a>) allows a variable to be independent of some of
+    its parents given certain values of others. In addition to the usual
+    conditional independences given by the graph structure, what
+    context-specific independences exist in the Bayes net in
+    Figure <a href="#politics-figure">politics-figure</a>?<br />
+
+5.  Suppose we want to add the variable
+    $P{PresidentialPardon}$ to the network; draw the new
+    network and briefly explain any links you add.<br />
+</div>
 
   </div>
   <div class="card">

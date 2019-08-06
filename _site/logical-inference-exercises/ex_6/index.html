@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,24 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the subsumption lattices shown
+in Figure <a href="#">subsumption-lattice-figure</a>
+(page <a href="#">subsumption-lattice-figure</a><br />.
+
+1.  Construct the lattice for the sentence
+    ${Employs}({Mother}({John}),{Father}({Richard}))$.<br />
+
+2.  Construct the lattice for the sentence ${Employs}({IBM},y)$
+    (“Everyone works for IBM”). Remember to include every kind of query
+    that unifies with the sentence.<br />
+
+3.  Assume that indexes each sentence under every node in its
+    subsumption lattice. Explain how should work when some of these
+    sentences contain variables; use as examples the sentences in (a)
+    and (b) and the query ${Employs}(x,{Father}(x))$.
+</div>
 
   </div>
   <div class="card">

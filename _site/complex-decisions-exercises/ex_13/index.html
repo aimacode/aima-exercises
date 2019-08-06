@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,24 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the $4\times 3$ world shown in
+Figure <a href="#">sequential-decision-world-figure</a><br />.
+
+1.  Implement an environment simulator for this environment, such that
+    the specific geography of the environment is easily altered. Some
+    code for doing this is already in the online code repository.<br />
+
+2.  Create an agent that uses policy iteration, and measure its
+    performance in the environment simulator from various
+    starting states. Perform several experiments from each starting
+    state, and compare the average total reward received per run with
+    the utility of the state, as determined by your algorithm.<br />
+
+3.  Experiment with increasing the size of the environment. How does the
+    run time for policy iteration vary with the size of the environment?<br />
+</div>
 
   </div>
   <div class="card">

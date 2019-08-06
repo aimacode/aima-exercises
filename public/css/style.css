@@ -728,7 +728,6 @@ display: none;
   padding: .75rem 1rem;
   margin-bottom: 0px;
   list-style: none;
-  margin-left: 20%;
   margin-bottom: 0%;
   margin-top: 5px;
 
@@ -820,3 +819,15 @@ display: none;
   border-left-color: #362cc9;
  }
 
+.search_container ul li{
+  border: 1px solid #c4c4c4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.search_container ul li:hover{
+  background-color: #0000001a;
+}
+#hiddden{
+  display: none;
+}

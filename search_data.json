@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{
+  "_":{
+	"title":"",
+	"content":"",
+	"url":""  	
+  }	
+  {% for page in site.pages %}
+    {% if page.url != "/404.html" and page.url != "/search_data.json" and page.url!= "/assets/css/style.css" and page.url != "/" and page.url != "/style.css" and page.title and page.breadcrumb and page.title != "Main"%},
+      "{{ page.url | slugify }}":  {
+        "title": "{{ page.title | xml_escape }}",
+        "breadcrumb": "{{ page.breadcrumb }}",
+      	"content"  : "{{page.content | strip_html | strip_newlines | escape | remove: "\"}}",
+        "url": " {{ page.url | xml_escape }}"
+      }
+    {% endif %}
+  {% endfor %}
+}

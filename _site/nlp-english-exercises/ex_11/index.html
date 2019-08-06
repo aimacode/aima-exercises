@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,38 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Consider the following toy grammar:<br />
+
+&gt; $S \rightarrow NP\space VP$<br />
+
+&gt; $NP \rightarrow Noun$<br />
+
+&gt; $NP \rightarrow NP\space and\space NP$<br />
+
+&gt; $NP \rightarrow NP\space PP$<br />
+
+&gt; $VP \rightarrow Verb$<br />
+
+&gt; $VP \rightarrow VP\space and \space VP$<br />
+
+&gt; $VP \rightarrow VP\space PP$<br />
+
+&gt; $PP \rightarrow Prep\space NP$<br />
+
+&gt; $Noun \rightarrow Sally\space; pools\space; streams\space; swims$<br />
+
+&gt; $Prep \rightarrow in$<br />
+
+&gt; $Verb \rightarrow pools\space; streams\space; swims$<br />
+
+1.  Show all the parse trees in this grammar for the sentence “Sally
+    swims in streams and pools.”<br />
+
+2.  Show all the table entries that would be made by
+    a (non-probabalistic) CYK parser on this sentence.<br />
+</div>
 
   </div>
   <div class="card">

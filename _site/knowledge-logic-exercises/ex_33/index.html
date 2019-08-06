@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,23 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Suppose an agent inhabits a world with two states, $S$ and $\lnot S$,
+and can do exactly one of two actions, $a$ and $b$. Action $a$ does
+nothing and action $b$ flips from one state to the other. Let $S^t$ be
+the proposition that the agent is in state $S$ at time $t$, and let
+$a^t$ be the proposition that the agent does action $a$ at time $t$
+(similarly for $b^t$).<br />
+
+1.  Write a successor-state axiom for $S^{t+1}$.<br />
+
+2.  Convert the sentence in (a) into CNF.<br />
+
+3.  Show a resolution refutation proof that if the agent is in $\lnot S$
+    at time $t$ and does $a$, it will still be in $\lnot S$ at time
+    $t+1$.
+</div>
 
   </div>
   <div class="card">

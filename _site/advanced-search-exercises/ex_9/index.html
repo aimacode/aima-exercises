@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,22 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+On page <a href="#">multivalued-sensorless-page</a> it was assumed
+that a given action would have the same cost when executed in any
+physical state within a given belief state. (This leads to a
+belief-state search problem with well-defined step costs.) Now consider
+what happens when the assumption does not hold. Does the notion of
+optimality still make sense in this context, or does it require
+modification? Consider also various possible definitions of the “cost”
+of executing an action in a belief state; for example, we could use the
+*minimum* of the physical costs; or the
+*maximum*; or a cost *interval* with the lower
+bound being the minimum cost and the upper bound being the maximum; or
+just keep the set of all possible costs for that action. For each of
+these, explore whether A* (with modifications if necessary) can return
+optimal solutions.
+</div>
 
   </div>
   <div class="card">

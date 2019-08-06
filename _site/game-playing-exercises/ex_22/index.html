@@ -96,14 +96,14 @@
           </h3>
           <br>
           <center>
-            <form class="form-inline active-pink-3 active-pink-4">
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
             </form>
-           
+            <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -134,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -163,6 +164,43 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+In the following, a “max” tree consists only of max nodes, whereas an
+“expectimax” tree consists of a max node at the root with alternating
+layers of chance and max nodes. At chance nodes, all outcome
+probabilities are nonzero. The goal is to <i>find the value of the
+root</i> with a bounded-depth search. For each of (a)–(f), either
+give an example or explain why this is impossible.<br />
+
+1.  Assuming that leaf values are finite but unbounded, is pruning (as
+    in alpha–beta) ever possible in a max tree?<br />
+
+2.  Is pruning ever possible in an expectimax tree under the same
+    conditions?<br />
+
+3.  If leaf values are all nonnegative, is pruning ever possible in a
+    max tree? Give an example, or explain why not.<br />
+
+4.  If leaf values are all nonnegative, is pruning ever possible in an
+    expectimax tree? Give an example, or explain why not.<br />
+
+5.  If leaf values are all in the range $[0,1]$, is pruning ever
+    possible in a max tree? Give an example, or explain why not.<br />
+
+6.  If leaf values are all in the range $[0,1]$, is pruning ever
+    possible in an expectimax tree?1<br />
+
+7.  Consider the outcomes of a chance node in an expectimax tree. Which
+    of the following evaluation orders is most likely to yield pruning
+    opportunities?<br />
+
+    i.  Lowest probability first<br />
+
+    ii.  Highest probability first<br />
+
+    iii.  Doesn’t make any difference<br />
+</div>
 
   </div>
   <div class="card">

@@ -53,9 +53,9 @@ $(document).ready(function(){
           if(item.breadcrumb){
             breadcrumbFilter = item.breadcrumb.match(/^(\D*)(\d+)-/)[0];  
           }
-          if(item.breadcrumb){
-            contentFilter = item.content.match(/^(\D*)(\d+).(\D*)(\d+)/)[0];  
-          }
+          //if(item.breadcrumb){
+            //contentFilter = item.content.match(/^(\D*)(\d+).(\D*)(\d+)/)[0];  
+          //}
 
           // Build a snippet of HTML for this result
           var appendString = '<li><a href="' +window.aimaBaseURL+item.url.trim() + '">' + item.title + " | "+ 
