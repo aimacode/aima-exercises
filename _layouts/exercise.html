@@ -11,11 +11,11 @@ comments: true
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">{{ page.title }}</a>
-        <a class="solve_question" id="solve_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Solve this Exercise" href="#" id="buttonsolve">
-        <i id="{{ page.canonical_id }}" class="fas fa-pen" style="color:white"></i>
-        </button>
-        </a>
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('{{ page.canonical_id }}');" href="#">
+            <i id="{{ page.canonical_id }}" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('{{ page.canonical_id }}');" href="#" id="buttonsolve">
         <i id="{{ page.canonical_id }}" class="far fa-edit" style="color:white"></i>

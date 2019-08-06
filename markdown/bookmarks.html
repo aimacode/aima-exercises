@@ -1,0 +1,167 @@
+---
+layout: default
+permalink: /bookmarks/
+---
+{% include mathjax_support %}
+<script>
+    
+    if(localStorage.length == 0)
+    {
+        document.write("<b>You haven't bookmarked any questions yet. Please go to Chapter mode of different chapters to bookmark your favourite questions</b>")
+    }
+    else{
+        document.write('<b>You have bookmarked the following exercises:</b><br>');
+        document.write('<br>')
+    }
+    for (var i = 0, len = localStorage.length; i < len; ++i) 
+    {
+        var key = localStorage.key(i);
+        var value = localStorage.getItem(key);
+        var dotIndex = key.indexOf('e');
+        var chapterNumber = key.slice(2, dotIndex);
+        var keylength = key.length;
+        var exerciseNumber = key.slice(dotIndex+2 , keylength);
+        var ananame;
+        var ananame2;
+        if(chapterNumber == 1)
+        {
+            ananame="intro-exercises";
+            ananame2="Introduction";
+        }
+        if(chapterNumber == 2)
+        {
+            ananame="agents-exercises";
+            ananame2="Intelligent Agent";
+        }
+        if(chapterNumber == 3)
+        {
+            ananame="search-exercises";
+            ananame2="Solving Problems by Searching";
+        }
+        if(chapterNumber == 4)
+        {
+            ananame="advanced-search-exercises";
+            ananame2="Beyond classical Search";
+        }
+        if(chapterNumber == 5)
+        {
+            ananame="game-playing-exercises";
+            ananame2="Adversarial Search";
+        }
+        if(chapterNumber == 6)
+        {
+            ananame="csp-exercises";
+            ananame2="Constraint satisfaction Problems";
+        }
+        if(chapterNumber == 7)
+        {
+            ananame="knowledge-logic-exercises";
+            ananame2="Logical agents";
+        }
+        if(chapterNumber == 8)
+        {
+            ananame="fol-exercises";
+            ananame2="First Order Logic";
+        }
+        if(chapterNumber == 9)
+        {
+            ananame="logical-inference-exercises";
+            ananame2="Inference In First Order Logic";
+        }
+        if(chapterNumber == 10)
+        {
+            ananame="planning-exercises";
+            ananame2="Classical Planning";
+        }
+        if(chapterNumber == 11)
+        {
+            ananame="advanced-planning-exercises";
+            ananame2="Planning and Acting in the Real World";
+        }
+        if(chapterNumber == 12)
+        {
+            ananame="kr-exercises";
+            ananame2="Knowledge Representation";
+        }
+        if(chapterNumber == 13)
+        {
+            ananame="probability-exercises";
+            ananame2="Quantifying Uncertainity";
+        }
+        if(chapterNumber == 14)
+        {
+            ananame="bayes-nets-exercises";
+            ananame2="Probabilistic reasoning";
+        }
+        if(chapterNumber == 15)
+        {
+            ananame="dbn-exercises";
+            ananame2="Probabilistic reasoning Over Time";
+        }
+        if(chapterNumber == 16)
+        {
+            ananame="decision-theory-exercises";
+            ananame2="Making simple Decisions";
+        }
+        if(chapterNumber == 17)
+        {
+            ananame="complex-decisions-exercises";
+            ananame2="Making Complex Decisions";
+        }
+        if(chapterNumber == 18)
+        {
+            ananame="concept-learning-exercises";
+            ananame2="Learning From Examples";
+        }
+        if(chapterNumber == 19)
+        {
+            ananame="ilp-exercises";
+            ananame2="Knowledge in Learning";
+        }
+        if(chapterNumber == 20)
+        {
+            ananame="bayesian-learning-exercises";
+            ananame2="Learning Probabilistic Models";
+        }
+        if(chapterNumber == 21)
+        {
+            ananame="reinforcement-learning-exercises";
+            ananame2="ReinforcementLearning";
+        }
+        if(chapterNumber == 22)
+        {
+            ananame="nlp-communicating-exercises";
+            ananame2="Natural Language Processing";
+        }
+        if(chapterNumber == 23)
+        {
+            ananame="nlp-english-exercises";
+            ananame2="Natural Language for Communication";
+        }
+        if(chapterNumber == 24)
+        {
+            ananame="perception-exercises";
+            ananame2="Perception";
+        }
+        if(chapterNumber == 25)
+        {
+            ananame="robotics-exercises";
+            ananame2="Robotics";
+        }
+        if(chapterNumber == 26)
+        {
+            ananame="philosophy-exercises";
+            ananame2="Philosophical Foundations";
+        }
+        
+        document.write('<div class="card">');
+        document.write('<div class="card-header p-2">');
+        document.write('<a href=\'{{site.baseurl}}/'+ananame+'/ex_'+exerciseNumber+'\' class="p-2">'+'Chapter: '+chapterNumber+' '+ananame2+'    |    Exercise: '+exerciseNumber);
+        document.write('</a>');
+        document.write('</div>');
+        
+        document.write('</div>');
+        document.write('<br>');
+        
+    }
+</script>
