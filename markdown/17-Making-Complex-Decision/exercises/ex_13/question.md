@@ -1,7 +1,7 @@
 
 
 Consider the $4\times 3$ world shown in
-Figure <a href="#">sequential-decision-world-figure</a><br>.
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a><br>.
 
 1.  Implement an environment simulator for this environment, such that
     the specific geography of the environment is easily altered. Some

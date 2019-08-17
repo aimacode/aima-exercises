@@ -1,9 +1,9 @@
 
 
 Suppose that you are working with the robot in
-Exercise <a href="#">AB-manipulator-ex</a> and you are given the
+Exercise <a class="exerciseRef" href="{{ site.baseurl }}/nlp-english-exercises/ex_3/">AB-manipulator-ex</a> and you are given the
 problem of finding a path from the starting configuration of
-figure <a href="figRobot2">figRobot2</a> to the ending configuration. Consider a potential
+figure <a class="insideExercisesFigRef" href="#figRobot2">figRobot2</a> to the ending configuration. Consider a potential
 function $$D(A, {Goal})^2 + D(B, {Goal})^2 + \frac{1}{D(A, B)^2}$$
 where $D(A,B)$ is the distance between the closest points of A and B.<br>
 

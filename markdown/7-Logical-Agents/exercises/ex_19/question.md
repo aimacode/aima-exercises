@@ -10,7 +10,7 @@ CSPs.<br>
 2.  How many solutions are there for this general SAT problem as a
     function of $n$?<br>
 
-3.  Suppose we apply {Backtracking-Search} (page <a href="#">backtracking-search-algorithm</a>) to find <i>all</i>
+3.  Suppose we apply {Backtracking-Search} (page <a class="pageRef" title="" href="#">backtracking-search-algorithm</a>) to find <i>all</i>
     solutions to a SAT CSP of the type given in (a). (To find
     <i>all</i> solutions to a CSP, we simply modify the basic
     algorithm so it continues searching after each solution is found.)
@@ -22,5 +22,5 @@ CSPs.<br>
     by forward chaining (unit propagation). We also know that every
     tree-structured binary CSP with discrete, finite domains can be
     solved in time linear in the number of variables
-    (Section <a href="#">csp-structure-section</a>). Are these two
+    (Section <a class="sectionRef" title="" href="#">csp-structure-section</a>). Are these two
     facts connected? Discuss.

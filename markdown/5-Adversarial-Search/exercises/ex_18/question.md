@@ -1,7 +1,7 @@
 
 
 This question considers pruning in games with chance nodes.
-Figure <a href="#trivial-chance-game-figure">trivial-chance-game-figure</a> shows the complete
+Figure <a class="insideExerciseFigRef" href="#trivial-chance-game-figure">trivial-chance-game-figure</a> shows the complete
 game tree for a trivial game. Assume that the leaf nodes are to be
 evaluated in left-to-right order, and that before a leaf node is
 evaluated, we know nothing about its value—the range of possible values

@@ -1,7 +1,7 @@
 
 
 Consider the two-player game described in
-Figure <a href="#line-game4-figure">line-game4-figure</a><br>
+Figure <a class="insideExerciseFigRef" href="#line-game4-figure">line-game4-figure</a><br>
 
 1.  Draw the complete game tree, using the following conventions:<br>
 

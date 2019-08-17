@@ -1,6 +1,6 @@
 
 
-(Adapted from @Barwise+Etchemendy:1993 .) Given the following, can you prove that the unicorn is
+(Adapted from <a class="paperRef" title="" href="">Barwise+Etchemendy:1993</a> .) Given the following, can you prove that the unicorn is
 mythical? How about magical? Horned?<br>
 
 Note: If the unicorn is mythical, then it is immortal, but if it is not

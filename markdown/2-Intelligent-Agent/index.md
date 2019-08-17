@@ -196,3 +196,13 @@ and agents for the vacuum-cleaner world.
 </div>
 
 <br>
+<div class="card">
+    <div class="card-header p-2">
+        <a href='ex_15/' class="p-2">Exercise 16</a>
+        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch2ex16');" href="#"><i id="ch2ex16" class="fas fa-bookmark" style="color:white"></i></button>
+        <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex2.16');" href="#"><i id="ch2ex15" class="fas fa-thumbs-up" style="color:white"></i></button>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{% include_relative exercises/ex_16/question.md %}</p>
+    </div>
+</div>

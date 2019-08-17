@@ -1,6 +1,6 @@
 
 
-Imagine that, in Exercise \[two-friends-exercise\], one of
+Imagine that, in Exercise <a class="exerciseRef" href="{{ site.baseurl }}/search-exercises/ex_5/">two-friends-exercise</a>, one of
 the friends wants to avoid the other. The problem then becomes a
 two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal

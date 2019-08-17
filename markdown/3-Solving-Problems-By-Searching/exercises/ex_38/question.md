@@ -1,6 +1,4 @@
-
-
-<a href="#">tsp-mst-exercise</a>The traveling salesperson problem (TSP) can be
+The traveling salesperson problem (TSP) can be
 solved with the minimum-spanning-tree (MST) heuristic, which estimates
 the cost of completing a tour, given that a partial tour has already
 been constructed. The MST cost of a set of cities is the smallest sum of

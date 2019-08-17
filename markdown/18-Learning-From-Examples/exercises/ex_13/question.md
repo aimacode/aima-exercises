@@ -1,7 +1,7 @@
 
 
 In
-Section <a href="#">broadening-decision-tree-section</a>, we noted that
+Section <a class="sectionRef" title="" href="#">broadening-decision-tree-section</a>, we noted that
 attributes with many different possible values can cause problems with
 the gain measure. Such attributes tend to split the examples into
 numerous small classes or even singleton classes, thereby appearing to

@@ -1,6 +1,6 @@
 
 
-On page <a href="#">non-negative-g</a>, we said that we would not consider problems
+On page <a class="pageRef" title="" href="#">non-negative-g</a>, we said that we would not consider problems
 with negative path costs. In this exercise, we explore this decision in
 more depth.<br>
 

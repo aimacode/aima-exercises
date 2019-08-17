@@ -1,7 +1,7 @@
 
 
 The probit distribution defined on
-page <a href="#">probit-page</a> describes the probability distribution for a Boolean
+page <a class="pageRef" title="" href="#">probit-page</a> describes the probability distribution for a Boolean
 child, given a single continuous parent.<br>
 
 1.  How might the definition be extended to cover multiple continuous

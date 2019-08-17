@@ -2,7 +2,7 @@
 
 The <b>arc reversal</b> operation of in a Bayesian network allows us to change the direction
 of an arc $X\rightarrow Y$ while preserving the joint probability
-distribution that the network represents @Shachter:1986. Arc reversal
+distribution that the network represents <a class="paperRef" title="" href="">Shachter:1986</a>. Arc reversal
 may require introducing new arcs: all the parents of $X$ also become
 parents of $Y$, and all parents of $Y$ also become parents of $X$.<br>
 

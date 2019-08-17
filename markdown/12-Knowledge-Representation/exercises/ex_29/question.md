@@ -3,8 +3,8 @@
 A complete solution to the problem of
 inexact matches to the buyer’s description in shopping is very difficult
 and requires a full array of natural language processing and information
-retrieval techniques. (See Chapters <a href="#">nlp1-chapter</a>
-and <a href="#">nlp-english-chapter</a>.) One small step is to allow the user to
+retrieval techniques. (See Chapters <a class="chapterRef" title="" href="{{site.baseurl}}/nlp1-exercises/">nlp1-chapter</a>
+and <a class="chapterRef" title="" href="{{site.baseurl}}/nlp-communicating-exercises/">nlp-english-chapter</a>.) One small step is to allow the user to
 specify minimum and maximum values for various attributes. The buyer
 must use the following grammar for product descriptions:<br>
 

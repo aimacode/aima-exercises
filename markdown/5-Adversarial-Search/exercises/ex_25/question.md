@@ -2,7 +2,7 @@
 
 Consider carefully the interplay of chance events and partial
 information in each of the games in
-Exercise <a href="#game-playing-chance-exercise">game-playing-chance-exercise</a>.<br>
+Exercise <a class="exerciseRef" href="{{ site.baseurl }}/game-playing-exercises/ex_4/">game-playing-chance-exercise</a>.<br>
 
 1.  For which is the standard expectiminimax model appropriate?
     Implement the algorithm and run it in your game-playing agent, with

@@ -1,7 +1,7 @@
 
 
 Recall the definition of <i>value of
-information</i> in Section [VPI-section](#/).<br>
+information</i> in Section <a class="sectionRef" title="" class="sectionRef" href="">VPI-section</a>.<br>
 
 1.  Prove that the value of information is nonnegative and
     order independent.<br>
