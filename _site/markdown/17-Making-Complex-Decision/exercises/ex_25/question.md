@@ -25,7 +25,7 @@ and 1 for a tie. <br>
     Under what conditions, in terms of $p$ and $q$, would it be rational
     for both teams to agree to this pact?<br>
 
-4.  @Longley+Sankaran:2005 report that since the rule change, the percentage of games with a
+4.  <a class="paperRef" title="" href="">Longley+Sankaran:2005</a> report that since the rule change, the percentage of games with a
     winner in overtime went up 18.2%, as desired, but the percentage of
     overtime games also went up 3.6%. What does that suggest about
     possible collusion or conservative play after the rule change?<br>

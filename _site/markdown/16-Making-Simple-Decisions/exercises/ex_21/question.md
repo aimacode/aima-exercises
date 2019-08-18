@@ -1,7 +1,7 @@
 
 
 This exercise completes the analysis of the
-airport-siting problem in Figure <a href="#">airport-id-figure</a><br>.
+airport-siting problem in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/airport-id-figure.png">airport-id-figure</a><br>.
 
 1.  Provide reasonable variable domains, probabilities, and utilities
     for the network, assuming that there are three possible sites.<br>

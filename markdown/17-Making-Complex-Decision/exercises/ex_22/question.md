@@ -1,6 +1,6 @@
 
 
-The following payoff matrix, from @Blinder:1983 by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
+The following payoff matrix, from <a class="paperRef" title="" href="">Blinder:1983</a> by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
 politicians and the Federal Reserve.<br>
 
 |     | Fed: contract | Fed: do nothing  | Fed: expand     |

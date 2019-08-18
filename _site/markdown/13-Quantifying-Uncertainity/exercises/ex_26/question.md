@@ -1,6 +1,6 @@
 
 
-(Adapted from Pearl [-@Pearl:1988].) Suppose you are a witness to a
+(Adapted from Pearl [<a class="paperRef" title="" href="">Pearl:1988</a>].) Suppose you are a witness to a
 nighttime hit-and-run accident involving a taxi in Athens. All taxis in
 Athens are blue or green. You swear, under oath, that the taxi was blue.
 Extensive testing shows that, under the dim lighting conditions,

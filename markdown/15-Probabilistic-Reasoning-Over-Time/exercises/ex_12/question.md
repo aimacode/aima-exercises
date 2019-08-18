@@ -6,7 +6,7 @@ system whose behavior switches unpredictably among a set of $k$ distinct
 a series of distinct maneuvers that the missile may attempt to track. A
 Bayesian network representation of such a <b>switching Kalman
 filter</b> model is shown in
-Figure <a class="insideExercisesFigRef"  href="#switching-kf-figure">switching-kf-figure</a>.
+Figure <a class="insideExerciseFigRef"  href="#switching-kf-figure">switching-kf-figure</a>.
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate

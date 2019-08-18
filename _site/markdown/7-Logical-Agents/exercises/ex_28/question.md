@@ -1,5 +1,3 @@
-[Exercise 7.28 \[minesweeper-exercise\]](ex_28/)
-
 Minesweeper, the well-known computer game, is
 closely related to the wumpus world. A minesweeper world is
 a rectangular grid of $N$ squares with $M$ invisible mines scattered

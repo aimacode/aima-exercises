@@ -1,7 +1,7 @@
 
 
 Consider the $101 \times 3$ world shown in
-Figure <a class="insideExercisesFigRef"  href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
+Figure <a class="insideExerciseFigRef"  href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
 has a choice of two deterministic actions, <i>Up</i> or
 <i>Down</i>, but in the other states the agent has one
 deterministic action, <i>Right</i>. Assuming a discounted reward

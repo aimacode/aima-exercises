@@ -1,6 +1,6 @@
 
 
-Alan Perlis [@Perlis:1982] wrote, “A year spent in artificial
+Alan Perlis [<a class="paperRef" title="" href="">Perlis:1982</a>] wrote, “A year spent in artificial
 intelligence is enough to make one believe in God”. He also wrote, in a
 letter to Philip Davis, that one of the central dreams of computer
 science is that “through the performance of computers and their programs

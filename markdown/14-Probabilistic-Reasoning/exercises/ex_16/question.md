@@ -1,6 +1,6 @@
 
 
-Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a><br>.
+Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a><br>.
 
 1.  Which of the following are asserted by the network
     <i>structure</i>?<br>
@@ -22,7 +22,7 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a>?<br>
+    Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a>?<br>
 
 5.  Suppose we want to add the variable
     $P{{\,=\,}}{PresidentialPardon}$ to the network; draw the new

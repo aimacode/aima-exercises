@@ -12,7 +12,7 @@ individually in sealed, identical, black boxes.<br>
 
 Now you, the customer, have just bought a Surprise candy at the store
 but have not yet opened the box. Consider the three Bayes nets in
-Figure <a class="insideExercisesFigRef"  href="#3candy-figure">3candy-figure</a>.<br>
+Figure <a class="insideExerciseFigRef"  href="#3candy-figure">3candy-figure</a>.<br>
 
 1.  Which network(s) can correctly represent
     ${\textbf{P}}(Flavor,Wrapper,Shape)$?<br>

@@ -1,6 +1,6 @@
 Develop a formal proof of correctness for alpha–beta pruning. To do
 this, consider the situation shown in
-Figure <a href="#alpha-beta-proof-figure">alpha-beta-proof-figure</a>. The question is whether
+Figure <a class="insideExerciseFigRef" href="#alpha-beta-proof-figure">alpha-beta-proof-figure</a>. The question is whether
 to prune node $n_j$, which is a max-node and a descendant of node $n_1$.
 The basic idea is to prune it if and only if the minimax value of $n_1$
 can be shown to be independent of the value of $n_j$.<br>

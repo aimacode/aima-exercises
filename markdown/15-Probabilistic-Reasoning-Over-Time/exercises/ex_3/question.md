@@ -2,7 +2,7 @@
 
 This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
-Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
+Figure <a class="insideBookFigRef" title="" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
 We wish to compute $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$$ for
 $$k=1,\ldots ,t$$. This will be done with a divide-and-conquer
 approach.<br>

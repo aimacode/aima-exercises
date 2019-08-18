@@ -1,7 +1,7 @@
 
 
 Consider the network for car diagnosis shown in
-Figure <a class="insideExercisesFigRef" href="#car-starts-figure">car-starts-figure</a><br>.
+Figure <a class="insideExerciseFigRef" href="#car-starts-figure">car-starts-figure</a><br>.
 
 1.  Extend the network with the Boolean variables ${IcyWeather}$ and
     ${StarterMotor}$.<br>

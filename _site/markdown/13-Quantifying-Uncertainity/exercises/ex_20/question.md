@@ -11,4 +11,4 @@ some background evidence $\textbf{e}$: <br>
     $${\textbf{P}}(X,Y {{\,|\,}}\textbf{e}) = {\textbf{P}}(X{{\,|\,}}Y,\textbf{e}) {\textbf{P}}(Y{{\,|\,}}\textbf{e})\ .$$ <br>
 
 2.  Prove the conditionalized version of Bayes’ rule in
-    Equation (<a href="#">conditional-bayes-equation</a>). <br>
+    Equation (<a class="equationRef" title="" href="#">conditional-bayes-equation</a>). <br>

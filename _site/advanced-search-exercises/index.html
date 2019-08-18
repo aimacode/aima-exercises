@@ -192,7 +192,7 @@ special cases:<br />
     <div class="card-body">
         <p class="card-text">
 
-Exercise <a href="#">brio-exercise</a> considers the problem of
+Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_19/">brio-exercise</a> considers the problem of
 building railway tracks under the assumption that pieces fit exactly
 with no slack. Now consider the real problem, in which pieces don’t fit
 exactly but allow for up to 10 degrees of rotation to either side of the
@@ -214,11 +214,11 @@ solved by simulated annealing.
         <p class="card-text">
 
 In this exercise, we explore the use of local search methods to solve
-TSPs of the type defined in Exercise <a href="#">tsp-mst-exercise</a><br />
+TSPs of the type defined in Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a><br />
 
 1.  Implement and test a hill-climbing method to solve TSPs. Compare the
     results with optimal solutions obtained from the A* algorithm with
-    the MST heuristic (Exercise <a href="#">tsp-mst-exercise</a>)<br />
+    the MST heuristic (Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a>)<br />
 
 2.  Repeat part (a) using a genetic algorithm instead of hill climbing.
     You may want to consult @Larranaga+al:1999 for some suggestions for representations.
@@ -259,17 +259,17 @@ Comment on your results.
         <p class="card-text">
 
 The **And-Or-Graph-Search** algorithm in
-Figure <a href="#">and-or-graph-search-algorithm</a> checks for
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/and-or-graph-search-algorithm.png">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
 Suppose that, in addition, the algorithm were to store
 *every* visited state and check against that list. (See in
-Figure <a href="#">breadth-first-search-algorithm</a> for an example.)
+Figure <a class="insideBookFigRef" href="#">breadth-first-search-algorithm</a> for an example.)
 Determine the information that should be stored and how the algorithm
 should use that information when a repeated state is found.
 (*Hint*: You will need to distinguish at least between
 states for which a successful subplan was constructed previously and
 states for which no subplan could be found.) Explain how to use labels,
-as defined in Section <a href="#">cyclic-plan-section</a>, to avoid
+as defined in Section <a class="sectionRef" title="" href="#">cyclic-plan-section</a>, to avoid
 having multiple copies of subplans.
 </p>
     </div>
@@ -308,9 +308,7 @@ implementation to check your results.
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.7');" href="#"><i id="ch4ex7" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">
-
-In Section <a href="#">conformant-section</a> we introduced belief
+        <p class="card-text">In Section <a class="sectionRef" title="" href="#">conformant-section</a> we introduced belief
 states to solve sensorless search problems. A sequence of actions solves
 a sensorless problem if it maps every physical state in the initial
 belief state $b$ to a goal state. Suppose the agent knows $h^\*(s)$, the
@@ -319,7 +317,7 @@ observable problem, for every state $s$ in $b$. Find an admissible
 heuristic $h(b)$ for the sensorless problem in terms of these costs, and
 prove its admissibilty. Comment on the accuracy of this heuristic on the
 sensorless vacuum problem of
-Figure <a href="#">vacuum2-sets-figure</a>. How well does A* perform?
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/vacuum2-sets-figure.png">vacuum2-sets-figure</a>. How well does A* perform?
 </p>
     </div>
 </div>
@@ -361,7 +359,7 @@ partially observable environments.<br />
     </div>
     <div class="card-body">
         <p class="card-text">
-On page <a href="#">multivalued-sensorless-page</a> it was assumed
+On page <a class="pageRef" title="" href="#">multivalued-sensorless-page</a> it was assumed
 that a given action would have the same cost when executed in any
 physical state within a given belief state. (This leads to a
 belief-state search problem with well-defined step costs.) Now consider
@@ -421,7 +419,7 @@ is unsolvable.
 
 <div class="card">
     <div class="card-header p-2">
-        <a href="ex_1/" class="p-2">Exercise 12 (path-planning-agent-exercise)</a>
+        <a href="ex_12/" class="p-2">Exercise 12 (path-planning-agent-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex12');" href="#"><i id="ch4ex12" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.12');" href="#"><i id="ch4ex12" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
@@ -429,7 +427,7 @@ is unsolvable.
         <p class="card-text">
 
 We can turn the navigation problem in
-Exercise <a hreef="#">path-planning-exercis</a> into an environment as
+Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_9/">path-planning-exercise</a> into an environment as
 follows:<br />
 
 -   The percept will be a list of the positions, *relative to the
@@ -486,7 +484,7 @@ follows:<br />
 
 <div class="card">
     <div class="card-header p-2">
-        <a href="ex_1/" class="p-2">Exercise 13 (online-offline-exercise)</a>
+        <a href="ex_13/" class="p-2">Exercise 13 (online-offline-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex13');" href="#"><i id="ch4ex13" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.13');" href="#"><i id="ch4ex13" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
@@ -495,7 +493,7 @@ follows:<br />
 
 Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
-Figure <a href="#">maze-3x3-figure</a>. The agent knows that its
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/maze-3x3-figure.png">maze-3x3-figure</a>. The agent knows that its
 initial location is (1,1), that the goal is at (3,3), and that the
 actions *Up*, *Down*, *Left*, *Right* have their usual
 effects unless blocked by a wall. The agent does *not* know
@@ -534,7 +532,7 @@ unknown environments.
 
 Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
-Figure <a href="#">maze-3x3-figure</a>. The agent knows that its
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/maze-3x3-figure.png">maze-3x3-figure</a>. The agent knows that its
 initial location is (3,3), that the goal is at (1,1), and that the four
 actions *Up*, *Down*, *Left*, *Right* have their usual
 effects unless blocked by a wall. The agent does *not* know
@@ -573,9 +571,9 @@ unknown environments.
 
 In this exercise, we examine hill climbing
 in the context of robot navigation, using the environment in
-Figure <a href="#">geometric-scene-figure</a> as an example.<br />
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/geometric-scene-figure.png">geometric-scene-figure</a> as an example.<br />
 
-1.  Repeat Exercise <a href="#">path-planning-agent-exercise</a> using
+1.  Repeat Exercise <a class="exerciseRef" title="" href="/aima-exercises/advanced-search-exercises/ex_11/">path-planning-agent-exercise</a> using
     hill climbing. Does your agent ever get stuck in a local minimum? Is
     it *possible* for it to get stuck with convex
     obstacles?<br />
@@ -670,6 +668,7 @@ Relate the time complexity of LRTA* to its space complexity.
         <script src="/aima-exercises/js/answer.js"></script>
         <script src="/aima-exercises/js/commsol.js"></script>
         <script src="/aima-exercises/js/forms.js"></script>
+        <script src="/aima-exercises/js/crossref.js"></script>
         <script src="/aima-exercises/js/bookmark.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>

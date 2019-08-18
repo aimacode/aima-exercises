@@ -1,7 +1,7 @@
 
 
 Without looking back at
-Exercise <a class="exerciseRef" href="{{ site.baseurl }}/nlp-english-exercises/ex_1/">washing-clothes-exercise</a>, answer the following
+Exercise <a class="exerciseRef" title="" href="{{ site.baseurl }}/nlp-english-exercises/ex_1/">washing-clothes-exercise</a>, answer the following
 questions:<br>
 
 1.  What are the four steps that are mentioned?<br>
