@@ -1,6 +1,6 @@
 
 
-Consider the Bayes net shown in Figure <a href="#politics-figure">politics-figure</a><br>.
+Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a><br>.
 
 1.  Which of the following are asserted by the network
     <i>structure</i>?<br>
@@ -18,12 +18,17 @@ Consider the Bayes net shown in Figure <a href="#politics-figure">politics-figu
     motivated prosecutor.<br>
 
 4.  A <b>context-specific independence</b> (see
-    page <a href="#">CSI-page</a>) allows a variable to be independent of some of
+    page <a class="pageRef" title="" href="#">CSI-page</a>) allows a variable to be independent of some of
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    Figure <a href="#politics-figure">politics-figure</a>?<br>
+    Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a>?<br>
 
 5.  Suppose we want to add the variable
     $P{{\,=\,}}{PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br>
+<figure>
+  <img src="https://aimacode.github.io/aima-exercises/figures/politics.svg" alt="politics-figure" id="politics-figure" style="width:100%">
+  <figcaption><center><b>A simple Bayes net with
+  Boolean variables B = {BrokeElectionLaw}, I = {Indicted}, M = {PoliticallyMotivatedProsecutor}, G= {FoundGuilty}, J = {Jailed}.</b></center></figcaption>
+</figure>

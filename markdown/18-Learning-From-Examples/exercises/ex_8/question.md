@@ -12,6 +12,6 @@ attributes ($A_1, A_2$, and $A_3$) and one binary output:<br>
 | $\textbf{x}_5$  | 1 | 1  | 0  | 1 |
 
 
-Use the algorithm in Figure <a href="#">DTL-algorithm</a>
-(page <a href="#">DTL-algorithm</a>) to learn a decision tree for these data. Show the
+Use the algorithm in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/DTL-algorithm.png">DTL-algorithm</a>
+(page <a class="pageRef" title="" href="#">DTL-algorithm</a>) to learn a decision tree for these data. Show the
 computations made to determine the attribute to split at each node.

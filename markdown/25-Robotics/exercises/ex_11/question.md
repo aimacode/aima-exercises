@@ -1,7 +1,7 @@
 
 
-In Figure <a href="#">Fig5</a>(b) on
-page <a href="#">Fig5</a>, we encountered an augmented finite state machine for
+In Figure <a class="insideExercisesFigRef" href="#">Fig5</a>(b) on
+page <a class="pageRef" title="" href="#">Fig5</a>, we encountered an augmented finite state machine for
 the control of a single leg of a hexapod robot. In this exercise, the
 aim is to design an AFSM that, when combined with six copies of the
 individual leg controllers, results in efficient, stable locomotion. For

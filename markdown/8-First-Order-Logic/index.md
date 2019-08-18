@@ -75,7 +75,7 @@ permalink: /fol-exercises/
 
 <div class="card">
     <div class="card-header p-2">
-        <a href='ex_6/' class="p-2">Exercise 6 (8puzzle-parity-exercise)</a>
+        <a href='ex_6/' class="p-2">Exercise 6 (fol-model-count-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch8ex6');" href="#"><i id="ch8ex6" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex8.6');" href="#"><i id="ch8ex6" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>

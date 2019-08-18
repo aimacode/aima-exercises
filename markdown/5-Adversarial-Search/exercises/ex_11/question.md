@@ -13,6 +13,6 @@ games.<br>
     effective branching factor come to the ideal case of perfect move
     ordering?<br>
 
-4.  Implement a selective search algorithm, such as B\* @Berliner:1979,
+4.  Implement a selective search algorithm, such as B\* <a class="paperRef" title="" href="">Berliner:1979</a>,
     conspiracy number search @McAllester:1988, or MGSS\*
-    @Russell+Wefald:1989 and compare its performance to A\*.
+    <a class="paperRef" title="" href="">Russell+Wefald:1989</a> and compare its performance to A\*.

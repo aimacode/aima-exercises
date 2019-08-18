@@ -267,3 +267,6 @@ permalink: /csp-exercises/
 </div>
 
 <br>
+<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
+@Littman+al:1999 tackle the harder problem of solving them.</div>
+

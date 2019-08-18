@@ -1,5 +1,5 @@
 
-On page <a href="#">multivalued-sensorless-page</a> it was assumed
+On page <a class="pageRef" title="" href="#">multivalued-sensorless-page</a> it was assumed
 that a given action would have the same cost when executed in any
 physical state within a given belief state. (This leads to a
 belief-state search problem with well-defined step costs.) Now consider

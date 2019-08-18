@@ -22,5 +22,3 @@ squares missing, a $10\times 1$ row of squares, etc.).<br>
 4.  Describe exactly the set of solvable instances that have a
     tree-structured constraint graph.<br>
 
-<div id="footnote1">^1. @Ginsberg+al:1990 discuss several methods for constructing crossword puzzles.
-@Littman+al:1999 tackle the harder problem of solving them.</div>

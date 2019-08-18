@@ -1,7 +1,7 @@
 
 
 Given the full joint distribution shown in
-Figure <a href="#">dentist-joint-table</a>, calculate the following:<br>
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/dentist-joint-table.png">dentist-joint-table</a>, calculate the following:<br>
 
 1.  $\textbf{P}({toothache})$.<br>
 

@@ -1,6 +1,6 @@
 
 
-In Section <a href="#">hmm-localization-section</a>, the prior
+In Section <a class="sectionRef" title="" href="#">hmm-localization-section</a>, the prior
 distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually

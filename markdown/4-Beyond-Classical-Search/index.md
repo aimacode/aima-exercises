@@ -153,7 +153,7 @@ permalink: /advanced-search-exercises/
 
 <div class="card">
     <div class="card-header p-2">
-        <a href='ex_1/' class="p-2">Exercise 12 (path-planning-agent-exercise)</a>
+        <a href='ex_12/' class="p-2">Exercise 12 (path-planning-agent-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex12');" href="#"><i id="ch4ex12" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.12');" href="#"><i id="ch4ex12" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
@@ -166,7 +166,7 @@ permalink: /advanced-search-exercises/
 
 <div class="card">
     <div class="card-header p-2">
-        <a href='ex_1/' class="p-2">Exercise 13 (online-offline-exercise)</a>
+        <a href='ex_13/' class="p-2">Exercise 13 (online-offline-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex13');" href="#"><i id="ch4ex13" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex4.13');" href="#"><i id="ch4ex13" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>

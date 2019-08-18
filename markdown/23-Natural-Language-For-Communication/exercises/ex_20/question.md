@@ -1,6 +1,6 @@
 
 
-(Adapted from [@Knight:1999].) Our translation model assumes that, after the phrase
+(Adapted from [<a class="paperRef" title="" href="">Knight:1999</a>].) Our translation model assumes that, after the phrase
 translation model selects phrases and the distortion model permutes
 them, the language model can unscramble the permutation. This exercise
 investigates how sensible that assumption is. Try to unscramble these

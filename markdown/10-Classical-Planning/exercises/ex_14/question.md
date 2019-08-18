@@ -1,7 +1,7 @@
 
 
 Examine the definition of **bidirectional
-search** in Chapter <a href="#">search-chapter</a>.<br>
+search** in Chapter <a class="chapterRef" title="" href="{{site.baseurl}}/search-exercises/">search-chapter</a>.<br>
 
 1.  Would bidirectional state-space search be a good idea for planning?<br>
 

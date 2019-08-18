@@ -1,7 +1,7 @@
 ---
 layout: exercise
 title: Exercise 3.5
-permalink: /search-exercises/ex_4/
+permalink: /search-exercises/ex_5/
 breadcrumb: 3-Solving-Problems-By-Searching
 canonical_id: ch3ex5
 ---

@@ -2,7 +2,7 @@
 
 This exercise investigates properties of
 the Beta distribution defined in
-Equation (<a href="#">beta-equation</a><br>.
+Equation (<a class="equationRef" title="" href="#">beta-equation</a><br>.
 
 1.  By integrating over the range $[0,1]$, show that the normalization
     constant for the distribution ${{\rm beta}}[a,b]$ is given by

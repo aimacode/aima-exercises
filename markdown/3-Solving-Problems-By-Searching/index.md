@@ -453,7 +453,7 @@ permalink: /search-exercises/
 <br>
 <div class="card">
     <div class="card-header p-2">
-        <a href='ex_37/' class="p-2">Exercise 37</a>
+        <a href='ex_37/' class="p-2">Exercise 37 (consistent-heuristic-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch3ex37');" href="#"><i id="ch3ex37" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex3.37');" href="#"><i id="ch3ex37" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
@@ -465,7 +465,7 @@ permalink: /search-exercises/
 <br>
 <div class="card">
     <div class="card-header p-2">
-        <a href='ex_38/' class="p-2">Exercise 38</a>
+        <a href='ex_38/' class="p-2">Exercise 38 (tsp-mst-exercise)</a>
         <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch3ex38');" href="#"><i id="ch3ex38" class="fas fa-bookmark" style="color:white"></i></button>
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex3.38');" href="#"><i id="ch3ex38" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>

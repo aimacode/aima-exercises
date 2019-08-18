@@ -1,6 +1,6 @@
 
 
-(Adapted from @Fagin+al:1995.) Consider a game played
+(Adapted from <a class="paperRef" title="" href="">Fagin+al:1995</a>.) Consider a game played
 with a deck of just 8 cards, 4 aces and 4 kings. The three players,
 Alice, Bob, and Carlos, are dealt two cards each. Without looking at
 them, they place the cards on their foreheads so that the other players
