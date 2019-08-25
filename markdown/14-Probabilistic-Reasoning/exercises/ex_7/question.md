@@ -11,7 +11,7 @@ from either of an individual’s parents, with a small nonzero probability
 $m$ of a random mutation flipping the handedness.<br>
 
 1.  Which of the three networks in
-    Figure <a class="insideExercisesFigRef" href="#handedness-figure">handedness-figure</a> claim that
+    Figure <a class="insideExerciseFigRef" href="#handedness-figure">handedness-figure</a> claim that
     $ {\textbf{P}}(G_{father},G_{mother},G_{child}) = {\textbf{P}}(G_{father}){\textbf{P}}(G_{mother}){\textbf{P}}(G_{child})$?<br>
 
 2.  Which of the three networks make independence claims that are

@@ -3,7 +3,7 @@
 Consider the problem of solving two 8-puzzles.<br>
 
 1.  Give a complete problem formulation in the style of
-    Chapter <a class="chapterRef" title="" href="{{site.baseurl}}/search-exercises/">search-chapter.</a><br>
+    Chapter <a class="chapterRef" title="" href="{{site.baseurl}}/search-exercises/">search-chapter</a><br>
 
 2.  How large is the reachable state space? Give an exact
     numerical expression.<br>

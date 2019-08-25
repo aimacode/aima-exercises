@@ -1,7 +1,7 @@
 
 
 Consider the Bayesian network in
-Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/burglary-figure.png">burglary-figure.</a><br>
+Figure <a class="insideBookFigRef" title="" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/burglary-figure.png">burglary-figure</a><br>
 
 1.  If no evidence is observed, are ${Burglary}$ and ${Earthquake}$
     independent? Prove this from the numerical semantics and from the

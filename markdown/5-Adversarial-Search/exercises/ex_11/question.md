@@ -14,5 +14,5 @@ games.<br>
     ordering?<br>
 
 4.  Implement a selective search algorithm, such as B\* <a class="paperRef" title="" href="">Berliner:1979</a>,
-    conspiracy number search @McAllester:1988, or MGSS\*
+    conspiracy number search <a class="paperRef" title="" href="">McAllester:1988</a>, or MGSS\*
     <a class="paperRef" title="" href="">Russell+Wefald:1989</a> and compare its performance to A\*.

@@ -1,12 +1,12 @@
 
 
 Consider the simplified robot shown in
-Figure <a href="#FigEx3">FigEx3</a>. Suppose the robot’s Cartesian
+Figure <a class="insideExercisesFigRef"  href="#FigEx3">FigEx3</a>. Suppose the robot’s Cartesian
 coordinates are known at all times, as are those of its goal location.
 However, the locations of the obstacles are unknown. The robot can sense
 obstacles in its immediate proximity, as illustrated in this figure. For
 simplicity, let us assume the robot’s motion is noise-free, and the
-state space is discrete. Figure <a href="#FigEx3">FigEx3</a> is only one
+state space is discrete. Figure <a class="insideExercisesFigRef"  href="#FigEx3">FigEx3</a> is only one
 example; in this exercise you are required to address all possible grid
 worlds with a valid path from the start to the goal location.<br>
 

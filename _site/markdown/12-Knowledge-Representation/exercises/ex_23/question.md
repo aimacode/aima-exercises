@@ -1,7 +1,7 @@
 
 
 The assumption of <i>logical omniscience,</i> discussed on
-page <a href="#">logical-omniscience</a>, is of course not true of any actual reasoners.
+page <a class="pageRef" title="" href="#">logical-omniscience</a>, is of course not true of any actual reasoners.
 Rather, it is an <i>idealization</i> of the reasoning process
 that may be more or less acceptable depending on the applications.
 Discuss the reasonableness of the assumption for each of the following

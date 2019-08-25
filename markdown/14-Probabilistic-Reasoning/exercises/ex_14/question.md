@@ -6,7 +6,7 @@ telescope can also (with a much smaller probability $f$) be badly out of
 focus (events $F_1$ and $F_2$), in which case the scientist will
 undercount by three or more stars (or if $N$ is less than 3, fail to
 detect any stars at all). Consider the three networks shown in
-Figure <a class="insideExercisesFigRef"  href="#telescope-nets-figure">telescope-nets-figure</a>.<br>
+Figure <a class="insideExerciseFigRef"  href="#telescope-nets-figure">telescope-nets-figure</a>.<br>
 
 1.  Which of these Bayesian networks are correct (but not
     necessarily efficient) representations of the preceding information?<br>

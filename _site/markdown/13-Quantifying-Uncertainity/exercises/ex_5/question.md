@@ -1,7 +1,7 @@
 
 
 This question deals with the properties
-of possible worlds, defined on page <a href="#">possible-worlds-page</a> as assignments to all
+of possible worlds, defined on page <a class="pageRef" title="" href="#">possible-worlds-page</a> as assignments to all
 random variables. We will work with propositions that correspond to
 exactly one possible world because they pin down the assignments of all
 the variables. In probability theory, such propositions are called <b>atomic event</b>. For

@@ -1,6 +1,6 @@
 
 
-Equation (<a href="#">parameter-joint-repn-equation</a> on
+Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a>) on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{{\,|\,}}{Parents}(X_i))$. This exercise asks you to derive
@@ -9,8 +9,8 @@ ${\textbf{ P}}(X_i{{\,|\,}}{Parents}(X_i))$ from this definition.<br>
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
-    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and (<a class="pageRef" title="" href="#">marginalization-equation</a>
-    (pages <a href="#">conditional-probability-equation</a> and <a href="#">marginalization-equation</a>)
+    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and <a class="equationRef" title="" href="#">marginalization-equation</a>)
+    (pages <a class="pageRef" title="" href="#">conditional-probability-equation</a> and <a class="pageRef" title="" href="#">marginalization-equation</a>)
     to express the conditional probability $P(z{{\,|\,}}y)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.<br>
 

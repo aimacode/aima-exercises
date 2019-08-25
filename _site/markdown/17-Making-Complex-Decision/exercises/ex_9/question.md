@@ -2,7 +2,7 @@
 
 This exercise considers two-player MDPs that correspond to zero-sum,
 turn-taking games like those in
-Chapter <a href="#">game-playing-chapter</a>. Let the players be $A$
+Chapter <a class="chapterRef" href="{{site.baseurl}}/game-playing-exercises/">game-playing-chapter</a>. Let the players be $A$
 and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
 reward for $B$ is always equal and opposite.)<br>
 
@@ -16,7 +16,7 @@ reward for $B$ is always equal and opposite.)<br>
     and define a suitable termination criterion.<br>
 
 3.  Consider the game described in
-    Figure <a href="#">line-game4-figure</A> on page <a href="#">line-game4-figure</a>.
+    Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/line-game4-figure.png">line-game4-figure</a> on page <a class="pageRef" title="" href="#">line-game4-figure</a>.
     Draw the state space (rather than the game tree), showing the moves
     by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
     state with $R(s)$. You will find it helpful to arrange the states
@@ -29,6 +29,6 @@ reward for $B$ is always equal and opposite.)<br>
 
     <figure>
       <img src="https://aimacode.github.io/aima-exercises/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" id="grid-mdp-figure" style="width:100%">
-      <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a href="#">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a href="#">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
+      <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a class="exerciseRef" title="" href="">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a class="exerciseRef" title="" href="">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
       The start state has reward 0.</b></center></figcaption>
     </figure>

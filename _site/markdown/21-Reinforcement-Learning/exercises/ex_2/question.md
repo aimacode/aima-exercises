@@ -1,6 +1,6 @@
 
 
-Chapter <a href="#">complex-decisions-chapter</a> defined a
+Chapter <a class="chapterRef" href="{{site.baseurl}}/concept-decisions-exercise/">complex-decisions-chapter</a> defined a
 <b>proper policy</b> for an MDP as one that is
 guaranteed to reach a terminal state. Show that it is possible for a
 passive ADP agent to learn a transition model for which its policy $\pi$

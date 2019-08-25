@@ -13,7 +13,7 @@ is in DNF.<br>
 2.  Construct an algorithm that converts any sentence in propositional
     logic into DNF. (<i>Hint</i>: The algorithm is similar to
     the algorithm for conversion to CNF iven in
-    Sectio <a href="#">pl-resolution-section</a>.)<br>
+    Sectio <a class="sectionRef" title="" href="#">pl-resolution-section</a>.)<br>
 
 3.  Construct a simple algorithm that takes as input a sentence in DNF
     and returns a satisfying assignment if one exists, or reports that

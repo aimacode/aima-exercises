@@ -5,5 +5,5 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 which squares can be reached from (1,1) by the action sequence
 $[{Up},{Up},{Right},{Right},{Right}]$ and with what
 probabilities. Explain how this computation is related to the prediction
-task (see Section <a href="#">general-filtering-section</a> for a
+task (see Section <a class="sectionRef" title="">general-filtering-section</a> for a
 hidden Markov model.

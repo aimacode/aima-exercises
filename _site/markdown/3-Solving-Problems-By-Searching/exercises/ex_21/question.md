@@ -1,6 +1,6 @@
 
 
-On page <a href="#">iterative-lengthening-page</a>,
+On page <a class="pageRef" title="" href="#">iterative-lengthening-page</a>,
 we mentioned <b>iterative lengthening search</b>,
 an iterative analog of uniform cost search. The idea is to use increasing limits on
 path cost. If a node is generated whose path cost exceeds the current

@@ -3,7 +3,7 @@
 Extend the vocabulary from
 Section <a class="sectionRef" title="" href="#">circuits-section</a> to define addition for $n$-bit
 binary numbers. Then encode the description of the four-bit adder in
-Figure <A href="#4bit-adder-figure">4bit-adder-figure</a>, and pose the queries needed
+Figure <a class="insideExerciseFigRef" title="" href="#4bit-adder-figure">4bit-adder-figure</a>, and pose the queries needed
 to verify that it is in fact correct.
 
 

@@ -1,7 +1,7 @@
 
 
 We can turn the navigation problem in
-Exercise <a hreef="#">path-planning-exercis</a> into an environment as
+Exercise <a class="exerciseRef" href="{{ site.baseurl }}/search-exercises/ex_9/">path-planning-exercise</a> into an environment as
 follows:<br>
 
 -   The percept will be a list of the positions, *relative to the

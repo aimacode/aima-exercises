@@ -1,7 +1,7 @@
 
 
 Consider a modified version of the
-vacuum environment in Exercise <a class="exerciseRef" href="{{ site.baseurl }}/agents-exercises/ex_10/">vacuum-start-exercise</a>,
+vacuum environment in Exercise <a class="exerciseRef" title="" href="{{ site.baseurl }}/agents-exercises/ex_10/">vacuum-start-exercise</a>,
 in which the agent is penalized one point for each movement.<br>
 
 1.  Can a simple reflex agent be perfectly rational for this

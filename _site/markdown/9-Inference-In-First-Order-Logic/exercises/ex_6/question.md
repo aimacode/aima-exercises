@@ -1,8 +1,8 @@
 
 
 Consider the subsumption lattices shown
-in Figure <a href="#">subsumption-lattice-figure</a>
-(page <a href="#">subsumption-lattice-figure</a><br>.
+in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/subsumption-lattice-figure.png">subsumption-lattice-figure</a>
+(page <a class="pageRef" title="" href="#">subsumption-lattice-figure</a><br>.
 
 1.  Construct the lattice for the sentence
     ${Employs}({Mother}({John}),{Father}({Richard}))$.<br>

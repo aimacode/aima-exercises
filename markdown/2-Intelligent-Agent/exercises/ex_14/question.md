@@ -1,5 +1,5 @@
 Consider a modified version of the
-vacuum environment in Exercise <a class="exerciseRef" href="{{ site.baseurl }}/agents-exercises/ex_10/">vacuum-start-exercise</a>,
+vacuum environment in Exercise <a class="exerciseRef" title="" href="{{ site.baseurl }}/agents-exercises/ex_10/">vacuum-start-exercise</a>,
 in which the geography of the environment—its extent, boundaries, and
 obstacles—is unknown, as is the initial dirt configuration. (The agent
 can go Up and Down as well as Left and Right.)<br>

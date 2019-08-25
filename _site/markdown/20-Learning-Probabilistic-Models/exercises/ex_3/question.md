@@ -9,4 +9,4 @@ sufficiently sure of its lime content. On the other hand, if Ann unwraps
 too many candies in the process, the bag will be worth less. Discuss the
 problem of determining the optimal point at which to sell the bag.
 Determine the expected utility of the optimal procedure, given the prior
-distribution from Section <a href="#">statistical-learning-section</a>.
+distribution from Section <a class="sectionRef" title="" href="#">statistical-learning-section</a>.

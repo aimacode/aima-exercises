@@ -12,7 +12,7 @@ clauses and implication sentences.<br>
     $(P_1 \land \cdots \land P_m) {\;{\Rightarrow}\;}(Q_1 \lor \cdots \lor Q_n)$,
     where the $P$s and $Q$s are proposition symbols. A knowledge base
     consisting of such sentences is in implicative normal form or <b>Kowalski
-    form</b> @Kowalski:1979.<br>
+    form</b> <a class="paperRef" title="" href="">Kowalski:1979</a>.<br>
 
 3.  Write down the full resolution rule for sentences in implicative
     normal form.<br>

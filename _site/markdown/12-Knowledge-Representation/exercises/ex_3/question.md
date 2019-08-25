@@ -1,6 +1,6 @@
 
 
-Figure <a href="#">ontology-figure</a> shows the top levels of a
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/ontology-figure.png">ontology-figure</a> shows the top levels of a
 hierarchy for everything. Extend it to include as many real categories
 as possible. A good way to do this is to cover all the things in your
 everyday life. This includes objects and events. Start with waking up,

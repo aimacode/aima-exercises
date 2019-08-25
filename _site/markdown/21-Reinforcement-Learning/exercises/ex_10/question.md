@@ -2,7 +2,7 @@
 
 Compute the true utility function and the best linear
 approximation in $x$ and $y$ (as in
-Equation (<a href="#">4x3-linear-approx-equation</a>)) for the
+Equation (<a class="equationRef" title="" href="#">4x3-linear-approx-equation</a>)) for the
 following environments:<br>
 
 1.  A ${10}\times {10}$ world with a single $+1$ terminal state

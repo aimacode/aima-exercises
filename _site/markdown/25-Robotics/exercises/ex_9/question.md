@@ -50,5 +50,5 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     and non-monotonic.<br>
 <figure>
   <img src="http://aimacode.github.io/aima-exercises/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%">
-    <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
+    <figcaption><center><b>Simplified robot in a maze. See Exercise <a class="exerciseRef" title="" href="">robot-exploration-exercise</a></b></center></figcaption>
 </figure>

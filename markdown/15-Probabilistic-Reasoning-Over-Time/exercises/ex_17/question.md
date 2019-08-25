@@ -1,6 +1,6 @@
 
 
-For the DBN specified in Exercise <a class="exerciseRef" href="{{ site.baseurl }}/dbn-exercises/ex_15/">sleep1-exercise</a> and
+For the DBN specified in Exercise <a class="exerciseRef" title="" href="{{ site.baseurl }}/dbn-exercises/ex_15/">sleep1-exercise</a> and
 for the evidence values<br>
 
 $$

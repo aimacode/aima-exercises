@@ -1,8 +1,8 @@
 
 
 Let us examine the behavior of the variance
-update in Equation (<a href="#">kalman-univariate-equation</a>)
-(page <a href="#">kalman-univariate-equation</a>).<br>
+update in Equation (<a class="equationRef" title="" href="#">kalman-univariate-equation</a>)
+(page <a class="pageRef" title="" href="#">kalman-univariate-equation</a>).<br>
 
 1.  Plot the value of $\sigma_t^2$ as a function of $t$, given various
     values for $\sigma_x^2$ and $\sigma_z^2$.<br>

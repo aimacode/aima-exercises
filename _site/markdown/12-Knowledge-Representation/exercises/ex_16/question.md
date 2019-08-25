@@ -6,7 +6,7 @@ ${Go}(x,y)$, which takes it from city $x$ to city $y$ if there is a
 route between those cities. ${Road}(x, y)$ is true if and only if
 there is a road connecting cities $x$ and $y$; if there is, then
 ${Distance}(x, y)$ gives the length of the road. See the map on
-page <a href="#">romania-distances-figure</a> for an example. The robot begins in Arad and must
+page <a class="pageRef" title="" href="#">romania-distances-figure</a> for an example. The robot begins in Arad and must
 reach Bucharest.<br>
 
 1.  Write a suitable logical description of the initial situation of

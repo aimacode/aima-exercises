@@ -7,4 +7,4 @@ calculate the fraction of time the agent spends in each state, in the
 limit, if the policy is executed forever. (<i>Hint</i>:
 Construct the state-to-state transition probability matrix corresponding
 to the policy and see
-Exercise <a class="exerciseRef" href="{{ site.baseurl }}/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)
+Exercise <a class="exerciseRef" title="" href="{{ site.baseurl }}/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)

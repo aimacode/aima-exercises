@@ -1,5 +1,5 @@
 Consider the $3 \times 3$ world shown in
-Figure <a class="insideExercisesFigRef"  href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
+Figure <a class="insideExerciseFigRef"  href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
 same as in the $4\times 3$
 Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>: 80% of the
 time the agent goes in the direction it selects; the rest of the time it

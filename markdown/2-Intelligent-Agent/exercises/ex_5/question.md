@@ -1,6 +1,6 @@
 For each of the following activities, give a PEAS
 description of the task environment and characterize it in terms of the
-properties listed in Section <a class="sectionRef" title="" href="#">env-properties-subsection</a><br>
+properties listed in Section <a class="sectionRef" title="">env-properties-subsection</a><br>
 
 -   Playing soccer.<br>
 

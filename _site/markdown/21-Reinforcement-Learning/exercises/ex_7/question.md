@@ -1,7 +1,7 @@
 Implement an exploring reinforcement learning
 agent that uses direct utility estimation. Make two versions—one with a
 tabular representation and one using the function approximator in
-Equation (<a href="#">4x3-linear-approx-equation</a>). Compare their
+Equation (<a class="equationRef" title="" href="#">4x3-linear-approx-equation</a>). Compare their
 performance in three environments:<br>
 
 1.  The $4\times 3$ world described in the chapter.<br>
