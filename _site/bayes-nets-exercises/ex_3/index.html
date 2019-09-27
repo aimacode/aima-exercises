@@ -166,7 +166,7 @@
 
 <div id="hiddden">
 
-Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a>) on
+Equation (<a href="#">parameter-joint-repn-equation</a> on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{Parents}(X_i))$. This exercise asks you to derive
@@ -175,8 +175,8 @@ ${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br />
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
-    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and <a class="equationRef" title="" href="#">marginalization-equation</a>)
-    (pages <a class="pageRef" title="" href="#">conditional-probability-equation</a> and <a class="pageRef" title="" href="#">marginalization-equation</a>)
+    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and (<a class="pageRef" title="" href="#">marginalization-equation</a>
+    (pages <a href="#">conditional-probability-equation</a> and <a href="#">marginalization-equation</a>)
     to express the conditional probability $P(zy)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.<br />
 
@@ -214,7 +214,7 @@ ${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br />
     <div class="card-body">
         <p class="card-text">
 
-Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a>) on
+Equation (<a href="#">parameter-joint-repn-equation</a> on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{Parents}(X_i))$. This exercise asks you to derive
@@ -223,8 +223,8 @@ ${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br>
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
-    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and <a class="equationRef" title="" href="#">marginalization-equation</a>)
-    (pages <a class="pageRef" title="" href="#">conditional-probability-equation</a> and <a class="pageRef" title="" href="#">marginalization-equation</a>)
+    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and (<a class="pageRef" title="" href="#">marginalization-equation</a>
+    (pages <a href="#">conditional-probability-equation</a> and <a href="#">marginalization-equation</a>)
     to express the conditional probability $P(zy)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.<br>
 
@@ -249,7 +249,7 @@ ${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -336,6 +336,7 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
