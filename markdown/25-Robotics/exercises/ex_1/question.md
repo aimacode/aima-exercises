@@ -7,27 +7,22 @@ expected value—because of the way particle filtering works. In this
 question, you are asked to quantify this bias.<br>
 
 To simplify, consider a world with four possible robot locations:
-$X=\{x_{{\rm 1}},x_{{\rm 2}},x_{{\rm 3}},x_{{\rm 4}}\}$. Initially, we
+$X=\{x_1,x_2,x_3,x_4\}$. Initially, we
 draw $N\geq {{\rm 1}}$ samples uniformly from among those locations. As
 usual, it is perfectly acceptable if more than one sample is generated
 for any of the locations $X$. Let $Z$ be a Boolean sensor variable
 characterized by the following conditional probabilities:<br>
 
+
 $$\begin{aligned}
-P(z\mid x_{{\rm 1}}) &=& {{\rm {0.8}}} \qquad\qquad P(\lnot z\mid x_{{\rm 1}})\;\;=\;\;{{\rm {0.2}}} \\
-P(z\mid x_{{\rm 2}}) &=& {{\rm {0.4}}} \qquad\qquad P(\lnot z\mid x_{{\rm 2}})\;\;=\;\;{{\rm {0.6}}} \\
-P(z\mid x_{{\rm 3}}) &=& {{\rm {0.1}}} \qquad\qquad P(\lnot z\mid x_{{\rm 3}})\;\;=\;\;{{\rm {0.9}}} \\
-P(z\mid x_{{\rm 4}}) &=& {{\rm {0.1}}} \qquad\qquad P(\lnot z\mid x_{{\rm 4}})\;\;=\;\;{{\rm {0.9}}}\ .\end{aligned}$$<br>
+P(z | x_1) = 0.8 \qquad\qquad P(z | x_1) = 0.2  \\
+P(z | x_2) = 0.4 \qquad\qquad P(z | x_2) = 0.6  \\
+P(z | x_3) = 0.1 \qquad\qquad P(z | x_3) = 0.9  \\
+P(z | x_4) = 0.1 \qquad\qquad P(z | x_4) = 0.9 
+\end{aligned}$$
 
-\begin{table}[]
-\begin{tabular}{ll}
-P(z\textbackslash{}mid x\_\{\{\textbackslash{}rm 1\}\}) \&=\& \{\{\textbackslash{}rm \{0.8\}\}\} & 1 \\
-1                                                                                                & 1 \\
-1                                                                                                & 1 \\
-1                                                                                                & 1
-\end{tabular}
-\end{table}
 
+<br>
 
 MCL uses these probabilities to generate particle weights, which are
 subsequently normalized and used in the resampling process. For
@@ -38,7 +33,7 @@ probability distribution over $X$.<br>
 
 1.  What is the resulting probability distribution over $X$ for this new
     sample? Answer this question separately for
-    $N={{\rm 1}},\ldots,{{\rm {10}}}$, and for $N=\infty$.<br>
+    $N=1,\ldots,10$, and for $N=\infty$.<br>
 
 2.  The difference between two probability distributions $P$ and $Q$ can
     be measured by the KL divergence, which is defined as

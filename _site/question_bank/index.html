@@ -12410,7 +12410,8 @@ rule for partial derivatives.)
 
 This exercise investigates properties of
 the Beta distribution defined in
-Equation (<a class="equationRef" title="" href="#">beta-equation</a><br />.
+Equation (<a class="equationRef" title="" href="#">beta-equation</a>).
+<br />
 
 1.  By integrating over the range $[0,1]$, show that the normalization
     constant for the distribution $[a,b]$ is given by
@@ -12833,11 +12834,11 @@ language. Finally, calculate the perplexity of each model.
 <div class="card-body">
 <p class="card-text">
 
-Write a program to do **segmentation** of
+Write a program to do <b>segmentation</b> of
 words without spaces. Given a string, such as the URL
 “thelongestlistofthelongeststuffatthelongestdomainnameatlonglast.com,”
-return a list of component words: \[“the,” “longest,” “list,”
-$\ldots$\]. This task is useful for parsing URLs, for spelling
+return a list of component words: [“the,” “longest,” “list,”
+$\ldots$]. This task is useful for parsing URLs, for spelling
 correction when words runtogether, and for languages such as Chinese
 that do not have spaces between words. It can be solved with a unigram
 or bigram word model and a dynamic programming algorithm similar to the
@@ -13033,8 +13034,8 @@ each of the following models, propose a corresponding numeric measure.<br />
     end of the hour.<br />
 
 5.  The searcher will look through all the answers. Examining a document
-    has cost \\$ A; finding a relevant document has value \\$ B; failing
-    to find a relevant document has cost \\$ C for each relevant
+    has cost \$ A; finding a relevant document has value \$ B; failing
+    to find a relevant document has cost \$ C for each relevant
     document not found.<br />
 
 6.  The searcher wants to collect as many relevant documents as
@@ -13092,10 +13093,10 @@ such as $is$, $duck$, and so on). The HMM model includes a prior
 ${\textbf{P}}(N_0)$, a transition model
 ${\textbf{P}}(N_{t+1}|N_t)$, and a sensor model
 ${\textbf{P}}(W_t|N_t)$. Show that every HMM grammar can be
-written as a PCFG. \[Hint: start by thinking about how the HMM prior can
+written as a PCFG. [Hint: start by thinking about how the HMM prior can
 be represented by PCFG rules for the sentence symbol. You may find it
 helpful to illustrate for the particular HMM with values $A$, $B$ for
-$N$ and values $x$, $y$ for $W$.\]
+$N$ and values $x$, $y$ for $W$.]
 </p>
 </div>
 </div>
@@ -13269,18 +13270,19 @@ $Article \rightarrow \textbf{the} \quad Noun \rightarrow \textbf{supermarket}$<b
 Which of the following three grammars, combined with the lexicon,
 generates the given sentence? Show the corresponding parse tree(s).<br />
 
-| $\quad\quad\quad\quad (A):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(B):\quad\quad\quad\quad$ | $\quad\quad\quad\quad(C):\quad\quad\quad\quad$ |
-| --- | --- | --- |
-| $S\rightarrow NP\space VP$ | $S\rightarrow NP\space VP$ | $S\rightarrow NP\space VP$ |
-| $NP\rightarrow Pronoun$ | $NP\rightarrow Pronoun$ | $NP\rightarrow Pronoun$ |
-| $NP\rightarrow Article\space Noun $ | $NP\rightarrow Noun$ | $NP\rightarrow Article\space NP$ |
-| $VP\rightarrow VP\space PP$ | $NP\rightarrow Article\space NP$ | $VP\rightarrow Verb\space Adv$ |
-| $VP\rightarrow VP\space Adv\space Adv$ | $VP\rightarrow Verb\space Vmod$ | $Adv\rightarrow Adv\space Adv$ |
-| $VP\rightarrow Verb$ | $Vmod\rightarrow Adv\space Vmod$ | $Adv\rightarrow PP$ |
-| $PP\rightarrow Prep\space NP$ | $Vmod\rightarrow Adv$ | $PP\rightarrow Prep\space NP$ |
-| $NP\rightarrow Noun$ | $Adv\rightarrow PP$ | $NP\rightarrow Noun$ |
-| $\quad$ | $PP\rightarrow Prep\space NP$ | $\quad$ |<br />
+$$
+\quad\quad\quad\quad (A):\quad\quad\quad\quad  \quad\quad\quad\quad(B):\quad\quad\quad\quad  \quad\quad\quad\quad(C):\\
+\quad\quad\quad\quad S \rightarrow NP \space VP \quad\quad\quad\quad \quad\quad\quad\quad S\rightarrow NP\space VP \quad\quad\quad\quad S\rightarrow NP\space VP\\
+\quad\quad\quad\quad NP\rightarrow Pronoun \quad\quad\quad\quad  NP\rightarrow Pronoun \quad\quad\quad\quad  NP\rightarrow Pronoun\\
+\quad\quad\quad\quad NP\rightarrow Article\space Noun \quad\quad\quad\quad  NP\rightarrow Noun \quad\quad\quad\quad  NP\rightarrow Article\space NP\\
+\quad\quad\quad\quad VP\rightarrow VP\space PP \quad\quad\quad\quad NP\rightarrow Article\space NP \quad\quad\quad\quad  VP\rightarrow Verb\space Adv\\
+\quad\quad\quad\quad  VP\rightarrow VP\space Adv\space Adv \quad\quad\quad\quad  VP\rightarrow Verb\space Vmod \quad\quad\quad\quad  Adv\rightarrow Adv\space Adv\\
+\quad\quad\quad\quad  VP\rightarrow Verb \quad\quad\quad\quad  Vmod\rightarrow Adv\space Vmod \quad\quad\quad\quad   Adv\rightarrow PP\\
+\quad\quad\quad\quad PP\rightarrow Prep\space NP \quad\quad\quad\quad Vmod\rightarrow Adv \quad\quad\quad\quad PP\rightarrow Prep\space NP\\
+\quad\quad\quad\quad NP\rightarrow Noun \quad\quad\quad\quad Adv\rightarrow PP \quad\quad\quad\quad NP\rightarrow Noun\\
+\quad\quad\quad\quad\quad \quad\quad\quad\quad PP\rightarrow Prep\space NP \quad\quad\quad\quad \quad\quad\quad\quad
 
+$$
 
 For each of the preceding three grammars, write down three sentences of
 English and three sentences of non-English generated by the grammar.
@@ -13349,9 +13351,8 @@ learning viewpoint.
 In this exercise you will transform $\large \varepsilon_0$  into
 Chomsky Normal Form (CNF). There are five steps: (a) Add a new start
 symbol, (b) Eliminate $\epsilon$ rules, (c) Eliminate multiple words on
-right-hand sides, (d) Eliminate rules of the form<br />
-(${\it X}$<br />
-$\rightarrow$${\it Y}$),<br />
+right-hand sides, (d) Eliminate rules of the form
+(${\it X} \rightarrow$${\it Y}$),
 (e) Convert long right-hand sides into binary rules.<br />
 
 1.  The start symbol, $S$, can occur only on the left-hand side in CNF.
@@ -13366,13 +13367,13 @@ $\rightarrow$${\it Y}$),<br />
 
 3.  A word can appear on the right-hand side in a rule only of the form
     (${\it X}$
-    $\rightarrow$*word*).
+    $\rightarrow$<i>word</i>).
     Replace each rule of the form (${\it X}$
-    $\rightarrow$…*word* …)
+    $\rightarrow$…<i>word</i> …)
     with (${\it X}$
     $\rightarrow$…${\it W'}$ …)
     and (${\it W'}$
-    $\rightarrow$*word*),
+    $\rightarrow$<i>word</i>),
     using a new symbol ${\it W'}$.<br />
 
 4.  A rule (${\it X}$
@@ -13380,7 +13381,7 @@ $\rightarrow$${\it Y}$),<br />
     is not allowed in CNF; it must be (${\it X}$
     $\rightarrow$${\it Y}$
     ${\it Z}$) or (${\it X}$
-    $\rightarrow$*word*).
+    $\rightarrow$<i>word</i>).
     Replace each rule of the form (${\it X}$
     $\rightarrow$${\it Y}$)
     with a set of rules of the form (${\it X}$
@@ -13507,7 +13508,7 @@ context-free grammar cannot. Show an augmented context-free grammar for
 the language $a^nb^nc^n$. The allowable values for augmentation
 variables are 1 and $SUCCESSOR(n)$, where $n$ is a value. The rule for a sentence
 in this language is<br />
-$$S(n) \rightarrow}}A(n) B(n) C(n) \ .$$
+$$S(n) \rightarrow A(n) B(n) C(n) \ .$$
 Show the rule(s) for each of ${\it A}$,
 ${\it B}$, and ${\it C}$.
 </p>
@@ -13894,27 +13895,22 @@ expected value—because of the way particle filtering works. In this
 question, you are asked to quantify this bias.<br />
 
 To simplify, consider a world with four possible robot locations:
-$X=\{x_,x_,x_,x_\}$. Initially, we
+$X=\{x_1,x_2,x_3,x_4\}$. Initially, we
 draw $N\geq $ samples uniformly from among those locations. As
 usual, it is perfectly acceptable if more than one sample is generated
 for any of the locations $X$. Let $Z$ be a Boolean sensor variable
 characterized by the following conditional probabilities:<br />
 
+
 $$\begin{aligned}
-P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
-P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
-P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
-P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;}\ .\end{aligned}$$<br />
+P(z | x_1) = 0.8 \qquad\qquad P(z | x_1) = 0.2  \\
+P(z | x_2) = 0.4 \qquad\qquad P(z | x_2) = 0.6  \\
+P(z | x_3) = 0.1 \qquad\qquad P(z | x_3) = 0.9  \\
+P(z | x_4) = 0.1 \qquad\qquad P(z | x_4) = 0.9 
+\end{aligned}$$
 
-\begin{table}[]
-\begin{tabular}{ll}
-P(z\textbackslash{}mid x\_\{\{\textbackslash{}rm 1\}\}) \&amp;=\&amp; \{\{\textbackslash{}rm \{0.8\}\}\} &amp; 1 \\
-1                                                                                                &amp; 1 \\
-1                                                                                                &amp; 1 \\
-1                                                                                                &amp; 1
-\end{tabular}
-\end{table}
 
+<br />
 
 MCL uses these probabilities to generate particle weights, which are
 subsequently normalized and used in the resampling process. For
@@ -13925,7 +13921,7 @@ probability distribution over $X$.<br />
 
 1.  What is the resulting probability distribution over $X$ for this new
     sample? Answer this question separately for
-    $N=,\ldots,}$, and for $N=\infty$.<br />
+    $N=1,\ldots,10$, and for $N=\infty$.<br />
 
 2.  The difference between two probability distributions $P$ and $Q$ can
     be measured by the KL divergence, which is defined as
@@ -14540,7 +14536,7 @@ technologies?
         <p class="card-text">
 
 Some critics object that AI is impossible, while others object that it
-is *too* possible and that ultraintelligent machines pose a
+is <i>too</i> possible and that ultraintelligent machines pose a
 threat. Which of these objections do you think is more likely? Would it
 be a contradiction for someone to hold both positions?
 </p>

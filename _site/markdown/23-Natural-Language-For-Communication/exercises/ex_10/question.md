@@ -3,9 +3,8 @@
 In this exercise you will transform $\large \varepsilon_0$  into
 Chomsky Normal Form (CNF). There are five steps: (a) Add a new start
 symbol, (b) Eliminate $\epsilon$ rules, (c) Eliminate multiple words on
-right-hand sides, (d) Eliminate rules of the form<br>
-(${\it X}$<br>
-${{\;}}\rightarrow{{\;}}$${\it Y}$),<br>
+right-hand sides, (d) Eliminate rules of the form
+(${\it X} \rightarrow{{\;}}$${\it Y}$),
 (e) Convert long right-hand sides into binary rules.<br>
 
 1.  The start symbol, $S$, can occur only on the left-hand side in CNF.
@@ -20,13 +19,13 @@ ${{\;}}\rightarrow{{\;}}$${\it Y}$),<br>
 
 3.  A word can appear on the right-hand side in a rule only of the form
     (${\it X}$
-    ${{\;}}\rightarrow{{\;}}$*word*).
+    ${{\;}}\rightarrow{{\;}}$<i>word</i>).
     Replace each rule of the form (${\it X}$
-    ${{\;}}\rightarrow{{\;}}$…*word* …)
+    ${{\;}}\rightarrow{{\;}}$…<i>word</i> …)
     with (${\it X}$
     ${{\;}}\rightarrow{{\;}}$…${\it W'}$ …)
     and (${\it W'}$
-    ${{\;}}\rightarrow{{\;}}$*word*),
+    ${{\;}}\rightarrow{{\;}}$<i>word</i>),
     using a new symbol ${\it W'}$.<br>
 
 4.  A rule (${\it X}$
@@ -34,7 +33,7 @@ ${{\;}}\rightarrow{{\;}}$${\it Y}$),<br>
     is not allowed in CNF; it must be (${\it X}$
     ${{\;}}\rightarrow{{\;}}$${\it Y}$
     ${\it Z}$) or (${\it X}$
-    ${{\;}}\rightarrow{{\;}}$*word*).
+    ${{\;}}\rightarrow{{\;}}$<i>word</i>).
     Replace each rule of the form (${\it X}$
     ${{\;}}\rightarrow{{\;}}$${\it Y}$)
     with a set of rules of the form (${\it X}$

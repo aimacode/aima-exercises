@@ -27,8 +27,8 @@ each of the following models, propose a corresponding numeric measure.<br>
     end of the hour.<br>
 
 5.  The searcher will look through all the answers. Examining a document
-    has cost \\$ A; finding a relevant document has value \\$ B; failing
-    to find a relevant document has cost \\$ C for each relevant
+    has cost \$ A; finding a relevant document has value \$ B; failing
+    to find a relevant document has cost \$ C for each relevant
     document not found.<br>
 
 6.  The searcher wants to collect as many relevant documents as
