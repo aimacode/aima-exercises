@@ -1,3 +1,5 @@
+
+
 Show that the 8-puzzle states are divided
 into two disjoint sets, such that any state is reachable from any other
 state in the same set, while no state is reachable from any state in the

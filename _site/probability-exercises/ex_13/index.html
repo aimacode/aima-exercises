@@ -211,7 +211,7 @@ $\epsilon0.001$, $\delta0.01$.
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -298,6 +298,7 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";

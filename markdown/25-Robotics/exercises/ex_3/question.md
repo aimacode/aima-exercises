@@ -1,7 +1,7 @@
 
 
 Consider a robot with two simple manipulators, as
-shown in figure <a href=#figRobot2">figRobot2</a>. Manipulator A is a square block of side 2
+shown in figure <a href="#figRobot2">figRobot2</a>. Manipulator A is a square block of side 2
 which can slide back and on a rod that runs along the x-axis from
 x=$-$10 to x=10. Manipulator B is a square block of side 2 which can
 slide back and on a rod that runs along the y-axis from y=-10 to y=10.

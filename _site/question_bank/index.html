@@ -1,4 +1,132 @@
-<article class="post">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    
+      Question Bank &middot; AIMA Exercises 
+    
+  </title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/aima-exercises/public/css/poole.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/syntax.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/lanyon.css">
+  <link rel="stylesheet" href="/aima-exercises/public/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/aima-exercises/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/aima-exercises/public/aima_logo.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  <body>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Artificial Intelligence : A Modern Approach</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/aima-exercises/">Home</a>
+    <span class="sidebar-nav-item">Part - I Artificial Intelligence</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/intro-exercises/">Chapter 1 - Introduction</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/agents-exercises/">Chapter 2 - Intelligent Agents</a>
+  <span class="sidebar-nav-item">Part - II Problem Solving</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/search-exercises/">Chapter 3 - Solving Problems By Searching</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-search-exercises">Chapter 4 - Beyond Classical Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/game-playing-exercises">Chapter 5 - Adversarial Search</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/csp-exercises">Chapter 6 - Constraint Satisfaction Problems</a>
+  <span class="sidebar-nav-item">Part - III Knowledge, Reasoning and Planning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/knowledge-logic-exercises">Chapter 7 - Logical Agents</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/fol-exercises">Chapter 8 - First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/logical-inference-exercises">Chapter 9 - Inference in First Order Logic</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/planning-exercises">Chapter 10 - Classical Planning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/advanced-planning-exercises">Chapter 11 - Planning and Acting in Real Life</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/kr-exercises">Chapter 12 - Knowledge Representation</a>
+  <span class="sidebar-nav-item">Part - IV Uncertaing Knowledge and Reasoning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/probability-exercises">Chapter 13 - Quantifying Uncertainty</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayes-nets-exercises">Chapter 14 - Probabilistic Reasoning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/dbn-exercises">Chapter 15 - Probabilistic Reasoning Over Time</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/decision-theory-exercises">Chapter 16 - Making-Simple Decisions</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/complex-decisions-exercises">Chapter 17 - Making Complex Decisions</a>
+  <span class="sidebar-nav-item">Part - V Lerning</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/concept-learning-exercises">Chapter 18 - Learning From Examples</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/ilp-exercises">Chapter 19 - Knowledge In Learning</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/bayesian-learning-exercises">Chapter 20 - Learning Probabilistic Models</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/reinforcement-learning-exercises">Chapter 21 - Reinforcement Learning</a>
+  <span class="sidebar-nav-item">Part - VI Communicating, Perceiving and Acting</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-communicating-exercises">Chapter 22 - Natural Language Processing</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/nlp-english-exercises">Chapter 23 - Natural Language For Communication</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/perception-exercises">Chapter 24 - Perception</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/robotics-exercises">Chapter 25 - Robotics</a>
+  <span class="sidebar-nav-item">Part - VII Conclusions</span>
+  <a class="sidebar-nav-item" href="/aima-exercises/philosophy-exercises">Chapter 26 - Philosophical Foundations</a>
+  <a class="sidebar-nav-item" href="/aima-exercises/#/">Chapter 27 - AI The Present And Future</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2019. All rights reserved.
+    </p>
+  </div>
+</div>
+
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/aima-exercises/" title="Home">Artificial Intelligence</a>
+            <small>AIMA Exercises </small>
+          </h3>
+          <br>
+          <center>
+            <form class="form-inline active-pink-3 active-pink-4" action="/aima-exercises/search" id="site_search" autocomplete="off" method="GET">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search within AIMA Exercises" aria-label="Search" name="query">
+            <input type="submit" value="Go!" class="search-btn">
+            </form>
+            <br>
+            </center>
+            
+
+
+
+<ul class="breadcrumbb" id="bbreadcrumb">
+
+  <label for="toggletoc" class="toc-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+   
+   
+    <li><a class="breadcrumb-text" href="/aima-exercises/"><i class="fa fa-home"></i></a>  </li>
+   
+
+
+</ul>
+
+      </div>
+    </div>
+      <div class="container content">
+        <article class="post">
 
   <div class="entry">
     <script type="text/x-mathjax-config">
@@ -48,7 +176,7 @@ Define in your own words: (a) intelligence, (b) artificial intelligence,
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex1.2');" href="#"><i id="ex1.2" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950</a>.In the paper, he discusses several objections to his proposed enterprise and his test for
+        <p class="card-text">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950 </a>.In the paper, he discusses several objections to his proposed enterprise and his test for
 intelligence. Which objections still carry weight? Are his refutations
 valid? Can you think of new objections arising from developments since
 he wrote the paper? In the paper, he predicts that, by the year 2000, a
@@ -430,7 +558,7 @@ the environment but also on the time step it has reached.
 vacuum-cleaner agent functions.<br />
 1.  Show that the simple vacuum-cleaner agent function described in
     Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/vacuum-agent-function-table.png">vacuum-agent-function-table</a> is indeed
-    rational under the assumptions listed on page <a class="pageRef" title="">vacuum-rationality-page</a><br />
+    rational under the assumptions listed on page <a class="pageRef" title="" href="#">vacuum-rationality-page</a><br />
 
 2.  Describe a rational agent function for the case in which each
     movement costs one point. Does the corresponding agent program
@@ -513,7 +641,7 @@ appropriate.<br />
     <div class="card-body">
         <p class="card-text">For each of the following activities, give a PEAS
 description of the task environment and characterize it in terms of the
-properties listed in Section <a class="sectionRef" title="">env-properties-subsection</a><br />
+properties listed in Section <a class="sectionRef" title="" href="#">env-properties-subsection</a><br />
 
 -   Playing soccer.<br />
 
@@ -681,7 +809,7 @@ implementations in the online code repository.)
     </div>
     <div class="card-body">
         <p class="card-text">Implement a simple reflex agent for the vacuum environment in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>. Run the environment
+Exercise <a class="exerciseRef" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>. Run the environment
 with this agent for all possible initial dirt configurations and agent
 locations. Record the performance score for each configuration and the
 overall average score.
@@ -700,7 +828,7 @@ overall average score.
         <p class="card-text">
 
 Consider a modified version of the
-vacuum environment in Exercise <a class="exerciseRef" title="" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>,
+vacuum environment in Exercise <a class="exerciseRef" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>,
 in which the agent is penalized one point for each movement.<br />
 
 1.  Can a simple reflex agent be perfectly rational for this
@@ -724,7 +852,7 @@ in which the agent is penalized one point for each movement.<br />
     </div>
     <div class="card-body">
         <p class="card-text">Consider a modified version of the
-vacuum environment in Exercise <a class="exerciseRef" title="" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>,
+vacuum environment in Exercise <a class="exerciseRef" href="/aima-exercises/agents-exercises/ex_10/">vacuum-start-exercise</a>,
 in which the geography of the environment—its extent, boundaries, and
 obstacles—is unknown, as is the initial dirt configuration. (The agent
 can go Up and Down as well as Left and Right.)<br />
@@ -936,7 +1064,9 @@ We want the two friends to meet as quickly as possible.<br />
         <button type="button" class="btn btn-dark float-right" style="margin-left:10px; margin-right:10px;" title="Upvote Exercise" onclick="upvote('ex3.6');" href="#"><i id="ex3.6" class="fas fa-thumbs-up" style="color:white"></i></button>
     </div>
     <div class="card-body">
-        <p class="card-text">Show that the 8-puzzle states are divided
+        <p class="card-text">
+
+Show that the 8-puzzle states are divided
 into two disjoint sets, such that any state is reachable from any other
 state in the same set, while no state is reachable from any state in the
 other set. (<i>Hint:</i> See <a class="paperRef" title="" href="#">Berlekamp+al:1982</a>) Devise a procedure to decide
@@ -1834,7 +1964,7 @@ special cases:<br />
     <div class="card-body">
         <p class="card-text">
 
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_19/">brio-exercise</a> considers the problem of
+Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_19/">brio-exercise</a> considers the problem of
 building railway tracks under the assumption that pieces fit exactly
 with no slack. Now consider the real problem, in which pieces don’t fit
 exactly but allow for up to 10 degrees of rotation to either side of the
@@ -1856,11 +1986,11 @@ solved by simulated annealing.
         <p class="card-text">
 
 In this exercise, we explore the use of local search methods to solve
-TSPs of the type defined in Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a><br />
+TSPs of the type defined in Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a><br />
 
 1.  Implement and test a hill-climbing method to solve TSPs. Compare the
     results with optimal solutions obtained from the A* algorithm with
-    the MST heuristic (Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a>)<br />
+    the MST heuristic (Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_38/">tsp-mst-exercise</a>)<br />
 
 2.  Repeat part (a) using a genetic algorithm instead of hill climbing.
     You may want to consult @Larranaga+al:1999 for some suggestions for representations.
@@ -2215,7 +2345,7 @@ In this exercise, we examine hill climbing
 in the context of robot navigation, using the environment in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/geometric-scene-figure.png">geometric-scene-figure</a> as an example.<br />
 
-1.  Repeat Exercise <a class="exerciseRef" title="" href="/aima-exercises/advanced-search-exercises/ex_11/">path-planning-agent-exercise</a> using
+1.  Repeat Exercise <a class="exerciseRef" href="/aima-exercises/advanced-search-exercises/ex_11/">path-planning-agent-exercise</a> using
     hill climbing. Does your agent ever get stuck in a local minimum? Is
     it *possible* for it to get stuck with convex
     obstacles?<br />
@@ -2308,7 +2438,7 @@ finding the optimal move.
 Consider the problem of solving two 8-puzzles.<br />
 
 1.  Give a complete problem formulation in the style of
-    Chapter <a class="chapterRef" title="" href="/aima-exercises/search-exercises/">search-chapter</a><br />
+    Chapter <a class="chapterRef" title="" href="/aima-exercises/search-exercises/">search-chapter.</a><br />
 
 2.  How large is the reachable state space? Give an exact
     numerical expression.<br />
@@ -2342,13 +2472,13 @@ Each node is labeled with the $P,E$ positions. $P$ moves first. Branches marked 
     <div class="card-body">
         <p class="card-text">
 
-Imagine that, in Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
+Imagine that, in Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
 the friends wants to avoid the other. The problem then becomes a
 two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal
 payoff to the pursuer is minus the total time taken. (The evader “wins”
 by never losing.) An example is shown in Figure.
-<a class="insideExerciseFigRef" title="" href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br />
+<a href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br />
 
 
 1.  Copy the game tree and mark the values of the terminal nodes.<br />
@@ -2614,7 +2744,7 @@ games.<br />
     ordering?<br />
 
 4.  Implement a selective search algorithm, such as B\* <a class="paperRef" title="" href="">Berliner:1979</a>,
-    conspiracy number search <a class="paperRef" title="" href="">McAllester:1988</a>, or MGSS\*
+    conspiracy number search @McAllester:1988, or MGSS\*
     <a class="paperRef" title="" href="">Russell+Wefald:1989</a> and compare its performance to A\*.
 </p>
     </div>
@@ -3000,14 +3130,14 @@ finding the optimal move.
 
 Consider carefully the interplay of chance events and partial
 information in each of the games in
-Exercise <a class="exerciseRef" title="" href="">game-playing-chance-exercise</a>.<br />
+Exercise <a class="exerciseRef" href="/aima-exercises/game-playing-exercises/ex_4/">game-playing-chance-exercise</a>.<br />
 
 1.  For which is the standard expectiminimax model appropriate?
     Implement the algorithm and run it in your game-playing agent, with
     appropriate modifications to the game-playing environment.<br />
 
 2.  For which would the scheme described in
-    Exercise <a class="exerciseRef" title="" href="">game-playing-monte-carlo-exercise</a> be
+    Exercise <a href="#ex5.21">game-playing-monte-carlo-exercise</a> be
     appropriate?<br />
 
 3.  Discuss how you might deal with the fact that in some of the games,
@@ -3913,7 +4043,7 @@ can be written in CNF.
         <p class="card-text">
 
 Use resolution to prove the sentence $\lnot A \land \lnot B$ from the
-clauses in Exercise <a class="exerciseRef" title="" href="/aima-exercises/knowledge-logic-exercises/ex_25/">convert-clausal-exercise</a>.
+clauses in Exercise <a class="exerciseRef" href="/aima-exercises/knowledge-logic-exercises/ex_25/">convert-clausal-exercise</a>.
 </p>
     </div>
 </div>
@@ -4956,12 +5086,12 @@ wumpus world.<br />
     not breezy, then no adjacent square contains a pit. Write these two
     rules in first-order logic and show that their conjunction is
     logically equivalent to
-    Equation (<a class="equationRef" title="" href="">pit-biconditional-equation</a>).<br />
+    Equation (<a href="#">pit-biconditional-equation</a>).<br />
 
 2.  We can write [causal rule] leading from cause to effect. One obvious causal rule
     is that a pit causes all adjacent squares to be breezy. Write this
     rule in first-order logic, explain why it is incomplete compared to
-    Equation (<a class="equationRef" title="" href="">pit-biconditional-equation</a>), and supply
+    Equation (<a href="#">pit-biconditional-equation</a>), and supply
     the missing axiom.<br />
 </p>
     </div>
@@ -5407,7 +5537,7 @@ question “Did Napoleon hear about Wellington’s death?”
 Extend the vocabulary from
 Section <a class="sectionRef" title="" href="#">circuits-section</a> to define addition for $n$-bit
 binary numbers. Then encode the description of the four-bit adder in
-Figure <a class="insideExerciseFigRef" title="" href="#4bit-adder-figure">4bit-adder-figure</a>, and pose the queries needed
+Figure <a href="#4bit-adder-figure">4bit-adder-figure</a>, and pose the queries needed
 to verify that it is in fact correct.
 
 
@@ -5442,12 +5572,12 @@ indicate direct connections. For example, a NAND circuit can be composed
 from ${AND}$s and ${NOT}$s:
 $${\forall\,i_1,i_2,o_a,o\;\;} {AND}(i_1,i_2,o_a) \land {NOT}(o_a,o) {\:\;{\Rightarrow}\:\;}{NAND}(i_1,i_2,o)\ .$$
 Using this representation, define the one-bit adder in
-Figure <a class="insideExerciseFigRef" title="" href="#4bit-adder-figure">adder-figure</a> and the four-bit adder in
-Figure <a class="insideExerciseFigRef" title="" href="#4bit-adder-figure">adder-figure</a>, and explain what queries you
+Figure <a class="insideExercisesFigRef" href="#4bit-adder-figure">adder-figure</a> and the four-bit adder in
+Figure <a class="insideExercisesFigRef" href="#4bit-adder-figure">adder-figure</a>, and explain what queries you
 would use to verify the designs. What kinds of queries are
 *not* supported by this representation that
 *are* supported by the representation in
-Section <a class="sectionRef" title="" href="">circuits-section</a>?
+Section <a class="sectionRef" title="" href="#">circuits-section</a>?
 </p>
     </div>
 </div>
@@ -5963,7 +6093,7 @@ another.)
         <p class="card-text">
 
 In this exercise, use the sentences you wrote in
-Exercise <a class="exerciseRef" tille="" href="">fol-horses-exercise</a> to answer a question by
+Exercise <a href="#">fol-horses-exercise</a> to answer a question by
 using a backward-chaining algorithm.<br />
 
 1.  Draw the proof tree generated by an exhaustive backward-chaining
@@ -5992,9 +6122,9 @@ using a backward-chaining algorithm.<br />
         <p class="card-text">
 
 Trace the execution of the backward-chaining
-algorithm in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/backward-chaining-algorithm.png">backward-chaining-algorithm</a>
+algorithm in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/backward-chaining-algorithm">backward-chaining-algorithm</a>
 (page <a class="pageRef" title="" href="#">backward-chaining-algorithm</a> when it is applied to solve the crime problem
-(page <a class="pageRef" title="" href="#">west-problem-page</a>. Show the sequence of values taken on by the
+(page <a href="#">west-problem-page</a>. Show the sequence of values taken on by the
 ${goals}$ variable, and arrange them into a tree.
 </p>
     </div>
@@ -6511,7 +6641,7 @@ height.<br />
 <p class="card-text">
 
 The original {Strips} planner was designed to control Shakey the robot.
-Figure <a class="insideExerciseFigRef" href="#shakey-figure">shakey-figure</a> shows a version of Shakey’s world
+Figure <a class="insideExercisesFigRef" href="#shakey-figure">shakey-figure</a> shows a version of Shakey’s world
 consisting of four rooms lined up along a corridor, where each room has
 a door and a light switch. The actions in Shakey’s world include moving from place to place,
 pushing movable objects (such as boxes), climbing onto and down from
@@ -8730,7 +8860,7 @@ outcomes $X_1$, $X_2$, and $X_3$.<br />
 <div class="card-body">
 <p class="card-text">
 
-Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a>) on
+Equation (<a href="#">parameter-joint-repn-equation</a> on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{Parents}(X_i))$. This exercise asks you to derive
@@ -8739,8 +8869,8 @@ ${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br />
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
-    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and <a class="equationRef" title="" href="#">marginalization-equation</a>)
-    (pages <a class="pageRef" title="" href="#">conditional-probability-equation</a> and <a class="pageRef" title="" href="#">marginalization-equation</a>)
+    Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and (<a class="pageRef" title="" href="#">marginalization-equation</a>
+    (pages <a href="#">conditional-probability-equation</a> and <a href="#">marginalization-equation</a>)
     to express the conditional probability $P(zy)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.<br />
 
@@ -8807,7 +8937,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br />
 <p class="card-text">
 
 Consider the Bayesian network in
-Figure <a class="insideBookFigRef" title="" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/burglary-figure.png">burglary-figure</a><br />
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/burglary-figure.png">burglary-figure.</a><br />
 
 1.  If no evidence is observed, are ${Burglary}$ and ${Earthquake}$
     independent? Prove this from the numerical semantics and from the
@@ -8870,7 +9000,7 @@ from either of an individual’s parents, with a small nonzero probability
 $m$ of a random mutation flipping the handedness.<br />
 
 1.  Which of the three networks in
-    Figure <a class="insideExerciseFigRef" href="#handedness-figure">handedness-figure</a> claim that
+    Figure <a class="insideExercisesFigRef" href="#handedness-figure">handedness-figure</a> claim that
     $ {\textbf{P}}(G_{father},G_{mother},G_{child}) = {\textbf{P}}(G_{father}){\textbf{P}}(G_{mother}){\textbf{P}}(G_{child})$?<br />
 
 2.  Which of the three networks make independence claims that are
@@ -8904,11 +9034,11 @@ $m$ of a random mutation flipping the handedness.<br />
 </div>
 <div class="card-body">
 <p class="card-text">The <b>Markov
-blanket</b> of a variable is defined on page <a class="pageRef" title="" href="">markov-blanket-page</a>.
+blanket</b> of a variable is defined on page <a href="#">markov-blanket-page</a>.
 Prove that a variable is independent of all other variables in the
 network, given its Markov blanket and derive
 Equation (<a class="equationRef" title="" href="#">markov-blanket-equation</a>)
-(page <a class="pageRef" title="">markov-blanket-equation</a>).
+(page <a class="pageRef" title="" href="#">markov-blanket-equation</a>).
 <figure>
   <img src="https://aimacode.github.io/aima-exercises/figures/car-starts.svg" alt="car-starts-figure" id="car-starts-figure" style="width:100%" />
     <figcaption><center><b>A Bayesian network describing some features of a car's electrical system and engine. Each variable is Boolean, and the <i>true</i> value indicates that the corresponding aspect of the vehicle is in working order.</b></center></figcaption>
@@ -8927,7 +9057,7 @@ Equation (<a class="equationRef" title="" href="#">markov-blanket-equation</a>)
 <p class="card-text">
 
 Consider the network for car diagnosis shown in
-Figure <a class="insideExerciseFigRef" href="#car-starts-figure">car-starts-figure</a><br />.
+Figure <a class="insideExercisesFigRef" href="#car-starts-figure">car-starts-figure</a><br />.
 
 1.  Extend the network with the Boolean variables ${IcyWeather}$ and
     ${StarterMotor}$.<br />
@@ -9074,7 +9204,7 @@ telescope can also (with a much smaller probability $f$) be badly out of
 focus (events $F_1$ and $F_2$), in which case the scientist will
 undercount by three or more stars (or if $N$ is less than 3, fail to
 detect any stars at all). Consider the three networks shown in
-Figure <a class="insideExerciseFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>.<br />
+Figure <a class="insideExercisesFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>.<br />
 
 1.  Which of these Bayesian networks are correct (but not
     necessarily efficient) representations of the preceding information?<br />
@@ -9109,12 +9239,12 @@ Figure <a class="insideExerciseFigRef" href="#telescope-nets-figure">telescope-
 <p class="card-text">
 
 Consider the network shown in
-Figure <a class="insideExerciseFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
+Figure <a class="insideExercisesFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
 two telescopes work identically. $N\{1,2,3\}$ and
 $M_1,M_2\{0,1,2,3,4\}$, with the symbolic CPTs as described
-in Exercise <a class="exerciseRef" title="" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
+in Exercise <a class="exerciseRef" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
 algorithm (Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/enumeration-algorithm.png">enumeration-algorithm</a> on
-page <a class="pageRef" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
+page <a class="pageRef" id="pageref" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
 ${\textbf{P}}(NM_12,M_22)$.<br />
 
 
@@ -9137,7 +9267,7 @@ ${\textbf{P}}(NM_12,M_22)$.<br />
 <div class="card-body">
 <p class="card-text">
 
-Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a><br />.
+Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a><br />.
 
 1.  Which of the following are asserted by the network
     <i>structure</i>?<br />
@@ -9159,7 +9289,7 @@ Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#p
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a>?<br />
+    Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
     $P{PresidentialPardon}$ to the network; draw the new
@@ -9181,7 +9311,7 @@ Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#p
 <div class="card-body">
 <p class="card-text">
 
-Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a><br />.
+Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a><br />.
 
 1.  Which of the following are asserted by the network
     <i>structure</i>?<br />
@@ -9199,11 +9329,11 @@ Consider the Bayes net shown in Figure <a class="insideExerciseFigRef" href="#p
     motivated prosecutor.<br />
 
 4.  A <b>context-specific independence</b> (see
-    page <a class="pageRef" title="" href="#">CSI-page</a>) allows a variable to be independent of some of
+    page <a class="pageRef" id="pageref" title="" href="#">CSI-page</a>) allows a variable to be independent of some of
     its parents given certain values of others. In addition to the usual
     conditional independences given by the graph structure, what
     context-specific independences exist in the Bayes net in
-    Figure <a class="insideExerciseFigRef" href="#politics-figure">politics-figure</a>?<br />
+    Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
     $P{PresidentialPardon}$ to the network; draw the new
@@ -9495,7 +9625,7 @@ time sequences.<br />
 
 This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
-Figure <a class="insideBookFigRef" title="" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
 We wish to compute $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$$ for
 $$k=1,\ldots ,t$$. This will be done with a divide-and-conquer
 approach.<br />
@@ -9636,8 +9766,8 @@ accurate?
 
 We have described three policies for the vacuum robot: (1) a uniform
 random walk, (2) a bias for wandering southeast, as described in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/dbn-exercises/ex_7/">hmm-robust-exercise</a>, and (3) the policy
-described in Exercise <a class="exerciseRef" title="" href="">roomba-viterbi-exercise</a>. Suppose
+Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_7/">hmm-robust-exercise</a>, and (3) the policy
+described in Exercise <a href="#">roomba-viterbi-exercise</a>. Suppose
 an observer is given the observation sequence from a vacuum robot, but
 is not sure which of the three policies the robot is following. What
 approach should the observer use to find the most likely path, given the
@@ -9728,7 +9858,7 @@ system whose behavior switches unpredictably among a set of $k$ distinct
 a series of distinct maneuvers that the missile may attempt to track. A
 Bayesian network representation of such a <b>switching Kalman
 filter</b> model is shown in
-Figure <a class="insideExerciseFigRef" href="#switching-kf-figure">switching-kf-figure</a>.
+Figure <a class="insideExercisesFigRef" href="#switching-kf-figure">switching-kf-figure</a>.
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
@@ -9878,7 +10008,7 @@ the model.<br />
 <div class="card-body">
 <p class="card-text">
 
-For the DBN specified in Exercise <a class="exerciseRef" title="" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a> and
+For the DBN specified in Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a> and
 for the evidence values<br />
 
 $$
@@ -9915,7 +10045,7 @@ perform the following computations:<br />
 
 Suppose that a particular student shows up with red eyes and sleeps in
 class every day. Given the model described in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a>, explain why the probability
+Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a>, explain why the probability
 that the student had enough sleep the previous night converges to a
 fixed point rather than continuing to go down as we gather more days of
 evidence. What is the fixed point? Answer this both numerically (by
@@ -10157,7 +10287,7 @@ individually in sealed, identical, black boxes.<br />
 
 Now you, the customer, have just bought a Surprise candy at the store
 but have not yet opened the box. Consider the three Bayes nets in
-Figure <a class="insideExerciseFigRef" href="#3candy-figure">3candy-figure</a>.<br />
+Figure <a class="insideExercisesFigRef" href="#3candy-figure">3candy-figure</a>.<br />
 
 1.  Which network(s) can correctly represent
     ${\textbf{P}}(Flavor,Wrapper,Shape)$?<br />
@@ -10213,7 +10343,7 @@ individually in sealed, identical, black boxes.<br />
 
 Now you, the customer, have just bought a Surprise candy at the store
 but have not yet opened the box. Consider the three Bayes nets in
-Figure <a class="insideExerciseFigRef" href="#3candy-figure">3candy-figure</a>.<br />
+Figure <a class="insideExercisesFigRef" href="#3candy-figure">3candy-figure</a>.<br />
 
 1.  Which network(s) can correctly represent
     ${\textbf{P}}(Flavor,Wrapper,Shape)$?<br />
@@ -10455,7 +10585,7 @@ and $X_1$ are preferentially independent of $X_2$.
 <div class="card-body">
 <p class="card-text">
 
-Repeat Exercise <a class="exerciseRef" title="" href="/aima-exercises/decision-theory-exercises/ex_21/">airport-id-exercise</a>, using the action-utility
+Repeat Exercise <a class="exerciseRef" href="/aima-exercises/decision-theory-exercises/ex_21/">airport-id-exercise</a>, using the action-utility
 representation shown in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/airport-au-id-figure.png">airport-au-id-figure</a>.
 </p>
 </div>
@@ -10471,7 +10601,7 @@ representation shown in Figure <a class="insideBookFigRef" target="_blank" href
 <p class="card-text">
 
 For either of the airport-siting diagrams from Exercises
-<a class="exerciseRef" title="" href="/aima-exercises/decision-theory-exercises/ex_21/">airport-id-exercise</a> and <a class="exerciseRef" href="/aima-exercises/decision-theory-exercises/ex_17/">airport-au-id-exercise</a>, to which
+<a class="exerciseRef" href="/aima-exercises/decision-theory-exercises/ex_21/">airport-id-exercise</a> and <a class="exerciseRef" href="/aima-exercises/decision-theory-exercises/ex_17/">airport-au-id-exercise</a>, to which
 conditional probability table entry is the utility most sensitive, given
 the available evidence?
 </p>
@@ -10652,7 +10782,7 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 which squares can be reached from (1,1) by the action sequence
 $[{Up},{Up},{Right},{Right},{Right}]$ and with what
 probabilities. Explain how this computation is related to the prediction
-task (see Section <a class="sectionRef" title="">general-filtering-section</a> for a
+task (see Section <a href="#">general-filtering-section</a> for a
 hidden Markov model.
 </p>
 </div>
@@ -10695,7 +10825,7 @@ calculate the fraction of time the agent spends in each state, in the
 limit, if the policy is executed forever. (<i>Hint</i>:
 Construct the state-to-state transition probability matrix corresponding
 to the policy and see
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)
+Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)
 </p>
 </div>
 </div>
@@ -10829,7 +10959,7 @@ reward for $B$ is always equal and opposite.)<br />
     and define a suitable termination criterion.<br />
 
 3.  Consider the game described in
-    Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/line-game4-figure.png">line-game4-figure</a> on page <a class="pageRef" title="" href="#">line-game4-figure</a>.
+    Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/line-game4-figure.png">line-game4-figure</a> on page <a class="pageRef" id="pageref" title="" href="#">line-game4-figure</a>.
     Draw the state space (rather than the game tree), showing the moves
     by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
     state with $R(s)$. You will find it helpful to arrange the states
@@ -10842,7 +10972,7 @@ reward for $B$ is always equal and opposite.)<br />
 
     <figure>
       <img src="https://aimacode.github.io/aima-exercises/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" id="grid-mdp-figure" style="width:100%" />
-      <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a class="exerciseRef" title="" href="">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a class="exerciseRef" title="" href="">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
+      <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a href="#">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a href="#">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
       The start state has reward 0.</b></center></figcaption>
     </figure>
 </p>
@@ -10857,7 +10987,7 @@ reward for $B$ is always equal and opposite.)<br />
 </div>
 <div class="card-body">
 <p class="card-text">Consider the $3 \times 3$ world shown in
-Figure <a class="insideExerciseFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
+Figure <a class="insideExercisesFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
 same as in the $4\times 3$
 Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>: 80% of the
 time the agent goes in the direction it selects; the rest of the time it
@@ -10889,7 +11019,7 @@ each policy.<br />
 <p class="card-text">
 
 Consider the $101 \times 3$ world shown in
-Figure <a class="insideExerciseFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
+Figure <a class="insideExercisesFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
 has a choice of two deterministic actions, <i>Up</i> or
 <i>Down</i>, but in the other states the agent has one
 deterministic action, <i>Right</i>. Assuming a discounted reward
@@ -11121,7 +11251,7 @@ chooses to ${testify}$ or ${refuse}$ in the current round?
 <div class="card-body">
 <p class="card-text">
 
-The following payoff matrix, from <a class="paperRef" title="" href="">Blinder:1983</a> by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
+The following payoff matrix, from @Blinder:1983 by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
 politicians and the Federal Reserve.<br />
 
 |     | Fed: contract | Fed: do nothing  | Fed: expand     |
@@ -11255,7 +11385,7 @@ outputs, and available example data.
 <div class="card-body">
 <p class="card-text">
 
-Repeat Exercise <a class="exerciseRef" title="" href="/aima-exercises/concept-learning-exercises/ex_1/">infant-language-exercise</a> for the case
+Repeat Exercise <a class="exerciseRef" href="/aima-exercises/concept-learning-exercises/ex_1/">infant-language-exercise</a> for the case
 of learning to play tennis (or some other sport with which you are
 familiar). Is this supervised learning or reinforcement learning?
 </p>
@@ -12139,7 +12269,7 @@ algorithm to learn a definition for the ${Ancestor}$ predicate.
 <p class="card-text">
 
 The data used for
-Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/bayes-candy-figure.png">bayes-candy-figure</a> on page <a class="pageRef" title="" href="#">bayes-candy-figure</a> can be
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/bayes-candy-figure.png">bayes-candy-figure</a> on page <a class="pageRef" id="pageref" title="" href="#">bayes-candy-figure</a> can be
 viewed as being generated by $h_5$. For each of the other four
 hypotheses, generate a data set of length 100 and plot the corresponding
 graphs for $P(h_i|d_1,\ldots,d_N)$ and
@@ -12158,7 +12288,7 @@ your results.
 <div class="card-body">
 <p class="card-text">
 
-Repeat Exercise <a class="exerciseRef" title="" href="/aima-exercises/bayesian-learning-exercises/ex_1/">bayes-candy-exercise</a>, this time
+Repeat Exercise <a class="exerciseRef" href="/aima-exercises/bayesian-learning-exercises/ex_1/">bayes-candy-exercise</a>, this time
 plotting the values of
 $P(D_{N+1}=lime|h_{MAP})$ and
 $P(D_{N+1}=lime|h_{ML})$.
@@ -13439,7 +13569,7 @@ July 28, 2008):<br />
 <p class="card-text">
 
 Without looking back at
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/nlp-english-exercises/ex_1/">washing-clothes-exercise</a>, answer the following
+Exercise <a class="exerciseRef" href="/aima-exercises/nlp-english-exercises/ex_1/">washing-clothes-exercise</a>, answer the following
 questions:<br />
 
 1.  What are the four steps that are mentioned?<br />
@@ -13553,9 +13683,9 @@ $[C_1,C_2,C_3,C_4,C_4,C_6,C_7]$. Also give its probability.
 <p class="card-text">
 
 We forgot to mention that the text in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/nlp-english-exercises/ex_1/">washing-clothes-exercise</a> is entitled “Washing
+Exercise <a class="exerciseRef" href="/aima-exercises/nlp-english-exercises/ex_1/">washing-clothes-exercise</a> is entitled “Washing
 Clothes.” Reread the text and answer the questions in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/nlp-english-exercises/ex_17/">washing-clothes2-exercise</a>. Did you do better
+Exercise <a class="exerciseRef" href="/aima-exercises/nlp-english-exercises/ex_17/">washing-clothes2-exercise</a>. Did you do better
 this time? Bransford and Johnson [<a class="paperRef" title="" href="">Bransford+Johnson:1973</a>] used this
 text in a controlled experiment and found that the title helped
 significantly. What does this tell you about how language and memory
@@ -13739,7 +13869,7 @@ Which of the following are true, and which are false?<br />
 <div class="card-body">
 <p class="card-text">
 
-(Courtesy of Pietro Perona.) Figure <a class="insideExerciseFigRef" href="#bottle-figure">bottle-figure</a> shows
+(Courtesy of Pietro Perona.) Figure <a class="insideExercisesFigRef" href="#bottle-figure">bottle-figure</a> shows
 two cameras at X and Y observing a scene. Draw the image seen at each
 camera, assuming that all named points are in the same horizontal plane.
 What can be concluded from these two images about the relative distances
@@ -13769,11 +13899,23 @@ draw $N\geq $ samples uniformly from among those locations. As
 usual, it is perfectly acceptable if more than one sample is generated
 for any of the locations $X$. Let $Z$ be a Boolean sensor variable
 characterized by the following conditional probabilities:<br />
+
 $$\begin{aligned}
 P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
 P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
 P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;} \\
 P(z\mid x_) &amp;=&amp; } \qquad\qquad P(\lnot z\mid x_)\;\;=\;\;}\ .\end{aligned}$$<br />
+
+\begin{table}[]
+\begin{tabular}{ll}
+P(z\textbackslash{}mid x\_\{\{\textbackslash{}rm 1\}\}) \&amp;=\&amp; \{\{\textbackslash{}rm \{0.8\}\}\} &amp; 1 \\
+1                                                                                                &amp; 1 \\
+1                                                                                                &amp; 1 \\
+1                                                                                                &amp; 1
+\end{tabular}
+\end{table}
+
+
 MCL uses these probabilities to generate particle weights, which are
 subsequently normalized and used in the resampling process. For
 simplicity, let us assume we generate only one new sample in the
@@ -13832,7 +13974,7 @@ successful global localization of the robot.
 <p class="card-text">
 
 Consider a robot with two simple manipulators, as
-shown in figure &lt;a href=#figRobot2"&gt;figRobot2&lt;/a&gt;. Manipulator A is a square block of side 2
+shown in figure <a href="#figRobot2">figRobot2</a>. Manipulator A is a square block of side 2
 which can slide back and on a rod that runs along the x-axis from
 x=$-$10 to x=10. Manipulator B is a square block of side 2 which can
 slide back and on a rod that runs along the y-axis from y=-10 to y=10.
@@ -13856,9 +13998,9 @@ the permitted and excluded zones.
 <p class="card-text">
 
 Suppose that you are working with the robot in
-Exercise <a class="exerciseRef" title="" href="/aima-exercises/nlp-english-exercises/ex_3/">AB-manipulator-ex</a> and you are given the
+Exercise <a class="exerciseRef" href="/aima-exercises/nlp-english-exercises/ex_3/">AB-manipulator-ex</a> and you are given the
 problem of finding a path from the starting configuration of
-figure <a class="insideExerciseFigRef" href="#figRobot2">figRobot2</a> to the ending configuration. Consider a potential
+figure <a class="insideExercisesFigRef" href="#figRobot2">figRobot2</a> to the ending configuration. Consider a potential
 function $$D(A, {Goal})^2 + D(B, {Goal})^2 + \frac{1}{D(A, B)^2}$$
 where $D(A,B)$ is the distance between the closest points of A and B.<br />
 
@@ -13943,19 +14085,19 @@ for 10 interesting maps. What is the complexity of your algorithm?
 
 This exercise explores the relationship between
 workspace and configuration space using the examples shown in
-Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>.
+Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>.
 
 1.  Consider the robot configurations shown in
-    Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>(a) through (c), ignoring the obstacle
+    Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>(a) through (c), ignoring the obstacle
     shown in each of the diagrams. Draw the corresponding arm
     configurations in configuration space. (<i>Hint:</i> Each
     arm configuration maps to a single point in configuration space, as
-    illustrated in Figure <a class="insideExerciseFigRef" href="#FigEx2">FigArm1</a>(b).)<br />
+    illustrated in Figure <a class="insideExercisesFigRef" href="#FigEx2">FigArm1</a>(b).)<br />
 
 2.  Draw the configuration space for each of the workspace diagrams in
-    Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>(a)–(c). (<i>Hint:</i> The
+    Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>(a)–(c). (<i>Hint:</i> The
     configuration spaces share with the one shown in
-    Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>(a) the region that corresponds to
+    Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>(a) the region that corresponds to
     self-collision, but differences arise from the lack of enclosing
     obstacles and the different locations of the obstacles in these
     individual figures.)<br />
@@ -13965,13 +14107,13 @@ Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>.
     Please ignore the shaded regions in this exercise.<br />
 
 4.  The configuration spaces shown in
-    Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>(e)–(f) have all been generated by a
+    Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>(e)–(f) have all been generated by a
     single workspace obstacle (dark shading), plus the constraints
     arising from the self-collision constraint (light shading). Draw,
     for each diagram, the workspace obstacle that corresponds to the
     darkly shaded area.<br />
 
-5.  Figure <a class="insideExerciseFigRef" href="#FigEx2">FigEx2</a>(d) illustrates that a single planar
+5.  Figure <a class="insideExercisesFigRef" href="#FigEx2">FigEx2</a>(d) illustrates that a single planar
     obstacle can decompose the workspace into two disconnected regions.
     What is the maximum number of disconnected regions that can be
     created by inserting a planar obstacle into an obstacle-free,
@@ -14066,7 +14208,7 @@ ${\langle}x,y, \phi + \theta {\rangle}$.
     and non-monotonic.<br />
 <figure>
   <img src="http://aimacode.github.io/aima-exercises/figures/robotics-pic7.svg" alt="FigEx3" id="FigEx3" style="width:100%" />
-    <figcaption><center><b>Simplified robot in a maze. See Exercise <a class="exerciseRef" title="" href="">robot-exploration-exercise</a></b></center></figcaption>
+    <figcaption><center><b>Simplified robot in a maze. See Exercise <a href="#">robot-exploration-exercise</a></b></center></figcaption>
 </figure>
 </p>
 </div>
@@ -14126,7 +14268,7 @@ worlds with a valid path from the start to the goal location.<br />
 <div class="card-body">
 <p class="card-text">
 
-In Figure <a class="insideExerciseFigRef" href="#">Fig5</a>(b) on
+In Figure <a class="insideExercisesFigRef" href="#">Fig5</a>(b) on
 page <a class="pageRef" title="" href="#">Fig5</a>, we encountered an augmented finite state machine for
 the control of a single leg of a hexapod robot. In this exercise, the
 aim is to design an AFSM that, when combined with six copies of the
@@ -14136,7 +14278,7 @@ messages to your new AFSM and to wait until other messages arrive. Argue
 why your controller is efficient, in that it does not unnecessarily
 waste energy (e.g., by sliding legs), and in that it propels the robot
 at reasonably high speeds. Prove that your controller satisfies the
-dynamic stability condition given on page <a class="pageRef" title="" href="#">polygon-stability-condition-page</a>.
+dynamic stability condition given on page <a href="#">polygon-stability-condition-page</a>.
 </p>
 </div>
 </div>
@@ -14416,3 +14558,30 @@ be a contradiction for someone to hold both positions?
   
 </article>
 
+
+      </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+        <script src="/aima-exercises/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/aima-exercises/js/answer.js"></script>
+        <script src="/aima-exercises/js/commsol.js"></script>
+        <script src="/aima-exercises/js/forms.js"></script>
+        <script src="/aima-exercises/js/crossref.js"></script>
+        <script src="/aima-exercises/js/bookmark.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+</html>

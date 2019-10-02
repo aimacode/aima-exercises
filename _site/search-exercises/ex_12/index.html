@@ -166,23 +166,8 @@
 
 <div id="hiddden">
 
-The problem is usually stated as follows. Three
-missionaries and three cannibals are on one side of a river, along with
-a boat that can hold one or two people. Find a way to get everyone to
-the other side without ever leaving a group of missionaries in one place
-outnumbered by the cannibals in that place. This problem is famous in AI
-because it was the subject of the first paper that approached problem
-formulation from an analytical viewpoint <a href="#" class="paperRef" title="">Amarel:1968</a>. <br />
-
-1.  Formulate the problem precisely, making only those distinctions
-    necessary to ensure a valid solution. Draw a diagram of the complete
-    state space.<br />
-
-2.  Implement and solve the problem optimally using an appropriate
-    search algorithm. Is it a good idea to check for repeated states? <br />
-
-3.  Why do you think people have a hard time solving this puzzle, given
-    that the state space is so simple? <br />
+Define in your own words the following terms: state, state space, search
+tree, search node, goal, action, transition model, and branching factor.
 </div>
 
   </div>
@@ -190,36 +175,21 @@ formulation from an analytical viewpoint <a href="#" class="paperRef" title="">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 3.12</a>
         <a class="bookmarkquest" id="bookmark_question">
-          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch3ex11');" href="#">
-            <i id="ch3ex11" class="fas fa-bookmark" style="color:white"></i>
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch3ex12');" href="#">
+            <i id="ch3ex12" class="fas fa-bookmark" style="color:white"></i>
           </button>
           </a>
         <a class="edit_question" id="editt_question" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex11');" href="#" id="buttonsolve">
-        <i id="ch3ex11" class="far fa-edit" style="color:white"></i>
+        <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch3ex12');" href="#" id="buttonsolve">
+        <i id="ch3ex12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
     </div>
     <div class="card-body">
         <p class="card-text">
 
-The problem is usually stated as follows. Three
-missionaries and three cannibals are on one side of a river, along with
-a boat that can hold one or two people. Find a way to get everyone to
-the other side without ever leaving a group of missionaries in one place
-outnumbered by the cannibals in that place. This problem is famous in AI
-because it was the subject of the first paper that approached problem
-formulation from an analytical viewpoint <a href="#" class="paperRef" title="">Amarel:1968</a>. <br>
-
-1.  Formulate the problem precisely, making only those distinctions
-    necessary to ensure a valid solution. Draw a diagram of the complete
-    state space.<br>
-
-2.  Implement and solve the problem optimally using an appropriate
-    search algorithm. Is it a good idea to check for repeated states? <br>
-
-3.  Why do you think people have a hard time solving this puzzle, given
-    that the state space is so simple? <br>
+Define in your own words the following terms: state, state space, search
+tree, search node, goal, action, transition model, and branching factor.
 </p>
     </div>
 </div>
@@ -227,7 +197,7 @@ formulation from an analytical viewpoint <a href="#" class="paperRef" title="">
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -271,7 +241,7 @@ formulation from an analytical viewpoint <a href="#" class="paperRef" title="">
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex11">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch3ex12">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -308,12 +278,13 @@ formulation from an analytical viewpoint <a href="#" class="paperRef" title="">
 <script>
 var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('3-Solving-Problems-By-Searching');
-  var fullName = String('ch3ex11');
+  var fullName = String('ch3ex12');
   var dot = fullName.indexOf("x");
   var exerciseName = "ex_";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";

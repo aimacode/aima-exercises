@@ -166,13 +166,13 @@
 
 <div id="hiddden">
 
-Imagine that, in Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
+Imagine that, in Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
 the friends wants to avoid the other. The problem then becomes a
 two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal
 payoff to the pursuer is minus the total time taken. (The evader “wins”
 by never losing.) An example is shown in Figure.
-<a class="insideExerciseFigRef" title="" href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br />
+<a href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br />
 
 
 1.  Copy the game tree and mark the values of the terminal nodes.<br />
@@ -217,13 +217,13 @@ by never losing.) An example is shown in Figure.
     <div class="card-body">
         <p class="card-text">
 
-Imagine that, in Exercise <a class="exerciseRef" title="" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
+Imagine that, in Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_5/">two-friends-exercise</a>, one of
 the friends wants to avoid the other. The problem then becomes a
 two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal
 payoff to the pursuer is minus the total time taken. (The evader “wins”
 by never losing.) An example is shown in Figure.
-<a class="insideExerciseFigRef" title="" href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br>
+<a href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br>
 
 
 1.  Copy the game tree and mark the values of the terminal nodes.<br>
@@ -255,7 +255,7 @@ by never losing.) An example is shown in Figure.
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -342,6 +342,7 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";

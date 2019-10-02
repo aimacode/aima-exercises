@@ -164,7 +164,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<div id="hiddden">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950</a>.In the paper, he discusses several objections to his proposed enterprise and his test for
+<div id="hiddden">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950 </a>.In the paper, he discusses several objections to his proposed enterprise and his test for
 intelligence. Which objections still carry weight? Are his refutations
 valid? Can you think of new objections arising from developments since
 he wrote the paper? In the paper, he predicts that, by the year 2000, a
@@ -189,7 +189,7 @@ would have today? In another 50 years?
         </a>
     </div>
     <div class="card-body">
-        <p class="card-text">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950</a>.In the paper, he discusses several objections to his proposed enterprise and his test for
+        <p class="card-text">Read Turing’s original paper on AI <a class="paperRef" title="" href="">Turing:1950 </a>.In the paper, he discusses several objections to his proposed enterprise and his test for
 intelligence. Which objections still carry weight? Are his refutations
 valid? Can you think of new objections arising from developments since
 he wrote the paper? In the paper, he predicts that, by the year 2000, a
@@ -203,7 +203,7 @@ would have today? In another 50 years?
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -290,6 +290,7 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";

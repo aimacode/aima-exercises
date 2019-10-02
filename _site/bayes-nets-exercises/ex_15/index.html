@@ -167,12 +167,12 @@
 <div id="hiddden">
 
 Consider the network shown in
-Figure <a class="insideExerciseFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
+Figure <a class="insideExercisesFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
 two telescopes work identically. $N\{1,2,3\}$ and
 $M_1,M_2\{0,1,2,3,4\}$, with the symbolic CPTs as described
-in Exercise <a class="exerciseRef" title="" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
+in Exercise <a class="exerciseRef" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
 algorithm (Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/enumeration-algorithm.png">enumeration-algorithm</a> on
-page <a class="pageRef" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
+page <a class="pageRef" id="pageref" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
 ${\textbf{P}}(NM_12,M_22)$.<br />
 
 
@@ -203,12 +203,12 @@ ${\textbf{P}}(NM_12,M_22)$.<br />
         <p class="card-text">
 
 Consider the network shown in
-Figure <a class="insideExerciseFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
+Figure <a class="insideExercisesFigRef" href="#telescope-nets-figure">telescope-nets-figure</a>(ii), and assume that the
 two telescopes work identically. $N\{1,2,3\}$ and
 $M_1,M_2\{0,1,2,3,4\}$, with the symbolic CPTs as described
-in Exercise <a class="exerciseRef" title="" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
+in Exercise <a class="exerciseRef" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
 algorithm (Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/enumeration-algorithm.png">enumeration-algorithm</a> on
-page <a class="pageRef" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
+page <a class="pageRef" id="pageref" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
 ${\textbf{P}}(NM_12,M_22)$.<br>
 
 
@@ -225,7 +225,7 @@ ${\textbf{P}}(NM_12,M_22)$.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-                <a class="reqcomm" id="reqcomm" href="#">
+                <a class="reqcomm" id="reqcommus" href="#">
                 <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
@@ -312,6 +312,7 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
+  document.getElementById("reqcommus").href = "https://github.com/aimacode/aima-exercises/issues/new?title=Request%20to%20get%20Community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Request%20for%20Community%20Solution";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
