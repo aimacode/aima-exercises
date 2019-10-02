@@ -2030,11 +2030,11 @@ Comment on your results.
     <div class="card-body">
         <p class="card-text">
 
-The **And-Or-Graph-Search** algorithm in
+The <b>And-Or-Graph-Search</b> algorithm in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/and-or-graph-search-algorithm.png">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
 Suppose that, in addition, the algorithm were to store
-*every* visited state and check against that list. (See in
+<i>every</i> visited state and check against that list. (See in
 Figure <a class="insideBookFigRef" href="#">breadth-first-search-algorithm</a> for an example.)
 Determine the information that should be stored and how the algorithm
 should use that information when a repeated state is found.
@@ -2058,10 +2058,10 @@ having multiple copies of subplans.
     <div class="card-body">
         <p class="card-text">
 
-Explain precisely how to modify the **And-Or-Graph-Search** algorithm to
+Explain precisely how to modify the <b>And-Or-Graph-Search</b> algorithm to
 generate a cyclic plan if no acyclic plan exists. You will need to deal
 with three issues: labeling the plan steps so that a cyclic plan can
-point back to an earlier part of the plan, modifying **Or-Search** so that it
+point back to an earlier part of the plan, modifying <b>Or-Search</b> so that it
 continues to look for acyclic plans after finding a cyclic plan, and
 augmenting the plan representation to indicate whether a plan is cyclic.
 Show how your algorithm works on (a) the slippery vacuum world, and (b)
@@ -2139,8 +2139,8 @@ what happens when the assumption does not hold. Does the notion of
 optimality still make sense in this context, or does it require
 modification? Consider also various possible definitions of the “cost”
 of executing an action in a belief state; for example, we could use the
-*minimum* of the physical costs; or the
-*maximum*; or a cost *interval* with the lower
+<i>minimum</i> of the physical costs; or the
+<i>maximum</i>; or a cost <i>interval</i> with the lower
 bound being the minimum cost and the upper bound being the maximum; or
 just keep the set of all possible costs for that action. For each of
 these, explore whether A* (with modifications if necessary) can return
@@ -2202,9 +2202,9 @@ We can turn the navigation problem in
 Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_9/">path-planning-exercise</a> into an environment as
 follows:<br />
 
--   The percept will be a list of the positions, *relative to the
-    agent*, of the visible vertices. The percept does
-    *not* include the position of the robot! The robot must
+-   The percept will be a list of the positions, <i>relative to the
+    agent</i>, of the visible vertices. The percept does
+    <i>not</i> include the position of the robot! The robot must
     learn its own position from the map; for now, you can assume that
     each location has a different “view.”<br />
 
@@ -2213,7 +2213,7 @@ follows:<br />
     otherwise, the robot stops at the point where its path first
     intersects an obstacle. If the agent returns a zero motion vector
     and is at the goal (which is fixed and known), then the environment
-    teleports the agent to a *random location* (not inside
+    teleports the agent to a <i>random location</i> (not inside
     an obstacle).<br />
 
 -   The performance measure charges the agent 1 point for each unit of
@@ -2267,8 +2267,8 @@ Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/maze-3x3-figure.png">maze-3x3-figure</a>. The agent knows that its
 initial location is (1,1), that the goal is at (3,3), and that the
-actions *Up*, *Down*, *Left*, *Right* have their usual
-effects unless blocked by a wall. The agent does *not* know
+actions <i>Up</i>, <i>Down</i>, <i>Left</i>, <i>Right</i> have their usual
+effects unless blocked by a wall. The agent does <i>not</i> know
 where the internal walls are. In any given state, the agent perceives
 the set of legal actions; it can also tell whether the state is one it
 has visited before.<br />
@@ -2283,8 +2283,8 @@ has visited before.<br />
 3.  Describe the first few branches of a contingency plan for this
     problem. How large (roughly) is the complete plan?<br />
 
-Notice that this contingency plan is a solution for *every
-possible environment* fitting the given description. Therefore,
+Notice that this contingency plan is a solution for <i>every
+possible environment</i> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.
 </p>
@@ -3482,8 +3482,8 @@ CSP?
     <div class="card-body">
         <p class="card-text">
 
-AC-3 puts back on the queue *every* arc
-($X_{k}, X_{i}$) whenever *any* value is deleted from the
+AC-3 puts back on the queue <i>every</i> arc
+($X_{k}, X_{i}$) whenever <i>any</i> value is deleted from the
 domain of $X_{i}$, even if each value of $X_{k}$ is consistent with
 several remaining values of $X_{i}$. Suppose that, for every arc
 ($X_{k}, X_{i}$), we keep track of the number of remaining values of
@@ -4623,14 +4623,14 @@ about the country—it represents facts with a map language. The
 two-dimensional structure of the map corresponds to the two-dimensional
 surface of the area.<br />
 
-1.  Give five examples of *symbols* in the map language.<br />
+1.  Give five examples of <i>symbols</i> in the map language.<br />
 
-2.  An *explicit* sentence is a sentence that the creator
+2.  An <i>explicit</i> sentence is a sentence that the creator
     of the representation actually writes down. An
-    *implicit* sentence is a sentence that results from
+    <i>implicit</i> sentence is a sentence that results from
     explicit sentences because of properties of the analogical
-    representation. Give three examples each of *implicit*
-    and *explicit* sentences in the map language.<br />
+    representation. Give three examples each of <i>implicit</i>
+    and <i>explicit</i> sentences in the map language.<br />
 
 3.  Give three examples of facts about the physical structure of your
     country that cannot be represented in the map language.<br />
@@ -6043,7 +6043,7 @@ Suppose we put into a logical knowledge base a segment of the
 U.S. census data listing the age, city of residence, date of birth, and
 mother of every person, using social security numbers as identifying
 constants for each person. Thus, George’s age is given by
-${Age}(\mbox443-{65}-{1282}}, {56})$. Which of the following
+${Age}(443-65-1282, 56)$. Which of the following
 indexing schemes S1–S5 enable an efficient solution for which of the
 queries Q1–Q4 (assuming normal backward chaining)?<br />
 <br />
@@ -6838,8 +6838,7 @@ state. What relaxed problem is the set-level heuristic the solution to?
 <div class="card-body">
 <p class="card-text">
 
-Examine the definition of **bidirectional
-search** in Chapter <a class="chapterRef" title="" href="/aima-exercises/search-exercises/">search-chapter</a>.<br />
+Examine the definition of <b>bidirectional search</b> in Chapter <a class="chapterRef" title="" href="/aima-exercises/search-exercises/">search-chapter</a>.<br />
 
 1.  Would bidirectional state-space search be a good idea for planning?<br />
 
@@ -7939,7 +7938,7 @@ applications of reasoning about knowledge:<br />
 page <a class="pageRef" title="" href="#">description-logic-ex</a>) into first-order logic, and comment on the result:
 <br />
 $$
-And(Man, AtLeast(3,Son), AtMost(2,Daughter), <br />All(Son,And(Unemployed,Married, All(Spouse,Doctor ))), <br />All(Daughter,And(Professor, Fills(Department ,Physics,Math))))
+And(Man, AtLeast(3,Son), AtMost(2,Daughter), \\All(Son,And(Unemployed,Married, All(Spouse,Doctor ))), \\All(Daughter,And(Professor, Fills(Department ,Physics,Math))))
 $$
 </p>
 </div>
@@ -8149,13 +8148,13 @@ counterexample.<br />
 <p class="card-text">
 
 Would it be rational for an agent to hold the three beliefs
-$P(A) {0.4}$, $P(B) {0.3}$, and
-$P(A \lor B) {0.5}$? If so, what range of probabilities would
+$P(A) = 0.4$, $P(B) = 0.3$, and
+$P(A \lor B) = 0.5$? If so, what range of probabilities would
 be rational for the agent to hold for $A \land B$? Make up a table like
 the one in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/de-finetti-table.png">de-finetti-table</a>, and show how it
 supports your argument about rationality. Then draw another version of
 the table where $P(A \lor B)
-{0.7}$. Explain why it is rational to have this probability,
+= 0.7$. Explain why it is rational to have this probability,
 even though the table shows one case that is a loss and three that just
 break even. (<i>Hint:</i> what is Agent 1 committed to about the
 probability of each of the four cases, especially the case that is a
@@ -8407,7 +8406,7 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon0.001$, $\delta0.01$.
+$\epsilon = 0.001$, $\delta = 0.01$.
 </p>
 </div>
 </div>
@@ -8568,9 +8567,9 @@ some background evidence $\textbf{e}$: <br />
 <p class="card-text">
 
 Show that the statement of conditional independence
-$${\textbf{P}}(X,Y Z) = {\textbf{P}}(XZ) {\textbf{P}}(YZ)$$
+$${\textbf{P}}(X,Y  | Z) = {\textbf{P}}(X | Z) {\textbf{P}}(Y | Z)$$
 is equivalent to each of the statements
-$${\textbf{P}}(XY,Z) = {\textbf{P}}(XZ) \quad\mbox{and}\quad {\textbf{P}}(YX,Z) = {\textbf{P}}(YZ)\ .$$
+$${\textbf{P}}(X | Y,Z) = {\textbf{P}}(X | Z) \quad\mbox{and}\quad {\textbf{P}}(Y | X,Z) = {\textbf{P}}(Y | Z)\ .$$
 </p>
 </div>
 </div>
@@ -8919,8 +8918,8 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br />
 3.  Let the parents of $X$ be $\textbf{U} \cup \textbf{V}$ and the parents of $Y$ be
     $\textbf{V} \cup \textbf{W}$, where $\textbf{U}$ and $\textbf{W}$ are disjoint. The formulas for the
     new CPTs after arc reversal are as follows: $$\begin{aligned}
-    {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W}) &amp;=&amp; \sum_x {\textbf{P}}(Y\textbf{V},\textbf{W}, x) {\textbf{P}}(x\textbf{U}, \textbf{V}) \\
-    {\textbf{P}}(X\textbf{U},\textbf{V},\textbf{W}, Y) &amp;=&amp; {\textbf{P}}(YX, \textbf{V}, \textbf{W}) {\textbf{P}}(X\textbf{U}, \textbf{V}) / {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W})\ .\end{aligned}$$
+    {\textbf{P}}(Y | \textbf{U},\textbf{V},\textbf{W}) &amp;=&amp; \sum_x {\textbf{P}}(Y | \textbf{V},\textbf{W}, x) {\textbf{P}}(x | \textbf{U}, \textbf{V}) \\
+    {\textbf{P}}(X | \textbf{U},\textbf{V},\textbf{W}, Y) &amp;=&amp; {\textbf{P}}(Y | X, \textbf{V}, \textbf{W}) {\textbf{P}}(X | \textbf{U}, \textbf{V}) / {\textbf{P}}(Y | \textbf{U},\textbf{V},\textbf{W})\ .\end{aligned}$$
     Prove that the new network expresses the same joint distribution
     over all variables as the original network.
 </p>
@@ -9274,9 +9273,9 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br />
 
-    2.  ${\textbf{P}}(JG) = {\textbf{P}}(JG,I)$.<br />
+    2.  ${\textbf{P}}(J|G) = {\textbf{P}}(J|G,I)$.<br />
 
-    3.  ${\textbf{P}}(MG,B,I) = {\textbf{P}}(MG,B,I,J)$.<br />
+    3.  ${\textbf{P}}(M|G,B,I) = {\textbf{P}}(M|G,B,I,J)$.<br />
 
 2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br />
 
@@ -9292,7 +9291,7 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
-    $P{PresidentialPardon}$ to the network; draw the new
+    $P={PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br />
 <figure>
   <img src="https://aimacode.github.io/aima-exercises/figures/politics.svg" alt="politics-figure" id="politics-figure" style="width:100%" />
@@ -9318,9 +9317,9 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br />
 
-    2.  ${\textbf{P}}(JG) = {\textbf{P}}(JG,I)$.<br />
+    2.  ${\textbf{P}}(J|G) = {\textbf{P}}(J|G,I)$.<br />
 
-    3.  ${\textbf{P}}(MG,B,I) = {\textbf{P}}(MG,B,I,J)$.<br />
+    3.  ${\textbf{P}}(M|G,B,I) = {\textbf{P}}(M|G,B,I,J)$.<br />
 
 2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br />
 
@@ -9336,7 +9335,7 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
-    $P{PresidentialPardon}$ to the network; draw the new
+    $P={PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br />
 </p>
 </div>
@@ -9626,16 +9625,16 @@ time sequences.<br />
 This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
-We wish to compute $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$$ for
-$$k=1,\ldots ,t$$. This will be done with a divide-and-conquer
+We wish to compute $\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$ for
+$k=1,\ldots ,t$. This will be done with a divide-and-conquer
 approach.<br />
 
 1.  Suppose, for simplicity, that $t$ is odd, and let the halfway point
-    be $h=(t+1)/2$. Show that $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t}) $$
+    be $h=(t+1)/2$. Show that $\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t}) $
      can be computed for
     $k=1,\ldots ,h$ given just the initial forward message
-    $$\textbf{f}_{1:0}$$, the backward message $$\textbf{b}_{h+1:t}$$, and the evidence
-    $$\textbf{e}_{1:h}$$.<br />
+    $\textbf{f}_{1:0}$, the backward message $\textbf{b}_{h+1:t}$, and the evidence
+    $\textbf{e}_{1:h}$.<br />
 
 2.  Show a similar result for the second half of the sequence.<br />
 
@@ -9725,7 +9724,7 @@ distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually
 chosen uniformly from the northwest quadrant of the room and the action
-actually tends to move southeast\[hmm-robot-southeast-page\]. Keeping
+actually tends to move southeast. Keeping
 the HMM model fixed, explore the effect on localization and path
 accuracy as the southeasterly tendency increases, for different values
 of $\epsilon$.
@@ -9858,24 +9857,24 @@ system whose behavior switches unpredictably among a set of $k$ distinct
 a series of distinct maneuvers that the missile may attempt to track. A
 Bayesian network representation of such a <b>switching Kalman
 filter</b> model is shown in
-Figure <a class="insideExercisesFigRef" href="#switching-kf-figure">switching-kf-figure</a>.
+Figure <a class="insideExercisesFigRef" href="#switching-kf-figure">switching-kf-figure</a>.<br /><br />
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
-    $${\textbf{P}}(\textbf{X}_0)$$ is a multivariate
+    ${\textbf{P}}(\textbf{X}_0)$ is a multivariate
     Gaussian distribution. Show that the prediction
-    $${\textbf{P}}(\textbf{X}_1)$$ is a <b>mixture of
+    ${\textbf{P}}(\textbf{X}_1)$ is a <b>mixture of
     Gaussians</b>—that is, a weighted sum of Gaussians such
-    that the weights sum to 1.
+    that the weights sum to 1.<br /><br />
 
 2.  Show that if the current continuous state estimate
-    $${\textbf{P}}(\textbf{X}_t|\textbf{e}_{1:t})$$ is a mixture of $m$ Gaussians,
+    ${\textbf{P}}(\textbf{X}_t|\textbf{e}_{1:t})$ is a mixture of $m$ Gaussians,
     then in the general case the updated state estimate
-    $${\textbf{P}}(\textbf{X}_{t+1}|\textbf{e}_{1:t+1})$$ will be a mixture of
-    $km$ Gaussians.
+    ${\textbf{P}}(\textbf{X}_{t+1}|\textbf{e}_{1:t+1})$ will be a mixture of
+    $km$ Gaussians.<br /><br />
 
 3.  What aspect of the temporal process do the weights in the Gaussian
-    mixture represent?
+    mixture represent?<br /><br />
 
 The results in (a) and (b) show that the representation of the posterior
 grows without limit even for switching Kalman filters, which are among
@@ -10011,22 +10010,16 @@ the model.<br />
 For the DBN specified in Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a> and
 for the evidence values<br />
 
-$$
-\textbf{e}_1 = not\space red\space eyes,\space not\space sleeping\space in\space class
-$$
-$$
-\textbf{e}_2 = red\space eyes,\space not\space sleeping\space in\space class
-$$
-$$
-\textbf{e}_3 = red\space eyes,\space sleeping\space in\space class
-$$
+$\textbf{e}_1 = not\space red\space eyes,\space not\space sleeping\space in\space class$<br />
+$\textbf{e}_2 = red\space eyes,\space not\space sleeping\space in\space class$<br />
+$\textbf{e}_3 = red\space eyes,\space sleeping\space in\space class$<br />
 
 perform the following computations:<br />
 
-1.  State estimation: Compute $$P({EnoughSleep}_t | \textbf{e}_{1:t})$$ for each
+1.  State estimation: Compute $P({EnoughSleep}_t | \textbf{e}_{1:t})$ for each
     of $t = 1,2,3$.<br />
 
-2.  Smoothing: Compute $$P({EnoughSleep}_t | \textbf{e}_{1:3})$$ for each of
+2.  Smoothing: Compute $P({EnoughSleep}_t | \textbf{e}_{1:3})$ for each of
     $t = 1,2,3$.<br />
 
 3.  Compare the filtered and smoothed probabilities for $t=1$ and $t=2$.<br />
@@ -10497,16 +10490,16 @@ value (EMV) versus some certain payoff. As $R$ (which is measured in the
 same units as $x$) becomes larger, the individual becomes less
 risk-averse.<br />
 
-1.  Assume Mary has an exponential utility function with $$R = \$500$$.
-    Mary is given the choice between receiving $$\$500$$ with certainty
+1.  Assume Mary has an exponential utility function with $R = \$500$.
+    Mary is given the choice between receiving $\$500$ with certainty
     (probability 1) or participating in a lottery which has a 60%
     probability of winning \$5000 and a 40% probability of
     winning nothing. Assuming Marry acts rationally, which option would
     she choose? Show how you derived your answer.<br />
 
-2.  Consider the choice between receiving $$\$100$$ with certainty
+2.  Consider the choice between receiving $\$100$ with certainty
     (probability 1) or participating in a lottery which has a 50%
-    probability of winning $$\$500$$ and a 50% probability of winning
+    probability of winning $\$500$ and a 50% probability of winning
     nothing. Approximate the value of R (to 3 significant digits) in an
     exponential utility function that would cause an individual to be
     indifferent to these two alternatives. (You might find it helpful to
@@ -10533,13 +10526,13 @@ same units as $x$) becomes larger, the individual becomes less
 risk-averse.<br />
 
 1.  Assume Mary has an exponential utility function with $R = \$400$.
-    Mary is given the choice between receiving $$\$400$$ with certainty
+    Mary is given the choice between receiving $\$400$ with certainty
     (probability 1) or participating in a lottery which has a 60%
     probability of winning \$5000 and a 40% probability of
     winning nothing. Assuming Marry acts rationally, which option would
     she choose? Show how you derived your answer.<br />
 
-2.  Consider the choice between receiving $$\$100$$ with certainty
+2.  Consider the choice between receiving $\$100$ with certainty
     (probability 1) or participating in a lottery which has a 50%
     probability of winning \$500 and a 50% probability of winning
     nothing. Approximate the value of R (to 3 significant digits) in an
@@ -10560,9 +10553,9 @@ risk-averse.<br />
 <p class="card-text">
 
 Alex is given the choice between two games. In Game 1, a fair coin is
-flipped and if it comes up heads, Alex receives $$\$100$$. If the coin comes
+flipped and if it comes up heads, Alex receives $\$100$. If the coin comes
 up tails, Alex receives nothing. In Game 2, a fair coin is flipped
-twice. Each time the coin comes up heads, Alex receives $$\$50$$, and Alex
+twice. Each time the coin comes up heads, Alex receives $\$50$, and Alex
 receives nothing for each coin flip that comes up tails. Assuming that
 Alex has a monotonically increasing utility function for money in the
 range \[\$0, \$100\], show mathematically that if Alex prefers Game 2 to
@@ -10707,10 +10700,10 @@ assume that the buyer is deciding whether to buy car $c_1$, that there
 is time to carry out at most one test, and that $t_1$ is the test of
 $c_1$ and costs \$50.<br />
 
-A car can be in good shape (quality $$q^+$$) or bad shape (quality $q^-$),
+A car can be in good shape (quality $q^+$) or bad shape (quality $q^-$),
 and the tests might help indicate what shape the car is in. Car $c_1$
-costs \$1,500, and its market value is $$\$2,000$$ if it is in good shape; if
-not, $$\$700$$ in repairs will be needed to make it in good shape. The buyer’s
+costs \$1,500, and its market value is $\$2,000$ if it is in good shape; if
+not, $\$700$ in repairs will be needed to make it in good shape. The buyer’s
 estimate is that $c_1$ has a 70% chance of being in good shape.<br />
 
 1.  Draw the decision network that represents this problem.<br />
@@ -10721,9 +10714,9 @@ estimate is that $c_1$ has a 70% chance of being in good shape.<br />
     fail the test given that the car is in good or bad shape. We have
     the following information:<br />
 
-    $$P({pass}(c_1,t_1) | q^+(c_1)) = {0.8}$$<br />
+    $P({pass}(c_1,t_1) | q^+(c_1)) = {0.8}$<br />
 
-    $$P({pass}(c_1,t_1) | q^-(c_1)) = {0.35}$$<br />
+    $P({pass}(c_1,t_1) | q^-(c_1)) = {0.35}$<br />
 
     Use Bayes’ theorem to calculate the probability that the car will pass (or fail) its test and hence the probability that it is in good (or bad) shape given each possible test outcome.<br />
 
@@ -11254,11 +11247,17 @@ chooses to ${testify}$ or ${refuse}$ in the current round?
 The following payoff matrix, from @Blinder:1983 by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
 politicians and the Federal Reserve.<br />
 
-|     | Fed: contract | Fed: do nothing  | Fed: expand     |
-| --- | --- | --- | --- |
-| **Pol: contract**    | $F=7, P=1$ | $F=9,P=4$  | $F=6,P=6$   |
-| **Pol: do nothing**  | $F=8, P=2$ | $F=5,P=5$  | $F=4,P=9$   |
-| **Pol: expand**      | $F=3, P=3$ | $F=2,P=7$  | $F=1,P=8$   |
+$$
+\begin{array} 
+	{|r|r|}\hline  &amp; Fed: contract &amp; Fed: do nothing &amp; Fed: expand \\ 
+	\hline
+		Pol: contract &amp; F=7, P=1 &amp; F=9, P=4 &amp; F=6, P=6 \\ 
+		Pol: do nothing &amp; F=8, P=2 &amp; F=5, P=5 &amp; F=4, P=9 \\ 
+		Pol: expand &amp; F=3, P=3 &amp; F=2, P=7 &amp; F=1, P=8\\ 
+	\hline  
+\end{array}
+$$
+
 <br />
 Politicians can expand or contract fiscal policy, while the Fed can
 expand or contract monetary policy. (And of course either side can
@@ -11470,7 +11469,7 @@ negative examples.<br />
 <div class="card-body">
 <p class="card-text">
 
-\[nonnegative-gain-exercise\]Suppose that an attribute splits the set of
+Suppose that an attribute splits the set of
 examples $E$ into subsets $E_k$ and that each subset has $p_k$
 positive examples and $n_k$ negative examples. Show that the
 attribute has strictly positive information gain unless the ratio
@@ -11491,15 +11490,17 @@ $p_k/(p_k+n_k)$ is the same for all $k$.
 Consider the following data set comprised of three binary input
 attributes ($A_1, A_2$, and $A_3$) and one binary output:<br />
 
-|  $\quad \textbf{Example}$   | $\quad A_1\quad$ | $\quad A_2\quad$  | $\quad A_3\quad$  | $\quad Output\space y$  |
-| --- | --- | --- | --- | --- |
-| $\textbf{x}_1$  | 1 | 0  | 0  | 0 |
-| $\textbf{x}_2$  | 1 | 0  | 1  | 0 |
-| $\textbf{x}_3$  | 0 | 1  | 0  | 0 |
-| $\textbf{x}_4$  | 1 | 1  | 1  | 1 |
-| $\textbf{x}_5$  | 1 | 1  | 0  | 1 |
-
-
+$$
+\begin{array} 
+	{|r|r|}\hline \textbf{Example} &amp; A_1 &amp; A_2 &amp; A_3 &amp; Output\space y \\ 
+	\hline \textbf{x}_1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\ 
+	\textbf{x}_2 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\ 
+	 \textbf{x}_3 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\ 
+	 \textbf{x}_4 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 
+	 \textbf{x}_5 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\ 
+	\hline  
+\end{array}
+$$
 Use the algorithm in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/DTL-algorithm.png">DTL-algorithm</a>
 (page <a class="pageRef" title="" href="#">DTL-algorithm</a>) to learn a decision tree for these data. Show the
 computations made to determine the attribute to split at each node.
@@ -11693,17 +11694,20 @@ correctly. If multiple tests have the same number of attributes and
 classify the same number of examples, then break the tie using
 attributes with lower index numbers (e.g., select $A_1$ over $A_2$).<br />
 
-
-|     | $\quad A_1\quad$ | $\quad A_2\quad$  | $\quad A_3\quad$ | $\quad A_y\quad$ | $\quad y\quad$ |
-| --- | --- | --- | --- | --- | --- |
-| $\textbf{x}_1$  | 1 | 0  | 0  | 0 | 1 |
-| $\textbf{x}_2$  | 1 | 0  | 1  | 1 | 1 |
-| $\textbf{x}_3$  | 0 | 1  | 0  | 0 | 1 |
-| $\textbf{x}_4$  | 0 | 1  | 1  | 0 | 0 |
-| $\textbf{x}_5$  | 1 | 1  | 0  | 1 | 1 |
-| $\textbf{x}_6$  | 0 | 1  | 0  | 1 | 0 |
-| $\textbf{x}_7$  | 0 | 0  | 1  | 1 | 1 |
-| $\textbf{x}_8$  | 0 | 0  | 1  | 0 | 0 |
+$$
+\begin{array} 
+	{|r|r|}\hline \textbf{Example} &amp; A_1 &amp; A_2 &amp; A_3 &amp; A_4 &amp; y \\ 
+	\hline \textbf{x}_1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\ 
+	\textbf{x}_2 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\ 
+	 \textbf{x}_3 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\ 
+	 \textbf{x}_4 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\ 
+	 \textbf{x}_5 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 \\ 
+	 \textbf{x}_6 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\ 
+	 \textbf{x}_7 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\ 
+	 \textbf{x}_8 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\ 
+	\hline  
+\end{array}
+$$
 </p>
 </div>
 </div>
@@ -11796,7 +11800,7 @@ two questions for the $L_2$ loss function.
 <div class="card-body">
 <p class="card-text">
 
-Figure &lt;ahref=""#"&gt;kernel-machine-figure&lt;/a&gt;
+Figure <a href="#">kernel-machine-figure</a>
 showed how a circle at the origin can be linearly separated by mapping
 from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
 But what if the circle is not located at the origin? What if it is an
@@ -11919,15 +11923,23 @@ these are representable by a threshold perceptron?
 Consider the following set of examples, each with six inputs and one
 target output:<br />
 
-|    |  |   |   |  |  |  |   |   |  |  |  |   |  |  |
-| --- | --- | --- | --- | --- | --- |
-| $\textbf{x}_1$  | 1 | 1  | 1  | 1 | 1 | 1 | 1  | 0  | 0 | 0 | 0 | 0  | 0  | 0 |
-| $\textbf{x}_2$  | 0 | 0  | 0  | 1 | 1 | 0 | 0  | 1  | 1 | 0 | 1 | 0  | 1  | 1 |
-| $\textbf{x}_3$  | 1 | 1  | 1  | 0 | 1 | 0 | 0  | 1  | 1 | 0 | 0 | 0  | 1  | 1 |
-| $\textbf{x}_4$  | 0 | 1  | 0  | 0 | 1 | 0 | 0  | 1  | 0 | 1 | 1 | 1  | 0  | 1 |
-| $\textbf{x}_5$  | 0 | 0  | 1  | 1 | 0 | 1 | 1  | 0  | 1 | 1 | 0 | 0  | 1  | 0 |
-| $\textbf{x}_6$  | 0 | 0  | 0  | 1 | 0 | 1 | 0  | 1  | 1 | 0 | 1 | 1  | 1  | 0 |
-| $\textbf{T}$  | 1 | 1  | 1  | 1 | 1 | 1 | 0  | 1  | 0 | 0 | 0 | 0  | 0  | 0 |
+
+
+$$
+\begin{array} 
+	{|r|r|}\hline \textbf{Example} &amp; A_1 &amp; A_2 &amp; A_3 &amp; A_4 &amp; A_5 &amp; A_6 &amp; A_7 &amp; A_8 &amp; A_9 &amp; A_{10} &amp; A_{11} &amp; A_{12} &amp; A_{13} &amp; A_{14} \\ 
+	\hline 
+	\textbf{x}_1  &amp; 1 &amp; 1  &amp; 1  &amp; 1 &amp; 1 &amp; 1 &amp; 1  &amp; 0  &amp; 0 &amp; 0 &amp; 0 &amp; 0  &amp; 0  &amp; 0 \\
+	\textbf{x}_2  &amp; 0 &amp; 0  &amp; 0  &amp; 1 &amp; 1 &amp; 0 &amp; 0  &amp; 1  &amp; 1 &amp; 0 &amp; 1 &amp; 0  &amp; 1  &amp; 1 \\
+	\textbf{x}_3  &amp; 1 &amp; 1  &amp; 1  &amp; 0 &amp; 1 &amp; 0 &amp; 0  &amp; 1  &amp; 1 &amp; 0 &amp; 0 &amp; 0  &amp; 1  &amp; 1 \\
+	\textbf{x}_4  &amp; 0 &amp; 1  &amp; 0  &amp; 0 &amp; 1 &amp; 0 &amp; 0  &amp; 1  &amp; 0 &amp; 1 &amp; 1 &amp; 1  &amp; 0  &amp; 1 \\
+	\textbf{x}_5  &amp; 0 &amp; 0  &amp; 1  &amp; 1 &amp; 0 &amp; 1 &amp; 1  &amp; 0  &amp; 1 &amp; 1 &amp; 0 &amp; 0  &amp; 1  &amp; 0 \\
+	\textbf{x}_6  &amp; 0 &amp; 0  &amp; 0  &amp; 1 &amp; 0 &amp; 1 &amp; 0  &amp; 1  &amp; 1 &amp; 0 &amp; 1 &amp; 1  &amp; 1  &amp; 0 \\
+	\textbf{T}   &amp; 1 &amp; 1  &amp; 1  &amp; 1 &amp; 1 &amp; 1 &amp; 0  &amp; 1  &amp; 0 &amp; 0 &amp; 0 &amp; 0  &amp; 0  &amp; 0 \\
+	\hline  
+\end{array}
+$$
+
 
 
 1.  Run the perceptron learning rule on these data and show the

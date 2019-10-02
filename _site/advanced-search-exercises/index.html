@@ -258,11 +258,11 @@ Comment on your results.
     <div class="card-body">
         <p class="card-text">
 
-The **And-Or-Graph-Search** algorithm in
+The <b>And-Or-Graph-Search</b> algorithm in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/and-or-graph-search-algorithm.png">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
 Suppose that, in addition, the algorithm were to store
-*every* visited state and check against that list. (See in
+<i>every</i> visited state and check against that list. (See in
 Figure <a class="insideBookFigRef" href="#">breadth-first-search-algorithm</a> for an example.)
 Determine the information that should be stored and how the algorithm
 should use that information when a repeated state is found.
@@ -286,10 +286,10 @@ having multiple copies of subplans.
     <div class="card-body">
         <p class="card-text">
 
-Explain precisely how to modify the **And-Or-Graph-Search** algorithm to
+Explain precisely how to modify the <b>And-Or-Graph-Search</b> algorithm to
 generate a cyclic plan if no acyclic plan exists. You will need to deal
 with three issues: labeling the plan steps so that a cyclic plan can
-point back to an earlier part of the plan, modifying **Or-Search** so that it
+point back to an earlier part of the plan, modifying <b>Or-Search</b> so that it
 continues to look for acyclic plans after finding a cyclic plan, and
 augmenting the plan representation to indicate whether a plan is cyclic.
 Show how your algorithm works on (a) the slippery vacuum world, and (b)
@@ -367,8 +367,8 @@ what happens when the assumption does not hold. Does the notion of
 optimality still make sense in this context, or does it require
 modification? Consider also various possible definitions of the “cost”
 of executing an action in a belief state; for example, we could use the
-*minimum* of the physical costs; or the
-*maximum*; or a cost *interval* with the lower
+<i>minimum</i> of the physical costs; or the
+<i>maximum</i>; or a cost <i>interval</i> with the lower
 bound being the minimum cost and the upper bound being the maximum; or
 just keep the set of all possible costs for that action. For each of
 these, explore whether A* (with modifications if necessary) can return
@@ -430,9 +430,9 @@ We can turn the navigation problem in
 Exercise <a class="exerciseRef" href="/aima-exercises/search-exercises/ex_9/">path-planning-exercise</a> into an environment as
 follows:<br />
 
--   The percept will be a list of the positions, *relative to the
-    agent*, of the visible vertices. The percept does
-    *not* include the position of the robot! The robot must
+-   The percept will be a list of the positions, <i>relative to the
+    agent</i>, of the visible vertices. The percept does
+    <i>not</i> include the position of the robot! The robot must
     learn its own position from the map; for now, you can assume that
     each location has a different “view.”<br />
 
@@ -441,7 +441,7 @@ follows:<br />
     otherwise, the robot stops at the point where its path first
     intersects an obstacle. If the agent returns a zero motion vector
     and is at the goal (which is fixed and known), then the environment
-    teleports the agent to a *random location* (not inside
+    teleports the agent to a <i>random location</i> (not inside
     an obstacle).<br />
 
 -   The performance measure charges the agent 1 point for each unit of
@@ -495,8 +495,8 @@ Suppose that an agent is in a $3 \times 3$
 maze environment like the one shown in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/maze-3x3-figure.png">maze-3x3-figure</a>. The agent knows that its
 initial location is (1,1), that the goal is at (3,3), and that the
-actions *Up*, *Down*, *Left*, *Right* have their usual
-effects unless blocked by a wall. The agent does *not* know
+actions <i>Up</i>, <i>Down</i>, <i>Left</i>, <i>Right</i> have their usual
+effects unless blocked by a wall. The agent does <i>not</i> know
 where the internal walls are. In any given state, the agent perceives
 the set of legal actions; it can also tell whether the state is one it
 has visited before.<br />
@@ -511,8 +511,8 @@ has visited before.<br />
 3.  Describe the first few branches of a contingency plan for this
     problem. How large (roughly) is the complete plan?<br />
 
-Notice that this contingency plan is a solution for *every
-possible environment* fitting the given description. Therefore,
+Notice that this contingency plan is a solution for <i>every
+possible environment</i> fitting the given description. Therefore,
 interleaving of search and execution is not strictly necessary even in
 unknown environments.
 </p>

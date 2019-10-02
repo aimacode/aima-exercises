@@ -1,6 +1,6 @@
 
 
-Figure <ahref=""#">kernel-machine-figure</a>
+Figure <a href="#">kernel-machine-figure</a>
 showed how a circle at the origin can be linearly separated by mapping
 from the features $(x_1, x_2)$ to the two dimensions $(x_1^2, x_2^2)$.
 But what if the circle is not located at the origin? What if it is an

@@ -4,9 +4,9 @@ We can turn the navigation problem in
 Exercise <a class="exerciseRef" href="{{ site.baseurl }}/search-exercises/ex_9/">path-planning-exercise</a> into an environment as
 follows:<br>
 
--   The percept will be a list of the positions, *relative to the
-    agent*, of the visible vertices. The percept does
-    *not* include the position of the robot! The robot must
+-   The percept will be a list of the positions, <i>relative to the
+    agent</i>, of the visible vertices. The percept does
+    <i>not</i> include the position of the robot! The robot must
     learn its own position from the map; for now, you can assume that
     each location has a different “view.”<br>
 
@@ -15,7 +15,7 @@ follows:<br>
     otherwise, the robot stops at the point where its path first
     intersects an obstacle. If the agent returns a zero motion vector
     and is at the goal (which is fixed and known), then the environment
-    teleports the agent to a *random location* (not inside
+    teleports the agent to a <i>random location</i> (not inside
     an obstacle).<br>
 
 -   The performance measure charges the agent 1 point for each unit of

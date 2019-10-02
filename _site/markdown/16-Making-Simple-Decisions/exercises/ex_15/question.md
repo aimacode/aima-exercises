@@ -9,13 +9,13 @@ same units as $x$) becomes larger, the individual becomes less
 risk-averse.<br>
 
 1.  Assume Mary has an exponential utility function with $R = \$400$.
-    Mary is given the choice between receiving $$\$400$$ with certainty
+    Mary is given the choice between receiving $\$400$ with certainty
     (probability 1) or participating in a lottery which has a 60%
     probability of winning \$5000 and a 40% probability of
     winning nothing. Assuming Marry acts rationally, which option would
     she choose? Show how you derived your answer.<br>
 
-2.  Consider the choice between receiving $$\$100$$ with certainty
+2.  Consider the choice between receiving $\$100$ with certainty
     (probability 1) or participating in a lottery which has a 50%
     probability of winning \$500 and a 50% probability of winning
     nothing. Approximate the value of R (to 3 significant digits) in an

@@ -7,9 +7,9 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br>
 
-    2.  ${\textbf{P}}(J{{\,|\,}}G) = {\textbf{P}}(J{{\,|\,}}G,I)$.<br>
+    2.  ${\textbf{P}}(J|G) = {\textbf{P}}(J|G,I)$.<br>
 
-    3.  ${\textbf{P}}(M{{\,|\,}}G,B,I) = {\textbf{P}}(M{{\,|\,}}G,B,I,J)$.<br>
+    3.  ${\textbf{P}}(M|G,B,I) = {\textbf{P}}(M|G,B,I,J)$.<br>
 
 2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br>
 
@@ -25,5 +25,5 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#politics-figure">politics-figure</a>?<br>
 
 5.  Suppose we want to add the variable
-    $P{{\,=\,}}{PresidentialPardon}$ to the network; draw the new
+    $P={PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br>

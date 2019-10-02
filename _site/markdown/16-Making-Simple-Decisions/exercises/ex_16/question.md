@@ -1,9 +1,9 @@
 
 
 Alex is given the choice between two games. In Game 1, a fair coin is
-flipped and if it comes up heads, Alex receives $$\$100$$. If the coin comes
+flipped and if it comes up heads, Alex receives $\$100$. If the coin comes
 up tails, Alex receives nothing. In Game 2, a fair coin is flipped
-twice. Each time the coin comes up heads, Alex receives $$\$50$$, and Alex
+twice. Each time the coin comes up heads, Alex receives $\$50$, and Alex
 receives nothing for each coin flip that comes up tails. Assuming that
 Alex has a monotonically increasing utility function for money in the
 range \[\$0, \$100\], show mathematically that if Alex prefers Game 2 to

@@ -216,13 +216,13 @@ counterexample.<br />
 <p class="card-text">
 
 Would it be rational for an agent to hold the three beliefs
-$P(A) {0.4}$, $P(B) {0.3}$, and
-$P(A \lor B) {0.5}$? If so, what range of probabilities would
+$P(A) = 0.4$, $P(B) = 0.3$, and
+$P(A \lor B) = 0.5$? If so, what range of probabilities would
 be rational for the agent to hold for $A \land B$? Make up a table like
 the one in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/de-finetti-table.png">de-finetti-table</a>, and show how it
 supports your argument about rationality. Then draw another version of
 the table where $P(A \lor B)
-{0.7}$. Explain why it is rational to have this probability,
+= 0.7$. Explain why it is rational to have this probability,
 even though the table shows one case that is a loss and three that just
 break even. (<i>Hint:</i> what is Agent 1 committed to about the
 probability of each of the four cases, especially the case that is a
@@ -474,7 +474,7 @@ receiver if at most one bit in the entire message (including the parity
 bit) has been corrupted. Suppose we want to ensure that the correct
 message is received with probability at least $1-\delta$. What is the
 maximum feasible value of $n$? Calculate this value for the case
-$\epsilon0.001$, $\delta0.01$.
+$\epsilon = 0.001$, $\delta = 0.01$.
 </p>
 </div>
 </div>
@@ -635,9 +635,9 @@ some background evidence $\textbf{e}$: <br />
 <p class="card-text">
 
 Show that the statement of conditional independence
-$${\textbf{P}}(X,Y Z) = {\textbf{P}}(XZ) {\textbf{P}}(YZ)$$
+$${\textbf{P}}(X,Y  | Z) = {\textbf{P}}(X | Z) {\textbf{P}}(Y | Z)$$
 is equivalent to each of the statements
-$${\textbf{P}}(XY,Z) = {\textbf{P}}(XZ) \quad\mbox{and}\quad {\textbf{P}}(YX,Z) = {\textbf{P}}(YZ)\ .$$
+$${\textbf{P}}(X | Y,Z) = {\textbf{P}}(X | Z) \quad\mbox{and}\quad {\textbf{P}}(Y | X,Z) = {\textbf{P}}(Y | Z)\ .$$
 </p>
 </div>
 </div>

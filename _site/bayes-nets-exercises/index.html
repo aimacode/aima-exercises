@@ -270,8 +270,8 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br />
 3.  Let the parents of $X$ be $\textbf{U} \cup \textbf{V}$ and the parents of $Y$ be
     $\textbf{V} \cup \textbf{W}$, where $\textbf{U}$ and $\textbf{W}$ are disjoint. The formulas for the
     new CPTs after arc reversal are as follows: $$\begin{aligned}
-    {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W}) &amp;=&amp; \sum_x {\textbf{P}}(Y\textbf{V},\textbf{W}, x) {\textbf{P}}(x\textbf{U}, \textbf{V}) \\
-    {\textbf{P}}(X\textbf{U},\textbf{V},\textbf{W}, Y) &amp;=&amp; {\textbf{P}}(YX, \textbf{V}, \textbf{W}) {\textbf{P}}(X\textbf{U}, \textbf{V}) / {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W})\ .\end{aligned}$$
+    {\textbf{P}}(Y | \textbf{U},\textbf{V},\textbf{W}) &amp;=&amp; \sum_x {\textbf{P}}(Y | \textbf{V},\textbf{W}, x) {\textbf{P}}(x | \textbf{U}, \textbf{V}) \\
+    {\textbf{P}}(X | \textbf{U},\textbf{V},\textbf{W}, Y) &amp;=&amp; {\textbf{P}}(Y | X, \textbf{V}, \textbf{W}) {\textbf{P}}(X | \textbf{U}, \textbf{V}) / {\textbf{P}}(Y | \textbf{U},\textbf{V},\textbf{W})\ .\end{aligned}$$
     Prove that the new network expresses the same joint distribution
     over all variables as the original network.
 </p>
@@ -625,9 +625,9 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br />
 
-    2.  ${\textbf{P}}(JG) = {\textbf{P}}(JG,I)$.<br />
+    2.  ${\textbf{P}}(J|G) = {\textbf{P}}(J|G,I)$.<br />
 
-    3.  ${\textbf{P}}(MG,B,I) = {\textbf{P}}(MG,B,I,J)$.<br />
+    3.  ${\textbf{P}}(M|G,B,I) = {\textbf{P}}(M|G,B,I,J)$.<br />
 
 2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br />
 
@@ -643,7 +643,7 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
-    $P{PresidentialPardon}$ to the network; draw the new
+    $P={PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br />
 <figure>
   <img src="https://aimacode.github.io/aima-exercises/figures/politics.svg" alt="politics-figure" id="politics-figure" style="width:100%" />
@@ -669,9 +669,9 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
 
     1.  ${\textbf{P}}(B,I,M) = {\textbf{P}}(B){\textbf{P}}(I){\textbf{P}}(M)$.<br />
 
-    2.  ${\textbf{P}}(JG) = {\textbf{P}}(JG,I)$.<br />
+    2.  ${\textbf{P}}(J|G) = {\textbf{P}}(J|G,I)$.<br />
 
-    3.  ${\textbf{P}}(MG,B,I) = {\textbf{P}}(MG,B,I,J)$.<br />
+    3.  ${\textbf{P}}(M|G,B,I) = {\textbf{P}}(M|G,B,I,J)$.<br />
 
 2.  Calculate the value of $P(b,i,\lnot m,g,j)$.<br />
 
@@ -687,7 +687,7 @@ Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#
     Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#politics-figure">politics-figure</a>?<br />
 
 5.  Suppose we want to add the variable
-    $P{PresidentialPardon}$ to the network; draw the new
+    $P={PresidentialPardon}$ to the network; draw the new
     network and briefly explain any links you add.<br />
 </p>
 </div>

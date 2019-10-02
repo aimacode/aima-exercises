@@ -212,16 +212,16 @@ time sequences.<br />
 This exercise develops a space-efficient variant of
 the forward–backward algorithm described in
 Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/forward-backward-algorithm.png">forward-backward-algorithm</a> (page <a class="pageRef" title="" href="#">forward-backward-algorithm</a>).
-We wish to compute $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$$ for
-$$k=1,\ldots ,t$$. This will be done with a divide-and-conquer
+We wish to compute $\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t})$ for
+$k=1,\ldots ,t$. This will be done with a divide-and-conquer
 approach.<br />
 
 1.  Suppose, for simplicity, that $t$ is odd, and let the halfway point
-    be $h=(t+1)/2$. Show that $$\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t}) $$
+    be $h=(t+1)/2$. Show that $\textbf{P} (\textbf{X}_k|\textbf{e}_{1:t}) $
      can be computed for
     $k=1,\ldots ,h$ given just the initial forward message
-    $$\textbf{f}_{1:0}$$, the backward message $$\textbf{b}_{h+1:t}$$, and the evidence
-    $$\textbf{e}_{1:h}$$.<br />
+    $\textbf{f}_{1:0}$, the backward message $\textbf{b}_{h+1:t}$, and the evidence
+    $\textbf{e}_{1:h}$.<br />
 
 2.  Show a similar result for the second half of the sequence.<br />
 
@@ -311,7 +311,7 @@ distribution over locations is uniform and the transition model assumes
 an equal probability of moving to any neighboring square. What if those
 assumptions are wrong? Suppose that the initial location is actually
 chosen uniformly from the northwest quadrant of the room and the action
-actually tends to move southeast\[hmm-robot-southeast-page\]. Keeping
+actually tends to move southeast. Keeping
 the HMM model fixed, explore the effect on localization and path
 accuracy as the southeasterly tendency increases, for different values
 of $\epsilon$.
@@ -444,24 +444,24 @@ system whose behavior switches unpredictably among a set of $k$ distinct
 a series of distinct maneuvers that the missile may attempt to track. A
 Bayesian network representation of such a <b>switching Kalman
 filter</b> model is shown in
-Figure <a class="insideExercisesFigRef" href="#switching-kf-figure">switching-kf-figure</a>.
+Figure <a class="insideExercisesFigRef" href="#switching-kf-figure">switching-kf-figure</a>.<br /><br />
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
-    $${\textbf{P}}(\textbf{X}_0)$$ is a multivariate
+    ${\textbf{P}}(\textbf{X}_0)$ is a multivariate
     Gaussian distribution. Show that the prediction
-    $${\textbf{P}}(\textbf{X}_1)$$ is a <b>mixture of
+    ${\textbf{P}}(\textbf{X}_1)$ is a <b>mixture of
     Gaussians</b>—that is, a weighted sum of Gaussians such
-    that the weights sum to 1.
+    that the weights sum to 1.<br /><br />
 
 2.  Show that if the current continuous state estimate
-    $${\textbf{P}}(\textbf{X}_t|\textbf{e}_{1:t})$$ is a mixture of $m$ Gaussians,
+    ${\textbf{P}}(\textbf{X}_t|\textbf{e}_{1:t})$ is a mixture of $m$ Gaussians,
     then in the general case the updated state estimate
-    $${\textbf{P}}(\textbf{X}_{t+1}|\textbf{e}_{1:t+1})$$ will be a mixture of
-    $km$ Gaussians.
+    ${\textbf{P}}(\textbf{X}_{t+1}|\textbf{e}_{1:t+1})$ will be a mixture of
+    $km$ Gaussians.<br /><br />
 
 3.  What aspect of the temporal process do the weights in the Gaussian
-    mixture represent?
+    mixture represent?<br /><br />
 
 The results in (a) and (b) show that the representation of the posterior
 grows without limit even for switching Kalman filters, which are among
@@ -597,22 +597,16 @@ the model.<br />
 For the DBN specified in Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_15/">sleep1-exercise</a> and
 for the evidence values<br />
 
-$$
-\textbf{e}_1 = not\space red\space eyes,\space not\space sleeping\space in\space class
-$$
-$$
-\textbf{e}_2 = red\space eyes,\space not\space sleeping\space in\space class
-$$
-$$
-\textbf{e}_3 = red\space eyes,\space sleeping\space in\space class
-$$
+$\textbf{e}_1 = not\space red\space eyes,\space not\space sleeping\space in\space class$<br />
+$\textbf{e}_2 = red\space eyes,\space not\space sleeping\space in\space class$<br />
+$\textbf{e}_3 = red\space eyes,\space sleeping\space in\space class$<br />
 
 perform the following computations:<br />
 
-1.  State estimation: Compute $$P({EnoughSleep}_t | \textbf{e}_{1:t})$$ for each
+1.  State estimation: Compute $P({EnoughSleep}_t | \textbf{e}_{1:t})$ for each
     of $t = 1,2,3$.<br />
 
-2.  Smoothing: Compute $$P({EnoughSleep}_t | \textbf{e}_{1:3})$$ for each of
+2.  Smoothing: Compute $P({EnoughSleep}_t | \textbf{e}_{1:3})$ for each of
     $t = 1,2,3$.<br />
 
 3.  Compare the filtered and smoothed probabilities for $t=1$ and $t=2$.<br />

@@ -1,7 +1,6 @@
 
 
-Examine the definition of **bidirectional
-search** in Chapter <a class="chapterRef" title="" href="{{site.baseurl}}/search-exercises/">search-chapter</a>.<br>
+Examine the definition of <b>bidirectional search</b> in Chapter <a class="chapterRef" title="" href="{{site.baseurl}}/search-exercises/">search-chapter</a>.<br>
 
 1.  Would bidirectional state-space search be a good idea for planning?<br>
 
