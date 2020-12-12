@@ -20,7 +20,7 @@ Choose a formulation that is precise enough to be implemented.<br>
     you or move onto an adjacent unpainted floor square. You want the
     whole floor painted.<br>
 
-4.  A container ship is in port, loaded high with containers. There 13
+4.  A container ship is in port, loaded high with containers. There are 13
     rows of containers, each 13 containers wide and 5 containers tall.
     You control a crane that can move to any location above the ship,
     pick up the container under it, and move it onto the dock. You want
