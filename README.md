@@ -14,7 +14,7 @@ The present version of AIMA-Exercises uses Jekyll 3 and Ruby 2.5.
   - [Windows](https://jekyllrb.com/docs/installation/windows/)
 4. Clone the project locally.
 5. Go to the folder directory where you cloned the project in the terminal.
-6. `gem install Jekyll bundler `
+6. `bundle install`
 7. `bundle exec Jekyll serve`
 
 **The directory structure is as follows:**
