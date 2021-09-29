@@ -14,14 +14,3 @@ and follow it with probability .7 on each step; the robot switches to a
 randomly selected new heading with probability .3 (or with probability 1
 if it encounters a wall). Implement this as an HMM and do filtering to
 track the robot. How accurately can we track the robot’s path?
-
-<figure>
-  <img src="https://aimacode.github.io/aima-exercises/figures/switching-kf.svg" alt="switching-kf-figure" id="switching-kf-figure" style="width:100%">
-  <figcaption><center><b>A Bayesian network representation of a switching Kalman filter. The switching variable $S_t$ is a discrete state variable whose value determines
-  the transition model for the continuous state variables $\textbf{X}_t$.
-  For any discrete state $\textit{i}$, the transition model
-  $\textbf{P}(\textbf{X}_{t+1}|\textbf{X}_t,S_t= i)$ is a linear Gaussian model, just as in a
-  regular Kalman filter. The transition model for the discrete state,
-  $\textbf{P}(S_{t+1}|S_t)$, can be thought of as a matrix, as in a hidden
-  Markov model.</b></center></figcaption>
-</figure>
