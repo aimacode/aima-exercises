@@ -5,8 +5,18 @@ system whose behavior switches unpredictably among a set of $k$ distinct
 “modes.” For example, an aircraft trying to evade a missile can execute
 a series of distinct maneuvers that the missile may attempt to track. A
 Bayesian network representation of such a <b>switching Kalman
-filter</b> model is shown in
-Figure <a class="insideExercisesFigRef"  href="#switching-kf-figure">switching-kf-figure</a>.<br><br>
+filter</b> model is shown in the figure below. The follow-up questions will be based on this diagram.
+
+<figure>
+  <img src="https://aimacode.github.io/aima-exercises/figures/switching-kf.svg" alt="switching-kf-figure" id="switching-kf-figure" style="width:100%">
+  <figcaption><center><b>A Bayesian network representation of a switching Kalman filter. The switching variable $S_t$ is a discrete state variable whose value determines
+  the transition model for the continuous state variables $\textbf{X}_t$.
+  For any discrete state $\textit{i}$, the transition model
+  $\textbf{P}(\textbf{X}_{t+1}|\textbf{X}_t,S_t= i)$ is a linear Gaussian model, just as in a
+  regular Kalman filter. The transition model for the discrete state,
+  $\textbf{P}(S_{t+1}|S_t)$, can be thought of as a matrix, as in a hidden
+  Markov model.</b></center></figcaption>
+</figure>
 
 1.  Suppose that the discrete state $S_t$ has $k$ possible values and
     that the prior continuous state estimate
