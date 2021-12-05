@@ -14,8 +14,16 @@ The present version of AIMA-Exercises uses Jekyll 3 and Ruby 2.5.
   - [Windows](https://jekyllrb.com/docs/installation/windows/)
 4. Clone the project locally.
 5. Go to the folder directory where you cloned the project in the terminal.
-6. `gem install Jekyll bundler `
-7. `bundle exec Jekyll serve`
+6. `gem install jekyll bundler `
+7. `bundle exec jekyll serve`
+**To run the project linside docker**:
+1. Install [docker](https://docs.docker.com/get-docker/)
+2. Clone the project locally.
+3. Go to the folder directory where you cloned the project in the terminal.
+4. run docker-compose build
+5. run docker-compose run --rm --service-ports aima_exercises
+6. open http://127.0.0.1:4000/
+
 
 **The directory structure is as follows:**
 * `_includes` - The include tag allows you to include the content from another file stored in the `_includes` folder and contains reusable files like `staticman_comments.html` which is the form used for submitting answers. Sidebar templates, head.html, and breadcrumb.

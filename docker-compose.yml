@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  aima_exercises:
+    build: .
+    container_name: aima_exercises_container
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/home/app
