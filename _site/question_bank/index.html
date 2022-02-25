@@ -82,7 +82,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2019. All rights reserved.
+      &copy; 2022. All rights reserved.
     </p>
   </div>
 </div>
@@ -8095,7 +8095,7 @@ product.
 <div class="card-body">
 <p class="card-text">
 
-Show from first principles that $P(ab\land a) = 1$.
+Show from first principles that $P(a $|$ b\land a) = 1$.
 </p>
 </div>
 </div>
@@ -8127,13 +8127,13 @@ probability distribution on a discrete random variable must sum to 1.
 For each of the following statements, either prove it is true or give a
 counterexample.<br />
 
-1.  If $P(a b, c) = P(b a, c)$, then
-    $P(a c) = P(b c)$ <br />
+1.  If $P(a $|$b, c) = P(b $|$a, c)$, then
+    $P(a $|$c) = P(b $|$c)$ <br />
 
-2.  If $P(a b, c) = P(a)$, then $P(b c) = P(b)$ <br />
+2.  If $P(a $|$b, c) = P(a)$, then $P(b $|$c) = P(b)$ <br />
 
-3.  If $P(a b) = P(a)$, then
-    $P(a b, c) = P(a c)$<br />
+3.  If $P(a $|$b) = P(a)$, then
+    $P(a $|$b, c) = P(a $|$c)$<br />
 </p>
 </div>
 </div>
@@ -8252,9 +8252,9 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 2.  $\textbf{P}({Cavity})$.<br />
 
-3.  $\textbf{P}({Toothache}{cavity})$.<br />
+3.  $\textbf{P}({Toothache}$|${cavity})$.<br />
 
-4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.
+4.  $\textbf{P}({Cavity}$|${toothache}\lor {catch})$.
 </p>
 </div>
 </div>
@@ -8275,9 +8275,9 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 2.  $\textbf{P}({Catch})$.<br />
 
-3.  $\textbf{P}({Cavity}{catch})$.<br />
+3.  $\textbf{P}({Cavity}$|${catch})$.<br />
 
-4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.<br />
+4.  $\textbf{P}({Cavity}$|${toothache}\lor {catch})$.<br />
 </p>
 </div>
 </div>
@@ -8549,7 +8549,7 @@ general versions of the product rule and Bayes’ rule, with respect to
 some background evidence $\textbf{e}$: <br />
 
 1.  Prove the conditionalized version of the general product rule:
-    $${\textbf{P}}(X,Y \textbf{e}) = {\textbf{P}}(XY,\textbf{e}) {\textbf{P}}(Y\textbf{e})\ .$$ <br />
+    $${\textbf{P}}(X,Y $|$\textbf{e}) = {\textbf{P}}(X$|$Y,\textbf{e}) {\textbf{P}}(Y$|$\textbf{e})\ .$$ <br />
 
 2.  Prove the conditionalized version of Bayes’ rule in
     Equation (<a class="equationRef" title="" href="#">conditional-bayes-equation</a>). <br />
@@ -8615,8 +8615,8 @@ on the other, whereas one coin is a fake, with heads on both sides. <br />
 
 In this exercise, you will complete the
 normalization calculation for the meningitis example. First, make up a
-suitable value for $P(s\lnot m)$, and use it to calculate
-unnormalized values for $P(ms)$ and $P(\lnot m s)$
+suitable value for $P(s$|$\lnot m)$, and use it to calculate
+unnormalized values for $P(m$|$s)$ and $P(\lnot m $|$s)$
 (i.e., ignoring the $P(s)$ term in the Bayes’ rule expression,
 Equation (<a class="equationRef" title="" href="#">meningitis-bayes-equation</a>). Now normalize
 these values so that they add to 1.
@@ -8637,23 +8637,23 @@ This exercise investigates the way in which conditional independence
 relationships affect the amount of information needed for probabilistic
 calculations.<br />
 
-1.  Suppose we wish to calculate $P(he_1,e_2)$ and we have no
+1.  Suppose we wish to calculate $P(h$|$e_1,e_2)$ and we have no
     conditional independence information. Which of the following sets of
     numbers are sufficient for the calculation?<br />
 
     1.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1H)$,
-        ${\textbf{P}}(E_2H)$
+        ${\textbf{P}}(E_1$|$H)$,
+        ${\textbf{P}}(E_2$|$H)$
 
     2.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1,E_2H)$<br />
+        ${\textbf{P}}(E_1,E_2$|$H)$<br />
 
     3.  ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1H)$,
-        ${\textbf{P}}(E_2H)$<br />
+        ${\textbf{P}}(E_1$|$H)$,
+        ${\textbf{P}}(E_2$|$H)$<br />
 
 2.  Suppose we know that
-    ${\textbf{P}}(E_1H,E_2)={\textbf{P}}(E_1H)$
+    ${\textbf{P}}(E_1$|$H,E_2)={\textbf{P}}(E_1$|$H)$
     for all values of $H$, $E_1$, $E_2$. Now which of the three sets are
     sufficient?
 </p>
@@ -8713,7 +8713,7 @@ discrimination between blue and green is 75% reliable. <br />
 <p class="card-text">
 
 Write out a general algorithm for answering queries of the form
-${\textbf{P}}({Cause}\textbf{e})$, using a naive Bayes
+${\textbf{P}}({Cause}$|$\textbf{e})$, using a naive Bayes
 distribution. Assume that the evidence $\textbf{e}$ may assign values to
 <i>any subset</i> of the effect variables.
 </p>
@@ -8862,30 +8862,30 @@ outcomes $X_1$, $X_2$, and $X_3$.<br />
 Equation (<a href="#">parameter-joint-repn-equation</a> on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
-$\theta(X_i{Parents}(X_i))$. This exercise asks you to derive
+$\theta(X_i$|${Parents}(X_i))$. This exercise asks you to derive
 the equivalence between the parameters and the conditional probabilities
-${\textbf{ P}}(X_i{Parents}(X_i))$ from this definition.<br />
+${\textbf{ P}}(X_i$|${Parents}(X_i))$ from this definition.<br />
 
 1.  Consider a simple network $X\rightarrow Y\rightarrow Z$ with three
     Boolean variables. Use
     Equations (<a class="equationRef" title="" href="#">conditional-probability-equation</a> and (<a class="pageRef" title="" href="#">marginalization-equation</a>
     (pages <a href="#">conditional-probability-equation</a> and <a href="#">marginalization-equation</a>)
-    to express the conditional probability $P(zy)$ as the ratio of two sums, each over entries in the
+    to express the conditional probability $P(z$|$y)$ as the ratio of two sums, each over entries in the
     joint distribution ${\textbf{P}}(X,Y,Z)$.<br />
 
 2.  Now use Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a> to
     write this expression in terms of the network parameters
-    $\theta(X)$, $\theta(YX)$, and $\theta(ZY)$.<br />
+    $\theta(X)$, $\theta(Y$|$X)$, and $\theta(Z$|$Y)$.<br />
 
 3.  Next, expand out the summations in your expression from part (b),
     writing out explicitly the terms for the true and false values of
     each summed variable. Assuming that all network parameters satisfy
     the constraint
-    $\sum_{x_i} \theta(x_i{parents}(X_i))1$, show
-    that the resulting expression reduces to $\theta(zy)$.<br />
+    $\sum_{x_i} \theta(x_i$|${parents}(X_i))1$, show
+    that the resulting expression reduces to $\theta(z$|$y)$.<br />
 
 4.  Generalize this derivation to show that
-    $\theta(X_i{Parents}(X_i)) = {\textbf{P}}(X_i{Parents}(X_i))$
+    $\theta(X_i$|${Parents}(X_i)) = {\textbf{P}}(X_i$|${Parents}(X_i))$
     for any Bayesian network.<br />
 </p>
 </div>
@@ -9112,7 +9112,7 @@ defined on page <a class="pageRef" title="" href="#">LG-network-page</a><br />.
 
 1.  In a two-variable network, let $X_1$ be the parent of $X_2$, let
     $X_1$ have a Gaussian prior, and let
-    ${\textbf{P}}(X_2X_1)$ be a linear
+    ${\textbf{P}}(X_2$|$X_1)$ be a linear
     Gaussian distribution. Show that the joint distribution $P(X_1,X_2)$
     is a multivariate Gaussian, and calculate its covariance matrix.<br />
 
@@ -9211,7 +9211,7 @@ Figure <a class="insideExercisesFigRef" href="#telescope-nets-figure">telescope
 2.  Which is the best network? Explain.<br />
 
 3.  Write out a conditional distribution for
-    ${\textbf{P}}(M_1N)$, for the case where
+    ${\textbf{P}}(M_1$|$N)$, for the case where
     $N\{1,2,3\}$ and $M_1\{0,1,2,3,4\}$. Each
     entry in the conditional distribution should be expressed as a
     function of the parameters $e$ and/or $f$.<br />
@@ -9244,7 +9244,7 @@ $M_1,M_2\{0,1,2,3,4\}$, with the symbolic CPTs as described
 in Exercise <a class="exerciseRef" href="/aima-exercises/bayes-nets-exercises/ex_14/">telescope-exercise</a>. Using the enumeration
 algorithm (Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/enumeration-algorithm.png">enumeration-algorithm</a> on
 page <a class="pageRef" id="pageref" title="" href="#">enumeration-algorithm</a>), calculate the probability distribution
-${\textbf{P}}(NM_12,M_22)$.<br />
+${\textbf{P}}(N$|$M_12,M_22)$.<br />
 
 
 <figure>
@@ -9355,7 +9355,7 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 1.  Section <a class="sectionRef" title="" href="#">exact-inference-section</a> applies variable
     elimination to the query
-    $${\textbf{P}}({Burglary}{JohnCalls}{true},{MaryCalls}{true})\ .$$
+    $${\textbf{P}}({Burglary}$|${JohnCalls}{true},{MaryCalls}{true})\ .$$
     Perform the calculations indicated and check that the answer
     is correct.<br />
 
@@ -9366,7 +9366,7 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
     of Boolean variables $X_1,\ldots, X_n$ where
     ${Parents}(X_i)\{X_{i-1}\}$ for $i2,\ldots,n$.
     What is the complexity of computing
-    ${\textbf{P}}(X_1X_n{true})$ using
+    ${\textbf{P}}(X_1$|$X_n{true})$ using
     enumeration? Using variable elimination?<br />
 
 4.  Prove that the complexity of running variable elimination on a
@@ -9449,7 +9449,7 @@ uniformly distributed between 0 and 1.<br />
 <p class="card-text">
 
 Consider the query
-${\textbf{P}}({Rain}{Sprinkler}{true},{WetGrass}{true})$
+${\textbf{P}}({Rain}$|${Sprinkler}{true},{WetGrass}{true})$
 in Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/rain-clustering-figure.png">rain-clustering-figure</a>(a)
 (page <a class="pageRef" title="" href="#">rain-clustering-figure</a>) and how Gibbs sampling can answer it.<br />
 
@@ -9514,11 +9514,11 @@ distribution for Gibbs sampling methods.<br />
 The <b>Metropolis--Hastings</b> algorithm is a member of the MCMC family; as such,
 it is designed to generate samples $\textbf{x}$ (eventually) according to target
 probabilities $\pi(\textbf{x})$. (Typically we are interested in sampling from
-$\pi(\textbf{x})P(\textbf{x}\textbf{e})$.) Like simulated annealing,
+$\pi(\textbf{x})P(\textbf{x}$|$\textbf{e})$.) Like simulated annealing,
 Metropolis–Hastings operates in two stages. First, it samples a new
-state $\textbf{x'}$ from a <b>proposal distribution</b> $q(\textbf{x'}\textbf{x})$, given the current state $\textbf{x}$.
+state $\textbf{x'}$ from a <b>proposal distribution</b> $q(\textbf{x'}$|$\textbf{x})$, given the current state $\textbf{x}$.
 Then, it probabilistically accepts or rejects $\textbf{x'}$ according to the <b>acceptance probability</b>
-$$\alpha(\textbf{x'}\textbf{x}) = \min\ \left(1,\frac{\pi(\textbf{x'})q(\textbf{x}\textbf{x'})}{\pi(\textbf{x})q(\textbf{x'}\textbf{x})}  \right)\ .$$
+$$\alpha(\textbf{x'}$|$\textbf{x}) = \min\ \left(1,\frac{\pi(\textbf{x'})q(\textbf{x}$|$\textbf{x'})}{\pi(\textbf{x})q(\textbf{x'}$|$\textbf{x})}  \right)\ .$$
 If the proposal is rejected, the state remains at $\textbf{x}$.<br />
 
 1.  Consider an ordinary Gibbs sampling step for a specific variable

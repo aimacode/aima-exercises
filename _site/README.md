@@ -1,10 +1,10 @@
 
 
 # AIMA Exercises
-Aima exercises is an interactive and collaborative platform for digitalizing the exercises of the book Artificial Intelligence: a modern approach by Stuart J. Russell and Peter Norvig.<br>
+AIMA exercises is an interactive and collaborative platform for digitalizing the exercises of the book Artificial Intelligence: A Modern Approach by Stuart J. Russell and Peter Norvig.<br>
 Exercises for the book [*Artificial Intelligence: A Modern Approach.*](http://aima.cs.berkeley.edu/) The idea is that in the fourth edition of the book, exercises will be online only (they will not appear in the book). This site will showcase the exercises, and will be a platform for students and teachers to add new exercises.
 <br>
-The present version of AIMA-Exercises uses Jekyll 3 and ruby 2.5.
+The present version of AIMA-Exercises uses Jekyll 3 and Ruby 2.5.
 **To run the project locally**:
 1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
 2. Install Jekyll and [bundler gems](https://jekyllrb.com/docs/ruby-101/#bundler)

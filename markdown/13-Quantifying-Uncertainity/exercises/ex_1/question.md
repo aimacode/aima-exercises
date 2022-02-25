@@ -1,3 +1,3 @@
 
 
-Show from first principles that $P(a{{\,|\,}}b\land a) = 1$.
+Show from first principles that $P(a $|$ b\land a) = 1$.
