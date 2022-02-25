@@ -82,7 +82,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2019. All rights reserved.
+      &copy; 2022. All rights reserved.
     </p>
   </div>
 </div>
@@ -163,7 +163,7 @@
 <div class="card-body">
 <p class="card-text">
 
-Show from first principles that $P(ab\land a) = 1$.
+Show from first principles that $P(a $|$ b\land a) = 1$.
 </p>
 </div>
 </div>
@@ -195,13 +195,13 @@ probability distribution on a discrete random variable must sum to 1.
 For each of the following statements, either prove it is true or give a
 counterexample.<br />
 
-1.  If $P(a b, c) = P(b a, c)$, then
-    $P(a c) = P(b c)$ <br />
+1.  If $P(a $|$b, c) = P(b $|$a, c)$, then
+    $P(a $|$c) = P(b $|$c)$ <br />
 
-2.  If $P(a b, c) = P(a)$, then $P(b c) = P(b)$ <br />
+2.  If $P(a $|$b, c) = P(a)$, then $P(b $|$c) = P(b)$ <br />
 
-3.  If $P(a b) = P(a)$, then
-    $P(a b, c) = P(a c)$<br />
+3.  If $P(a $|$b) = P(a)$, then
+    $P(a $|$b, c) = P(a $|$c)$<br />
 </p>
 </div>
 </div>
@@ -320,9 +320,9 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 2.  $\textbf{P}({Cavity})$.<br />
 
-3.  $\textbf{P}({Toothache}{cavity})$.<br />
+3.  $\textbf{P}({Toothache}$|${cavity})$.<br />
 
-4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.
+4.  $\textbf{P}({Cavity}$|${toothache}\lor {catch})$.
 </p>
 </div>
 </div>
@@ -343,9 +343,9 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 2.  $\textbf{P}({Catch})$.<br />
 
-3.  $\textbf{P}({Cavity}{catch})$.<br />
+3.  $\textbf{P}({Cavity}$|${catch})$.<br />
 
-4.  $\textbf{P}({Cavity}{toothache}\lor {catch})$.<br />
+4.  $\textbf{P}({Cavity}$|${toothache}\lor {catch})$.<br />
 </p>
 </div>
 </div>
@@ -617,7 +617,7 @@ general versions of the product rule and Bayes’ rule, with respect to
 some background evidence $\textbf{e}$: <br />
 
 1.  Prove the conditionalized version of the general product rule:
-    $${\textbf{P}}(X,Y \textbf{e}) = {\textbf{P}}(XY,\textbf{e}) {\textbf{P}}(Y\textbf{e})\ .$$ <br />
+    $${\textbf{P}}(X,Y $|$\textbf{e}) = {\textbf{P}}(X$|$Y,\textbf{e}) {\textbf{P}}(Y$|$\textbf{e})\ .$$ <br />
 
 2.  Prove the conditionalized version of Bayes’ rule in
     Equation (<a class="equationRef" title="" href="#">conditional-bayes-equation</a>). <br />
@@ -683,8 +683,8 @@ on the other, whereas one coin is a fake, with heads on both sides. <br />
 
 In this exercise, you will complete the
 normalization calculation for the meningitis example. First, make up a
-suitable value for $P(s\lnot m)$, and use it to calculate
-unnormalized values for $P(ms)$ and $P(\lnot m s)$
+suitable value for $P(s$|$\lnot m)$, and use it to calculate
+unnormalized values for $P(m$|$s)$ and $P(\lnot m $|$s)$
 (i.e., ignoring the $P(s)$ term in the Bayes’ rule expression,
 Equation (<a class="equationRef" title="" href="#">meningitis-bayes-equation</a>). Now normalize
 these values so that they add to 1.
@@ -705,23 +705,23 @@ This exercise investigates the way in which conditional independence
 relationships affect the amount of information needed for probabilistic
 calculations.<br />
 
-1.  Suppose we wish to calculate $P(he_1,e_2)$ and we have no
+1.  Suppose we wish to calculate $P(h$|$e_1,e_2)$ and we have no
     conditional independence information. Which of the following sets of
     numbers are sufficient for the calculation?<br />
 
     1.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1H)$,
-        ${\textbf{P}}(E_2H)$
+        ${\textbf{P}}(E_1$|$H)$,
+        ${\textbf{P}}(E_2$|$H)$
 
     2.  ${\textbf{P}}(E_1,E_2)$, ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1,E_2H)$<br />
+        ${\textbf{P}}(E_1,E_2$|$H)$<br />
 
     3.  ${\textbf{P}}(H)$,
-        ${\textbf{P}}(E_1H)$,
-        ${\textbf{P}}(E_2H)$<br />
+        ${\textbf{P}}(E_1$|$H)$,
+        ${\textbf{P}}(E_2$|$H)$<br />
 
 2.  Suppose we know that
-    ${\textbf{P}}(E_1H,E_2)={\textbf{P}}(E_1H)$
+    ${\textbf{P}}(E_1$|$H,E_2)={\textbf{P}}(E_1$|$H)$
     for all values of $H$, $E_1$, $E_2$. Now which of the three sets are
     sufficient?
 </p>
@@ -781,7 +781,7 @@ discrimination between blue and green is 75% reliable. <br />
 <p class="card-text">
 
 Write out a general algorithm for answering queries of the form
-${\textbf{P}}({Cause}\textbf{e})$, using a naive Bayes
+${\textbf{P}}({Cause}$|$\textbf{e})$, using a naive Bayes
 distribution. Assume that the evidence $\textbf{e}$ may assign values to
 <i>any subset</i> of the effect variables.
 </p>

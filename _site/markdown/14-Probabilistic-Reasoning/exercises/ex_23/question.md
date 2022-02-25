@@ -3,11 +3,11 @@
 The <b>Metropolis--Hastings</b> algorithm is a member of the MCMC family; as such,
 it is designed to generate samples $\textbf{x}$ (eventually) according to target
 probabilities $\pi(\textbf{x})$. (Typically we are interested in sampling from
-$\pi(\textbf{x}){{\,=\,}}P(\textbf{x}{{\,|\,}}\textbf{e})$.) Like simulated annealing,
+$\pi(\textbf{x}){{\,=\,}}P(\textbf{x}$|$\textbf{e})$.) Like simulated annealing,
 Metropolis–Hastings operates in two stages. First, it samples a new
-state $\textbf{x'}$ from a <b>proposal distribution</b> $q(\textbf{x'}{{\,|\,}}\textbf{x})$, given the current state $\textbf{x}$.
+state $\textbf{x'}$ from a <b>proposal distribution</b> $q(\textbf{x'}$|$\textbf{x})$, given the current state $\textbf{x}$.
 Then, it probabilistically accepts or rejects $\textbf{x'}$ according to the <b>acceptance probability</b>
-$$\alpha(\textbf{x'}{{\,|\,}}\textbf{x}) = \min\ \left(1,\frac{\pi(\textbf{x'})q(\textbf{x}{{\,|\,}}\textbf{x'})}{\pi(\textbf{x})q(\textbf{x'}{{\,|\,}}\textbf{x})}  \right)\ .$$
+$$\alpha(\textbf{x'}$|$\textbf{x}) = \min\ \left(1,\frac{\pi(\textbf{x'})q(\textbf{x}$|$\textbf{x'})}{\pi(\textbf{x})q(\textbf{x'}$|$\textbf{x})}  \right)\ .$$
 If the proposal is rejected, the state remains at $\textbf{x}$.<br>
 
 1.  Consider an ordinary Gibbs sampling step for a specific variable

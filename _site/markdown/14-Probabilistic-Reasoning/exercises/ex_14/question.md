@@ -14,7 +14,7 @@ Figure <a class="insideExercisesFigRef"  href="#telescope-nets-figure">telescop
 2.  Which is the best network? Explain.<br>
 
 3.  Write out a conditional distribution for
-    ${\textbf{P}}(M_1{{\,|\,}}N)$, for the case where
+    ${\textbf{P}}(M_1$|$N)$, for the case where
     $N{{\,\in\\,}}\{1,2,3\}$ and $M_1{{\,\in\\,}}\{0,1,2,3,4\}$. Each
     entry in the conditional distribution should be expressed as a
     function of the parameters $e$ and/or $f$.<br>

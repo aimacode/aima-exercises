@@ -7,6 +7,6 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 2.  $\textbf{P}({Catch})$.<br>
 
-3.  $\textbf{P}({Cavity}{{\,|\,}}{catch})$.<br>
+3.  $\textbf{P}({Cavity}$|${catch})$.<br>
 
-4.  $\textbf{P}({Cavity}{{\,|\,}}{toothache}\lor {catch})$.<br>
+4.  $\textbf{P}({Cavity}$|${toothache}\lor {catch})$.<br>

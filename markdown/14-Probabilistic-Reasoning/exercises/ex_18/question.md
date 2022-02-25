@@ -5,7 +5,7 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
 
 1.  Section <a class="sectionRef" title="" href="#">exact-inference-section</a> applies variable
     elimination to the query
-    $${\textbf{P}}({Burglary}{{\,|\,}}{JohnCalls}{{\,=\,}}{true},{MaryCalls}{{\,=\,}}{true})\ .$$
+    $${\textbf{P}}({Burglary}$|${JohnCalls}{{\,=\,}}{true},{MaryCalls}{{\,=\,}}{true})\ .$$
     Perform the calculations indicated and check that the answer
     is correct.<br>
 
@@ -16,7 +16,7 @@ Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.githu
     of Boolean variables $X_1,\ldots, X_n$ where
     ${Parents}(X_i){{\,=\,}}\{X_{i-1}\}$ for $i{{\,=\,}}2,\ldots,n$.
     What is the complexity of computing
-    ${\textbf{P}}(X_1{{\,|\,}}X_n{{\,=\,}}{true})$ using
+    ${\textbf{P}}(X_1$|$X_n{{\,=\,}}{true})$ using
     enumeration? Using variable elimination?<br>
 
 4.  Prove that the complexity of running variable elimination on a
