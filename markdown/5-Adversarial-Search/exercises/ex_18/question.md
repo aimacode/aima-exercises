@@ -21,3 +21,8 @@ is $-\infty$ to $\infty$.<br>
 
 4.  Circle all the leaves that need not be evaluated under the
     assumption in (c).<br>
+
+<figure>
+  <img src="https://aimacode.github.io/aima-exercises/figures/pruning.svg" alt="trivial-chance-game-figure" id="trivial-chance-game-figure" style="width:100%">
+  <figcaption><center><b>The complete game tree for a trivial game with chance nodes..</b></center></figcaption>
+</figure>
