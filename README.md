@@ -5,7 +5,10 @@ AIMA exercises is an interactive and collaborative platform for digitalizing the
 Exercises for the book [*Artificial Intelligence: A Modern Approach.*](http://aima.cs.berkeley.edu/) The idea is that in the fourth edition of the book, exercises will be online only (they will not appear in the book). This site will showcase the exercises, and will be a platform for students and teachers to add new exercises.
 <br>
 The present version of AIMA-Exercises uses Jekyll 3 and Ruby 2.5.
-**To run the project locally**:
+
+## To run the project locally
+
+### Option 1: Install Jekyll
 1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
 2. Install Jekyll and [bundler gems](https://jekyllrb.com/docs/ruby-101/#bundler)
 3. Installation Guides:
@@ -17,7 +20,37 @@ The present version of AIMA-Exercises uses Jekyll 3 and Ruby 2.5.
 6. `gem install Jekyll bundler `
 7. `bundle exec Jekyll serve`
 
-**The directory structure is as follows:**
+### Option 2: Use Docker
+
+1. Install Docker
+  - [MacOS](https://docs.docker.com/desktop/install/mac-install/)
+  - [Linux](https://docs.docker.com/desktop/install/linux-install/)
+  - [Windows](https://docs.docker.com/desktop/install/windows-install/)
+2. Clone the project locally.
+3. Go to the folder directory where you cloned the project in the terminal.
+4. Build the site
+```shell
+docker run --rm -it \
+  --volume="{current-directory}:/srv/jekyll:Z" \
+  --volume="{current-directory}/vendor:/usr/local/bundle:Z" \
+  jekyll/jekyll:3.8 \
+  jekyll build
+```
+4. Serve the site
+```shell
+docker run --rm \
+  -it \
+  --publish 4000:4000 \
+  --volume="{current-directory}:/srv/jekyll:Z" \
+  --volume="{current-directory}/vendor:/usr/local/bundle:Z" \
+  jekyll/jekyll:3.8 \
+  jekyll serve --port 4000
+```
+
+Replace `{current-directory}` with the full path to the current directory.
+On Linux, you can use the environment variable `${PWD}`.
+
+## The directory structure is as follows:
 * `_includes` - The include tag allows you to include the content from another file stored in the `_includes` folder and contains reusable files like `staticman_comments.html` which is the form used for submitting answers. Sidebar templates, head.html, and breadcrumb.
 * `_layouts` - They allow you to have the source code for project template in one place so you don’t have to repeat things like your navigation and footer on every page. The layouts folder has default layout, homepage layout, exercise layout, answer submitted layout and others.
 * `_site` - This is where the generated site is placed (by default) once Jekyll is done transforming it. While contributing, don't change files in the `_site` directory as Github Pages is compatible with Jekyll and `_site` folder is updated every time the root directory folders are changed.
