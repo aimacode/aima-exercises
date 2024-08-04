@@ -2,7 +2,7 @@
 
 | **Exercise #** | **Status** | **Markdown** |
 |:------------|:-----------|:-----------------|
-| 1 | Unanswered | [`Question`](exercises/ex_1/question.md)|  
+| 1 | Answered | [`Question`](exercises/ex_1/question.md)|  
 | 2 | Unanswered | [`Question`](exercises/ex_2/question.md)|
 | 3 | Unanswered | [`Question`](exercises/ex_3/question.md)|
 | 4 | Unanswered | [`Question`](exercises/ex_4/question.md)|
