@@ -26,7 +26,7 @@
 | 22 | Unanswered | [`Question`](exercises/ex_22/question.md)|
 | 23 | Unanswered | [`Question`](exercises/ex_23/question.md)|
 | 24 | Unanswered | [`Question`](exercises/ex_24/question.md)|
-| 25 | Unanswered | [`Question`](exercises/ex_25/question.md)|
+| 25 | answered | [`Question`](exercises/ex_25/question.md)|
 | 26 | Unanswered | [`Question`](exercises/ex_26/question.md)|
 | 27 | Unanswered | [`Question`](exercises/ex_27/question.md)|
 | 28 | Unanswered | [`Question`](exercises/ex_28/question.md)|
