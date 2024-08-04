@@ -25,3 +25,4 @@ multivalued nodes $G$ (gauge reading) and $T$ (actual core temperature).<br>
     Calculate an expression for the probability that the temperature of
     the core is too high, in terms of the various conditional
     probabilities in the network.<br>
+
