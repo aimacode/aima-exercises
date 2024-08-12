@@ -1,18 +1,34 @@
 
 
-A propositional <i>2-CNF</i> expression is a conjunction of
-clauses, each containing <i>exactly 2</i> literals, e.g.,
-$$(A\lor B) \land (\lnot A \lor C) \land (\lnot B \lor D) \land (\lnot
-  C \lor G) \land (\lnot D \lor G)\ .$$<br>
+A sentence is in disjunctive normal form(DNF) if it is the disjunction of
+conjunctions of literals. For example, the sentence
+$(A \land B \land \lnot C) \lor (\lnot A \land C) \lor (B \land \lnot C)$
+is in DNF.<br>
 
-1.  Prove using resolution that the above sentence entails $G$.<br>
+1.  Any propositional logic sentence is logically equivalent to the
+    assertion that some possible world in which it would be true is in
+    fact the case. From this observation, prove that any sentence can be
+    written in DNF.<br>
 
-2.  Two clauses are <i>semantically distinct</i> if they are not
-    logically equivalent. How many semantically distinct 2-CNF clauses
-    can be constructed from $n$ proposition symbols?<br>
+2.  Construct an algorithm that converts any sentence in propositional
+    logic into DNF. (<i>Hint</i>: The algorithm is similar to
+    the algorithm for conversion to CNF iven in
+    Sectio <a class="sectionRef" title="" href="#">pl-resolution-section</a>.)<br>
 
-3.  Using your answer to (b), prove that propositional resolution always
-    terminates in time polynomial in $n$ given a 2-CNF sentence
-    containing no more than $n$ distinct symbols.<br>
+3.  Construct a simple algorithm that takes as input a sentence in DNF
+    and returns a satisfying assignment if one exists, or reports that
+    no satisfying assignment exists.<br>
 
-4.  Explain why your argument in (c) does not apply to 3-CNF.<br>
+4.  Apply the algorithms in (b) and (c) to the following set of
+    sentences:<br>
+
+ $A {\Rightarrow} B$<bR>
+
+ $B {\Rightarrow} C$<br>
+
+ $C {\Rightarrow} A$<br>
+
+5.  Since the algorithm in (b) is very similar to the algorithm for
+    conversion to CNF, and since the algorithm in (c) is much simpler
+    than any algorithm for solving a set of sentences in CNF, why is
+    this technique not used in automated reasoning?

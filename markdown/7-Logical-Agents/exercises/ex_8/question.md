@@ -1,12 +1,10 @@
 
 
-Prove, or find a counterexample to, each of the following assertions:<br>
+Consider a vocabulary with only four propositions, $A$, $B$, $C$, and
+$D$. How many models are there for the following sentences?<br>
 
-1.  If $\alpha\models\gamma$ or $\beta\models\gamma$ (or both) then
-    $(\alpha\land \beta)\models\gamma$<br>
+1.  $B\lor C$.<br>
 
-2.  If $\alpha\models (\beta \land \gamma)$ then $\alpha \models \beta$
-    and $\alpha \models \gamma$.<br>
+2.  $\lnot A\lor \lnot B \lor \lnot C \lor \lnot D$.<br>
 
-3.  If $\alpha\models (\beta \lor \gamma)$ then $\alpha \models \beta$
-    or $\alpha \models \gamma$ (or both).<br>
+3.  $(A{\:\;{\Rightarrow}\:\;}B) \land A \land \lnot B \land C \land D$.<br>

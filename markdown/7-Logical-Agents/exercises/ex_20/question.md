@@ -1,7 +1,13 @@
 
 
-Explain why every nonempty propositional clause, by itself, is
-satisfiable. Prove rigorously that every set of five 3-SAT clauses is
-satisfiable, provided that each clause mentions exactly three distinct
-variables. What is the smallest set of such clauses that is
-unsatisfiable? Construct such a set.
+Consider the following sentence:<br>
+$$[ ({Food} {\:\;{\Rightarrow}\:\;}{Party}) \lor ({Drinks} {\:\;{\Rightarrow}\:\;}{Party}) ] {\:\;{\Rightarrow}\:\;}[ ( {Food} \land {Drinks} )  {\:\;{\Rightarrow}\:\;}{Party}]\ .$$<br>
+
+1.  Determine, using enumeration, whether this sentence is valid,
+    satisfiable (but not valid), or unsatisfiable.<br>
+
+2.  Convert the left-hand and right-hand sides of the main implication
+    into CNF, showing each step, and explain how the results confirm
+    your answer to (a).<br>
+
+3.  Prove your answer to (a) using resolution.

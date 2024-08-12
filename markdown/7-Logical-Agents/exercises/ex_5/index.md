@@ -3,8 +3,8 @@ layout: exercise
 title: Exercise 7.5
 permalink: /knowledge-logic-exercises/ex_5/
 breadcrumb: 7-Logical-Agents
-home: "true"
 canonical_id: ch7ex5
+home: "true"
 ---
 
 {% include mathjax_support %}

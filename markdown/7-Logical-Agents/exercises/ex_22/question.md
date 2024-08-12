@@ -1,12 +1,19 @@
 
 
-Prove each of the following assertions:<br>
+Convert the following set of sentences to
+clausal form.<br>
 
-1.  Every pair of propositional clauses either has no resolvents, or all
-    their resolvents are logically equivalent.<br>
+1.  S1: $A {\;\;{\Leftrightarrow}\;\;}(B \lor E)$.<br>
 
-2.  There is no clause that, when resolved with itself, yields
-    (after factoring) the clause $(\lnot P \lor \lnot Q)$.<br>
+2.  S2: $E {\:\;{\Rightarrow}\:\;}D$.<br>
 
-3.  If a propositional clause $C$ can be resolved with a copy of itself,
-    it must be logically equivalent to $ True $.<br>
+3.  S3: $C \land F {\:\;{\Rightarrow}\:\;}\lnot B$.<br>
+
+4.  S4: $E {\:\;{\Rightarrow}\:\;}B$.<br>
+
+5.  S5: $B {\:\;{\Rightarrow}\:\;}F$.<br>
+
+6.  S6: $B {\:\;{\Rightarrow}\:\;}C$<br>
+
+Give a trace of the execution of DPLL on the conjunction of these
+clauses.

@@ -2,8 +2,7 @@
 layout: exercise
 title: Exercise 7.29
 permalink: /knowledge-logic-exercises/ex_29/
-breadcrumb: 7-Logical-Agents
-home: "true"
+breadcrumb: 7-logical-Agents
 canonical_id: ch7ex29
 ---
 

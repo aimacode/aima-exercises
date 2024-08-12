@@ -1,16 +1,12 @@
 
 
-Prove each of the following assertions:<br>
+Prove, or find a counterexample to, each of the following assertions:<br>
 
-1.  $\alpha$ is valid if and only if ${True}{\models}\alpha$.<br>
+1.  If $\alpha\models\gamma$ or $\beta\models\gamma$ (or both) then
+    $(\alpha\land \beta)\models\gamma$<br>
 
-2.  For any $\alpha$, ${False}{\models}\alpha$.<br>
+2.  If $(\alpha\land \beta)\models\gamma$ then $\alpha\models\gamma$ or
+    $\beta\models\gamma$ (or both).<br>
 
-3.  $\alpha{\models}\beta$ if and only if the sentence
-    $(\alpha {\:\;{\Rightarrow}\:\;}\beta)$ is valid.<br>
-
-4.  $\alpha \equiv \beta$ if and only if the sentence
-    $(\alpha{\;\;{\Leftrightarrow}\;\;}\beta)$ is valid.<br>
-
-5.  $\alpha{\models}\beta$ if and only if the sentence
-    $(\alpha \land \lnot \beta)$ is unsatisfiable.
+3.  If $\alpha\models (\beta \lor \gamma)$ then $\alpha \models \beta$
+    or $\alpha \models \gamma$ (or both).<br>

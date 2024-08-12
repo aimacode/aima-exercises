@@ -1,5 +1,5 @@
 
 
-Trace the behavior of {DPLL} on the knowledge base in
-Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/pl-horn-example-figure.png">pl-horn-example-figure</a> when trying to prove $Q$,
-and compare this behavior with that of the forward-chaining algorithm.
+Section <a class="sectionRef" title="" href="#">successor-state-section</a>
+provides some of the successor-state axioms required for the wumpus
+world. Write down axioms for all remaining fluent symbols.

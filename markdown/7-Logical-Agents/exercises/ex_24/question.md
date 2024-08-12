@@ -1,34 +1,34 @@
+Minesweeper, the well-known computer game, is
+closely related to the wumpus world. A minesweeper world is
+a rectangular grid of $N$ squares with $M$ invisible mines scattered
+among them. Any square may be probed by the agent; instant death follows
+if a mine is probed. Minesweeper indicates the presence of mines by
+revealing, in each probed square, the <i>number</i> of mines
+that are directly or diagonally adjacent. The goal is to probe every
+unmined square.
 
+1.  Let $X_{i,j}$ be true iff square $[i,j]$ contains a mine. Write down
+    the assertion that exactly two mines are adjacent to \[1,1\] as a
+    sentence involving some logical combination of
+    $X_{i,j}$ propositions.
 
-A sentence is in disjunctive normal form(DNF) if it is the disjunction of
-conjunctions of literals. For example, the sentence
-$(A \land B \land \lnot C) \lor (\lnot A \land C) \lor (B \land \lnot C)$
-is in DNF.<br>
+2.  Generalize your assertion from (a) by explaining how to construct a
+    CNF sentence asserting that $k$ of $n$ neighbors contain mines.
 
-1.  Any propositional logic sentence is logically equivalent to the
-    assertion that some possible world in which it would be true is in
-    fact the case. From this observation, prove that any sentence can be
-    written in DNF.<br>
+3.  Explain precisely how an agent can use {DPLL} to prove that a given square
+    does (or does not) contain a mine, ignoring the global constraint
+    that there are exactly $M$ mines in all.
 
-2.  Construct an algorithm that converts any sentence in propositional
-    logic into DNF. (<i>Hint</i>: The algorithm is similar to
-    the algorithm for conversion to CNF iven in
-    Sectio <a class="sectionRef" title="" href="#">pl-resolution-section</a>.)<br>
+4.  Suppose that the global constraint is constructed from your method
+    from part (b). How does the number of clauses depend on $M$ and $N$?
+    Suggest a way to modify {DPLL} so that the global constraint does not need
+    to be represented explicitly.
 
-3.  Construct a simple algorithm that takes as input a sentence in DNF
-    and returns a satisfying assignment if one exists, or reports that
-    no satisfying assignment exists.<br>
+5.  Are any conclusions derived by the method in part (c) invalidated
+    when the global constraint is taken into account?
 
-4.  Apply the algorithms in (b) and (c) to the following set of
-    sentences:<br>
-
- $A {\Rightarrow} B$<bR>
-
- $B {\Rightarrow} C$<br>
-
- $C {\Rightarrow} A$<br>
-
-5.  Since the algorithm in (b) is very similar to the algorithm for
-    conversion to CNF, and since the algorithm in (c) is much simpler
-    than any algorithm for solving a set of sentences in CNF, why is
-    this technique not used in automated reasoning?
+6.  Give examples of configurations of probe values that induce
+    <i>long-range dependencies</i> such that the contents of a
+    given unprobed square would give information about the contents of a
+    far-distant square. (<i>Hint</i>: consider an
+    $N\times 1$ board.)
